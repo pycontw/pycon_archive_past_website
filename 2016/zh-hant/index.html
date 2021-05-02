@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>      <html lang="zh-hant" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="zh-hant" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="zh-hant" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hant"> <!--<![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="/2016/static/images/favicon_pyconTW_32x32.png" rel="icon" type="image/png"/>
+<meta content="PyCon Taiwan 2016" property="og:title"/>
+<meta content="PyCon Taiwan 為一年一度由愛好者舉辦、討論並提倡使用 Python 程式語言的會議，聚焦在 Python 技術與其多樣的可能應用的交流。我們歡迎所有對 Python 有興趣的朋友一同加入 PyCon Taiwan 來分享所學、交換想法、並且認識更多同好。" property="og:description"/>
+<meta content="http://tw.pycon.org/2016/static/images/PyConTW2016_facebook_shareImage.png" property="og:image"/>
+<link href="/2016/static/CACHE/css/026c006a2458.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css"/>
+<link href="https://fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet" type="text/css"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+<!--[if lt IE 9]>
+  <script src="/2016/static/js/html5shiv.min.js"></script>
+  <script src="/2016/static/js/respond.min.js"></script>
+  <![endif]-->
+<!-- justfont webfont -->
+<!-- <script src="/2016/static/js/vendors/justfont.js"></script> -->
+<title>PyCon Taiwan 2016</title>
+</link></head>
+<body class="">
+<nav class="navbar navbar-default navbar-fe navbar-site">
+<div class="clearfix container-fluid">
+<div class="navbar-header">
+<button class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button">
+<span class="sr-only">展開導覽列</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="/2016/zh-hant/">
+<img alt="logo" class="logo hidden-xs" height="24" src="/2016/static/images/logo-tiny--reverse@2x.png" width="133"/>
+<img alt="logo" class="logo visible-xs-inline" height="30" src="/2016/static/images/LogoIcon_white@2x.png" width="42"/>
+</a>
+</div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="navbar">
+<ul class="nav navbar-nav navbar-nav-hover">
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">關於</a>
+<ul class="dropdown-menu">
+<li><a href="/2016/zh-hant/about/pycontw/">PyCon TW</a></li>
+<li><a href="/2016/zh-hant/about/code-of-conduct/">行為準則</a></li>
+<li><a href="/2016/zh-hant/about/staff/">工作人員</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">活動</a>
+<ul class="dropdown-menu">
+<li><a href="/2016/zh-hant/events/overview/">總覽</a></li>
+<li><a href="/2016/zh-hant/events/schedule/">Schedule</a></li>
+<li><a href="/2016/zh-hant/events/keynotes/">主題演講</a></li>
+<li><a href="/2016/zh-hant/events/talks/">演講</a></li>
+<li><a href="/2016/zh-hant/events/sprints/">Sprints</a></li>
+<li><a href="/2016/zh-hant/events/bof/">BoF</a></li>
+<li><a href="/2016/zh-hant/events/pyday/">PyDay</a></li>
+<li><a href="/2016/zh-hant/events/tutorials/">教學</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">會場</a>
+<ul class="dropdown-menu">
+<li><a href="/2016/zh-hant/venue/">會場</a></li>
+<li><a href="/2016/zh-hant/venue/accommodation/">住宿</a></li>
+</ul>
+</li><!-- /.dropdown -->
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">贊助</a>
+<ul class="dropdown-menu">
+<li><a href="/2016/zh-hant/sponsors/">贊助夥伴</a></li>
+<li><a href="http://pycontw.kktix.cc/events/pycontw2016patron" target="_blank">個人贊助</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">註冊</a>
+<ul class="dropdown-menu">
+<li><a href="/2016/zh-hant/registration/ticket-info/">售票資訊</a></li>
+<li><a href="/2016/zh-hant/registration/financial-aid/">財務補助</a></li>
+</ul>
+</li><!-- /.dropdown -->
+<li><a href="http://pycontw.blogspot.tw/" target="_blank">部落格</a></li>
+<li><a href="/2016/zh-hant/dashboard/" target="_blank"><span class="em">控制面板</span></a></li>
+</ul>
+<div class="social pull-right">
+<a class="social-btn" href="https://www.facebook.com/pycontw" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+</a>
+<a class="social-btn" href="https://twitter.com/pycontw" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+</a>
+<a class="social-btn" href="mailto:organizers@pycon.tw" target="_blank">
+<i class="fa fa-envelope"></i>
+</a>
+</div>
+<ul class="nav navbar-nav navbar-lang navbar-right">
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn" data-toggle="dropdown" href="#" role="button"> 繁體中文
+               <span class="caret"></span>
+</a>
+<ul class="dropdown-menu">
+<li class="active">
+<a data-lang="zh-hant" href="#">
+                  繁體中文
+                </a>
+</li>
+<li>
+<a data-lang="en-us" href="#">
+                  English (US)
+                </a>
+</li>
+</ul>
+</li>
+</ul>
+<!-- Fallback version of form selection -->
+<form action="/2016/set-language/" class="navbar-form navbar-right navbar-lang" method="post">
+<input name="csrfmiddlewaretoken" type="hidden" value="ewcdBYLz4EskxVN6L0wVkrtGP8uNkXBm"/>
+<input name="next" type="hidden" value="/2016/"/>
+<select class="form-control input-sm" id="language-select" name="language">
+<option selected="" value="zh-hant">
+                        繁體中文
+                    </option>
+<option value="en-us">
+                        English (US)
+                    </option>
+</select>
+<noscript>
+<button class="btn" type="submit">修改</button>
+</noscript>
+</form>
+</div>
+</div>
+<!-- /.navbar-collapse -->
+
+<!-- /.container-fluid -->
+</nav>
+<div class="section header">
+<div class="container">
+<div class="row">
+<h1 class="logo text-center col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+<img alt="PYCON Taiwan 2016" class="img-responsive" src="/2016/static/images/logo.png"/>
+</h1>
+<div class="slogan col-xs-12">
+<p>Implement the Future, Together !</p>
+</div>
+</div>
+<div class="row">
+<div class="schedule-wrapper">
+<div class="row">
+<div class="h3 schedule__title--lg">教學</div>
+<div class="h3 schedule__title--lg">會議</div>
+<div class="h3 schedule__title--lg">Sprint</div>
+</div>
+<div class="row schedule">
+<div class="schedule-block">
+<h3 class="schedule__title">教學</h3>
+<p>June 3, 2016</p>
+</div>
+<div class="schedule-block">
+<h3 class="schedule__title">會議</h3>
+<p>2016 年 6 月 3–5 日</p>
+</div>
+<div class="schedule-block">
+<h3 class="schedule__title">Sprint</h3>
+<p>4 月 16 日、6 月 11 日</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section intro">
+<div class="container">
+<p class="quote">
+			“Simple is better than complex. Complex is better than complicated.”
+		</p>
+<div class="row">
+<section class="intro__pycon col-md-8">
+<h2 class="intro__heading">何謂 PyCon</h2>
+<div class="intro__body">PyCon 最初於 2003 成立於北美，現在世界各地皆有以 PyCon 精神而成立的會議。</div>
+</section>
+</div>
+<div class="row">
+<section class="intro__pycontw">
+<h2 class="intro__heading">何謂 PyCon Taiwan</h2> <div class="intro__body">
+PyCon Taiwan 為一年一度由愛好者舉辦、討論並提倡使用 Python 程式語言的會議，聚焦在 Python 技術與其多樣的可能應用的交流。我們歡迎所有對 Python 有興趣的朋友一同加入 PyCon Taiwan 來分享所學、交換想法、並且認識更多同好。</div>
+</section>
+<section class="intro__volunteer">
+<div class="volunteer">
+<h4 class="volunteer__heading h4"> Volunteers Needed! <img class="call__icon" height="22" src="/2016/static/images/call_icon.png" width="25"/> </h4> <div class="volunteer__body"> <p>Help us organize and make the conference successful!</p> <p> Please fill out<br/> <a href="https://docs.google.com/forms/d/1zwc4khAW18myt6dJ_s_YtJOfQEobgz8KhcySKL0HXl4/viewform" target="_blank">our volunteer form</a> </p> </div>
+</div>
+</section>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="container">
+<div class="row">
+<div class="col-xs-12">
+<div class="community">
+<h2 class="section__heading">
+<img class="python__icon hidden-xs" height="36" src="/2016/static/images/python_icon.png" width="36"/>
+						臺灣的 Python 社群
+					</h2>
+<ul class="community-list list row">
+<li class="list__item">
+<a href="http://www.meetup.com/Taipei-py/" target="_blank">
+							Taipei.py <span class="desc">Taipei Python User Group</span>
+</a>
+</li>
+<li class="list__item">
+<a href="http://www.meetup.com/pythonhug/" target="_blank">
+							PyHUG <span class="desc">Python Hsinchu User Group</span>
+</a>
+</li>
+<li class="list__item">
+<a href="http://www.meetup.com/PyLadiesTW/" target="_blank">
+							PyLadies Taiwan
+							</a>
+</li>
+<li class="list__item">
+<a href="http://www.meetup.com/Tainan-py-Python-Tainan-User-Group/" target="_blank">
+							Tainan.py <span class="desc">Python Tainan User Group</span>
+</a>
+</li>
+<li class="list__item">
+<a href="http://www.meetup.com/Kaohsiung-Python-Meetup" target="_blank">Kaohsiung.py <span class="desc">Kaohsiung Python User Group</span>
+</a>
+</li>
+<li class="list__item">
+<a href="http://www.meetup.com/Taichung-Python-Meetup/" target="_blank">Taichung.py <span class="desc">Taichung Python User Group</span>
+</a>
+</li>
+<li class="list__item">
+<a href="http://djangogirls.org/taipei" target="_blank">
+							Django Girls Taipei
+							</a>
+</li>
+<li class="list__item">
+<a href="http://www.meetup.com/Hualien-Py/" target="_blank">
+							Hualien.py<span class="desc">Hualien Python User Group</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section sponsorship">
+<div class="container">
+<div class="row">
+<div class="sponsorship__call">
+				Patronage 2016 available!
+			</div>
+</div>
+<div class="row">
+<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+<p> If you wish to support PyCon Taiwan 2016 on your own, welcome to be a patron! There will be a page for the list of all patrons (e.g. links to profile pages of Facebook, GitHub, Twitter) on the PyCon Taiwan 2016 website. </p> <br/> <p> Go to be <a href="http://pycontw.kktix.cc/events/pycontw2016patron" target="_blank"> a patron of PyCon Taiwan 2016 </a> </p>
+</div>
+</div>
+</div>
+</div>
+<div class="section conf">
+<div class="block container">
+<p class="quote">
+			“Beautiful is better than ugly. Explicit is better than implicit.”
+		</p>
+</div>
+</div>
+<div class="section sponsors">
+<div class="container">
+<div class="row">
+<div class="col-xs-12">
+<h2 class="section__heading">贊助夥伴</h2>
+<!-- 協辦單位 -->
+<div class="row">
+<div class="sponsors__logo col-sm-4">
+<a href="http://www.gliacloud.com" target="_blank"><img alt="GliaCloud" class="img-responsive" src="/2016/static/images/sponsors/gliacloud.png" style="max-height: 60px; margin-top: 50px;"/></a>
+</div>
+<div class="sponsors__logo col-sm-4">
+<a href="http://www.iis.sinica.edu.tw/" target="_blank"><img alt="中央研究院資訊科學研究所" class="img-responsive" src="/2016/static/images/sponsors/IIS_logo.png" style="max-height: 100px; margin-top: 30px;"/></a>
+</div>
+<div class="sponsors__logo col-sm-4">
+<a href="http://ocf.tw" target="_blank"><img alt="開放文化基金會" class="img-responsive" src="/2016/static/images/sponsors/openculture.png" style="max-height: 60px; margin-top: 50px;"/></a>
+</div>
+</div>
+<br/>
+<!-- 金級 -->
+<div class="row">
+<div class="sponsors__logo col-sm-4">
+<a href="https://www.kkbox.com/play/" target="_blank"><img alt="KKBOX" class="img-responsive" src="/2016/static/images/sponsors/KKBOX_logo_20130820@h300px.png" style="max-height: 120px;"/></a>
+</div>
+<div class="sponsors__logo col-sm-4">
+<a href="https://www.esunbank.com.tw/" target="_blank"><img alt="玉山銀行" class="img-responsive" src="/2016/static/images/sponsors/esunbank_logo.png" style="max-height: 95px;"/></a>
+</div>
+<div class="sponsors__logo col-sm-4">
+<a href="http://www.trendmicro.tw/" target="_blank"><img alt="TrendMicro 趨勢科技" class="img-responsive" src="/2016/static/images/sponsors/TM_logo.png" style="max-height: 130px; margin-top: 20px;"/></a>
+</div>
+</div>
+<!-- 銀級 -->
+<div class="row">
+<div class="sponsors__logo col-sm-4">
+<a href="http://aktsk.com.tw/" target="_blank"><img alt="Akatsuki 曉數碼" class="img-responsive" src="/2016/static/images/sponsors/akatsuki.png" style="max-height: 100px;"/></a>
+</div>
+<div class="sponsors__logo col-sm-4">
+<a href="http://www.appier.com/" target="_blank"><img alt="Appier" class="img-responsive" src="/2016/static/images/sponsors/Appier_logo_blue@h300px.png" style="max-height: 60px; margin-top: 50px;"/></a>
+</div>
+<div class="sponsors__logo col-sm-4">
+<a href="https://carousell.com" target="_blank"><img alt="Carousell" class="img-responsive" src="/2016/static/images/sponsors/carouselllogo_2015@h300px.png" style="max-height: 40px; margin-top: 60px;"/></a>
+</div>
+</div>
+<div class="row">
+<div class="sponsors__logo col-sm-4">
+<a href="https://www.gandi.net" target="_blank"><img alt="Gandi" class="img-responsive" src="/2016/static/images/sponsors/gandi.png"/></a>
+</div>
+<div class="sponsors__logo col-sm-4">
+<a href="https://msdn.microsoft.com/zh-tw/" target="_blank"><img alt="Microsoft Taiwan" class="img-responsive" src="/2016/static/images/sponsors/microsoft.png" style="max-height: 130px; margin-top: 10px;"/></a>
+</div>
+<div class="sponsors__logo col-sm-4">
+<a href="http://www.mysql.com" target="_blank"><img alt="MYSQL" class="img-responsive" src="/2016/static/images/sponsors/mysql_logo.png" style="max-height: 90px; margin-top: 20px;"/></a>
+</div>
+</div>
+<div class="row">
+<div class="sponsors__logo col-sm-6">
+<a href="http://www.ruckuswireless.com" target="_blank"><img alt="Ruckus Wireless" class="img-responsive" src="/2016/static/images/sponsors/Ruckus_Hrzntl_SBW.png" style="max-height: 70px;"/></a>
+</div>
+<div class="sponsors__logo col-sm-6">
+<a href="https://sudo.com.tw/" target="_blank"><img alt="Sudo 速度資訊" class="img-responsive" src="/2016/static/images/sponsors/sudo_400-160_cs@h300px.png" style="max-height: 70px;"/></a>
+</div>
+</div>
+<!-- 銅級 -->
+<div class="row">
+<div class="sponsors__logo col-sm-4">
+<a href="http://lileesystems.com/" target="_blank"><img alt="Lilee System 理立系統" class="img-responsive" src="/2016/static/images/sponsors/Lilee-ColorLogo-v1.png" style="max-height: 120px; margin-top: 30px;"/></a>
+</div>
+<div class="sponsors__logo col-sm-4">
+<a href="http://www.ibm.com" target="_blank"><img alt="IBM" class="img-responsive" src="/2016/static/images/sponsors/ibmpos_blurgb.jpg" style="max-height: 50px; margin-top: 60px;"/></a>
+</div>
+<div class="sponsors__logo col-sm-4">
+<a href="http://www.transtep.com/" target="_blank"><img alt="Transtep Technology Inc." class="img-responsive" src="/2016/static/images/sponsors/transtep_logo.png" style="max-height: 70px;"/></a>
+</div>
+</div>
+<!-- 特殊贊助 -->
+<div class="row">
+<div class="sponsors__logo col-sm-6">
+<a href="http://www.wolftea.com" target="_blank"><img alt="琅茶" class="img-responsive" src="/2016/static/images/sponsors/WolfTea@h300px.png"/></a>
+</div>
+<div class="sponsors__logo col-sm-6">
+<a href="http://eldarion.com" target="_blank"><img alt="Eldarion, Inc." class="img-responsive" src="/2016/static/images/sponsors/Eldarion_Logo.png" style="max-height: 90px;"/></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="footer container-fluid text-center">
+<div class="row clearfix">
+<div class="col-md-2">2016 PyCon Taiwan</div>
+<div class="col-md-8 hidden-xs hidden-sm">
+<img class="logo" height="24" src="/2016/static/images/Logo_pycontw16_blue_footer@2x.png" width="133"/>
+</div>
+<div class="social col-md-2 text-center">
+<a class="social-btn" href="https://www.facebook.com/pycontw" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+</a>
+<a class="social-btn" href="https://twitter.com/pycontw" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+</a>
+<a class="social-btn" href="mailto:organizers@pycon.tw" target="_blank">
+<i class="fa fa-envelope"></i>
+</a>
+</div>
+</div>
+</footer>
+<script src="/2016/static/CACHE/js/6c8feda299eb.js" type="text/javascript"></script>
+</body>
+</html>
