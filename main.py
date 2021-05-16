@@ -1,4 +1,5 @@
 import requests
+import json
 import os
 from bs4 import BeautifulSoup 
 from urllib.parse import unquote
@@ -25,8 +26,9 @@ def writefile(path):
 
 def script(soup):
     for script in soup.find_all("script"):
-        # if the tag has the attribute 'src'
-        if script.attrs.get("src"):
+        # if the tag has the attribute 'src' and
+        # if the target is js file and not using outer js site
+        if script.attrs.get("src") and script["src"].find("https://") == -1 and script["src"].find("js") != -1:
             mkdir(script["src"])
             writefile(script["src"])
 
@@ -40,8 +42,17 @@ def css(soup):
 
 def img(soup):
     for img in soup.find_all("img"):
-        mkdir(img["src"])
-        writefile(img["src"])
+        # if img has attr src
+        if img.has_attr("src"):
+            mkdir(img["src"])
+            writefile(img["src"])
+    # get imgs in json, especially for pycon /2017/zh-hant/events/keynotes/
+    for script in soup.find_all("script", type="application/json"):
+        json_object = json.loads(script.contents[0])
+        if "keynote" in json_object:
+            for person in json_object["keynote"]:
+                mkdir(person['photo'])
+                writefile(person['photo'])
 
 def GetPage(path):
     # filter our target path
@@ -49,7 +60,7 @@ def GetPage(path):
         return
     print(path)
     request = requests.get(Pycon_url + path)
-    soup = BeautifulSoup(request.text, "html.parser")
+    soup = BeautifulSoup(request.content, "html.parser")
     script(soup)    # get scripts in this page
     css(soup)       # get css in this page
     img(soup)       # get imgs in this page
@@ -65,12 +76,13 @@ def GetPage(path):
 
 def main():
     # Get Pycon 2016, default to zh-hant
-    request = requests.get(Pycon_url + "/2016/zh-hant/")    # Get HTML
+    request = requests.get(Pycon_url + "/2018/zh-hant/")    # Get HTML
     soup = BeautifulSoup(request.text, "html.parser")       # Using html parser
     navs = soup.select("nav a")                             # Get each <a> tag in <nav> and save in navs
+    navs = set([nav["href"] for nav in navs])               # Get each href in navs, and make it unique
     
     for nav in navs:                                        # Get each page in navs and deal with en-us at the same time
-        GetPage(nav["href"])
-        GetPage(nav["href"].replace("zh-hant", "en-us"))
+        GetPage(nav)
+        GetPage(nav.replace("zh-hant", "en-us"))
 
 main()
