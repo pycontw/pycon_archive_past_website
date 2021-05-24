@@ -1,3 +1,4 @@
+from bs4.element import PY3K
 import requests
 import json
 import os
@@ -5,7 +6,7 @@ import re
 from bs4 import BeautifulSoup 
 from urllib.parse import unquote
 
-Pycon_year = "2019"
+Pycon_year = "2017"
 Pycon_url = "https://tw.pycon.org"
 Written_url = []
 
@@ -32,6 +33,7 @@ def writefile(path):
         print(err)
 
 def getcssimg(path):
+    # get all url like /year/... target, and try to save them all.
     file = '.' + path
     with open(file, 'rb') as f:
         content = str(f.read())
@@ -41,17 +43,13 @@ def getcssimg(path):
             url = url[0:url.rfind('\\')]
             url = url[0:url.rfind('?')]
             if url not in Written_url:
-                try:
-                    mkdir(url)
-                    writefile(url)
-                except OSError as err:
-                    print(err)
+                mkdir(url)
+                writefile(url)
             
 
 def script(soup):
     for script in soup.find_all("script"):
-        # if the tag has the attribute 'src' and
-        # if the target is js file and not using outer js site
+        # get all url like /year/... target, and try to save them all.
         all_url = re.findall('/' + Pycon_year + '[^\s]*', str(script))
         for url in all_url:
             url = url[0:max(url.rfind('\''), url.rfind('\"'))]
@@ -97,8 +95,44 @@ def GetPage(path):
     # 2) by using unquote to avoid the Garbled path
     mkdir(path)
     with open('.' + path + 'index.html', 'w') as f:
-        html = str(soup).replace("<a data-lang=\"zh-hant\" href=\"#\">", "<a data-lang=\"zh-hant\" href=\"" + path.replace("en-us", "zh-hant") + "\">")
-        html = html.replace("<a data-lang=\"en-us\" href=\"#\">", "<a data-lang=\"en-us\" href=\"" + path.replace("zh-hant", "en-us") + "\">")
+        for input in soup.find_all("input", {'name':'csrfmiddlewaretoken'}): 
+            input.decompose()
+        try:
+            if Pycon_year == '2017':
+                if path[6:8] == 'zh':
+                    element = soup.find_all("a", {'data-lang':'en-us'})
+                    for ele in element:
+                        ele.replace_with("en-us_target")
+                if path[6:8] == 'en':
+                    element = soup.find_all("a", {'data-lang':'zh-hant'})
+                    for ele in element:
+                        ele.replace_with("zh-hant_target")
+        except OSError as err:
+            print(err)
+        html = str(soup)
+        html = html.replace("action=\"/" + Pycon_year + "/set-language/\"", "")
+        if Pycon_year == '2016':
+            html = html.replace("<a data-lang=\"zh-hant\" href=\"#\">", "<a data-lang=\"zh-hant\" href=\"" + path.replace("en-us", "zh-hant") + "\">")
+            html = html.replace("<a data-lang=\"en-us\" href=\"#\">", "<a data-lang=\"en-us\" href=\"" + path.replace("zh-hant", "en-us") + "\">")
+        if Pycon_year == '2017':
+            if path[6:8] == 'zh':
+                html = html.replace("en-us_target", "<div data-lang=\"en-us\" style=\"margin-left: 40px; line-height: 60px;\"> <a href='" + path.replace("zh-hant", "en-us") + "' style=\"font-size: 16px;\">English (US)</a></div>", 1)
+                html = html.replace("en-us_target", "<div data-lang=\"en-us\" style=\"margin-left: 20px;\"> <a href='" + path.replace("zh-hant", "en-us") + "'>English (US)</a></div>", 1)
+            if path[6:8] == 'en':
+                html = html.replace("zh-hant_target", "<div data-lang=\"zh-hant\" style=\"margin-left: 40px; line-height: 60px;\"> <a href='" + path.replace("en-us", "zh-hant") + "' style=\"font-size: 16px;\">繁體中文</a></div>", 1)
+                html = html.replace("zh-hant_target", "<div data-lang=\"zh-hant\" style=\"margin-left: 20px;\"> <a href='" + path.replace("en-us", "zh-hant") + "'>繁體中文</a></div>", 1)
+        if Pycon_year == '2018':
+            if path[6:8] == 'zh':
+                html = html.replace("EN", "<a href='" + path.replace("en-us", "zh-hant") + "' class=\"myclass\">EN</a>", 1)
+            if path[6:8] == 'en':
+                html = html.replace("ZH", "<a href='" + path.replace("en-us", "zh-hant") + "' class=\"myclass\">ZH</a>", 1)
+            html += "<style>.myclass{text-decoration: none;color: rgba(255, 255, 255, 0.35);}.myclass:hover{text-decoration: none;color: rgba(255, 255, 255, 0.7);}</style>"
+        if Pycon_year == '2019':
+            if path[6:8] == 'zh':
+                html = html.replace("EN", "<a href='" + path.replace("zh-hant", "en-us") + "' class=\"myclass\">EN</a>", 1)
+            if path[6:8] == 'en':
+                html = html.replace("ZH", "<a href='" + path.replace("en-us", "zh-hant") + "' class=\"myclass\">ZH</a>", 1)
+            html += "<style>.myclass{text-decoration: none;color: #616e86;}.myclass:hover{text-decoration: none;color: #4a5363;}</style>"
         f.write(unquote(html))
 
 def main():
