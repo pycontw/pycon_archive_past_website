@@ -6,7 +6,7 @@ import re
 from bs4 import BeautifulSoup 
 from urllib.parse import unquote
 
-Pycon_year = "2017"
+Pycon_year = "2018"
 Pycon_url = "https://tw.pycon.org"
 Written_url = []
 
@@ -120,7 +120,7 @@ def GetPage(path):
                 html = html.replace("zh-hant_target", "<div data-lang=\"zh-hant\" style=\"margin-left: 20px;\"> <a href='" + path.replace("en-us", "zh-hant") + "'>繁體中文</a></div>", 1)
         if Pycon_year == '2018':
             if path[6:8] == 'zh':
-                html = html.replace("EN", "<a href='" + path.replace("en-us", "zh-hant") + "' class=\"myclass\">EN</a>", 1)
+                html = html.replace("EN", "<a href='" + path.replace("zh-hant", "en-us") + "' class=\"myclass\">EN</a>", 1)
             if path[6:8] == 'en':
                 html = html.replace("ZH", "<a href='" + path.replace("en-us", "zh-hant") + "' class=\"myclass\">ZH</a>", 1)
             html += "<style>.myclass{text-decoration: none;color: rgba(255, 255, 255, 0.35);}.myclass:hover{text-decoration: none;color: rgba(255, 255, 255, 0.7);}</style>"
