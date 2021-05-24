@@ -3,10 +3,11 @@ import requests
 import json
 import os
 import re
+import click
 from bs4 import BeautifulSoup 
 from urllib.parse import unquote
 
-Pycon_year = "2019"
+Pycon_year = "2016"
 Pycon_url = "https://tw.pycon.org"
 Written_url = []
 
@@ -133,7 +134,7 @@ def GetPage(path):
         f.write(unquote(html))
 
 def main():
-    # Get Pycon 2016, default to zh-hant
+    # Get pycon website, including zh-hant and en-us, according to given year.
     request = requests.get(Pycon_url + "/" + Pycon_year + "/zh-hant/")    # Get HTML
     soup = BeautifulSoup(request.text, "html.parser")       # Using html parser
     navs = soup.select("nav a")                             # Get each <a> tag in <nav> and save in navs
@@ -143,4 +144,17 @@ def main():
         GetPage(nav)
         GetPage(nav.replace("zh-hant", "en-us"))
 
-main()
+@click.command()
+@click.option('-y', 'param', help='Pycon Year (2016 - 2019)', type=click.DateTime(formats=["%Y"]), required=True)
+
+def check_year(param):
+    '''Get Pycon Website According To the Year'''
+    global Pycon_year 
+    Pycon_year = str(param.year)
+    if Pycon_year >= '2016' and Pycon_year <= '2019':
+        main()
+    else:
+        print('Pycon Year Should be between 2016 and 2019 !')
+
+if __name__ == '__main__':
+    check_year()
