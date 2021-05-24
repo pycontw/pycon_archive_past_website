@@ -103,7 +103,7 @@ def GetPage(path):
                 for elm in elements:
                     elm.replace_with("en-us_target")
             if path[6:8] == 'en':
-                element = soup.find_all("a", {'data-lang':'zh-hant'})
+                elements = soup.find_all("a", {'data-lang':'zh-hant'})
                 for elm in elements:
                     elm.replace_with("zh-hant_target")
         html = str(soup)
