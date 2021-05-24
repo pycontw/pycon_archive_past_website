@@ -91,24 +91,21 @@ def GetPage(path):
     css(soup)       # get css in this page
     img(soup)       # get imgs in this page
     # save the html
-    # 1) for supporting 2 languages, I change the language href to the correct path
+    # 1) for supporting 2 languages, each pycon year will deal separately.
     # 2) by using unquote to avoid the Garbled path
     mkdir(path)
     with open('.' + path + 'index.html', 'w') as f:
         for input in soup.find_all("input", {'name':'csrfmiddlewaretoken'}): 
             input.decompose()
-        try:
-            if Pycon_year == '2017':
-                if path[6:8] == 'zh':
-                    element = soup.find_all("a", {'data-lang':'en-us'})
-                    for ele in element:
-                        ele.replace_with("en-us_target")
-                if path[6:8] == 'en':
-                    element = soup.find_all("a", {'data-lang':'zh-hant'})
-                    for ele in element:
-                        ele.replace_with("zh-hant_target")
-        except OSError as err:
-            print(err)
+        if Pycon_year == '2017':
+            if path[6:8] == 'zh':
+                elements = soup.find_all("a", {'data-lang':'en-us'})
+                for elm in elements:
+                    elm.replace_with("en-us_target")
+            if path[6:8] == 'en':
+                element = soup.find_all("a", {'data-lang':'zh-hant'})
+                for elm in elements:
+                    elm.replace_with("zh-hant_target")
         html = str(soup)
         html = html.replace("action=\"/" + Pycon_year + "/set-language/\"", "")
         if Pycon_year == '2016':
