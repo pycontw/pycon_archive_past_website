@@ -13,7 +13,7 @@ where year can just in 2016 - 2019
 ```
 
 ## Build Testing Server
-Here is the reference I made. [Go!!](https://github.com/MozixReality/PyconWeb)
+Here is the reference I made. [Go!!](https://mozixreality.github.io/Blog/featured/D20210503)
 
 ## Meet Some Questions or Bugs?
 Please contact me. I will reply you as soon as possible.
