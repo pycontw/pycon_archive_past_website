@@ -1,0 +1,819 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Community Track | PyCon Taiwan 2020</title>
+<link href="/2020/static/pycontw-2020/assets/favicon/favicon.ico" rel="shortcut icon"/>
+<link href="/2020/static/pycontw-2020/assets/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/2020/static/pycontw-2020/assets/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/2020/static/pycontw-2020/assets/favicon/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="The community track is a new event in PyCon TW. We choose the talks with specific topics and package them into the same session. We'll leave the conference rooms and go to characteristic cafes, exhibition spaces, and even monuments so that the attendees and speakers can interact with each other more comfortably and closely." property="og:description"/>
+<meta content="https://tw.pycon.org/2020/static/pycontw-2020/assets/og-image.png" property="og:image"/>
+<link href="https://fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,600,700|Raleway:300,400|Philosopher|Quicksand&amp;display=swap" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
+<link href="/2020/static/CACHE/css/output.1c858525a2ab.css" rel="stylesheet" type="text/css"/>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNZ39PD');</script>
+</head>
+<body class="">
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-TNZ39PD" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<div data-controller="topNav">
+<nav class="top-navbar">
+<div class="navbar-left">
+<form  class="navbar-lang-switch" method="post">
+
+<input name="next" type="hidden" value="/2020/conference/community-track/"/>
+<button name="language" type="submit" value="zh-hant">
+                    <a href='/2020/zh-hant/conference/community-track/' style="text-decoration: none;">ZH</a>
+                </button>
+<button disabled="disabled" name="language" type="submit" value="en-us">
+                    EN
+                </button>
+</form>
+<a href="/2020/en-us/"><i class="twicon-provintia navbar-provintia"></i></a>
+<a class="navbar-brand" href="/2020/en-us/">PyCon TW20</a>
+</div>
+<button aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler no-script" data-action="topNav#toggle" data-target="topNav.toggler" type="button">
+<div><span></span><span></span><span></span></div>
+</button>
+<div class="navbar-social-desktop">
+<a aria-label="Blog" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+</nav>
+<nav class="menu-navbar-mobile no-script" data-target="topNav.menu">
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/2020/en-us/about/pycontw/">
+			About
+		</a>
+</li>
+<!-- -->
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-conference" type="checkbox"/>
+<label class="active" for="menu-navbar-mobile-conference">
+			Conference
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/en-us/conference/schedule/">Schedule</a></li>
+<li><a href="/2020/en-us/conference/keynotes/">Keynotes</a></li>
+<li><a href="/2020/en-us/conference/talks/">Talks</a></li>
+<li><a href="/2020/en-us/conference/tutorials/">Tutorials</a></li>
+<li><a href="/2020/en-us/conference/community-track/">Community Track</a></li>
+<!--<li><a href="/2020/en-us/speaking/recording/">Recording</a></li>-->
+<!-- <li><a href="/2020/en-us/portal/">Portal</a></li> -->
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-events" type="checkbox"/>
+<label for="menu-navbar-mobile-events">
+			Events
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/en-us/events/overview/">Overview</a></li>
+<li><a href="/2020/en-us/events/warmup-session/">Warm-Up Session</a></li>
+<li><a href="/2020/en-us/events/open-spaces/">Open Spaces</a></li>
+<li><a href="/2020/en-us/events/sprints/">Sprints</a></li>
+<li><a href="/2020/en-us/events/job-listings/">Job Listings</a></li>
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-registration" type="checkbox"/>
+<label for="menu-navbar-mobile-registration">
+			Registration
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/en-us/registration/ticket-info/">Conference Ticket</a></li>
+<li><a href="/2020/en-us/registration/financial-aid/">Financial Aid</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/2020/en-us/venue/">
+			Venue
+		</a>
+</li>
+<li>
+<a href="/2020/en-us/covid-19/guidelines/">
+			COVID-19 Guidelines
+		</a>
+</li>
+<li class="dashboard-item">
+<a href="/2020/en-us/dashboard/">My PyCon</a>
+</li>
+</ul>
+<div class="navbar-social-mobile">
+<a aria-label="Blog" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+<div class="shadow">
+<i class="twicon-provintia"></i>
+</div>
+</nav>
+</div>
+<header class="page-hero">
+<nav class="menu-navbar-desktop">
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/2020/en-us/about/pycontw/">
+			About
+		</a>
+</li>
+<!-- -->
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-conference" type="checkbox"/>
+<label class="active" for="menu-navbar-desktop-conference">
+			Conference
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/en-us/conference/schedule/">Schedule</a></li>
+<li><a href="/2020/en-us/conference/keynotes/">Keynotes</a></li>
+<li><a href="/2020/en-us/conference/talks/">Talks</a></li>
+<li><a href="/2020/en-us/conference/tutorials/">Tutorials</a></li>
+<li><a href="/2020/en-us/conference/community-track/">Community Track</a></li>
+<!--<li><a href="/2020/en-us/speaking/recording/">Recording</a></li>-->
+<!-- <li><a href="/2020/en-us/portal/">Portal</a></li> -->
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-events" type="checkbox"/>
+<label for="menu-navbar-desktop-events">
+			Events
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/en-us/events/overview/">Overview</a></li>
+<li><a href="/2020/en-us/events/warmup-session/">Warm-Up Session</a></li>
+<li><a href="/2020/en-us/events/open-spaces/">Open Spaces</a></li>
+<li><a href="/2020/en-us/events/sprints/">Sprints</a></li>
+<li><a href="/2020/en-us/events/job-listings/">Job Listings</a></li>
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-registration" type="checkbox"/>
+<label for="menu-navbar-desktop-registration">
+			Registration
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/en-us/registration/ticket-info/">Conference Ticket</a></li>
+<li><a href="/2020/en-us/registration/financial-aid/">Financial Aid</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/2020/en-us/venue/">
+			Venue
+		</a>
+</li>
+<li>
+<a href="/2020/en-us/covid-19/guidelines/">
+			COVID-19 Guidelines
+		</a>
+</li>
+<li class="dashboard-item">
+<a href="/2020/en-us/dashboard/">My PyCon</a>
+</li>
+</ul>
+</nav>
+</header>
+<main>
+<section class="pill-title">
+<h1>Community Track</h1>
+</section>
+<p>The community track is a new event in PyCon TW. We choose the talks with specific topics and package them into the same session. We'll leave the conference rooms and go to characteristic cafes, exhibition spaces, and even monuments so that the attendees and speakers can interact with each other more comfortably and closely.</p>
+<ul>
+<li class="event-info">
+<b>Event Time</b><br/>
+			2020/09/06 13:40
+		</li>
+<li class="event-info">
+<b>Event Info</b><br/>
+			Physical Meetup
+		</li>
+<li class="event-info">
+<b>Host</b><br/>
+			Python Community Leader
+		</li>
+</ul>
+<h2 style="margin-top: 90px;">Overview</h2>
+<div class="overview-container">
+<div class="venue-block">
+<h3><a href="#ai-ml">AI / ML</a></h3>
+<div class="community-track-actions">
+</div>
+<div class="community">
+				Taichung.py + Nantou.py
+			</div>
+<div class="venue-name">
+				Tainan Cultural and Creative Park
+				<span class="stats">
+<span> 59 </span> / <span>140</span>
+</span>
+</div>
+</div>
+<div class="venue-block">
+<h3><a href="#core">Core</a></h3>
+<div class="community-track-actions">
+</div>
+<div class="community">
+				Hualien.py
+			</div>
+<div class="venue-name">
+				Angry Burger
+				<span class="stats">
+<span> 31 </span> / <span>40</span>
+</span>
+</div>
+</div>
+<div class="venue-block">
+<h3><a href="#finance">Finance</a></h3>
+<div class="community-track-actions">
+</div>
+<div class="community">
+				Tainan.py + Kaohsiung.py
+			</div>
+<div class="venue-name">
+				Tsang Fong Art Space
+				<span class="stats">
+<span class="text-yellow"> 86 </span> / <span>90</span>
+</span>
+</div>
+</div>
+<div class="venue-block">
+<h3><a href="#science">Science</a></h3>
+<div class="community-track-actions">
+</div>
+<div class="community">
+				PyHUG
+			</div>
+<div class="venue-name">
+				Brunch of San Dao Men Siang Jian
+				<span class="stats">
+<span> 28 </span> / <span>55</span>
+</span>
+</div>
+</div>
+<div class="venue-block">
+<h3><a href="#web-data">Web / Data</a></h3>
+<div class="community-track-actions">
+</div>
+<div class="community">
+				Taipei.py + PyData
+			</div>
+<div class="venue-name">
+				Masa Loft
+				<span class="stats">
+<span class="text-yellow"> 50 </span> / <span>50</span>
+</span>
+</div>
+</div>
+</div>
+<p class="message">You can choose the track you'd like to go if you access this page from the preparation letter, or from the OPass app that is already bound with your KKTIX registration.</p>
+<h2>Topics &amp; Venues</h2>
+<div class="topics-block">
+<h3><a name="ai-ml"></a>AI / ML</h3>
+<div class="community-track-actions">
+</div>
+<div class="community">
+		Taichung.py + Nantou.py
+	</div>
+<div class="venue-name">
+		Tainan Cultural and Creative Park
+
+		<span class="stats">
+<span> 59 </span> / <span>140</span>
+</span>
+<br/>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=No. 16, Sec. 2, Beimen Rd., East Dist., Tainan City" rel="noopener" target="_blank"></a>No. 16, Sec. 2, Beimen Rd., East Dist., Tainan City
+</div>
+<img src="/2020/static/pycontw-2020/assets/community-track/b16tainan.jpg" width="100%"/>
+<h4>Agenda</h4>
+<dl class="talk-list">
+<dt>
+        13:40 - 13:50
+        </dt>
+<dd>
+<p>
+<span class="talk-title">Community Introduction</span>
+</p>
+</dd>
+<dt>
+        13:50 - 14:20
+        </dt>
+<dd>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1163619671685988728/">我們如何在醫院打造即時醫療影像AI平台</a>
+                
+                 by Max Lai
+                
+
+                
+            </p>
+</dd>
+<dt>
+        14:30 - 15:00
+        </dt>
+<dd>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1164337168361980290/">My High School Intern Project: Constructing an AI Helper for Cyber Threat Intelligence Analysis</a>
+                
+                 by Chia-En Tsai
+                
+
+                
+            </p>
+</dd>
+<dt>
+        15:10 - 15:40
+        </dt>
+<dd>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/sponsored/practical-enterprise-jupyterhub-deployment-and-mlo/">Practical Enterprise JupyterHub Deployment and MLOps with PrimeHub</a>
+<span class="talk-label">Invited Event</span>
+                 by Chia-liang Kao
+                
+
+                
+            </p>
+</dd>
+<dt>
+        15:50 - 16:40
+        </dt>
+<dd>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1164610752435192210/">防疫大作戰！使用 Raspberry Pi + Thermal Camera  + Python 自製熱像儀</a>
+                
+                 by sosorry
+                
+
+                
+            </p>
+</dd>
+<dt>
+        16:50 - 17:20
+        </dt>
+<dd>
+<p>
+<span class="talk-title">Lightning Talks</span>
+</p>
+</dd>
+<dt>
+        17:20 - 17:40
+        </dt>
+<dd>
+<p>
+<span class="talk-title">Closing</span>
+</p>
+</dd>
+</dl>
+<hr/>
+<h3><a name="core"></a>Core</h3>
+<div class="community-track-actions">
+</div>
+<div class="community">
+		Hualien.py
+	</div>
+<div class="venue-name">
+		Angry Burger
+
+		<span class="stats">
+<span> 31 </span> / <span>40</span>
+</span>
+<br/>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=No. 12, Ln. 30, Dong’an Rd., East Dist., Tainan City" rel="noopener" target="_blank"></a>No. 12, Ln. 30, Dong’an Rd., East Dist., Tainan City
+</div>
+<img src="/2020/static/pycontw-2020/assets/community-track/angry-burger.jpg" width="100%"/>
+<h4>Agenda</h4>
+<dl class="talk-list">
+<dt>
+        13:40 - 13:50
+        </dt>
+<dd>
+<p>
+<span class="talk-title">Community Introduction</span>
+</p>
+</dd>
+<dt>
+        13:50 - 14:20
+        </dt>
+<dd>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1152288720347464022/">Python Application Dependency Management in 2020</a>
+                
+                 by Liuyang Wan
+                
+
+                
+            </p>
+</dd>
+<dt>
+        14:30 - 15:00
+        </dt>
+<dd>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1124597453421543748/">Package Python Code the Hard Way</a>
+                
+                 by Tzu-ping Chung
+                
+
+                
+            </p>
+</dd>
+<dt>
+        15:10 - 15:40
+        </dt>
+<dd>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1159574667502027113/">Why should you learn writing C extension?</a>
+                
+                 by Gavin Chan
+                
+
+                
+            </p>
+</dd>
+<dt>
+        15:50 - 16:40
+        </dt>
+<dd>
+<p>
+<span class="talk-title">Free Sharing</span>
+</p>
+</dd>
+<dt>
+        16:50 - 17:20
+        </dt>
+<dd>
+<p>
+<span class="talk-title">Lightning Talks</span>
+</p>
+</dd>
+<dt>
+        17:20 - 17:40
+        </dt>
+<dd>
+<p>
+<span class="talk-title">Closing</span>
+</p>
+</dd>
+</dl>
+<hr/>
+<h3><a name="finance"></a>Finance</h3>
+<div class="community-track-actions">
+</div>
+<div class="community">
+		Tainan.py + Kaohsiung.py
+	</div>
+<div class="venue-name">
+		Tsang Fong Art Space
+
+		<span class="stats">
+<span class="text-yellow"> 86 </span> / <span>90</span>
+</span>
+<br/>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=No. 67-1, Weimin St., West Central Dist., Tainan City" rel="noopener" target="_blank"></a>No. 67-1, Weimin St., West Central Dist., Tainan City
+</div>
+<img src="/2020/static/pycontw-2020/assets/community-track/tsang-fong-coffee.jpg" width="100%"/>
+<h4>Agenda</h4>
+<dl class="talk-list">
+<dt>
+        13:40 - 13:50
+        </dt>
+<dd>
+<p>
+<span class="talk-title">Community Introduction</span>
+</p>
+</dd>
+<dt>
+        13:50 - 14:20
+        </dt>
+<dd>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1156232082284872031/">Deploy Your Model to Live Trading</a>
+                
+                 by YVictor
+                
+
+                
+            </p>
+</dd>
+<dt>
+        14:30 - 15:00
+        </dt>
+<dd>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1125925169781539142/">用 Python 打造機器學習股票交易訊號</a>
+                
+                 by 韓承佑
+                
+
+                
+            </p>
+</dd>
+<dt>
+        15:10 - 15:40
+        </dt>
+<dd>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1157344705365672290/">基於數位軌跡資料，釐清客戶需求與建立客戶畫像分群系統</a>
+                
+                 by Roye Qiu
+                
+
+                
+            </p>
+</dd>
+<dt>
+        15:50 - 16:40
+        </dt>
+<dd>
+<p>
+<span class="talk-title">Free Sharing</span>
+</p>
+</dd>
+<dt>
+        16:50 - 17:20
+        </dt>
+<dd>
+<p>
+<span class="talk-title">Lightning Talks</span>
+</p>
+</dd>
+<dt>
+        17:20 - 17:40
+        </dt>
+<dd>
+<p>
+<span class="talk-title">Closing</span>
+</p>
+</dd>
+</dl>
+<hr/>
+<h3><a name="science"></a>Science</h3>
+<div class="community-track-actions">
+</div>
+<div class="community">
+		PyHUG
+	</div>
+<div class="venue-name">
+		Brunch of San Dao Men Siang Jian
+
+		<span class="stats">
+<span> 28 </span> / <span>55</span>
+</span>
+<br/>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=No. 77, Chenggong Rd., West Central Dist., Tainan City" rel="noopener" target="_blank"></a>No. 77, Chenggong Rd., West Central Dist., Tainan City
+</div>
+<img src="/2020/static/pycontw-2020/assets/community-track/three-doors-brunch.jpg" width="100%"/>
+<h4>Agenda</h4>
+<dl class="talk-list">
+<dt>
+        13:40 - 13:50
+        </dt>
+<dd>
+<p>
+<span class="talk-title">Community Introduction</span>
+</p>
+</dd>
+<dt>
+        13:50 - 14:20
+        </dt>
+<dd>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1158746965152891237/">重力波調查員：鄉民都來分析重力波觀測資料</a>
+                
+                 by 蘇羿豪
+                
+
+                
+            </p>
+</dd>
+<dt>
+        14:30 - 15:00
+        </dt>
+<dd>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1157243296792183137/">Python Approach to Quantum Computing - Cirq Framework and More</a>
+                
+                 by 何泰祥 Taihsiang Ho (tai271828)
+                
+
+                
+            </p>
+</dd>
+<dt>
+        15:10 - 15:40
+        </dt>
+<dd>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1162187970745205106/">Four Ways to Boost Your NumPy Performance</a>
+                
+                 by clyang
+                
+
+                
+            </p>
+</dd>
+<dt>
+        15:50 - 16:40
+        </dt>
+<dd>
+<p>
+<span class="talk-title">Free Sharing</span>
+</p>
+</dd>
+<dt>
+        16:50 - 17:20
+        </dt>
+<dd>
+<p>
+<span class="talk-title">Lightning Talks</span>
+</p>
+</dd>
+<dt>
+        17:20 - 17:40
+        </dt>
+<dd>
+<p>
+<span class="talk-title">Closing</span>
+</p>
+</dd>
+</dl>
+<hr/>
+<h3><a name="web-data"></a>Web / Data</h3>
+<div class="community-track-actions">
+</div>
+<div class="community">
+		Taipei.py + PyData
+	</div>
+<div class="venue-name">
+		Masa Loft
+
+		<span class="stats">
+<span class="text-yellow"> 50 </span> / <span>50</span>
+</span>
+<br/>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=3F., No. 53, Sec. W., Daxue Rd., East Dist., Tainan City" rel="noopener" target="_blank"></a>3F., No. 53, Sec. W., Daxue Rd., East Dist., Tainan City
+</div>
+<img src="/2020/static/pycontw-2020/assets/community-track/masaloft.jpg" width="100%"/>
+<h4>Agenda</h4>
+<dl class="talk-list">
+<dt>
+        13:40 - 13:50
+        </dt>
+<dd>
+<p>
+<span class="talk-title">Community Introduction</span>
+</p>
+</dd>
+<dt>
+        13:50 - 14:20
+        </dt>
+<dd>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1154869542715916638/">使用 airflow 執行爬蟲單元測試來打造網站改版自動偵測通知服務</a>
+                
+                 by Mark Chang
+                
+
+                
+            </p>
+</dd>
+<dt>
+        14:30 - 15:00
+        </dt>
+<dd>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1163013399026598259/">Celery meets Singleton</a>
+                
+                 by 郭學聰 (Hsueh-Tsung Kuo)
+                
+
+                
+            </p>
+</dd>
+<dt>
+        15:10 - 15:40
+        </dt>
+<dd>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1129531549767696713/">Modern recommender system in large content website</a>
+                
+                 by Cyrus Chiu
+                
+
+                
+            </p>
+</dd>
+<dt>
+        15:50 - 16:40
+        </dt>
+<dd>
+<p>
+<span class="talk-title">Free Sharing</span>
+</p>
+</dd>
+<dt>
+        16:50 - 17:20
+        </dt>
+<dd>
+<p>
+<span class="talk-title">Lightning Talks</span>
+</p>
+</dd>
+<dt>
+        17:20 - 17:40
+        </dt>
+<dd>
+<p>
+<span class="talk-title">Closing</span>
+</p>
+</dd>
+</dl>
+</div>
+<h2>traffic</h2>
+<p>‼請注意，9/06下午的社群議程場地會由成大移動到各社群議程場地哦
+    為了大家的方便，今年大會安排了交通接駁車方便大家移動到各場地
+    從外縣市來到台南的朋友們可以不必擔心了～
+</p>
+<table class="table">
+<thead>
+<tr>
+<th>Time</th>
+<th style="width: 70%">Shuttle bus route</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12:20</td>
+<td>
+<p>[Car 1] Cheng Kung University -&gt; Tainan Cultural and Creative Park</p>
+<p>[Car 2] Cheng Kung University -&gt; Tsang Fong Art Space</p>
+<p>[Car 3] Cheng Kung University -&gt; Angry Burger</p>
+<p>[Car 4] Cheng Kung University -&gt; Brunch of San Dao Men Siang Jian</p>
+</td>
+</tr>
+<tr>
+<td>12:40</td>
+<td>
+<p>[Car 1, 3] Cheng Kung University -&gt; Tainan Cultural and Creative Park</p>
+<p>[Car 2] Cheng Kung University -&gt; Tsang Fong Art Space</p>
+<p>[Car 4] Cheng Kung University -&gt; Brunch of San Dao Men Siang Jian -&gt; Tainan Cultural and Creative Park -&gt; Tsang Fong Art Space -&gt; Angry Burger</p>
+</td>
+</tr>
+<tr>
+<td>13:00</td>
+<td>
+<p>[Car 2] Cheng Kung University -&gt; Brunch of San Dao Men Siang Jian -&gt; Tainan Cultural and Creative Park -&gt; Tsang Fong Art Space -&gt; Angry Burger</p>
+</td>
+</tr>
+<tr>
+<td>13:30</td>
+<td>
+<p>[Car 3] Cheng Kung University -&gt; Brunch of San Dao Men Siang Jian -&gt; Tainan Cultural and Creative Park -&gt; Tsang Fong Art Space -&gt; Angry Burger</p>
+</td>
+</tr>
+</tbody>
+</table>
+<script>
+		window.TOKEN = '';
+	</script>
+</main>
+<footer>
+<div class="footer-logos">
+<div class="footer-logo"></div>
+</div>
+<ul>
+<li><a href="/2020/en-us/about/code-of-conduct/">Code of Conduct</a></li>
+<li><a href="/2020/en-us/about/staff/">Staff</a></li>
+<li><a href="/2020/en-us/about/community/">Community</a></li>
+<li><a href="/2020/en-us/about/privacy_policy/">Privacy Policy</a></li>
+</ul>
+<p class="copyright">2020 PyCon Taiwan</p>
+</footer>
+<script src="/2020/static/CACHE/js/output.378e60111296.js"></script>
+<script src="/2020/static/CACHE/js/output.02ee441f6e37.js"></script>
+</body>
+</html>

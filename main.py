@@ -131,6 +131,11 @@ def GetPage(path):
             if path[6:8] == 'en':
                 html = html.replace("ZH", "<a href='" + path.replace("en-us", "zh-hant") + "' class=\"myclass\">ZH</a>", 1)
             html += "<style>.myclass{text-decoration: none;color: #616e86;}.myclass:hover{text-decoration: none;color: #4a5363;}</style>"
+        if Pycon_year == '2020':
+            if path[6:8] == 'zh':
+                html = html.replace("EN", "<a href='" + path.replace("zh-hant", "en-us") + "' style=\"text-decoration: none;\">EN</a>", 1)
+            if path[6:8] == 'en':
+                html = html.replace("ZH", "<a href='" + path.replace("en-us", "zh-hant") + "' style=\"text-decoration: none;\">ZH</a>", 1)
         f.write(unquote(html))
 
 def main():
@@ -145,16 +150,16 @@ def main():
         GetPage(nav.replace("zh-hant", "en-us"))
 
 @click.command()
-@click.option('-y', 'param', help='Pycon Year (2016 - 2019)', type=click.DateTime(formats=["%Y"]), required=True)
+@click.option('-y', 'param', help='Pycon Year (2016 - 2020)', type=click.DateTime(formats=["%Y"]), required=True)
 
 def check_year(param):
     '''Get Pycon Website According To the Year'''
     global Pycon_year 
     Pycon_year = str(param.year)
-    if Pycon_year >= '2016' and Pycon_year <= '2019':
+    if Pycon_year >= '2016' and Pycon_year <= '2020':
         main()
     else:
-        print('Pycon Year Should be between 2016 and 2019 !')
+        print('Pycon Year Should be between 2016 and 2020 !')
 
 if __name__ == '__main__':
     check_year()
