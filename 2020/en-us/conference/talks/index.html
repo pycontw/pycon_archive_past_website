@@ -1,0 +1,674 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Talks | PyCon Taiwan 2020</title>
+<link href="/2020/static/pycontw-2020/assets/favicon/favicon.ico" rel="shortcut icon"/>
+<link href="/2020/static/pycontw-2020/assets/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/2020/static/pycontw-2020/assets/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/2020/static/pycontw-2020/assets/favicon/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="" property="og:description"/>
+<meta content="https://tw.pycon.org/2020/static/pycontw-2020/assets/og-image.png" property="og:image"/>
+<link href="https://fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,600,700|Raleway:300,400|Philosopher|Quicksand&amp;display=swap" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
+<link href="/2020/static/CACHE/css/output.bf5828e3f2f3.css" rel="stylesheet" type="text/css"/>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNZ39PD');</script>
+</head>
+<body class="">
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-TNZ39PD" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<div data-controller="topNav">
+<nav class="top-navbar">
+<div class="navbar-left">
+<form  class="navbar-lang-switch" method="post">
+
+<input name="next" type="hidden" value="/2020/conference/talks/"/>
+<button name="language" type="submit" value="zh-hant">
+                    <a href='/2020/zh-hant/conference/talks/' style="text-decoration: none;">ZH</a>
+                </button>
+<button disabled="disabled" name="language" type="submit" value="en-us">
+                    EN
+                </button>
+</form>
+<a href="/2020/en-us/"><i class="twicon-provintia navbar-provintia"></i></a>
+<a class="navbar-brand" href="/2020/en-us/">PyCon TW20</a>
+</div>
+<button aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler no-script" data-action="topNav#toggle" data-target="topNav.toggler" type="button">
+<div><span></span><span></span><span></span></div>
+</button>
+<div class="navbar-social-desktop">
+<a aria-label="Blog" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+</nav>
+<nav class="menu-navbar-mobile no-script" data-target="topNav.menu">
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/2020/en-us/about/pycontw/">
+			About
+		</a>
+</li>
+<!-- -->
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-conference" type="checkbox"/>
+<label class="active" for="menu-navbar-mobile-conference">
+			Conference
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/en-us/conference/schedule/">Schedule</a></li>
+<li><a href="/2020/en-us/conference/keynotes/">Keynotes</a></li>
+<li><a href="/2020/en-us/conference/talks/">Talks</a></li>
+<li><a href="/2020/en-us/conference/tutorials/">Tutorials</a></li>
+<li><a href="/2020/en-us/conference/community-track/">Community Track</a></li>
+<!--<li><a href="/2020/en-us/speaking/recording/">Recording</a></li>-->
+<!-- <li><a href="/2020/en-us/portal/">Portal</a></li> -->
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-events" type="checkbox"/>
+<label for="menu-navbar-mobile-events">
+			Events
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/en-us/events/overview/">Overview</a></li>
+<li><a href="/2020/en-us/events/warmup-session/">Warm-Up Session</a></li>
+<li><a href="/2020/en-us/events/open-spaces/">Open Spaces</a></li>
+<li><a href="/2020/en-us/events/sprints/">Sprints</a></li>
+<li><a href="/2020/en-us/events/job-listings/">Job Listings</a></li>
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-registration" type="checkbox"/>
+<label for="menu-navbar-mobile-registration">
+			Registration
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/en-us/registration/ticket-info/">Conference Ticket</a></li>
+<li><a href="/2020/en-us/registration/financial-aid/">Financial Aid</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/2020/en-us/venue/">
+			Venue
+		</a>
+</li>
+<li>
+<a href="/2020/en-us/covid-19/guidelines/">
+			COVID-19 Guidelines
+		</a>
+</li>
+<li class="dashboard-item">
+<a href="/2020/en-us/dashboard/">My PyCon</a>
+</li>
+</ul>
+<div class="navbar-social-mobile">
+<a aria-label="Blog" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+<div class="shadow">
+<i class="twicon-provintia"></i>
+</div>
+</nav>
+</div>
+<header class="page-hero">
+<nav class="menu-navbar-desktop">
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/2020/en-us/about/pycontw/">
+			About
+		</a>
+</li>
+<!-- -->
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-conference" type="checkbox"/>
+<label class="active" for="menu-navbar-desktop-conference">
+			Conference
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/en-us/conference/schedule/">Schedule</a></li>
+<li><a href="/2020/en-us/conference/keynotes/">Keynotes</a></li>
+<li><a href="/2020/en-us/conference/talks/">Talks</a></li>
+<li><a href="/2020/en-us/conference/tutorials/">Tutorials</a></li>
+<li><a href="/2020/en-us/conference/community-track/">Community Track</a></li>
+<!--<li><a href="/2020/en-us/speaking/recording/">Recording</a></li>-->
+<!-- <li><a href="/2020/en-us/portal/">Portal</a></li> -->
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-events" type="checkbox"/>
+<label for="menu-navbar-desktop-events">
+			Events
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/en-us/events/overview/">Overview</a></li>
+<li><a href="/2020/en-us/events/warmup-session/">Warm-Up Session</a></li>
+<li><a href="/2020/en-us/events/open-spaces/">Open Spaces</a></li>
+<li><a href="/2020/en-us/events/sprints/">Sprints</a></li>
+<li><a href="/2020/en-us/events/job-listings/">Job Listings</a></li>
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-registration" type="checkbox"/>
+<label for="menu-navbar-desktop-registration">
+			Registration
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/en-us/registration/ticket-info/">Conference Ticket</a></li>
+<li><a href="/2020/en-us/registration/financial-aid/">Financial Aid</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/2020/en-us/venue/">
+			Venue
+		</a>
+</li>
+<li>
+<a href="/2020/en-us/covid-19/guidelines/">
+			COVID-19 Guidelines
+		</a>
+</li>
+<li class="dashboard-item">
+<a href="/2020/en-us/dashboard/">My PyCon</a>
+</li>
+</ul>
+</nav>
+</header>
+<main>
+<section class="pill-title">
+<h1>Talks</h1>
+</section>
+<article>
+<p>The two conference days are packed with talks about Python by speakers from Taiwan and around the world. The talks will be either 15- or 30-minute long. Three tracks of talks will be delivered simultaneously, all with different topics and difficulties. We suggest you to plan beforehand, and choose what you want to listen based on your interests. Many people take notes on the program schedule before the meeting so they don't end up in the wrong place.</p>
+<p><em>Program schedule is subject to change.</em> Please check this page frequently to get the latest version.</p>
+</article>
+<h3>Categories</h3>
+<a class="tag" href="#talk-category-Security">Security</a>
+<a class="tag" href="#talk-category-Application">Application</a>
+<a class="tag" href="#talk-category-Project Tooling">Project Tooling</a>
+<a class="tag" href="#talk-category-FinTech">FinTech</a>
+<a class="tag" href="#talk-category-Best Practices &amp; Patterns">Best Practices &amp; Patterns</a>
+<a class="tag" href="#talk-category-Internet of Things">Internet of Things</a>
+<a class="tag" href="#talk-category-Python Core (language, stdlib, etc.)">Python Core (language, stdlib, etc.)</a>
+<a class="tag" href="#talk-category-Systems Administration">Systems Administration</a>
+<a class="tag" href="#talk-category-Data Analysis">Data Analysis</a>
+<a class="tag" href="#talk-category-Machine Learning">Machine Learning</a>
+<a class="tag" href="#talk-category-Testing">Testing</a>
+<a class="tag" href="#talk-category-Science">Science</a>
+<a class="tag" href="#talk-category-Education">Education</a>
+<a class="tag" href="#talk-category-Embedded Systems">Embedded Systems</a>
+<a class="tag" href="#talk-category-Other">Other</a>
+<a class="tag" href="#talk-category-Natural Language Processing">Natural Language Processing</a>
+<a class="tag" href="#talk-category-Community">Community</a>
+<article>
+<h3 id="talk-category-Security">Security</h3>
+<ul class="talk-list">
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1124332019854082369/">So, You Want to Build an Anti-Virus Engine?</a>
+				
+				 by JunWei Song and KunYu Chen
+				
+			</p>
+</li>
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1165169031804617110/">Computation Techniques for Encrypted Data using Python</a>
+				
+				 by Gajendra Deshpande
+				
+			</p>
+</li>
+</ul>
+</article>
+<article>
+<h3 id="talk-category-Application">Application</h3>
+<ul class="talk-list">
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1124347947245371715/">PyPtt - 當 Python 遇上 PTT</a>
+				
+				 by CodingMan
+				
+			</p>
+</li>
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1159120546609234278/">Airflow 於 ETL 的初步應用</a>
+				
+				 by ZenoPeng
+				
+			</p>
+</li>
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1164541368572313993/">CBFHSS 專為高中生設計的管家型聊天機器人</a>
+				
+				 by 廖煥杰
+				
+			</p>
+</li>
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1164544241871880586/">Django, Celery 與 Windows 的美麗邂逅</a>
+				
+				 by Hane Liu
+				
+			</p>
+</li>
+</ul>
+</article>
+<article>
+<h3 id="talk-category-Project Tooling">Project Tooling</h3>
+<ul class="talk-list">
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1124597453421543748/">Package Python Code the Hard Way</a>
+<span class="talk-label"><a href="#community-track">Community Track</a></span>
+				
+				 by Tzu-ping Chung
+				
+			</p>
+</li>
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1126732952315625799/">Time travel: Let’s learn from the history of Python packaging!</a>
+				
+				 by Kir Chou
+				
+			</p>
+</li>
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1164567503456698764/">Join PyCon JP as a staff with Python!</a>
+				
+				 by nikkie
+				
+			</p>
+</li>
+</ul>
+</article>
+<article>
+<h3 id="talk-category-FinTech">FinTech</h3>
+<ul class="talk-list">
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1125925169781539142/">用 Python 打造機器學習股票交易訊號</a>
+<span class="talk-label"><a href="#community-track">Community Track</a></span>
+				
+				 by 韓承佑
+				
+			</p>
+</li>
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1156232082284872031/">Deploy Your Model to Live Trading</a>
+<span class="talk-label"><a href="#community-track">Community Track</a></span>
+				
+				 by YVictor
+				
+			</p>
+</li>
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1157344705365672290/">基於數位軌跡資料，釐清客戶需求與建立客戶畫像分群系統</a>
+<span class="talk-label"><a href="#community-track">Community Track</a></span>
+				
+				 by Roye Qiu
+				
+			</p>
+</li>
+</ul>
+</article>
+<article>
+<h3 id="talk-category-Best Practices &amp; Patterns">Best Practices &amp; Patterns</h3>
+<ul class="talk-list">
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1129531549767696713/">Modern recommender system in large content website</a>
+<span class="talk-label"><a href="#community-track">Community Track</a></span>
+				
+				 by Cyrus Chiu
+				
+			</p>
+</li>
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1163013399026598259/">Celery meets Singleton</a>
+<span class="talk-label"><a href="#community-track">Community Track</a></span>
+				
+				 by 郭學聰 (Hsueh-Tsung Kuo)
+				
+			</p>
+</li>
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1164539411870777736/">Notes about moving from Python to C++</a>
+				
+				 by Yung-Yu Chen
+				
+			</p>
+</li>
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1165068435768476053/">Fixit - a lint framework writes better Python code for you</a>
+				
+				 by Jimmy Lai
+				
+			</p>
+</li>
+</ul>
+</article>
+<article>
+<h3 id="talk-category-Internet of Things">Internet of Things</h3>
+<ul class="talk-list">
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1133461671939932492/">用Python與Raspberry Pi打造手持式無線IoT設備-[R-type鐵水溫度計]</a>
+				
+				 by Ryan Chen
+				
+			</p>
+</li>
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1164585895110640015/">水文監控-以Python走過的那些路(坑)</a>
+				
+				 by Malo
+				
+			</p>
+</li>
+</ul>
+</article>
+<article>
+<h3 id="talk-category-Python Core (language, stdlib, etc.)">Python Core (language, stdlib, etc.)</h3>
+<ul class="talk-list">
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1152288720347464022/">Python Application Dependency Management in 2020</a>
+<span class="talk-label"><a href="#community-track">Community Track</a></span>
+				
+				 by Liuyang Wan
+				
+			</p>
+</li>
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1159574667502027113/">Why should you learn writing C extension?</a>
+<span class="talk-label"><a href="#community-track">Community Track</a></span>
+				
+				 by Gavin Chan
+				
+			</p>
+</li>
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1164233858552430976/">Speed Up Your Data Processing: Parallel and Asynchronous Programming in Data Science</a>
+				
+				 by Chin Hwee Ong
+				
+			</p>
+</li>
+</ul>
+</article>
+<article>
+<h3 id="talk-category-Systems Administration">Systems Administration</h3>
+<ul class="talk-list">
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1153041030333858139/">Network Automation with Python</a>
+				
+				 by Eric Chou
+				
+			</p>
+</li>
+</ul>
+</article>
+<article>
+<h3 id="talk-category-Data Analysis">Data Analysis</h3>
+<ul class="talk-list">
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1154263592464286044/">誰識KOL? 2020台灣總統大選在 Facebook 上的社群網絡分析</a>
+				
+				 by 游騰林
+				
+			</p>
+</li>
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1158746965152891237/">重力波調查員：鄉民都來分析重力波觀測資料</a>
+<span class="talk-label"><a href="#community-track">Community Track</a></span>
+				
+				 by 蘇羿豪
+				
+			</p>
+</li>
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1164401815932895620/">Koalas  - An Interface for Pandas User to Leverage Spark Framework.</a>
+				
+				 by 許理賀
+				
+			</p>
+</li>
+</ul>
+</article>
+<article>
+<h3 id="talk-category-Machine Learning">Machine Learning</h3>
+<ul class="talk-list">
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1154472974896595293/">Track Machine Learning Applications by MLflow Tracking</a>
+				
+				 by Shuhsi Lin
+				
+			</p>
+</li>
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1163063448498602356/">Corona-Net: Fighting COVID-19 with Machine Learning</a>
+				
+				 by Choi Ching Lam
+				
+			</p>
+</li>
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1164610752435192210/">防疫大作戰！使用 Raspberry Pi + Thermal Camera  + Python 自製熱像儀</a>
+<span class="talk-label"><a href="#community-track">Community Track</a></span>
+				
+				 by sosorry
+				
+			</p>
+</li>
+</ul>
+</article>
+<article>
+<h3 id="talk-category-Testing">Testing</h3>
+<ul class="talk-list">
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1154869542715916638/">使用 airflow 執行爬蟲單元測試來打造網站改版自動偵測通知服務</a>
+<span class="talk-label"><a href="#community-track">Community Track</a></span>
+				
+				 by Mark Chang
+				
+			</p>
+</li>
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1160711725289308526/">網頁自動化測試 -- 從內部工具開始</a>
+				
+				 by Set Mao
+				
+			</p>
+</li>
+</ul>
+</article>
+<article>
+<h3 id="talk-category-Science">Science</h3>
+<ul class="talk-list">
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1157243296792183137/">Python Approach to Quantum Computing - Cirq Framework and More</a>
+<span class="talk-label"><a href="#community-track">Community Track</a></span>
+				
+				 by 何泰祥 Taihsiang Ho (tai271828)
+				
+			</p>
+</li>
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1162187970745205106/">Four Ways to Boost Your NumPy Performance</a>
+<span class="talk-label"><a href="#community-track">Community Track</a></span>
+				
+				 by clyang
+				
+			</p>
+</li>
+</ul>
+</article>
+<article>
+<h3 id="talk-category-Education">Education</h3>
+<ul class="talk-list">
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1159519557711298920/">Practical Report on Programming Education Using Python for Elementary School Students</a>
+				
+				 by Daisuke Saito
+				
+			</p>
+</li>
+</ul>
+</article>
+<article>
+<h3 id="talk-category-Embedded Systems">Embedded Systems</h3>
+<ul class="talk-list">
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1160622868380254573/">Life is Short - How Python Can Help Developing Intermittent System</a>
+				
+				 by PunchShadow
+				
+			</p>
+</li>
+</ul>
+</article>
+<article>
+<h3 id="talk-category-Other">Other</h3>
+<ul class="talk-list">
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1160945505652441455/">不顧 PM 反對，工程師執意擔任 3D 美術</a>
+				
+				 by Rain Wu
+				
+			</p>
+</li>
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1163619671685988728/">我們如何在醫院打造即時醫療影像AI平台</a>
+<span class="talk-label"><a href="#community-track">Community Track</a></span>
+				
+				 by Max Lai
+				
+			</p>
+</li>
+</ul>
+</article>
+<article>
+<h3 id="talk-category-Natural Language Processing">Natural Language Processing</h3>
+<ul class="talk-list">
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1164337168361980290/">My High School Intern Project: Constructing an AI Helper for Cyber Threat Intelligence Analysis</a>
+<span class="talk-label"><a href="#community-track">Community Track</a></span>
+				
+				 by Chia-En Tsai
+				
+			</p>
+</li>
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1164434586181042565/">Loki：自動生成 Python 碼的 Chatbot 意圖分類引擎</a>
+				
+				 by PeterWolf
+				
+			</p>
+</li>
+</ul>
+</article>
+<article>
+<h3 id="talk-category-Community">Community</h3>
+<ul class="talk-list">
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/1164383136524534147/">Decade of PyCon JP: How we spread the Python community in Japan</a>
+				
+				 by Takanori Suzuki
+				
+			</p>
+</li>
+</ul>
+</article>
+<article>
+<h3>Invited Events</h3>
+<ul class="talk-list">
+<li>
+<p>
+<a class="talk-title" href="/2020/en-us/conference/talk/sponsored/practical-enterprise-jupyterhub-deployment-and-mlo/">Practical Enterprise JupyterHub Deployment and MLOps with PrimeHub</a>
+<span class="talk-label"><a href="#community-track">Community Track</a></span>
+				 by Chia-liang Kao
+				
+			</p>
+</li>
+</ul>
+</article>
+<section class="note">
+<a name="community-track"></a>
+<span class="talk-label"><a href="">Community Track</a></span>
+<p>
+	The community track is a new event in PyCon TW. We choose the talks with specific topics and package them into the same session. We'll leave the conference rooms and go to characteristic cafes, exhibition spaces, and even monuments so that the attendees and speakers can interact with each other more comfortably and closely.
+	</p>
+</section>
+</main>
+<footer>
+<div class="footer-logos">
+<div class="footer-logo"></div>
+</div>
+<ul>
+<li><a href="/2020/en-us/about/code-of-conduct/">Code of Conduct</a></li>
+<li><a href="/2020/en-us/about/staff/">Staff</a></li>
+<li><a href="/2020/en-us/about/community/">Community</a></li>
+<li><a href="/2020/en-us/about/privacy_policy/">Privacy Policy</a></li>
+</ul>
+<p class="copyright">2020 PyCon Taiwan</p>
+</footer>
+<script src="/2020/static/CACHE/js/output.378e60111296.js"></script>
+</body>
+</html>
