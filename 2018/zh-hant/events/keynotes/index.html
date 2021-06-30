@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>基調演講 | PyCon Taiwan 2018</title>
+<link href="/2018/static/pycontw-2018/assets/favicon.ico" rel="shortcut icon"/>
+<link href="/2018/static/pycontw-2018/assets/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/2018/static/pycontw-2018/assets/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<meta content="" property="og:description"/>
+<meta content="https://tw.pycon.org/2018/static/pycontw-2018/assets/og-image.png" property="og:image"/>
+<link href="https://fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400|Raleway:300,400" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
+<link href="/2018/static/CACHE/css/bb362a2fa3e0.css" rel="stylesheet" type="text/css">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNZ39PD');</script>
+</link></head>
+<body class="keynotes-page">
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-TNZ39PD" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<div data-controller="topNav">
+<nav class="top-navbar">
+<form  class="navbar-lang-switch" method="post">
+
+<input name="next" type="hidden" value="/2018/events/keynotes/"/>
+<button disabled="disabled" name="language" type="submit" value="zh-hant">
+				ZH
+			</button>
+<button name="language" type="submit" value="en-us">
+				<a href='/2018/en-us/events/keynotes/' class="myclass">EN</a>
+			</button>
+</form>
+<div class="navbar-centerbox">
+<a class="navbar-logo" href="/2018/zh-hant/"></a>
+</div>
+<button aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler no-script" data-action="topNav#toggle" data-target="topNav.toggler" type="button">
+<div><span></span><span></span><span></span></div>
+</button>
+<div class="navbar-social-desktop">
+<a aria-label="部落格" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+</nav>
+<nav class="menu-navbar-mobile no-script" data-target="topNav.menu">
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/2018/zh-hant/about/pycontw/">關於</a>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-conference" type="checkbox"/>
+<label for="menu-navbar-mobile-conference">議程</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/zh-hant/events/overview/">總覽</a></li>
+<li><a href="/2018/zh-hant/events/schedule/">時間表</a></li>
+<li><a href="/2018/zh-hant/events/keynotes/">基調演講</a></li>
+<li><a href="/2018/zh-hant/events/talks/">一般演講</a></li>
+<li><a href="/2018/zh-hant/speaking/recording/">錄影</a></li>
+<li><a href="/2018/zh-hant/portal/">傳送門</a></li>
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-events" type="checkbox"/>
+<label for="menu-navbar-mobile-events">交流</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/zh-hant/events/tutorials/">學習</a></li>
+<li><a href="/2018/zh-hant/events/sprints/">衝刺開發</a></li>
+<li><a href="/2018/zh-hant/events/open-spaces/">開放空間</a></li>
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-registration" type="checkbox"/>
+<label for="menu-navbar-mobile-registration">註冊</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/zh-hant/registration/ticket-info/">會議門票</a></li>
+<li><a href="/2018/zh-hant/registration/financial-aid/">財務補助</a></li>
+<li><a href="/2018/zh-hant/registration/registration/">報到</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/2018/zh-hant/venue/">會場</a>
+</li>
+<li>
+<a href="/2018/zh-hant/dashboard/">My PyCon</a>
+</li>
+</ul>
+<div class="navbar-social-mobile">
+<a aria-label="部落格" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+</nav>
+</div>
+<header class="page-hero">
+<nav class="menu-navbar-desktop">
+<a class="menu-logo" href="/2018/zh-hant/"></a>
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/2018/zh-hant/about/pycontw/">關於</a>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-conference" type="checkbox"/>
+<label for="menu-navbar-desktop-conference">議程</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/zh-hant/events/overview/">總覽</a></li>
+<li><a href="/2018/zh-hant/events/schedule/">時間表</a></li>
+<li><a href="/2018/zh-hant/events/keynotes/">基調演講</a></li>
+<li><a href="/2018/zh-hant/events/talks/">一般演講</a></li>
+<li><a href="/2018/zh-hant/speaking/recording/">錄影</a></li>
+<li><a href="/2018/zh-hant/portal/">傳送門</a></li>
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-events" type="checkbox"/>
+<label for="menu-navbar-desktop-events">交流</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/zh-hant/events/tutorials/">學習</a></li>
+<li><a href="/2018/zh-hant/events/sprints/">衝刺開發</a></li>
+<li><a href="/2018/zh-hant/events/open-spaces/">開放空間</a></li>
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-registration" type="checkbox"/>
+<label for="menu-navbar-desktop-registration">註冊</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/zh-hant/registration/ticket-info/">會議門票</a></li>
+<li><a href="/2018/zh-hant/registration/financial-aid/">財務補助</a></li>
+<li><a href="/2018/zh-hant/registration/registration/">報到</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/2018/zh-hant/venue/">會場</a>
+</li>
+<li>
+<a href="/2018/zh-hant/dashboard/">My PyCon</a>
+</li>
+</ul>
+</nav>
+</header>
+<main>
+<h1>基調演講</h1>
+<article class="media">
+<header>
+<figure>
+<img src="/2018/static/pycontw-2018/assets/keynotes/katie.jpg"/>
+<figcaption>Katie McLaughlin</figcaption>
+</figure>
+<h2 class="title">基本多文種平面外的溝通策略</h2>
+</header>
+<div class="tabbing" data-controller="tabbing">
+<ul class="tabs">
+<li data-action="click-&gt;tabbing#activate" data-target="tabbing.tab">
+				自傳
+			</li>
+<li data-action="click-&gt;tabbing#activate" data-target="tabbing.tab">
+				演講
+			</li>
+</ul>
+<div>
+<article data-target="tabbing.pane">
+<h3 class="tab-title">自傳</h3>
+<p>Katie 多年來從事過許多工作，使用各式各樣的語言開發軟體、擔任各式各樣平台的系統管理員、發表了各式各樣的演講。</p>
+<p>在改變世界之餘，她也喜歡編織、烹飪、以及研究各種應用程式對 emoji 的支援。</p>
+<div class="social">
+<a href="https://glasnt.com/" rel="noopener" target="_blank"><span class="fa fa-link"></span></a>
+<a href="https://twitter.com/glasnt" rel="noopener" target="_blank"><span class="fa fa-twitter"></span></a>
+</div>
+</article>
+<article data-target="tabbing.pane">
+<h3 class="tab-title">演講</h3>
+<p>通用字元集的標準化，為世界各地的電腦能夠自由地互相交換資料，奠定了良好的基礎。然而，這個標準中，仍然存在一個十分不穩定的部份，不斷在人類的溝通中成為阻礙，造成無盡的誤會。</p>
+<p>在此基調演講中，Katie McLaughlin 將根據她在本領域中多年的研究與貢獻，分享自己學到的知識，並好好對 emoji 抱怨一番。</p>
+<p>演講投影片：<a href="https://glasnt.com/talks/2018_06_PyConTW/#/" rel="noopener" target="_blank">https://glasnt.com/talks/2018_06_PyConTW/#/</a></p>
+</article>
+</div>
+</div>
+</article>
+<article class="media">
+<header>
+<figure>
+<img src="/2018/static/pycontw-2018/assets/keynotes/sw.jpg"/>
+<figcaption>陳昇瑋</figcaption>
+</figure>
+<h2 class="title">人工智慧民主化在台灣</h2>
+</header>
+<div class="tabbing" data-controller="tabbing">
+<ul class="tabs">
+<li data-action="click-&gt;tabbing#activate" data-target="tabbing.tab">
+				自傳
+			</li>
+<li data-action="click-&gt;tabbing#activate" data-target="tabbing.tab">
+				演講
+			</li>
+</ul>
+<div>
+<article data-target="tabbing.pane">
+<h3 class="tab-title">自傳</h3>
+<p>陳昇瑋博士現為台灣人工智慧學校執行長、玉山金控科技長、台灣資料科學協會理事長、財團法人人工智慧科技基金會執行長、中央研究院資訊科學研究所研究員暨資料洞察實驗室主持人，研究領域為大數據分析、人工智慧、計算社會科學及多媒體系統等，在人工智慧的產業應用上持續有代表性的研究創見。</p>
+<p>陳博士堅信資料的價值，長期推廣人工智慧、資料科學及其在各領域的應用，發起台灣人工智慧學校及台灣人工智慧暨資料科學年會，期能將對於人工智慧及資料科學的熱情傳達給大眾，一起來探索它們的潛力，並將人工智慧及資料科學引入每個人的專業領域之中。他期待讓這些由資料而生的技術不再是口號，而是大家真實拿來解決問題及創造價值的工具。</p>
+<p>欲瞭解陳博士的研究及心得分享，請至他的個人網頁 <a href="http://www.iis.sinica.edu.tw/~swc/index_c.html">http://www.iis.sinica.edu.tw/~swc/index_c.html</a> 一探究竟。</p>
+<div class="social">
+<a href="http://www.iis.sinica.edu.tw/~swc/index_c.html" rel="noopener" target="_blank"><span class="fa fa-link"></span></a>
+</div>
+</article>
+<article data-target="tabbing.pane">
+<h3 class="tab-title">演講</h3>
+<p>有人說，資料是新時代的石油；那麼，人工智慧 (AI) 就是新時代的電力，未來將不會有任何現代產業與 AI 無關。</p>
+<p>問題在於 AI 技術的引入會面臨兩大挑戰，挑戰一，AI 是解決特定問題的技術：同樣是深度學習模型，要解決什麼問題，能解決什麼問題，能解到什麼程度，產生多少價值，在每家公司都不一樣，多元性及客製化程度遠比導入 ERP (企業資源計畫)、 CRM (客戶關係管理) 系統高得太多。例如，同樣是 AOI (自動光學檢測) 技術，在 A 公司做來檢測電路板的瑕疵，在 B 公司檢測織物的瑕疵，在 C 公司檢測玻璃的瑕疵，以高標準來要求的話，絕對不是調整參數就好。因此，未來的五年甚至更久的時間內，很難期待會有套裝系統可以直接購入及進行簡單客製化，符合各產業、各公司、各種問題的期待。</p>
+<p>挑戰二，AI 並沒有辦法 plug &amp; play (即插即用)：目前的 AI 皆由機器學習模型來驅動，而機器學習必須要有大量資料來訓練。若公司內原本並沒有蒐集某個想要解決的問題的資料，或是資料蒐集時間不夠長，任你找到絕世高手或買到厲害的系統也沒有用。例如，若要進行未來半年的某產品銷量預測，通常需要該產品或同類型產品及競品在過去三年或五年以上資料，以及搭配的各式環境因素、客戶訂單資料等等。若是沒有這些資料準備好，AI 系統就是不能動，沒有油就沒有辦法發電的道理。</p>
+<p>幸運的是，這一波 (也是人類史上的第三波) 的 AI 浪潮伴隨著「人工智慧民主化 (AI Democratization)」的趨勢，最重要的概念是，AI 技術不應該只被某些跨國企業所壟斷，應該讓所有需要的人都有機會參與及使用。具體的作法包含各種深度學習開發工具及模型的開放源碼，以及各式最新核心技術的分享等等。</p>
+<p>我個人所看到的是機會，因為這個 AI 民主化趨勢，AI 技術發展在各領域所帶來的機會無窮無盡，是習慣等待國外大廠解決方案的我們應該把握的。</p>
+<p>當然，目前普遍遇到的挑戰是 AI 人才的缺乏，台灣人工智慧學校為此而成立。希望很快地讓「找不到人才」不再成為企業發展人工智慧的障礙，同時建立「自己的問題自己解決」的文化，打破被技術殖民的慣性，重建社會自信。</p>
+<p>台灣人工智慧學校將以最好的師資及與產學界的密切合作，進行人工智慧技術人才的密集培訓。讓不同專業領域的學員都能如虎添翼，以人工智慧加上原本的領域知識，具備協助各企業解決問題，以及帶領人工智慧團隊的能力。他們將擔任技術種子角色，深入台灣產業的各個層面，以其本身專業及人工智慧技術協助企業解決在邁向智慧化的過程中所面臨的難題。</p>
+<p>我將在這場演講中，分享台灣人工智慧學校的來龍去脈，如何從一個稱為 Project Theta 的計畫開始，慢慢確認人才培育的需求，以及形塑台灣人工智慧學校的雛型。這個故事從 2017 年三月的某個早晨開始…</p>
+<p>演講投影片：<a href="https://www.slideshare.net/swchen11/ss-97741195" rel="noopener" target="_blank">https://www.slideshare.net/swchen11/ss-97741195</a></p>
+</article>
+</div>
+</div>
+</article>
+</main>
+<footer>
+<h2 class="footer-logo"></h2>
+<ul>
+<li><a href="/2018/zh-hant/about/code-of-conduct/">行為準則</a></li>
+<li><a href="/2018/zh-hant/about/staff/">工作人員</a></li>
+<li><a href="/2018/zh-hant/about/community/">社群</a></li>
+</ul>
+<p class="copyright">2018 PyCon Taiwan</p>
+</footer>
+<script src="/2018/static/CACHE/js/ce994d83f936.js" type="text/javascript"></script>
+</body>
+</html>
+<style>.myclass{text-decoration: none;color: rgba(255, 255, 255, 0.35);}.myclass:hover{text-decoration: none;color: rgba(255, 255, 255, 0.7);}</style>

@@ -1,0 +1,824 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>PyCon Taiwan 2018</title>
+<link href="/2018/static/pycontw-2018/assets/favicon.ico" rel="shortcut icon"/>
+<link href="/2018/static/pycontw-2018/assets/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/2018/static/pycontw-2018/assets/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<meta content="" property="og:description"/>
+<meta content="https://tw.pycon.org/2018/static/pycontw-2018/assets/og-image.png" property="og:image"/>
+<link href="https://fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400|Raleway:300,400" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
+<link href="/2018/static/CACHE/css/4586e2d38289.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100i" rel="stylesheet"/>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNZ39PD');</script>
+</link></head>
+<body class="">
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-TNZ39PD" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<div data-controller="topNav">
+<nav class="top-navbar">
+<form  class="navbar-lang-switch" method="post">
+
+<input name="next" type="hidden" value="/2018/"/>
+<button disabled="disabled" name="language" type="submit" value="zh-hant">
+				ZH
+			</button>
+<button name="language" type="submit" value="en-us">
+				<a href='/2018/en-us/' class="myclass">EN</a>
+			</button>
+</form>
+<div class="navbar-centerbox">
+<a class="navbar-logo" href="/2018/zh-hant/"></a>
+</div>
+<button aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler no-script" data-action="topNav#toggle" data-target="topNav.toggler" type="button">
+<div><span></span><span></span><span></span></div>
+</button>
+<div class="navbar-social-desktop">
+<a aria-label="部落格" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+</nav>
+<nav class="menu-navbar-mobile no-script" data-target="topNav.menu">
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/2018/zh-hant/about/pycontw/">關於</a>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-conference" type="checkbox"/>
+<label for="menu-navbar-mobile-conference">議程</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/zh-hant/events/overview/">總覽</a></li>
+<li><a href="/2018/zh-hant/events/schedule/">時間表</a></li>
+<li><a href="/2018/zh-hant/events/keynotes/">基調演講</a></li>
+<li><a href="/2018/zh-hant/events/talks/">一般演講</a></li>
+<li><a href="/2018/zh-hant/speaking/recording/">錄影</a></li>
+<li><a href="/2018/zh-hant/portal/">傳送門</a></li>
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-events" type="checkbox"/>
+<label for="menu-navbar-mobile-events">交流</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/zh-hant/events/tutorials/">學習</a></li>
+<li><a href="/2018/zh-hant/events/sprints/">衝刺開發</a></li>
+<li><a href="/2018/zh-hant/events/open-spaces/">開放空間</a></li>
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-registration" type="checkbox"/>
+<label for="menu-navbar-mobile-registration">註冊</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/zh-hant/registration/ticket-info/">會議門票</a></li>
+<li><a href="/2018/zh-hant/registration/financial-aid/">財務補助</a></li>
+<li><a href="/2018/zh-hant/registration/registration/">報到</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/2018/zh-hant/venue/">會場</a>
+</li>
+<li>
+<a href="/2018/zh-hant/dashboard/">My PyCon</a>
+</li>
+</ul>
+<div class="navbar-social-mobile">
+<a aria-label="部落格" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+</nav>
+</div>
+<section class="index-hero">
+<header>
+<h1 class="hero-heading">PyCon TW 18</h1>
+<div class="hero-subheading">
+<span>Hello, Future!</span>
+<span>1–2 June, 2018</span>
+</div>
+</header>
+<blockquote>Simple is better than complex.</blockquote>
+</section>
+<nav class="menu-navbar-desktop">
+<div class="menu-logo"></div>
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/2018/zh-hant/about/pycontw/">關於</a>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-conference" type="checkbox"/>
+<label for="menu-navbar-desktop-conference">議程</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/zh-hant/events/overview/">總覽</a></li>
+<li><a href="/2018/zh-hant/events/schedule/">時間表</a></li>
+<li><a href="/2018/zh-hant/events/keynotes/">基調演講</a></li>
+<li><a href="/2018/zh-hant/events/talks/">一般演講</a></li>
+<li><a href="/2018/zh-hant/speaking/recording/">錄影</a></li>
+<li><a href="/2018/zh-hant/portal/">傳送門</a></li>
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-events" type="checkbox"/>
+<label for="menu-navbar-desktop-events">交流</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/zh-hant/events/tutorials/">學習</a></li>
+<li><a href="/2018/zh-hant/events/sprints/">衝刺開發</a></li>
+<li><a href="/2018/zh-hant/events/open-spaces/">開放空間</a></li>
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-registration" type="checkbox"/>
+<label for="menu-navbar-desktop-registration">註冊</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/zh-hant/registration/ticket-info/">會議門票</a></li>
+<li><a href="/2018/zh-hant/registration/financial-aid/">財務補助</a></li>
+<li><a href="/2018/zh-hant/registration/registration/">報到</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/2018/zh-hant/venue/">會場</a>
+</li>
+<li>
+<a href="/2018/zh-hant/dashboard/">My PyCon</a>
+</li>
+</ul>
+</nav>
+<section class="index-introduction">
+<article class="container">
+<h2>何謂 PyCon</h2>
+<p>PyCon 最初於 2003 成立於北美，現在世界各地皆有以 PyCon 精神而成立的會議。</p>
+</article>
+<article class="container">
+<h2>何謂 PyCon Taiwan</h2>
+<p>PyCon Taiwan 為一年一度由愛好者舉辦、討論並提倡使用 Python 程式語言的會議，聚焦在 Python 技術與其多樣的可能應用的交流。我們歡迎所有對 Python 有興趣的朋友一同加入 PyCon Taiwan 來分享所學、交換想法、並且認識更多同好。 </p>
+</article>
+</section>
+<section class="index-volunteer">
+<article class="container">
+<h2>徵求志工</h2>
+<p>協助我們舉辦，讓年會變得更好！</p>
+<a class="center button-round volunteer" href="https://docs.google.com/forms/d/e/1FAIpQLSe7-q3Ae3yBA4TepszIMCCHQzU3hg8Hy03X-9VcCv7DO5f_oA/viewform" rel="noopener" target="_blank">成為志工</a>
+</article>
+</section>
+<section class="index-partners" data-controller="mediaPopup">
+<article class="container">
+<h2>夥伴</h2>
+<h3>白金級</h3>
+<ul class="partners">
+<li>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="https://www.gandi.net" rel="noopener" target="_blank">
+<img alt="Gandi" src="/2018/media/sponsors/gandi/Gandi.net_Logo.svg"/>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="https://www.gandi.net" rel="noopener" target="_blank">
+<img alt="Gandi" src="/2018/media/sponsors/gandi/Gandi.net_Logo.svg"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<a href="https://www.gandi.net" rel="noopener" target="_blank">
+											Gandi
+										</a>
+</h4>
+<section class="description"><p>Gandi.net 是域名註冊商、SSL 驗證機構與雲端主機提供者，成立於 1996 年，可提供超過 700 種域名。在台灣成立管地有限公司已超過三年，提供台灣發票與中文客服。支持 Open Source 軟體與社群。</p></section>
+</article>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+<h3>金級</h3>
+<ul class="partners">
+<li>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="https://www.esunbank.com.tw/bank/personal" rel="noopener" target="_blank">
+<img alt="玉山商業銀行股份有限公司" src="/2018/media/sponsors/玉山商業銀行股份有限公司/e.sun_bank.svg"/>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="https://www.esunbank.com.tw/bank/personal" rel="noopener" target="_blank">
+<img alt="玉山商業銀行股份有限公司" src="/2018/media/sponsors/玉山商業銀行股份有限公司/e.sun_bank.svg"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<a href="https://www.esunbank.com.tw/bank/personal" rel="noopener" target="_blank">
+											玉山商業銀行股份有限公司
+										</a>
+</h4>
+<section class="description"><p>以台灣最高的山為名的玉山銀行，成立於1992年，秉持著「心清如玉，義重如山」的理念，期望成為金融業界的服務典範。近年來在金融創新發展部分，玉山銀行創造了各種不同的新型態金融服務，像是跨產業合作的第三方支付服務等。在未來，玉山銀行將持續推展全面性的金融服務以創造不可取代的地位，並由衷的希望能夠透過團隊的合作與努力登上國際金融舞台，期待透過玉山清新、專業的團隊，成就台灣的玉山、世界的玉山。</p></section>
+</article>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+<h3>銀級</h3>
+<ul class="partners">
+<li>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="http://www.appier.com/en/careers.html" rel="noopener" target="_blank">
+<img alt="Appier" src="/2018/media/sponsors/appier/銀1_Appier_logo用於白底_rv5xuFZ.svg"/>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="http://www.appier.com/en/careers.html" rel="noopener" target="_blank">
+<img alt="Appier" src="/2018/media/sponsors/appier/銀1_Appier_logo用於白底_rv5xuFZ.svg"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<a href="http://www.appier.com/en/careers.html" rel="noopener" target="_blank">
+											Appier
+										</a>
+</h4>
+<section class="description"><p>Appier是一家專注於人工智慧的科技公司，藉由開發各種人工智慧應用平台，協助企業解決最棘手的商業挑戰。成立於2012年的Appier是由一群充滿熱情的電腦科學家與資訊工程師所組成，技術團隊專長涵蓋人工智慧、資料分析與分散式系統等領域。Appier的總部設於台北，在新加坡、東京、大阪、吉隆坡、胡志明市、馬尼拉、香港、孟買、新德里、雅加達、首爾、雪梨與曼谷等亞洲14個市場設有據點，為超過1,000家知名品牌與代理商提供優質服務。</p></section>
+</article>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="https://www.emq.com/" rel="noopener" target="_blank">
+<img alt="EMQ" src="/2018/media/sponsors/emq/EMQ_mVxPbHu.svg"/>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="https://www.emq.com/" rel="noopener" target="_blank">
+<img alt="EMQ" src="/2018/media/sponsors/emq/EMQ_mVxPbHu.svg"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<a href="https://www.emq.com/" rel="noopener" target="_blank">
+											EMQ
+										</a>
+</h4>
+<section class="description"><p>EMQ is a fintech innovator with an extensive financial settlement network across Asia, providing secure and affordable money transfer options for businesses and individuals. With our assets anchored in Asia, EMQ currently has a footprint in Hong Kong, India, Indonesia, Vietnam and the Philippines, with plans underway to expand across the fastest growing trade corridors and economic zones, spanning Asia, Europe, North America and the Middle East. The company received its Money Service Operator license from the Hong Kong Customs and Excise Department in September 2014 and its Fund Transfer Operator license from Bank Indonesia in March 2017. For more information, please visit EMQ’s website at www.emq.com</p></section>
+</article>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="http://www.trendmicro.tw/tw/index.html" rel="noopener" target="_blank">
+<img alt="Trend Micro" src="/2018/media/sponsors/trend-micro/Trendmicro.svg"/>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="http://www.trendmicro.tw/tw/index.html" rel="noopener" target="_blank">
+<img alt="Trend Micro" src="/2018/media/sponsors/trend-micro/Trendmicro.svg"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<a href="http://www.trendmicro.tw/tw/index.html" rel="noopener" target="_blank">
+											Trend Micro
+										</a>
+</h4>
+<section class="description"><p>趨勢科技是全球雲端資安防護專家及領航者，為亞洲與台灣最大的純軟體公司，是第一家率先採用「機器學習」技術及時偵測和攔截攻擊病毒的全球資安品牌。台灣為全球研發基地，培育超過1,000位以上的工程師，負責研發全球超過3千萬名企業、家庭與個人用戶使用的最新及最完整的資訊安全核心技術及產品。趨勢科技用真實數據培育軟體人才，加速產業AI化，致力於實現更安全的數位及物聯網世界。</p></section>
+</article>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="https://www.ap-mic.com/" rel="noopener" target="_blank">
+<img alt="APMIC" src="/2018/media/sponsors/apmic/亞太2.svg"/>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="https://www.ap-mic.com/" rel="noopener" target="_blank">
+<img alt="APMIC" src="/2018/media/sponsors/apmic/亞太2.svg"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<a href="https://www.ap-mic.com/" rel="noopener" target="_blank">
+											APMIC
+										</a>
+</h4>
+<section class="description"><p>亞太智能機器（Asia Pacific Machine Intelligence Company）致力於創造人類更便利的生活，積極構建各種機器智能(MI)解決方案，<br/>目前我們專注在「視覺理解」與「知識圖譜」的機器理解技術研發。此外，我們的服務還提供語意解析、情緒分析、用戶探索.....等各種內容分析服務，幫助企業更深入瞭解客戶。目前我們主要服務包含「多領域的對話技術串接」、「語意分析平台」，累計服務產業包含紡織業、汽車業、建築業，以及其他法人研發單位。</p></section>
+</article>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="https://kloudless.com" rel="noopener" target="_blank">
+<img alt="Kloudless" src="/2018/media/sponsors/kloudless/kloudless_logo.svg"/>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="https://kloudless.com" rel="noopener" target="_blank">
+<img alt="Kloudless" src="/2018/media/sponsors/kloudless/kloudless_logo.svg"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<a href="https://kloudless.com" rel="noopener" target="_blank">
+											Kloudless
+										</a>
+</h4>
+<section class="description"><p>Kloudless的多種服務APIs和開發者工具，可協助企業或開發者簡便地整合多種服務和資料來源。</p></section>
+</article>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+<h3>銅級</h3>
+<ul class="partners">
+<li>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="https://www.tibame.com/" rel="noopener" target="_blank">
+<img alt="TibaMe 學習網" src="/2018/media/sponsors/tibame-學習網/TibaMe.svg"/>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="https://www.tibame.com/" rel="noopener" target="_blank">
+<img alt="TibaMe 學習網" src="/2018/media/sponsors/tibame-學習網/TibaMe.svg"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<a href="https://www.tibame.com/" rel="noopener" target="_blank">
+											TibaMe 學習網
+										</a>
+</h4>
+<section class="description"><p>TibaMe「提拔我」是服務超過10萬會員，與超過500家企業合作徵才的數位學習平台，透過線上課程、短期實作課程及長期就業課程，來培訓企業所需人才，培訓領域聚焦在泛資通訊相關課程，包含數據分析、雲端技術、物聯網、數位金融、行動應用、數位商務、數位內容、科技管理等八大領域。提供最完整的職能培訓課程，是你職場充電的最佳夥伴。<br/>【Pycon會員獨家好康】<br/>只要註冊TibaMe會員( www.tibame.com )，即可享有超過30堂免費線上課程，皆由知名業師開講，包含AI語意分割、區塊鏈、Chatbot應用技術等。<br/>另外特別提供參加Pycon TW 2018的會員，BI+AI課程好康四選一！<br/>好康申請，請填此表：http://bit.ly/2GhKBnU</p></section>
+</article>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="http://www.mysql.com/" rel="noopener" target="_blank">
+<img alt="Oracle" src="/2018/media/sponsors/oracle/mysql.svg"/>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="http://www.mysql.com/" rel="noopener" target="_blank">
+<img alt="Oracle" src="/2018/media/sponsors/oracle/mysql.svg"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<a href="http://www.mysql.com/" rel="noopener" target="_blank">
+											Oracle
+										</a>
+</h4>
+<section class="description"><p>MySQL is the world's most popular open source database and is the leading database choice for web-based applications, used by web properties including Facebook, Twitter, YouTube, Uber, Yahoo! and many more. Visit: http://www.mysql.com/</p></section>
+</article>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="https://www.microsoft.com/zh-tw/" rel="noopener" target="_blank">
+<img alt="Microsoft" src="/2018/media/sponsors/microsoft/Microsoft_AH0u4Xs.svg"/>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="https://www.microsoft.com/zh-tw/" rel="noopener" target="_blank">
+<img alt="Microsoft" src="/2018/media/sponsors/microsoft/Microsoft_AH0u4Xs.svg"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<a href="https://www.microsoft.com/zh-tw/" rel="noopener" target="_blank">
+											Microsoft
+										</a>
+</h4>
+<section class="description"><p>微軟是全球科技產業的領航者，提供全球領先的軟體、服務、設備和解決方案，自 1975 年成立以來，一直致力於幫助個人和企業用戶，全面發揮科技潛能，實現夢想。</p>
+<p>四十多年來，微軟一直專注於技術創新與變革，透過卓越的軟體、設備和服務，能夠幫助用戶提昇生活和工作生產力，讓數億的使用者真正受益於科技。微軟公司總部位於美國華盛頓州 Redmond，在全世界超過 190 個國家和地區設有分公司或是分支機構，擁有超過 125,000 名員工。</p>
+<p>微軟執行長 Satya Nadella 在上任後提出了新願景：「在這個行動優先、雲端至上的世界裡，微軟的核心競爭力，就是成為一個提供生產力與平台的公司，幫助在這個地球上的每一個人到每一個組織，都能貢獻更多、成就更大。」</p></section>
+</article>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="https://carousell.com/" rel="noopener" target="_blank">
+<img alt="Carousell" src="/2018/media/sponsors/carousell/carousell.svg"/>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="https://carousell.com/" rel="noopener" target="_blank">
+<img alt="Carousell" src="/2018/media/sponsors/carousell/carousell.svg"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<a href="https://carousell.com/" rel="noopener" target="_blank">
+											Carousell
+										</a>
+</h4>
+<section class="description"><p>Carousell 旋轉拍賣為社群拍賣平台，讓賣東西跟拍照一樣簡單、買東西跟聊天一樣容易。Carousell 旋轉拍賣於 2012 年 8 月上線，自新加坡出發並拓展至台灣、香港、印尼、馬來西亞、菲律賓、澳洲等國家。Carousell 旋轉拍賣擁有超過 6,500 萬件上架商品，為全球成長最快及最大的行動拍賣平台之一。</p></section>
+</article>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+<h3>特別贊助</h3>
+<ul class="partners">
+<li>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="https://hackmd.io" rel="noopener" target="_blank">
+<img alt="HackMD" src="/2018/media/sponsors/hackmd/HackMD.svg"/>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="https://hackmd.io" rel="noopener" target="_blank">
+<img alt="HackMD" src="/2018/media/sponsors/hackmd/HackMD.svg"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<a href="https://hackmd.io" rel="noopener" target="_blank">
+											HackMD
+										</a>
+</h4>
+<section class="description"><p>HackMD 提供您建立即時的跨平台 Markdown 筆記。<br/>能用於組織您的想法、與夥伴討論並即時預覽結果，<br/>不但如此，同時也能支援簡報、圖表、數學表達式。<br/>從上線以來，共超過 46 萬份筆記被寫在 HackMD 上，<br/>我們幫助使用者製作文件、便條、工作事項、write-ups、作業、教學甚至提供開放討論的平台。<br/>現在就加入吧！您也能用聰明的方式寫作！<br/>一用就愛上 &lt;3</p></section>
+</article>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="https://www.yourator.co/" rel="noopener" target="_blank">
+<img alt="Yourator" src="/2018/media/sponsors/yourator/YOURATOR01.svg"/>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="https://www.yourator.co/" rel="noopener" target="_blank">
+<img alt="Yourator" src="/2018/media/sponsors/yourator/YOURATOR01.svg"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<a href="https://www.yourator.co/" rel="noopener" target="_blank">
+											Yourator
+										</a>
+</h4>
+<section class="description"><p>"You are the creator of your own future"</p>
+<p>Yourator 相信透過社群的力量我們可以幫助更多新創團隊發聲，找到一起實現夢想的夥伴。同時，我們也希望幫助有志青年找到適合自己的火箭船，發揮自己的實力，闖出一條不一樣的人生道路。</p>
+<p>Yourator 團隊致力協助「核心理念清晰」的新創公司，快速打造優秀團隊，希望和企業一起打造「重視人才與企業文化的社會風土」</p></section>
+</article>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="http://wolftea.com/" rel="noopener" target="_blank">
+<img alt="琅茶" src="/2018/media/sponsors/琅茶/wolftea_LtcGl1S.svg"/>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="http://wolftea.com/" rel="noopener" target="_blank">
+<img alt="琅茶" src="/2018/media/sponsors/琅茶/wolftea_LtcGl1S.svg"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<a href="http://wolftea.com/" rel="noopener" target="_blank">
+											琅茶
+										</a>
+</h4>
+<section class="description"><p>喝好茶，是一趟回不去的味覺旅程。琅茶每季走訪產地，嚴選上質茶園在最適天氣時辰，由優秀茶師採製的「單品茶」 (Single Origin)。不混茶，為每支「單品茶」編號，詳載茶事，與時俱進，售完不再，真真切切感受每一片山林不同時節的純粹美好。 一起品遍千變萬化的台灣茶吧！開展好茶地圖，認識自己的味蕾，找到屬於你「琅琅上口」的好茶。</p></section>
+</article>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="https://www.kkco.com.tw" rel="noopener" target="_blank">
+<img alt="KlickKlack" src="/2018/media/sponsors/klickklack/KlickKlack.svg"/>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="https://www.kkco.com.tw" rel="noopener" target="_blank">
+<img alt="KlickKlack" src="/2018/media/sponsors/klickklack/KlickKlack.svg"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<a href="https://www.kkco.com.tw" rel="noopener" target="_blank">
+											KlickKlack
+										</a>
+</h4>
+<section class="description"><p>KlickKlack Communications</p>
+<p>提供專業的有線與無線網路服務，使人與人間的通訊落差降到最低。團隊已服務上百場活動，包含台灣地區最大的線上遊戲、網路直播、資訊社群、產品發表會、演唱會、會場展覽與電音派對等。整合網路監控、系統交叉備援、即時廣告互動，量身為客戶打造優質的網路服務體驗。</p>
+<p>精彩案例請參見 https://www.kkco.com.tw</p></section>
+</article>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="https://www.iii.org.tw/" rel="noopener" target="_blank">
+<img alt="財團法人資訊工業策進會" src="/2018/media/sponsors/財團法人資訊工業策進會/資策會.svg"/>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="https://www.iii.org.tw/" rel="noopener" target="_blank">
+<img alt="財團法人資訊工業策進會" src="/2018/media/sponsors/財團法人資訊工業策進會/資策會.svg"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<a href="https://www.iii.org.tw/" rel="noopener" target="_blank">
+											財團法人資訊工業策進會
+										</a>
+</h4>
+<section class="description"><p>資策會積極協助業者提升技術層次，深化產業效益；並配合政府政策，定位為「國家級軟體研發中心」，以「智慧生活基礎設施」、「智慧生活應用與服務」及「智慧生活新興技術和應用」三大領域為重點研發主軸，藉由關鍵技術的掌握與創新科技應用，促成新型態網路服務產業價值鏈之整合與發展。 <br/>在先進無線寬頻系統及聯網應用技術研發方面，發展高速行動通信接取系統技術、服務導向終端及管理技術、資安跨國研究-網路安全診測技術等核心技術，以聚集各方研發能量，進而掌握技術先機，促使國內業者由代工生產，提升至發展高利潤的新世代無線通訊產品，帶動我國通訊產業之升級有效搶占國際市場商機。此外，車載資通訊研發方面，開發車載資通訊系統與服務，結合ICT與汽車電子產業建構完整產業鏈，共同發展我國自主性技術以及創新服務和商業模式，扶植車載相關設備及服務產業，以躋身國際供應鏈。 <br/>針對平台技術研發而言，研發快速整合模組化軟體平台系統技術，以開放創新營運模式，協助行動裝置硬體廠商快速反應市場需求，建立產品差異化能力並取得競爭優勢。而在雲端運算研發方面，資策會開發了雲端智慧綠能管理系統，透過穩定的平台、通訊及軟硬體整合，提供綠能服務與完整的智慧綠能聯網，同時進行雲端安全技術之研發。資策會將持續以智慧生活為研發主題，並透過技術移轉、合作研發等方式支援業界研發最新軟體技術，以降低國內業者研發成本並縮短開發產品的時程，進而帶動新興產業的發展，開拓新的市場機會。</p></section>
+</article>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="https://www.pinkoi.com/" rel="noopener" target="_blank">
+<img alt="Pinkoi" src="/2018/media/sponsors/pinkoi/pinkoi_kx38vJB.svg"/>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="https://www.pinkoi.com/" rel="noopener" target="_blank">
+<img alt="Pinkoi" src="/2018/media/sponsors/pinkoi/pinkoi_kx38vJB.svg"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<a href="https://www.pinkoi.com/" rel="noopener" target="_blank">
+											Pinkoi
+										</a>
+</h4>
+<section class="description"><p>Pinkoi 是亞洲領先的設計商品購物網站，擁有眾多海內外優質設計師群，堅持用好品味、客製化的獨特設計，實現每個人的美感生活，也讓每個送禮時刻更加獨一無二。</p>
+<p>2011 年 8 月成立至今，致力於經營台灣、日本、泰國、中港澳、美加及其他國際市場，期望讓亞洲迷人的好設計在全世界散發光芒，並創造一個讓生活更美好的設計生態圈。</p></section>
+</article>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="http://www.tenlong.com.tw" rel="noopener" target="_blank">
+<img alt="天瓏資訊圖書" src="/2018/media/sponsors/天瓏資訊圖書/天瓏資訊圖書logo.svg"/>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="http://www.tenlong.com.tw" rel="noopener" target="_blank">
+<img alt="天瓏資訊圖書" src="/2018/media/sponsors/天瓏資訊圖書/天瓏資訊圖書logo.svg"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<a href="http://www.tenlong.com.tw" rel="noopener" target="_blank">
+											天瓏資訊圖書
+										</a>
+</h4>
+<section class="description"><p>天瓏資訊提供平價專業電腦資訊書籍販售、團購優惠、公司機關報價服務，包括繁體中文、簡體中文、外文原文書籍代訂服務，目前正在拓展實體課程、講座活動、技術交流分享聚會中，有興趣讀者、講者、講師歡迎與我們聯繫。</p></section>
+</article>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="https://5xruby.tw/" rel="noopener" target="_blank">
+<img alt="5xRuby" src="/2018/media/sponsors/5xruby/5xruby.svg"/>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="https://5xruby.tw/" rel="noopener" target="_blank">
+<img alt="5xRuby" src="/2018/media/sponsors/5xruby/5xruby.svg"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<a href="https://5xruby.tw/" rel="noopener" target="_blank">
+											5xRuby
+										</a>
+</h4>
+<section class="description"><p>由幾位台灣 Ruby 社群的朋友共同成立的一家公司，希望透過教育訓練、企業培訓等講座，將 Ruby 推廣到校園、企業或開發者，除此之外也積極推動和參與社群舉辦的聚會並分享和交流。衷心希望在台灣可以有越來越多的企業能了解或採用 Ruby 這個優雅、有趣，並且極具生產力的程式語言做為主要開發工具，更快速的實現您的想法。</p></section>
+</article>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+<h3>主辦單位</h3>
+<ul class="partners">
+<li>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="https://ocf.tw/" rel="noopener" target="_blank">
+<img alt="開放文化基金會" src="/2018/media/sponsors/開放文化基金會/開放文化基金會.svg"/>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="https://ocf.tw/" rel="noopener" target="_blank">
+<img alt="開放文化基金會" src="/2018/media/sponsors/開放文化基金會/開放文化基金會.svg"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<a href="https://ocf.tw/" rel="noopener" target="_blank">
+											開放文化基金會
+										</a>
+</h4>
+<section class="description"><p>財團法人開放文化基金會（Open Culture Foundation，簡稱 OCF）成立的主要目的，是希望能夠藉由法人組織的力量，協助台灣資訊軟體界的開放源碼社群，包含開放原始碼軟體、開放資料、開放政府 (公民科技)。三個主要領域的發展和應用。</p>
+<p>除此之外，也期許能將開源自由的精神，更廣泛地應用在各個領域。因此，除了協助開源社群之外，基金會也協助民間企業、政府單位、非政府組織及學術單位，讓他們更能了解開源軟硬體的優勢、開放資料的重要性，進而在產、官、學三方推廣開源與開放協作的文化。</p></section>
+</article>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="https://www.iis.sinica.edu.tw" rel="noopener" target="_blank">
+<img alt="中央研究院資訊科學研究所" src="/2018/media/sponsors/中央研究院資訊科學研究所/中研院資訊所.svg"/>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="https://www.iis.sinica.edu.tw" rel="noopener" target="_blank">
+<img alt="中央研究院資訊科學研究所" src="/2018/media/sponsors/中央研究院資訊科學研究所/中研院資訊所.svg"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<a href="https://www.iis.sinica.edu.tw" rel="noopener" target="_blank">
+											中央研究院資訊科學研究所
+										</a>
+</h4>
+<section class="description"><p>中央研究院資訊科學研究所於1977年開始設立籌備處，歷經五年籌備， 於1982年9月正式成立研究所，是中央研究院數 理組十一個單位之一。目前編制內有39位研究人員，另外有29位博士後研究學者，將近300位專任之資訊技術人員與非全時之研究助理，支援資訊領域之研究與系統之開發。「件件工作，反映自我，凡經我手，必為佳作」是全體同仁一致秉持的工作信念，重視工作之卓越品質，發揮最佳綜效之團隊精神。</p>
+<p>本所除了從事資訊科學領域的基礎研究之外，亦以開發具前瞻性之尖端技術與發展以應用為導向的最先進系統為職志。身處學術重鎮，本所有責任在國內資訊領域肩負起學術領導地位，提升本國資訊科技水準，並躋身國際一流學術研究單位。</p>
+<p>本所依研究領域共有生物資訊實驗室、電腦系統實驗室、資料處理與探勘實驗室、多媒體技術實驗室、語言與知 識處理實驗室、網路系統與服務實驗室、程式語言與形式方法實驗室、計算理論與演算法實驗室等八大實驗室，研究重點包含生物資訊、平行及分 散式運算、智慧代理人、文件分析與辨識、多媒體系統、電腦視覺、影像處理及圖形識別、中文資訊處理、自然語言理解、電腦通訊與網路、網路內容管理與XML、網路與軟體安全、形式驗證、演算法設計與分析、密碼學、機器人學等。</p>
+<p>本所的研究經費，主要來源是中央研究院，國科會，教育部，衛生署，以及其他政府或民間財團法人等單位，亦接受國內資訊業界委託計畫。與國內學術、研究單位及產業界建立良好合作關係，也歡迎跨國的學術合作與交流。</p></section>
+</article>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</article>
+<article>
+<a class="center button-round sponsorship" href="https://docs.google.com/forms/d/e/1FAIpQLSf5pgDeYtspU1AfexFlAw-gZXWjcXhPxNTj7HGb258bD-0Eig/viewform" rel="noopener" target="_blank">詢問贊助辦法</a>
+</article>
+</section>
+<footer>
+<h2 class="footer-logo"></h2>
+<ul>
+<li><a href="/2018/zh-hant/about/code-of-conduct/">行為準則</a></li>
+<li><a href="/2018/zh-hant/about/staff/">工作人員</a></li>
+<li><a href="/2018/zh-hant/about/community/">社群</a></li>
+</ul>
+<p class="copyright">2018 PyCon Taiwan</p>
+</footer>
+<script src="/2018/static/CACHE/js/ce994d83f936.js" type="text/javascript"></script>
+</body>
+</html>
+<style>.myclass{text-decoration: none;color: rgba(255, 255, 255, 0.35);}.myclass:hover{text-decoration: none;color: rgba(255, 255, 255, 0.7);}</style>
