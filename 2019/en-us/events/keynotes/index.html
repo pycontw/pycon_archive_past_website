@@ -1,0 +1,349 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Keynotes | PyCon Taiwan 2019</title>
+<link href="/2019/static/pycontw-2019/assets/favicon.ico" rel="shortcut icon"/>
+<link href="/2019/static/pycontw-2019/assets/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/2019/static/pycontw-2019/assets/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<meta content="" property="og:description"/>
+<meta content="https://tw.pycon.org/2019/static/pycontw-2019/assets/og-image.png" property="og:image"/>
+<link href="https://fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400|Raleway:300,400" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
+<link href="/2019/static/CACHE/css/a0669ec13115.css" rel="stylesheet" type="text/css">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNZ39PD');</script>
+</link></head>
+<body class="keynotes-page">
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-TNZ39PD" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<div data-controller="topNav">
+<nav class="top-navbar">
+<form  class="navbar-lang-switch" method="post">
+
+<input name="next" type="hidden" value="/2019/events/keynotes/"/>
+<button name="language" type="submit" value="zh-hant">
+				<a href='/2019/zh-hant/events/keynotes/' class="myclass">ZH</a>
+			</button>
+<button disabled="disabled" name="language" type="submit" value="en-us">
+				EN
+			</button>
+</form>
+<div class="navbar-centerbox">
+<a class="navbar-logo" href="/2019/en-us/"></a>
+</div>
+<button aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler no-script" data-action="topNav#toggle" data-target="topNav.toggler" type="button">
+<div><span></span><span></span><span></span></div>
+</button>
+<div class="navbar-social-desktop">
+<a aria-label="Blog" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+</nav>
+<nav class="menu-navbar-mobile no-script" data-target="topNav.menu">
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/2019/en-us/about/pycontw/">About</a>
+</li>
+<li>
+<a href="/2019/en-us/sponsor/sponsor/">Sponsor</a>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-conference" type="checkbox"/>
+<label for="menu-navbar-mobile-conference">Conference</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2019/en-us/events/overview/">Overview</a></li>
+<li><a href="/2019/en-us/events/schedule/">Schedule</a></li>
+<li><a href="/2019/en-us/speaking/recording/">Recording</a></li>
+<li><a href="/2019/en-us/portal/">Portal</a></li>
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-events" type="checkbox"/>
+<label for="menu-navbar-mobile-events">Events</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2019/en-us/events/keynotes/">Keynotes</a></li>
+<li><a href="/2019/en-us/events/talks/">Talks</a></li>
+<li><a href="/2019/en-us/events/tutorials/">Tutorials</a></li>
+<li><a href="/2019/en-us/events/open-spaces/">Open Spaces</a></li>
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-registration" type="checkbox"/>
+<label for="menu-navbar-mobile-registration">Registration</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2019/en-us/registration/ticket-info/">Conference Ticket</a></li>
+<li><a href="/2019/en-us/registration/financial-aid/">Financial Aid</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/2019/en-us/venue/">Venue</a>
+</li>
+<li>
+<a href="/2019/en-us/dashboard/">My PyCon</a>
+</li>
+</ul>
+<div class="navbar-social-mobile">
+<a aria-label="Blog" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+</nav>
+</div>
+<header class="page-hero">
+<nav class="menu-navbar-desktop">
+<a class="menu-logo" href="/2019/en-us/"></a>
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/2019/en-us/about/pycontw/">About</a>
+</li>
+<li>
+<a href="/2019/en-us/sponsor/sponsor/">Sponsor</a>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-conference" type="checkbox"/>
+<label for="menu-navbar-desktop-conference">Conference</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2019/en-us/events/overview/">Overview</a></li>
+<li><a href="/2019/en-us/events/schedule/">Schedule</a></li>
+<li><a href="/2019/en-us/speaking/recording/">Recording</a></li>
+<li><a href="/2019/en-us/portal/">Portal</a></li>
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-events" type="checkbox"/>
+<label for="menu-navbar-desktop-events">Events</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2019/en-us/events/keynotes/">Keynotes</a></li>
+<li><a href="/2019/en-us/events/talks/">Talks</a></li>
+<li><a href="/2019/en-us/events/tutorials/">Tutorials</a></li>
+<li><a href="/2019/en-us/events/open-spaces/">Open Spaces</a></li>
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-registration" type="checkbox"/>
+<label for="menu-navbar-desktop-registration">Registration</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2019/en-us/registration/ticket-info/">Conference Ticket</a></li>
+<li><a href="/2019/en-us/registration/financial-aid/">Financial Aid</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/2019/en-us/venue/">Venue</a>
+</li>
+<li>
+<a href="/2019/en-us/dashboard/">My PyCon</a>
+</li>
+</ul>
+</nav>
+</header>
+<main>
+<div class="breadcrumbs">
+<ol>
+<li><a href="/2019/en-us/">Home</a></li>
+<li>Events</li>
+<li>Keynotes</li>
+</ol>
+</div>
+<h1>Keynotes</h1>
+<article class="media" id="keynote-speaker-sd-lin">
+<header>
+<figure>
+<img src="/2019/static/pycontw-2019/assets/keynotes/sd-lin.jpeg"/>
+<figcaption>Shou-de Lin</figcaption>
+</figure>
+<h2 class="title">Understanding Deep Neural Networks</h2>
+</header>
+<div class="tabbing" data-controller="tabbing">
+<ul class="tabs">
+<li data-action="click-&gt;tabbing#activate" data-target="tabbing.tab">
+				Biography
+			</li>
+<li data-action="click-&gt;tabbing#activate" data-target="tabbing.tab">
+				Speech
+			</li>
+<li data-action="click-&gt;tabbing#activate" data-target="tabbing.tab">
+				Slido
+			</li>
+</ul>
+<div>
+<article data-target="tabbing.pane">
+<h3 class="tab-title">Biography</h3>
+<p>Shou-de Lin is currently a full professor in the CSIE department of National Taiwan University. He holds a BS degree in EE department from National Taiwan University, an MS-EE degree from the University of Michigan, an MS degree in Computational Linguistics and PhD in Computer Science both from the University of Southern California. He leads the Machine Discovery and Social Network Mining Lab in NTU. Before joining NTU, he was a post-doctoral research fellow at the Los Alamos National Lab. Prof. Lin’s research includes the areas of machine learning and data mining, social network analysis, and natural language processing. His international recognition includes the best paper award in IEEE Web Intelligent conference 2003, Google Research Award in 2007, Microsoft research award in 2008, 2015, 2016 merit paper award in TAAI 2010, 2014, 2016, best paper award in ASONAM 2011, US Aerospace AFOSR/AOARD research award winner for 5 years. He is the all-time winners in ACM KDD Cup, leading or co-leading the NTU team to win 5 championships. He also leads a team to win WSDM Cup 2016. He has served as the senior PC for SIGKDD and area chair for ACL. He is currently the associate editor for International Journal on Social Network Mining, Journal of Information Science and Engineering, and International Journal of Computational Linguistics and Chinese Language Processing. He is also a freelance writer for Scientific American.</p>
+<div class="social">
+</div>
+</article>
+<article data-target="tabbing.pane">
+<h3 class="tab-title">Speech</h3>
+<p>Artificial Intelligence has become overwhelming popular in recent years thanks to availability of big data and the advance of machine learning based models. Among them, solutions based on the Deep Neural Network (or DNN) have produced tremendous success in various applications including computer vision, natural language processing, etc. Nevertheless, one common concern for DNN-based solutions is that they are generally very complicated and can hardly be understood by human beings. This talk focuses on a specific type of deep neural networks called recurrent neural networks (RNN). It will not only demonstrate the power of an RNN model to learn from implicit information but also explain why the overwhelming performance can be achieved given its architecture.</p>
+</article>
+<article data-target="tabbing.pane">
+<iframe class="slido" src="https://app.sli.do/event/u2vullbw"></iframe>
+</article>
+</div>
+</div>
+</article>
+<article class="media" id="keynote-speaker-paul-ivanov">
+<header>
+<figure>
+<img src="/2019/static/pycontw-2019/assets/keynotes/paul-ivanov.jpg"/>
+<figcaption>Paul Ivanov</figcaption>
+</figure>
+<h2 class="title">Programming Language Tourism: Leave Python and see the world!</h2>
+</header>
+<div class="tabbing" data-controller="tabbing">
+<ul class="tabs">
+<li data-action="click-&gt;tabbing#activate" data-target="tabbing.tab">
+				Biography
+			</li>
+<li data-action="click-&gt;tabbing#activate" data-target="tabbing.tab">
+				Speech
+			</li>
+<li data-action="click-&gt;tabbing#activate" data-target="tabbing.tab">
+				Slido
+			</li>
+</ul>
+<div>
+<article data-target="tabbing.pane">
+<h3 class="tab-title">Biography</h3>
+<p>Paul Ivanov is a member of the Jupyter Steering Council and a senior software engineer at Bloomberg LP working on IPython- and Jupyter-related open source projects. Previously, Paul worked on backend and data engineering at Disqus; was a code monkey at the Brain Imaging Center at UC Berkeley, where he worked on IPython and taught at UC Berkeley’s Python bootcamps; worked in Bruno Olshausen’s lab at the Redwood Center for Theoretical Neuroscience; and was a PhD candidate in the Vision Science program at UC Berkeley. He holds a degree in computer science from UC Davis.</p>
+<div class="social">
+<a href="http://pirsquared.org/" rel="noopener" target="_blank"><span class="fa fa-link"></span></a>
+<a href="https://twitter.com/ivanov" rel="noopener" target="_blank"><span class="fa fa-twitter"></span></a>
+<a href="https://github.com/ivanov" rel="noopener" target="_blank"><span class="fa fa-github"></span></a>
+</div>
+</article>
+<article data-target="tabbing.pane">
+<h3 class="tab-title">Speech</h3>
+<p>Programming languages are places. The idea of abandoning the convenience and familiarity of your primary coding language might seem anything from tedious and inconvenient to scary and stressful. But, switching to an alternative other than your primary development language -- especially when such a challenge is not a requirement -- can be both fun and productive. You will likely grow your abilities as a developer and gain new perspective that is currently beyond your reach.<br/>Let's push out of our comfort zone together to leave Python and voyage to a different language! We will go into details about why and how we can do that, along with some possible destinations. Upon our return, we will see -- and appreciate -- Python in a different light. Plus, we can use the justifications for our departure to entice and welcome folks from other language communities to visit us in the land of the snake.</p>
+</article>
+<article data-target="tabbing.pane">
+<iframe class="slido" src="https://app.sli.do/event/adohlrml"></iframe>
+</article>
+</div>
+</div>
+</article>
+<article class="media" id="keynote-speaker-yves-hilpisch">
+<header>
+<figure>
+<img src="/2019/static/pycontw-2019/assets/keynotes/yves-hilpisch.jpg"/>
+<figcaption>Yves J Hilpisch</figcaption>
+</figure>
+<h2 class="title">Artificial Intelligence in Finance</h2>
+</header>
+<div class="tabbing" data-controller="tabbing">
+<ul class="tabs">
+<li data-action="click-&gt;tabbing#activate" data-target="tabbing.tab">
+				Biography
+			</li>
+<li data-action="click-&gt;tabbing#activate" data-target="tabbing.tab">
+				Speech
+			</li>
+<li data-action="click-&gt;tabbing#activate" data-target="tabbing.tab">
+				Slido
+			</li>
+</ul>
+<div>
+<article data-target="tabbing.pane">
+<h3 class="tab-title">Biography</h3>
+<p>Dr. Yves J. Hilpisch is founder and managing partner of The Python Quants (http://tpq.io), a group focusing on the use of open source technologies for financial data science, artificial intelligence, algorithmic trading, and computational finance. He is also founder and CEO of The AI Machine (http://aimachine.io), a company focused on AI-powered algorithmic trading based a proprietary strategy execution platform.</p>
+<p>Yves has a Diploma in Business Administration, a Ph.D. in mathematical finance and is Adjunct Professor for Computational Finance at Miami Business School (University of Miami). He is the author of four books (http://books.tpq.io):</p>
+<p>* Artificial Intelligence in Finance (O’Reilly, current project)<br/>* Python for Finance (2018, 2nd ed., O’Reilly)<br/>* Listed Volatility and Variance Derivatives (2017, Wiley Finance)<br/>* Derivatives Analytics with Python (2015, Wiley Finance)</p>
+<p>Yves is the director of the first online training program leading to a University Certificates in Python for Algorithmic Trading (http://certificate.tpq.io) and Computational Finance (http://compfinance.tpq.io). He also lectures on computational finance, machine learning and algorithmic trading at the CQF Program (http://cqf.com).</p>
+<p>Yves is the main author of the financial analytics library DX Analytics (http://dx-analytics.com) and organizes meetups, conferences, and bootcamps about Python, artificial intelligence and algorithmic trading in London (http://pqf.tpq.io), New York (http://aifat.tpq.io), Frankfurt, Berlin and Paris. He has given keynote speeches at technology conferences in the United States, Europe, and Asia.</p>
+<div class="social">
+<a href="http://hilpisch.com/" rel="noopener" target="_blank"><span class="fa fa-link"></span></a>
+<a href="https://twitter.com/dyjh" rel="noopener" target="_blank"><span class="fa fa-twitter"></span></a>
+<a href="https://linkedin.com/in/dyjh" rel="noopener" target="_blank"><span class="fa fa-linkedin"></span></a>
+<a href="https://youtube.com/c/yves-hilpsch" rel="noopener" target="_blank"><span class="fa fa-youtube"></span></a>
+</div>
+</article>
+<article data-target="tabbing.pane">
+<h3 class="tab-title">Speech</h3>
+<p>The programmatic availability of basically any kind of (financial) data has reshaped finance from a theory-driven to a data-driven discipline. Recent advances in AI in combination with the programmatic availability of (financial) data with further change finance to an AI-first discipline. The talk discusses several important aspects in this regard and provides concrete examples in Python.</p>
+</article>
+<article data-target="tabbing.pane">
+<iframe class="slido" src="https://app.sli.do/event/vto6wbys"></iframe>
+</article>
+</div>
+</div>
+</article>
+<article class="media" id="keynote-speaker-tracy-osborn">
+<header>
+<figure>
+<img src="/2019/static/pycontw-2019/assets/keynotes/tracy-osborn.jpg"/>
+<figcaption>Tracy Osborn</figcaption>
+</figure>
+<h2 class="title">The Different Paths We Take As Programmers</h2>
+</header>
+<div class="tabbing" data-controller="tabbing">
+<ul class="tabs">
+<li data-action="click-&gt;tabbing#activate" data-target="tabbing.tab">
+				Biography
+			</li>
+<li data-action="click-&gt;tabbing#activate" data-target="tabbing.tab">
+				Speech
+			</li>
+<li data-action="click-&gt;tabbing#activate" data-target="tabbing.tab">
+				Slido
+			</li>
+</ul>
+<div>
+<article data-target="tabbing.pane">
+<h3 class="tab-title">Biography</h3>
+<p>Tracy Osborn is a programmer, designer, author, and entrepreneur. In 2010, she taught herself Python to launch her first startup, which lead to writing Hello Web App, a book teaching introductory Django web app development. She’s also the Program Manager at TinySeed, an accelerator program for bootstrapped businesses.</p>
+<div class="social">
+<a href="https://twitter.com/tracymakes" rel="noopener" target="_blank"><span class="fa fa-twitter"></span></a>
+<a href="https://github.com/tracymakes" rel="noopener" target="_blank"><span class="fa fa-github"></span></a>
+<a href="https://instagram.com/tracymakes" rel="noopener" target="_blank"><span class="fa fa-instagram"></span></a>
+</div>
+</article>
+<article data-target="tabbing.pane">
+<h3 class="tab-title">Speech</h3>
+<p>Not everyone who learns Python is using it to become a back-end programmer. In this keynote, Tracy will cover her process on how she learned how to program and how she uses Python and programming in her current work, as well as why programming education can (and should) change considering all the ways we can use Python and programming in 2019.</p>
+</article>
+<article data-target="tabbing.pane">
+<iframe class="slido" src="https://app.sli.do/event/f3efdao1"></iframe>
+</article>
+</div>
+</div>
+</article>
+</main>
+<footer>
+<div class="footer-logos">
+<div class="footer-logo"></div>
+</div>
+<ul>
+<li><a href="/2019/en-us/about/code-of-conduct/">Code of Conduct</a></li>
+<li><a href="/2019/en-us/about/staff/">Staff</a></li>
+<li><a href="/2019/en-us/about/community/">Community</a></li>
+</ul>
+<p class="copyright">2019 PyCon Taiwan</p>
+</footer>
+<script src="/2019/static/CACHE/js/ce994d83f936.js" type="text/javascript"></script>
+</body>
+</html>
+<style>.myclass{text-decoration: none;color: #616e86;}.myclass:hover{text-decoration: none;color: #4a5363;}</style>
