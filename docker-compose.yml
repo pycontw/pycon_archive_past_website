@@ -1,0 +1,11 @@
+version: "3"
+services:
+  pyconweb:
+    build: .
+    restart: always
+
+
+networks:
+  default:
+    external:
+      name: pycontw-net

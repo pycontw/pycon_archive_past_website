@@ -15,5 +15,12 @@ where year can just in 2016 - 2020
 ## Build Testing Server
 Here is the reference I made. [Go!!](https://mozixreality.github.io/Blog/featured/D20210503)
 
+## Build Local Testing Server
+
+```
+docker-compose up --build -d 
+```
+
+
 ## Meet Some Questions or Bugs?
 Please contact me. I will reply you as soon as possible.

@@ -12,6 +12,14 @@ Pycon_url = "https://tw.pycon.org"
 Written_url = []
 
 def mkdir(path):
+    """
+
+    Args:
+        path:
+
+    Returns:
+
+    """
     try:
         # 1) correct the path to directory path and be a local path
         # 2) by using unquote to avoid the Garbled path
