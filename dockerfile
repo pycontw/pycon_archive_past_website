@@ -6,9 +6,6 @@ WORKDIR /app
 
 COPY . /app
 
-RUN pip install requests bs4 click
-
-
 CMD ["python","-m","http.server","--cgi","8888"]
 
 
