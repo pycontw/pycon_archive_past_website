@@ -1,0 +1,13 @@
+version: "3"
+services:
+  pyconweb:
+    build: .
+    restart: always
+    ports:
+      - 8888:8888
+
+
+networks:
+  default:
+    external:
+      name: pycontw-net
