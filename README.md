@@ -18,7 +18,7 @@ Here is the reference I made. [Go!!](https://mozixreality.github.io/Blog/feature
 ## Build Local Testing Server
 
 ```
-docker-compose up --build -d 
+docker-compose -f docker-compose-dev.yml up --build -d 
 ```
 
 
