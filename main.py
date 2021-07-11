@@ -10,9 +10,9 @@ from urllib.parse import unquote
 Pycon_year = "2016"
 Pycon_url = "https://tw.pycon.org"
 Written_url = []
+Visited_page = []
 
 def mkdir(path):
-
     try:
         # 1) correct the path to directory path and be a local path
         # 2) by using unquote to avoid the Garbled path
@@ -84,11 +84,20 @@ def img(soup):
 
 def GetPage(path):
     # filter our target path
-    if path[0] != '/':
+    if path[0] != '/' or path in Visited_page:
         return
+    Visited_page.append(path)
     print(path)
     request = requests.get(Pycon_url + path)
     soup = BeautifulSoup(request.content, "html.parser")
+    # get talk and tutorial page
+    for link in soup.find_all('a'):
+        if not link.attrs.get("href"):
+            return
+        if link.get('href').find("talk") != -1 or link.get('href').find("tutorial") != -1:
+            talk_link = unquote(link.get('href'))
+            GetPage(talk_link)
+    
     script(soup)    # get scripts in this page
     css(soup)       # get css in this page
     img(soup)       # get imgs in this page
