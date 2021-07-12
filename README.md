@@ -10,8 +10,8 @@ To get the specific pycon web, try typing the command
 
 where year can just in 2016 - 2020
 
-## Pipenv
-
+## Setup Development Environment
+- Installing dependencies
 ```
     pipenv install
 ```
