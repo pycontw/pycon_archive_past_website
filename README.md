@@ -5,15 +5,15 @@
 To get the specific pycon web, try typing the command
 
 ```
-    python main.py -y year
+    python3 main.py -y year
 ```
 
 where year can just in 2016 - 2020
 
-## Utility Models
-
+## Setup Development Environment
+- Installing dependencies
 ```
-    pip install requests bs4 click
+    pipenv install
 ```
 
 ## Build Testing Server
