@@ -1,0 +1,45 @@
+name: Deploy PyConTW sites to branch
+
+on:
+  push:
+    branches:
+      [main]
+
+jobs:
+  deploy-pycontw2016:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: '${{ secrets.ACCESS_TOKEN }}'
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: '3.x'
+      - name: Install dependencies
+        run: |
+          python -m pip install -U pip pipenv
+          pipenv install
+      - name: Crawl PyConTW 2016
+        run: |
+          pipenv run python3 main.py -y 2016
+      - name: Push downloaded files to branch
+        env:
+          SECRET: '${{ secrets.ACCESS_TOKEN }}'
+          USER_NAME: githubaction
+          USER_EMAIL: githubaction@fake.com
+          PUBLISH_DIR: ./2016
+          BRANCH_NAME: pycontw-2016
+        run: |
+          cd $PUBLISH_DIR
+          git init
+          git config --local user.name $USER_NAME
+          git config --local user.email $USER_EMAIL
+          git status
+          git remote add origin https://$SECRET@github.com/$GITHUB_REPOSITORY.git
+          git checkout -b $BRANCH_NAME
+          git add --all
+          git commit -m "Deploy PyConTW 2016 to branch $BRANCH_NAME"
+          git push -f --set-upstream origin $BRANCH_NAME
+          echo "Deploy $BRANCH_NAME completed successfully"
