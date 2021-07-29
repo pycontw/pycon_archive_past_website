@@ -38,10 +38,19 @@ jobs:
           git config --local user.email $USER_EMAIL
           git status
           git remote add origin https://$SECRET@github.com/$GITHUB_REPOSITORY.git
+          git fetch --no-recurse-submodules
+          git ls-remote --heads origin $BRANCH_NAME | wc -l
           git checkout -b $BRANCH_NAME
+          git worktree add --checkout remote-$BRANCH_NAME origin/$BRANCH_NAME
+          rsync -q -av --checksum --progress . remote-$BRANCH_NAME --delete --exclude .git --exclude remote-$BRANCH_NAME
+          cd remote-$BRANCH_NAME
+          git status --porcelain
           git add --all
+          git checkout -b $BRANCH_NAME
           git commit -m "Deploy PyConTW 2016 to branch $BRANCH_NAME"
-          git push -f --set-upstream origin $BRANCH_NAME
+          git push -f origin $BRANCH_NAME
+          cd ..
+          git worktree remove remote-$BRANCH_NAME --force
           echo "Deploy $BRANCH_NAME completed successfully"
   deploy-pycontw2017:
     runs-on: ubuntu-latest
@@ -75,10 +84,19 @@ jobs:
           git config --local user.email $USER_EMAIL
           git status
           git remote add origin https://$SECRET@github.com/$GITHUB_REPOSITORY.git
+          git fetch --no-recurse-submodules
+          git ls-remote --heads origin $BRANCH_NAME | wc -l
           git checkout -b $BRANCH_NAME
+          git worktree add --checkout remote-$BRANCH_NAME origin/$BRANCH_NAME
+          rsync -q -av --checksum --progress . remote-$BRANCH_NAME --delete --exclude .git --exclude remote-$BRANCH_NAME
+          cd remote-$BRANCH_NAME
+          git status --porcelain
           git add --all
+          git checkout -b $BRANCH_NAME
           git commit -m "Deploy PyConTW 2017 to branch $BRANCH_NAME"
-          git push -f --set-upstream origin $BRANCH_NAME
+          git push -f origin $BRANCH_NAME
+          cd ..
+          git worktree remove remote-$BRANCH_NAME --force
           echo "Deploy $BRANCH_NAME completed successfully"
   deploy-pycontw2018:
     runs-on: ubuntu-latest
@@ -112,10 +130,19 @@ jobs:
           git config --local user.email $USER_EMAIL
           git status
           git remote add origin https://$SECRET@github.com/$GITHUB_REPOSITORY.git
+          git fetch --no-recurse-submodules
+          git ls-remote --heads origin $BRANCH_NAME | wc -l
           git checkout -b $BRANCH_NAME
+          git worktree add --checkout remote-$BRANCH_NAME origin/$BRANCH_NAME
+          rsync -q -av --checksum --progress . remote-$BRANCH_NAME --delete --exclude .git --exclude remote-$BRANCH_NAME
+          cd remote-$BRANCH_NAME
+          git status --porcelain
           git add --all
+          git checkout -b $BRANCH_NAME
           git commit -m "Deploy PyConTW 2018 to branch $BRANCH_NAME"
-          git push -f --set-upstream origin $BRANCH_NAME
+          git push -f origin $BRANCH_NAME
+          cd ..
+          git worktree remove remote-$BRANCH_NAME --force
           echo "Deploy $BRANCH_NAME completed successfully"
   deploy-pycontw2019:
     runs-on: ubuntu-latest
@@ -149,10 +176,19 @@ jobs:
           git config --local user.email $USER_EMAIL
           git status
           git remote add origin https://$SECRET@github.com/$GITHUB_REPOSITORY.git
+          git fetch --no-recurse-submodules
+          git ls-remote --heads origin $BRANCH_NAME | wc -l
           git checkout -b $BRANCH_NAME
+          git worktree add --checkout remote-$BRANCH_NAME origin/$BRANCH_NAME
+          rsync -q -av --checksum --progress . remote-$BRANCH_NAME --delete --exclude .git --exclude remote-$BRANCH_NAME
+          cd remote-$BRANCH_NAME
+          git status --porcelain
           git add --all
+          git checkout -b $BRANCH_NAME
           git commit -m "Deploy PyConTW 2019 to branch $BRANCH_NAME"
-          git push -f --set-upstream origin $BRANCH_NAME
+          git push -f origin $BRANCH_NAME
+          cd ..
+          git worktree remove remote-$BRANCH_NAME --force
           echo "Deploy $BRANCH_NAME completed successfully"
   deploy-pycontw2020:
     runs-on: ubuntu-latest
@@ -186,8 +222,17 @@ jobs:
           git config --local user.email $USER_EMAIL
           git status
           git remote add origin https://$SECRET@github.com/$GITHUB_REPOSITORY.git
+          git fetch --no-recurse-submodules
+          git ls-remote --heads origin $BRANCH_NAME | wc -l
           git checkout -b $BRANCH_NAME
+          git worktree add --checkout remote-$BRANCH_NAME origin/$BRANCH_NAME
+          rsync -q -av --checksum --progress . remote-$BRANCH_NAME --delete --exclude .git --exclude remote-$BRANCH_NAME
+          cd remote-$BRANCH_NAME
+          git status --porcelain
           git add --all
+          git checkout -b $BRANCH_NAME
           git commit -m "Deploy PyConTW 2020 to branch $BRANCH_NAME"
-          git push -f --set-upstream origin $BRANCH_NAME
+          git push -f origin $BRANCH_NAME
+          cd ..
+          git worktree remove remote-$BRANCH_NAME --force
           echo "Deploy $BRANCH_NAME completed successfully"
