@@ -8,7 +8,7 @@ on:
         required: true
 
 jobs:
-  deploy-pycontw2016:
+  deploy-pycontw-sites:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -30,6 +30,8 @@ jobs:
           pipenv run python3 main.py -y 2018 &
           pipenv run python3 main.py -y 2019 &
           pipenv run python3 main.py -y 2020 &
+      - name: Move to Publish Folder
+        run: |
           mkdir build; mv 2016/ 2017/ 2018/ 2019/ 2020/ build/
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.4
