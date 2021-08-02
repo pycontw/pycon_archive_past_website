@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>      <html lang="en-us" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en-us" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en-us" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-us"> <!--<![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="/2016/static/images/favicon_pyconTW_32x32.png" rel="icon" type="image/png"/>
+<meta content="" property="og:description"/>
+<meta content="http://tw.pycon.org/2016/static/images/PyConTW2016_facebook_shareImage.png" property="og:image"/>
+<link href="/2016/static/CACHE/css/40914c7a23b1.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css"/>
+<link href="https://fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet" type="text/css"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+<!--[if lt IE 9]>
+  <script src="/2016/static/js/html5shiv.min.js"></script>
+  <script src="/2016/static/js/respond.min.js"></script>
+  <![endif]-->
+<!-- justfont webfont -->
+<!-- <script src="/2016/static/js/vendors/justfont.js"></script> -->
+<title>First try for CAS, SymPy with codegen | PyCon Taiwan 2016</title>
+</link></head>
+<body class="">
+<nav class="navbar navbar-default navbar-fe navbar-site">
+<div class="clearfix container-fluid">
+<div class="navbar-header">
+<button class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="/2016/en-us/">
+<img alt="logo" class="logo hidden-xs" height="24" src="/2016/static/images/logo-tiny--reverse@2x.png" width="133"/>
+<img alt="logo" class="logo visible-xs-inline" height="30" src="/2016/static/images/LogoIcon_white@2x.png" width="42"/>
+</a>
+</div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="navbar">
+<ul class="nav navbar-nav navbar-nav-hover">
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">About</a>
+<ul class="dropdown-menu">
+<li><a href="/2016/en-us/about/pycontw/">PyCon TW</a></li>
+<li><a href="/2016/en-us/about/code-of-conduct/">Code of Conduct</a></li>
+<li><a href="/2016/en-us/about/staff/">Staff</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="active dropdown-toggle" data-toggle="dropdown" href="#" role="button">Events</a>
+<ul class="dropdown-menu">
+<li><a href="/2016/en-us/events/overview/">Overview</a></li>
+<li><a href="/2016/en-us/events/schedule/">Schedule</a></li>
+<li><a href="/2016/en-us/events/keynotes/">Keynotes</a></li>
+<li><a href="/2016/en-us/events/talks/">Talks</a></li>
+<li><a href="/2016/en-us/events/sprints/">Sprints</a></li>
+<li><a href="/2016/en-us/events/bof/">BoF</a></li>
+<li><a href="/2016/en-us/events/pyday/">PyDay</a></li>
+<li><a href="/2016/en-us/events/tutorials/">Tutorial</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Venue</a>
+<ul class="dropdown-menu">
+<li><a href="/2016/en-us/venue/">Venue</a></li>
+<li><a href="/2016/en-us/venue/accommodation/">Accommodation</a></li>
+</ul>
+</li><!-- /.dropdown -->
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Sponsor</a>
+<ul class="dropdown-menu">
+<li><a href="/2016/en-us/sponsors/">Our Sponsors</a></li>
+<li><a href="http://pycontw.kktix.cc/events/pycontw2016patron" target="_blank">Patrons</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Registration</a>
+<ul class="dropdown-menu">
+<li><a href="/2016/en-us/registration/ticket-info/">Ticket Info</a></li>
+<li><a href="/2016/en-us/registration/financial-aid/">Financial Aid</a></li>
+</ul>
+</li><!-- /.dropdown -->
+<li><a href="http://pycontw.blogspot.tw/" target="_blank">Blog</a></li>
+<li><a href="/2016/en-us/dashboard/" target="_blank"><span class="em">Dashboard</span></a></li>
+</ul>
+<div class="social pull-right">
+<a class="social-btn" href="https://www.facebook.com/pycontw" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+</a>
+<a class="social-btn" href="https://twitter.com/pycontw" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+</a>
+<a class="social-btn" href="mailto:organizers@pycon.tw" target="_blank">
+<i class="fa fa-envelope"></i>
+</a>
+</div>
+<ul class="nav navbar-nav navbar-lang navbar-right">
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn" data-toggle="dropdown" href="#" role="button"> English (US)
+               <span class="caret"></span>
+</a>
+<ul class="dropdown-menu">
+<li>
+<a data-lang="zh-hant" href="/2016/zh-hant/events/talk/58534680193925150/">
+                  繁體中文
+                </a>
+</li>
+<li class="active">
+<a data-lang="en-us" href="/2016/en-us/events/talk/58534680193925150/">
+                  English (US)
+                </a>
+</li>
+</ul>
+</li>
+</ul>
+<!-- Fallback version of form selection -->
+<form  class="navbar-form navbar-right navbar-lang" method="post">
+
+<input name="next" type="hidden" value="/2016/events/talk/58534680193925150/"/>
+<select class="form-control input-sm" id="language-select" name="language">
+<option value="zh-hant">
+                        繁體中文
+                    </option>
+<option selected="" value="en-us">
+                        English (US)
+                    </option>
+</select>
+<noscript>
+<button class="btn" type="submit">Change</button>
+</noscript>
+</form>
+</div>
+</div>
+<!-- /.navbar-collapse -->
+
+<!-- /.container-fluid -->
+</nav>
+<div class="content-page-title">
+<div class="content-container container">
+<h1>First try for CAS, SymPy with codegen</h1>
+</div>
+</div>
+<div class="content-container container content-page-content talk-detail-content">
+<div class="proposal-content">
+<h3>Language</h3>
+<div>Chinese talk w. Chinese slides</div>
+<h3>Category</h3>
+<div>Science</div>
+<h3>Python Level</h3>
+<div>Intermediate</div>
+<h3>Slides Link</h3>
+<div><a href="https://speakerdeck.com/wdv4758h/first-try-for-cas-sympy-with-codegen">https://speakerdeck.com/wdv4758h/first-try-for-cas-sympy-with-codegen</a></div>
+<h2>Abstract</h2>
+<div><p>一個平常沒在做數學相關研究的工程師，因緣際會下使用到了 SymPy。藉機來介紹 SymPy 的基本使用，從建立自己的方程式到使用 SymPy 所支援的方程式化簡，最後利用 codegen 轉換到其他程式語言或 Library，並檢視藏在這些功能背後的 AST (Abstract Syntax Tree)。</p></div>
+<h2>Description</h2>
+<div class="editor-readonly">
+<div class="editor-preview">前陣子碰上了 libm 相關的實作問題，於是對 libm 內部的三角函數實作方式感到好奇。在嘗試自己實作後了解到利用泰勒展開式會隨著數字增長而產生不可忽視的誤差，因此現今的各家 libm 中幾乎都是基於 [Chebyshev Approximation](https://en.wikipedia.org/wiki/Approximation_theory#Chebyshev_approximation) 所找到的多項式來趨近，於是利用了 SymPy 撰寫了一個 Chebyshev Approximation 的[實作](https://github.com/wdv4758h/chebyshev)。後續發現了 SymPy 的 codegen 功能，於是開始嘗試撰寫簡單的 [Rust](https://www.rust-lang.org/) [codegen](https://github.com/sympy/sympy/pull/10618)，目前正處於 PR 改進階段，希望後續能夠完善：）</div>
+</div>
+</div>
+<div class="speaker-content" id="speaker-content">
+<h3>
+		許邱翔 (Chiu-Hsiang Hsu) (dv)
+		<span class="speaker-social">
+<a href="https://github.com/wdv4758h" target="_blank">
+<span aria-hidden="true" class="fa fa-github"></span>
+</a>
+<a href="https://twitter.com/wdv4758h" target="_blank">
+<span aria-hidden="true" class="fa fa-twitter"></span>
+</a>
+<a href="https://www.facebook.com/wdv4758h" target="_blank">
+<span aria-hidden="true" class="fa fa-facebook"></span>
+</a>
+</span>
+</h3>
+<div class="row">
+<div class="col-sm-4 col-sm-push-8 speaker-photo-contain">
+<img class="speaker-photo" src="/2016/media/avatars/51020003641655326/2016-02-11-head.jpg"/>
+</div>
+<div class="col-sm-8 col-sm-pull-4"><p>社會新鮮人，去年剛畢業、當完兵，目前正在新創公司工作，我的朋友大多叫我 "dv"，同事都叫我 "CH"，目前活動範圍以桃園、台北居多，熱愛 Open Source :)</p></div>
+</div>
+</div>
+</div>
+<footer class="footer container-fluid text-center">
+<div class="row clearfix">
+<div class="col-md-2">2016 PyCon Taiwan</div>
+<div class="col-md-8 hidden-xs hidden-sm">
+<img class="logo" height="24" src="/2016/static/images/Logo_pycontw16_blue_footer@2x.png" width="133"/>
+</div>
+<div class="social col-md-2 text-center">
+<a class="social-btn" href="https://www.facebook.com/pycontw" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+</a>
+<a class="social-btn" href="https://twitter.com/pycontw" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+</a>
+<a class="social-btn" href="mailto:organizers@pycon.tw" target="_blank">
+<i class="fa fa-envelope"></i>
+</a>
+</div>
+</div>
+</footer>
+<script src="/2016/static/CACHE/js/6c8feda299eb.js" type="text/javascript"></script>
+<script src="/2016/static/js/vendors/simplemde.js"></script>
+<script src="/2016/static/js/tools/simplemde-setup.js"></script>
+</body>
+</html>

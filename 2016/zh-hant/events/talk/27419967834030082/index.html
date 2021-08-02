@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>      <html lang="zh-hant" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="zh-hant" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="zh-hant" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hant"> <!--<![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="/2016/static/images/favicon_pyconTW_32x32.png" rel="icon" type="image/png"/>
+<meta content="" property="og:description"/>
+<meta content="http://tw.pycon.org/2016/static/images/PyConTW2016_facebook_shareImage.png" property="og:image"/>
+<link href="/2016/static/CACHE/css/40914c7a23b1.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css"/>
+<link href="https://fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet" type="text/css"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+<!--[if lt IE 9]>
+  <script src="/2016/static/js/html5shiv.min.js"></script>
+  <script src="/2016/static/js/respond.min.js"></script>
+  <![endif]-->
+<!-- justfont webfont -->
+<!-- <script src="/2016/static/js/vendors/justfont.js"></script> -->
+<title>多語系 Sphinx 與 Python 官方文件中文化 | PyCon Taiwan 2016</title>
+</link></head>
+<body class="">
+<nav class="navbar navbar-default navbar-fe navbar-site">
+<div class="clearfix container-fluid">
+<div class="navbar-header">
+<button class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button">
+<span class="sr-only">展開導覽列</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="/2016/zh-hant/">
+<img alt="logo" class="logo hidden-xs" height="24" src="/2016/static/images/logo-tiny--reverse@2x.png" width="133"/>
+<img alt="logo" class="logo visible-xs-inline" height="30" src="/2016/static/images/LogoIcon_white@2x.png" width="42"/>
+</a>
+</div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="navbar">
+<ul class="nav navbar-nav navbar-nav-hover">
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">關於</a>
+<ul class="dropdown-menu">
+<li><a href="/2016/zh-hant/about/pycontw/">PyCon TW</a></li>
+<li><a href="/2016/zh-hant/about/code-of-conduct/">行為準則</a></li>
+<li><a href="/2016/zh-hant/about/staff/">工作人員</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="active dropdown-toggle" data-toggle="dropdown" href="#" role="button">活動</a>
+<ul class="dropdown-menu">
+<li><a href="/2016/zh-hant/events/overview/">總覽</a></li>
+<li><a href="/2016/zh-hant/events/schedule/">Schedule</a></li>
+<li><a href="/2016/zh-hant/events/keynotes/">主題演講</a></li>
+<li><a href="/2016/zh-hant/events/talks/">演講</a></li>
+<li><a href="/2016/zh-hant/events/sprints/">Sprints</a></li>
+<li><a href="/2016/zh-hant/events/bof/">BoF</a></li>
+<li><a href="/2016/zh-hant/events/pyday/">PyDay</a></li>
+<li><a href="/2016/zh-hant/events/tutorials/">教學</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">會場</a>
+<ul class="dropdown-menu">
+<li><a href="/2016/zh-hant/venue/">會場</a></li>
+<li><a href="/2016/zh-hant/venue/accommodation/">住宿</a></li>
+</ul>
+</li><!-- /.dropdown -->
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">贊助</a>
+<ul class="dropdown-menu">
+<li><a href="/2016/zh-hant/sponsors/">贊助夥伴</a></li>
+<li><a href="http://pycontw.kktix.cc/events/pycontw2016patron" target="_blank">個人贊助</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">註冊</a>
+<ul class="dropdown-menu">
+<li><a href="/2016/zh-hant/registration/ticket-info/">售票資訊</a></li>
+<li><a href="/2016/zh-hant/registration/financial-aid/">財務補助</a></li>
+</ul>
+</li><!-- /.dropdown -->
+<li><a href="http://pycontw.blogspot.tw/" target="_blank">部落格</a></li>
+<li><a href="/2016/zh-hant/dashboard/" target="_blank"><span class="em">控制面板</span></a></li>
+</ul>
+<div class="social pull-right">
+<a class="social-btn" href="https://www.facebook.com/pycontw" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+</a>
+<a class="social-btn" href="https://twitter.com/pycontw" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+</a>
+<a class="social-btn" href="mailto:organizers@pycon.tw" target="_blank">
+<i class="fa fa-envelope"></i>
+</a>
+</div>
+<ul class="nav navbar-nav navbar-lang navbar-right">
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn" data-toggle="dropdown" href="#" role="button"> 繁體中文
+               <span class="caret"></span>
+</a>
+<ul class="dropdown-menu">
+<li class="active">
+<a data-lang="zh-hant" href="/2016/zh-hant/events/talk/27419967834030082/">
+                  繁體中文
+                </a>
+</li>
+<li>
+<a data-lang="en-us" href="/2016/en-us/events/talk/27419967834030082/">
+                  English (US)
+                </a>
+</li>
+</ul>
+</li>
+</ul>
+<!-- Fallback version of form selection -->
+<form  class="navbar-form navbar-right navbar-lang" method="post">
+
+<input name="next" type="hidden" value="/2016/events/talk/27419967834030082/"/>
+<select class="form-control input-sm" id="language-select" name="language">
+<option selected="" value="zh-hant">
+                        繁體中文
+                    </option>
+<option value="en-us">
+                        English (US)
+                    </option>
+</select>
+<noscript>
+<button class="btn" type="submit">修改</button>
+</noscript>
+</form>
+</div>
+</div>
+<!-- /.navbar-collapse -->
+
+<!-- /.container-fluid -->
+</nav>
+<div class="content-page-title">
+<div class="content-container container">
+<h1>多語系 Sphinx 與 Python 官方文件中文化</h1>
+</div>
+</div>
+<div class="content-container container content-page-content talk-detail-content">
+<div class="proposal-content">
+<h3>語言</h3>
+<div>中文演講/中文投影片</div>
+<h3>分類</h3>
+<div>Python Core（語言本身、標準函式庫…）</div>
+<h3>Python 難易度</h3>
+<div>中階</div>
+<h3>投影片連結</h3>
+<div><a href="https://blog.liang2.tw/2016Talk-PyDoc-TW">https://blog.liang2.tw/2016Talk-PyDoc-TW</a></div>
+<h2>摘要</h2>
+<div><p>Python 除了以易讀、易用、易學之外，它也有非常完整的官方文件。然而，因為英文內容，初次使用它時倍感困難，於是有了中文化翻譯計畫。目前翻譯的結果可見 https://docs.python.org.tw/3/ 。本演講將分享本翻譯計畫的整體規劃，以及相關的技術細節，如：Sphinx 文件的多國語言、Transifex 翻譯協作平台整合、文件更新的工作排程等主題。</p></div>
+<h2>說明</h2>
+<div class="editor-readonly">
+<div class="editor-preview">Python 官方文件包含了從零開始的 tutorial、標準函式庫介紹、語法定義、以及 CPython C API 等，但在許多初學者的回饋中，發現因為英文，加上文件龐大複雜，很難上手，尤其是對新手最有幫助的 tutorial，經常直接被跳過，十分可惜，因此有了[中文化翻譯計畫][pydoctw]。
+
+為了讓更多人能直接加入翻譯，本計畫設計只要登入 [Transifex] 即可以開始翻譯，不需理解 [Sphinx] 文件系統生成網頁與結合 gettext 多語系的過程。同時翻譯者也能在不用自己編譯的情況下，即時更新線上翻譯的結果，系統也會定期將新的翻譯加入[版本控制][cpython-tw]中，離線也能使用翻譯的結果。
+
+本演講將分為三大部份：
+
+1. Sphinx 文件結合 [gettext] 多語系的架構。
+2. 目前 Python 官方文件的架構。
+3. 官方文件翻譯計畫。
+
+前二部份將探討技術問題。由於許多 Python 套件的文件皆使用 Sphinx 生成說明文件，這套多語系的翻譯流程也能適用在其他專案。第三部份則將著重在翻譯，分享翻譯的心得以及遇上的狀況。希望透過這次方享，能聚集更多人加入翻譯的行列。
+
+[pydoctw]: https://github.com/python-doc-tw/python-doc-tw
+[cpython-tw]: https://github.com/python-doc-tw/cpython-tw
+[Transifex]: https://www.transifex.com/
+[Sphinx]: http://www.sphinx-doc.org/en/stable/
+[gettext]: https://zh.wikipedia.org/wiki/Gettext</div>
+</div>
+</div>
+<div class="speaker-content" id="speaker-content">
+<h3>
+		Liang-Bo Wang
+		<span class="speaker-social">
+<a href="https://github.com/ccwang002" target="_blank">
+<span aria-hidden="true" class="fa fa-github"></span>
+</a>
+<a href="https://twitter.com/ccwang002" target="_blank">
+<span aria-hidden="true" class="fa fa-twitter"></span>
+</a>
+<a href="https://www.facebook.com/lbwang.2" target="_blank">
+<span aria-hidden="true" class="fa fa-facebook"></span>
+</a>
+</span>
+</h3>
+<div class="row">
+<div class="col-sm-4 col-sm-push-8 speaker-photo-contain">
+<img class="speaker-photo" src="/2016/media/avatars/27418905081282564/2016-02-02-me_201512.jpg"/>
+</div>
+<div class="col-sm-8 col-sm-pull-4"><p>亮亮 (or liang2) is a current master student in Bioinformatics at NTU. He will become a PhD student at WUSTL by fall this year. Aside from academics, liang2 attends and speaks in Python and R open source communities, including Taipei.py and MLDM Monday. He is also the Program Chair of PyCon Taiwan 2016.</p>
+<p>His blog liang2.tw dumps random notes at times. However, the update frequency is quite low these days, for he has been working very hard to graduate. He doesn't even have time to complete the about page on his blog.</p></div>
+</div>
+</div>
+</div>
+<footer class="footer container-fluid text-center">
+<div class="row clearfix">
+<div class="col-md-2">2016 PyCon Taiwan</div>
+<div class="col-md-8 hidden-xs hidden-sm">
+<img class="logo" height="24" src="/2016/static/images/Logo_pycontw16_blue_footer@2x.png" width="133"/>
+</div>
+<div class="social col-md-2 text-center">
+<a class="social-btn" href="https://www.facebook.com/pycontw" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+</a>
+<a class="social-btn" href="https://twitter.com/pycontw" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+</a>
+<a class="social-btn" href="mailto:organizers@pycon.tw" target="_blank">
+<i class="fa fa-envelope"></i>
+</a>
+</div>
+</div>
+</footer>
+<script src="/2016/static/CACHE/js/6c8feda299eb.js" type="text/javascript"></script>
+<script src="/2016/static/js/vendors/simplemde.js"></script>
+<script src="/2016/static/js/tools/simplemde-setup.js"></script>
+</body>
+</html>

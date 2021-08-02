@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Python實作運彩下注策略 | PyCon Taiwan 2018</title>
+<link href="/2018/static/pycontw-2018/assets/favicon.ico" rel="shortcut icon"/>
+<link href="/2018/static/pycontw-2018/assets/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/2018/static/pycontw-2018/assets/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<meta content="" property="og:description"/>
+<meta content="https://tw.pycon.org/2018/static/pycontw-2018/assets/og-image.png" property="og:image"/>
+<link href="https://fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400|Raleway:300,400" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
+<link href="/2018/static/CACHE/css/1a46698985d1.css" rel="stylesheet" type="text/css">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNZ39PD');</script>
+</link></head>
+<body class="talk-detail">
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-TNZ39PD" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<div data-controller="topNav">
+<nav class="top-navbar">
+<form  class="navbar-lang-switch" method="post">
+
+<input name="next" type="hidden" value="/2018/events/talk/596319992962613435/"/>
+<button disabled="disabled" name="language" type="submit" value="zh-hant">
+				ZH
+			</button>
+<button name="language" type="submit" value="en-us">
+				<a href='/2018/en-us/events/talk/596319992962613435/' class="myclass">EN</a>
+			</button>
+</form>
+<div class="navbar-centerbox">
+<a class="navbar-logo" href="/2018/zh-hant/"></a>
+</div>
+<button aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler no-script" data-action="topNav#toggle" data-target="topNav.toggler" type="button">
+<div><span></span><span></span><span></span></div>
+</button>
+<div class="navbar-social-desktop">
+<a aria-label="部落格" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+</nav>
+<nav class="menu-navbar-mobile no-script" data-target="topNav.menu">
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/2018/zh-hant/about/pycontw/">關於</a>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-conference" type="checkbox"/>
+<label for="menu-navbar-mobile-conference">議程</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/zh-hant/events/overview/">總覽</a></li>
+<li><a href="/2018/zh-hant/events/schedule/">時間表</a></li>
+<li><a href="/2018/zh-hant/events/keynotes/">基調演講</a></li>
+<li><a href="/2018/zh-hant/events/talks/">一般演講</a></li>
+<li><a href="/2018/zh-hant/speaking/recording/">錄影</a></li>
+<li><a href="/2018/zh-hant/portal/">傳送門</a></li>
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-events" type="checkbox"/>
+<label for="menu-navbar-mobile-events">交流</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/zh-hant/events/tutorials/">學習</a></li>
+<li><a href="/2018/zh-hant/events/sprints/">衝刺開發</a></li>
+<li><a href="/2018/zh-hant/events/open-spaces/">開放空間</a></li>
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-registration" type="checkbox"/>
+<label for="menu-navbar-mobile-registration">註冊</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/zh-hant/registration/ticket-info/">會議門票</a></li>
+<li><a href="/2018/zh-hant/registration/financial-aid/">財務補助</a></li>
+<li><a href="/2018/zh-hant/registration/registration/">報到</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/2018/zh-hant/venue/">會場</a>
+</li>
+<li>
+<a href="/2018/zh-hant/dashboard/">My PyCon</a>
+</li>
+</ul>
+<div class="navbar-social-mobile">
+<a aria-label="部落格" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+</nav>
+</div>
+<header class="page-hero">
+<nav class="menu-navbar-desktop">
+<a class="menu-logo" href="/2018/zh-hant/"></a>
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/2018/zh-hant/about/pycontw/">關於</a>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-conference" type="checkbox"/>
+<label for="menu-navbar-desktop-conference">議程</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/zh-hant/events/overview/">總覽</a></li>
+<li><a href="/2018/zh-hant/events/schedule/">時間表</a></li>
+<li><a href="/2018/zh-hant/events/keynotes/">基調演講</a></li>
+<li><a href="/2018/zh-hant/events/talks/">一般演講</a></li>
+<li><a href="/2018/zh-hant/speaking/recording/">錄影</a></li>
+<li><a href="/2018/zh-hant/portal/">傳送門</a></li>
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-events" type="checkbox"/>
+<label for="menu-navbar-desktop-events">交流</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/zh-hant/events/tutorials/">學習</a></li>
+<li><a href="/2018/zh-hant/events/sprints/">衝刺開發</a></li>
+<li><a href="/2018/zh-hant/events/open-spaces/">開放空間</a></li>
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-registration" type="checkbox"/>
+<label for="menu-navbar-desktop-registration">註冊</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/zh-hant/registration/ticket-info/">會議門票</a></li>
+<li><a href="/2018/zh-hant/registration/financial-aid/">財務補助</a></li>
+<li><a href="/2018/zh-hant/registration/registration/">報到</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/2018/zh-hant/venue/">會場</a>
+</li>
+<li>
+<a href="/2018/zh-hant/dashboard/">My PyCon</a>
+</li>
+</ul>
+</nav>
+</header>
+<main>
+<h1>Python實作運彩下注策略</h1>
+<section class="talk-content talk-info">
+<ul>
+<li>
+<dfn class="location">地點：</dfn>
+<span>R1</span>
+</li>
+<li>
+<dfn class="slot">時段：</dfn>
+<span>第 2 天，13:40‑14:10</span>
+</li>
+<li>
+<dfn class="category">主題分類：</dfn>
+<span>資料分析</span>
+</li>
+<li>
+<dfn class="language zhzh">語言：</dfn>
+<span>中文演講/中文投影片</span>
+</li>
+<li>
+<dfn class="python-level intermediate">Python 難易度：</dfn>
+<span>中階</span>
+</li>
+</ul>
+</section>
+<h2>摘要</h2>
+<section class="talk-content">
+<p>過去與朋友在玩運彩的時候，因為在下注時不夠客觀，通常十賭九輸。本次想利用建構模型分析的方法，在現在大數據的時代，以科學的方式來制定下著策略，以極大化投資報酬率。<br/>這次會以美國職籃NBA作為例子來進行分析，目前所有的體育賽事數據被結構的越來越複雜，而且在取得上也變得越來越方便，這次除了會教大家如何使用Python串接官方所提供的API來獲取這些資訊，另外也會教大家如何使用爬蟲去一個籃球數據非常豐富的網站Basketball-Reference去找一些更豐富的資訊，最後也會想找一些有趣的因子，故也會使用PTT NBA板裡面的一些指標作為因子，如LYS的文章等，就是著名的反指標。接著會教大家要如何從這些數以萬計的資訊當中獲取到真正重要的黃金資訊，這個篩選的方式則會使用Python基因演算法的DEAP套件來進行特徵的篩選，最後再依據調整出來的模型與運彩的賭盤PK，透過調整下注策略，極大化下注報酬率。</p>
+</section>
+<h2>說明</h2>
+<section class="talk-content editor-readonly">
+<div class="editor-preview">### 資料來源
+ - [Basketball-Reference] - https://www.basketball-reference.com/
+ - [NBA Stats] - https://stats.nba.com/
+ - [NBA Stats API Documents] - https://github.com/seemethere/nba_py/wiki/stats.nba.com-Endpoint-Documentation
+ - [玩運彩] - https://www.playsport.cc/
+
+### 使用的第三方工具
+ - [Scikit-learn] - 為可以簡單實作機器學習的工具
+ - [DEAP] - Pyhton實作基因演算法的工具
+
+[Scikit-learn]: http://scikit-learn.org/stable/
+[DEAP]: https://deap.readthedocs.io/en/master/</div>
+</section>
+<h2>Slides</h2>
+<section class="talk-content">
+<p><a href="https://drive.google.com/open?id=1H5twARImwjIo0gbfcHLOF0XRMnkXFpqY">https://drive.google.com/open?id=1H5twARImwjIo0gbfcHLOF0XRMnkXFpqY</a></p>
+</section>
+<h2>
+	
+	講者
+	
+</h2>
+<article class="media">
+<header>
+<figure>
+<img src="/2018/media/cache/cd/41/cd411edd9703ef395cf9f8b10128c047.jpg"/>
+<figcaption>陳建安</figcaption>
+</figure>
+</header>
+<div class="talk-content">
+<p>目前於金融業從事資料分析相關工作，由於工作及個人興趣使然，在2016年底開始接觸學習使用Python，除了在工作上有在使用Python外，在私底下也經常使用Python來實作一些機器學習的東西。</p>
+<div class="social">
+<a href="https://github.com/LukeCCA" rel="noopener" target="_blank"><span aria-hidden="true" class="fa fa-github"></span></a>
+</div>
+</div>
+</article>
+<article class="media">
+<header>
+<figure>
+<img src="/2018/media/cache/e2/d0/e2d0ca777f757e96040f4f81aa99c0ef.jpg"/>
+<figcaption>廖子慶</figcaption>
+</figure>
+</header>
+<div class="talk-content">
+<p>金融從業人員，剛開始在PYTHON這條道路上跨出第一步。</p>
+<div class="social">
+<a href="https://www.facebook.com/profile.php?id=100002294783650" rel="noopener" target="_blank"><span aria-hidden="true" class="fa fa-facebook"></span></a>
+</div>
+</div>
+</article>
+</main>
+<footer>
+<h2 class="footer-logo"></h2>
+<ul>
+<li><a href="/2018/zh-hant/about/code-of-conduct/">行為準則</a></li>
+<li><a href="/2018/zh-hant/about/staff/">工作人員</a></li>
+<li><a href="/2018/zh-hant/about/community/">社群</a></li>
+</ul>
+<p class="copyright">2018 PyCon Taiwan</p>
+</footer>
+<script src="/2018/static/CACHE/js/ce994d83f936.js" type="text/javascript"></script>
+<script src="/2018/static/js/vendors/simplemde.min.js"></script>
+<script src="/2018/static/js/tools/simplemde-setup.js"></script>
+</body>
+</html>
+<style>.myclass{text-decoration: none;color: rgba(255, 255, 255, 0.35);}.myclass:hover{text-decoration: none;color: rgba(255, 255, 255, 0.7);}</style>

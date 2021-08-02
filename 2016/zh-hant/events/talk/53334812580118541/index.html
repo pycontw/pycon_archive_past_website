@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>      <html lang="zh-hant" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="zh-hant" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="zh-hant" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hant"> <!--<![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="/2016/static/images/favicon_pyconTW_32x32.png" rel="icon" type="image/png"/>
+<meta content="" property="og:description"/>
+<meta content="http://tw.pycon.org/2016/static/images/PyConTW2016_facebook_shareImage.png" property="og:image"/>
+<link href="/2016/static/CACHE/css/40914c7a23b1.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css"/>
+<link href="https://fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet" type="text/css"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+<!--[if lt IE 9]>
+  <script src="/2016/static/js/html5shiv.min.js"></script>
+  <script src="/2016/static/js/respond.min.js"></script>
+  <![endif]-->
+<!-- justfont webfont -->
+<!-- <script src="/2016/static/js/vendors/justfont.js"></script> -->
+<title>還在用過時的 OTP 保護帳號？來看看 FIDO U2F 吧！ | PyCon Taiwan 2016</title>
+</link></head>
+<body class="">
+<nav class="navbar navbar-default navbar-fe navbar-site">
+<div class="clearfix container-fluid">
+<div class="navbar-header">
+<button class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button">
+<span class="sr-only">展開導覽列</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="/2016/zh-hant/">
+<img alt="logo" class="logo hidden-xs" height="24" src="/2016/static/images/logo-tiny--reverse@2x.png" width="133"/>
+<img alt="logo" class="logo visible-xs-inline" height="30" src="/2016/static/images/LogoIcon_white@2x.png" width="42"/>
+</a>
+</div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="navbar">
+<ul class="nav navbar-nav navbar-nav-hover">
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">關於</a>
+<ul class="dropdown-menu">
+<li><a href="/2016/zh-hant/about/pycontw/">PyCon TW</a></li>
+<li><a href="/2016/zh-hant/about/code-of-conduct/">行為準則</a></li>
+<li><a href="/2016/zh-hant/about/staff/">工作人員</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="active dropdown-toggle" data-toggle="dropdown" href="#" role="button">活動</a>
+<ul class="dropdown-menu">
+<li><a href="/2016/zh-hant/events/overview/">總覽</a></li>
+<li><a href="/2016/zh-hant/events/schedule/">Schedule</a></li>
+<li><a href="/2016/zh-hant/events/keynotes/">主題演講</a></li>
+<li><a href="/2016/zh-hant/events/talks/">演講</a></li>
+<li><a href="/2016/zh-hant/events/sprints/">Sprints</a></li>
+<li><a href="/2016/zh-hant/events/bof/">BoF</a></li>
+<li><a href="/2016/zh-hant/events/pyday/">PyDay</a></li>
+<li><a href="/2016/zh-hant/events/tutorials/">教學</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">會場</a>
+<ul class="dropdown-menu">
+<li><a href="/2016/zh-hant/venue/">會場</a></li>
+<li><a href="/2016/zh-hant/venue/accommodation/">住宿</a></li>
+</ul>
+</li><!-- /.dropdown -->
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">贊助</a>
+<ul class="dropdown-menu">
+<li><a href="/2016/zh-hant/sponsors/">贊助夥伴</a></li>
+<li><a href="http://pycontw.kktix.cc/events/pycontw2016patron" target="_blank">個人贊助</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">註冊</a>
+<ul class="dropdown-menu">
+<li><a href="/2016/zh-hant/registration/ticket-info/">售票資訊</a></li>
+<li><a href="/2016/zh-hant/registration/financial-aid/">財務補助</a></li>
+</ul>
+</li><!-- /.dropdown -->
+<li><a href="http://pycontw.blogspot.tw/" target="_blank">部落格</a></li>
+<li><a href="/2016/zh-hant/dashboard/" target="_blank"><span class="em">控制面板</span></a></li>
+</ul>
+<div class="social pull-right">
+<a class="social-btn" href="https://www.facebook.com/pycontw" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+</a>
+<a class="social-btn" href="https://twitter.com/pycontw" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+</a>
+<a class="social-btn" href="mailto:organizers@pycon.tw" target="_blank">
+<i class="fa fa-envelope"></i>
+</a>
+</div>
+<ul class="nav navbar-nav navbar-lang navbar-right">
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn" data-toggle="dropdown" href="#" role="button"> 繁體中文
+               <span class="caret"></span>
+</a>
+<ul class="dropdown-menu">
+<li class="active">
+<a data-lang="zh-hant" href="/2016/zh-hant/events/talk/53334812580118541/">
+                  繁體中文
+                </a>
+</li>
+<li>
+<a data-lang="en-us" href="/2016/en-us/events/talk/53334812580118541/">
+                  English (US)
+                </a>
+</li>
+</ul>
+</li>
+</ul>
+<!-- Fallback version of form selection -->
+<form  class="navbar-form navbar-right navbar-lang" method="post">
+
+<input name="next" type="hidden" value="/2016/events/talk/53334812580118541/"/>
+<select class="form-control input-sm" id="language-select" name="language">
+<option selected="" value="zh-hant">
+                        繁體中文
+                    </option>
+<option value="en-us">
+                        English (US)
+                    </option>
+</select>
+<noscript>
+<button class="btn" type="submit">修改</button>
+</noscript>
+</form>
+</div>
+</div>
+<!-- /.navbar-collapse -->
+
+<!-- /.container-fluid -->
+</nav>
+<div class="content-page-title">
+<div class="content-container container">
+<h1>還在用過時的 OTP 保護帳號？來看看 FIDO U2F 吧！</h1>
+</div>
+</div>
+<div class="content-container container content-page-content talk-detail-content">
+<div class="proposal-content">
+<h3>語言</h3>
+<div>中文演講/中文投影片</div>
+<h3>分類</h3>
+<div>資訊安全</div>
+<h3>Python 難易度</h3>
+<div>中階</div>
+<h3>投影片連結</h3>
+<div><a href="https://jong.sh/pycontw2016-u2f/">https://jong.sh/pycontw2016-u2f/</a></div>
+<h2>摘要</h2>
+<div><p>密碼，是許多人帳戶安全的最後一道防線，但是僅依賴密碼的傳統登入機制既不方便又不安全。對此，常見的一種補救措施是搭配 OTP 的兩步驟驗證，但它也有易用性與安全性方面的缺陷。由於種種困擾，人們組織了 FIDO 聯盟，希望制定一套安全、方便、通用、跨平台的標準，徹底解決線上身份認證實務上各種縱錯複雜的問題。近年來 FIDO 聯盟的主要成果包含陸續被採納的 UAF 與 U2F 以及關於 FIDO 2.0 的一組 W3C Member Submission 文件。在這場演講裡，我將會分析常見的幾種身份認證機制之優劣，並著重於介紹 U2F 這套 Google/Dropbox/GitHub 等網站都已經採用的標準。日前我以 Python 實作了一套沒有任何外部 dependency 的網站端 U2F 函式庫，所以我也會分享該函式庫的實作經驗與使用範例。如果您是一位網站開發者或技術愛好者，想要嘗試、採納 U2F 的話，本演講將提供給您足夠的基本知識與工具。</p></div>
+<h2>說明</h2>
+<div class="editor-readonly">
+<div class="editor-preview">本場演講主要會有以下幾點內容：
+
+  - 剖析常見的身份認證機制
+  - 簡介 U2F 運作原理
+  - 分享我實作的一套輕量的網站端 U2F 函式庫
+  - 示範如何將 U2F 引入自己的網站
+
+由[許多公司][members]組成的 FIDO 聯盟（包含軟體、硬體、銀行金流等各種不同領域的）現階段主要的成果有 U2F 與 UAF 兩個標準。這兩套標準提供了不太一樣的[使用者體驗][userexp]，其中 U2F 所規範的技術細節和使用情境是比較簡單的，也比較容易被部署到現存的系統。繼 2014 年的 [Google][googleu2f] 之後，在 2015 年中 [Dropbox][dropboxu2f] 與 [GitHub][githubu2f] 也陸續推出了新的兩步驟身份驗證的方法。他們實作的正是 FIDO U2F 這套標準：任何人只要有一支符合 U2F 標準的 security key 設備（例如 Yubico 所推出的[產品][yubikey]），就可以拿它在各個網站既便利又安全地登入。就算有多個網站、多個帳戶，也都只需要一把 security key 即可。
+
+註： FIDO 這個字的讀音，是 idol 的讀法前面加上一個 f 的唇音。（而不是 fiddle 那樣子）
+
+[members]: https://fidoalliance.org/membership/members/
+[userexp]: https://fidoalliance.org/specifications/overview/
+[googleu2f]: https://googleonlinesecurity.blogspot.tw/2014/10/strengthening-2-step-verification-with.html
+[dropboxu2f]: https://blogs.dropbox.com/dropbox/2015/08/u2f-security-keys/
+[githubu2f]: https://github.com/blog/2071-github-supports-universal-2nd-factor-authentication
+[yubikey]: https://www.yubico.com/products/yubikey-hardware/fido-u2f-security-key/</div>
+</div>
+</div>
+<div class="speaker-content" id="speaker-content">
+<h3>
+		吳忠憲
+		<span class="speaker-social">
+<a href="https://github.com/concise" target="_blank">
+<span aria-hidden="true" class="fa fa-github"></span>
+</a>
+<a href="https://www.facebook.com/concisense" target="_blank">
+<span aria-hidden="true" class="fa fa-facebook"></span>
+</a>
+</span>
+</h3>
+<div class="row">
+<div class="col-xs-12"><p>一位隨處可見的碼農。對密碼學、資訊安全、程式語言、軟體工程等主題有非常深的興趣。目前為臺灣大學快速密碼學實驗室的研究員。在去年的 HITCON 2015 閃電秀時埋下了一個和 U2F 相關的小伏筆，打算在今次 PyConTW 將這個 FIDO 推動的公開標準介紹給更多的人認識！</p>
+<p>如果有任何想要討論的相關議題，都歡迎寫電子郵件至 js (at) jong.sh 與我聯繫！</p></div>
+</div>
+</div>
+</div>
+<footer class="footer container-fluid text-center">
+<div class="row clearfix">
+<div class="col-md-2">2016 PyCon Taiwan</div>
+<div class="col-md-8 hidden-xs hidden-sm">
+<img class="logo" height="24" src="/2016/static/images/Logo_pycontw16_blue_footer@2x.png" width="133"/>
+</div>
+<div class="social col-md-2 text-center">
+<a class="social-btn" href="https://www.facebook.com/pycontw" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+</a>
+<a class="social-btn" href="https://twitter.com/pycontw" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+</a>
+<a class="social-btn" href="mailto:organizers@pycon.tw" target="_blank">
+<i class="fa fa-envelope"></i>
+</a>
+</div>
+</div>
+</footer>
+<script src="/2016/static/CACHE/js/6c8feda299eb.js" type="text/javascript"></script>
+<script src="/2016/static/js/vendors/simplemde.js"></script>
+<script src="/2016/static/js/tools/simplemde-setup.js"></script>
+</body>
+</html>

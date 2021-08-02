@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Crossing the Python 3 Rubicon | PyCon Taiwan 2018</title>
+<link href="/2018/static/pycontw-2018/assets/favicon.ico" rel="shortcut icon"/>
+<link href="/2018/static/pycontw-2018/assets/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/2018/static/pycontw-2018/assets/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<meta content="" property="og:description"/>
+<meta content="https://tw.pycon.org/2018/static/pycontw-2018/assets/og-image.png" property="og:image"/>
+<link href="https://fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400|Raleway:300,400" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
+<link href="/2018/static/CACHE/css/1a46698985d1.css" rel="stylesheet" type="text/css">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNZ39PD');</script>
+</link></head>
+<body class="talk-detail">
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-TNZ39PD" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<div data-controller="topNav">
+<nav class="top-navbar">
+<form  class="navbar-lang-switch" method="post">
+
+<input name="next" type="hidden" value="/2018/events/talk/596430941296001214/"/>
+<button name="language" type="submit" value="zh-hant">
+				<a href='/2018/zh-hant/events/talk/596430941296001214/' class="myclass">ZH</a>
+			</button>
+<button disabled="disabled" name="language" type="submit" value="en-us">
+				EN
+			</button>
+</form>
+<div class="navbar-centerbox">
+<a class="navbar-logo" href="/2018/en-us/"></a>
+</div>
+<button aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler no-script" data-action="topNav#toggle" data-target="topNav.toggler" type="button">
+<div><span></span><span></span><span></span></div>
+</button>
+<div class="navbar-social-desktop">
+<a aria-label="Blog" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+</nav>
+<nav class="menu-navbar-mobile no-script" data-target="topNav.menu">
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/2018/en-us/about/pycontw/">About</a>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-conference" type="checkbox"/>
+<label for="menu-navbar-mobile-conference">Conference</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/en-us/events/overview/">Overview</a></li>
+<li><a href="/2018/en-us/events/schedule/">Schedule</a></li>
+<li><a href="/2018/en-us/events/keynotes/">Keynotes</a></li>
+<li><a href="/2018/en-us/events/talks/">Talks</a></li>
+<li><a href="/2018/en-us/speaking/recording/">Recording</a></li>
+<li><a href="/2018/en-us/portal/">Portal</a></li>
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-events" type="checkbox"/>
+<label for="menu-navbar-mobile-events">Exchange</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/en-us/events/tutorials/">Learning</a></li>
+<li><a href="/2018/en-us/events/sprints/">Sprints</a></li>
+<li><a href="/2018/en-us/events/open-spaces/">Open Spaces</a></li>
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-registration" type="checkbox"/>
+<label for="menu-navbar-mobile-registration">Registration</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/en-us/registration/ticket-info/">Conference Ticket</a></li>
+<li><a href="/2018/en-us/registration/financial-aid/">Financial Aid</a></li>
+<li><a href="/2018/en-us/registration/registration/">Registration</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/2018/en-us/venue/">Venue</a>
+</li>
+<li>
+<a href="/2018/en-us/dashboard/">My PyCon</a>
+</li>
+</ul>
+<div class="navbar-social-mobile">
+<a aria-label="Blog" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+</nav>
+</div>
+<header class="page-hero">
+<nav class="menu-navbar-desktop">
+<a class="menu-logo" href="/2018/en-us/"></a>
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/2018/en-us/about/pycontw/">About</a>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-conference" type="checkbox"/>
+<label for="menu-navbar-desktop-conference">Conference</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/en-us/events/overview/">Overview</a></li>
+<li><a href="/2018/en-us/events/schedule/">Schedule</a></li>
+<li><a href="/2018/en-us/events/keynotes/">Keynotes</a></li>
+<li><a href="/2018/en-us/events/talks/">Talks</a></li>
+<li><a href="/2018/en-us/speaking/recording/">Recording</a></li>
+<li><a href="/2018/en-us/portal/">Portal</a></li>
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-events" type="checkbox"/>
+<label for="menu-navbar-desktop-events">Exchange</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/en-us/events/tutorials/">Learning</a></li>
+<li><a href="/2018/en-us/events/sprints/">Sprints</a></li>
+<li><a href="/2018/en-us/events/open-spaces/">Open Spaces</a></li>
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-registration" type="checkbox"/>
+<label for="menu-navbar-desktop-registration">Registration</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/en-us/registration/ticket-info/">Conference Ticket</a></li>
+<li><a href="/2018/en-us/registration/financial-aid/">Financial Aid</a></li>
+<li><a href="/2018/en-us/registration/registration/">Registration</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/2018/en-us/venue/">Venue</a>
+</li>
+<li>
+<a href="/2018/en-us/dashboard/">My PyCon</a>
+</li>
+</ul>
+</nav>
+</header>
+<main>
+<h1>Crossing the Python 3 Rubicon</h1>
+<section class="talk-content talk-info">
+<ul>
+<li>
+<dfn class="location">Location: </dfn>
+<span>R0</span>
+</li>
+<li>
+<dfn class="slot">Slot: </dfn>
+<span>Day 1, 10:45‑11:15</span>
+</li>
+<li>
+<dfn class="category">Category: </dfn>
+<span>Best Practices &amp; Patterns</span>
+</li>
+<li>
+<dfn class="language enen">Language: </dfn>
+<span>English talk</span>
+</li>
+<li>
+<dfn class="python-level intermediate">Python Level: </dfn>
+<span>Intermediate</span>
+</li>
+</ul>
+</section>
+<h2>Abstract</h2>
+<section class="talk-content">
+<p>The clock is ticking for Python 2, we are getting close to its sunset in 2020, and we need to embrace the better Python. Python 3 comes with lots of shiny and great features, but what can you and your team do if you are still stuck on Python 2? Crossing the Python 3 Rubicon is going to show you the answers to the three questions of every successful migration, the inseparables "why, what and how", with a strong emphasis on "how" to approach a successful migration. We're going to see best practices, tips and tricks, tools and examples on how we approached the migration to Python 3 at Zapier. Will you do it?</p>
+</section>
+<h2>Description</h2>
+<section class="talk-content editor-readonly">
+<div class="editor-preview">Targeted at engineers that want to make the switch to Python 3, but don't know exactly where to start. The talk will introduce best practices that were already used at various companies, and I'll emphasize the strategies that we use successfully at Zapier to move a big Python codebase to Python 3.
+
+I'll present how to approach the migration starting from two main questions, what needs to be changed and how to change the codebase to work on both versions, while the migration is ongoing.
+
+We'll see in action tools such as `pylint` that can be used for getting incompatibility warnings between the two versions, we'll see how running the tests with `python -bb` and `python -3` could also spot tricky differences, and we'll also see in action tools such as `python-futurize` and `modernize` for automating the boring parts of a migration.
+
+At the end of this talk, the key takeaways will be a guideline that anyone could enforce for their projects for making the switch to Python 3, starting from the boring parts of a migration to the subtle parts where the semantics of the two versions are different.</div>
+</section>
+<h2>Slides</h2>
+<section class="talk-content">
+<p><a href="https://www.slideshare.net/ClaudiuPopa10/pycon-taiwan-2018claudiupopa">https://www.slideshare.net/ClaudiuPopa10/pycon-taiwan-2018claudiupopa</a></p>
+</section>
+<h2>
+	
+	Speaker
+	
+</h2>
+<article class="media">
+<header>
+<figure>
+<img src="/2018/media/cache/cc/17/cc17cb93214efa492b977e48b6a050f3.jpg"/>
+<figcaption>Claudiu Popa</figcaption>
+</figure>
+</header>
+<div class="talk-content">
+<p>Being a software engineer by craft, but future novel writer by passion, Claudiu tries to balance these two pursuits of his life on a daily basis. When he doesn't try to finish a new chapter of his novel, he's getting busy with Pylint, the popular static analysis tool for Python, or dabbles himself in some machine learning project, hoping that some good results will come out of his efforts to improve<br/>the education with artificial intelligence.</p>
+<div class="social">
+<a href="https://github.com/PCManticore" rel="noopener" target="_blank"><span aria-hidden="true" class="fa fa-github"></span></a>
+<a href="https://twitter.com/PCManticore" rel="noopener" target="_blank"><span aria-hidden="true" class="fa fa-twitter"></span></a>
+</div>
+</div>
+</article>
+</main>
+<footer>
+<h2 class="footer-logo"></h2>
+<ul>
+<li><a href="/2018/en-us/about/code-of-conduct/">Code of Conduct</a></li>
+<li><a href="/2018/en-us/about/staff/">Staff</a></li>
+<li><a href="/2018/en-us/about/community/">Community</a></li>
+</ul>
+<p class="copyright">2018 PyCon Taiwan</p>
+</footer>
+<script src="/2018/static/CACHE/js/ce994d83f936.js" type="text/javascript"></script>
+<script src="/2018/static/js/vendors/simplemde.min.js"></script>
+<script src="/2018/static/js/tools/simplemde-setup.js"></script>
+</body>
+</html>
+<style>.myclass{text-decoration: none;color: rgba(255, 255, 255, 0.35);}.myclass:hover{text-decoration: none;color: rgba(255, 255, 255, 0.7);}</style>

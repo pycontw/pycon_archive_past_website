@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>用 Python 打造機器學習股票交易訊號 | PyCon Taiwan 2020</title>
+<link href="/2020/static/pycontw-2020/assets/favicon/favicon.ico" rel="shortcut icon"/>
+<link href="/2020/static/pycontw-2020/assets/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/2020/static/pycontw-2020/assets/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/2020/static/pycontw-2020/assets/favicon/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="" property="og:description"/>
+<meta content="https://tw.pycon.org/2020/static/pycontw-2020/assets/og-image.png" property="og:image"/>
+<link href="https://fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,600,700|Raleway:300,400|Philosopher|Quicksand&amp;display=swap" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
+<link href="/2020/static/CACHE/css/output.40e16f90c8a1.css" rel="stylesheet" type="text/css"/>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNZ39PD');</script>
+</head>
+<body class="talk-detail">
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-TNZ39PD" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<div data-controller="topNav">
+<nav class="top-navbar">
+<div class="navbar-left">
+<form  class="navbar-lang-switch" method="post">
+
+<input name="next" type="hidden" value="/2020/conference/talk/1125925169781539142/"/>
+<button disabled="disabled" name="language" type="submit" value="zh-hant">
+                    ZH
+                </button>
+<button name="language" type="submit" value="en-us">
+                    <a href='/2020/en-us/conference/talk/1125925169781539142/' style="text-decoration: none;">EN</a>
+                </button>
+</form>
+<a href="/2020/zh-hant/"><i class="twicon-provintia navbar-provintia"></i></a>
+<a class="navbar-brand" href="/2020/zh-hant/">PyCon TW20</a>
+</div>
+<button aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler no-script" data-action="topNav#toggle" data-target="topNav.toggler" type="button">
+<div><span></span><span></span><span></span></div>
+</button>
+<div class="navbar-social-desktop">
+<a aria-label="部落格" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+</nav>
+<nav class="menu-navbar-mobile no-script" data-target="topNav.menu">
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/2020/zh-hant/about/pycontw/">
+			關於
+		</a>
+</li>
+<!-- -->
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-conference" type="checkbox"/>
+<label class="active" for="menu-navbar-mobile-conference">
+			議程
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/zh-hant/conference/schedule/">時間表</a></li>
+<li><a href="/2020/zh-hant/conference/keynotes/">基調演講</a></li>
+<li><a href="/2020/zh-hant/conference/talks/">一般演講</a></li>
+<li><a href="/2020/zh-hant/conference/tutorials/">專業課程</a></li>
+<li><a href="/2020/zh-hant/conference/community-track/">社群軌</a></li>
+<!--<li><a href="/2020/zh-hant/speaking/recording/">錄影</a></li>-->
+<!-- <li><a href="/2020/zh-hant/portal/">傳送門</a></li> -->
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-events" type="checkbox"/>
+<label for="menu-navbar-mobile-events">
+			活動
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/zh-hant/events/overview/">總覽</a></li>
+<li><a href="/2020/zh-hant/events/warmup-session/">暖身活動</a></li>
+<li><a href="/2020/zh-hant/events/open-spaces/">開放空間</a></li>
+<li><a href="/2020/zh-hant/events/sprints/">衝刺開發</a></li>
+<li><a href="/2020/zh-hant/events/job-listings/">徵才資訊</a></li>
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-registration" type="checkbox"/>
+<label for="menu-navbar-mobile-registration">
+			註冊
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/zh-hant/registration/ticket-info/">會議門票</a></li>
+<li><a href="/2020/zh-hant/registration/financial-aid/">財務補助</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/2020/zh-hant/venue/">
+			會場
+		</a>
+</li>
+<li>
+<a href="/2020/zh-hant/covid-19/guidelines/">
+			COVID-19 防疫守則
+		</a>
+</li>
+<li class="dashboard-item">
+<a href="/2020/zh-hant/dashboard/">My PyCon</a>
+</li>
+</ul>
+<div class="navbar-social-mobile">
+<a aria-label="部落格" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+<div class="shadow">
+<i class="twicon-provintia"></i>
+</div>
+</nav>
+</div>
+<header class="page-hero">
+<nav class="menu-navbar-desktop">
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/2020/zh-hant/about/pycontw/">
+			關於
+		</a>
+</li>
+<!-- -->
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-conference" type="checkbox"/>
+<label class="active" for="menu-navbar-desktop-conference">
+			議程
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/zh-hant/conference/schedule/">時間表</a></li>
+<li><a href="/2020/zh-hant/conference/keynotes/">基調演講</a></li>
+<li><a href="/2020/zh-hant/conference/talks/">一般演講</a></li>
+<li><a href="/2020/zh-hant/conference/tutorials/">專業課程</a></li>
+<li><a href="/2020/zh-hant/conference/community-track/">社群軌</a></li>
+<!--<li><a href="/2020/zh-hant/speaking/recording/">錄影</a></li>-->
+<!-- <li><a href="/2020/zh-hant/portal/">傳送門</a></li> -->
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-events" type="checkbox"/>
+<label for="menu-navbar-desktop-events">
+			活動
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/zh-hant/events/overview/">總覽</a></li>
+<li><a href="/2020/zh-hant/events/warmup-session/">暖身活動</a></li>
+<li><a href="/2020/zh-hant/events/open-spaces/">開放空間</a></li>
+<li><a href="/2020/zh-hant/events/sprints/">衝刺開發</a></li>
+<li><a href="/2020/zh-hant/events/job-listings/">徵才資訊</a></li>
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-registration" type="checkbox"/>
+<label for="menu-navbar-desktop-registration">
+			註冊
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/zh-hant/registration/ticket-info/">會議門票</a></li>
+<li><a href="/2020/zh-hant/registration/financial-aid/">財務補助</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/2020/zh-hant/venue/">
+			會場
+		</a>
+</li>
+<li>
+<a href="/2020/zh-hant/covid-19/guidelines/">
+			COVID-19 防疫守則
+		</a>
+</li>
+<li class="dashboard-item">
+<a href="/2020/zh-hant/dashboard/">My PyCon</a>
+</li>
+</ul>
+</nav>
+</header>
+<main>
+<section class="pill-title alt-2">
+<h1>
+<i class="icon icon-about"></i>用 Python 打造機器學習股票交易訊號 
+		
+	</h1>
+</section>
+<section class="content info">
+<ul>
+<li>
+<dfn class="location"></dfn>
+<span><a href="/2020/zh-hant/conference/community-track/#finance">藏風藝文空間</a></span>
+</li>
+<li>
+<dfn class="slot"></dfn>
+<span>第 2 天，14:30‑15:00</span>
+</li>
+<li>
+<dfn class="category">主題分類：</dfn>
+<span>金融科技</span>
+</li>
+<li>
+<dfn class="language zhen">語言：</dfn>
+<span>中文演講/英文投影片</span>
+</li>
+<li>
+<dfn class="python-level intermediate">Python 難易度：</dfn>
+<span>中階</span>
+</li>
+</ul>
+</section>
+<h2>摘要</h2>
+<section class="content">
+<p>交易領域的人工智慧應用，通常是通過機器學習(ML)來實現。機器學習利用神經網路或其他學習方法鑑別、分析、預測特徵或者因子，這些特徵、因子具有經濟價值，可用於構建盈利交易策略。儘管以人工智慧為基礎的策略應用日漸廣泛，但建構出一個可以使用的機器學習策略仍然是個巨大的挑戰，本演講將帶大家瞭解有哪些方法，可以增進機器學習的學習能力，進而應用於量化交易之中，也會有範例原始碼讓大家可以拿回去研究。</p>
+</section>
+<h2>說明</h2>
+<section class="content editor-readonly">
+<div class="editor-preview">### 使用的第三方工具
+pandas
+keras
+sklearn
+
+### 演講附帶的相關連結
+程式碼：
+https://colab.research.google.com/drive/1_l-7Cdx_xG0Fja-0L4H7Dgl0QAQzhmvs
+簡報：
+https://www.finlab.tw/slide_mopcon.pdf</div>
+</section>
+<h2>投影片</h2>
+<section class="content">
+<p><a href="https://www.finlab.tw/wp-content/uploads/2020/09/slide_mopcon.pdf">https://www.finlab.tw/wp-content/uploads/2020/09/slide_mopcon.pdf</a></p>
+</section>
+<h2>
+	
+	講者
+	
+</h2>
+<article class="media">
+<header>
+<figure>
+<img src="/2020/media/cache/e5/18/e51856322b0d65271b390640136ace27.jpg"/>
+<figcaption>韓承佑</figcaption>
+</figure>
+</header>
+<div class="content">
+<p>嗨大家好，我是韓承佑，FinLab創辦人，畢業於巴黎第十一大學資工博士，目前擔任臺灣量化交易協會 學術顧問、台北商業大學 創新育成中心 創業技術顧問與上市科技公司 量化交易顧問。當初，我喜歡寫程式、無意間因為軟體比賽接觸Fintech，從此開始了財經跟程式的學習之路。我們成立 FinLab 量化投資部落格，用自己研發的軟體，對台灣股市做大量快速的實驗。希望可以在量化投資的路上，當大家的「武器製造商」！</p>
+<p>學經歷：<br/>量化交易協會 學術顧問<br/>台北商業大學 創新育成中心 創業技術顧問<br/>法國巴黎南區大學資工所 博士<br/>台灣大學電子所 碩士<br/>中央大學電機系 學士</p>
+<p>獲獎經歷：<br/>中國信託 Fintech 黑客松 第一名<br/>台大黑客松 2016 Fintech 組 第一名<br/>台大黑客松 2015 最佳人氣獎 第二名<br/>2013 電子書創作大賽 第一名<br/>2013 IC 自動化輔助設計 國內組 第二名</p>
+</div>
+</article>
+<iframe class="slido" src="https://app.sli.do/event/jnphkozn"></iframe>
+</main>
+<footer>
+<div class="footer-logos">
+<div class="footer-logo"></div>
+</div>
+<ul>
+<li><a href="/2020/zh-hant/about/code-of-conduct/">行為準則</a></li>
+<li><a href="/2020/zh-hant/about/staff/">工作人員</a></li>
+<li><a href="/2020/zh-hant/about/community/">社群</a></li>
+<li><a href="/2020/zh-hant/about/privacy_policy/">個人資料保護聲明</a></li>
+</ul>
+<p class="copyright">2020 PyCon Taiwan</p>
+</footer>
+<script src="/2020/static/CACHE/js/output.378e60111296.js"></script>
+<script src="/2020/static/js/vendors/simplemde.min.js"></script>
+<script src="/2020/static/js/tools/simplemde-setup.js"></script>
+</body>
+</html>

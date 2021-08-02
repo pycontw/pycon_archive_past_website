@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>      <html lang="zh-hant" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="zh-hant" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="zh-hant" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hant"> <!--<![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="/2016/static/images/favicon_pyconTW_32x32.png" rel="icon" type="image/png"/>
+<meta content="" property="og:description"/>
+<meta content="http://tw.pycon.org/2016/static/images/PyConTW2016_facebook_shareImage.png" property="og:image"/>
+<link href="/2016/static/CACHE/css/40914c7a23b1.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css"/>
+<link href="https://fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet" type="text/css"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+<!--[if lt IE 9]>
+  <script src="/2016/static/js/html5shiv.min.js"></script>
+  <script src="/2016/static/js/respond.min.js"></script>
+  <![endif]-->
+<!-- justfont webfont -->
+<!-- <script src="/2016/static/js/vendors/justfont.js"></script> -->
+<title>Geo processing with Python: How to convert, clean, aggregate and compress your geo-data for web | PyCon Taiwan 2016</title>
+</link></head>
+<body class="">
+<nav class="navbar navbar-default navbar-fe navbar-site">
+<div class="clearfix container-fluid">
+<div class="navbar-header">
+<button class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button">
+<span class="sr-only">展開導覽列</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="/2016/zh-hant/">
+<img alt="logo" class="logo hidden-xs" height="24" src="/2016/static/images/logo-tiny--reverse@2x.png" width="133"/>
+<img alt="logo" class="logo visible-xs-inline" height="30" src="/2016/static/images/LogoIcon_white@2x.png" width="42"/>
+</a>
+</div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="navbar">
+<ul class="nav navbar-nav navbar-nav-hover">
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">關於</a>
+<ul class="dropdown-menu">
+<li><a href="/2016/zh-hant/about/pycontw/">PyCon TW</a></li>
+<li><a href="/2016/zh-hant/about/code-of-conduct/">行為準則</a></li>
+<li><a href="/2016/zh-hant/about/staff/">工作人員</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="active dropdown-toggle" data-toggle="dropdown" href="#" role="button">活動</a>
+<ul class="dropdown-menu">
+<li><a href="/2016/zh-hant/events/overview/">總覽</a></li>
+<li><a href="/2016/zh-hant/events/schedule/">Schedule</a></li>
+<li><a href="/2016/zh-hant/events/keynotes/">主題演講</a></li>
+<li><a href="/2016/zh-hant/events/talks/">演講</a></li>
+<li><a href="/2016/zh-hant/events/sprints/">Sprints</a></li>
+<li><a href="/2016/zh-hant/events/bof/">BoF</a></li>
+<li><a href="/2016/zh-hant/events/pyday/">PyDay</a></li>
+<li><a href="/2016/zh-hant/events/tutorials/">教學</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">會場</a>
+<ul class="dropdown-menu">
+<li><a href="/2016/zh-hant/venue/">會場</a></li>
+<li><a href="/2016/zh-hant/venue/accommodation/">住宿</a></li>
+</ul>
+</li><!-- /.dropdown -->
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">贊助</a>
+<ul class="dropdown-menu">
+<li><a href="/2016/zh-hant/sponsors/">贊助夥伴</a></li>
+<li><a href="http://pycontw.kktix.cc/events/pycontw2016patron" target="_blank">個人贊助</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">註冊</a>
+<ul class="dropdown-menu">
+<li><a href="/2016/zh-hant/registration/ticket-info/">售票資訊</a></li>
+<li><a href="/2016/zh-hant/registration/financial-aid/">財務補助</a></li>
+</ul>
+</li><!-- /.dropdown -->
+<li><a href="http://pycontw.blogspot.tw/" target="_blank">部落格</a></li>
+<li><a href="/2016/zh-hant/dashboard/" target="_blank"><span class="em">控制面板</span></a></li>
+</ul>
+<div class="social pull-right">
+<a class="social-btn" href="https://www.facebook.com/pycontw" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+</a>
+<a class="social-btn" href="https://twitter.com/pycontw" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+</a>
+<a class="social-btn" href="mailto:organizers@pycon.tw" target="_blank">
+<i class="fa fa-envelope"></i>
+</a>
+</div>
+<ul class="nav navbar-nav navbar-lang navbar-right">
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn" data-toggle="dropdown" href="#" role="button"> 繁體中文
+               <span class="caret"></span>
+</a>
+<ul class="dropdown-menu">
+<li class="active">
+<a data-lang="zh-hant" href="/2016/zh-hant/events/talk/69816036404232254/">
+                  繁體中文
+                </a>
+</li>
+<li>
+<a data-lang="en-us" href="/2016/en-us/events/talk/69816036404232254/">
+                  English (US)
+                </a>
+</li>
+</ul>
+</li>
+</ul>
+<!-- Fallback version of form selection -->
+<form  class="navbar-form navbar-right navbar-lang" method="post">
+
+<input name="next" type="hidden" value="/2016/events/talk/69816036404232254/"/>
+<select class="form-control input-sm" id="language-select" name="language">
+<option selected="" value="zh-hant">
+                        繁體中文
+                    </option>
+<option value="en-us">
+                        English (US)
+                    </option>
+</select>
+<noscript>
+<button class="btn" type="submit">修改</button>
+</noscript>
+</form>
+</div>
+</div>
+<!-- /.navbar-collapse -->
+
+<!-- /.container-fluid -->
+</nav>
+<div class="content-page-title">
+<div class="content-container container">
+<h1>Geo processing with Python: How to convert, clean, aggregate and compress your geo-data for web</h1>
+</div>
+</div>
+<div class="content-container container content-page-content talk-detail-content">
+<div class="proposal-content">
+<h3>語言</h3>
+<div>英文演講</div>
+<h3>分類</h3>
+<div>資料分析</div>
+<h3>Python 難易度</h3>
+<div>中階</div>
+<h2>摘要</h2>
+<div><p>How to start transforming my shapefiles? What geo formats should I use for web? How to design geo data processing pipeline? What are geojson, topojson, epsg or shapefiles? Join us for this talk and you'll walk away with a better understanding of Geo Processing with Python. We will go through the design process for map-visualization web app from the geo data processing point of view. Starting with the entire design process for the data pipeline including software architecture, used technologies, automation, mapping the data to the geo-data and optimizing the maps for the web. You will have concrete examples on how this approach was applied in a project for the World Bank. You should walk away with the tools and skills to design and implement a geo data pipeline for their own project.</p></div>
+<h2>說明</h2>
+<div class="editor-readonly">
+<div class="editor-preview">To give a bit better understanding on the approach that is explained in the presentation here is the high level data workflow for geo data processing pipeline:
+ - read source geo files (ESRI shapefile for example)
+ - read the data from another source (csv or api for example)
+ - combine the geo files with the data using some mapping field (country ISO-3 id for example)
+ - compress and optimize the shapefiles (drop amount of datafiles)
+ - convert to web-friendly format (topojson is often recommended)
+ - expose the resulting files to frontend and consume them in JavaScript
+ 
+Many people use GIS solutions (QGIS for example) to manually do this, but this this talk presents a purely programmatic and flexible approach that can be easily automated.</div>
+</div>
+</div>
+<div class="speaker-content" id="speaker-content">
+<h3>
+		Juha Suomalainen
+		<span class="speaker-social">
+<a href="https://github.com/JuhaS" target="_blank">
+<span aria-hidden="true" class="fa fa-github"></span>
+</a>
+<a href="https://twitter.com/JuhaFinn" target="_blank">
+<span aria-hidden="true" class="fa fa-twitter"></span>
+</a>
+</span>
+</h3>
+<div class="row">
+<div class="col-sm-4 col-sm-push-8 speaker-photo-contain">
+<img class="speaker-photo" src="/2016/media/avatars/69809186258550867/2016-03-08-f04c33816f3571d5decdca2563ea3a64_1.jpeg"/>
+</div>
+<div class="col-sm-8 col-sm-pull-4"><p>Originally from Finland, but currently living in Shanghai. I have a degree in telecommunications engineering and have experience on multiple areas including Data Portals, DevOps and Telecommunications. </p>
+<p>I work as a Software Engineering Director at Wiredcraft. I balance my time between the roles of software architect, tech lead and programmer. My strength is Python but I am used to working in multilanguage systems. I am also the lead engineer for devo.ps (http://devo.ps). </p>
+<p>Programming has been part of my life since young age. In my free time I like to play sports (any sport!) and learn new technologies. I also like attending and presenting in the local engineering meetups.</p></div>
+</div>
+</div>
+</div>
+<footer class="footer container-fluid text-center">
+<div class="row clearfix">
+<div class="col-md-2">2016 PyCon Taiwan</div>
+<div class="col-md-8 hidden-xs hidden-sm">
+<img class="logo" height="24" src="/2016/static/images/Logo_pycontw16_blue_footer@2x.png" width="133"/>
+</div>
+<div class="social col-md-2 text-center">
+<a class="social-btn" href="https://www.facebook.com/pycontw" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+</a>
+<a class="social-btn" href="https://twitter.com/pycontw" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+</a>
+<a class="social-btn" href="mailto:organizers@pycon.tw" target="_blank">
+<i class="fa fa-envelope"></i>
+</a>
+</div>
+</div>
+</footer>
+<script src="/2016/static/CACHE/js/6c8feda299eb.js" type="text/javascript"></script>
+<script src="/2016/static/js/vendors/simplemde.js"></script>
+<script src="/2016/static/js/tools/simplemde-setup.js"></script>
+</body>
+</html>

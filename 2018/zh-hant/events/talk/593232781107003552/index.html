@@ -1,0 +1,315 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>維基教我做的金頭腦：知識圖譜製作初體驗 | PyCon Taiwan 2018</title>
+<link href="/2018/static/pycontw-2018/assets/favicon.ico" rel="shortcut icon"/>
+<link href="/2018/static/pycontw-2018/assets/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/2018/static/pycontw-2018/assets/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<meta content="" property="og:description"/>
+<meta content="https://tw.pycon.org/2018/static/pycontw-2018/assets/og-image.png" property="og:image"/>
+<link href="https://fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400|Raleway:300,400" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
+<link href="/2018/static/CACHE/css/1a46698985d1.css" rel="stylesheet" type="text/css">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNZ39PD');</script>
+</link></head>
+<body class="talk-detail">
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-TNZ39PD" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<div data-controller="topNav">
+<nav class="top-navbar">
+<form  class="navbar-lang-switch" method="post">
+
+<input name="next" type="hidden" value="/2018/events/talk/593232781107003552/"/>
+<button disabled="disabled" name="language" type="submit" value="zh-hant">
+				ZH
+			</button>
+<button name="language" type="submit" value="en-us">
+				<a href='/2018/en-us/events/talk/593232781107003552/' class="myclass">EN</a>
+			</button>
+</form>
+<div class="navbar-centerbox">
+<a class="navbar-logo" href="/2018/zh-hant/"></a>
+</div>
+<button aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler no-script" data-action="topNav#toggle" data-target="topNav.toggler" type="button">
+<div><span></span><span></span><span></span></div>
+</button>
+<div class="navbar-social-desktop">
+<a aria-label="部落格" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+</nav>
+<nav class="menu-navbar-mobile no-script" data-target="topNav.menu">
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/2018/zh-hant/about/pycontw/">關於</a>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-conference" type="checkbox"/>
+<label for="menu-navbar-mobile-conference">議程</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/zh-hant/events/overview/">總覽</a></li>
+<li><a href="/2018/zh-hant/events/schedule/">時間表</a></li>
+<li><a href="/2018/zh-hant/events/keynotes/">基調演講</a></li>
+<li><a href="/2018/zh-hant/events/talks/">一般演講</a></li>
+<li><a href="/2018/zh-hant/speaking/recording/">錄影</a></li>
+<li><a href="/2018/zh-hant/portal/">傳送門</a></li>
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-events" type="checkbox"/>
+<label for="menu-navbar-mobile-events">交流</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/zh-hant/events/tutorials/">學習</a></li>
+<li><a href="/2018/zh-hant/events/sprints/">衝刺開發</a></li>
+<li><a href="/2018/zh-hant/events/open-spaces/">開放空間</a></li>
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-registration" type="checkbox"/>
+<label for="menu-navbar-mobile-registration">註冊</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/zh-hant/registration/ticket-info/">會議門票</a></li>
+<li><a href="/2018/zh-hant/registration/financial-aid/">財務補助</a></li>
+<li><a href="/2018/zh-hant/registration/registration/">報到</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/2018/zh-hant/venue/">會場</a>
+</li>
+<li>
+<a href="/2018/zh-hant/dashboard/">My PyCon</a>
+</li>
+</ul>
+<div class="navbar-social-mobile">
+<a aria-label="部落格" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+</nav>
+</div>
+<header class="page-hero">
+<nav class="menu-navbar-desktop">
+<a class="menu-logo" href="/2018/zh-hant/"></a>
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/2018/zh-hant/about/pycontw/">關於</a>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-conference" type="checkbox"/>
+<label for="menu-navbar-desktop-conference">議程</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/zh-hant/events/overview/">總覽</a></li>
+<li><a href="/2018/zh-hant/events/schedule/">時間表</a></li>
+<li><a href="/2018/zh-hant/events/keynotes/">基調演講</a></li>
+<li><a href="/2018/zh-hant/events/talks/">一般演講</a></li>
+<li><a href="/2018/zh-hant/speaking/recording/">錄影</a></li>
+<li><a href="/2018/zh-hant/portal/">傳送門</a></li>
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-events" type="checkbox"/>
+<label for="menu-navbar-desktop-events">交流</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/zh-hant/events/tutorials/">學習</a></li>
+<li><a href="/2018/zh-hant/events/sprints/">衝刺開發</a></li>
+<li><a href="/2018/zh-hant/events/open-spaces/">開放空間</a></li>
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-registration" type="checkbox"/>
+<label for="menu-navbar-desktop-registration">註冊</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/zh-hant/registration/ticket-info/">會議門票</a></li>
+<li><a href="/2018/zh-hant/registration/financial-aid/">財務補助</a></li>
+<li><a href="/2018/zh-hant/registration/registration/">報到</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/2018/zh-hant/venue/">會場</a>
+</li>
+<li>
+<a href="/2018/zh-hant/dashboard/">My PyCon</a>
+</li>
+</ul>
+</nav>
+</header>
+<main>
+<h1>維基教我做的金頭腦：知識圖譜製作初體驗</h1>
+<section class="talk-content talk-info">
+<ul>
+<li>
+<dfn class="location">地點：</dfn>
+<span>R0</span>
+</li>
+<li>
+<dfn class="slot">時段：</dfn>
+<span>第 2 天，10:35‑11:05</span>
+</li>
+<li>
+<dfn class="category">主題分類：</dfn>
+<span>資料分析</span>
+</li>
+<li>
+<dfn class="language zhen">語言：</dfn>
+<span>中文演講/英文投影片</span>
+</li>
+<li>
+<dfn class="python-level intermediate">Python 難易度：</dfn>
+<span>中階</span>
+</li>
+</ul>
+</section>
+<h2>摘要</h2>
+<section class="talk-content">
+<p>【百萬小學堂】、【金頭腦】這類的益智節目，在台灣也風靡一時。  <br/>而電腦是否能在節目上超越人腦，也一直是人們茶餘飯後討論的話題。  <br/>在 2011 年的益智問答節目 Jeopardy中，IBM 的華生電腦（Watson）擊敗兩位世界紀錄保持人並贏得 100 萬美元，造成不小轟動。本次talk，將介紹如何自製一個答題機器人。</p>
+<p>目前，電腦對於自然語言的理解依然有限，舉例來說:要讓電腦知道『蘋果』是什麼?就是個困難的問題。  <br/>因為蘋果在一句話中可能是指水果、手機或是喜歡的人(流行音樂中的小蘋果)。為了克服這個難題，文字探勘(text mining)中有個子領域叫做知識圖譜(Ontoloty)，目的就是希望將人類所有的知識以及規則儲存成結構化的資料。  <br/>如此，在解析文字時，就會知道蘋果是水果or電腦、知道周杰倫是歌手。對益智節目、聊天機器人等應用都會產生莫大的助益。</p>
+<p>本talk將會介紹知識圖譜的應用、目前的做法與瓶頸、如何使用Wikipedia自動建立支援各國語言的知識圖譜，最後Demo一下答題機器人的智商到底行不行。</p>
+</section>
+<h2>說明</h2>
+<section class="talk-content editor-readonly">
+<div class="editor-preview"># 文字探勘的應用
+-------------------------------
+
+過去大家最熟悉的，是像臉書那樣  蒐集使用者平常看得、點擊的文字等資訊
+
+去推論使用者意圖 (User Intension)
+
+用於推薦廣告或其他服務來增加黏著度去獲利
+
+而近年來因為deep learning的突破，`智能助理`變成當紅的議題
+
+機器人能當秘書、看病、答題等等
+
+都是當今熱門的應用
+
+# 知識圖譜
+-------------------------------
+什麼是知識圖譜呢?
+
+就是用結構化的資料
+
+來儲存下面的關係圖
+
+1. 例子1:![知識圖譜img](https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Semantic_Net-zh_cn.svg/640px-Semantic_Net-zh_cn.svg.png)
+2. 例子2:![知識圖譜img](http://www.cognitum.eu/semantics/examples/img/it_infra_04.png)
+
+
+一個知識圖譜應該要包含:
+1. relation 例如:周杰倫 `IS-A` 歌手
+2. axiom 例如:`魚住在水裡`，這類的規則
+
+目前最成熟的應用為`IS-A`的關係
+
+例如:
+1. 周杰倫 `IS-A` 歌手
+2. PyCon `IS-A` 研討會
+
+而要從文本中提取出`魚住在水裡`這類的規則(axiom)
+
+就困難重重
+
+目前都需要人工的輔助
+
+我土炮的知識圖譜也只能做到`IS-A`關係
+
+背後的原理是下面介紹的`Word2Vec`
+
+# 什麼是Word2Vec
+-------------------------------
+
+&gt; 懶人包 &lt;https://www.jianshu.com/p/f58c08ae44a6&gt;
+
+以前沒辦法用向量表示文字的時候
+
+很多就只能用字串比對去進行
+
+造成很大的限制
+
+google研究員`Tomas Mikolov `的演算法`Word2Vec`
+
+能把文字轉成向量後 (他不是第一個，但是目前最好之一，以前的向量都很爛...)
+
+很多基於向量的演算法有都能套用的文字上了
+
+讓Text Mining這個領域有大幅度的進展
+
+
+# Word2Vec的視覺效果
+-------------------------------
+
+1. ![word2vec2](https://raw.githubusercontent.com/aubry74/visual-word2vec/master/figure_1.png)
+這是透過Word2Vec把文字轉成向量後
+可以看到他把`電腦、linux、screen`放在向量空間的附近
+效果非常準確
+
+2. ![word2vec](https://upload-images.jianshu.io/upload_images/6067427-454541be49930556.png?imageMogr2/auto-orient/strip|imageView2/2/w/700)
+而這張圖透過向量減法
+可以推論出`man - woman`的向量
+近似於`king - queen`的向量
+都是`男生到女生`的向量</div>
+</section>
+<h2>Slides</h2>
+<section class="talk-content">
+<p><a href="https://docs.google.com/presentation/d/1ZNtpuWycubxKaz9oskyFemmlqFaNW6cYiIW7Ig0dk_0/edit?usp=sharing">https://docs.google.com/presentation/d/1ZNtpuWycubxKaz9oskyFemmlqFaNW6cYiIW7Ig0dk_0/edit?usp=sharing</a></p>
+</section>
+<h2>
+	
+	講者
+	
+</h2>
+<article class="media">
+<header>
+<figure>
+<img src="/2018/media/cache/56/9c/569ca8163bc332cc140b977fd4667e17.jpg"/>
+<figcaption>張泰瑋</figcaption>
+</figure>
+</header>
+<div class="talk-content">
+<p>中興資工四，即將加入Dcard的新鮮人 請多指教~</p>
+<div class="social">
+<a href="https://github.com/david30907d" rel="noopener" target="_blank"><span aria-hidden="true" class="fa fa-github"></span></a>
+<a href="https://www.facebook.com/davidtnfsh" rel="noopener" target="_blank"><span aria-hidden="true" class="fa fa-facebook"></span></a>
+</div>
+</div>
+</article>
+</main>
+<footer>
+<h2 class="footer-logo"></h2>
+<ul>
+<li><a href="/2018/zh-hant/about/code-of-conduct/">行為準則</a></li>
+<li><a href="/2018/zh-hant/about/staff/">工作人員</a></li>
+<li><a href="/2018/zh-hant/about/community/">社群</a></li>
+</ul>
+<p class="copyright">2018 PyCon Taiwan</p>
+</footer>
+<script src="/2018/static/CACHE/js/ce994d83f936.js" type="text/javascript"></script>
+<script src="/2018/static/js/vendors/simplemde.min.js"></script>
+<script src="/2018/static/js/tools/simplemde-setup.js"></script>
+</body>
+</html>
+<style>.myclass{text-decoration: none;color: rgba(255, 255, 255, 0.35);}.myclass:hover{text-decoration: none;color: rgba(255, 255, 255, 0.7);}</style>

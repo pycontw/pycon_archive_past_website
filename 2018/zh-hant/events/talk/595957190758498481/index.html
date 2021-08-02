@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>初學者聯盟 The Beginners: 超級英雄也是從初心者練起 | PyCon Taiwan 2018</title>
+<link href="/2018/static/pycontw-2018/assets/favicon.ico" rel="shortcut icon"/>
+<link href="/2018/static/pycontw-2018/assets/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/2018/static/pycontw-2018/assets/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<meta content="" property="og:description"/>
+<meta content="https://tw.pycon.org/2018/static/pycontw-2018/assets/og-image.png" property="og:image"/>
+<link href="https://fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400|Raleway:300,400" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
+<link href="/2018/static/CACHE/css/1a46698985d1.css" rel="stylesheet" type="text/css">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNZ39PD');</script>
+</link></head>
+<body class="talk-detail">
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-TNZ39PD" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<div data-controller="topNav">
+<nav class="top-navbar">
+<form  class="navbar-lang-switch" method="post">
+
+<input name="next" type="hidden" value="/2018/events/talk/595957190758498481/"/>
+<button disabled="disabled" name="language" type="submit" value="zh-hant">
+				ZH
+			</button>
+<button name="language" type="submit" value="en-us">
+				<a href='/2018/en-us/events/talk/595957190758498481/' class="myclass">EN</a>
+			</button>
+</form>
+<div class="navbar-centerbox">
+<a class="navbar-logo" href="/2018/zh-hant/"></a>
+</div>
+<button aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler no-script" data-action="topNav#toggle" data-target="topNav.toggler" type="button">
+<div><span></span><span></span><span></span></div>
+</button>
+<div class="navbar-social-desktop">
+<a aria-label="部落格" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+</nav>
+<nav class="menu-navbar-mobile no-script" data-target="topNav.menu">
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/2018/zh-hant/about/pycontw/">關於</a>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-conference" type="checkbox"/>
+<label for="menu-navbar-mobile-conference">議程</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/zh-hant/events/overview/">總覽</a></li>
+<li><a href="/2018/zh-hant/events/schedule/">時間表</a></li>
+<li><a href="/2018/zh-hant/events/keynotes/">基調演講</a></li>
+<li><a href="/2018/zh-hant/events/talks/">一般演講</a></li>
+<li><a href="/2018/zh-hant/speaking/recording/">錄影</a></li>
+<li><a href="/2018/zh-hant/portal/">傳送門</a></li>
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-events" type="checkbox"/>
+<label for="menu-navbar-mobile-events">交流</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/zh-hant/events/tutorials/">學習</a></li>
+<li><a href="/2018/zh-hant/events/sprints/">衝刺開發</a></li>
+<li><a href="/2018/zh-hant/events/open-spaces/">開放空間</a></li>
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-registration" type="checkbox"/>
+<label for="menu-navbar-mobile-registration">註冊</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/zh-hant/registration/ticket-info/">會議門票</a></li>
+<li><a href="/2018/zh-hant/registration/financial-aid/">財務補助</a></li>
+<li><a href="/2018/zh-hant/registration/registration/">報到</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/2018/zh-hant/venue/">會場</a>
+</li>
+<li>
+<a href="/2018/zh-hant/dashboard/">My PyCon</a>
+</li>
+</ul>
+<div class="navbar-social-mobile">
+<a aria-label="部落格" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+</nav>
+</div>
+<header class="page-hero">
+<nav class="menu-navbar-desktop">
+<a class="menu-logo" href="/2018/zh-hant/"></a>
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/2018/zh-hant/about/pycontw/">關於</a>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-conference" type="checkbox"/>
+<label for="menu-navbar-desktop-conference">議程</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/zh-hant/events/overview/">總覽</a></li>
+<li><a href="/2018/zh-hant/events/schedule/">時間表</a></li>
+<li><a href="/2018/zh-hant/events/keynotes/">基調演講</a></li>
+<li><a href="/2018/zh-hant/events/talks/">一般演講</a></li>
+<li><a href="/2018/zh-hant/speaking/recording/">錄影</a></li>
+<li><a href="/2018/zh-hant/portal/">傳送門</a></li>
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-events" type="checkbox"/>
+<label for="menu-navbar-desktop-events">交流</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/zh-hant/events/tutorials/">學習</a></li>
+<li><a href="/2018/zh-hant/events/sprints/">衝刺開發</a></li>
+<li><a href="/2018/zh-hant/events/open-spaces/">開放空間</a></li>
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-registration" type="checkbox"/>
+<label for="menu-navbar-desktop-registration">註冊</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/zh-hant/registration/ticket-info/">會議門票</a></li>
+<li><a href="/2018/zh-hant/registration/financial-aid/">財務補助</a></li>
+<li><a href="/2018/zh-hant/registration/registration/">報到</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/2018/zh-hant/venue/">會場</a>
+</li>
+<li>
+<a href="/2018/zh-hant/dashboard/">My PyCon</a>
+</li>
+</ul>
+</nav>
+</header>
+<main>
+<h1>初學者聯盟 The Beginners: 超級英雄也是從初心者練起</h1>
+<section class="talk-content talk-info">
+<ul>
+<li>
+<dfn class="location">地點：</dfn>
+<span>R2</span>
+</li>
+<li>
+<dfn class="slot">時段：</dfn>
+<span>第 1 天，16:05‑16:50</span>
+</li>
+<li>
+<dfn class="category">主題分類：</dfn>
+<span>教育</span>
+</li>
+<li>
+<dfn class="language zhzh">語言：</dfn>
+<span>中文演講/中文投影片</span>
+</li>
+<li>
+<dfn class="python-level novice">Python 難易度：</dfn>
+<span>入門</span>
+</li>
+</ul>
+</section>
+<h2>摘要</h2>
+<section class="talk-content">
+<p>不是每個人都需要成為工程師，但，略懂程式算是基本素養的要求了。每隔一段時間，總會有人問「怎樣學程式語言」「該看什麼書」。Python 號稱是對新手友善的社群，我們該怎樣協助初心者在自學路上走得更穩健呢?</p>
+<p>自學程式通常會經歷哪些階段呢? 哪些瓶頸是常見的挑戰呢? 真的可以快樂學習、無痛昇級嗎? 非科班生可以半路出家學程式嗎? 要有天份或熱情才能當工程師嗎? 怎樣是有效的學習方法? 教學工具不斷推陳出新，有哪些值得我們應用? 最後，怎樣算是離開新手村呢? 怎樣從 Python 學習經驗獲得最大效益呢?</p>
+<p>即使自己沒有成為 Python 高手，還能享受 Python 小確幸，是吧? 我們嘗試在這講題裡摸索方向...</p>
+<p>There should be one-- and preferably only one --obvious way to do it. At least we tried to pick the right way.</p>
+</section>
+<h2>說明</h2>
+<section class="talk-content editor-readonly">
+<div class="editor-preview">寫程式是為了解決問題，但，程式本身就是個問題，程式和原始問題之間，會相交出一系列的問題集。好的程式語言，應該要能讓你專注在原始問題上；好的程式人員或講員，則是有能力降低整體的問題複雜度。因此，教學相長和因材施教，在初學程式的脈絡裡，變得可貴，也突顯出價值。
+
+模仿和經驗抄襲，是多數人成本最低的學習途徑，那麼，自學程式需要哪些基礎，又會經歷哪些階段呢?
+* 以自然語言和數理經驗為基礎
+* 音階練習 vs 樂曲表演
+* 符號溝通: 從 縮排 (Identation) 例子聊起
+* 哪些是可有可無的選項: 英文翻譯, IDE
+* 哪些是不可或缺的先備知識: 作業環境, GitHub, StackOverflow, HTML, Regular Expression
+* 函式導向與物件導向的取捨
+
+初學者和課程互動的過程中，常見的瓶頸和挑戰包括:
+* 多數人不清楚自己的興趣或需要是什麼: Why You Want to Learn This?
+* 未必找得到合適的實作題目: What Feature to Change or Add?
+* 安裝問題: ImportError
+* 編輯器的適應問題: AutoIdentation
+* 從 "邏輯理解" 到 "寫出會動的程式" 之間的鴻溝
+* Mutable: myvar = int(myvar)
+* 如何問問題: 誤用 FB 是自找苦吃 (社會文化的挑戰)
+* 如何快速讀一本書, 如何快速投入一個專案
+教材和教法有機會改得更容易消化吸收，或是變得有趣些，但學習本身是無法完全免除無聊，這跟投資無法完全免除風險一樣。
+
+教學者常見的挑戰包括:
+* 有些技巧的效果較普遍明顯: Incremental-Hacking Cycle
+* 有些原則應適時採用: Engage Early, Engage Often
+* 解題入門六步驟
+* 找出學習目標固然重要, 找出驗證方法通常更重要
+底限是: 沒學到並不是最慘的事，毀了學習意願才是更慘的事。
+
+說明 Anaconda, Jupyter Notebook, Spyder, CheckiO 的優劣和應用經驗，例如 input() 在 Notebook 執行過程，容易造成「當機錯覺」，其他值得參考的工具包括: nbgrader。
+
+參與社群是終身學習的好方法，因為，這世上有太多比「程式語言」更多值得學習和體驗的事，最聰明的學習方法，就是直接進去感受一個程式語言社群。</div>
+</section>
+<h2>
+	
+	講者
+	
+</h2>
+<article class="media">
+<header>
+<figure>
+<img src="/2018/media/cache/08/b7/08b726999ebfe3b44d44a775d1e4dbfb.jpg"/>
+<figcaption>TsungWei Hu</figcaption>
+</figure>
+</header>
+<div class="talk-content">
+<p>interested: Web Technology, System Administration, Project Management</p>
+<div class="social">
+<a href="https://github.com/l34marr" rel="noopener" target="_blank"><span aria-hidden="true" class="fa fa-github"></span></a>
+<a href="https://twitter.com/l34marr" rel="noopener" target="_blank"><span aria-hidden="true" class="fa fa-twitter"></span></a>
+<a href="http://www.facebook.com/l34marr" rel="noopener" target="_blank"><span aria-hidden="true" class="fa fa-facebook"></span></a>
+</div>
+</div>
+</article>
+</main>
+<footer>
+<h2 class="footer-logo"></h2>
+<ul>
+<li><a href="/2018/zh-hant/about/code-of-conduct/">行為準則</a></li>
+<li><a href="/2018/zh-hant/about/staff/">工作人員</a></li>
+<li><a href="/2018/zh-hant/about/community/">社群</a></li>
+</ul>
+<p class="copyright">2018 PyCon Taiwan</p>
+</footer>
+<script src="/2018/static/CACHE/js/ce994d83f936.js" type="text/javascript"></script>
+<script src="/2018/static/js/vendors/simplemde.min.js"></script>
+<script src="/2018/static/js/tools/simplemde-setup.js"></script>
+</body>
+</html>
+<style>.myclass{text-decoration: none;color: rgba(255, 255, 255, 0.35);}.myclass:hover{text-decoration: none;color: rgba(255, 255, 255, 0.7);}</style>

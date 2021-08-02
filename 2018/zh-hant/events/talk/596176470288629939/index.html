@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Easy way to build a real time and asynchronous web or app with Django Channels | PyCon Taiwan 2018</title>
+<link href="/2018/static/pycontw-2018/assets/favicon.ico" rel="shortcut icon"/>
+<link href="/2018/static/pycontw-2018/assets/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/2018/static/pycontw-2018/assets/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<meta content="" property="og:description"/>
+<meta content="https://tw.pycon.org/2018/static/pycontw-2018/assets/og-image.png" property="og:image"/>
+<link href="https://fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400|Raleway:300,400" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
+<link href="/2018/static/CACHE/css/1a46698985d1.css" rel="stylesheet" type="text/css">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNZ39PD');</script>
+</link></head>
+<body class="talk-detail">
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-TNZ39PD" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<div data-controller="topNav">
+<nav class="top-navbar">
+<form  class="navbar-lang-switch" method="post">
+
+<input name="next" type="hidden" value="/2018/events/talk/596176470288629939/"/>
+<button disabled="disabled" name="language" type="submit" value="zh-hant">
+				ZH
+			</button>
+<button name="language" type="submit" value="en-us">
+				<a href='/2018/en-us/events/talk/596176470288629939/' class="myclass">EN</a>
+			</button>
+</form>
+<div class="navbar-centerbox">
+<a class="navbar-logo" href="/2018/zh-hant/"></a>
+</div>
+<button aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler no-script" data-action="topNav#toggle" data-target="topNav.toggler" type="button">
+<div><span></span><span></span><span></span></div>
+</button>
+<div class="navbar-social-desktop">
+<a aria-label="部落格" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+</nav>
+<nav class="menu-navbar-mobile no-script" data-target="topNav.menu">
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/2018/zh-hant/about/pycontw/">關於</a>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-conference" type="checkbox"/>
+<label for="menu-navbar-mobile-conference">議程</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/zh-hant/events/overview/">總覽</a></li>
+<li><a href="/2018/zh-hant/events/schedule/">時間表</a></li>
+<li><a href="/2018/zh-hant/events/keynotes/">基調演講</a></li>
+<li><a href="/2018/zh-hant/events/talks/">一般演講</a></li>
+<li><a href="/2018/zh-hant/speaking/recording/">錄影</a></li>
+<li><a href="/2018/zh-hant/portal/">傳送門</a></li>
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-events" type="checkbox"/>
+<label for="menu-navbar-mobile-events">交流</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/zh-hant/events/tutorials/">學習</a></li>
+<li><a href="/2018/zh-hant/events/sprints/">衝刺開發</a></li>
+<li><a href="/2018/zh-hant/events/open-spaces/">開放空間</a></li>
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-registration" type="checkbox"/>
+<label for="menu-navbar-mobile-registration">註冊</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/zh-hant/registration/ticket-info/">會議門票</a></li>
+<li><a href="/2018/zh-hant/registration/financial-aid/">財務補助</a></li>
+<li><a href="/2018/zh-hant/registration/registration/">報到</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/2018/zh-hant/venue/">會場</a>
+</li>
+<li>
+<a href="/2018/zh-hant/dashboard/">My PyCon</a>
+</li>
+</ul>
+<div class="navbar-social-mobile">
+<a aria-label="部落格" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+</nav>
+</div>
+<header class="page-hero">
+<nav class="menu-navbar-desktop">
+<a class="menu-logo" href="/2018/zh-hant/"></a>
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/2018/zh-hant/about/pycontw/">關於</a>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-conference" type="checkbox"/>
+<label for="menu-navbar-desktop-conference">議程</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/zh-hant/events/overview/">總覽</a></li>
+<li><a href="/2018/zh-hant/events/schedule/">時間表</a></li>
+<li><a href="/2018/zh-hant/events/keynotes/">基調演講</a></li>
+<li><a href="/2018/zh-hant/events/talks/">一般演講</a></li>
+<li><a href="/2018/zh-hant/speaking/recording/">錄影</a></li>
+<li><a href="/2018/zh-hant/portal/">傳送門</a></li>
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-events" type="checkbox"/>
+<label for="menu-navbar-desktop-events">交流</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/zh-hant/events/tutorials/">學習</a></li>
+<li><a href="/2018/zh-hant/events/sprints/">衝刺開發</a></li>
+<li><a href="/2018/zh-hant/events/open-spaces/">開放空間</a></li>
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-registration" type="checkbox"/>
+<label for="menu-navbar-desktop-registration">註冊</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2018/zh-hant/registration/ticket-info/">會議門票</a></li>
+<li><a href="/2018/zh-hant/registration/financial-aid/">財務補助</a></li>
+<li><a href="/2018/zh-hant/registration/registration/">報到</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/2018/zh-hant/venue/">會場</a>
+</li>
+<li>
+<a href="/2018/zh-hant/dashboard/">My PyCon</a>
+</li>
+</ul>
+</nav>
+</header>
+<main>
+<h1>Easy way to build a real time and asynchronous web or app with Django Channels</h1>
+<section class="talk-content talk-info">
+<ul>
+<li>
+<dfn class="location">地點：</dfn>
+<span>R2</span>
+</li>
+<li>
+<dfn class="slot">時段：</dfn>
+<span>第 2 天，11:15‑12:00</span>
+</li>
+<li>
+<dfn class="category">主題分類：</dfn>
+<span>網站框架</span>
+</li>
+<li>
+<dfn class="language zhzh">語言：</dfn>
+<span>中文演講/中文投影片</span>
+</li>
+<li>
+<dfn class="python-level experienced">Python 難易度：</dfn>
+<span>進階</span>
+</li>
+</ul>
+</section>
+<h2>摘要</h2>
+<section class="talk-content">
+<p>Django 是 Python 其中一個非常流行的網站框架，它採取傳統的視圖做法並且圍繞在：一個請求進來，Django 被觸發並服務，接著回應並送出，然後 Django 繼續等待。但現在的網站除了使用這種傳統的輪詢(polling)方法外還包含 WebSocket, HTTP2 等等技術，這也讓現代網站可以透過這些技術建造一個真正的 Real-time web。而 Channels 是讓 Django 具備這些技術的套件之一。</p>
+<p>Channels 是一個官方維護的套件，未來預計會整合進入 Django framework（不過原先 Django 2 整合計畫確定延遲）。Channels 1 在 2017 年初正式發佈，近期更新的 Channels 2 則做了大量的原始碼改寫與架構變動：如完整的 asynchronous 但採用 Python's asyncio library，因此 Channels 2 無法向下支援 Python 3.4 與 Python 2.7 之前的版本，ASGI 作為一致性的介面（像 WSGI，因此不必部署兩套服務器）以及重新定位 Channels，是給開發者一個簡單解決問題的方案。因此這場演講將會著重在分享 Channels 改變的部分和其細節(說明 1 與 2 差異)與如何“建置”一個 Django Channels 的 web 與 app。</p>
+</section>
+<h2>說明</h2>
+<section class="talk-content editor-readonly">
+<div class="editor-preview">Python 世界裡，開發一個 WebSocket 的網站已經有許多很棒的框架以及套件，例如 Twisted、Tornado、uWSGI，這些框架與套件究竟如何實現？Django Channels 其帶來簡單易用的特點為何？新版 Channels 2 的非同步原理是什麼？它會帶來何種效益？要如何去開發與使用？
+
+在這篇演講中，將會環繞 WebSockets, asynchronous 與 channels 在這三個議題，最後能夠輕鬆建立一個 Django Channels web 或是 APP。</div>
+</section>
+<h2>Slides</h2>
+<section class="talk-content">
+<p><a href="https://speakerdeck.com/chairco/pycontw-2018-easy-way-to-build-a-real-time-and-asynchronous-web-or-app-with-django-channels">https://speakerdeck.com/chairco/pycontw-2018-easy-way-to-build-a-real-time-and-asynchronous-web-or-app-with-django-channels</a></p>
+</section>
+<h2>
+	
+	講者
+	
+</h2>
+<article class="media">
+<header>
+<figure>
+<img src="/2018/media/cache/6f/7d/6f7dd320adbbdb0518cbbbb560547809.jpg"/>
+<figcaption>Jason</figcaption>
+</figure>
+</header>
+<div class="talk-content">
+<p>Hi, 我是 Jason。</p>
+<div class="social">
+<a href="https://github.com/chairco" rel="noopener" target="_blank"><span aria-hidden="true" class="fa fa-github"></span></a>
+</div>
+</div>
+</article>
+</main>
+<footer>
+<h2 class="footer-logo"></h2>
+<ul>
+<li><a href="/2018/zh-hant/about/code-of-conduct/">行為準則</a></li>
+<li><a href="/2018/zh-hant/about/staff/">工作人員</a></li>
+<li><a href="/2018/zh-hant/about/community/">社群</a></li>
+</ul>
+<p class="copyright">2018 PyCon Taiwan</p>
+</footer>
+<script src="/2018/static/CACHE/js/ce994d83f936.js" type="text/javascript"></script>
+<script src="/2018/static/js/vendors/simplemde.min.js"></script>
+<script src="/2018/static/js/tools/simplemde-setup.js"></script>
+</body>
+</html>
+<style>.myclass{text-decoration: none;color: rgba(255, 255, 255, 0.35);}.myclass:hover{text-decoration: none;color: rgba(255, 255, 255, 0.7);}</style>

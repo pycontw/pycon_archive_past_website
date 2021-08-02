@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>      <html lang="en-us" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en-us" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en-us" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-us"> <!--<![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="/2016/static/images/favicon_pyconTW_32x32.png" rel="icon" type="image/png"/>
+<meta content="" property="og:description"/>
+<meta content="http://tw.pycon.org/2016/static/images/PyConTW2016_facebook_shareImage.png" property="og:image"/>
+<link href="/2016/static/CACHE/css/40914c7a23b1.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css"/>
+<link href="https://fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet" type="text/css"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+<!--[if lt IE 9]>
+  <script src="/2016/static/js/html5shiv.min.js"></script>
+  <script src="/2016/static/js/respond.min.js"></script>
+  <![endif]-->
+<!-- justfont webfont -->
+<!-- <script src="/2016/static/js/vendors/justfont.js"></script> -->
+<title>Boost Maintainability | PyCon Taiwan 2016</title>
+</link></head>
+<body class="">
+<nav class="navbar navbar-default navbar-fe navbar-site">
+<div class="clearfix container-fluid">
+<div class="navbar-header">
+<button class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="/2016/en-us/">
+<img alt="logo" class="logo hidden-xs" height="24" src="/2016/static/images/logo-tiny--reverse@2x.png" width="133"/>
+<img alt="logo" class="logo visible-xs-inline" height="30" src="/2016/static/images/LogoIcon_white@2x.png" width="42"/>
+</a>
+</div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="navbar">
+<ul class="nav navbar-nav navbar-nav-hover">
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">About</a>
+<ul class="dropdown-menu">
+<li><a href="/2016/en-us/about/pycontw/">PyCon TW</a></li>
+<li><a href="/2016/en-us/about/code-of-conduct/">Code of Conduct</a></li>
+<li><a href="/2016/en-us/about/staff/">Staff</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="active dropdown-toggle" data-toggle="dropdown" href="#" role="button">Events</a>
+<ul class="dropdown-menu">
+<li><a href="/2016/en-us/events/overview/">Overview</a></li>
+<li><a href="/2016/en-us/events/schedule/">Schedule</a></li>
+<li><a href="/2016/en-us/events/keynotes/">Keynotes</a></li>
+<li><a href="/2016/en-us/events/talks/">Talks</a></li>
+<li><a href="/2016/en-us/events/sprints/">Sprints</a></li>
+<li><a href="/2016/en-us/events/bof/">BoF</a></li>
+<li><a href="/2016/en-us/events/pyday/">PyDay</a></li>
+<li><a href="/2016/en-us/events/tutorials/">Tutorial</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Venue</a>
+<ul class="dropdown-menu">
+<li><a href="/2016/en-us/venue/">Venue</a></li>
+<li><a href="/2016/en-us/venue/accommodation/">Accommodation</a></li>
+</ul>
+</li><!-- /.dropdown -->
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Sponsor</a>
+<ul class="dropdown-menu">
+<li><a href="/2016/en-us/sponsors/">Our Sponsors</a></li>
+<li><a href="http://pycontw.kktix.cc/events/pycontw2016patron" target="_blank">Patrons</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Registration</a>
+<ul class="dropdown-menu">
+<li><a href="/2016/en-us/registration/ticket-info/">Ticket Info</a></li>
+<li><a href="/2016/en-us/registration/financial-aid/">Financial Aid</a></li>
+</ul>
+</li><!-- /.dropdown -->
+<li><a href="http://pycontw.blogspot.tw/" target="_blank">Blog</a></li>
+<li><a href="/2016/en-us/dashboard/" target="_blank"><span class="em">Dashboard</span></a></li>
+</ul>
+<div class="social pull-right">
+<a class="social-btn" href="https://www.facebook.com/pycontw" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+</a>
+<a class="social-btn" href="https://twitter.com/pycontw" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+</a>
+<a class="social-btn" href="mailto:organizers@pycon.tw" target="_blank">
+<i class="fa fa-envelope"></i>
+</a>
+</div>
+<ul class="nav navbar-nav navbar-lang navbar-right">
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn" data-toggle="dropdown" href="#" role="button"> English (US)
+               <span class="caret"></span>
+</a>
+<ul class="dropdown-menu">
+<li>
+<a data-lang="zh-hant" href="/2016/zh-hant/events/talk/58446570282024986/">
+                  繁體中文
+                </a>
+</li>
+<li class="active">
+<a data-lang="en-us" href="/2016/en-us/events/talk/58446570282024986/">
+                  English (US)
+                </a>
+</li>
+</ul>
+</li>
+</ul>
+<!-- Fallback version of form selection -->
+<form  class="navbar-form navbar-right navbar-lang" method="post">
+
+<input name="next" type="hidden" value="/2016/events/talk/58446570282024986/"/>
+<select class="form-control input-sm" id="language-select" name="language">
+<option value="zh-hant">
+                        繁體中文
+                    </option>
+<option selected="" value="en-us">
+                        English (US)
+                    </option>
+</select>
+<noscript>
+<button class="btn" type="submit">Change</button>
+</noscript>
+</form>
+</div>
+</div>
+<!-- /.navbar-collapse -->
+
+<!-- /.container-fluid -->
+</nav>
+<div class="content-page-title">
+<div class="content-container container">
+<h1>Boost Maintainability</h1>
+</div>
+</div>
+<div class="content-container container content-page-content talk-detail-content">
+<div class="proposal-content">
+<h3>Language</h3>
+<div>Chinese talk w. English slides</div>
+<h3>Category</h3>
+<div>Best Practices &amp; Patterns</div>
+<h3>Python Level</h3>
+<div>Novice</div>
+<h3>Slides Link</h3>
+<div><a href="https://speakerdeck.com/mosky/boost-maintainability">https://speakerdeck.com/mosky/boost-maintainability</a></div>
+<h2>Abstract</h2>
+<div><p>“To understand a random line, how many lines do you need to read back?” is the core concept of this talk. This talk will introduce you the practicing techniques from years’ experience to maximize the maintainability.</p>
+<p>「為了瞭解程式中隨機的一行，你需要往回讀多少行？」這是這場演講的核心概念。這場演講會介紹多年開發經驗累積而來的實踐技巧，來最大化可維護性。</p></div>
+<h2>Description</h2>
+<div class="editor-readonly">
+<div class="editor-preview">In your code base, to understand a random line, how many lines do you need to read back?
+
+Cloud you make it zero? This talk will start with the impact of maintainability, define the maintainability as “to understand a random line, the lines you need to read back”, show the practicing techniques from years’ experience to make it zero, or nearly zero, and finally, reach the goal: boost the maintainability.
+
+為了瞭解你寫的程式中隨機的一行，需要往回讀多少行？
+
+可以使之為零嗎？這場演講會從可維護性的重要性出發，將可維護性定義為「為了解隨機的一行，需要往回讀的行數」，介紹多年開發經驗累積而來的實踐技巧，使之為零，或接近零。最後達到我們的目標：boost maintainability。</div>
+</div>
+</div>
+<div class="speaker-content" id="speaker-content">
+<h3>
+		Mosky Liu
+		<span class="speaker-social">
+<a href="https://github.com/moskytw" target="_blank">
+<span aria-hidden="true" class="fa fa-github"></span>
+</a>
+<a href="https://twitter.com/moskytw" target="_blank">
+<span aria-hidden="true" class="fa fa-twitter"></span>
+</a>
+<a href="https://www.facebook.com/mosky.liu" target="_blank">
+<span aria-hidden="true" class="fa fa-facebook"></span>
+</a>
+</span>
+</h3>
+<div class="row">
+<div class="col-sm-4 col-sm-push-8 speaker-photo-contain">
+<img class="speaker-photo" src="/2016/media/avatars/58428409247694894/2017-03-12-DSC_0612_square.png"/>
+</div>
+<div class="col-sm-8 col-sm-pull-4"><p>Mosky 是個熱愛 open source 精神的 Python 工程師，也是 Pinkoi 的 Python Charmer，工作時和同事一起打造能夠買到獨特禮物的設計品購物平台。</p>
+<p>自從寫下人生第一支程式後，就難以忘懷以敘述為磚、邏輯為泥，堆砌出腦中藍圖的成就感，也熱愛分享自己所學，業餘時是 Python 課程講師，偶爾講點資料科學。也是數場國內外研討會的講者，包含臺灣的 PyCon、COSCUP、TEDxNTUST，以及在日本、新加坡、香港、韓國、馬來西亞等地的 PyCon。More: mosky.tw 。</p></div>
+</div>
+</div>
+</div>
+<footer class="footer container-fluid text-center">
+<div class="row clearfix">
+<div class="col-md-2">2016 PyCon Taiwan</div>
+<div class="col-md-8 hidden-xs hidden-sm">
+<img class="logo" height="24" src="/2016/static/images/Logo_pycontw16_blue_footer@2x.png" width="133"/>
+</div>
+<div class="social col-md-2 text-center">
+<a class="social-btn" href="https://www.facebook.com/pycontw" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+</a>
+<a class="social-btn" href="https://twitter.com/pycontw" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+</a>
+<a class="social-btn" href="mailto:organizers@pycon.tw" target="_blank">
+<i class="fa fa-envelope"></i>
+</a>
+</div>
+</div>
+</footer>
+<script src="/2016/static/CACHE/js/6c8feda299eb.js" type="text/javascript"></script>
+<script src="/2016/static/js/vendors/simplemde.js"></script>
+<script src="/2016/static/js/tools/simplemde-setup.js"></script>
+</body>
+</html>

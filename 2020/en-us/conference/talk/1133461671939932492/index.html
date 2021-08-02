@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>用Python與Raspberry Pi打造手持式無線IoT設備-[R-type鐵水溫度計] | PyCon Taiwan 2020</title>
+<link href="/2020/static/pycontw-2020/assets/favicon/favicon.ico" rel="shortcut icon"/>
+<link href="/2020/static/pycontw-2020/assets/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/2020/static/pycontw-2020/assets/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/2020/static/pycontw-2020/assets/favicon/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="" property="og:description"/>
+<meta content="https://tw.pycon.org/2020/static/pycontw-2020/assets/og-image.png" property="og:image"/>
+<link href="https://fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,600,700|Raleway:300,400|Philosopher|Quicksand&amp;display=swap" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
+<link href="/2020/static/CACHE/css/output.40e16f90c8a1.css" rel="stylesheet" type="text/css"/>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNZ39PD');</script>
+</head>
+<body class="talk-detail">
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-TNZ39PD" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<div data-controller="topNav">
+<nav class="top-navbar">
+<div class="navbar-left">
+<form  class="navbar-lang-switch" method="post">
+
+<input name="next" type="hidden" value="/2020/conference/talk/1133461671939932492/"/>
+<button name="language" type="submit" value="zh-hant">
+                    <a href='/2020/zh-hant/conference/talk/1133461671939932492/' style="text-decoration: none;">ZH</a>
+                </button>
+<button disabled="disabled" name="language" type="submit" value="en-us">
+                    EN
+                </button>
+</form>
+<a href="/2020/en-us/"><i class="twicon-provintia navbar-provintia"></i></a>
+<a class="navbar-brand" href="/2020/en-us/">PyCon TW20</a>
+</div>
+<button aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler no-script" data-action="topNav#toggle" data-target="topNav.toggler" type="button">
+<div><span></span><span></span><span></span></div>
+</button>
+<div class="navbar-social-desktop">
+<a aria-label="Blog" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+</nav>
+<nav class="menu-navbar-mobile no-script" data-target="topNav.menu">
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/2020/en-us/about/pycontw/">
+			About
+		</a>
+</li>
+<!-- -->
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-conference" type="checkbox"/>
+<label class="active" for="menu-navbar-mobile-conference">
+			Conference
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/en-us/conference/schedule/">Schedule</a></li>
+<li><a href="/2020/en-us/conference/keynotes/">Keynotes</a></li>
+<li><a href="/2020/en-us/conference/talks/">Talks</a></li>
+<li><a href="/2020/en-us/conference/tutorials/">Tutorials</a></li>
+<li><a href="/2020/en-us/conference/community-track/">Community Track</a></li>
+<!--<li><a href="/2020/en-us/speaking/recording/">Recording</a></li>-->
+<!-- <li><a href="/2020/en-us/portal/">Portal</a></li> -->
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-events" type="checkbox"/>
+<label for="menu-navbar-mobile-events">
+			Events
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/en-us/events/overview/">Overview</a></li>
+<li><a href="/2020/en-us/events/warmup-session/">Warm-Up Session</a></li>
+<li><a href="/2020/en-us/events/open-spaces/">Open Spaces</a></li>
+<li><a href="/2020/en-us/events/sprints/">Sprints</a></li>
+<li><a href="/2020/en-us/events/job-listings/">Job Listings</a></li>
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-registration" type="checkbox"/>
+<label for="menu-navbar-mobile-registration">
+			Registration
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/en-us/registration/ticket-info/">Conference Ticket</a></li>
+<li><a href="/2020/en-us/registration/financial-aid/">Financial Aid</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/2020/en-us/venue/">
+			Venue
+		</a>
+</li>
+<li>
+<a href="/2020/en-us/covid-19/guidelines/">
+			COVID-19 Guidelines
+		</a>
+</li>
+<li class="dashboard-item">
+<a href="/2020/en-us/dashboard/">My PyCon</a>
+</li>
+</ul>
+<div class="navbar-social-mobile">
+<a aria-label="Blog" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+<div class="shadow">
+<i class="twicon-provintia"></i>
+</div>
+</nav>
+</div>
+<header class="page-hero">
+<nav class="menu-navbar-desktop">
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/2020/en-us/about/pycontw/">
+			About
+		</a>
+</li>
+<!-- -->
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-conference" type="checkbox"/>
+<label class="active" for="menu-navbar-desktop-conference">
+			Conference
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/en-us/conference/schedule/">Schedule</a></li>
+<li><a href="/2020/en-us/conference/keynotes/">Keynotes</a></li>
+<li><a href="/2020/en-us/conference/talks/">Talks</a></li>
+<li><a href="/2020/en-us/conference/tutorials/">Tutorials</a></li>
+<li><a href="/2020/en-us/conference/community-track/">Community Track</a></li>
+<!--<li><a href="/2020/en-us/speaking/recording/">Recording</a></li>-->
+<!-- <li><a href="/2020/en-us/portal/">Portal</a></li> -->
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-events" type="checkbox"/>
+<label for="menu-navbar-desktop-events">
+			Events
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/en-us/events/overview/">Overview</a></li>
+<li><a href="/2020/en-us/events/warmup-session/">Warm-Up Session</a></li>
+<li><a href="/2020/en-us/events/open-spaces/">Open Spaces</a></li>
+<li><a href="/2020/en-us/events/sprints/">Sprints</a></li>
+<li><a href="/2020/en-us/events/job-listings/">Job Listings</a></li>
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-registration" type="checkbox"/>
+<label for="menu-navbar-desktop-registration">
+			Registration
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/en-us/registration/ticket-info/">Conference Ticket</a></li>
+<li><a href="/2020/en-us/registration/financial-aid/">Financial Aid</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/2020/en-us/venue/">
+			Venue
+		</a>
+</li>
+<li>
+<a href="/2020/en-us/covid-19/guidelines/">
+			COVID-19 Guidelines
+		</a>
+</li>
+<li class="dashboard-item">
+<a href="/2020/en-us/dashboard/">My PyCon</a>
+</li>
+</ul>
+</nav>
+</header>
+<main>
+<section class="pill-title alt-2">
+<h1>
+<i class="icon icon-about"></i>用Python與Raspberry Pi打造手持式無線IoT設備-[R-type鐵水溫度計] 
+		
+	</h1>
+</section>
+<section class="content info">
+<ul>
+<li>
+<dfn class="location"></dfn>
+<span>R2</span>
+</li>
+<li>
+<dfn class="slot"></dfn>
+<span>Day 1, 13:45‑14:15</span>
+</li>
+<li>
+<dfn class="category">Category: </dfn>
+<span>Internet of Things</span>
+</li>
+<li>
+<dfn class="language zhzh">Language: </dfn>
+<span>Chinese talk w. Chinese slides</span>
+</li>
+<li>
+<dfn class="python-level intermediate">Python Level: </dfn>
+<span>Intermediate</span>
+</li>
+</ul>
+</section>
+<h2>Abstract</h2>
+<section class="content">
+<p>數據收集是走向工業4.0的第一步。有別於定點收集數據的方式，在特殊的製程現場中，移動式的手持設備有更好的便利性;但是這種設備往往要價不斐，而且缺乏日後擴充與修改功能的彈性。<br/>本演講說明如何使用Python和Raspberry Pi打造出手持式無線IoT設備-以工業用的鐵水溫度計為例。<br/>演講流程如下:<br/>1. 從工業現場來說明背景與動機<br/>2. 相關硬體選用和介紹<br/>3. 演算法說明<br/>4. 實作過程的遇到的問題與改善方式<br/>5. 相關的延伸應用與Python資源介紹</p>
+</section>
+<h2>Description</h2>
+<section class="content editor-readonly">
+<div class="editor-preview">### R-type鐵水溫度計簡介：
+---
+![](https://i.imgur.com/bMavsuQl.png)
+#### [鑄造與溫度]
+在鑄造工業中，溫度控制是製程的關鍵參數，因為鐵水中的合金元素各有不同的熔點和共晶溫度，所以透過控制溫度就能產生不同的金相組織而改變機械性質(硬度或拉力)。
+#### [鐵水溫度計]
+鐵水溫度計的原理是利用'席貝克效應'-將二種不同金屬各自的二端分別連接，並放在不同的溫度下，就會在線路內產生電流;又稱之為熱電偶溫度計。而依據不同的金屬組合和溫度測量範圍區分為r、j、i、k等類型的溫度計。
+
+### 使用的第三方工具：
+---
+- [RPi.GPIO] 提供透過GPIO接腳來控制樹莓派的類別函式庫
+- [MAX31856] Adafruit Max31856 數位訊號轉換晶片的函式庫
+- [tm1637] 用於控制七段顯示器的函式庫
+- [pymssql] 基於FreeTDS的MS SQL SERVER介面函式庫，用於將資料寫入local端
+- [urllib.request] 提供URL的request的函式庫，用於將資料推向雲端Dashboard
+[RPi.GPIO]: https://pypi.org/project/RPi.GPIO/
+[MAX31856]: https://github.com/steve71/MAX31856/blob/master/max31856.py
+[tm1637]: https://github.com/timwaizenegger/raspberrypi-examples/blob/master/actor-led-7segment-4numbers/tm1637.py
+[pymssql]: https://pypi.org/project/pymssql/
+[urllib.request]: https://docs.python.org/3/library/urllib.request.html</div>
+</section>
+<h2>Slides</h2>
+<section class="content">
+<p><a href="https://drive.google.com/file/d/1AQDSg8ZbGn94jboCteFyKfczXJ3TT8pl/view?usp=sharing">https://drive.google.com/file/d/1AQDSg8ZbGn94jboCteFyKfczXJ3TT8pl/view?usp=sharing</a></p>
+</section>
+<h2>
+	
+	Speaker
+	
+</h2>
+<article class="media">
+<header>
+<figure>
+<img src="/2020/media/cache/e4/15/e415adc859f94744ba2878b4f82b8dcf.jpg"/>
+<figcaption>Ryan Chen</figcaption>
+</figure>
+</header>
+<div class="content">
+<p>如果這世界上真有奇雞🐔，那只是努力的另一個名字。</p>
+<div class="social">
+<a href="https://github.com/RyanChen9527" rel="noopener" target="_blank"><span aria-hidden="true" class="fa fa-github"></span></a>
+<a href="https://www.facebook.com/pi.chen.397#_" rel="noopener" target="_blank"><span aria-hidden="true" class="fa fa-facebook"></span></a>
+</div>
+</div>
+</article>
+<iframe class="slido" src="https://app.sli.do/event/slbsvhq6"></iframe>
+</main>
+<footer>
+<div class="footer-logos">
+<div class="footer-logo"></div>
+</div>
+<ul>
+<li><a href="/2020/en-us/about/code-of-conduct/">Code of Conduct</a></li>
+<li><a href="/2020/en-us/about/staff/">Staff</a></li>
+<li><a href="/2020/en-us/about/community/">Community</a></li>
+<li><a href="/2020/en-us/about/privacy_policy/">Privacy Policy</a></li>
+</ul>
+<p class="copyright">2020 PyCon Taiwan</p>
+</footer>
+<script src="/2020/static/CACHE/js/output.378e60111296.js"></script>
+<script src="/2020/static/js/vendors/simplemde.min.js"></script>
+<script src="/2020/static/js/tools/simplemde-setup.js"></script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>淺嚐LHCb數據分析的滋味 Play around the LHCb Data on Kaggle with SK-Learn and MatPlotLib | PyCon Taiwan 2017</title>
+<link href="/2017/static/pycontw-2017/images/favicon.png" rel="icon" type="image/png"/>
+<meta content="" property="og:description"/>
+<meta content="https://tw.pycon.org/2017/static/pycontw-2017/images/og-image.png" property="og:image"/>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed|Ubuntu+Mono:400,400i" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/2017/static/CACHE/css/69b4ae298e4c.css" rel="stylesheet" type="text/css">
+</link></head>
+<body>
+<div class="mother-wrapper">
+<header>
+<a class="btn btn-menu" href="#"></a>
+<a class="btn btn-home" href="/2017/zh-hant/"></a>
+<nav class="wrapper header-nav">
+<div class="parent lang">
+<a class="btn-show-lang-menu" href="#">
+      	繁體中文
+      </a>
+<button class="btn-close"></button>
+</div>
+<a class="header-logo" href="/2017/zh-hant/"></a>
+<div class="parent to-expand">
+<a href="/2017/zh-hant/about/pycontw/">
+				關於
+			</a>
+<nav class="sub">
+<a href="/2017/zh-hant/about/pycontw/">台灣 PyCon</a>
+<a href="/2017/zh-hant/about/code-of-conduct/">行為準則</a>
+</nav>
+</div>
+<div class="parent to-expand active">
+<a href="/2017/zh-hant/events/overview/">
+				活動
+			</a>
+<nav class="sub">
+<a href="/2017/zh-hant/events/schedule/">議程</a>
+<a href="/2017/zh-hant/events/overview/">活動總覽</a>
+<a href="/2017/zh-hant/events/keynotes/">基調演講</a>
+<a href="/2017/zh-hant/events/tutorial/">專業課程</a>
+<a href="/2017/zh-hant/events/unconference/">非正式會議</a>
+<a href="/2017/zh-hant/events/sprints/">衝刺開發</a>
+<a href="/2017/zh-hant/events/bof/">PyNight</a>
+</nav>
+</div>
+<a class="" href="/2017/zh-hant/venue/">
+			會場
+		</a>
+<a class="" href="/2017/zh-hant/sponsors/">
+			夥伴
+		</a>
+<div class="parent to-expand">
+<a href="/2017/zh-hant/registration/financial-aid/">
+				註冊
+			</a>
+<nav class="sub">
+<a href="/2017/zh-hant/registration/ticket-info/">售票資訊</a>
+<a href="/2017/zh-hant/registration/financial-aid/">財務補助</a>
+</nav>
+</div>
+<a href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank">
+			部落格
+		</a>
+</nav>
+<nav class="wrapper header-menu-nav">
+<div class="parent lang">
+<a class="btn-back-to-menu" href="#">返回選單</a>
+<button class="btn-close"></button>
+</div>
+<a class="active" data-lang="zh-hant" href="/2017/zh-hant/events/talk/345377900414894195/">
+    	繁體中文
+    </a>
+<div data-lang="en-us" style="margin-left: 40px; line-height: 60px;"> <a href='/2017/en-us/events/talk/345377900414894195/' style="font-size: 16px;">English (US)</a></div>
+</nav>
+<nav class="control-nav">
+<a class="dashboard" href="/2017/zh-hant/dashboard/">
+			控制面板
+		</a>
+<div class="parent lang">
+<a href="#">繁體中文</a>
+<nav class="sub">
+<a data-lang="zh-hant" href="/2017/zh-hant/events/talk/345377900414894195/">
+					繁體中文
+				</a>
+<div data-lang="en-us" style="margin-left: 20px;"> <a href='/2017/en-us/events/talk/345377900414894195/'>English (US)</a></div>
+</nav>
+</div>
+<nav class="social">
+<a class="fa fa-facebook" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a class="fa fa-envelope-o" href="mailto:organizers@pycon.tw" rel="noopener" target="_blank"></a>
+</nav>
+</nav>
+</header>
+<form  id="nav-lang-form" method="post">
+
+<input name="next" type="hidden"/>
+<input name="language" type="hidden"/>
+</form>
+<div class="wrapper">
+<main class="inner-wrapper">
+<h1><span>淺嚐LHCb數據分析的滋味 Play around the LHCb Data on Kaggle with SK-Learn and MatPlotLib</span></h1>
+<section class="talk-info-section">
+<article class="classification-block">
+<ul class="classification-list">
+<li><span aria-hidden="true" class="label fa fa-map-marker"></span>R0</li>
+<li><span aria-hidden="true" class="label fa fa-clock-o"></span>第 1 天，10:50‑11:20</li>
+<li><span aria-hidden="true" class="label">ZE</span>中文演講/英文投影片</li>
+<li><span aria-hidden="true" class="label fa fa-tag"></span>資料分析</li>
+<li><span aria-hidden="true" class="label">=</span>中階</li>
+</ul>
+</article>
+<article class="abstract-block"><p>LHC實驗是現今粒子物理實驗的最先端，2012年所發現的希格斯粒子更是物理界的一大盛事。繼Atlas實驗在Kaggle公開Higgs挑戰之後，另一個LHC的LHCb實驗也將實驗數據搬上了Kaggle平台。本講題將簡介背後的實驗，並使用LHCb的數據以SciKit-Learn進行多維度數據分析與使用MatPlotLib視覺化。</p></article>
+</section>
+<h2>演講詳細內容</h2>
+<article class="editor-readonly">
+<div class="editor-preview">位於瑞法邊境的歐洲粒子研究機構CERN，除了是WWW的發源地，也是現今粒子物理研究的前沿，LHC實驗的所在地。隨著2012年希格司粒子的發現，成就了2013年的諾貝爾物理學獎，其背後支撐的其實是龐大的巨量數據處理與分析。繼Atlas實驗在Kaggle平台以模擬數據公開徵求分析高手來挑戰外，LHCb實驗也在先前提供了一部份的真實實驗數據，讓非相關研究人員也可以嘗試尋找可能的新物理。最新的熱門話題，更是數週前LHCb實驗發表了五個前所未見的新複合粒子態。
+
+本講題以LHCb的Kaggle挑戰所提供的實驗數據，使用python的sk-learn套件中幾個常用的機器學習演算法，來進行多維特徵的資料分析。同時探討在實際從事分析時，所需要注意的一些要點。並且示範使用matplotlib來將數據中的一些特徵，以及機器學習的輸出，進行視覺化的過程。</div>
+</article>
+<h3>投影片連結</h3>
+<article><a href="https://www.slideshare.net/yuanchao/lhcb-play-around-the-lhcb-data-on-kaggle-with-sklearn-and-matplotlib">https://www.slideshare.net/yuanchao/lhcb-play-around-the-lhcb-data-on-kaggle-with-sklearn-and-matplotlib</a></article>
+<h2 id="speaker-content">講者介紹</h2>
+<h3>
+	趙元 (Yuan CHAO)
+	<span class="speaker-social">
+<a href="https://github.com/yuanchao" target="_blank">
+<span aria-hidden="true" class="fa fa-github"></span>
+</a>
+<a href="https://twitter.com/yuanchao" target="_blank">
+<span aria-hidden="true" class="fa fa-twitter"></span>
+</a>
+<a href="https://www.facebook.com/yuanchao" target="_blank">
+<span aria-hidden="true" class="fa fa-facebook"></span>
+</a>
+</span>
+</h3>
+<div class="speaker-detail-info speaker-detail-info-has-photo">
+<img class="speaker-photo" src="/2017/media/avatars/59221213427269684/2017-05-04-12140805_10153100083691471_3066441214696763830_n-.jpg"/>
+<article class="speaker-bio"><p>從事高能物理研究的自由軟體愛好者<br/>High energy physics researcher, OSS lover</p></article>
+</div>
+</main>
+</div>
+<div class="push"></div>
+</div>
+<footer>
+<nav class="social">
+<a class="fa fa-facebook" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a class="fa fa-envelope-o" href="mailto:organizers@pycon.tw" rel="noopener" target="_blank"></a>
+</nav>
+</footer>
+<script>GA_TRACK_ID = 'UA-28961467-1';</script>
+<script src="/2017/static/js/vendors/google_analytics.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+<script src="/2017/static/CACHE/js/59244b458bbb.js" type="text/javascript"></script>
+<script src="/2017/static/js/vendors/simplemde.min.js"></script>
+<script src="/2017/static/js/tools/simplemde-setup.js"></script>
+</body>
+</html>

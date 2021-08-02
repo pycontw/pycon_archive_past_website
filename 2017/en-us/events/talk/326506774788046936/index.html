@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>比美麗的湯更美麗：pyquery | PyCon Taiwan 2017</title>
+<link href="/2017/static/pycontw-2017/images/favicon.png" rel="icon" type="image/png"/>
+<meta content="" property="og:description"/>
+<meta content="https://tw.pycon.org/2017/static/pycontw-2017/images/og-image.png" property="og:image"/>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed|Ubuntu+Mono:400,400i" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/2017/static/CACHE/css/69b4ae298e4c.css" rel="stylesheet" type="text/css">
+</link></head>
+<body>
+<div class="mother-wrapper">
+<header>
+<a class="btn btn-menu" href="#"></a>
+<a class="btn btn-home" href="/2017/en-us/"></a>
+<nav class="wrapper header-nav">
+<div class="parent lang">
+<a class="btn-show-lang-menu" href="#">
+      	English (US)
+      </a>
+<button class="btn-close"></button>
+</div>
+<a class="header-logo" href="/2017/en-us/"></a>
+<div class="parent to-expand">
+<a href="/2017/en-us/about/pycontw/">
+				about
+			</a>
+<nav class="sub">
+<a href="/2017/en-us/about/pycontw/">pycon taiwan</a>
+<a href="/2017/en-us/about/code-of-conduct/">code of conduct</a>
+</nav>
+</div>
+<div class="parent to-expand active">
+<a href="/2017/en-us/events/overview/">
+				events
+			</a>
+<nav class="sub">
+<a href="/2017/en-us/events/schedule/">schedule</a>
+<a href="/2017/en-us/events/overview/">overview</a>
+<a href="/2017/en-us/events/keynotes/">keynotes</a>
+<a href="/2017/en-us/events/tutorial/">tutorials</a>
+<a href="/2017/en-us/events/unconference/">unconference</a>
+<a href="/2017/en-us/events/sprints/">sprints</a>
+<a href="/2017/en-us/events/bof/">PyNight</a>
+</nav>
+</div>
+<a class="" href="/2017/en-us/venue/">
+			venue
+		</a>
+<a class="" href="/2017/en-us/sponsors/">
+			partners
+		</a>
+<div class="parent to-expand">
+<a href="/2017/en-us/registration/financial-aid/">
+				registration
+			</a>
+<nav class="sub">
+<a href="/2017/en-us/registration/ticket-info/">Ticket Info</a>
+<a href="/2017/en-us/registration/financial-aid/">financial aid</a>
+</nav>
+</div>
+<a href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank">
+			blog
+		</a>
+</nav>
+<nav class="wrapper header-menu-nav">
+<div class="parent lang">
+<a class="btn-back-to-menu" href="#">Back to Menu</a>
+<button class="btn-close"></button>
+</div>
+<div data-lang="zh-hant" style="margin-left: 40px; line-height: 60px;"> <a href='/2017/zh-hant/events/talk/326506774788046936/' style="font-size: 16px;">繁體中文</a></div>
+<a class="active" data-lang="en-us" href="/2017/en-us/events/talk/326506774788046936/">
+    	English (US)
+    </a>
+</nav>
+<nav class="control-nav">
+<a class="dashboard" href="/2017/en-us/dashboard/">
+			dashboard
+		</a>
+<div class="parent lang">
+<a href="#">English (US)</a>
+<nav class="sub">
+<div data-lang="zh-hant" style="margin-left: 20px;"> <a href='/2017/zh-hant/events/talk/326506774788046936/'>繁體中文</a></div>
+<a data-lang="en-us" href="/2017/en-us/events/talk/326506774788046936/">
+					English (US)
+				</a>
+</nav>
+</div>
+<nav class="social">
+<a class="fa fa-facebook" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a class="fa fa-envelope-o" href="mailto:organizers@pycon.tw" rel="noopener" target="_blank"></a>
+</nav>
+</nav>
+</header>
+<form  id="nav-lang-form" method="post">
+
+<input name="next" type="hidden"/>
+<input name="language" type="hidden"/>
+</form>
+<div class="wrapper">
+<main class="inner-wrapper">
+<h1><span>比美麗的湯更美麗：pyquery</span></h1>
+<section class="talk-info-section">
+<article class="classification-block">
+<ul class="classification-list">
+<li><span aria-hidden="true" class="label fa fa-map-marker"></span>R2</li>
+<li><span aria-hidden="true" class="label fa fa-clock-o"></span>Day 3, 10:35‑11:05</li>
+<li><span aria-hidden="true" class="label">ZE</span>Chinese talk w. English slides</li>
+<li><span aria-hidden="true" class="label fa fa-tag"></span>Python Libraries</li>
+<li><span aria-hidden="true" class="label">=</span>Intermediate</li>
+</ul>
+</article>
+<article class="abstract-block"><p>對於不少爬蟲開發者而言，對於網頁內容解析工具的首選是BeautifulSoup，它除了討論聲量高之外，也有豐富的學習資源可供參考。不過，其實還有很多出色且強悍的工具，pyquery就是其中之一。</p>
+<p>pyquery完全依照jQuery的邏輯建構，讓我們可以在Python裡面寫類jQuery的語法，除了可以保有jQuery的精神(Write Less, Do More)，也提高程式碼的可移植性。另外，pyquery的底層是建構在lxml上，所以在分析效能上也是毫不遜色。在css selector上，pyquery提供比BeautifulSoup更高的支援度，對於高度倚賴css path的開發者是相當便利。不同於BeautifulSoup，pyquery提供了url opener，讓開發者可直接訪問網址並生成文件物件模型(DOM)，進而解析內容。</p>
+<p>然而，pyquery的官方文件較為精簡，相關討論亦較少，所以本次分享將由淺入深地探討pyquery。 第一部分，我會介紹pyquery的基本API，並比較pyquery與BeautifulSoup之差異。接下來，我會探討原始碼並剖析pyquery背後運作的邏輯與原理，讓大家了解如何subclass或monkey-patch，例如自訂css selector或新增pyquery的API等。最後，我會提供一些過去開發上的的經驗與延伸，以及pyquery如何與其他套件（如Scrapy, Selenium, Flask）整合應用。</p></article>
+</section>
+<h2>Talk Detail</h2>
+<article class="editor-readonly">
+<div class="editor-preview">### 爬蟲經驗
+我從事爬蟲相關研究超過五年，爬過台灣各大論壇、新聞媒體平台、房屋仲介平台以及其他大大小小的網路平台，也曾透過telnet直接抓取PTT各版資料，亦曾透過proxy或tor爬取各種資料。
+在網頁內容解析上，從基本的html、xml、json到其他複雜的格式都有處理的經驗，而最常使用的解析途徑是透過正規表示法，css selector 以及xpath。
+
+### 動機
+我在使用`pyquery`做為主要網頁解析工具已超過兩年，也大量將`pyquery`運用在工作實務上，在使用上累積了許多心得與經驗想跟大家分享，包含容易誤解的部分、已知的問題以及使用上的習慣，並且將會提供實際範例讓聽者了解`pyquery`與`BeautifulSoup`在使用上之不同，希望能透過這次分享，讓更多人了解到`pyquery`的強大與易用性，並且讓更多開發者共同開發且維護該專案，強化`pyquery`的社群。
+
+### 簡介
+`pyquery` 與 `BeautifulSoup` 在底層都支援使用 `lxml` 作為主要解析器，不過在實作上使用的邏輯卻不盡相同。現今，要使用Python作為網頁解析入門，`BeautifulSoup`幾乎是所有開發者的首選，且網路上清一色的教學也都是`BeautifulSoup`的相關資訊。相較之下，`pyquery`的討論度低非常多，但是它是根據jQuery的邏輯去實作，而jQuery在DOM的操作上靈活且易讀，所以使用`pyquery`作為網頁解析器，其實對於開發者來說可能更為友善，甚至對於原本就熟悉jQuery的開發者來說，學習曲線相對平緩很多。對於剛入門的開發者，也可以透過`pyquery`強化對jQuery的認知。
+
+### 目標
+`pyquery` 提供了豐富的API可供使用，且支援大部分jQuery的API，不過官方文件的說明較為精簡，對於一些想入門的朋友可能會感到些許怯步。除此之外，有些API甚至是官方文件沒有提及的，我想藉由這一次PYCON與大家分享與討論。本次分享主要分為三大部分，如下：
+
+第一個部分，我會對`pyquery`與`BeautifulSoup`的做基本異同比較，並提供實例來凸顯`pyquery`與`BeautifulSoup`在操作同一個DOM上不同的行為。接著會介紹`pyquery`基本的API，並與目前jQuery API的差異做一個簡單的比較，並且將目前所支援的css selector羅列出來。另外，我也會將一些在官方文件未明確記載的部分揭露，讓大家可以更進一步地瞭解可使用的功能。
+
+第二個部分，我會針對`pyquery`背後設計及邏輯做一個基本介紹，接下來提供一些monkey-patching及subclassing的方式，並以提供實際範例讓大家更能過快速瞭解整個運作的原理。對於想要參與貢獻的開發者，有更明確的方向，以及促進社群的發展。
+
+第三個部分，我將會分享我在開發上所踩過的坑，以及使用上的經驗分享。另外，我也會分享我在其它套件及框架與`pyquery` 上結合的經驗，可能是直接或間接相關，不過主要是希望能夠給聽者一些腦力激盪，讓聽者對於`pyquery`能有更多的發想及延伸。
+
+### 相關套件
+[pyquery](https://github.com/gawel/pyquery): 本次介紹的主題  
+[cssselect](https://github.com/scrapy/cssselect): 用以將css selector 轉譯成xpath的主要套件(Scrapy也有用到此套件)   
+[lxml](https://github.com/lxml/lxml): 底層解析DOM所使用的套件  
+[Selenium](https://github.com/SeleniumHQ/selenium/tree/master/py): 模擬瀏覽器的自動化測試/爬蟲工具  
+[Scrapy](https://github.com/scrapy/scrapy): Python爬蟲框架  
+[Flask](https://github.com/pallets/flask): Python輕量級的web framework</div>
+</article>
+<h3>Slides Link</h3>
+<article><a href="https://aji.tw/slides/pycon2017">https://aji.tw/slides/pycon2017</a></article>
+<h2 id="speaker-content">Speaker Information</h2>
+<h3>
+	劉純睿（阿吉）
+	<span class="speaker-social">
+<a href="https://github.com/amigcamel" target="_blank">
+<span aria-hidden="true" class="fa fa-github"></span>
+</a>
+<a href="https://www.facebook.com/owen.liu.750" target="_blank">
+<span aria-hidden="true" class="fa fa-facebook"></span>
+</a>
+</span>
+</h3>
+<div class="speaker-detail-info speaker-detail-info-has-photo">
+<img class="speaker-photo" src="/2017/media/avatars/326501069762855128/2017-03-12-15591671_1253952037981526_5735783382205365296_o.jpg"/>
+<article class="speaker-bio"><p>劉純睿（阿吉），畢業於台大語言所，有五年以上的Python經驗，專職網路爬蟲、網站前後端開發及部署，目前為全端工程師，同時也是一名業餘魔術師。</p></article>
+</div>
+</main>
+</div>
+<div class="push"></div>
+</div>
+<footer>
+<nav class="social">
+<a class="fa fa-facebook" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a class="fa fa-envelope-o" href="mailto:organizers@pycon.tw" rel="noopener" target="_blank"></a>
+</nav>
+</footer>
+<script>GA_TRACK_ID = 'UA-28961467-1';</script>
+<script src="/2017/static/js/vendors/google_analytics.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+<script src="/2017/static/CACHE/js/59244b458bbb.js" type="text/javascript"></script>
+<script src="/2017/static/js/vendors/simplemde.min.js"></script>
+<script src="/2017/static/js/tools/simplemde-setup.js"></script>
+</body>
+</html>

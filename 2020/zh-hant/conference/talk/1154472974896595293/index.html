@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Track Machine Learning Applications by MLflow Tracking | PyCon Taiwan 2020</title>
+<link href="/2020/static/pycontw-2020/assets/favicon/favicon.ico" rel="shortcut icon"/>
+<link href="/2020/static/pycontw-2020/assets/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/2020/static/pycontw-2020/assets/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/2020/static/pycontw-2020/assets/favicon/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="" property="og:description"/>
+<meta content="https://tw.pycon.org/2020/static/pycontw-2020/assets/og-image.png" property="og:image"/>
+<link href="https://fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,600,700|Raleway:300,400|Philosopher|Quicksand&amp;display=swap" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
+<link href="/2020/static/CACHE/css/output.40e16f90c8a1.css" rel="stylesheet" type="text/css"/>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNZ39PD');</script>
+</head>
+<body class="talk-detail">
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-TNZ39PD" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<div data-controller="topNav">
+<nav class="top-navbar">
+<div class="navbar-left">
+<form  class="navbar-lang-switch" method="post">
+
+<input name="next" type="hidden" value="/2020/conference/talk/1154472974896595293/"/>
+<button disabled="disabled" name="language" type="submit" value="zh-hant">
+                    ZH
+                </button>
+<button name="language" type="submit" value="en-us">
+                    <a href='/2020/en-us/conference/talk/1154472974896595293/' style="text-decoration: none;">EN</a>
+                </button>
+</form>
+<a href="/2020/zh-hant/"><i class="twicon-provintia navbar-provintia"></i></a>
+<a class="navbar-brand" href="/2020/zh-hant/">PyCon TW20</a>
+</div>
+<button aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler no-script" data-action="topNav#toggle" data-target="topNav.toggler" type="button">
+<div><span></span><span></span><span></span></div>
+</button>
+<div class="navbar-social-desktop">
+<a aria-label="部落格" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+</nav>
+<nav class="menu-navbar-mobile no-script" data-target="topNav.menu">
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/2020/zh-hant/about/pycontw/">
+			關於
+		</a>
+</li>
+<!-- -->
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-conference" type="checkbox"/>
+<label class="active" for="menu-navbar-mobile-conference">
+			議程
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/zh-hant/conference/schedule/">時間表</a></li>
+<li><a href="/2020/zh-hant/conference/keynotes/">基調演講</a></li>
+<li><a href="/2020/zh-hant/conference/talks/">一般演講</a></li>
+<li><a href="/2020/zh-hant/conference/tutorials/">專業課程</a></li>
+<li><a href="/2020/zh-hant/conference/community-track/">社群軌</a></li>
+<!--<li><a href="/2020/zh-hant/speaking/recording/">錄影</a></li>-->
+<!-- <li><a href="/2020/zh-hant/portal/">傳送門</a></li> -->
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-events" type="checkbox"/>
+<label for="menu-navbar-mobile-events">
+			活動
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/zh-hant/events/overview/">總覽</a></li>
+<li><a href="/2020/zh-hant/events/warmup-session/">暖身活動</a></li>
+<li><a href="/2020/zh-hant/events/open-spaces/">開放空間</a></li>
+<li><a href="/2020/zh-hant/events/sprints/">衝刺開發</a></li>
+<li><a href="/2020/zh-hant/events/job-listings/">徵才資訊</a></li>
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-registration" type="checkbox"/>
+<label for="menu-navbar-mobile-registration">
+			註冊
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/zh-hant/registration/ticket-info/">會議門票</a></li>
+<li><a href="/2020/zh-hant/registration/financial-aid/">財務補助</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/2020/zh-hant/venue/">
+			會場
+		</a>
+</li>
+<li>
+<a href="/2020/zh-hant/covid-19/guidelines/">
+			COVID-19 防疫守則
+		</a>
+</li>
+<li class="dashboard-item">
+<a href="/2020/zh-hant/dashboard/">My PyCon</a>
+</li>
+</ul>
+<div class="navbar-social-mobile">
+<a aria-label="部落格" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+<div class="shadow">
+<i class="twicon-provintia"></i>
+</div>
+</nav>
+</div>
+<header class="page-hero">
+<nav class="menu-navbar-desktop">
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/2020/zh-hant/about/pycontw/">
+			關於
+		</a>
+</li>
+<!-- -->
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-conference" type="checkbox"/>
+<label class="active" for="menu-navbar-desktop-conference">
+			議程
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/zh-hant/conference/schedule/">時間表</a></li>
+<li><a href="/2020/zh-hant/conference/keynotes/">基調演講</a></li>
+<li><a href="/2020/zh-hant/conference/talks/">一般演講</a></li>
+<li><a href="/2020/zh-hant/conference/tutorials/">專業課程</a></li>
+<li><a href="/2020/zh-hant/conference/community-track/">社群軌</a></li>
+<!--<li><a href="/2020/zh-hant/speaking/recording/">錄影</a></li>-->
+<!-- <li><a href="/2020/zh-hant/portal/">傳送門</a></li> -->
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-events" type="checkbox"/>
+<label for="menu-navbar-desktop-events">
+			活動
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/zh-hant/events/overview/">總覽</a></li>
+<li><a href="/2020/zh-hant/events/warmup-session/">暖身活動</a></li>
+<li><a href="/2020/zh-hant/events/open-spaces/">開放空間</a></li>
+<li><a href="/2020/zh-hant/events/sprints/">衝刺開發</a></li>
+<li><a href="/2020/zh-hant/events/job-listings/">徵才資訊</a></li>
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-registration" type="checkbox"/>
+<label for="menu-navbar-desktop-registration">
+			註冊
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/zh-hant/registration/ticket-info/">會議門票</a></li>
+<li><a href="/2020/zh-hant/registration/financial-aid/">財務補助</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/2020/zh-hant/venue/">
+			會場
+		</a>
+</li>
+<li>
+<a href="/2020/zh-hant/covid-19/guidelines/">
+			COVID-19 防疫守則
+		</a>
+</li>
+<li class="dashboard-item">
+<a href="/2020/zh-hant/dashboard/">My PyCon</a>
+</li>
+</ul>
+</nav>
+</header>
+<main>
+<section class="pill-title alt-2">
+<h1>
+<i class="icon icon-about"></i>Track Machine Learning Applications by MLflow Tracking 
+		
+	</h1>
+</section>
+<section class="content info">
+<ul>
+<li>
+<dfn class="location"></dfn>
+<span>R1</span>
+</li>
+<li>
+<dfn class="slot"></dfn>
+<span>第 1 天，15:55‑16:10</span>
+</li>
+<li>
+<dfn class="category">主題分類：</dfn>
+<span>機器學習</span>
+</li>
+<li>
+<dfn class="language enen">語言：</dfn>
+<span>英文演講</span>
+</li>
+<li>
+<dfn class="python-level intermediate">Python 難易度：</dfn>
+<span>中階</span>
+</li>
+</ul>
+</section>
+<h2>摘要</h2>
+<section class="content">
+<p>Productization of machine learning (ML) solutions can be challenging. Therefore, the concept of operationalization on machine learning (MLOps) has emerged in the past few years for effective model lifecycle management. One of the core aspects of MLOps is "monitoring". </p>
+<p>ML models are built by experimenting with a wide range of datasets. However, since the real data continues to change, it is necessary to monitor and to manage model usage, consumption, and results of models. </p>
+<p>MLflow is an open-source framework designed to manage the end-to-end ML lifecycle with different components. In the talk, the basic concepts of MLflow will be introduced. Then, MLflow Tracking will be the main focus. You will know how to track experiments for recording and comparing parameters and results by MLflow Tracking.</p>
+</section>
+<h2>說明</h2>
+<section class="content editor-readonly">
+<div class="editor-preview">The consumption and usage of ML models highly rely on new training or real-world data. Therefore, how to track and monitor ML applications are very challenging. That will be the main focus for this sharing. This talk will start with the concept of logging, then extend to why we should monitor ML application. 
+
+Finally, the sharing will turn to address how to track and monitor ML applications via MLflow Tracking with good practices. 
+
+#### Materials and sample code
+* https://github.com/sucitw/mlflow_tracking
+
+#### Reference
+* [MLflow Offical Doc](https://mlflow.org/docs/latest/index.html)
+* [MLflow tracking](https://mlflow.org/docs/latest/tracking.html)</div>
+</section>
+<h2>投影片</h2>
+<section class="content">
+<p><a href="https://speakerdeck.com/sucitw/track-machine-learning-applications-by-mlflow-tracking">https://speakerdeck.com/sucitw/track-machine-learning-applications-by-mlflow-tracking</a></p>
+</section>
+<h2>
+	
+	講者
+	
+</h2>
+<article class="media">
+<header>
+<figure>
+<img src="/2020/media/cache/0e/b7/0eb74e292a2bcb6be9519c8d76faae30.jpg"/>
+<figcaption>Shuhsi Lin</figcaption>
+</figure>
+</header>
+<div class="content">
+<p>A data engineer and python programmer. Currently working on various data applications in a manufacturing company.</p>
+<p>Research interests: IoT applications, data streaming processing, data analysis and data visualization.</p>
+<div class="social">
+<a href="https://github.com/sucitw" rel="noopener" target="_blank"><span aria-hidden="true" class="fa fa-github"></span></a>
+<a href="https://twitter.com/ShuhsiLin" rel="noopener" target="_blank"><span aria-hidden="true" class="fa fa-twitter"></span></a>
+</div>
+</div>
+</article>
+<iframe class="slido" src="https://app.sli.do/event/rhhkml4m"></iframe>
+</main>
+<footer>
+<div class="footer-logos">
+<div class="footer-logo"></div>
+</div>
+<ul>
+<li><a href="/2020/zh-hant/about/code-of-conduct/">行為準則</a></li>
+<li><a href="/2020/zh-hant/about/staff/">工作人員</a></li>
+<li><a href="/2020/zh-hant/about/community/">社群</a></li>
+<li><a href="/2020/zh-hant/about/privacy_policy/">個人資料保護聲明</a></li>
+</ul>
+<p class="copyright">2020 PyCon Taiwan</p>
+</footer>
+<script src="/2020/static/CACHE/js/output.378e60111296.js"></script>
+<script src="/2020/static/js/vendors/simplemde.min.js"></script>
+<script src="/2020/static/js/tools/simplemde-setup.js"></script>
+</body>
+</html>

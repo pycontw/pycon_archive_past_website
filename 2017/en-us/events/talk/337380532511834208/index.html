@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Write Elegant Concurrent Code in Python | PyCon Taiwan 2017</title>
+<link href="/2017/static/pycontw-2017/images/favicon.png" rel="icon" type="image/png"/>
+<meta content="" property="og:description"/>
+<meta content="https://tw.pycon.org/2017/static/pycontw-2017/images/og-image.png" property="og:image"/>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed|Ubuntu+Mono:400,400i" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/2017/static/CACHE/css/69b4ae298e4c.css" rel="stylesheet" type="text/css">
+</link></head>
+<body>
+<div class="mother-wrapper">
+<header>
+<a class="btn btn-menu" href="#"></a>
+<a class="btn btn-home" href="/2017/en-us/"></a>
+<nav class="wrapper header-nav">
+<div class="parent lang">
+<a class="btn-show-lang-menu" href="#">
+      	English (US)
+      </a>
+<button class="btn-close"></button>
+</div>
+<a class="header-logo" href="/2017/en-us/"></a>
+<div class="parent to-expand">
+<a href="/2017/en-us/about/pycontw/">
+				about
+			</a>
+<nav class="sub">
+<a href="/2017/en-us/about/pycontw/">pycon taiwan</a>
+<a href="/2017/en-us/about/code-of-conduct/">code of conduct</a>
+</nav>
+</div>
+<div class="parent to-expand active">
+<a href="/2017/en-us/events/overview/">
+				events
+			</a>
+<nav class="sub">
+<a href="/2017/en-us/events/schedule/">schedule</a>
+<a href="/2017/en-us/events/overview/">overview</a>
+<a href="/2017/en-us/events/keynotes/">keynotes</a>
+<a href="/2017/en-us/events/tutorial/">tutorials</a>
+<a href="/2017/en-us/events/unconference/">unconference</a>
+<a href="/2017/en-us/events/sprints/">sprints</a>
+<a href="/2017/en-us/events/bof/">PyNight</a>
+</nav>
+</div>
+<a class="" href="/2017/en-us/venue/">
+			venue
+		</a>
+<a class="" href="/2017/en-us/sponsors/">
+			partners
+		</a>
+<div class="parent to-expand">
+<a href="/2017/en-us/registration/financial-aid/">
+				registration
+			</a>
+<nav class="sub">
+<a href="/2017/en-us/registration/ticket-info/">Ticket Info</a>
+<a href="/2017/en-us/registration/financial-aid/">financial aid</a>
+</nav>
+</div>
+<a href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank">
+			blog
+		</a>
+</nav>
+<nav class="wrapper header-menu-nav">
+<div class="parent lang">
+<a class="btn-back-to-menu" href="#">Back to Menu</a>
+<button class="btn-close"></button>
+</div>
+<div data-lang="zh-hant" style="margin-left: 40px; line-height: 60px;"> <a href='/2017/zh-hant/events/talk/337380532511834208/' style="font-size: 16px;">繁體中文</a></div>
+<a class="active" data-lang="en-us" href="/2017/en-us/events/talk/337380532511834208/">
+    	English (US)
+    </a>
+</nav>
+<nav class="control-nav">
+<a class="dashboard" href="/2017/en-us/dashboard/">
+			dashboard
+		</a>
+<div class="parent lang">
+<a href="#">English (US)</a>
+<nav class="sub">
+<div data-lang="zh-hant" style="margin-left: 20px;"> <a href='/2017/zh-hant/events/talk/337380532511834208/'>繁體中文</a></div>
+<a data-lang="en-us" href="/2017/en-us/events/talk/337380532511834208/">
+					English (US)
+				</a>
+</nav>
+</div>
+<nav class="social">
+<a class="fa fa-facebook" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a class="fa fa-envelope-o" href="mailto:organizers@pycon.tw" rel="noopener" target="_blank"></a>
+</nav>
+</nav>
+</header>
+<form  id="nav-lang-form" method="post">
+
+<input name="next" type="hidden"/>
+<input name="language" type="hidden"/>
+</form>
+<div class="wrapper">
+<main class="inner-wrapper">
+<h1><span>Write Elegant Concurrent Code in Python</span></h1>
+<section class="talk-info-section">
+<article class="classification-block">
+<ul class="classification-list">
+<li><span aria-hidden="true" class="label fa fa-map-marker"></span>R0</li>
+<li><span aria-hidden="true" class="label fa fa-clock-o"></span>Day 3, 11:15‑12:00</li>
+<li><span aria-hidden="true" class="label">ZE</span>Chinese talk w. English slides</li>
+<li><span aria-hidden="true" class="label fa fa-tag"></span>Best Practices &amp; Patterns</li>
+<li><span aria-hidden="true" class="label">=</span>Intermediate</li>
+</ul>
+</article>
+<article class="abstract-block"><p>Writing concurrent program is hard; maintaining concurrent program even is a nightmare. Actually, a pattern which helps us to write good concurrent code is available, that is, using “channels” to communicate. This talk will share the channel concept with common libraries, like threading and multiprocessing, to make concurrent code elegant.</p>
+<p>撰寫並行程式（concurrent program），例如多執行緒程式等，通常是困難的，而維護並行程式又是一場惡夢。其實有個方法可以寫出好的並行程式，只要使用 channel 做為溝通基礎，就可以寫出好維護的並行程式。這場演講會介紹如何在常見的函數庫，例如 threading、multiprocessing 等，中引入 channel 的概念，讓並行程式變得優雅。</p></article>
+</section>
+<h2>Talk Detail</h2>
+<article class="editor-readonly">
+<div class="editor-preview">The concept of channel is from the CSP (communicating sequential processes). It's a famous mathematical theory of concurrent systems [1]. The Go (golang) uses it as its fundamental concurrency design [2]. The programmers can design simpler and more maintainable concurrent code with this theory [3].
+
+Although the CSP is not a part of Python, but we still can use common libraries to realize CSP and write better concurrent code. This talk will introduce how to use common Python libraries to realize CSP.
+
+Channel 這個概念是來自於 CSP（communicating sequential processes），其是一個著名的並行系統（concurrent system）的數學理論 [1]，並獲得 Go（golang）採用作為其並行設計的基礎 [2]，使用此理論可以設計出較為簡單、好維護的並行程式 [3]。
+
+雖然 Python 並沒有將 CSP 設計成語言的一部份，但我們仍可以利用常見函數庫內的工具實現 CSP，寫出更好維護的並行程式。這場演講會介紹利用 Python 常見函數庫實現 CSP 的方法。
+
+[1]: https://en.wikipedia.org/wiki/Communicating_sequential_processes
+[2]: https://golang.org/doc/effective_go.html#concurrency
+[3]: https://golang.org/doc/faq#csp</div>
+</article>
+<h3>Slides Link</h3>
+<article><a href="https://speakerdeck.com/mosky/elegant-concurrency">https://speakerdeck.com/mosky/elegant-concurrency</a></article>
+<h2 id="speaker-content">Speaker Information</h2>
+<h3>
+	Mosky Liu
+	<span class="speaker-social">
+<a href="https://github.com/moskytw" target="_blank">
+<span aria-hidden="true" class="fa fa-github"></span>
+</a>
+<a href="https://twitter.com/moskytw" target="_blank">
+<span aria-hidden="true" class="fa fa-twitter"></span>
+</a>
+<a href="https://www.facebook.com/mosky.liu" target="_blank">
+<span aria-hidden="true" class="fa fa-facebook"></span>
+</a>
+</span>
+</h3>
+<div class="speaker-detail-info speaker-detail-info-has-photo">
+<img class="speaker-photo" src="/2017/media/avatars/58428409247694894/2017-03-12-DSC_0612_square.png"/>
+<article class="speaker-bio"><p>Mosky 是個熱愛 open source 精神的 Python 工程師，也是 Pinkoi 的 Python Charmer，工作時和同事一起打造能夠買到獨特禮物的設計品購物平台。</p>
+<p>自從寫下人生第一支程式後，就難以忘懷以敘述為磚、邏輯為泥，堆砌出腦中藍圖的成就感，也熱愛分享自己所學，業餘時是 Python 課程講師，偶爾講點資料科學。也是數場國內外研討會的講者，包含臺灣的 PyCon、COSCUP、TEDxNTUST，以及在日本、新加坡、香港、韓國、馬來西亞等地的 PyCon。More: mosky.tw 。</p></article>
+</div>
+</main>
+</div>
+<div class="push"></div>
+</div>
+<footer>
+<nav class="social">
+<a class="fa fa-facebook" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a class="fa fa-envelope-o" href="mailto:organizers@pycon.tw" rel="noopener" target="_blank"></a>
+</nav>
+</footer>
+<script>GA_TRACK_ID = 'UA-28961467-1';</script>
+<script src="/2017/static/js/vendors/google_analytics.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+<script src="/2017/static/CACHE/js/59244b458bbb.js" type="text/javascript"></script>
+<script src="/2017/static/js/vendors/simplemde.min.js"></script>
+<script src="/2017/static/js/tools/simplemde-setup.js"></script>
+</body>
+</html>

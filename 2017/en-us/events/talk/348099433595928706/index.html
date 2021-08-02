@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Deep Learning Based Object Detection (Fast R-CNN) in the Microsoft Cognitive Toolkit | PyCon Taiwan 2017</title>
+<link href="/2017/static/pycontw-2017/images/favicon.png" rel="icon" type="image/png"/>
+<meta content="" property="og:description"/>
+<meta content="https://tw.pycon.org/2017/static/pycontw-2017/images/og-image.png" property="og:image"/>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed|Ubuntu+Mono:400,400i" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/2017/static/CACHE/css/69b4ae298e4c.css" rel="stylesheet" type="text/css">
+</link></head>
+<body>
+<div class="mother-wrapper">
+<header>
+<a class="btn btn-menu" href="#"></a>
+<a class="btn btn-home" href="/2017/en-us/"></a>
+<nav class="wrapper header-nav">
+<div class="parent lang">
+<a class="btn-show-lang-menu" href="#">
+      	English (US)
+      </a>
+<button class="btn-close"></button>
+</div>
+<a class="header-logo" href="/2017/en-us/"></a>
+<div class="parent to-expand">
+<a href="/2017/en-us/about/pycontw/">
+				about
+			</a>
+<nav class="sub">
+<a href="/2017/en-us/about/pycontw/">pycon taiwan</a>
+<a href="/2017/en-us/about/code-of-conduct/">code of conduct</a>
+</nav>
+</div>
+<div class="parent to-expand active">
+<a href="/2017/en-us/events/overview/">
+				events
+			</a>
+<nav class="sub">
+<a href="/2017/en-us/events/schedule/">schedule</a>
+<a href="/2017/en-us/events/overview/">overview</a>
+<a href="/2017/en-us/events/keynotes/">keynotes</a>
+<a href="/2017/en-us/events/tutorial/">tutorials</a>
+<a href="/2017/en-us/events/unconference/">unconference</a>
+<a href="/2017/en-us/events/sprints/">sprints</a>
+<a href="/2017/en-us/events/bof/">PyNight</a>
+</nav>
+</div>
+<a class="" href="/2017/en-us/venue/">
+			venue
+		</a>
+<a class="" href="/2017/en-us/sponsors/">
+			partners
+		</a>
+<div class="parent to-expand">
+<a href="/2017/en-us/registration/financial-aid/">
+				registration
+			</a>
+<nav class="sub">
+<a href="/2017/en-us/registration/ticket-info/">Ticket Info</a>
+<a href="/2017/en-us/registration/financial-aid/">financial aid</a>
+</nav>
+</div>
+<a href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank">
+			blog
+		</a>
+</nav>
+<nav class="wrapper header-menu-nav">
+<div class="parent lang">
+<a class="btn-back-to-menu" href="#">Back to Menu</a>
+<button class="btn-close"></button>
+</div>
+<div data-lang="zh-hant" style="margin-left: 40px; line-height: 60px;"> <a href='/2017/zh-hant/events/talk/348099433595928706/' style="font-size: 16px;">繁體中文</a></div>
+<a class="active" data-lang="en-us" href="/2017/en-us/events/talk/348099433595928706/">
+    	English (US)
+    </a>
+</nav>
+<nav class="control-nav">
+<a class="dashboard" href="/2017/en-us/dashboard/">
+			dashboard
+		</a>
+<div class="parent lang">
+<a href="#">English (US)</a>
+<nav class="sub">
+<div data-lang="zh-hant" style="margin-left: 20px;"> <a href='/2017/zh-hant/events/talk/348099433595928706/'>繁體中文</a></div>
+<a data-lang="en-us" href="/2017/en-us/events/talk/348099433595928706/">
+					English (US)
+				</a>
+</nav>
+</div>
+<nav class="social">
+<a class="fa fa-facebook" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a class="fa fa-envelope-o" href="mailto:organizers@pycon.tw" rel="noopener" target="_blank"></a>
+</nav>
+</nav>
+</header>
+<form  id="nav-lang-form" method="post">
+
+<input name="next" type="hidden"/>
+<input name="language" type="hidden"/>
+</form>
+<div class="wrapper">
+<main class="inner-wrapper">
+<h1><span>Deep Learning Based Object Detection (Fast R-CNN) in the Microsoft Cognitive Toolkit</span></h1>
+<section class="talk-info-section">
+<article class="classification-block">
+<ul class="classification-list">
+<li><span aria-hidden="true" class="label fa fa-map-marker"></span>R1</li>
+<li><span aria-hidden="true" class="label fa fa-clock-o"></span>Day 2, 17:25‑18:10</li>
+<li><span aria-hidden="true" class="label">ZE</span>Chinese talk w. English slides</li>
+<li><span aria-hidden="true" class="label fa fa-tag"></span>Data Analysis</li>
+<li><span aria-hidden="true" class="label">=</span>Intermediate</li>
+</ul>
+</article>
+<article class="abstract-block"><p>This session showcases work on generic object detection using deep learning. We use the state-of-the-art object detector in the Microsoft Cognitive Toolkit (CNTK) called Fast R-CNN based on Python. Fast R-CNN is based on a Deep Neural Network which was pre-trained on millions of images.</p></article>
+</section>
+<h2>Talk Detail</h2>
+<article class="editor-readonly">
+<div class="editor-preview">The objective of the talk is to describe the DNN technology and show the full object detection pipeline encompassing image annotation, model training, evaluation. 
+Fast R-CNN is a fast framework for object detection with deep ConvNets.Fast R-CNN was initially described in an [arXiv tech report](http://arxiv.org/abs/1504.08083) and later published at ICCV 2015.
+Microsoft Cognitive Toolkit (CNTK), an MIT Licensed open source deep-learning toolkitthat describes neural networks as a series of computational steps via a directed graph. It supports both Linux and Windows. Based on researchers at HKBU, CNTK’s LSTM performance is 5-10x faster than the other toolkits. 
+The session introduct how to combine the state of art algoritm and toolkit to do image  Object Detection.</div>
+</article>
+<h3>Slides Link</h3>
+<article><a href="https://www.slideshare.net/zobeide/cntk-deep-learning-based-object-detection-with-microsoft-cognitive-toolkit-cntk">https://www.slideshare.net/zobeide/cntk-deep-learning-based-object-detection-with-microsoft-cognitive-toolkit-cntk</a></article>
+<h2 id="speaker-content">Speaker Information</h2>
+<h3>
+	Herman Wu
+	<span class="speaker-social">
+<a href="https://github.com/Herman-Wu" target="_blank">
+<span aria-hidden="true" class="fa fa-github"></span>
+</a>
+<a href="https://twitter.com/hermanwu01" target="_blank">
+<span aria-hidden="true" class="fa fa-twitter"></span>
+</a>
+<a href="https://www.facebook.com/herman.wu.716" target="_blank">
+<span aria-hidden="true" class="fa fa-facebook"></span>
+</a>
+</span>
+</h3>
+<div class="speaker-detail-info">
+<article class="speaker-bio"><p>Been a Java Developers for 3 years. <br/>Work at Microsoft as a sr. software engineer.</p></article>
+</div>
+</main>
+</div>
+<div class="push"></div>
+</div>
+<footer>
+<nav class="social">
+<a class="fa fa-facebook" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a class="fa fa-envelope-o" href="mailto:organizers@pycon.tw" rel="noopener" target="_blank"></a>
+</nav>
+</footer>
+<script>GA_TRACK_ID = 'UA-28961467-1';</script>
+<script src="/2017/static/js/vendors/google_analytics.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+<script src="/2017/static/CACHE/js/59244b458bbb.js" type="text/javascript"></script>
+<script src="/2017/static/js/vendors/simplemde.min.js"></script>
+<script src="/2017/static/js/tools/simplemde-setup.js"></script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>      <html lang="zh-hant" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="zh-hant" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="zh-hant" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-hant"> <!--<![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="/2016/static/images/favicon_pyconTW_32x32.png" rel="icon" type="image/png"/>
+<meta content="" property="og:description"/>
+<meta content="http://tw.pycon.org/2016/static/images/PyConTW2016_facebook_shareImage.png" property="og:image"/>
+<link href="/2016/static/CACHE/css/40914c7a23b1.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css"/>
+<link href="https://fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet" type="text/css"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+<!--[if lt IE 9]>
+  <script src="/2016/static/js/html5shiv.min.js"></script>
+  <script src="/2016/static/js/respond.min.js"></script>
+  <![endif]-->
+<!-- justfont webfont -->
+<!-- <script src="/2016/static/js/vendors/justfont.js"></script> -->
+<title>什麼是色彩管理 &amp; 用 Python 自幹一個好嗎 ? | PyCon Taiwan 2016</title>
+</link></head>
+<body class="">
+<nav class="navbar navbar-default navbar-fe navbar-site">
+<div class="clearfix container-fluid">
+<div class="navbar-header">
+<button class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button">
+<span class="sr-only">展開導覽列</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="/2016/zh-hant/">
+<img alt="logo" class="logo hidden-xs" height="24" src="/2016/static/images/logo-tiny--reverse@2x.png" width="133"/>
+<img alt="logo" class="logo visible-xs-inline" height="30" src="/2016/static/images/LogoIcon_white@2x.png" width="42"/>
+</a>
+</div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="navbar">
+<ul class="nav navbar-nav navbar-nav-hover">
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">關於</a>
+<ul class="dropdown-menu">
+<li><a href="/2016/zh-hant/about/pycontw/">PyCon TW</a></li>
+<li><a href="/2016/zh-hant/about/code-of-conduct/">行為準則</a></li>
+<li><a href="/2016/zh-hant/about/staff/">工作人員</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="active dropdown-toggle" data-toggle="dropdown" href="#" role="button">活動</a>
+<ul class="dropdown-menu">
+<li><a href="/2016/zh-hant/events/overview/">總覽</a></li>
+<li><a href="/2016/zh-hant/events/schedule/">Schedule</a></li>
+<li><a href="/2016/zh-hant/events/keynotes/">主題演講</a></li>
+<li><a href="/2016/zh-hant/events/talks/">演講</a></li>
+<li><a href="/2016/zh-hant/events/sprints/">Sprints</a></li>
+<li><a href="/2016/zh-hant/events/bof/">BoF</a></li>
+<li><a href="/2016/zh-hant/events/pyday/">PyDay</a></li>
+<li><a href="/2016/zh-hant/events/tutorials/">教學</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">會場</a>
+<ul class="dropdown-menu">
+<li><a href="/2016/zh-hant/venue/">會場</a></li>
+<li><a href="/2016/zh-hant/venue/accommodation/">住宿</a></li>
+</ul>
+</li><!-- /.dropdown -->
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">贊助</a>
+<ul class="dropdown-menu">
+<li><a href="/2016/zh-hant/sponsors/">贊助夥伴</a></li>
+<li><a href="http://pycontw.kktix.cc/events/pycontw2016patron" target="_blank">個人贊助</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">註冊</a>
+<ul class="dropdown-menu">
+<li><a href="/2016/zh-hant/registration/ticket-info/">售票資訊</a></li>
+<li><a href="/2016/zh-hant/registration/financial-aid/">財務補助</a></li>
+</ul>
+</li><!-- /.dropdown -->
+<li><a href="http://pycontw.blogspot.tw/" target="_blank">部落格</a></li>
+<li><a href="/2016/zh-hant/dashboard/" target="_blank"><span class="em">控制面板</span></a></li>
+</ul>
+<div class="social pull-right">
+<a class="social-btn" href="https://www.facebook.com/pycontw" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+</a>
+<a class="social-btn" href="https://twitter.com/pycontw" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+</a>
+<a class="social-btn" href="mailto:organizers@pycon.tw" target="_blank">
+<i class="fa fa-envelope"></i>
+</a>
+</div>
+<ul class="nav navbar-nav navbar-lang navbar-right">
+<li class="dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn" data-toggle="dropdown" href="#" role="button"> 繁體中文
+               <span class="caret"></span>
+</a>
+<ul class="dropdown-menu">
+<li class="active">
+<a data-lang="zh-hant" href="/2016/zh-hant/events/talk/66630011804713004/">
+                  繁體中文
+                </a>
+</li>
+<li>
+<a data-lang="en-us" href="/2016/en-us/events/talk/66630011804713004/">
+                  English (US)
+                </a>
+</li>
+</ul>
+</li>
+</ul>
+<!-- Fallback version of form selection -->
+<form  class="navbar-form navbar-right navbar-lang" method="post">
+
+<input name="next" type="hidden" value="/2016/events/talk/66630011804713004/"/>
+<select class="form-control input-sm" id="language-select" name="language">
+<option selected="" value="zh-hant">
+                        繁體中文
+                    </option>
+<option value="en-us">
+                        English (US)
+                    </option>
+</select>
+<noscript>
+<button class="btn" type="submit">修改</button>
+</noscript>
+</form>
+</div>
+</div>
+<!-- /.navbar-collapse -->
+
+<!-- /.container-fluid -->
+</nav>
+<div class="content-page-title">
+<div class="content-container container">
+<h1>什麼是色彩管理 &amp; 用 Python 自幹一個好嗎 ?</h1>
+</div>
+</div>
+<div class="content-container container content-page-content talk-detail-content">
+<div class="proposal-content">
+<h3>語言</h3>
+<div>中文演講/中文投影片</div>
+<h3>分類</h3>
+<div>圖像處理</div>
+<h3>Python 難易度</h3>
+<div>中階</div>
+<h3>投影片連結</h3>
+<div><a href="https://goo.gl/DOZ92g">https://goo.gl/DOZ92g</a></div>
+<h2>摘要</h2>
+<div><p>色彩管理目前被廣泛使用在作業系統/影像編修程式/廣告、美術、印刷、顯示產業等，重要性如同空氣一樣，我們每天接觸但卻沒有真正意識到它的存在。 色彩管理是甚麼 ? 如何將色彩管理程式化 ? 如何(適合)用 python 來實作一個麼?<br/>我們來瞧瞧 !<br/>* [補習] 將會介紹色彩定義/管理/轉換的知識<br/>* [仲介] 介紹 python 的色彩管理套件 (Pillow.ImageCms based on pyCMS)<br/>* [我是builder我自ㄍㄢˋ] side-project架構</p>
+<p>CAUTION - 此演講不會有詳細 python 技術探討, 而是一位想用 python 自刻一套色彩管理系統, 進而瞭解整個色彩管理系統的宅宅的研究心得.</p></div>
+<h2>說明</h2>
+<div class="editor-readonly">
+<div class="editor-preview">當你透過相機的觀景窗拍了張照片, 你認為這張照片的顏色就像若瑄一樣正,
+結果將相片存入電腦時用小畫家打開來看卻發現顏色歪成雪芙(還是很正啊~ 只是哪裡怪怪的..)
+
+當你看到雜誌上的美食栩栩如生令人食指大動, 用掃描機掃下來/手機拍起來, 傳給好朋友約下次一起去品嚐,
+朋友卻告訴你, 看起來讓他/她沒有胃口, What's going wrong ?
+
+每個人感知的顏色都略有不同, 如何定義出一套包含所有可能的顏色的色彩系統,
+甚至讓不同色彩空間的顏色可以交互轉換, 是門相當基礎但重要的學問.
+想知道更多 (http://content.teldap.tw/index/blog/?p=1640)
+
+所以會
+1. 介紹顏色從何何來
+2. CIE-RGB如何出現, 如何從CIE-RGB轉變成CIE-XYZ(虛擬顏色空間),
+3. 如何讓各種顏色空間在不同設備轉換而達到一致的顏色效果 (ICC Profile &amp; Color management system)
+4. 介紹 Pillow.ImageCms based on pyCMS
+5. Side project 當前的進度 &amp; demo 色彩轉換
+*Slide - https://goo.gl/DOZ92g</div>
+</div>
+</div>
+<div class="speaker-content" id="speaker-content">
+<h3>
+		Kilik Kuo
+		<span class="speaker-social">
+<a href="https://github.com/kilikkuo" target="_blank">
+<span aria-hidden="true" class="fa fa-github"></span>
+</a>
+<a href="https://www.facebook.com/kilik.kuo" target="_blank">
+<span aria-hidden="true" class="fa fa-facebook"></span>
+</a>
+</span>
+</h3>
+<div class="row">
+<div class="col-sm-4 col-sm-push-8 speaker-photo-contain">
+<img class="speaker-photo" src="/2016/media/avatars/66611363853631555/2016-03-03-kilik.resized.jpg"/>
+</div>
+<div class="col-sm-8 col-sm-pull-4"><p>改變自己先, 影響世界後.</p>
+<p>https://www.linkedin.com/in/kilik-kuo-3923a454/</p></div>
+</div>
+</div>
+</div>
+<footer class="footer container-fluid text-center">
+<div class="row clearfix">
+<div class="col-md-2">2016 PyCon Taiwan</div>
+<div class="col-md-8 hidden-xs hidden-sm">
+<img class="logo" height="24" src="/2016/static/images/Logo_pycontw16_blue_footer@2x.png" width="133"/>
+</div>
+<div class="social col-md-2 text-center">
+<a class="social-btn" href="https://www.facebook.com/pycontw" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+</a>
+<a class="social-btn" href="https://twitter.com/pycontw" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+</a>
+<a class="social-btn" href="mailto:organizers@pycon.tw" target="_blank">
+<i class="fa fa-envelope"></i>
+</a>
+</div>
+</div>
+</footer>
+<script src="/2016/static/CACHE/js/6c8feda299eb.js" type="text/javascript"></script>
+<script src="/2016/static/js/vendors/simplemde.js"></script>
+<script src="/2016/static/js/tools/simplemde-setup.js"></script>
+</body>
+</html>

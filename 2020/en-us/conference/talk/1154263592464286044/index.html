@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>誰識KOL? 2020台灣總統大選在 Facebook 上的社群網絡分析 | PyCon Taiwan 2020</title>
+<link href="/2020/static/pycontw-2020/assets/favicon/favicon.ico" rel="shortcut icon"/>
+<link href="/2020/static/pycontw-2020/assets/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/2020/static/pycontw-2020/assets/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/2020/static/pycontw-2020/assets/favicon/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="" property="og:description"/>
+<meta content="https://tw.pycon.org/2020/static/pycontw-2020/assets/og-image.png" property="og:image"/>
+<link href="https://fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,600,700|Raleway:300,400|Philosopher|Quicksand&amp;display=swap" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
+<link href="/2020/static/CACHE/css/output.40e16f90c8a1.css" rel="stylesheet" type="text/css"/>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNZ39PD');</script>
+</head>
+<body class="talk-detail">
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-TNZ39PD" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<div data-controller="topNav">
+<nav class="top-navbar">
+<div class="navbar-left">
+<form  class="navbar-lang-switch" method="post">
+
+<input name="next" type="hidden" value="/2020/conference/talk/1154263592464286044/"/>
+<button name="language" type="submit" value="zh-hant">
+                    <a href='/2020/zh-hant/conference/talk/1154263592464286044/' style="text-decoration: none;">ZH</a>
+                </button>
+<button disabled="disabled" name="language" type="submit" value="en-us">
+                    EN
+                </button>
+</form>
+<a href="/2020/en-us/"><i class="twicon-provintia navbar-provintia"></i></a>
+<a class="navbar-brand" href="/2020/en-us/">PyCon TW20</a>
+</div>
+<button aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler no-script" data-action="topNav#toggle" data-target="topNav.toggler" type="button">
+<div><span></span><span></span><span></span></div>
+</button>
+<div class="navbar-social-desktop">
+<a aria-label="Blog" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+</nav>
+<nav class="menu-navbar-mobile no-script" data-target="topNav.menu">
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/2020/en-us/about/pycontw/">
+			About
+		</a>
+</li>
+<!-- -->
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-conference" type="checkbox"/>
+<label class="active" for="menu-navbar-mobile-conference">
+			Conference
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/en-us/conference/schedule/">Schedule</a></li>
+<li><a href="/2020/en-us/conference/keynotes/">Keynotes</a></li>
+<li><a href="/2020/en-us/conference/talks/">Talks</a></li>
+<li><a href="/2020/en-us/conference/tutorials/">Tutorials</a></li>
+<li><a href="/2020/en-us/conference/community-track/">Community Track</a></li>
+<!--<li><a href="/2020/en-us/speaking/recording/">Recording</a></li>-->
+<!-- <li><a href="/2020/en-us/portal/">Portal</a></li> -->
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-events" type="checkbox"/>
+<label for="menu-navbar-mobile-events">
+			Events
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/en-us/events/overview/">Overview</a></li>
+<li><a href="/2020/en-us/events/warmup-session/">Warm-Up Session</a></li>
+<li><a href="/2020/en-us/events/open-spaces/">Open Spaces</a></li>
+<li><a href="/2020/en-us/events/sprints/">Sprints</a></li>
+<li><a href="/2020/en-us/events/job-listings/">Job Listings</a></li>
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-registration" type="checkbox"/>
+<label for="menu-navbar-mobile-registration">
+			Registration
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/en-us/registration/ticket-info/">Conference Ticket</a></li>
+<li><a href="/2020/en-us/registration/financial-aid/">Financial Aid</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/2020/en-us/venue/">
+			Venue
+		</a>
+</li>
+<li>
+<a href="/2020/en-us/covid-19/guidelines/">
+			COVID-19 Guidelines
+		</a>
+</li>
+<li class="dashboard-item">
+<a href="/2020/en-us/dashboard/">My PyCon</a>
+</li>
+</ul>
+<div class="navbar-social-mobile">
+<a aria-label="Blog" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+<div class="shadow">
+<i class="twicon-provintia"></i>
+</div>
+</nav>
+</div>
+<header class="page-hero">
+<nav class="menu-navbar-desktop">
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/2020/en-us/about/pycontw/">
+			About
+		</a>
+</li>
+<!-- -->
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-conference" type="checkbox"/>
+<label class="active" for="menu-navbar-desktop-conference">
+			Conference
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/en-us/conference/schedule/">Schedule</a></li>
+<li><a href="/2020/en-us/conference/keynotes/">Keynotes</a></li>
+<li><a href="/2020/en-us/conference/talks/">Talks</a></li>
+<li><a href="/2020/en-us/conference/tutorials/">Tutorials</a></li>
+<li><a href="/2020/en-us/conference/community-track/">Community Track</a></li>
+<!--<li><a href="/2020/en-us/speaking/recording/">Recording</a></li>-->
+<!-- <li><a href="/2020/en-us/portal/">Portal</a></li> -->
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-events" type="checkbox"/>
+<label for="menu-navbar-desktop-events">
+			Events
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/en-us/events/overview/">Overview</a></li>
+<li><a href="/2020/en-us/events/warmup-session/">Warm-Up Session</a></li>
+<li><a href="/2020/en-us/events/open-spaces/">Open Spaces</a></li>
+<li><a href="/2020/en-us/events/sprints/">Sprints</a></li>
+<li><a href="/2020/en-us/events/job-listings/">Job Listings</a></li>
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-registration" type="checkbox"/>
+<label for="menu-navbar-desktop-registration">
+			Registration
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/en-us/registration/ticket-info/">Conference Ticket</a></li>
+<li><a href="/2020/en-us/registration/financial-aid/">Financial Aid</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/2020/en-us/venue/">
+			Venue
+		</a>
+</li>
+<li>
+<a href="/2020/en-us/covid-19/guidelines/">
+			COVID-19 Guidelines
+		</a>
+</li>
+<li class="dashboard-item">
+<a href="/2020/en-us/dashboard/">My PyCon</a>
+</li>
+</ul>
+</nav>
+</header>
+<main>
+<section class="pill-title alt-2">
+<h1>
+<i class="icon icon-about"></i>誰識KOL? 2020台灣總統大選在 Facebook 上的社群網絡分析 
+		
+	</h1>
+</section>
+<section class="content info">
+<ul>
+<li>
+<dfn class="location"></dfn>
+<span>R1</span>
+</li>
+<li>
+<dfn class="slot"></dfn>
+<span>Day 2, 11:10‑11:40</span>
+</li>
+<li>
+<dfn class="category">Category: </dfn>
+<span>Data Analysis</span>
+</li>
+<li>
+<dfn class="language zhzh">Language: </dfn>
+<span>Chinese talk w. Chinese slides</span>
+</li>
+<li>
+<dfn class="python-level intermediate">Python Level: </dfn>
+<span>Intermediate</span>
+</li>
+</ul>
+</section>
+<h2>Abstract</h2>
+<section class="content">
+<p>KOL 是指在群眾中廣泛地被人們信任並能引導決策的核心人物，因此如何從複雜的社群網絡中找出並認識 KOL 便成為了非常重要的議題！在這次的演講中我將與大家分享我透過 Python 分析 2020台灣總統大選 3 位候選人 Facebook 粉絲專頁資料的發現。首先我以 igraph 套件展開社群網絡分析(SNA)，藉由民眾間的互動行為資料(互動的廣度與強度)，找出位在網絡核心的 KOL。並且透過 sklearn 套件的 LDA 分析進行自然語言處理(NLP)的主題分析(Topic Model)，剖析 KOL 的留言內容並從中萃取出許多在選舉過程中被廣泛討論的熱門話題。最終我結合了 SNA 與 NLP 的分析結果，並視覺化成二維的分析圖，能夠幫助我們快速了解社群網絡的樣貌以及不同社群討論話題的差異與態度。而各產業、公司也可以依據各自擁有的網絡資料進行 SNA 並對資料進行加值，找出並認識屬於你們的 KOL！</p>
+</section>
+<h2>Description</h2>
+<section class="content editor-readonly">
+<div class="editor-preview"># Python 應用
+由於 Python 的優雅、明確、簡單等設計哲學，如今已成為我們在進行網路爬蟲、分析、建模、視覺化等等任務時最首要選擇的程式語言。我透過 Python 開發了 Facebook 的網路爬蟲程式並藉此爬取了 3 位總統候選人公開的粉絲專頁資料後，共爬取了 1,794 則貼文， 5,253,125 則留言與 1,819,293 則回覆。因此以下我將透過 Python 針對這些資料展開 SNA 與 NLP 的分析。
+
+# SNA
+在這裡我透過民眾彼此間的留言與回覆資料，並經過簡單的資料清理流程，最終整理出的 Graph Data 共有 379,706 個 node 與 605, 186 個 edge。接著我們就可以透過節點在網絡中的重要性來找出位在網絡核心的 KOL，節點重要性評估指標有相當多種，具體在應用時會隨著不同的分析場景而有不同的選擇，在此我藉由 PageRank 來評估節點的重要性，並藉此找出位在網絡核心的 KOL，接著我進一步透過社群偵測演算法針對這些 KOL 間的互動行為進行分群，幫助我們快速了解 KOL 的群體狀況與行為。分析的結果發現 KOL 可以區分成 5 大群體，除了單純支持 宋 / 韓 / 蔡等3位候選人的群體之外，還發現了兩個穿梭在不同陣營間的社群，在網絡中扮演了溝通的角色。
+
+# NLP
+緊接著我透過 KOL 的留言內容進行主題分析嘗試從中萃取出在選舉過程中被廣泛討論的熱門話題。由於留言內容屬於非結構化的文本資料，因此會需要針對資料進行文本特徵的處理流程才能展開分析，包含建構詞典、斷詞、轉換為詞頻矩陣等等。處理後的分析結果發現，KOL 討論的話題相當豐富，包含了國家主權、博士論文、帶職參選...等等都是 KOL 經常討論的話題。藉由這個階段的分析後，我們就成功的對這些非結構化的文本資料進行加值，並且也藉以賦予了留言更豐富的意義。
+
+# 綜合分析
+由於這次演講目的是結合 SNA 與 NLP 的分析，嘗試找出並認識位在網絡核心的 KOL。因此在這裡不針對分析結果進行過多政治意義的解讀，而會將焦點放在檢視不同社群的 KOL 感興趣的話題是否存在差異，以及對於不同話題的態度。分析的結果發現不同社群的KOL討論的話題確實存在差異，而討論話題的差異也導致了部分群體能夠位在網絡的核心(能夠吸引不同的民眾與KOL互動)，反之也有部分社群討論的話題無法吸引其他社群的民眾互動，因為導致位在網絡中邊陲的位置。</div>
+</section>
+<h2>Slides</h2>
+<section class="content">
+<p><a href="https://github.com/TLYu0419/FindAndMeetKOLs/blob/master/FindAndMeetKOLsOnFacebook.pdf">https://github.com/TLYu0419/FindAndMeetKOLs/blob/master/FindAndMeetKOLsOnFacebook.pdf</a></p>
+</section>
+<h2>
+	
+	Speaker
+	
+</h2>
+<article class="media">
+<header>
+<figure>
+<img src="/2020/media/cache/87/de/87de07e1b0fbe0b9f250dc5848768fb7.jpg"/>
+<figcaption>游騰林</figcaption>
+</figure>
+</header>
+<div class="content">
+<p>社會學背景的 Python 開發者，目前在國泰世華擔任數據分析師<br/>https://tlyu0419.github.io/</p>
+<div class="social">
+<a href="https://github.com/TLYu0419" rel="noopener" target="_blank"><span aria-hidden="true" class="fa fa-github"></span></a>
+<a href="https://www.facebook.com/tlyu0419" rel="noopener" target="_blank"><span aria-hidden="true" class="fa fa-facebook"></span></a>
+</div>
+</div>
+</article>
+<iframe class="slido" src="https://app.sli.do/event/epo5hq8q"></iframe>
+</main>
+<footer>
+<div class="footer-logos">
+<div class="footer-logo"></div>
+</div>
+<ul>
+<li><a href="/2020/en-us/about/code-of-conduct/">Code of Conduct</a></li>
+<li><a href="/2020/en-us/about/staff/">Staff</a></li>
+<li><a href="/2020/en-us/about/community/">Community</a></li>
+<li><a href="/2020/en-us/about/privacy_policy/">Privacy Policy</a></li>
+</ul>
+<p class="copyright">2020 PyCon Taiwan</p>
+</footer>
+<script src="/2020/static/CACHE/js/output.378e60111296.js"></script>
+<script src="/2020/static/js/vendors/simplemde.min.js"></script>
+<script src="/2020/static/js/tools/simplemde-setup.js"></script>
+</body>
+</html>

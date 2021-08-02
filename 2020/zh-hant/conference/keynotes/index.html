@@ -1,0 +1,349 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>基調演講 | PyCon Taiwan 2020</title>
+<link href="/2020/static/pycontw-2020/assets/favicon/favicon.ico" rel="shortcut icon"/>
+<link href="/2020/static/pycontw-2020/assets/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/2020/static/pycontw-2020/assets/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/2020/static/pycontw-2020/assets/favicon/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="" property="og:description"/>
+<meta content="https://tw.pycon.org/2020/static/pycontw-2020/assets/og-image.png" property="og:image"/>
+<link href="https://fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,600,700|Raleway:300,400|Philosopher|Quicksand&amp;display=swap" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
+<link href="/2020/static/CACHE/css/output.40e16f90c8a1.css" rel="stylesheet" type="text/css"/>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNZ39PD');</script>
+</head>
+<body class="keynotes-page">
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-TNZ39PD" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<div data-controller="topNav">
+<nav class="top-navbar">
+<div class="navbar-left">
+<form  class="navbar-lang-switch" method="post">
+
+<input name="next" type="hidden" value="/2020/conference/keynotes/"/>
+<button disabled="disabled" name="language" type="submit" value="zh-hant">
+                    ZH
+                </button>
+<button name="language" type="submit" value="en-us">
+                    <a href='/2020/en-us/conference/keynotes/' style="text-decoration: none;">EN</a>
+                </button>
+</form>
+<a href="/2020/zh-hant/"><i class="twicon-provintia navbar-provintia"></i></a>
+<a class="navbar-brand" href="/2020/zh-hant/">PyCon TW20</a>
+</div>
+<button aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler no-script" data-action="topNav#toggle" data-target="topNav.toggler" type="button">
+<div><span></span><span></span><span></span></div>
+</button>
+<div class="navbar-social-desktop">
+<a aria-label="部落格" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+</nav>
+<nav class="menu-navbar-mobile no-script" data-target="topNav.menu">
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/2020/zh-hant/about/pycontw/">
+			關於
+		</a>
+</li>
+<!-- -->
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-conference" type="checkbox"/>
+<label class="active" for="menu-navbar-mobile-conference">
+			議程
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/zh-hant/conference/schedule/">時間表</a></li>
+<li><a href="/2020/zh-hant/conference/keynotes/">基調演講</a></li>
+<li><a href="/2020/zh-hant/conference/talks/">一般演講</a></li>
+<li><a href="/2020/zh-hant/conference/tutorials/">專業課程</a></li>
+<li><a href="/2020/zh-hant/conference/community-track/">社群軌</a></li>
+<!--<li><a href="/2020/zh-hant/speaking/recording/">錄影</a></li>-->
+<!-- <li><a href="/2020/zh-hant/portal/">傳送門</a></li> -->
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-events" type="checkbox"/>
+<label for="menu-navbar-mobile-events">
+			活動
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/zh-hant/events/overview/">總覽</a></li>
+<li><a href="/2020/zh-hant/events/warmup-session/">暖身活動</a></li>
+<li><a href="/2020/zh-hant/events/open-spaces/">開放空間</a></li>
+<li><a href="/2020/zh-hant/events/sprints/">衝刺開發</a></li>
+<li><a href="/2020/zh-hant/events/job-listings/">徵才資訊</a></li>
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-registration" type="checkbox"/>
+<label for="menu-navbar-mobile-registration">
+			註冊
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/zh-hant/registration/ticket-info/">會議門票</a></li>
+<li><a href="/2020/zh-hant/registration/financial-aid/">財務補助</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/2020/zh-hant/venue/">
+			會場
+		</a>
+</li>
+<li>
+<a href="/2020/zh-hant/covid-19/guidelines/">
+			COVID-19 防疫守則
+		</a>
+</li>
+<li class="dashboard-item">
+<a href="/2020/zh-hant/dashboard/">My PyCon</a>
+</li>
+</ul>
+<div class="navbar-social-mobile">
+<a aria-label="部落格" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+<div class="shadow">
+<i class="twicon-provintia"></i>
+</div>
+</nav>
+</div>
+<header class="page-hero">
+<nav class="menu-navbar-desktop">
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/2020/zh-hant/about/pycontw/">
+			關於
+		</a>
+</li>
+<!-- -->
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-conference" type="checkbox"/>
+<label class="active" for="menu-navbar-desktop-conference">
+			議程
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/zh-hant/conference/schedule/">時間表</a></li>
+<li><a href="/2020/zh-hant/conference/keynotes/">基調演講</a></li>
+<li><a href="/2020/zh-hant/conference/talks/">一般演講</a></li>
+<li><a href="/2020/zh-hant/conference/tutorials/">專業課程</a></li>
+<li><a href="/2020/zh-hant/conference/community-track/">社群軌</a></li>
+<!--<li><a href="/2020/zh-hant/speaking/recording/">錄影</a></li>-->
+<!-- <li><a href="/2020/zh-hant/portal/">傳送門</a></li> -->
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-events" type="checkbox"/>
+<label for="menu-navbar-desktop-events">
+			活動
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/zh-hant/events/overview/">總覽</a></li>
+<li><a href="/2020/zh-hant/events/warmup-session/">暖身活動</a></li>
+<li><a href="/2020/zh-hant/events/open-spaces/">開放空間</a></li>
+<li><a href="/2020/zh-hant/events/sprints/">衝刺開發</a></li>
+<li><a href="/2020/zh-hant/events/job-listings/">徵才資訊</a></li>
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-registration" type="checkbox"/>
+<label for="menu-navbar-desktop-registration">
+			註冊
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/zh-hant/registration/ticket-info/">會議門票</a></li>
+<li><a href="/2020/zh-hant/registration/financial-aid/">財務補助</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/2020/zh-hant/venue/">
+			會場
+		</a>
+</li>
+<li>
+<a href="/2020/zh-hant/covid-19/guidelines/">
+			COVID-19 防疫守則
+		</a>
+</li>
+<li class="dashboard-item">
+<a href="/2020/zh-hant/dashboard/">My PyCon</a>
+</li>
+</ul>
+</nav>
+</header>
+<main>
+<!--
+<div class="breadcrumbs">
+  <ol>
+	<li><a href="/2020/zh-hant/">首頁</a></li>
+	<li>活動</li>
+	<li>基調演講</li>
+  </ol>
+</div>
+-->
+<section class="pill-title">
+<h1>基調演講</h1>
+</section>
+<article class="media" id="keynote-speaker-peter-wang">
+<header>
+<figure>
+<img src="/2020/static/pycontw-2020/assets/keynotes/peter-wang.png"/>
+<figcaption>Peter Wang</figcaption>
+</figure>
+<h2 class="title">機器學習時代下的 Python</h2>
+</header>
+<div class="tabbing" data-controller="tabbing">
+<ul class="tabs">
+<li data-action="click-&gt;tabbing#activate" data-target="tabbing.tab">
+							自我介紹
+						</li>
+<li data-action="click-&gt;tabbing#activate" data-target="tabbing.tab">
+							演講
+						</li>
+<li data-action="click-&gt;tabbing#activate" data-target="tabbing.tab">
+								Slido
+							</li>
+</ul>
+<div>
+<article data-target="tabbing.pane">
+<h3 class="tab-title">自我介紹</h3>
+<p>Peter Wang 擁有康奈爾大學物理學學士學位，從事商業科學計算和可視化軟件的開發已超過 15 年。在程式設計及開發方面擁有非常豐富的經驗，涉及的領域亦非常廣泛，其中包含 3D 圖形、地球物理、大數據模擬和可視化、財務風險建模和醫學成像等。</p>
+<p>因在向量計算和互動式可視化基本原理的興趣，使他成為 Anaconda 共同創辦人（過去稱為 Continuum Analytics），並領導開源及社群創新小組。</p>
+<p>作為 PyData 社群和會議的發起者，他投入大量時間和精力發展 Python 資料科學社群，在世界各地的研討會上倡導和傳授 Python。</p>
+<div class="social">
+<a href="https://www.linkedin.com/in/pzwang/" rel="noopener" target="_blank"><span class="fa fa-link"></span></a>
+<a href="https://twitter.com/pwang" rel="noopener" target="_blank"><span class="fa fa-twitter"></span></a>
+<a href="https://github.com/pzwang" rel="noopener" target="_blank"><span class="fa fa-github"></span></a>
+</div>
+</article>
+<article data-target="tabbing.pane">
+<h3 class="tab-title">演講</h3>
+<p>Peter 將會談談他認為 Python 變得熱門的原因。包含 Python 在數據分析領域的優缺點，以及為什麼是個自由開放原始碼軟體、無障礙(初學者友善)語言，及 Python 在機器學習和人工智慧趨勢潮流的世界裡，如何有著不可取代的地位。</p>
+</article>
+<article data-target="tabbing.pane">
+<iframe class="slido" src="https://app.sli.do/event/qnhcqayv"></iframe>
+</article>
+</div>
+</div>
+</article>
+<article class="media" id="keynote-speaker-wenyu-su">
+<header>
+<figure>
+<img src="/2020/static/pycontw-2020/assets/keynotes/wenyu-su.png"/>
+<figcaption>蘇文鈺</figcaption>
+</figure>
+<h2 class="title">新世代的教學思維 - 從機器學習線上平台與入門課程談起</h2>
+</header>
+<div class="tabbing" data-controller="tabbing">
+<ul class="tabs">
+<li data-action="click-&gt;tabbing#activate" data-target="tabbing.tab">
+							自我介紹
+						</li>
+<li data-action="click-&gt;tabbing#activate" data-target="tabbing.tab">
+							演講
+						</li>
+<li data-action="click-&gt;tabbing#activate" data-target="tabbing.tab">
+								Slido
+							</li>
+</ul>
+<div>
+<article data-target="tabbing.pane">
+<h3 class="tab-title">自我介紹</h3>
+<p>蘇文鈺現為成功大學資訊工程系教授，國立交通大學士，紐約大學坦登學院碩博士，史丹佛大學博士後研究，工研院電通所工程師，中華大學資訊工程系副教授。2011 年之前致力於神經網路訊號處理，生理訊號分析，視音訊處理器設計，多核心處理器設計，內嵌記憶體管理與電子系統層工具 OpenESL，2012 年之後轉為致力於音樂音訊處理，機器學習與虛擬管弦樂團。多年來，以提高學生實務實作能力為要旨。<br/>2013 年，有鑒於資訊科技與程式設計日益重要，學生的實作探究能力降低，成立 Program The World Association (PTWA)（社團法人中華民國愛自造者學習協會），2014 年從嘉義東石偏鄉開始，帶領團隊教導偏鄉弱勢中小學學生以程式設計。截至 2020 年，摩頂放踵，足跡遍及 12 個縣市，輔導的學校與非營利組織超過 70 個，受惠的國教學生與教師超過 2500 人。多年來，課程漸趨多元，教學計劃包含 Train The Trainer，看見家鄉，程式與自造巡迴課程，自走車競賽，Coding-X 偏鄉高中職生程式設計，樂塾，特教科技課程。每年舉辦活動超過 70 場。並積極參與成功大學不分系，弱勢招生，上機考特殊選才，線上課程與考試系統等等促進高教進步的工作．多年來，PTWA 以募捐所得進行免費公益教學，雖感艱辛，但是見到弱勢家庭孩子得以成長，頗為欣慰。<br/>2018 年，有鑒於人工智慧的日益重要，但是多數課程缺乏實務操作經驗，吸引學生投入之不足，仿照國外名校，投入開發以遊戲打怪過關的方式的課程與線上平台 - ML Game，2020 年，平台完成，並在成功大學資訊系順利開課，目前已有多所學校接洽推廣，並預計在 2020/2021 與台灣微軟合作推廣課程，並舉辦全國性機器學習比賽。<br/>除了一般學術著作外，另出版「做孩子的重要他人」與「老師是孩子遲來的父母」，紀錄多年在偏鄉與弱勢家庭的孩子的輔導工作。</p>
+<div class="social">
+</div>
+</article>
+<article data-target="tabbing.pane">
+<h3 class="tab-title">演講</h3>
+<p>隨著新冠病毒，全世界的工作型態與教學方式劇烈地改變，許多知名的世界級公司如 Google 與 Facebook 都陸續宣布 WFH(Work From Home) 會至少持續到明年為止。<br/>國立成功大學在 2020/2 也宣布超過 100 人的課程要改用線上教學，許多教授緊急準備線上教學，但是多數教授除了錄製教學影片之外往往只能搭配學校的 moodle 來輔助學生的學習。<br/>我開設的「遊戲式機器學習入門」為大學部選修課，也在上述要求下開始準備線上教學。因為風聞線上教學的效果不佳，所以我的研究生與我，加上一位預先申請的業界專家，共同思考如何度過這學期，同時希望教學成效不要打太多折。<br/>除了預錄教學影片外，我們使用了數個線上應用軟體與社群，並且共筆 FAQ 盡可能回答各式問題外，還架設了一個線上競賽平台，讓學生在考試日可以上傳程式後以競賽得分作為主要評量方式，並直播比賽過程。<br/>除說明這門課的上課方式之外，也會介紹此平台的使用方式與未來的發展，同時也深深感到，身為老師要為了世界與新世代學生的改變而變更自己的教學思維與方式，以維持台灣的競爭力。</p>
+</article>
+<article data-target="tabbing.pane">
+<iframe class="slido" src="https://app.sli.do/event/6nnmgreh"></iframe>
+</article>
+</div>
+</div>
+</article>
+<article class="media" id="keynote-speaker-mariatta-wijaya">
+<header>
+<figure>
+<img src="/2020/static/pycontw-2020/assets/keynotes/mariatta-wijaya.png"/>
+<figcaption>Mariatta Wijaya</figcaption>
+</figure>
+<h2 class="title">哎呀! 我成為了開源專案的維護者! 😱</h2>
+</header>
+<div class="tabbing" data-controller="tabbing">
+<ul class="tabs">
+<li data-action="click-&gt;tabbing#activate" data-target="tabbing.tab">
+							自我介紹
+						</li>
+<li data-action="click-&gt;tabbing#activate" data-target="tabbing.tab">
+							演講
+						</li>
+<li data-action="click-&gt;tabbing#activate" data-target="tabbing.tab">
+								Slido
+							</li>
+</ul>
+<div>
+<article data-target="tabbing.pane">
+<h3 class="tab-title">自我介紹</h3>
+<p>Mariatta 是 Python 核心開發人員、Zapier 的軟體工程師、溫哥華 PyLadies 共同創辦人，也是 PyCascades 會議的創始成員之一。她在約二十年前移居加拿大，現在與丈夫和兩個孩子一起住在溫哥華。在業餘時間，她致力於開源專案、打造 GitHub 機器人、修正錯字，並喜歡向你介紹 f-strings。而她最喜歡的表情符號是😝。</p>
+<div class="social">
+<a href="https://mariatta.ca/" rel="noopener" target="_blank"><span class="fa fa-link"></span></a>
+<a href="https://twitter.com/mariatta" rel="noopener" target="_blank"><span class="fa fa-twitter"></span></a>
+<a href="https://github.com/mariatta" rel="noopener" target="_blank"><span class="fa fa-github"></span></a>
+</div>
+</article>
+<article data-target="tabbing.pane">
+<h3 class="tab-title">演講</h3>
+<p>在開源程式碼的世界裡，我自認還相對陌生。我貢獻的第一個開源專案是在2016年的夏天，在參與不久後，我發現我獲得了可以在別人的開源專案裡提交 (commit) 的權限。成為開源專案的維護者帶來一系列我還沒完全準備好的獨特挑戰。在本次演講中，我將分享我的旅程和我在過程中學到的事情，並為其他有抱負的開源維護者和貢獻者提供一些建議。</p>
+<p>投影片: <a href="https://speakerdeck.com/mariatta/oops-i-became-an-open-source-maintainer" rel="noopener" target="_blank">https://speakerdeck.com/mariatta/oops-i-became-an-open-source-maintainer</a></p>
+</article>
+<article data-target="tabbing.pane">
+<iframe class="slido" src="https://app.sli.do/event/vppisnh8"></iframe>
+</article>
+</div>
+</div>
+</article>
+</main>
+<footer>
+<div class="footer-logos">
+<div class="footer-logo"></div>
+</div>
+<ul>
+<li><a href="/2020/zh-hant/about/code-of-conduct/">行為準則</a></li>
+<li><a href="/2020/zh-hant/about/staff/">工作人員</a></li>
+<li><a href="/2020/zh-hant/about/community/">社群</a></li>
+<li><a href="/2020/zh-hant/about/privacy_policy/">個人資料保護聲明</a></li>
+</ul>
+<p class="copyright">2020 PyCon Taiwan</p>
+</footer>
+<script src="/2020/static/CACHE/js/output.378e60111296.js"></script>
+</body>
+</html>

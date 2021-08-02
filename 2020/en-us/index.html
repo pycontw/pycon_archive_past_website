@@ -1,0 +1,1042 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>PyCon Taiwan 2020</title>
+<link href="/2020/static/pycontw-2020/assets/favicon/favicon.ico" rel="shortcut icon"/>
+<link href="/2020/static/pycontw-2020/assets/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/2020/static/pycontw-2020/assets/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/2020/static/pycontw-2020/assets/favicon/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="" property="og:description"/>
+<meta content="https://tw.pycon.org/2020/static/pycontw-2020/assets/og-image.png" property="og:image"/>
+<link href="https://fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,600,700|Raleway:300,400|Philosopher|Quicksand&amp;display=swap" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
+<link href="/2020/static/CACHE/css/output.ef577387debc.css" rel="stylesheet" type="text/css"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100i" rel="stylesheet"/>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNZ39PD');</script>
+</head>
+<body class="">
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-TNZ39PD" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<div data-controller="topNav">
+<nav class="top-navbar">
+<div class="navbar-left">
+<form  class="navbar-lang-switch" method="post">
+
+<input name="next" type="hidden" value="/2020/"/>
+<button name="language" type="submit" value="zh-hant">
+                    <a href='/2020/zh-hant/' style="text-decoration: none;">ZH</a>
+                </button>
+<button disabled="disabled" name="language" type="submit" value="en-us">
+                    EN
+                </button>
+</form>
+<a href="/2020/en-us/"><i class="twicon-provintia navbar-provintia"></i></a>
+<a class="navbar-brand" href="/2020/en-us/">PyCon TW20</a>
+</div>
+<button aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler no-script" data-action="topNav#toggle" data-target="topNav.toggler" type="button">
+<div><span></span><span></span><span></span></div>
+</button>
+<div class="navbar-social-desktop">
+<a aria-label="Blog" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+</nav>
+<nav class="menu-navbar-mobile no-script" data-target="topNav.menu">
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/2020/en-us/about/pycontw/">
+			About
+		</a>
+</li>
+<!-- -->
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-conference" type="checkbox"/>
+<label for="menu-navbar-mobile-conference">
+			Conference
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/en-us/conference/schedule/">Schedule</a></li>
+<li><a href="/2020/en-us/conference/keynotes/">Keynotes</a></li>
+<li><a href="/2020/en-us/conference/talks/">Talks</a></li>
+<li><a href="/2020/en-us/conference/tutorials/">Tutorials</a></li>
+<li><a href="/2020/en-us/conference/community-track/">Community Track</a></li>
+<!--<li><a href="/2020/en-us/speaking/recording/">Recording</a></li>-->
+<!-- <li><a href="/2020/en-us/portal/">Portal</a></li> -->
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-events" type="checkbox"/>
+<label for="menu-navbar-mobile-events">
+			Events
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/en-us/events/overview/">Overview</a></li>
+<li><a href="/2020/en-us/events/warmup-session/">Warm-Up Session</a></li>
+<li><a href="/2020/en-us/events/open-spaces/">Open Spaces</a></li>
+<li><a href="/2020/en-us/events/sprints/">Sprints</a></li>
+<li><a href="/2020/en-us/events/job-listings/">Job Listings</a></li>
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-registration" type="checkbox"/>
+<label for="menu-navbar-mobile-registration">
+			Registration
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/en-us/registration/ticket-info/">Conference Ticket</a></li>
+<li><a href="/2020/en-us/registration/financial-aid/">Financial Aid</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/2020/en-us/venue/">
+			Venue
+		</a>
+</li>
+<li>
+<a href="/2020/en-us/covid-19/guidelines/">
+			COVID-19 Guidelines
+		</a>
+</li>
+<li class="dashboard-item">
+<a href="/2020/en-us/dashboard/">My PyCon</a>
+</li>
+</ul>
+<div class="navbar-social-mobile">
+<a aria-label="Blog" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+<div class="shadow">
+<i class="twicon-provintia"></i>
+</div>
+</nav>
+</div>
+<div class="index-hero-outer">
+<div class="index-hero">
+<div class="welcome-text">
+            Welcome to TAINAN~
+        </div>
+<div class="banner">
+<img class="logo" src="/2020/static/pycontw-2020/assets/2020-logo.svg"/>
+<svg class="time-location" height="40" viewbox="0 0 270 40" width="270">
+<g>
+<text dominant-baseline="middle" x="0" y="50%">5-6 Sep, 2020 in NCKU</text>
+</g>
+</svg>
+<img class="icon desktop" src="/2020/static/pycontw-2020/assets/snake-icon.svg"/>
+<img class="icon mobile" src="/2020/static/pycontw-2020/assets/snake-icon-dark.svg"/>
+</div>
+</div>
+</div>
+<div class="menu-navbar-desktop-outer">
+<nav class="menu-navbar-desktop">
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/2020/en-us/about/pycontw/">
+			About
+		</a>
+</li>
+<!-- -->
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-conference" type="checkbox"/>
+<label for="menu-navbar-desktop-conference">
+			Conference
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/en-us/conference/schedule/">Schedule</a></li>
+<li><a href="/2020/en-us/conference/keynotes/">Keynotes</a></li>
+<li><a href="/2020/en-us/conference/talks/">Talks</a></li>
+<li><a href="/2020/en-us/conference/tutorials/">Tutorials</a></li>
+<li><a href="/2020/en-us/conference/community-track/">Community Track</a></li>
+<!--<li><a href="/2020/en-us/speaking/recording/">Recording</a></li>-->
+<!-- <li><a href="/2020/en-us/portal/">Portal</a></li> -->
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-events" type="checkbox"/>
+<label for="menu-navbar-desktop-events">
+			Events
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/en-us/events/overview/">Overview</a></li>
+<li><a href="/2020/en-us/events/warmup-session/">Warm-Up Session</a></li>
+<li><a href="/2020/en-us/events/open-spaces/">Open Spaces</a></li>
+<li><a href="/2020/en-us/events/sprints/">Sprints</a></li>
+<li><a href="/2020/en-us/events/job-listings/">Job Listings</a></li>
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-registration" type="checkbox"/>
+<label for="menu-navbar-desktop-registration">
+			Registration
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/2020/en-us/registration/ticket-info/">Conference Ticket</a></li>
+<li><a href="/2020/en-us/registration/financial-aid/">Financial Aid</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/2020/en-us/venue/">
+			Venue
+		</a>
+</li>
+<li>
+<a href="/2020/en-us/covid-19/guidelines/">
+			COVID-19 Guidelines
+		</a>
+</li>
+<li class="dashboard-item">
+<a href="/2020/en-us/dashboard/">My PyCon</a>
+</li>
+</ul>
+</nav>
+</div>
+<section class="portal">
+<article class="container">
+<h2>Portal</h2>
+<div class="portal-container">
+<div class="card">
+<a class="card-link" href="/2020/en-us/conference/schedule/">Schedule</a>
+</div>
+<div class="card">
+<a class="card-link" href="https://hackmd.io/@PyConTW/2020" rel="noopener" target="_blank">Collaborative Notes</a>
+</div>
+<div class="card">
+<a class="card-link" href="/2020/en-us/ext/discord/">Discord 聊天室</a>
+</div>
+<div class="card">
+<a class="card-link" href="https://www.facebook.com/pycontw/" rel="noopener" target="_blank">Facebook Fan Page</a>
+</div>
+<div class="card">
+<a class="card-link" href="https://docs.google.com/document/d/13y1eja-dyBz-zd-nJe1Agh_7RFt10dfPcMAvaqeRnKQ/edit" rel="noopener" target="_blank">Open space</a>
+</div>
+</div>
+</article>
+</section>
+<section class="index-actions">
+<a class="index-big-button color-imperial" href="https://docs.google.com/forms/d/e/1FAIpQLSfdqEqqjzPnVU7S8ya1slXKszSIHOpljKEzY8odGRBjjAv-fw/viewform" rel="noopener" target="_blank">
+<i class="icon icon-volunteering"></i>
+<div>Become a volunteer</div>
+</a>
+<a class="index-big-button color-dark-gray" href="/2020/en-us/sponsor/sponsor/">
+<i class="icon icon-sponsor"></i>
+<div>Sponsor PyCon TW</div>
+</a>
+</section>
+<section class="index-partners" data-controller="mediaPopup">
+<h2>
+		Sponsor Partners
+	</h2>
+<article class="container">
+<div class="grid-layout">
+<div class="partner-container">
+<span class="gold">gold</span>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="https://www.cathayholdings.com" rel="noopener" target="_blank">
+<div class="logo" style="
+							background-image: url(/2020/media/sponsors/國泰金控/國泰金控cmyk-中英_7hzqwdc.png)
+						">
+</div>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="click-to-close" data-action="click-&gt;mediaPopup#close" style="height:100%;width:100%"></div>
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="https://www.cathayholdings.com" rel="noopener" target="_blank">
+<img alt="國泰金控" src="/2020/media/sponsors/國泰金控/國泰金控cmyk-中英_7hzqwdc.png"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<span>國泰金控</span>
+</h4>
+<hr class="horizontal-rule"/>
+<section class="description"><p>國泰於金控層級設立「數位暨數據發展中心（簡稱數數發中心）」，以數據驅動（data-driven as culture）為理念，結合子公司的力量與基礎，協助國泰金控打造數位數據生態圈。<br/>數數發中心了解金融與科技人才對發揮專業、在工作上追求突破的渴望，整合集團資源打造適合跨界新型態人才的環境，團隊成員背景多元，包括技術、科技、新創、電商、零售、電信、金融……等。為讓資料及大數據分析人才擁有充足的資料量運用，同時投注相當的資源與人力於資料科學研發，數數發中心創立「資料科學實驗室」，讓成員不僅能專注開發，也能共同探討資料科學技術的創新應用。<br/>數數發中心以數據驅動金融科技創新，提供有感、有效的客戶數位體驗，致力成為亞洲數位生態圈及科技金融領頭羊。</p></section>
+<a class="link-to-website" href="https://www.cathayholdings.com" rel="noopener" target="_blank">
+<span>Redirect to official website</span>
+</a>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="grid-layout">
+<div class="partner-container">
+<span class="silver">silver</span>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="https://careers.trendmicro.tw/" rel="noopener" target="_blank">
+<div class="logo" style="
+							background-image: url(/2020/media/sponsors/趨勢科技/趨勢科技_zBllO1a.png)
+						">
+</div>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="click-to-close" data-action="click-&gt;mediaPopup#close" style="height:100%;width:100%"></div>
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="https://careers.trendmicro.tw/" rel="noopener" target="_blank">
+<img alt="趨勢科技" src="/2020/media/sponsors/趨勢科技/趨勢科技_zBllO1a.png"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<span>趨勢科技</span>
+</h4>
+<hr class="horizontal-rule"/>
+<section class="description"><p>作為雲端安全的全球領導者，趨勢科技專注於確保企業和個人數位資訊交換的安全性。自1988 年於美國加州成立後，趨勢科技便以超越國界限制的工作團隊為目標制定組織架構，全球共有 45 處辦事處，其成員來自包括大中華地區、日本、德國、英國、加拿大、菲律賓、印度、紐澳與美國等，全球員工人數至今超過 6,500 人。台灣為趨勢科技的研發總部，擁有超過 1,200 位以上的工程師，負責研發全球超過 3 千萬名企業、家庭與個人用戶使用的最新及最完整的資訊安全核心技術及產品，是亞洲與台灣最大的純軟體公司。<br/>2019 年趨勢科技獲得亞洲最佳雇主及幸福企業的獎項，因為我們深信創意的泉源來自於身心靈富足的員工，讓員工做最好的自己 (Be The Best Part of Yourself) 是一直以來的核心信念。人是趨勢科技最重要的資產，我們致力於創造享受工作與生活的環境，幫助員工探索自身潛能、展現自我價值，與公司一同成長，達成與社會更好之願景。『BEST - Beloved, Enjoyment, Self-realization and Take-calculated Risk』也是趨勢科技全方位的 幸福法則。</p></section>
+<a class="link-to-website" href="https://careers.trendmicro.tw/" rel="noopener" target="_blank">
+<span>Redirect to official website</span>
+</a>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="partner-container">
+<span class="silver">silver</span>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="https://www.microsoft.com/zh-tw/" rel="noopener" target="_blank">
+<div class="logo" style="
+							background-image: url(/2020/media/sponsors/微軟-microsoft/Microsoft-logo.png)
+						">
+</div>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="click-to-close" data-action="click-&gt;mediaPopup#close" style="height:100%;width:100%"></div>
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="https://www.microsoft.com/zh-tw/" rel="noopener" target="_blank">
+<img alt="微軟 Microsoft" src="/2020/media/sponsors/微軟-microsoft/Microsoft-logo.png"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<span>微軟 Microsoft</span>
+</h4>
+<hr class="horizontal-rule"/>
+<section class="description"><p>Microsoft (Nasdaq “MSFT” @microsoft) enables digital transformation for the era of an intelligent cloud and an intelligent edge. Its mission is to empower every person and every organization on the planet to achieve more.</p></section>
+<a class="link-to-website" href="https://www.microsoft.com/zh-tw/" rel="noopener" target="_blank">
+<span>Redirect to official website</span>
+</a>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="partner-container">
+<span class="silver">silver</span>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="https://www.kkco.com.tw/" rel="noopener" target="_blank">
+<div class="logo" style="
+							background-image: url(/2020/media/sponsors/可立可-klickklack/KKCO_2020.png)
+						">
+</div>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="click-to-close" data-action="click-&gt;mediaPopup#close" style="height:100%;width:100%"></div>
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="https://www.kkco.com.tw/" rel="noopener" target="_blank">
+<img alt="可立可 KlickKlack" src="/2020/media/sponsors/可立可-klickklack/KKCO_2020.png"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<span>可立可 KlickKlack</span>
+</h4>
+<hr class="horizontal-rule"/>
+<section class="description"><p>KlickKlack Communications provide professional wired and wireless internet networks, reducing digital divide between individuals. With rich experience, our team has crafted custom solutions, including on-site monitoring, backup systems and real-time advertising. We’ve done hundreds of events of any scale from Esports, live streamings, conferences, product launches, concerts, exhibitions, outdoor events and festivals.</p></section>
+<a class="link-to-website" href="https://www.kkco.com.tw/" rel="noopener" target="_blank">
+<span>Redirect to official website</span>
+</a>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="partner-container">
+<span class="silver">silver</span>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="https://www.infuseai.io/" rel="noopener" target="_blank">
+<div class="logo" style="
+							background-image: url(/2020/media/sponsors/infuseai/InfuseAI_origin.png)
+						">
+</div>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="click-to-close" data-action="click-&gt;mediaPopup#close" style="height:100%;width:100%"></div>
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="https://www.infuseai.io/" rel="noopener" target="_blank">
+<img alt="InfuseAI" src="/2020/media/sponsors/infuseai/InfuseAI_origin.png"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<span>InfuseAI</span>
+</h4>
+<hr class="horizontal-rule"/>
+<section class="description"><p>InfuseAI provides AI PaaS "PrimeHub" to make AI workflow 10x faster for enterprises to solve their business problems. Founded in 2018, InfuseAI builds high-quality software and services to help people work smarter and happier.</p></section>
+<a class="link-to-website" href="https://www.infuseai.io/" rel="noopener" target="_blank">
+<span>Redirect to official website</span>
+</a>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="partner-container">
+<span class="silver">silver</span>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="https://www.ichefpos.com/zh-tw" rel="noopener" target="_blank">
+<div class="logo" style="
+							background-image: url(/2020/media/sponsors/ichef-資廚/iCHEF-fit-icon.svg)
+						">
+</div>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="click-to-close" data-action="click-&gt;mediaPopup#close" style="height:100%;width:100%"></div>
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="https://www.ichefpos.com/zh-tw" rel="noopener" target="_blank">
+<img alt="iCHEF 資廚" src="/2020/media/sponsors/ichef-資廚/iCHEF-fit-icon.svg"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<span>iCHEF 資廚</span>
+</h4>
+<hr class="horizontal-rule"/>
+<section class="description"><p>We build the best restaurant POS in the world, and keep making it better.</p>
+<p>Believing technology should help but handicap entrepreneurship, iCHEF works with hundreds of restaurants owners to design and deliver POS technology and service that helps every restaurant to prevail in their own way. Turning enterprise level technologies into affordable and understandable for small restaurants, iCHEF is making opening restaurant a better business.</p>
+<p>Award Record<br/>2016.02.27 iF Design Award, Gold Award<br/>2015.11.06 Red Dot Design Award, Winner<br/>2015.09.29 Good Design Award, Winner<br/>2014.11.25 Start Up Nation Summit, Top 15<br/>2013.12.12 Neo Star Demo Show Top Award Winner</p></section>
+<a class="link-to-website" href="https://www.ichefpos.com/zh-tw" rel="noopener" target="_blank">
+<span>Redirect to official website</span>
+</a>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="grid-layout">
+<div class="partner-container">
+<span class="bronze">bronze</span>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="https://micare.tw/" rel="noopener" target="_blank">
+<div class="logo" style="
+							background-image: url(/2020/media/sponsors/咪卡創意-micare/MicareProduction_logo.png)
+						">
+</div>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="click-to-close" data-action="click-&gt;mediaPopup#close" style="height:100%;width:100%"></div>
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="https://micare.tw/" rel="noopener" target="_blank">
+<img alt="咪卡創意 Micare" src="/2020/media/sponsors/咪卡創意-micare/MicareProduction_logo.png"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<span>咪卡創意 Micare</span>
+</h4>
+<hr class="horizontal-rule"/>
+<section class="description"><p>Micare Production Co., we specialized in multi-camera production, broadcast sound mixing and audio-visual system arrangement.<br/>Let us be your live-streaming service provider, cause our profession will make your event glow!</p></section>
+<a class="link-to-website" href="https://micare.tw/" rel="noopener" target="_blank">
+<span>Redirect to official website</span>
+</a>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="partner-container">
+<span class="bronze">bronze</span>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="http://www.appier.com" rel="noopener" target="_blank">
+<div class="logo" style="
+							background-image: url(/2020/media/sponsors/appier/Appier_logo_blue.svg)
+						">
+</div>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="click-to-close" data-action="click-&gt;mediaPopup#close" style="height:100%;width:100%"></div>
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="http://www.appier.com" rel="noopener" target="_blank">
+<img alt="Appier" src="/2020/media/sponsors/appier/Appier_logo_blue.svg"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<span>Appier</span>
+</h4>
+<hr class="horizontal-rule"/>
+<section class="description"><p>Appier helps businesses solve their most challenging problems with artificial intelligence. It is a partner to some of the world’s leading brands, providing a suite of enterprise-grade products to support data-driven decisions and accelerate business growth. Established in 2012 by a passionate team of computer scientists and engineers, Appier now has more than 400 people across 15 offices and is recognized as a Top 50 AI company by Fortune Magazine. Appier has raised US$162 million in funding from investors including Sequoia, Softbank, and Line. Learn more at www.appier.com</p></section>
+<a class="link-to-website" href="http://www.appier.com" rel="noopener" target="_blank">
+<span>Redirect to official website</span>
+</a>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="partner-container">
+<span class="bronze">bronze</span>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="https://www.ctbcbank.com" rel="noopener" target="_blank">
+<div class="logo" style="
+							background-image: url(/2020/media/sponsors/中國信託/中國信託_HsZrJ9r.png)
+						">
+</div>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="click-to-close" data-action="click-&gt;mediaPopup#close" style="height:100%;width:100%"></div>
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="https://www.ctbcbank.com" rel="noopener" target="_blank">
+<img alt="中國信託" src="/2020/media/sponsors/中國信託/中國信託_HsZrJ9r.png"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<span>中國信託</span>
+</h4>
+<hr class="horizontal-rule"/>
+<section class="description"><p>Established in 1966, CTBC Bank has 152 domestic branches and 116 overseas outlets across 14 countries and regions. Guided by the business principles of integrity and caring, our Bank has a proud history punctuated by regular achievements and innovative services. From issuing the first credit card in Taiwan to setting up the first customer service center of any bank in the country, we have led the way in the financial industry's digital transformation, particularly by promoting the digitalization of business processes.<br/>CTBC Bank will continue to invest in big data analysis and applications fields by reforming data infrastructure, attracting and nurturing talents, and adopting AI technology. Our Bank keeps embarking on the journey of digital transformation by promoting data-driven strategies.</p></section>
+<a class="link-to-website" href="https://www.ctbcbank.com" rel="noopener" target="_blank">
+<span>Redirect to official website</span>
+</a>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="partner-container">
+<span class="bronze">bronze</span>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="https://www.esunbank.com.tw/bank/personal" rel="noopener" target="_blank">
+<div class="logo" style="
+							background-image: url(/2020/media/sponsors/玉山銀行/Jade_YcjkHqY.png)
+						">
+</div>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="click-to-close" data-action="click-&gt;mediaPopup#close" style="height:100%;width:100%"></div>
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="https://www.esunbank.com.tw/bank/personal" rel="noopener" target="_blank">
+<img alt="玉山銀行" src="/2020/media/sponsors/玉山銀行/Jade_YcjkHqY.png"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<span>玉山銀行</span>
+</h4>
+<hr class="horizontal-rule"/>
+<section class="description"><p>玉山銀行成立於1992年，以台灣最高的山為名，秉持「心清如玉，義重如山」的理念，提供顧客全方位的金融服務。因應金融科技的發展趨勢，玉山設立金融業第一個以AI為核心的智能金融團隊，結合科技與金融專業，創造多種新型態的數位金融服務並快速成長，2020年更蟬聯《The Banker》台灣銀行品牌價值第1名。玉山將持續結合各領域專家團隊的力量，發展有特色的創新金融服務，讓台灣的金融服務登上國際金融舞台，成就台灣的玉山、世界的玉山。</p></section>
+<a class="link-to-website" href="https://www.esunbank.com.tw/bank/personal" rel="noopener" target="_blank">
+<span>Redirect to official website</span>
+</a>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="grid-layout">
+<div class="partner-container">
+<span class="special">special</span>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="https://jobs.oursky.com/tw" rel="noopener" target="_blank">
+<div class="logo" style="
+							background-image: url(/2020/media/sponsors/oursky/oursky-logo.svg)
+						">
+</div>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="click-to-close" data-action="click-&gt;mediaPopup#close" style="height:100%;width:100%"></div>
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="https://jobs.oursky.com/tw" rel="noopener" target="_blank">
+<img alt="Oursky" src="/2020/media/sponsors/oursky/oursky-logo.svg"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<span>Oursky</span>
+</h4>
+<hr class="horizontal-rule"/>
+<section class="description"><p>Oursky is founded in Hong Kong by a group of passionate developers who love tech and open source culture since 2008. We are based in Hong Kong and Taipei, while some team members are working remotely from different locations. Our mission is to create open source solutions to help enterprises in digital transformation and support developers in building secure and privacy-aware software. Our Professional Services team builds creative digital products with great user experience for clients that range from rockstar startups to multinationals like Standard Chartered Bank, A.S. Watson Group, and Nvidia.</p>
+<p>We are dedicated to open source with our cool flagship products: Authgear, FormExtractor and Gesprek. Authgear is an open-source auth-as-a-service solution for web and mobile applications, while Gesprek is an open-source social commerce software for SMEs. We also have a machine learning team that provides machine learning and data warehouse services, and our FormExtractor is an API service that extracts structured information from mobile device-captured documents or forms.</p>
+<p>We are a technology-oriented and developer-driven team who value craftsmanship and being socially progressive. Welcome to exchange open source ideas with us!</p>
+<p>Learn more about us: https://oursky.com<br/>Join our team: https://jobs.oursky.com</p></section>
+<a class="link-to-website" href="https://jobs.oursky.com/tw" rel="noopener" target="_blank">
+<span>Redirect to official website</span>
+</a>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="partner-container">
+<span class="special">special</span>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="#" rel="noopener" target="_blank">
+<div class="logo" style="
+							background-image: url(/2020/media/sponsors/馥谷餘-fugu-fish-creations/大頭貼.jpg)
+						">
+</div>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="click-to-close" data-action="click-&gt;mediaPopup#close" style="height:100%;width:100%"></div>
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<span class="logo">
+<img alt="馥谷餘 Fugu Fish Creations" src="/2020/media/sponsors/馥谷餘-fugu-fish-creations/大頭貼.jpg"/>
+</span>
+<div class="text">
+<article>
+<h4 class="name">
+<span>馥谷餘 Fugu Fish Creations</span>
+</h4>
+<hr class="horizontal-rule"/>
+<section class="description"><p></p></section>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="partner-container">
+<span class="special">special</span>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="http://goodideas-studio.com/" rel="noopener" target="_blank">
+<div class="logo" style="
+							background-image: url(/2020/media/sponsors/好想工作室/好想工作室-綠.svg)
+						">
+</div>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="click-to-close" data-action="click-&gt;mediaPopup#close" style="height:100%;width:100%"></div>
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="http://goodideas-studio.com/" rel="noopener" target="_blank">
+<img alt="好想工作室" src="/2020/media/sponsors/好想工作室/好想工作室-綠.svg"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<span>好想工作室</span>
+</h4>
+<hr class="horizontal-rule"/>
+<section class="description"><p>台南好想工作室<br/>營業時間：10:00AM-8:00PM<br/>地址：台南市東區北門路二段16號二樓L2A<br/>電話：0921-409887<br/>官方網站：http://goodideas-studio.com/<br/>粉絲專頁：https://www.facebook.com/GoodideasStudio/</p>
+<p>軟體人才培育基地<br/>有鑒於軟體人才方面一直存在著學界與業界的斷層，讓我們從五年前就開始免費培訓好的軟體工程師，我們提供好的學習環境、一起討論的學習夥伴以及可以諮詢的資深前輩，期許在這裡完成培訓的學員都可以具備 [自我學習] 和 [解決問題] 的能力，成為業界所需要的好的工程師。</p>
+<p>資訊社群聚落<br/>南部的環境對資訊領域其實一直都不是非常友善，資訊產業應該是全台各個領域都會有連結的產業，但大部分的資訊人才都必須北漂的原因卻是，南部沒有好的資訊聚落，工程師沒有一個可以討論、交流、聚會的社群，好想工作室最多的就是工程師，因此我們不定期都會舉辦內部或是對外開放的資訊講座，也歡迎南部的資訊人可以來這裡聽講座、辦講座或是找時間來交流。</p>
+<p>共同工作空間<br/>六年前工作室成立初期南部比較少共同工作空間的概念，但是在國外其實已經盛行一陣子了，因此 Howard 在台南創立了好想工作室提供給個人、團體進駐使用，讓南部的資訊人不論是自由接案者，或是遠端工作者都能有個友善的工作環境，工作之餘還可以和其他資訊人一起討論交流技術。</p>
+<p>天瓏資訊圖書<br/>好想工作室搬遷到更大的空間後，有幸能和台灣資訊圖書的領頭羊-天瓏資訊圖書合作，在工作室內規劃了一區實體書的閱覽區，現場也可以透過天瓏資訊圖書的官網線上付款後直接把書帶回家，我們希望透過和天瓏資訊圖書的合作，讓南部的資訊人可以來現場看書、買書以及和我們交流，讓好想工作室成為南部最大的資訊聚落。</p></section>
+<a class="link-to-website" href="http://goodideas-studio.com/" rel="noopener" target="_blank">
+<span>Redirect to official website</span>
+</a>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="partner-container">
+<span class="special">special</span>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="https://www.synology.com/zh-tw" rel="noopener" target="_blank">
+<div class="logo" style="
+							background-image: url(/2020/media/sponsors/群暉科技-synology/Synology_logo_Standard_wide.png)
+						">
+</div>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="click-to-close" data-action="click-&gt;mediaPopup#close" style="height:100%;width:100%"></div>
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="https://www.synology.com/zh-tw" rel="noopener" target="_blank">
+<img alt="群暉科技 Synology" src="/2020/media/sponsors/群暉科技-synology/Synology_logo_Standard_wide.png"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<span>群暉科技 Synology</span>
+</h4>
+<hr class="horizontal-rule"/>
+<section class="description"><p>成立於 2000 年，Synology 專注於資料管理領域，提供資料儲存、備份、檔案協作、影像監控管理以及網路架構解決方案，目前在全球已累積超過 700 萬名用戶，並在網路儲存設備 （NAS）專業使用者及中小企業市場取得領導地位。隨著資料成為各產業轉型核心，未來 Synology 將持續協助全球企業妥善管理、保護每一份資料，簡化 IT 管理流程。</p></section>
+<a class="link-to-website" href="https://www.synology.com/zh-tw" rel="noopener" target="_blank">
+<span>Redirect to official website</span>
+</a>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="partner-container">
+<span class="special">special</span>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="https://hackmd.io/" rel="noopener" target="_blank">
+<div class="logo" style="
+							background-image: url(/2020/media/sponsors/hackmd/HackMD_LOGO_black_fit_08VAIK1.svg)
+						">
+</div>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="click-to-close" data-action="click-&gt;mediaPopup#close" style="height:100%;width:100%"></div>
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="https://hackmd.io/" rel="noopener" target="_blank">
+<img alt="HackMD" src="/2020/media/sponsors/hackmd/HackMD_LOGO_black_fit_08VAIK1.svg"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<span>HackMD</span>
+</h4>
+<hr class="horizontal-rule"/>
+<section class="description"><p>HackMD lets you create realtime collaborative markdown notes on all platforms. It could be used to organize your thoughts, discuss with your teammates, and preview the result in realtime.<br/>You write in markdown and we make slides, charts, and math expressions for you!<br/>Since launch, more than 2,000,000 notes have been taken in HackMD.<br/>Users write documents, jot down memos, take meeting minutes, and even debate public issues on HackMD.<br/>Join us now! You could write smarter!<br/>Come and love it &lt;3<br/>HackMD empowers the community</p></section>
+<a class="link-to-website" href="https://hackmd.io/" rel="noopener" target="_blank">
+<span>Redirect to official website</span>
+</a>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="partner-container">
+<span class="special">special</span>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="https://www.elastic.co/" rel="noopener" target="_blank">
+<div class="logo" style="
+							background-image: url(/2020/media/sponsors/elastic/elastic-logo-H-full_color.png)
+						">
+</div>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="click-to-close" data-action="click-&gt;mediaPopup#close" style="height:100%;width:100%"></div>
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="https://www.elastic.co/" rel="noopener" target="_blank">
+<img alt="Elastic" src="/2020/media/sponsors/elastic/elastic-logo-H-full_color.png"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<span>Elastic</span>
+</h4>
+<hr class="horizontal-rule"/>
+<section class="description"><p>Elastic builds real-time, scalable enterprise search, observability, and security solutions on a single free and open technology stack that can be deployed anywhere. Thousands of organizations worldwide use Elastic to instantly find actionable insights from any type of data and power mission-critical systems. Learn more at elastic.co.</p></section>
+<a class="link-to-website" href="https://www.elastic.co/" rel="noopener" target="_blank">
+<span>Redirect to official website</span>
+</a>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="partner-container">
+<span class="special">special</span>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="https://www.anaconda.com/" rel="noopener" target="_blank">
+<div class="logo" style="
+							background-image: url(/2020/media/sponsors/anaconda/anaconda.png)
+						">
+</div>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="click-to-close" data-action="click-&gt;mediaPopup#close" style="height:100%;width:100%"></div>
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="https://www.anaconda.com/" rel="noopener" target="_blank">
+<img alt="Anaconda" src="/2020/media/sponsors/anaconda/anaconda.png"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<span>Anaconda</span>
+</h4>
+<hr class="horizontal-rule"/>
+<section class="description"><p>Anaconda is the world’s most popular data science platform. With more than 20 million users, the open source Anaconda Distribution is the easiest way to do data science and machine learning.  We pioneered the use of Python for data science, champion its vibrant community, and continue to steward open-source projects that make tomorrow’s innovations possible. Our enterprise-grade solutions enable corporate, research, and academic institutions around the world to harness the power of open-source for competitive advantage and groundbreaking research.</p>
+<p>Official website:<br/>https://www.anaconda.com/</p></section>
+<a class="link-to-website" href="https://www.anaconda.com/" rel="noopener" target="_blank">
+<span>Redirect to official website</span>
+</a>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="partner-container">
+<span class="special">special</span>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="https://www.tenlong.com.tw/" rel="noopener" target="_blank">
+<div class="logo" style="
+							background-image: url(/2020/media/sponsors/天瓏資訊圖書/天瓏-icon_oNbtWEF.svg)
+						">
+</div>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="click-to-close" data-action="click-&gt;mediaPopup#close" style="height:100%;width:100%"></div>
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="https://www.tenlong.com.tw/" rel="noopener" target="_blank">
+<img alt="天瓏資訊圖書" src="/2020/media/sponsors/天瓏資訊圖書/天瓏-icon_oNbtWEF.svg"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<span>天瓏資訊圖書</span>
+</h4>
+<hr class="horizontal-rule"/>
+<section class="description"><p>天瓏資訊提供平價專業電腦資訊書籍販售、團購優惠、公司機關報價服務，包括繁體中文、簡體中文、外文原文書籍代訂服務，目前正在拓展實體課程、講座活動、技術交流分享聚會中，有興趣讀者、講者、講師歡迎與我們聯繫。</p></section>
+<a class="link-to-website" href="https://www.tenlong.com.tw/" rel="noopener" target="_blank">
+<span>Redirect to official website</span>
+</a>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="partner-container">
+<span class="special">special</span>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="https://realpython.com" rel="noopener" target="_blank">
+<div class="logo" style="
+							background-image: url(/2020/media/sponsors/real-python/real-python-logo-square.png)
+						">
+</div>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="click-to-close" data-action="click-&gt;mediaPopup#close" style="height:100%;width:100%"></div>
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="https://realpython.com" rel="noopener" target="_blank">
+<img alt="Real Python" src="/2020/media/sponsors/real-python/real-python-logo-square.png"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<span>Real Python</span>
+</h4>
+<hr class="horizontal-rule"/>
+<section class="description"><p>At Real Python you can learn all things Python from the ground up. Their tutorials &amp; video courses are created, curated, and vetted by a community of expert Pythonistas. With new content published weekly, custom Python learning paths, and interactive code challenges, you'll always find something to boost your skills. Join their 2,000,000+ monthly readers and take your Python skills to the next level.</p>
+<p>URL: https://realpython.com</p></section>
+<a class="link-to-website" href="https://realpython.com" rel="noopener" target="_blank">
+<span>Redirect to official website</span>
+</a>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="grid-layout">
+<div class="partner-container">
+<span class="organizer">organizer</span>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="http://www.csie.ncku.edu.tw/ncku_csie/" rel="noopener" target="_blank">
+<div class="logo" style="
+							background-image: url(/2020/media/sponsors/成功大學資訊工程學系/NCKU_CSIE_new.png)
+						">
+</div>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="click-to-close" data-action="click-&gt;mediaPopup#close" style="height:100%;width:100%"></div>
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="http://www.csie.ncku.edu.tw/ncku_csie/" rel="noopener" target="_blank">
+<img alt="成功大學資訊工程學系" src="/2020/media/sponsors/成功大學資訊工程學系/NCKU_CSIE_new.png"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<span>成功大學資訊工程學系</span>
+</h4>
+<hr class="horizontal-rule"/>
+<section class="description"><p>成功大學資訊工程學系 系所簡介<br/>http://www.csie.ncku.edu.tw/ncku_csie/intro/csieinfo</p></section>
+<a class="link-to-website" href="http://www.csie.ncku.edu.tw/ncku_csie/" rel="noopener" target="_blank">
+<span>Redirect to official website</span>
+</a>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="partner-container">
+<span class="organizer">organizer</span>
+<a data-action="mediaPopup#open" data-target="mediaPopup.presenter" href="https://ocf.tw/" rel="noopener" target="_blank">
+<div class="logo" style="
+							background-image: url(/2020/media/sponsors/開放文化基金會ocf/OCF-icon.svg)
+						">
+</div>
+</a>
+<div class="popup" data-target="mediaPopup.popup">
+<div class="click-to-close" data-action="click-&gt;mediaPopup#close" style="height:100%;width:100%"></div>
+<div class="card">
+<button class="popup-close" data-action="mediaPopup#close">
+<span></span>
+<span></span>
+</button>
+<div class="card-content">
+<a class="logo" href="https://ocf.tw/" rel="noopener" target="_blank">
+<img alt="開放文化基金會 OCF" src="/2020/media/sponsors/開放文化基金會ocf/OCF-icon.svg"/>
+</a>
+<div class="text">
+<article>
+<h4 class="name">
+<span>開放文化基金會 OCF</span>
+</h4>
+<hr class="horizontal-rule"/>
+<section class="description"><p>The Open Culture Foundation (OCF), is a nonpartisan, nonprofit organization, founded in 2014 by several members of Taiwan’s open source community. Our main goal is to support local communities advocate the use of open technologies in broader sectors, including open source software, open hardware, and open data. We help government, enterprises, and NGOs better understand the benefits of adopting open source,and promote the importance of open data to the public sphere. We believe that a culture of open collaboration is the foundation for an innovative society, and the engine of a participatory democracy.</p>
+<p>Since its establishment, OCF has supported local communities to run large-scale conferences, seminars, and hackathons, as well as collaborate with a number of international offices and multilateral institutions to deepen Taiwan’s connection to the global open culture community. Some of our past collaboration partners include the American Institute in Taiwan, British Office Taipei, Bureau Francais de Taipei, and the World Bank. OCF also has strong connections with the global open source community, and regularly exchanges experiences with civic tech groups worldwide. Our mission is to build bridges between local and global “open” communities, and hope to act as a mediator for open culture.</p>
+<p>Check out our annual report 2019: <br/>https://ocf.tw/en/p/2019/</p></section>
+<a class="link-to-website" href="https://ocf.tw/" rel="noopener" target="_blank">
+<span>Redirect to official website</span>
+</a>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<img class="deco-a-1" src="/2020/static/pycontw-2020/assets/deco-a-1.svg">
+<img class="deco-a-2" src="/2020/static/pycontw-2020/assets/deco-a-2.svg">
+<img class="deco-a-3" src="/2020/static/pycontw-2020/assets/deco-a-3.svg">
+</img></img></img></article>
+</section>
+<div class="main-content">
+<section class="index-introduction">
+<article class="container">
+<h2>What is PyCon</h2>
+<p>The original PyCon was formed in North America in 2003, and now there are many other conferences being run in the PyCon spirit around the world.</p>
+</article>
+<article class="container">
+<h2>What is PyCon Taiwan</h2>
+<p>PyCon Taiwan is an annual convention in Taiwan for the discussion and promotion of the Python programming language. It is held by enthusiasts and focuses on Python technology and its versatile applications. We welcome people who are interested in Python to join PyCon Taiwan to share knowledge, exchange ideas, make connections and to help us grow our network.</p>
+</article>
+</section>
+</div>
+<footer>
+<div class="footer-logos">
+<div class="footer-logo"></div>
+</div>
+<ul>
+<li><a href="/2020/en-us/about/code-of-conduct/">Code of Conduct</a></li>
+<li><a href="/2020/en-us/about/staff/">Staff</a></li>
+<li><a href="/2020/en-us/about/community/">Community</a></li>
+<li><a href="/2020/en-us/about/privacy_policy/">Privacy Policy</a></li>
+</ul>
+<p class="copyright">2020 PyCon Taiwan</p>
+</footer>
+<script src="/2020/static/CACHE/js/output.378e60111296.js"></script>
+</body>
+</html>
