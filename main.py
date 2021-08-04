@@ -110,6 +110,9 @@ def get_page(path):
                     elm.replace_with("zh-hant_target")
         html = str(soup)
         html = html.replace("action=\"/" + PYCON_YEAR + "/set-language/\"", "")
+        html = html.replace(
+            f"/{PYCON_YEAR}/", f"{BASE_URL}/{PYCON_YEAR}/"
+        ) # Replace base url since the gh-pages use base url following `{host}/{repo}/` instead of {host}/
         if PYCON_YEAR == '2016':
             html = html.replace("<a data-lang=\"zh-hant\" href=\"#\">", "<a data-lang=\"zh-hant\" href=\"" + path.replace("en-us", "zh-hant") + "\">")
             html = html.replace("<a data-lang=\"en-us\" href=\"#\">", "<a data-lang=\"en-us\" href=\"" + path.replace("zh-hant", "en-us") + "\">")
@@ -160,10 +163,12 @@ def main():
 
 @click.command()
 @click.option('-y', 'param', help='Pycon Year (2016 - 2020)', type=click.DateTime(formats=["%Y"]), required=True)
-
-def check_year(param):
+@click.option('--base', 'base_url', help='The base url for all site', type=str, required=False)
+def check_year(param, base_url):
     '''Get Pycon Website According To the Year'''
-    global PYCON_YEAR 
+    global PYCON_YEAR
+    global BASE_URL # TODO: [Refactor] to encapuslate all the global variable 
+    BASE_URL = base_url
     PYCON_YEAR = str(param.year)
     if PYCON_YEAR >= '2016' and PYCON_YEAR <= '2020':
         main()

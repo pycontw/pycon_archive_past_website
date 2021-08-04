@@ -3,8 +3,8 @@ name: Deploy PyConTW sites to branch
 on:
   workflow_dispatch:
     inputs:
-      re-scrape:
-        description: 'Re-scrape all archived sites'
+      base_url:
+        description: 'Dynamic base url for different domain'
         required: true
 
 jobs:
@@ -25,11 +25,11 @@ jobs:
           pipenv install
       - name: Crawl Past PyConTW Websites
         run: |
-          pipenv run python3 main.py -y 2016 &
-          pipenv run python3 main.py -y 2017 &
-          pipenv run python3 main.py -y 2018 &
-          pipenv run python3 main.py -y 2019 &
-          pipenv run python3 main.py -y 2020 &
+          pipenv run python3 main.py -y 2016 --base ${{github.event.inputs.base_url}} &
+          pipenv run python3 main.py -y 2017 --base ${{github.event.inputs.base_url}} &
+          pipenv run python3 main.py -y 2018 --base ${{github.event.inputs.base_url}} &
+          pipenv run python3 main.py -y 2019 --base ${{github.event.inputs.base_url}} &
+          pipenv run python3 main.py -y 2020 --base ${{github.event.inputs.base_url}} &
           wait
           mkdir build; mv 2016/ 2017/ 2018/ 2019/ 2020/ build/
       - name: Deploy to GitHub Pages
