@@ -40,6 +40,7 @@ def getcssimg(path):
         content = str(f.read())
         all_url = re.findall('/' + PYCON_YEAR + '[^\s]*', content)
         for url in all_url:
+            print(url)
             url = url.replace('\\n', '')
             url = url[0:url.rfind('\\')]
             url = url[0:url.rfind('?')]
@@ -113,6 +114,7 @@ def get_page(path):
         html = html.replace(
             f"/{PYCON_YEAR}/", f"{BASE_URL}/{PYCON_YEAR}/"
         ) # Replace base url since the gh-pages use base url following `{host}/{repo}/` instead of {host}/
+        path = BASE_URL + path
         if PYCON_YEAR == '2016':
             html = html.replace("<a data-lang=\"zh-hant\" href=\"#\">", "<a data-lang=\"zh-hant\" href=\"" + path.replace("en-us", "zh-hant") + "\">")
             html = html.replace("<a data-lang=\"en-us\" href=\"#\">", "<a data-lang=\"en-us\" href=\"" + path.replace("zh-hant", "en-us") + "\">")
