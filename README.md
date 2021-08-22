@@ -5,7 +5,7 @@
 To get the specific pycon web, try typing the command
 
 ```
-    python3 main.py -y year --base url [Your LOCAL SERVER HOST]
+    python3 main.py -y year --base [Your LOCAL SERVER HOST]
 ```
 
 where year can just in 2016 - 2020
