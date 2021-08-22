@@ -40,7 +40,6 @@ def getcssimg(path):
         content = str(f.read())
         all_url = re.findall('/' + PYCON_YEAR + '[^\s]*', content)
         for url in all_url:
-            print(url)
             url = url.replace('\\n', '')
             url = url[0:url.rfind('\\')]
             url = url[0:url.rfind('?')]
