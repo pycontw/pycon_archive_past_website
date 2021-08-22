@@ -113,6 +113,7 @@ def get_page(path):
         html = html.replace(
             f"/{PYCON_YEAR}/", f"{BASE_URL}/{PYCON_YEAR}/"
         ) # Replace base url since the gh-pages use base url following `{host}/{repo}/` instead of {host}/
+        path = BASE_URL + path
         if PYCON_YEAR == '2016':
             html = html.replace("<a data-lang=\"zh-hant\" href=\"#\">", "<a data-lang=\"zh-hant\" href=\"" + path.replace("en-us", "zh-hant") + "\">")
             html = html.replace("<a data-lang=\"en-us\" href=\"#\">", "<a data-lang=\"en-us\" href=\"" + path.replace("zh-hant", "en-us") + "\">")
