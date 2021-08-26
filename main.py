@@ -66,6 +66,13 @@ def css(soup):
             mkdir(css["href"])
             writefile(css["href"])
             getcssimg(css["href"])
+            with open('.' + css["href"], 'r') as f :
+                css_file = f.read()
+            css_file = css_file.replace("url('", "url('" + BASE_URL)
+            css_file = css_file.replace('url("', 'url("' + BASE_URL)
+            css_file = css_file.replace("url(/", "url(" + BASE_URL + "/")
+            with open('.' + css["href"], 'w') as f:
+                f.write(css_file)
 
 def img(soup):
     for img in soup.find_all("img"):
