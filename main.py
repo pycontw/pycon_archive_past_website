@@ -157,7 +157,9 @@ def main():
     soup = BeautifulSoup(request.text, "html.parser")       # Using html parser
     crawler_urls = soup.select("a")                             
     crawler_urls = set([crawler_url["href"] for crawler_url in crawler_urls])    
-    
+    if PYCON_YEAR >= '2020':
+        crawler_urls.add(f"/{PYCON_YEAR}/zh-hant/sponsor/prospectus/")
+
     for crawler_url in crawler_urls:
         if crawler_url[:5] == f"/{PYCON_YEAR}":
             get_page(crawler_url)
