@@ -155,12 +155,13 @@ def main():
     # Get pycon website, including zh-hant and en-us, according to given year.
     request = requests.get(PYCON_URL + "/" + PYCON_YEAR + "/zh-hant/")    # Get HTML
     soup = BeautifulSoup(request.text, "html.parser")       # Using html parser
-    navs = soup.select("nav a")                             # Get each <a> tag in <nav> and save in navs
-    navs = set([nav["href"] for nav in navs])               # Get each href in navs, and make it unique
+    crawler_urls = soup.select("a")                             
+    crawler_urls = set([crawler_url["href"] for crawler_url in crawler_urls])    
     
-    for nav in navs:                                        # Get each page in navs and deal with en-us at the same time
-        get_page(nav)
-        get_page(nav.replace("zh-hant", "en-us"))
+    for crawler_url in crawler_urls:
+        if crawler_url[:5] == f"/{PYCON_YEAR}":
+            get_page(crawler_url)
+            get_page(crawler_url.replace("zh-hant", "en-us"))
 
 @click.command()
 @click.option('-y', 'param', help='Pycon Year (2016 - 2020)', type=click.DateTime(formats=["%Y"]), required=True)
