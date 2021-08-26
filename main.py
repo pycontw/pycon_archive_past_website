@@ -109,6 +109,7 @@ def get_page(path):
                 for elm in elements:
                     elm.replace_with("zh-hant_target")
         html = str(soup)
+        html = html.replace('method="post"', "")
         html = html.replace("action=\"/" + PYCON_YEAR + "/set-language/\"", "")
         html = html.replace(
             f"/{PYCON_YEAR}/", f"{BASE_URL}/{PYCON_YEAR}/"
