@@ -114,34 +114,34 @@ def get_page(path):
         html = html.replace(
             f"/{PYCON_YEAR}/", f"{BASE_URL}/{PYCON_YEAR}/"
         ) # Replace base url since the gh-pages use base url following `{host}/{repo}/` instead of {host}/
-        path = BASE_URL + path
+        full_path = BASE_URL + path
         if PYCON_YEAR == '2016':
-            html = html.replace("<a data-lang=\"zh-hant\" href=\"#\">", "<a data-lang=\"zh-hant\" href=\"" + path.replace("en-us", "zh-hant") + "\">")
-            html = html.replace("<a data-lang=\"en-us\" href=\"#\">", "<a data-lang=\"en-us\" href=\"" + path.replace("zh-hant", "en-us") + "\">")
+            html = html.replace("<a data-lang=\"zh-hant\" href=\"#\">", "<a data-lang=\"zh-hant\" href=\"" + full_path.replace("en-us", "zh-hant") + "\">")
+            html = html.replace("<a data-lang=\"en-us\" href=\"#\">", "<a data-lang=\"en-us\" href=\"" + full_path.replace("zh-hant", "en-us") + "\">")
         if PYCON_YEAR == '2017':
             if path[6:8] == 'zh':
-                html = html.replace("en-us_target", "<div data-lang=\"en-us\" style=\"margin-left: 40px; line-height: 60px;\"> <a href='" + path.replace("zh-hant", "en-us") + "' style=\"font-size: 16px;\">English (US)</a></div>", 1)
-                html = html.replace("en-us_target", "<div data-lang=\"en-us\" style=\"margin-left: 20px;\"> <a href='" + path.replace("zh-hant", "en-us") + "'>English (US)</a></div>", 1)
+                html = html.replace("en-us_target", "<div data-lang=\"en-us\" style=\"margin-left: 40px; line-height: 60px;\"> <a href='" + full_path.replace("zh-hant", "en-us") + "' style=\"font-size: 16px;\">English (US)</a></div>", 1)
+                html = html.replace("en-us_target", "<div data-lang=\"en-us\" style=\"margin-left: 20px;\"> <a href='" + full_path.replace("zh-hant", "en-us") + "'>English (US)</a></div>", 1)
             if path[6:8] == 'en':
-                html = html.replace("zh-hant_target", "<div data-lang=\"zh-hant\" style=\"margin-left: 40px; line-height: 60px;\"> <a href='" + path.replace("en-us", "zh-hant") + "' style=\"font-size: 16px;\">繁體中文</a></div>", 1)
-                html = html.replace("zh-hant_target", "<div data-lang=\"zh-hant\" style=\"margin-left: 20px;\"> <a href='" + path.replace("en-us", "zh-hant") + "'>繁體中文</a></div>", 1)
+                html = html.replace("zh-hant_target", "<div data-lang=\"zh-hant\" style=\"margin-left: 40px; line-height: 60px;\"> <a href='" + full_path.replace("en-us", "zh-hant") + "' style=\"font-size: 16px;\">繁體中文</a></div>", 1)
+                html = html.replace("zh-hant_target", "<div data-lang=\"zh-hant\" style=\"margin-left: 20px;\"> <a href='" + full_path.replace("en-us", "zh-hant") + "'>繁體中文</a></div>", 1)
         if PYCON_YEAR == '2018':
             if path[6:8] == 'zh':
-                html = html.replace("EN", "<a href='" + path.replace("zh-hant", "en-us") + "' class=\"myclass\">EN</a>", 1)
+                html = html.replace("EN", "<a href='" + full_path.replace("zh-hant", "en-us") + "' class=\"myclass\">EN</a>", 1)
             if path[6:8] == 'en':
-                html = html.replace("ZH", "<a href='" + path.replace("en-us", "zh-hant") + "' class=\"myclass\">ZH</a>", 1)
+                html = html.replace("ZH", "<a href='" + full_path.replace("en-us", "zh-hant") + "' class=\"myclass\">ZH</a>", 1)
             html += "<style>.myclass{text-decoration: none;color: rgba(255, 255, 255, 0.35);}.myclass:hover{text-decoration: none;color: rgba(255, 255, 255, 0.7);}</style>"
         if PYCON_YEAR == '2019':
             if path[6:8] == 'zh':
-                html = html.replace("EN", "<a href='" + path.replace("zh-hant", "en-us") + "' class=\"myclass\">EN</a>", 1)
+                html = html.replace("EN", "<a href='" + full_path.replace("zh-hant", "en-us") + "' class=\"myclass\">EN</a>", 1)
             if path[6:8] == 'en':
-                html = html.replace("ZH", "<a href='" + path.replace("en-us", "zh-hant") + "' class=\"myclass\">ZH</a>", 1)
+                html = html.replace("ZH", "<a href='" + full_path.replace("en-us", "zh-hant") + "' class=\"myclass\">ZH</a>", 1)
             html += "<style>.myclass{text-decoration: none;color: #616e86;}.myclass:hover{text-decoration: none;color: #4a5363;}</style>"
         if PYCON_YEAR == '2020':
             if path[6:8] == 'zh':
-                html = html.replace("EN", "<a href='" + path.replace("zh-hant", "en-us") + "' style=\"text-decoration: none;\">EN</a>", 1)
+                html = html.replace("EN", "<a href='" + full_path.replace("zh-hant", "en-us") + "' style=\"text-decoration: none;\">EN</a>", 1)
             if path[6:8] == 'en':
-                html = html.replace("ZH", "<a href='" + path.replace("en-us", "zh-hant") + "' style=\"text-decoration: none;\">ZH</a>", 1)
+                html = html.replace("ZH", "<a href='" + full_path.replace("en-us", "zh-hant") + "' style=\"text-decoration: none;\">ZH</a>", 1)
         f.write(unquote(html))
 
     # get talk and tutorial page
