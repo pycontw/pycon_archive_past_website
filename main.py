@@ -68,9 +68,9 @@ def css(soup):
             getcssimg(css["href"])
             with open('.' + css["href"], 'r') as f :
                 css_file = f.read()
-            css_file = css_file.replace("url('", "url('" + BASE_URL)
-            css_file = css_file.replace('url("', 'url("' + BASE_URL)
-            css_file = css_file.replace("url(/", "url(" + BASE_URL + "/")
+            css_file = css_file.replace("url('", f"url('{BASE_URL}")
+            css_file = css_file.replace('url("', f'url("{BASE_URL}')
+            css_file = css_file.replace("url(/", f"url({BASE_URL}/")
             with open('.' + css["href"], 'w') as f:
                 f.write(css_file)
 
@@ -169,7 +169,7 @@ def main():
         crawler_urls.add(f"/{PYCON_YEAR}/zh-hant/sponsor/prospectus/")
 
     for crawler_url in crawler_urls:
-        if crawler_url[:5] == f"/{PYCON_YEAR}":
+        if Path(crawler_url).parts[1] == PYCON_YEAR:
             get_page(crawler_url)
             get_page(crawler_url.replace("zh-hant", "en-us"))
 
