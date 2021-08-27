@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Submit your first CPython patch (and don't worry about C) | PyCon Taiwan 2017</title>
+<link href="/pycon_archive_past_website/2017/static/pycontw-2017/images/favicon.png" rel="icon" type="image/png"/>
+<meta content="" property="og:description"/>
+<meta content="https://tw.pycon.org/pycon_archive_past_website/2017/static/pycontw-2017/images/og-image.png" property="og:image"/>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed|Ubuntu+Mono:400,400i" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/pycon_archive_past_website/2017/static/CACHE/css/69b4ae298e4c.css" rel="stylesheet" type="text/css">
+</link></head>
+<body>
+<div class="mother-wrapper">
+<header>
+<a class="btn btn-menu" href="#"></a>
+<a class="btn btn-home" href="/pycon_archive_past_website/2017/zh-hant/"></a>
+<nav class="wrapper header-nav">
+<div class="parent lang">
+<a class="btn-show-lang-menu" href="#">
+      	繁體中文
+      </a>
+<button class="btn-close"></button>
+</div>
+<a class="header-logo" href="/pycon_archive_past_website/2017/zh-hant/"></a>
+<div class="parent to-expand">
+<a href="/pycon_archive_past_website/2017/zh-hant/about/pycontw/">
+				關於
+			</a>
+<nav class="sub">
+<a href="/pycon_archive_past_website/2017/zh-hant/about/pycontw/">台灣 PyCon</a>
+<a href="/pycon_archive_past_website/2017/zh-hant/about/code-of-conduct/">行為準則</a>
+</nav>
+</div>
+<div class="parent to-expand active">
+<a href="/pycon_archive_past_website/2017/zh-hant/events/overview/">
+				活動
+			</a>
+<nav class="sub">
+<a href="/pycon_archive_past_website/2017/zh-hant/events/schedule/">議程</a>
+<a href="/pycon_archive_past_website/2017/zh-hant/events/overview/">活動總覽</a>
+<a href="/pycon_archive_past_website/2017/zh-hant/events/keynotes/">基調演講</a>
+<a href="/pycon_archive_past_website/2017/zh-hant/events/tutorial/">專業課程</a>
+<a href="/pycon_archive_past_website/2017/zh-hant/events/unconference/">非正式會議</a>
+<a href="/pycon_archive_past_website/2017/zh-hant/events/sprints/">衝刺開發</a>
+<a href="/pycon_archive_past_website/2017/zh-hant/events/bof/">PyNight</a>
+</nav>
+</div>
+<a class="" href="/pycon_archive_past_website/2017/zh-hant/venue/">
+			會場
+		</a>
+<a class="" href="/pycon_archive_past_website/2017/zh-hant/sponsors/">
+			夥伴
+		</a>
+<div class="parent to-expand">
+<a href="/pycon_archive_past_website/2017/zh-hant/registration/financial-aid/">
+				註冊
+			</a>
+<nav class="sub">
+<a href="/pycon_archive_past_website/2017/zh-hant/registration/ticket-info/">售票資訊</a>
+<a href="/pycon_archive_past_website/2017/zh-hant/registration/financial-aid/">財務補助</a>
+</nav>
+</div>
+<a href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank">
+			部落格
+		</a>
+</nav>
+<nav class="wrapper header-menu-nav">
+<div class="parent lang">
+<a class="btn-back-to-menu" href="#">返回選單</a>
+<button class="btn-close"></button>
+</div>
+<a class="active" data-lang="zh-hant" href="/pycon_archive_past_website/2017/zh-hant/events/talk/346944817386750070/">
+    	繁體中文
+    </a>
+<div data-lang="en-us" style="margin-left: 40px; line-height: 60px;"> <a href='/pycon_archive_past_website/2017/en-us/events/talk/346944817386750070/' style="font-size: 16px;">English (US)</a></div>
+</nav>
+<nav class="control-nav">
+<a class="dashboard" href="/pycon_archive_past_website/2017/zh-hant/dashboard/">
+			控制面板
+		</a>
+<div class="parent lang">
+<a href="#">繁體中文</a>
+<nav class="sub">
+<a data-lang="zh-hant" href="/pycon_archive_past_website/2017/zh-hant/events/talk/346944817386750070/">
+					繁體中文
+				</a>
+<div data-lang="en-us" style="margin-left: 20px;"> <a href='/pycon_archive_past_website/2017/en-us/events/talk/346944817386750070/'>English (US)</a></div>
+</nav>
+</div>
+<nav class="social">
+<a class="fa fa-facebook" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a class="fa fa-envelope-o" href="mailto:organizers@pycon.tw" rel="noopener" target="_blank"></a>
+</nav>
+</nav>
+</header>
+<form  id="nav-lang-form" >
+
+<input name="next" type="hidden"/>
+<input name="language" type="hidden"/>
+</form>
+<div class="wrapper">
+<main class="inner-wrapper">
+<h1><span>Submit your first CPython patch (and don't worry about C)</span></h1>
+<section class="talk-info-section">
+<article class="classification-block">
+<ul class="classification-list">
+<li><span aria-hidden="true" class="label fa fa-map-marker"></span>R1</li>
+<li><span aria-hidden="true" class="label fa fa-clock-o"></span>第 2 天，13:25‑13:55</li>
+<li><span aria-hidden="true" class="label">ZE</span>中文演講/英文投影片</li>
+<li><span aria-hidden="true" class="label fa fa-tag"></span>Python Core（語言本身、標準函式庫…）</li>
+<li><span aria-hidden="true" class="label">=</span>中階</li>
+</ul>
+</article>
+<article class="abstract-block"><p>The process of submitting CPython patch has changed in 2017 Feb., which had changed to use GitHub with bpo (bugs.python.org), not Mercurial anymore.</p>
+<p>This talk will give you the basic knowledge of reporting bugs to bpo, submitting CPython patch, including how to retrieve the CPython source code, where the bugs listed, how to fix it, and how to submit the patch / contribute to CPython.</p>
+<p>Also, please kindly know that you **DON'T** need to have any advanced C knowledge (even if you're not familiar with C!) and still can join to contribute CPython, e.g. comment on doc patches, write python-only patches...etc. The fact is, CPython codebase is consist of 57.5% Python code and 39.8% C code!</p>
+<p>If you are still interested in this topic and want to contribute with CPython community, welcome to join this talk.</p></article>
+</section>
+<h2>演講詳細內容</h2>
+<article class="editor-readonly">
+<div class="editor-preview">Reference
+------
+* [python-committers] We are now live on GitHub!: https://mail.python.org/pipermail/python-committers/2017-February/004220.html
+* cpython-devguide: http://cpython-devguide.readthedocs.io/
+* fixed issue:
+    * http://bugs.python.org/issue29634
+    * http://bugs.python.org/issue29890</div>
+</article>
+<h3>投影片連結</h3>
+<article><a href="https://goo.gl/4oC2Dg">https://goo.gl/4oC2Dg</a></article>
+<h2 id="speaker-content">講者介紹</h2>
+<h3>
+	Louie Lu
+	<span class="speaker-social">
+<a href="https://github.com/mlouielu" target="_blank">
+<span aria-hidden="true" class="fa fa-github"></span>
+</a>
+<a href="https://fb.me/louie.lu.180" target="_blank">
+<span aria-hidden="true" class="fa fa-facebook"></span>
+</a>
+</span>
+</h3>
+<div class="speaker-detail-info speaker-detail-info-has-photo">
+<img class="speaker-photo" src="/pycon_archive_past_website/2017/media/avatars/318097505713651913/2017-05-01-15317889_1412875262064393_2685786703496506831_n.jpg"/>
+<article class="speaker-bio"><p>Greeting, I'm Louie Lu, from Taiwan.</p>
+<p>Louie Lu (Shao-Jung Lu) is a Software Engineer Intern at KKBOX, and was a Software Engineer at HopeBay Tech, where he does automation test for UI and API, with 3rd-party API development.</p>
+<p>He has the experiment and interesting in IoT kernel development and system programmings, such as F9 microkernel and BitSec Hypervisor.</p>
+<p>And he is now trying to understand the internals of CPython, to see how CPython magically bring us Python to the world.</p>
+<p>You can find me at: https://louie.lu<br/>Also, the bpo-mergerate: https://bpo-mergerate.louie.lu</p></article>
+</div>
+</main>
+</div>
+<div class="push"></div>
+</div>
+<footer>
+<nav class="social">
+<a class="fa fa-facebook" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a class="fa fa-envelope-o" href="mailto:organizers@pycon.tw" rel="noopener" target="_blank"></a>
+</nav>
+</footer>
+<script>GA_TRACK_ID = 'UA-28961467-1';</script>
+<script src="/pycon_archive_past_website/2017/static/js/vendors/google_analytics.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+<script src="/pycon_archive_past_website/2017/static/CACHE/js/59244b458bbb.js" type="text/javascript"></script>
+<script src="/pycon_archive_past_website/2017/static/js/vendors/simplemde.min.js"></script>
+<script src="/pycon_archive_past_website/2017/static/js/tools/simplemde-setup.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Connect "K" of SMACK：pykafka, kafka-python or ? | PyCon Taiwan 2017</title>
+<link href="/pycon_archive_past_website/2017/static/pycontw-2017/images/favicon.png" rel="icon" type="image/png"/>
+<meta content="" property="og:description"/>
+<meta content="https://tw.pycon.org/pycon_archive_past_website/2017/static/pycontw-2017/images/og-image.png" property="og:image"/>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed|Ubuntu+Mono:400,400i" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/pycon_archive_past_website/2017/static/CACHE/css/69b4ae298e4c.css" rel="stylesheet" type="text/css">
+</link></head>
+<body>
+<div class="mother-wrapper">
+<header>
+<a class="btn btn-menu" href="#"></a>
+<a class="btn btn-home" href="/pycon_archive_past_website/2017/zh-hant/"></a>
+<nav class="wrapper header-nav">
+<div class="parent lang">
+<a class="btn-show-lang-menu" href="#">
+      	繁體中文
+      </a>
+<button class="btn-close"></button>
+</div>
+<a class="header-logo" href="/pycon_archive_past_website/2017/zh-hant/"></a>
+<div class="parent to-expand">
+<a href="/pycon_archive_past_website/2017/zh-hant/about/pycontw/">
+				關於
+			</a>
+<nav class="sub">
+<a href="/pycon_archive_past_website/2017/zh-hant/about/pycontw/">台灣 PyCon</a>
+<a href="/pycon_archive_past_website/2017/zh-hant/about/code-of-conduct/">行為準則</a>
+</nav>
+</div>
+<div class="parent to-expand active">
+<a href="/pycon_archive_past_website/2017/zh-hant/events/overview/">
+				活動
+			</a>
+<nav class="sub">
+<a href="/pycon_archive_past_website/2017/zh-hant/events/schedule/">議程</a>
+<a href="/pycon_archive_past_website/2017/zh-hant/events/overview/">活動總覽</a>
+<a href="/pycon_archive_past_website/2017/zh-hant/events/keynotes/">基調演講</a>
+<a href="/pycon_archive_past_website/2017/zh-hant/events/tutorial/">專業課程</a>
+<a href="/pycon_archive_past_website/2017/zh-hant/events/unconference/">非正式會議</a>
+<a href="/pycon_archive_past_website/2017/zh-hant/events/sprints/">衝刺開發</a>
+<a href="/pycon_archive_past_website/2017/zh-hant/events/bof/">PyNight</a>
+</nav>
+</div>
+<a class="" href="/pycon_archive_past_website/2017/zh-hant/venue/">
+			會場
+		</a>
+<a class="" href="/pycon_archive_past_website/2017/zh-hant/sponsors/">
+			夥伴
+		</a>
+<div class="parent to-expand">
+<a href="/pycon_archive_past_website/2017/zh-hant/registration/financial-aid/">
+				註冊
+			</a>
+<nav class="sub">
+<a href="/pycon_archive_past_website/2017/zh-hant/registration/ticket-info/">售票資訊</a>
+<a href="/pycon_archive_past_website/2017/zh-hant/registration/financial-aid/">財務補助</a>
+</nav>
+</div>
+<a href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank">
+			部落格
+		</a>
+</nav>
+<nav class="wrapper header-menu-nav">
+<div class="parent lang">
+<a class="btn-back-to-menu" href="#">返回選單</a>
+<button class="btn-close"></button>
+</div>
+<a class="active" data-lang="zh-hant" href="/pycon_archive_past_website/2017/zh-hant/events/talk/323492357779488854/">
+    	繁體中文
+    </a>
+<div data-lang="en-us" style="margin-left: 40px; line-height: 60px;"> <a href='/pycon_archive_past_website/2017/en-us/events/talk/323492357779488854/' style="font-size: 16px;">English (US)</a></div>
+</nav>
+<nav class="control-nav">
+<a class="dashboard" href="/pycon_archive_past_website/2017/zh-hant/dashboard/">
+			控制面板
+		</a>
+<div class="parent lang">
+<a href="#">繁體中文</a>
+<nav class="sub">
+<a data-lang="zh-hant" href="/pycon_archive_past_website/2017/zh-hant/events/talk/323492357779488854/">
+					繁體中文
+				</a>
+<div data-lang="en-us" style="margin-left: 20px;"> <a href='/pycon_archive_past_website/2017/en-us/events/talk/323492357779488854/'>English (US)</a></div>
+</nav>
+</div>
+<nav class="social">
+<a class="fa fa-facebook" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a class="fa fa-envelope-o" href="mailto:organizers@pycon.tw" rel="noopener" target="_blank"></a>
+</nav>
+</nav>
+</header>
+<form  id="nav-lang-form" >
+
+<input name="next" type="hidden"/>
+<input name="language" type="hidden"/>
+</form>
+<div class="wrapper">
+<main class="inner-wrapper">
+<h1><span>Connect "K" of SMACK：pykafka, kafka-python or ?</span></h1>
+<section class="talk-info-section">
+<article class="classification-block">
+<ul class="classification-list">
+<li><span aria-hidden="true" class="label fa fa-map-marker"></span>R0</li>
+<li><span aria-hidden="true" class="label fa fa-clock-o"></span>第 1 天，16:10‑16:55</li>
+<li><span aria-hidden="true" class="label">ZE</span>中文演講/英文投影片</li>
+<li><span aria-hidden="true" class="label fa fa-tag"></span>Python 函式庫</li>
+<li><span aria-hidden="true" class="label">=</span>中階</li>
+</ul>
+</article>
+<article class="abstract-block"><p>Apache Kafka is considered as a distributed streaming platform to a build real-time data pipelines and streaming apps. You can also take Kafka as commit log service with functions much like a publish/subscribe messaging system, but with better throughput, built-in partitioning, replication, and fault tolerance and runs in production in thousands of companies. Recently, Kafka has been widely applied as one component of SMACK stack because of it's role connected with Apache Hadoop, Apache Storm, and Spark Streaming in the data pipeline.</p>
+<p>In this talk, I will start with introduce data stream processing and the general concept of Kafka's architecture and components by several use cases. Then, Kafka' API will be introduced by python clients with demo. Finally, the benchmark, comparison and limitation of different python clients will be discussed.</p>
+<p>本演講將透過使用案例介紹Apache Kafka 的基本架構和組成概念，並藉由python client 的套件說明其API的使用，最後比較不同python client的差異和限制。</p></article>
+</section>
+<h2>演講詳細內容</h2>
+<article class="editor-readonly">
+<div class="editor-preview">本演講將會透過python client libary來介紹 Kafka 的功能，並稍加作比較。
+
+關於Apache Kafka說明: [Apache Kafka](http://https://kafka.apache.org/)
+
+將介紹的第python client套件：
+1. [confluent-kafka-python](http://docs.confluent.io/current/clients/index.html) maintained by Confluent
+2. [Kafka-python](http://github.com/dpkp/kafka-python) maintained by Dana Powers
+3. [pykafka](https://github.com/Parsely/pykafka) maintained by Parse.ly
+
+Demo source codes and jupyter notebooks:
+https://github.com/sucitw/benchmark-python-client-for-kafka</div>
+</article>
+<h3>投影片連結</h3>
+<article><a href="https://speakerdeck.com/sucitw/connect-k-of-smack-pykafka-kafka-python-or">https://speakerdeck.com/sucitw/connect-k-of-smack-pykafka-kafka-python-or</a></article>
+<h2 id="speaker-content">講者介紹</h2>
+<h3>
+	Shuhsi Lin
+	<span class="speaker-social">
+<a href="https://github.com/sucitw" target="_blank">
+<span aria-hidden="true" class="fa fa-github"></span>
+</a>
+<a href="https://twitter.com/ShuhsiLin" target="_blank">
+<span aria-hidden="true" class="fa fa-twitter"></span>
+</a>
+</span>
+</h3>
+<div class="speaker-detail-info speaker-detail-info-has-photo">
+<img class="speaker-photo" src="/pycon_archive_past_website/2017/media/avatars/318091287767023816/2017-02-14-DSC00089_2.jpg"/>
+<article class="speaker-bio"><p>A data engineer and python programmer. Currently working on various data applications in a manufacturing company.</p>
+<p>Research interests: IoT applications, data streaming processing, data analysis and data visualization.</p></article>
+</div>
+</main>
+</div>
+<div class="push"></div>
+</div>
+<footer>
+<nav class="social">
+<a class="fa fa-facebook" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a class="fa fa-envelope-o" href="mailto:organizers@pycon.tw" rel="noopener" target="_blank"></a>
+</nav>
+</footer>
+<script>GA_TRACK_ID = 'UA-28961467-1';</script>
+<script src="/pycon_archive_past_website/2017/static/js/vendors/google_analytics.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+<script src="/pycon_archive_past_website/2017/static/CACHE/js/59244b458bbb.js" type="text/javascript"></script>
+<script src="/pycon_archive_past_website/2017/static/js/vendors/simplemde.min.js"></script>
+<script src="/pycon_archive_past_website/2017/static/js/tools/simplemde-setup.js"></script>
+</body>
+</html>
