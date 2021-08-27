@@ -88,6 +88,23 @@ def img(soup):
                 mkdir(person['photo'])
                 writefile(person['photo'])
 
+def get_assets(path: Path):
+    """
+    Get all assets in the given path.
+    """
+    export_path: Path = Path.cwd().joinpath(*path.parts)
+    if path.parts[0] == "/":
+        export_path = Path.cwd().joinpath(*path.parts[1:])
+    request = requests.get(f"{PYCON_URL}{path.resolve()}", allow_redirects=True)
+    logger.info("fetching {}...", f"{PYCON_URL}{path.resolve()}")
+    try:
+        if not export_path.parent.exists():
+            os.makedirs(export_path.parent)
+        with open(export_path.resolve(), 'wb') as fout:
+            fout.write(request.content)
+    except OSError as err:
+        logger.error(err)
+
 def get_page(path):
     # filter our target path
     if path[0] != '/' or Path('.' + path + 'index.html').exists():
@@ -174,6 +191,10 @@ def main():
         if len(path_parts) >= 2 and path_parts[1] == PYCON_YEAR:
             get_page(crawler_url)
             get_page(crawler_url.replace("zh-hant", "en-us"))
+
+    for link in soup.findAll("link", {"rel": "icon"}):
+        if "href" in link.attrs:
+            get_assets(Path(link['href']))
 
 @click.command()
 @click.option('-y', 'param', help='Pycon Year (2016 - 2020)', type=click.DateTime(formats=["%Y"]), required=True)

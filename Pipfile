@@ -8,7 +8,6 @@ bs4 = "*"
 requests = "*"
 click = "*"
 loguru = "*"
-pathlib = "*"
 
 [dev-packages]
 
