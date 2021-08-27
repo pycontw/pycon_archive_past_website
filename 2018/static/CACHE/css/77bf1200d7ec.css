@@ -227,7 +227,7 @@ footer .footer-logo {
   width: 100%;
   height: 40px;
   margin: 0;
-  background: url('/2018/static/pycontw-2018/assets/logo-py-white.svg?ceac3449832e') center no-repeat;
+  background: url('/pycon_archive_past_website/2018/static/pycontw-2018/assets/logo-py-white.svg?ceac3449832e') center no-repeat;
 }
 
 footer a, footer p, footer ul {
@@ -398,7 +398,7 @@ body.overlay-open {
   display: block;
   width: 100%;
   height: 100%;
-  background: url('/2018/static/pycontw-2018/assets/logo-white.svg?ceac3449832e') no-repeat 50% top/80%;
+  background: url('/pycon_archive_past_website/2018/static/pycontw-2018/assets/logo-white.svg?ceac3449832e') no-repeat 50% top/80%;
 }
 
 .navbar-lang-switch {
@@ -1005,7 +1005,7 @@ body {
 .menu-navbar-desktop .menu-logo {
   flex: 1;
   width: 100%;
-  background: url('/2018/static/pycontw-2018/assets/logo-white.svg?ceac3449832e') center 32px no-repeat;
+  background: url('/pycon_archive_past_website/2018/static/pycontw-2018/assets/logo-white.svg?ceac3449832e') center 32px no-repeat;
 }
 
 .menu-navbar-desktop .menu {
@@ -1472,52 +1472,52 @@ main .table {
 }
 
 .talk-info ul li dfn.location {
-  background: url('/2018/static/pycontw-2018/assets/icon-location.svg?ceac3449832e') top right no-repeat;
+  background: url('/pycon_archive_past_website/2018/static/pycontw-2018/assets/icon-location.svg?ceac3449832e') top right no-repeat;
   margin-top: 0;
 }
 
 .talk-info ul li dfn.slot {
-  background: url('/2018/static/pycontw-2018/assets/icon-clock.svg?ceac3449832e') top right no-repeat;
+  background: url('/pycon_archive_past_website/2018/static/pycontw-2018/assets/icon-clock.svg?ceac3449832e') top right no-repeat;
   margin-top: 0;
 }
 
 .talk-info ul li dfn.category {
-  background: url('/2018/static/pycontw-2018/assets/icon-tag.svg?ceac3449832e') top right no-repeat;
+  background: url('/pycon_archive_past_website/2018/static/pycontw-2018/assets/icon-tag.svg?ceac3449832e') top right no-repeat;
   margin-top: -2px;
 }
 
 .talk-info ul li dfn.language.enen {
-  background: url('/2018/static/pycontw-2018/assets/icon-language-enen.svg?ceac3449832e') top right no-repeat;
+  background: url('/pycon_archive_past_website/2018/static/pycontw-2018/assets/icon-language-enen.svg?ceac3449832e') top right no-repeat;
   margin-top: 0;
 }
 
 .talk-info ul li dfn.language.zhen {
-  background: url('/2018/static/pycontw-2018/assets/icon-language-zhen.svg?ceac3449832e') top right no-repeat;
+  background: url('/pycon_archive_past_website/2018/static/pycontw-2018/assets/icon-language-zhen.svg?ceac3449832e') top right no-repeat;
   margin-top: 0;
 }
 
 .talk-info ul li dfn.language.zhzh {
-  background: url('/2018/static/pycontw-2018/assets/icon-language-zhzh.svg?ceac3449832e') top right no-repeat;
+  background: url('/pycon_archive_past_website/2018/static/pycontw-2018/assets/icon-language-zhzh.svg?ceac3449832e') top right no-repeat;
   margin-top: 0;
 }
 
 .talk-info ul li dfn.python-level.novice {
-  background: url('/2018/static/pycontw-2018/assets/icon-level-1.svg?ceac3449832e') top right no-repeat;
+  background: url('/pycon_archive_past_website/2018/static/pycontw-2018/assets/icon-level-1.svg?ceac3449832e') top right no-repeat;
   margin-top: 0;
 }
 
 .talk-info ul li dfn.python-level.intermediate {
-  background: url('/2018/static/pycontw-2018/assets/icon-level-2.svg?ceac3449832e') top right no-repeat;
+  background: url('/pycon_archive_past_website/2018/static/pycontw-2018/assets/icon-level-2.svg?ceac3449832e') top right no-repeat;
   margin-top: 0;
 }
 
 .talk-info ul li dfn.python-level.experienced {
-  background: url('/2018/static/pycontw-2018/assets/icon-level-3.svg?ceac3449832e') top right no-repeat;
+  background: url('/pycon_archive_past_website/2018/static/pycontw-2018/assets/icon-level-3.svg?ceac3449832e') top right no-repeat;
   margin-top: 0;
 }
 
 .talk-info ul li dfn.recording-no {
-  background: url('/2018/static/pycontw-2018/assets/icon-no-recording.svg?ceac3449832e') top right no-repeat;
+  background: url('/pycon_archive_past_website/2018/static/pycontw-2018/assets/icon-no-recording.svg?ceac3449832e') top right no-repeat;
   margin-top: 0;
 }
 
@@ -1757,67 +1757,67 @@ main .table {
 .schedule-page .talk-tags .speech-en::before {
   width: 26px;
   margin-top: -1px;
-  background: url('/2018/static/pycontw-2018/assets/icon-language-enen.svg?ceac3449832e') top left no-repeat;
+  background: url('/pycon_archive_past_website/2018/static/pycontw-2018/assets/icon-language-enen.svg?ceac3449832e') top left no-repeat;
 }
 
 .schedule-page .talk-tags .speech-zh::before {
   width: 26px;
   margin-top: -1px;
-  background: url('/2018/static/pycontw-2018/assets/icon-language-zhzh.svg?ceac3449832e') top left no-repeat;
+  background: url('/pycon_archive_past_website/2018/static/pycontw-2018/assets/icon-language-zhzh.svg?ceac3449832e') top left no-repeat;
 }
 
 .schedule-page .talk-tags .slides-en::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2018/static/pycontw-2018/assets/icon-language-enen.svg?ceac3449832e') top right no-repeat;
+  background: url('/pycon_archive_past_website/2018/static/pycontw-2018/assets/icon-language-enen.svg?ceac3449832e') top right no-repeat;
 }
 
 .schedule-page .talk-tags .slides-zh::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2018/static/pycontw-2018/assets/icon-language-zhzh.svg?ceac3449832e') top right no-repeat;
+  background: url('/pycon_archive_past_website/2018/static/pycontw-2018/assets/icon-language-zhzh.svg?ceac3449832e') top right no-repeat;
 }
 
 .schedule-page .talk-tags .language-enen::before {
   width: 52px;
   margin-top: 0;
-  background: url('/2018/static/pycontw-2018/assets/icon-language-enen.svg?ceac3449832e') top center no-repeat;
+  background: url('/pycon_archive_past_website/2018/static/pycontw-2018/assets/icon-language-enen.svg?ceac3449832e') top center no-repeat;
 }
 
 .schedule-page .talk-tags .language-zhen::before {
   width: 52px;
   margin-top: 0;
-  background: url('/2018/static/pycontw-2018/assets/icon-language-zhen.svg?ceac3449832e') top center no-repeat;
+  background: url('/pycon_archive_past_website/2018/static/pycontw-2018/assets/icon-language-zhen.svg?ceac3449832e') top center no-repeat;
 }
 
 .schedule-page .talk-tags .language-zhzh::before {
   width: 52px;
   margin-top: 0;
-  background: url('/2018/static/pycontw-2018/assets/icon-language-zhzh.svg?ceac3449832e') top center no-repeat;
+  background: url('/pycon_archive_past_website/2018/static/pycontw-2018/assets/icon-language-zhzh.svg?ceac3449832e') top center no-repeat;
 }
 
 .schedule-page .talk-tags .python-level-novice::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2018/static/pycontw-2018/assets/icon-level-1.svg?ceac3449832e') top left no-repeat;
+  background: url('/pycon_archive_past_website/2018/static/pycontw-2018/assets/icon-level-1.svg?ceac3449832e') top left no-repeat;
 }
 
 .schedule-page .talk-tags .python-level-intermediate::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2018/static/pycontw-2018/assets/icon-level-2.svg?ceac3449832e') top left no-repeat;
+  background: url('/pycon_archive_past_website/2018/static/pycontw-2018/assets/icon-level-2.svg?ceac3449832e') top left no-repeat;
 }
 
 .schedule-page .talk-tags .python-level-experienced::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2018/static/pycontw-2018/assets/icon-level-3.svg?ceac3449832e') top left no-repeat;
+  background: url('/pycon_archive_past_website/2018/static/pycontw-2018/assets/icon-level-3.svg?ceac3449832e') top left no-repeat;
 }
 
 .schedule-page .talk-tags .no-recording::before {
   width: 26px;
   margin-top: 1px;
-  background: url('/2018/static/pycontw-2018/assets/icon-no-recording.svg?ceac3449832e') top left no-repeat;
+  background: url('/pycon_archive_past_website/2018/static/pycontw-2018/assets/icon-no-recording.svg?ceac3449832e') top left no-repeat;
 }
 
 .time-table {

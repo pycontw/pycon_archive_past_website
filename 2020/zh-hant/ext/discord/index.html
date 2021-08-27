@@ -1,0 +1,330 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Discord 指南 | PyCon Taiwan 2020</title>
+<link href="/pycon_archive_past_website/2020/static/pycontw-2020/assets/favicon/favicon.ico" rel="shortcut icon"/>
+<link href="/pycon_archive_past_website/2020/static/pycontw-2020/assets/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/pycon_archive_past_website/2020/static/pycontw-2020/assets/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/pycon_archive_past_website/2020/static/pycontw-2020/assets/favicon/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="" property="og:description"/>
+<meta content="https://tw.pycon.org/pycon_archive_past_website/2020/static/pycontw-2020/assets/og-image.png" property="og:image"/>
+<link href="https://fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,600,700|Raleway:300,400|Philosopher|Quicksand&amp;display=swap" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
+<link href="/pycon_archive_past_website/2020/static/CACHE/css/output.242ed18ddfee.css" rel="stylesheet" type="text/css"/>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNZ39PD');</script>
+</head>
+<body class="discord-page">
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-TNZ39PD" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<div data-controller="topNav">
+<nav class="top-navbar">
+<div class="navbar-left">
+<form  class="navbar-lang-switch" >
+
+<input name="next" type="hidden" value="/pycon_archive_past_website/2020/ext/discord/"/>
+<button disabled="disabled" name="language" type="submit" value="zh-hant">
+                    ZH
+                </button>
+<button name="language" type="submit" value="en-us">
+                    <a href='/pycon_archive_past_website/2020/en-us/ext/discord/' style="text-decoration: none;">EN</a>
+                </button>
+</form>
+<a href="/pycon_archive_past_website/2020/zh-hant/"><i class="twicon-provintia navbar-provintia"></i></a>
+<a class="navbar-brand" href="/pycon_archive_past_website/2020/zh-hant/">PyCon TW20</a>
+</div>
+<button aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler no-script" data-action="topNav#toggle" data-target="topNav.toggler" type="button">
+<div><span></span><span></span><span></span></div>
+</button>
+<div class="navbar-social-desktop">
+<a aria-label="部落格" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+</nav>
+<nav class="menu-navbar-mobile no-script" data-target="topNav.menu">
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/pycon_archive_past_website/2020/zh-hant/about/pycontw/">
+			關於
+		</a>
+</li>
+<!-- -->
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-conference" type="checkbox"/>
+<label for="menu-navbar-mobile-conference">
+			議程
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/pycon_archive_past_website/2020/zh-hant/conference/schedule/">時間表</a></li>
+<li><a href="/pycon_archive_past_website/2020/zh-hant/conference/keynotes/">基調演講</a></li>
+<li><a href="/pycon_archive_past_website/2020/zh-hant/conference/talks/">一般演講</a></li>
+<li><a href="/pycon_archive_past_website/2020/zh-hant/conference/tutorials/">專業課程</a></li>
+<li><a href="/pycon_archive_past_website/2020/zh-hant/conference/community-track/">社群軌</a></li>
+<!--<li><a href="/pycon_archive_past_website/2020/zh-hant/speaking/recording/">錄影</a></li>-->
+<!-- <li><a href="/pycon_archive_past_website/2020/zh-hant/portal/">傳送門</a></li> -->
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-events" type="checkbox"/>
+<label for="menu-navbar-mobile-events">
+			活動
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/pycon_archive_past_website/2020/zh-hant/events/overview/">總覽</a></li>
+<li><a href="/pycon_archive_past_website/2020/zh-hant/events/warmup-session/">暖身活動</a></li>
+<li><a href="/pycon_archive_past_website/2020/zh-hant/events/open-spaces/">開放空間</a></li>
+<li><a href="/pycon_archive_past_website/2020/zh-hant/events/sprints/">衝刺開發</a></li>
+<li><a href="/pycon_archive_past_website/2020/zh-hant/events/job-listings/">徵才資訊</a></li>
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-registration" type="checkbox"/>
+<label for="menu-navbar-mobile-registration">
+			註冊
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/pycon_archive_past_website/2020/zh-hant/registration/ticket-info/">會議門票</a></li>
+<li><a href="/pycon_archive_past_website/2020/zh-hant/registration/financial-aid/">財務補助</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/pycon_archive_past_website/2020/zh-hant/venue/">
+			會場
+		</a>
+</li>
+<li>
+<a href="/pycon_archive_past_website/2020/zh-hant/covid-19/guidelines/">
+			COVID-19 防疫守則
+		</a>
+</li>
+<li class="dashboard-item">
+<a href="/pycon_archive_past_website/2020/zh-hant/dashboard/">My PyCon</a>
+</li>
+</ul>
+<div class="navbar-social-mobile">
+<a aria-label="部落格" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+<div class="shadow">
+<i class="twicon-provintia"></i>
+</div>
+</nav>
+</div>
+<header class="page-hero">
+<nav class="menu-navbar-desktop">
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/pycon_archive_past_website/2020/zh-hant/about/pycontw/">
+			關於
+		</a>
+</li>
+<!-- -->
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-conference" type="checkbox"/>
+<label for="menu-navbar-desktop-conference">
+			議程
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/pycon_archive_past_website/2020/zh-hant/conference/schedule/">時間表</a></li>
+<li><a href="/pycon_archive_past_website/2020/zh-hant/conference/keynotes/">基調演講</a></li>
+<li><a href="/pycon_archive_past_website/2020/zh-hant/conference/talks/">一般演講</a></li>
+<li><a href="/pycon_archive_past_website/2020/zh-hant/conference/tutorials/">專業課程</a></li>
+<li><a href="/pycon_archive_past_website/2020/zh-hant/conference/community-track/">社群軌</a></li>
+<!--<li><a href="/pycon_archive_past_website/2020/zh-hant/speaking/recording/">錄影</a></li>-->
+<!-- <li><a href="/pycon_archive_past_website/2020/zh-hant/portal/">傳送門</a></li> -->
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-events" type="checkbox"/>
+<label for="menu-navbar-desktop-events">
+			活動
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/pycon_archive_past_website/2020/zh-hant/events/overview/">總覽</a></li>
+<li><a href="/pycon_archive_past_website/2020/zh-hant/events/warmup-session/">暖身活動</a></li>
+<li><a href="/pycon_archive_past_website/2020/zh-hant/events/open-spaces/">開放空間</a></li>
+<li><a href="/pycon_archive_past_website/2020/zh-hant/events/sprints/">衝刺開發</a></li>
+<li><a href="/pycon_archive_past_website/2020/zh-hant/events/job-listings/">徵才資訊</a></li>
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-registration" type="checkbox"/>
+<label for="menu-navbar-desktop-registration">
+			註冊
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/pycon_archive_past_website/2020/zh-hant/registration/ticket-info/">會議門票</a></li>
+<li><a href="/pycon_archive_past_website/2020/zh-hant/registration/financial-aid/">財務補助</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/pycon_archive_past_website/2020/zh-hant/venue/">
+			會場
+		</a>
+</li>
+<li>
+<a href="/pycon_archive_past_website/2020/zh-hant/covid-19/guidelines/">
+			COVID-19 防疫守則
+		</a>
+</li>
+<li class="dashboard-item">
+<a href="/pycon_archive_past_website/2020/zh-hant/dashboard/">My PyCon</a>
+</li>
+</ul>
+</nav>
+</header>
+<main>
+<section class="pill-title">
+<h1>PyCon TW Discord 指南</h1>
+</section>
+<div class="entry">
+<h2>使用流程</h2>
+<p><strong>如果尚未安裝 Discord 並加入 Python Taiwan 的伺服器，請先閱讀 <a href="#setup-discord">設定 Discord 與加入 Python Taiwan 伺服器</a></strong></p>
+<div class="toturial">
+<h3>1. 註冊</h3>
+<p>使用者會看到在 <strong>PYCON TW 2020</strong> 的類別下會有一個 #registration-desk 頻道。在此頻道會有一個 PyCon TW RegBot 負責註冊使用者到對應身分組。</p>
+<li>輸入 <code>!register <i>[TOKEN]</i></code> 以進行註冊</li>
+<p class="small">(如要取得您的專屬 Token 請點擊行前信中的連結或使用OPass)</p>
+<li class="sec">輸入 <code>!help</code> 以獲得 RegBot 的幫助</li>
+<p>註冊成功後，對應身分組可以看到的頻道會出現於左側。</p>
+<p>如果持續無法成功註冊，可以直接在 #registration-desk 提出並提及 <strong>@2020-staff</strong>。</p>
+</div>
+<div class="toturial">
+<h3>2. 查看大會公告
+<p>大會公告頻道的頻道名稱都會有 <strong>'announcements'</strong> 單字。</p>
+<p>成功進入後您可以先查看各公告頻道確認有沒有重要消息。</p>
+</h3></div>
+<div class="toturial">
+<h3>3. 加入議程討論頻道</h3>
+<p>議程討論頻道的頻道名稱都會有 <strong>'track'</strong> 單字。</p>
+<p>請根據<spam style="text-decoration:underline">keynote時段</spam>或是您<spam style="text-decoration:underline">參與的議程軌</spam>進入對應的討論頻道。</p>
+</div>
+<h2>身份組清單</h2>
+<p>Discord 成員可以被指派身分組，不同的身分組將有權限可以進入不同的頻道。</p>
+<div class="roles-list">
+<h3>2020-session-chair</h3>
+<p>對象：PyCon TW 2020 的所有議程主持人與助理主持人</p>
+</div>
+<div class="roles-list">
+<h3>2020-staff</h3>
+<p>對象：PyCon TW 2020 的所有志工</p>
+</div>
+<div class="roles-list">
+<h3>2020-speaker</h3>
+<p>對象：PyCon TW 2020 的所有講者</p>
+</div>
+<div class="roles-list">
+<h3>2020-remote</h3>
+<p>對象：PyCon TW 2020 的遠端議程相關工作人員</p>
+</div>
+<div class="roles-list">
+<h3>2020-attendee</h3>
+<p>對象：PyCon TW 2020 的所有會眾</p>
+</div>
+<h2>頻道清單</h2>
+<p>Discord 有兩種頻道：文字頻道與語音頻道。下面會以兩種方式區分</p>
+<li class="sec">#CHANNEL_NAME 代表文字頻道</li>
+<li class="sec">🔊CHANNEL_NAME 代表語音頻道</li>
+<div class="channels-list">
+<h3>註冊用頻道</h3>
+<h4>#registration-desk</h4>
+<h6>身分組：<code>@everyone</code></h6>
+<p>剛進入伺服器時，必須在這個頻道提供註冊資訊，以便機器人將使用者提升至對應身分組。</p>
+</div>
+<div class="channels-list">
+<h3>議程相關頻道</h3>
+<h4>#keynote-track</h4>
+<h6>身份組：<code>2020-staff</code>, <code>2020-speaker</code>, <code>2020-attendee</code></h6>
+<p>Keynote 的討論頻道。</p>
+<h4>#r1-track</h4>
+<h6>身份組：<code>2020-staff</code>, <code>2020-speaker</code>, <code>2020-attendee</code></h6>
+<p>R1 軌所有議程的會眾討論頻道。</p>
+<h4>#r2-track</h4>
+<h6>身份組：<code>2020-staff</code>, <code>2020-speaker</code>, <code>2020-attendee</code></h6>
+<p>R2 軌所有議程的會眾討論頻道。</p>
+<h4>#r3-track</h4>
+<h6>身份組：<code>2020-staff</code>, <code>2020-speaker</code>, <code>2020-attendee</code></h6>
+<p>R3 軌(遠端議程)所有議程的會眾討論頻道。</p>
+</div>
+<div class="channels-list">
+<h3>公告頻道</h3>
+<h4>#announcements</h4>
+<h6>身份組：<code>2020-staff</code>, <code>2020-speaker</code>, <code>2020-attendee</code></h6>
+<p>大會公告頻道，若大會有全面性的公告事項都會發在此處。</p>
+<h4>#speakers-announcements</h4>
+<h6>身份組：<code>2020-staff</code>, <code>2020-speaker</code></h6>
+<p>一個大會專門公告給講者的頻道，講者之間亦可在此頻道互相聯繫。</p>
+<h4>#staff-announcements</h4>
+<h6>身份組：<code>2020-staff</code></h6>
+<p>一個大會專門公告給志工的頻道，志工之間亦可在此頻道互相聯繫。</p>
+</div>
+<div class="channels-list">
+<h3>服務台頻道</h3>
+<h4>#information-desk</h4>
+<h6>身份組：<code>2020-staff</code>, <code>2020-speaker</code>, <code>2020-attendee</code></h6>
+<p>大會的服務台，會眾或講者有任何公開詢問的問題可以在此處提出。</p>
+<h4>#speakers</h4>
+<h6>身份組：<code>2020-staff</code>, <code>2020-speaker</code></h6>
+<p>講者專屬的服務台，有議程或講者相關的問題可以在此處提出與討論。</p>
+<h4>#session-chairs</h4>
+<h6>身份組：<code>2020-session-chair</code></h6>
+<p>主持人與助理主持人的討論頻道，有任何相關的問題可以在此處提出與討論。</p>
+</div>
+<div class="channels-list">
+<h3>特殊頻道</h3>
+<h4>🔊remote-guide</h4>
+<h6>身份組： <code>2020-remote</code></h6>
+<p>專門提供遠端議程夥伴的溝通頻道，主要用於遠端議程的主持人要跟遠端講者提醒事情。</p>
+</div>
+<h2>附錄</h2>
+<h3 id="setup-discord">設定 Discord 與加入 Python Taiwan 伺服器</h3>
+<p>1. 為您的系統 <a href="https://discord.com/download">下載Discord用戶端程式</a> 並安裝。請確保用戶端程式是在最新版本</p>
+<p>2. 如果您沒有 Discord 帳戶，請註冊一個帳戶。打開剛剛安裝好的 Discord 程式，按下 '註冊'('Register') 並完成你的註冊流程。(Discord 會寄一封驗證信到你的信箱，請到信箱收信並完成驗證)</p>
+<a href="/pycon_archive_past_website/2020/static/pycontw-2020/assets/discord-0.jpg"><img alt="" src="/pycon_archive_past_website/2020/static/pycontw-2020/assets/discord-0.jpg"/></a>
+<p>3. 加入 Python Taiwan 的 Discord 伺服器. <br/>Python Taiwan 伺服器 邀請連結: <a href="https://discord.gg/94hgCQv">https://discord.gg/94hgCQv</a> <br/>在您的 Discord 程式中，按下左邊的 '+' 號按鈕，並選擇 '加入伺服器'。</p>
+<a href="/pycon_archive_past_website/2020/static/pycontw-2020/assets/discord-1.png"><img alt="" src="/pycon_archive_past_website/2020/static/pycontw-2020/assets/discord-1.png"/></a>
+<p>複製上面的邀請連結，並把它貼到對話方塊中，接著按下加入即可。</p>
+<a href="/pycon_archive_past_website/2020/static/pycontw-2020/assets/discord-2.png"><img alt="" src="/pycon_archive_past_website/2020/static/pycontw-2020/assets/discord-2.png"/></a>
+</div>
+<script src="/pycon_archive_past_website/2020/static/CACHE/js/output.7268f3229214.js"></script>
+</main>
+<footer>
+<div class="footer-logos">
+<div class="footer-logo"></div>
+</div>
+<ul>
+<li><a href="/pycon_archive_past_website/2020/zh-hant/about/code-of-conduct/">行為準則</a></li>
+<li><a href="/pycon_archive_past_website/2020/zh-hant/about/staff/">工作人員</a></li>
+<li><a href="/pycon_archive_past_website/2020/zh-hant/about/community/">社群</a></li>
+<li><a href="/pycon_archive_past_website/2020/zh-hant/about/privacy_policy/">個人資料保護聲明</a></li>
+</ul>
+<p class="copyright">2020 PyCon Taiwan</p>
+</footer>
+<script src="/pycon_archive_past_website/2020/static/CACHE/js/output.378e60111296.js"></script>
+</body>
+</html>

@@ -300,8 +300,8 @@ th {
 
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("/2020/static/fonts/bootstrap/glyphicons-halflings-regular.eot");
-  src: url("/2020/static/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/2020/static/fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("/2020/static/fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("/2020/static/fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("/2020/static/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+  src: url("/pycon_archive_past_website/2020/static/fonts/bootstrap/glyphicons-halflings-regular.eot");
+  src: url("/pycon_archive_past_website/2020/static/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/pycon_archive_past_website/2020/static/fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("/pycon_archive_past_website/2020/static/fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("/pycon_archive_past_website/2020/static/fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("/pycon_archive_past_website/2020/static/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
 }
 
 .glyphicon {
@@ -8806,7 +8806,7 @@ pre {
   width: 100%;
   margin-top: 74px;
   background-color: #F9FCFF;
-  background-image: url("/2020/url");
+  background-image: url("/pycon_archive_past_website/2020/url");
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -8925,7 +8925,7 @@ body.registration-pycontw-2016 .registration-panel-wrapper::after {
   width: 100%;
   height: 100px;
   padding: 20px;
-  background: url("/2020/url") no-repeat 50% 50%;
+  background: url("/pycon_archive_past_website/2020/url") no-repeat 50% 50%;
   background-size: content;
   background-clip: content-box;
 }
@@ -10080,7 +10080,7 @@ body {
 }
 
 .intro {
-  background: url("/2020/url") no-repeat;
+  background: url("/pycon_archive_past_website/2020/url") no-repeat;
   background-size: 50% auto;
   background-position: left 0 top -5vw;
   color: #686868;
@@ -10255,7 +10255,7 @@ body {
 .sponsorship {
   background-color: #224398;
   background-repeat: no-repeat;
-  background-image: url("/2020/url");
+  background-image: url("/pycon_archive_past_website/2020/url");
   background-size: contain;
   background-position: center;
   background-origin: content-box;
@@ -10389,7 +10389,7 @@ body {
 }
 
 .conf {
-  background: url("/2020/url") no-repeat;
+  background: url("/pycon_archive_past_website/2020/url") no-repeat;
   background-size: 50% auto;
   background-position: right 0 bottom 20vw;
 }

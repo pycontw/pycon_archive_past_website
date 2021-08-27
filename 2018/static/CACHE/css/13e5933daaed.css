@@ -226,7 +226,7 @@ footer .footer-logo {
   width: 100%;
   height: 40px;
   margin: 0;
-  background: url('/2018/static/pycontw-2018/assets/logo-py-white.svg?ceac3449832e') center no-repeat;
+  background: url('/pycon_archive_past_website/2018/static/pycontw-2018/assets/logo-py-white.svg?ceac3449832e') center no-repeat;
 }
 
 footer a, footer p, footer ul {
@@ -397,7 +397,7 @@ body.overlay-open {
   display: block;
   width: 100%;
   height: 100%;
-  background: url('/2018/static/pycontw-2018/assets/logo-white.svg?ceac3449832e') no-repeat 50% top/80%;
+  background: url('/pycon_archive_past_website/2018/static/pycontw-2018/assets/logo-white.svg?ceac3449832e') no-repeat 50% top/80%;
 }
 
 .navbar-lang-switch {
@@ -979,7 +979,7 @@ body.overlay-open {
   padding-top: calc(12.5vh + 42.875px);
   height: calc(100vh - calc(12.5vh + 42.875px));
   max-height: 150vw;
-  background: url('/2018/static/pycontw-2018/assets/perspective-mobile.svg?ceac3449832e') 60% 57% no-repeat, radial-gradient(circle at 69% 60%, #3b097b, #192660);
+  background: url('/pycon_archive_past_website/2018/static/pycontw-2018/assets/perspective-mobile.svg?ceac3449832e') 60% 57% no-repeat, radial-gradient(circle at 69% 60%, #3b097b, #192660);
 }
 
 @media (min-width: 900px) {
@@ -988,7 +988,7 @@ body.overlay-open {
     max-height: auto;
     margin-bottom: -68px;
     padding: 168px 0 68px 0;
-    background: url('/2018/static/pycontw-2018/assets/perspective-desktop.svg?ceac3449832e') 17% 83%/120% no-repeat, radial-gradient(circle at 69% 60%, #3b097b, #192660);
+    background: url('/pycon_archive_past_website/2018/static/pycontw-2018/assets/perspective-desktop.svg?ceac3449832e') 17% 83%/120% no-repeat, radial-gradient(circle at 69% 60%, #3b097b, #192660);
   }
 }
 
@@ -1005,7 +1005,7 @@ body.overlay-open {
   height: 12.5947vw;
   margin: 0 0 32px 0;
   color: transparent;
-  background: url('/2018/static/pycontw-2018/assets/logo-white.svg?ceac3449832e') center/contain no-repeat;
+  background: url('/pycon_archive_past_website/2018/static/pycontw-2018/assets/logo-white.svg?ceac3449832e') center/contain no-repeat;
 }
 
 @media (min-width: 900px) {
@@ -1130,7 +1130,7 @@ body.overlay-open {
     height: 80px;
     margin-top: 40px;
     margin-left: -560px;
-    background: url('/2018/static/pycontw-2018/assets/deco-circle-blue.svg?ceac3449832e') center no-repeat;
+    background: url('/pycon_archive_past_website/2018/static/pycontw-2018/assets/deco-circle-blue.svg?ceac3449832e') center no-repeat;
   }
   .index-partners > article:last-of-type::before {
     content: '';
@@ -1140,7 +1140,7 @@ body.overlay-open {
     width: 100%;
     height: 304px;
     margin-left: 296px;
-    background: url('/2018/static/pycontw-2018/assets/deco-circle-yellow.svg?ceac3449832e') center no-repeat;
+    background: url('/pycon_archive_past_website/2018/static/pycontw-2018/assets/deco-circle-yellow.svg?ceac3449832e') center no-repeat;
   }
   .index-partners > article:last-of-type::after {
     content: '';
@@ -1150,7 +1150,7 @@ body.overlay-open {
     height: 80px;
     margin-top: 24px;
     margin-left: 208px;
-    background: url('/2018/static/pycontw-2018/assets/deco-circle-grey.svg?ceac3449832e') center no-repeat;
+    background: url('/pycon_archive_past_website/2018/static/pycontw-2018/assets/deco-circle-grey.svg?ceac3449832e') center no-repeat;
   }
   .index-partners > * {
     padding: 16px 128px 48px 128px;
@@ -1277,7 +1277,7 @@ body.overlay-open {
 .menu-navbar-desktop .menu-logo {
   flex: 1;
   width: 100%;
-  background: url('/2018/static/pycontw-2018/assets/logo-indigo.svg?ceac3449832e') center 32px no-repeat;
+  background: url('/pycon_archive_past_website/2018/static/pycontw-2018/assets/logo-indigo.svg?ceac3449832e') center 32px no-repeat;
 }
 
 .menu-navbar-desktop .menu {
@@ -1446,7 +1446,7 @@ body.overlay-open {
 .index-introduction {
   padding: 96px 40px 80px 40px;
   padding-bottom: calc(50vw + 35px);
-  background: url('/2018/static/pycontw-2018/assets/logo-py-indigo.svg?ceac3449832e') center 103% no-repeat;
+  background: url('/pycon_archive_past_website/2018/static/pycontw-2018/assets/logo-py-indigo.svg?ceac3449832e') center 103% no-repeat;
   background-size: auto 50vw;
 }
 

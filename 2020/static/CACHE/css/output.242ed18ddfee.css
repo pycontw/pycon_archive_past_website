@@ -9,8 +9,8 @@
   font-family: twicon;
   font-weight: 400;
   font-style: Regular;
-  src: url(/2020/static/pycontw-2020/assets/twicon/twicon.woff2?743dc8db3341) format("woff2"),
-    url(/2020/static/pycontw-2020/assets/twicon/twicon.woff?743dc8db3341) format("woff");
+  src: url(/pycon_archive_past_website/2020/static/pycontw-2020/assets/twicon/twicon.woff2?743dc8db3341) format("woff2"),
+    url(/pycon_archive_past_website/2020/static/pycontw-2020/assets/twicon/twicon.woff?743dc8db3341) format("woff");
 }
 [class*=" twicon-"],
 [class^="twicon-"] {
@@ -581,8 +581,8 @@ body {
 /* Some extra styles not in the Zepplin palette. */
 /* Header styles. */
 /* Content styles. */
-@import url(/2020/static/css/vendors/semantic.min.css?743dc8db3341);
-@import url(/2020/static/css/vendors/transition.min.css?743dc8db3341);
+@import url(/pycon_archive_past_website/2020/static/css/vendors/semantic.min.css?743dc8db3341);
+@import url(/pycon_archive_past_website/2020/static/css/vendors/transition.min.css?743dc8db3341);
 body {
   margin: 0;
   padding: 0;
@@ -824,7 +824,7 @@ footer .footer-logos {
 footer .footer-logos .footer-logo {
   width: 59px;
   height: 38px;
-  background: url("/2020/static/pycontw-2020/assets/2020-py-logo.svg?743dc8db3341") center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/2020-py-logo.svg?743dc8db3341") center no-repeat;
 }
 
 footer a, footer p, footer ul {
@@ -1057,7 +1057,7 @@ body.scroll-x {
   display: block;
   width: 100%;
   height: 100%;
-  background: url("/2020/static/pycontw-2020/assets/2019whitelogo.svg?743dc8db3341") no-repeat 50% top/80%;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/2019whitelogo.svg?743dc8db3341") no-repeat 50% top/80%;
 }
 
 .navbar-left {
@@ -1823,7 +1823,7 @@ body {
 .menu-navbar-desktop .menu-logo {
   width: 221.4px;
   height: 35.5px;
-  background: url("/2020/static/pycontw-2020/assets/2019bluelogo.svg?743dc8db3341") center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/2019bluelogo.svg?743dc8db3341") center no-repeat;
 }
 
 .menu-navbar-desktop .menu {
@@ -2106,7 +2106,7 @@ main h3::before {
   display: inline-block;
   width: 30px;
   height: 30px;
-  background-image: url("/2020/static/pycontw-2020/assets/snake-icon-dark.svg?743dc8db3341");
+  background-image: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/snake-icon-dark.svg?743dc8db3341");
   background-repeat: no-repeat;
   background-size: 110% 110%;
   background-position: 50% 50%;
@@ -2324,43 +2324,43 @@ main .no-top-margin {
 }
 
 .pill-title.alt .icon-speaking {
-  -webkit-mask: url("/2020/static/pycontw-2020/assets/icon-speaking.svg?743dc8db3341");
-          mask: url("/2020/static/pycontw-2020/assets/icon-speaking.svg?743dc8db3341");
+  -webkit-mask: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-speaking.svg?743dc8db3341");
+          mask: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-speaking.svg?743dc8db3341");
   -webkit-mask-size: 100% 100%;
           mask-size: 100% 100%;
 }
 
 .pill-title.alt .icon-venue {
-  -webkit-mask: url("/2020/static/pycontw-2020/assets/icon-venue.svg?743dc8db3341");
-          mask: url("/2020/static/pycontw-2020/assets/icon-venue.svg?743dc8db3341");
+  -webkit-mask: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-venue.svg?743dc8db3341");
+          mask: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-venue.svg?743dc8db3341");
   -webkit-mask-size: 100% 100%;
           mask-size: 100% 100%;
 }
 
 .pill-title.alt .icon-registration {
-  -webkit-mask: url("/2020/static/pycontw-2020/assets/icon-registration.svg?743dc8db3341");
-          mask: url("/2020/static/pycontw-2020/assets/icon-registration.svg?743dc8db3341");
+  -webkit-mask: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-registration.svg?743dc8db3341");
+          mask: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-registration.svg?743dc8db3341");
   -webkit-mask-size: 100% 100%;
           mask-size: 100% 100%;
 }
 
 .pill-title.alt .icon-sponsor {
-  -webkit-mask: url("/2020/static/pycontw-2020/assets/icon-sponsor.svg?743dc8db3341");
-          mask: url("/2020/static/pycontw-2020/assets/icon-sponsor.svg?743dc8db3341");
+  -webkit-mask: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-sponsor.svg?743dc8db3341");
+          mask: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-sponsor.svg?743dc8db3341");
   -webkit-mask-size: 100% 100%;
           mask-size: 100% 100%;
 }
 
 .pill-title.alt .icon-volunteering {
-  -webkit-mask: url("/2020/static/pycontw-2020/assets/icon-volunteering.svg?743dc8db3341");
-          mask: url("/2020/static/pycontw-2020/assets/icon-volunteering.svg?743dc8db3341");
+  -webkit-mask: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-volunteering.svg?743dc8db3341");
+          mask: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-volunteering.svg?743dc8db3341");
   -webkit-mask-size: 100% 100%;
           mask-size: 100% 100%;
 }
 
 .pill-title.alt .icon-about {
-  -webkit-mask: url("/2020/static/pycontw-2020/assets/icon-about.svg?743dc8db3341");
-          mask: url("/2020/static/pycontw-2020/assets/icon-about.svg?743dc8db3341");
+  -webkit-mask: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-about.svg?743dc8db3341");
+          mask: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-about.svg?743dc8db3341");
   -webkit-mask-size: 100% 100%;
           mask-size: 100% 100%;
 }
@@ -2390,43 +2390,43 @@ main .no-top-margin {
 }
 
 .pill-title.alt-2 .icon-speaking {
-  -webkit-mask: url("/2020/static/pycontw-2020/assets/icon-speaking.svg?743dc8db3341");
-          mask: url("/2020/static/pycontw-2020/assets/icon-speaking.svg?743dc8db3341");
+  -webkit-mask: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-speaking.svg?743dc8db3341");
+          mask: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-speaking.svg?743dc8db3341");
   -webkit-mask-size: 100% 100%;
           mask-size: 100% 100%;
 }
 
 .pill-title.alt-2 .icon-venue {
-  -webkit-mask: url("/2020/static/pycontw-2020/assets/icon-venue.svg?743dc8db3341");
-          mask: url("/2020/static/pycontw-2020/assets/icon-venue.svg?743dc8db3341");
+  -webkit-mask: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-venue.svg?743dc8db3341");
+          mask: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-venue.svg?743dc8db3341");
   -webkit-mask-size: 100% 100%;
           mask-size: 100% 100%;
 }
 
 .pill-title.alt-2 .icon-registration {
-  -webkit-mask: url("/2020/static/pycontw-2020/assets/icon-registration.svg?743dc8db3341");
-          mask: url("/2020/static/pycontw-2020/assets/icon-registration.svg?743dc8db3341");
+  -webkit-mask: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-registration.svg?743dc8db3341");
+          mask: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-registration.svg?743dc8db3341");
   -webkit-mask-size: 100% 100%;
           mask-size: 100% 100%;
 }
 
 .pill-title.alt-2 .icon-sponsor {
-  -webkit-mask: url("/2020/static/pycontw-2020/assets/icon-sponsor.svg?743dc8db3341");
-          mask: url("/2020/static/pycontw-2020/assets/icon-sponsor.svg?743dc8db3341");
+  -webkit-mask: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-sponsor.svg?743dc8db3341");
+          mask: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-sponsor.svg?743dc8db3341");
   -webkit-mask-size: 100% 100%;
           mask-size: 100% 100%;
 }
 
 .pill-title.alt-2 .icon-volunteering {
-  -webkit-mask: url("/2020/static/pycontw-2020/assets/icon-volunteering.svg?743dc8db3341");
-          mask: url("/2020/static/pycontw-2020/assets/icon-volunteering.svg?743dc8db3341");
+  -webkit-mask: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-volunteering.svg?743dc8db3341");
+          mask: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-volunteering.svg?743dc8db3341");
   -webkit-mask-size: 100% 100%;
           mask-size: 100% 100%;
 }
 
 .pill-title.alt-2 .icon-about {
-  -webkit-mask: url("/2020/static/pycontw-2020/assets/icon-about.svg?743dc8db3341");
-          mask: url("/2020/static/pycontw-2020/assets/icon-about.svg?743dc8db3341");
+  -webkit-mask: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-about.svg?743dc8db3341");
+          mask: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-about.svg?743dc8db3341");
   -webkit-mask-size: 100% 100%;
           mask-size: 100% 100%;
 }
@@ -2803,52 +2803,52 @@ section.note .talk-label {
 }
 
 .talk-detail .info ul li dfn.location, .tutorial-detail .info ul li dfn.location {
-  background: url("/2020/static/pycontw-2020/assets/icon-location.svg?743dc8db3341") top right no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-location.svg?743dc8db3341") top right no-repeat;
   margin-top: 0;
 }
 
 .talk-detail .info ul li dfn.slot, .tutorial-detail .info ul li dfn.slot {
-  background: url("/2020/static/pycontw-2020/assets/icon-clock.svg?743dc8db3341") top right no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-clock.svg?743dc8db3341") top right no-repeat;
   margin-top: 0;
 }
 
 .talk-detail .info ul li dfn.category, .tutorial-detail .info ul li dfn.category {
-  background: url("/2020/static/pycontw-2020/assets/icon-tag.svg?743dc8db3341") top right no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-tag.svg?743dc8db3341") top right no-repeat;
   margin-top: -2px;
 }
 
 .talk-detail .info ul li dfn.language.enen, .tutorial-detail .info ul li dfn.language.enen {
-  background: url("/2020/static/pycontw-2020/assets/icon-language-enen.svg?743dc8db3341") top right no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-enen.svg?743dc8db3341") top right no-repeat;
   margin-top: 0;
 }
 
 .talk-detail .info ul li dfn.language.zhen, .tutorial-detail .info ul li dfn.language.zhen {
-  background: url("/2020/static/pycontw-2020/assets/icon-language-zhen.svg?743dc8db3341") top right no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-zhen.svg?743dc8db3341") top right no-repeat;
   margin-top: 0;
 }
 
 .talk-detail .info ul li dfn.language.zhzh, .tutorial-detail .info ul li dfn.language.zhzh {
-  background: url("/2020/static/pycontw-2020/assets/icon-language-zhzh.svg?743dc8db3341") top right no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-zhzh.svg?743dc8db3341") top right no-repeat;
   margin-top: 0;
 }
 
 .talk-detail .info ul li dfn.python-level.novice, .tutorial-detail .info ul li dfn.python-level.novice {
-  background: url("/2020/static/pycontw-2020/assets/icon-level-1.svg?743dc8db3341") top right no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-level-1.svg?743dc8db3341") top right no-repeat;
   margin-top: 0;
 }
 
 .talk-detail .info ul li dfn.python-level.intermediate, .tutorial-detail .info ul li dfn.python-level.intermediate {
-  background: url("/2020/static/pycontw-2020/assets/icon-level-2.svg?743dc8db3341") top right no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-level-2.svg?743dc8db3341") top right no-repeat;
   margin-top: 0;
 }
 
 .talk-detail .info ul li dfn.python-level.experienced, .tutorial-detail .info ul li dfn.python-level.experienced {
-  background: url("/2020/static/pycontw-2020/assets/icon-level-3.svg?743dc8db3341") top right no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-level-3.svg?743dc8db3341") top right no-repeat;
   margin-top: 0;
 }
 
 .talk-detail .info ul li dfn.recording-no, .tutorial-detail .info ul li dfn.recording-no {
-  background: url("/2020/static/pycontw-2020/assets/icon-no-recording.svg?743dc8db3341") top right no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-no-recording.svg?743dc8db3341") top right no-repeat;
   margin-top: 0;
 }
 
@@ -3142,7 +3142,7 @@ section.note .talk-label {
 }
 
 .venue-page .map-info:after {
-  background: url("/2020/static/pycontw-2020/assets/button-hover-bg.svg?743dc8db3341");
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/button-hover-bg.svg?743dc8db3341");
   content: "";
   height: 17%;
   position: absolute;
@@ -3326,97 +3326,97 @@ section.note .talk-label {
 .schedule-page .schedule-legend ul li.speech-en::before {
   width: 26px;
   margin-top: -1px;
-  background: url("/2020/static/pycontw-2020/assets/icon-language-enen.svg?743dc8db3341") top left no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-enen.svg?743dc8db3341") top left no-repeat;
 }
 
 .schedule-page .schedule-legend ul li.speech-zh::before {
   width: 26px;
   margin-top: -1px;
-  background: url("/2020/static/pycontw-2020/assets/icon-language-zhzh.svg?743dc8db3341") top left no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-zhzh.svg?743dc8db3341") top left no-repeat;
 }
 
 .schedule-page .schedule-legend ul li.slides-en::before {
   width: 26px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-language-enen.svg?743dc8db3341") top right no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-enen.svg?743dc8db3341") top right no-repeat;
 }
 
 .schedule-page .schedule-legend ul li.slides-zh::before {
   width: 26px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-language-zhzh.svg?743dc8db3341") top right no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-zhzh.svg?743dc8db3341") top right no-repeat;
 }
 
 .schedule-page .schedule-legend ul li.language-enen::before {
   width: 52px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-language-enen.svg?743dc8db3341") top center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-enen.svg?743dc8db3341") top center no-repeat;
 }
 
 .schedule-page .schedule-legend ul li.language-zhen::before {
   width: 52px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-language-zhen.svg?743dc8db3341") top center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-zhen.svg?743dc8db3341") top center no-repeat;
 }
 
 .schedule-page .schedule-legend ul li.language-zhzh::before {
   width: 52px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-language-zhzh.svg?743dc8db3341") top center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-zhzh.svg?743dc8db3341") top center no-repeat;
 }
 
 .schedule-page .schedule-legend ul li.python-level-novice::before {
   width: 26px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-level-1.svg?743dc8db3341") top left no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-level-1.svg?743dc8db3341") top left no-repeat;
 }
 
 .schedule-page .schedule-legend ul li.python-level-intermediate::before {
   width: 26px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-level-2.svg?743dc8db3341") top left no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-level-2.svg?743dc8db3341") top left no-repeat;
 }
 
 .schedule-page .schedule-legend ul li.python-level-experienced::before {
   width: 26px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-level-3.svg?743dc8db3341") top left no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-level-3.svg?743dc8db3341") top left no-repeat;
 }
 
 .schedule-page .schedule-legend ul li.no-recording::before {
   width: 26px;
   margin-top: 1px;
-  background: url("/2020/static/pycontw-2020/assets/icon-no-recording.svg?743dc8db3341") top left no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-no-recording.svg?743dc8db3341") top left no-repeat;
 }
 
 .schedule-page .schedule-legend ul li.room-R0::before {
   width: 26px;
   margin-top: 1px;
-  background: url("/2020/static/pycontw-2020/assets/icon-room-R0.svg?743dc8db3341") top center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-room-R0.svg?743dc8db3341") top center no-repeat;
 }
 
 .schedule-page .schedule-legend ul li.room-R1::before {
   width: 26px;
   margin-top: 1px;
-  background: url("/2020/static/pycontw-2020/assets/icon-room-R1.svg?743dc8db3341") top center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-room-R1.svg?743dc8db3341") top center no-repeat;
 }
 
 .schedule-page .schedule-legend ul li.room-R2::before {
   width: 26px;
   margin-top: 1px;
-  background: url("/2020/static/pycontw-2020/assets/icon-room-R2.svg?743dc8db3341") top center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-room-R2.svg?743dc8db3341") top center no-repeat;
 }
 
 .schedule-page .schedule-legend ul li.room-R3::before {
   width: 26px;
   margin-top: 1px;
-  background: url("/2020/static/pycontw-2020/assets/icon-room-R3.svg?743dc8db3341") top center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-room-R3.svg?743dc8db3341") top center no-repeat;
 }
 
 .schedule-page .schedule-legend ul li.grass::before {
   width: 26px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-grass-group.svg?743dc8db3341") top right no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-grass-group.svg?743dc8db3341") top right no-repeat;
 }
 
 .schedule-page .schedule-legend ul li.grass:before {
@@ -3433,7 +3433,7 @@ section.note .talk-label {
 .schedule-page .schedule-legend ul li.snake::before {
   width: 26px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-snake.svg?743dc8db3341") top right no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-snake.svg?743dc8db3341") top right no-repeat;
 }
 
 .schedule-page .schedule-legend ul li.snake:before {
@@ -3687,97 +3687,97 @@ section.note .talk-label {
 .schedule-page .time-table td.event.talk ul li.speech-en::before, .schedule-page .time-table td.event.tutorial ul li.speech-en::before {
   width: 26px;
   margin-top: -1px;
-  background: url("/2020/static/pycontw-2020/assets/icon-language-enen.svg?743dc8db3341") top left no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-enen.svg?743dc8db3341") top left no-repeat;
 }
 
 .schedule-page .time-table td.event.talk ul li.speech-zh::before, .schedule-page .time-table td.event.tutorial ul li.speech-zh::before {
   width: 26px;
   margin-top: -1px;
-  background: url("/2020/static/pycontw-2020/assets/icon-language-zhzh.svg?743dc8db3341") top left no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-zhzh.svg?743dc8db3341") top left no-repeat;
 }
 
 .schedule-page .time-table td.event.talk ul li.slides-en::before, .schedule-page .time-table td.event.tutorial ul li.slides-en::before {
   width: 26px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-language-enen.svg?743dc8db3341") top right no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-enen.svg?743dc8db3341") top right no-repeat;
 }
 
 .schedule-page .time-table td.event.talk ul li.slides-zh::before, .schedule-page .time-table td.event.tutorial ul li.slides-zh::before {
   width: 26px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-language-zhzh.svg?743dc8db3341") top right no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-zhzh.svg?743dc8db3341") top right no-repeat;
 }
 
 .schedule-page .time-table td.event.talk ul li.language-enen::before, .schedule-page .time-table td.event.tutorial ul li.language-enen::before {
   width: 52px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-language-enen.svg?743dc8db3341") top center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-enen.svg?743dc8db3341") top center no-repeat;
 }
 
 .schedule-page .time-table td.event.talk ul li.language-zhen::before, .schedule-page .time-table td.event.tutorial ul li.language-zhen::before {
   width: 52px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-language-zhen.svg?743dc8db3341") top center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-zhen.svg?743dc8db3341") top center no-repeat;
 }
 
 .schedule-page .time-table td.event.talk ul li.language-zhzh::before, .schedule-page .time-table td.event.tutorial ul li.language-zhzh::before {
   width: 52px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-language-zhzh.svg?743dc8db3341") top center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-zhzh.svg?743dc8db3341") top center no-repeat;
 }
 
 .schedule-page .time-table td.event.talk ul li.python-level-novice::before, .schedule-page .time-table td.event.tutorial ul li.python-level-novice::before {
   width: 26px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-level-1.svg?743dc8db3341") top left no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-level-1.svg?743dc8db3341") top left no-repeat;
 }
 
 .schedule-page .time-table td.event.talk ul li.python-level-intermediate::before, .schedule-page .time-table td.event.tutorial ul li.python-level-intermediate::before {
   width: 26px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-level-2.svg?743dc8db3341") top left no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-level-2.svg?743dc8db3341") top left no-repeat;
 }
 
 .schedule-page .time-table td.event.talk ul li.python-level-experienced::before, .schedule-page .time-table td.event.tutorial ul li.python-level-experienced::before {
   width: 26px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-level-3.svg?743dc8db3341") top left no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-level-3.svg?743dc8db3341") top left no-repeat;
 }
 
 .schedule-page .time-table td.event.talk ul li.no-recording::before, .schedule-page .time-table td.event.tutorial ul li.no-recording::before {
   width: 26px;
   margin-top: 1px;
-  background: url("/2020/static/pycontw-2020/assets/icon-no-recording.svg?743dc8db3341") top left no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-no-recording.svg?743dc8db3341") top left no-repeat;
 }
 
 .schedule-page .time-table td.event.talk ul li.room-R0::before, .schedule-page .time-table td.event.tutorial ul li.room-R0::before {
   width: 26px;
   margin-top: 1px;
-  background: url("/2020/static/pycontw-2020/assets/icon-room-R0.svg?743dc8db3341") top center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-room-R0.svg?743dc8db3341") top center no-repeat;
 }
 
 .schedule-page .time-table td.event.talk ul li.room-R1::before, .schedule-page .time-table td.event.tutorial ul li.room-R1::before {
   width: 26px;
   margin-top: 1px;
-  background: url("/2020/static/pycontw-2020/assets/icon-room-R1.svg?743dc8db3341") top center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-room-R1.svg?743dc8db3341") top center no-repeat;
 }
 
 .schedule-page .time-table td.event.talk ul li.room-R2::before, .schedule-page .time-table td.event.tutorial ul li.room-R2::before {
   width: 26px;
   margin-top: 1px;
-  background: url("/2020/static/pycontw-2020/assets/icon-room-R2.svg?743dc8db3341") top center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-room-R2.svg?743dc8db3341") top center no-repeat;
 }
 
 .schedule-page .time-table td.event.talk ul li.room-R3::before, .schedule-page .time-table td.event.tutorial ul li.room-R3::before {
   width: 26px;
   margin-top: 1px;
-  background: url("/2020/static/pycontw-2020/assets/icon-room-R3.svg?743dc8db3341") top center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-room-R3.svg?743dc8db3341") top center no-repeat;
 }
 
 .schedule-page .time-table td.event.talk ul li.grass::before, .schedule-page .time-table td.event.tutorial ul li.grass::before {
   width: 26px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-grass-group.svg?743dc8db3341") top right no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-grass-group.svg?743dc8db3341") top right no-repeat;
 }
 
 .schedule-page .time-table td.event.talk ul li.grass:before, .schedule-page .time-table td.event.tutorial ul li.grass:before {
@@ -3794,7 +3794,7 @@ section.note .talk-label {
 .schedule-page .time-table td.event.talk ul li.snake::before, .schedule-page .time-table td.event.tutorial ul li.snake::before {
   width: 26px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-snake.svg?743dc8db3341") top right no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-snake.svg?743dc8db3341") top right no-repeat;
 }
 
 .schedule-page .time-table td.event.talk ul li.snake:before, .schedule-page .time-table td.event.tutorial ul li.snake:before {
@@ -3859,97 +3859,97 @@ section.note .talk-label {
 .schedule-page .time-table td.event.custom .event-info ul li.speech-en::before {
   width: 26px;
   margin-top: -1px;
-  background: url("/2020/static/pycontw-2020/assets/icon-language-enen.svg?743dc8db3341") top left no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-enen.svg?743dc8db3341") top left no-repeat;
 }
 
 .schedule-page .time-table td.event.custom .event-info ul li.speech-zh::before {
   width: 26px;
   margin-top: -1px;
-  background: url("/2020/static/pycontw-2020/assets/icon-language-zhzh.svg?743dc8db3341") top left no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-zhzh.svg?743dc8db3341") top left no-repeat;
 }
 
 .schedule-page .time-table td.event.custom .event-info ul li.slides-en::before {
   width: 26px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-language-enen.svg?743dc8db3341") top right no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-enen.svg?743dc8db3341") top right no-repeat;
 }
 
 .schedule-page .time-table td.event.custom .event-info ul li.slides-zh::before {
   width: 26px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-language-zhzh.svg?743dc8db3341") top right no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-zhzh.svg?743dc8db3341") top right no-repeat;
 }
 
 .schedule-page .time-table td.event.custom .event-info ul li.language-enen::before {
   width: 52px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-language-enen.svg?743dc8db3341") top center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-enen.svg?743dc8db3341") top center no-repeat;
 }
 
 .schedule-page .time-table td.event.custom .event-info ul li.language-zhen::before {
   width: 52px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-language-zhen.svg?743dc8db3341") top center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-zhen.svg?743dc8db3341") top center no-repeat;
 }
 
 .schedule-page .time-table td.event.custom .event-info ul li.language-zhzh::before {
   width: 52px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-language-zhzh.svg?743dc8db3341") top center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-zhzh.svg?743dc8db3341") top center no-repeat;
 }
 
 .schedule-page .time-table td.event.custom .event-info ul li.python-level-novice::before {
   width: 26px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-level-1.svg?743dc8db3341") top left no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-level-1.svg?743dc8db3341") top left no-repeat;
 }
 
 .schedule-page .time-table td.event.custom .event-info ul li.python-level-intermediate::before {
   width: 26px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-level-2.svg?743dc8db3341") top left no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-level-2.svg?743dc8db3341") top left no-repeat;
 }
 
 .schedule-page .time-table td.event.custom .event-info ul li.python-level-experienced::before {
   width: 26px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-level-3.svg?743dc8db3341") top left no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-level-3.svg?743dc8db3341") top left no-repeat;
 }
 
 .schedule-page .time-table td.event.custom .event-info ul li.no-recording::before {
   width: 26px;
   margin-top: 1px;
-  background: url("/2020/static/pycontw-2020/assets/icon-no-recording.svg?743dc8db3341") top left no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-no-recording.svg?743dc8db3341") top left no-repeat;
 }
 
 .schedule-page .time-table td.event.custom .event-info ul li.room-R0::before {
   width: 26px;
   margin-top: 1px;
-  background: url("/2020/static/pycontw-2020/assets/icon-room-R0.svg?743dc8db3341") top center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-room-R0.svg?743dc8db3341") top center no-repeat;
 }
 
 .schedule-page .time-table td.event.custom .event-info ul li.room-R1::before {
   width: 26px;
   margin-top: 1px;
-  background: url("/2020/static/pycontw-2020/assets/icon-room-R1.svg?743dc8db3341") top center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-room-R1.svg?743dc8db3341") top center no-repeat;
 }
 
 .schedule-page .time-table td.event.custom .event-info ul li.room-R2::before {
   width: 26px;
   margin-top: 1px;
-  background: url("/2020/static/pycontw-2020/assets/icon-room-R2.svg?743dc8db3341") top center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-room-R2.svg?743dc8db3341") top center no-repeat;
 }
 
 .schedule-page .time-table td.event.custom .event-info ul li.room-R3::before {
   width: 26px;
   margin-top: 1px;
-  background: url("/2020/static/pycontw-2020/assets/icon-room-R3.svg?743dc8db3341") top center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-room-R3.svg?743dc8db3341") top center no-repeat;
 }
 
 .schedule-page .time-table td.event.custom .event-info ul li.grass::before {
   width: 26px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-grass-group.svg?743dc8db3341") top right no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-grass-group.svg?743dc8db3341") top right no-repeat;
 }
 
 .schedule-page .time-table td.event.custom .event-info ul li.grass:before {
@@ -3966,7 +3966,7 @@ section.note .talk-label {
 .schedule-page .time-table td.event.custom .event-info ul li.snake::before {
   width: 26px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-snake.svg?743dc8db3341") top right no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-snake.svg?743dc8db3341") top right no-repeat;
 }
 
 .schedule-page .time-table td.event.custom .event-info ul li.snake:before {
@@ -4053,97 +4053,97 @@ section.note .talk-label {
 .schedule-page .time-table td.time-table-time ul li.speech-en::before {
   width: 26px;
   margin-top: -1px;
-  background: url("/2020/static/pycontw-2020/assets/icon-language-enen.svg?743dc8db3341") top left no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-enen.svg?743dc8db3341") top left no-repeat;
 }
 
 .schedule-page .time-table td.time-table-time ul li.speech-zh::before {
   width: 26px;
   margin-top: -1px;
-  background: url("/2020/static/pycontw-2020/assets/icon-language-zhzh.svg?743dc8db3341") top left no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-zhzh.svg?743dc8db3341") top left no-repeat;
 }
 
 .schedule-page .time-table td.time-table-time ul li.slides-en::before {
   width: 26px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-language-enen.svg?743dc8db3341") top right no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-enen.svg?743dc8db3341") top right no-repeat;
 }
 
 .schedule-page .time-table td.time-table-time ul li.slides-zh::before {
   width: 26px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-language-zhzh.svg?743dc8db3341") top right no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-zhzh.svg?743dc8db3341") top right no-repeat;
 }
 
 .schedule-page .time-table td.time-table-time ul li.language-enen::before {
   width: 52px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-language-enen.svg?743dc8db3341") top center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-enen.svg?743dc8db3341") top center no-repeat;
 }
 
 .schedule-page .time-table td.time-table-time ul li.language-zhen::before {
   width: 52px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-language-zhen.svg?743dc8db3341") top center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-zhen.svg?743dc8db3341") top center no-repeat;
 }
 
 .schedule-page .time-table td.time-table-time ul li.language-zhzh::before {
   width: 52px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-language-zhzh.svg?743dc8db3341") top center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-zhzh.svg?743dc8db3341") top center no-repeat;
 }
 
 .schedule-page .time-table td.time-table-time ul li.python-level-novice::before {
   width: 26px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-level-1.svg?743dc8db3341") top left no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-level-1.svg?743dc8db3341") top left no-repeat;
 }
 
 .schedule-page .time-table td.time-table-time ul li.python-level-intermediate::before {
   width: 26px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-level-2.svg?743dc8db3341") top left no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-level-2.svg?743dc8db3341") top left no-repeat;
 }
 
 .schedule-page .time-table td.time-table-time ul li.python-level-experienced::before {
   width: 26px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-level-3.svg?743dc8db3341") top left no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-level-3.svg?743dc8db3341") top left no-repeat;
 }
 
 .schedule-page .time-table td.time-table-time ul li.no-recording::before {
   width: 26px;
   margin-top: 1px;
-  background: url("/2020/static/pycontw-2020/assets/icon-no-recording.svg?743dc8db3341") top left no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-no-recording.svg?743dc8db3341") top left no-repeat;
 }
 
 .schedule-page .time-table td.time-table-time ul li.room-R0::before {
   width: 26px;
   margin-top: 1px;
-  background: url("/2020/static/pycontw-2020/assets/icon-room-R0.svg?743dc8db3341") top center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-room-R0.svg?743dc8db3341") top center no-repeat;
 }
 
 .schedule-page .time-table td.time-table-time ul li.room-R1::before {
   width: 26px;
   margin-top: 1px;
-  background: url("/2020/static/pycontw-2020/assets/icon-room-R1.svg?743dc8db3341") top center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-room-R1.svg?743dc8db3341") top center no-repeat;
 }
 
 .schedule-page .time-table td.time-table-time ul li.room-R2::before {
   width: 26px;
   margin-top: 1px;
-  background: url("/2020/static/pycontw-2020/assets/icon-room-R2.svg?743dc8db3341") top center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-room-R2.svg?743dc8db3341") top center no-repeat;
 }
 
 .schedule-page .time-table td.time-table-time ul li.room-R3::before {
   width: 26px;
   margin-top: 1px;
-  background: url("/2020/static/pycontw-2020/assets/icon-room-R3.svg?743dc8db3341") top center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-room-R3.svg?743dc8db3341") top center no-repeat;
 }
 
 .schedule-page .time-table td.time-table-time ul li.grass::before {
   width: 26px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-grass-group.svg?743dc8db3341") top right no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-grass-group.svg?743dc8db3341") top right no-repeat;
 }
 
 .schedule-page .time-table td.time-table-time ul li.grass:before {
@@ -4160,7 +4160,7 @@ section.note .talk-label {
 .schedule-page .time-table td.time-table-time ul li.snake::before {
   width: 26px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-snake.svg?743dc8db3341") top right no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-snake.svg?743dc8db3341") top right no-repeat;
 }
 
 .schedule-page .time-table td.time-table-time ul li.snake:before {
@@ -4222,97 +4222,97 @@ section.note .talk-label {
 .schedule-page .room-info ul li.speech-en::before {
   width: 26px;
   margin-top: -1px;
-  background: url("/2020/static/pycontw-2020/assets/icon-language-enen.svg?743dc8db3341") top left no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-enen.svg?743dc8db3341") top left no-repeat;
 }
 
 .schedule-page .room-info ul li.speech-zh::before {
   width: 26px;
   margin-top: -1px;
-  background: url("/2020/static/pycontw-2020/assets/icon-language-zhzh.svg?743dc8db3341") top left no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-zhzh.svg?743dc8db3341") top left no-repeat;
 }
 
 .schedule-page .room-info ul li.slides-en::before {
   width: 26px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-language-enen.svg?743dc8db3341") top right no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-enen.svg?743dc8db3341") top right no-repeat;
 }
 
 .schedule-page .room-info ul li.slides-zh::before {
   width: 26px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-language-zhzh.svg?743dc8db3341") top right no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-zhzh.svg?743dc8db3341") top right no-repeat;
 }
 
 .schedule-page .room-info ul li.language-enen::before {
   width: 52px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-language-enen.svg?743dc8db3341") top center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-enen.svg?743dc8db3341") top center no-repeat;
 }
 
 .schedule-page .room-info ul li.language-zhen::before {
   width: 52px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-language-zhen.svg?743dc8db3341") top center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-zhen.svg?743dc8db3341") top center no-repeat;
 }
 
 .schedule-page .room-info ul li.language-zhzh::before {
   width: 52px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-language-zhzh.svg?743dc8db3341") top center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-language-zhzh.svg?743dc8db3341") top center no-repeat;
 }
 
 .schedule-page .room-info ul li.python-level-novice::before {
   width: 26px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-level-1.svg?743dc8db3341") top left no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-level-1.svg?743dc8db3341") top left no-repeat;
 }
 
 .schedule-page .room-info ul li.python-level-intermediate::before {
   width: 26px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-level-2.svg?743dc8db3341") top left no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-level-2.svg?743dc8db3341") top left no-repeat;
 }
 
 .schedule-page .room-info ul li.python-level-experienced::before {
   width: 26px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-level-3.svg?743dc8db3341") top left no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-level-3.svg?743dc8db3341") top left no-repeat;
 }
 
 .schedule-page .room-info ul li.no-recording::before {
   width: 26px;
   margin-top: 1px;
-  background: url("/2020/static/pycontw-2020/assets/icon-no-recording.svg?743dc8db3341") top left no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-no-recording.svg?743dc8db3341") top left no-repeat;
 }
 
 .schedule-page .room-info ul li.room-R0::before {
   width: 26px;
   margin-top: 1px;
-  background: url("/2020/static/pycontw-2020/assets/icon-room-R0.svg?743dc8db3341") top center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-room-R0.svg?743dc8db3341") top center no-repeat;
 }
 
 .schedule-page .room-info ul li.room-R1::before {
   width: 26px;
   margin-top: 1px;
-  background: url("/2020/static/pycontw-2020/assets/icon-room-R1.svg?743dc8db3341") top center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-room-R1.svg?743dc8db3341") top center no-repeat;
 }
 
 .schedule-page .room-info ul li.room-R2::before {
   width: 26px;
   margin-top: 1px;
-  background: url("/2020/static/pycontw-2020/assets/icon-room-R2.svg?743dc8db3341") top center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-room-R2.svg?743dc8db3341") top center no-repeat;
 }
 
 .schedule-page .room-info ul li.room-R3::before {
   width: 26px;
   margin-top: 1px;
-  background: url("/2020/static/pycontw-2020/assets/icon-room-R3.svg?743dc8db3341") top center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-room-R3.svg?743dc8db3341") top center no-repeat;
 }
 
 .schedule-page .room-info ul li.grass::before {
   width: 26px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-grass-group.svg?743dc8db3341") top right no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-grass-group.svg?743dc8db3341") top right no-repeat;
 }
 
 .schedule-page .room-info ul li.grass:before {
@@ -4329,7 +4329,7 @@ section.note .talk-label {
 .schedule-page .room-info ul li.snake::before {
   width: 26px;
   margin-top: 0;
-  background: url("/2020/static/pycontw-2020/assets/icon-snake.svg?743dc8db3341") top right no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-snake.svg?743dc8db3341") top right no-repeat;
 }
 
 .schedule-page .room-info ul li.snake:before {
@@ -4393,7 +4393,7 @@ section.note .talk-label {
   align-items: center;
   border-radius: 12px;
   border: solid 2px #23a16d;
-  background-image: url(/static/pycontw-2019/assets/button-hover-bg.svg);
+  background-image: url(/pycon_archive_past_website/static/pycontw-2019/assets/button-hover-bg.svg);
 }
 
 @media (min-width: 768px) {

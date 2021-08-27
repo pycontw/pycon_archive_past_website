@@ -9,8 +9,8 @@
   font-family: twicon;
   font-weight: 400;
   font-style: Regular;
-  src: url(/2020/static/pycontw-2020/assets/twicon/twicon.woff2?743dc8db3341) format("woff2"),
-    url(/2020/static/pycontw-2020/assets/twicon/twicon.woff?743dc8db3341) format("woff");
+  src: url(/pycon_archive_past_website/2020/static/pycontw-2020/assets/twicon/twicon.woff2?743dc8db3341) format("woff2"),
+    url(/pycon_archive_past_website/2020/static/pycontw-2020/assets/twicon/twicon.woff?743dc8db3341) format("woff");
 }
 [class*=" twicon-"],
 [class^="twicon-"] {
@@ -821,7 +821,7 @@ footer .footer-logos {
 footer .footer-logos .footer-logo {
   width: 59px;
   height: 38px;
-  background: url("/2020/static/pycontw-2020/assets/2020-py-logo.svg?743dc8db3341") center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/2020-py-logo.svg?743dc8db3341") center no-repeat;
 }
 
 footer a, footer p, footer ul {
@@ -1054,7 +1054,7 @@ body.scroll-x {
   display: block;
   width: 100%;
   height: 100%;
-  background: url("/2020/static/pycontw-2020/assets/2019whitelogo.svg?743dc8db3341") no-repeat 50% top/80%;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/2019whitelogo.svg?743dc8db3341") no-repeat 50% top/80%;
 }
 
 .navbar-left {
@@ -1820,7 +1820,7 @@ iframe.slido {
 
 .index-hero .banner {
   position: relative;
-  background: url("/2020/static/pycontw-2020/assets/2020-hero-bg.svg?743dc8db3341");
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/2020-hero-bg.svg?743dc8db3341");
   background-color: black;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -1924,14 +1924,14 @@ iframe.slido {
   margin-top: 0;
   height: calc(100vh - calc(12.5vh + 50.75px));
   max-height: 130vw;
-  background: url("/2020/static/pycontw-2020/assets/landingpage-mobile.png?743dc8db3341");
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/landingpage-mobile.png?743dc8db3341");
   background-repeat: no-repeat;
   background-size: 100vw;
 }
 
 @media (min-width: 768px) {
   .index-hero-old {
-    background: url("/2020/static/pycontw-2020/assets/2020-hero-bg.svg?743dc8db3341");
+    background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/2020-hero-bg.svg?743dc8db3341");
     background-repeat: no-repeat;
     background-size: 100vw;
     background-position-y: -30px;
@@ -2341,7 +2341,7 @@ body {
 .menu-navbar-desktop .menu-logo {
   width: 221.4px;
   height: 35.5px;
-  background: url("/2020/static/pycontw-2020/assets/logo-strong-violet.svg?743dc8db3341") center no-repeat;
+  background: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/logo-strong-violet.svg?743dc8db3341") center no-repeat;
 }
 
 .menu-navbar-desktop .menu {
@@ -2654,22 +2654,22 @@ body {
 }
 
 .index-big-button .icon-speaking {
-  -webkit-mask: url("/2020/static/pycontw-2020/assets/icon-speaking.svg?743dc8db3341");
-          mask: url("/2020/static/pycontw-2020/assets/icon-speaking.svg?743dc8db3341");
+  -webkit-mask: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-speaking.svg?743dc8db3341");
+          mask: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-speaking.svg?743dc8db3341");
   -webkit-mask-size: 100% 100%;
           mask-size: 100% 100%;
 }
 
 .index-big-button .icon-volunteering {
-  -webkit-mask: url("/2020/static/pycontw-2020/assets/icon-volunteering.svg?743dc8db3341");
-          mask: url("/2020/static/pycontw-2020/assets/icon-volunteering.svg?743dc8db3341");
+  -webkit-mask: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-volunteering.svg?743dc8db3341");
+          mask: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-volunteering.svg?743dc8db3341");
   -webkit-mask-size: 100% 100%;
           mask-size: 100% 100%;
 }
 
 .index-big-button .icon-sponsor {
-  -webkit-mask: url("/2020/static/pycontw-2020/assets/icon-sponsor.svg?743dc8db3341");
-          mask: url("/2020/static/pycontw-2020/assets/icon-sponsor.svg?743dc8db3341");
+  -webkit-mask: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-sponsor.svg?743dc8db3341");
+          mask: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/icon-sponsor.svg?743dc8db3341");
   -webkit-mask-size: 100% 100%;
           mask-size: 100% 100%;
 }
@@ -2913,7 +2913,7 @@ body {
 }
 
 .index-volunteer-container .index-volunteer .volunteer:hover {
-  background-image: url("/2020/static/pycontw-2020/assets/button-hover-bg.svg?743dc8db3341");
+  background-image: url("/pycon_archive_past_website/2020/static/pycontw-2020/assets/button-hover-bg.svg?743dc8db3341");
 }
 
 @media (min-width: 768px) {

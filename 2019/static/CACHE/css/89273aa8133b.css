@@ -234,7 +234,7 @@ footer .footer-logos .footer-logo {
   width: 145px;
   height: 52px;
   margin: 0px 7px 0px 0px;
-  background: url('/2019/static/pycontw-2019/assets/footer-image.svg?874e014dbcbb') center no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/footer-image.svg?874e014dbcbb') center no-repeat;
 }
 
 footer a, footer p, footer ul {
@@ -452,7 +452,7 @@ body.overlay-open {
   display: block;
   width: 100%;
   height: 100%;
-  background: url('/2019/static/pycontw-2019/assets/2019whitelogo.svg?874e014dbcbb') no-repeat 50% top/80%;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/2019whitelogo.svg?874e014dbcbb') no-repeat 50% top/80%;
 }
 
 .navbar-lang-switch {
@@ -1151,7 +1151,7 @@ body {
 .menu-navbar-desktop .menu-logo {
   width: 221.4px;
   height: 35.5px;
-  background: url('/2019/static/pycontw-2019/assets/2019bluelogo.svg?874e014dbcbb') center no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/2019bluelogo.svg?874e014dbcbb') center no-repeat;
 }
 
 .menu-navbar-desktop .menu {
@@ -1383,7 +1383,7 @@ main h3 {
 }
 
 main h3::before {
-  content: url('/2019/static/pycontw-2019/assets/grass-group.svg?874e014dbcbb');
+  content: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/grass-group.svg?874e014dbcbb');
   margin-right: 10px;
 }
 
@@ -1440,7 +1440,7 @@ main .closing-para {
   height: 125px;
   margin: 0;
   padding: 0 2rem;
-  background-image: url('/static/pycontw-2019/assets/button-hover-bg.svg');
+  background-image: url('/pycon_archive_past_website/static/pycontw-2019/assets/button-hover-bg.svg');
 }
 
 .about-page .year-ribbon li {
@@ -1703,52 +1703,52 @@ main .closing-para {
 }
 
 .talk-detail .info ul li dfn.location, .tutorial-detail .info ul li dfn.location {
-  background: url('/2019/static/pycontw-2019/assets/icon-location.svg?874e014dbcbb') top right no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-location.svg?874e014dbcbb') top right no-repeat;
   margin-top: 0;
 }
 
 .talk-detail .info ul li dfn.slot, .tutorial-detail .info ul li dfn.slot {
-  background: url('/2019/static/pycontw-2019/assets/icon-clock.svg?874e014dbcbb') top right no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-clock.svg?874e014dbcbb') top right no-repeat;
   margin-top: 0;
 }
 
 .talk-detail .info ul li dfn.category, .tutorial-detail .info ul li dfn.category {
-  background: url('/2019/static/pycontw-2019/assets/icon-tag.svg?874e014dbcbb') top right no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-tag.svg?874e014dbcbb') top right no-repeat;
   margin-top: -2px;
 }
 
 .talk-detail .info ul li dfn.language.enen, .tutorial-detail .info ul li dfn.language.enen {
-  background: url('/2019/static/pycontw-2019/assets/icon-language-enen.svg?874e014dbcbb') top right no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-enen.svg?874e014dbcbb') top right no-repeat;
   margin-top: 0;
 }
 
 .talk-detail .info ul li dfn.language.zhen, .tutorial-detail .info ul li dfn.language.zhen {
-  background: url('/2019/static/pycontw-2019/assets/icon-language-zhen.svg?874e014dbcbb') top right no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-zhen.svg?874e014dbcbb') top right no-repeat;
   margin-top: 0;
 }
 
 .talk-detail .info ul li dfn.language.zhzh, .tutorial-detail .info ul li dfn.language.zhzh {
-  background: url('/2019/static/pycontw-2019/assets/icon-language-zhzh.svg?874e014dbcbb') top right no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-zhzh.svg?874e014dbcbb') top right no-repeat;
   margin-top: 0;
 }
 
 .talk-detail .info ul li dfn.python-level.novice, .tutorial-detail .info ul li dfn.python-level.novice {
-  background: url('/2019/static/pycontw-2019/assets/icon-level-1.svg?874e014dbcbb') top right no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-level-1.svg?874e014dbcbb') top right no-repeat;
   margin-top: 0;
 }
 
 .talk-detail .info ul li dfn.python-level.intermediate, .tutorial-detail .info ul li dfn.python-level.intermediate {
-  background: url('/2019/static/pycontw-2019/assets/icon-level-2.svg?874e014dbcbb') top right no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-level-2.svg?874e014dbcbb') top right no-repeat;
   margin-top: 0;
 }
 
 .talk-detail .info ul li dfn.python-level.experienced, .tutorial-detail .info ul li dfn.python-level.experienced {
-  background: url('/2019/static/pycontw-2019/assets/icon-level-3.svg?874e014dbcbb') top right no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-level-3.svg?874e014dbcbb') top right no-repeat;
   margin-top: 0;
 }
 
 .talk-detail .info ul li dfn.recording-no, .tutorial-detail .info ul li dfn.recording-no {
-  background: url('/2019/static/pycontw-2019/assets/icon-no-recording.svg?874e014dbcbb') top right no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-no-recording.svg?874e014dbcbb') top right no-repeat;
   margin-top: 0;
 }
 
@@ -1846,7 +1846,7 @@ main .closing-para {
 .ticket-info-page .box-row .ticket-box .price-box .buy:hover {
   border-top: solid 2px #f4d35e;
   background-color: #fad341;
-  background-image: url('/static/pycontw-2019/assets/button-hover-bg.svg');
+  background-image: url('/pycon_archive_past_website/static/pycontw-2019/assets/button-hover-bg.svg');
 }
 
 .ticket-info-page .desc-box {
@@ -1932,7 +1932,7 @@ main .closing-para {
 }
 
 .venue-page .map-info:after {
-  background: url('/2019/static/pycontw-2019/assets/button-hover-bg.svg?874e014dbcbb');
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/button-hover-bg.svg?874e014dbcbb');
   content: '';
   height: 17%;
   position: absolute;
@@ -2048,97 +2048,97 @@ main .closing-para {
 .schedule-page .schedule-legend ul li.speech-en::before {
   width: 26px;
   margin-top: -1px;
-  background: url('/2019/static/pycontw-2019/assets/icon-language-enen.svg?874e014dbcbb') top left no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-enen.svg?874e014dbcbb') top left no-repeat;
 }
 
 .schedule-page .schedule-legend ul li.speech-zh::before {
   width: 26px;
   margin-top: -1px;
-  background: url('/2019/static/pycontw-2019/assets/icon-language-zhzh.svg?874e014dbcbb') top left no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-zhzh.svg?874e014dbcbb') top left no-repeat;
 }
 
 .schedule-page .schedule-legend ul li.slides-en::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-language-enen.svg?874e014dbcbb') top right no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-enen.svg?874e014dbcbb') top right no-repeat;
 }
 
 .schedule-page .schedule-legend ul li.slides-zh::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-language-zhzh.svg?874e014dbcbb') top right no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-zhzh.svg?874e014dbcbb') top right no-repeat;
 }
 
 .schedule-page .schedule-legend ul li.language-enen::before {
   width: 52px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-language-enen.svg?874e014dbcbb') top center no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-enen.svg?874e014dbcbb') top center no-repeat;
 }
 
 .schedule-page .schedule-legend ul li.language-zhen::before {
   width: 52px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-language-zhen.svg?874e014dbcbb') top center no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-zhen.svg?874e014dbcbb') top center no-repeat;
 }
 
 .schedule-page .schedule-legend ul li.language-zhzh::before {
   width: 52px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-language-zhzh.svg?874e014dbcbb') top center no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-zhzh.svg?874e014dbcbb') top center no-repeat;
 }
 
 .schedule-page .schedule-legend ul li.python-level-novice::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-level-1.svg?874e014dbcbb') top left no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-level-1.svg?874e014dbcbb') top left no-repeat;
 }
 
 .schedule-page .schedule-legend ul li.python-level-intermediate::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-level-2.svg?874e014dbcbb') top left no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-level-2.svg?874e014dbcbb') top left no-repeat;
 }
 
 .schedule-page .schedule-legend ul li.python-level-experienced::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-level-3.svg?874e014dbcbb') top left no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-level-3.svg?874e014dbcbb') top left no-repeat;
 }
 
 .schedule-page .schedule-legend ul li.no-recording::before {
   width: 26px;
   margin-top: 1px;
-  background: url('/2019/static/pycontw-2019/assets/icon-no-recording.svg?874e014dbcbb') top left no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-no-recording.svg?874e014dbcbb') top left no-repeat;
 }
 
 .schedule-page .schedule-legend ul li.room-R0::before {
   width: 26px;
   margin-top: 1px;
-  background: url('/2019/static/pycontw-2019/assets/icon-room-R0.svg?874e014dbcbb') top center no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-room-R0.svg?874e014dbcbb') top center no-repeat;
 }
 
 .schedule-page .schedule-legend ul li.room-R1::before {
   width: 26px;
   margin-top: 1px;
-  background: url('/2019/static/pycontw-2019/assets/icon-room-R1.svg?874e014dbcbb') top center no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-room-R1.svg?874e014dbcbb') top center no-repeat;
 }
 
 .schedule-page .schedule-legend ul li.room-R2::before {
   width: 26px;
   margin-top: 1px;
-  background: url('/2019/static/pycontw-2019/assets/icon-room-R2.svg?874e014dbcbb') top center no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-room-R2.svg?874e014dbcbb') top center no-repeat;
 }
 
 .schedule-page .schedule-legend ul li.room-R3::before {
   width: 26px;
   margin-top: 1px;
-  background: url('/2019/static/pycontw-2019/assets/icon-room-R3.svg?874e014dbcbb') top center no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-room-R3.svg?874e014dbcbb') top center no-repeat;
 }
 
 .schedule-page .schedule-legend ul li.grass::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-grass-group.svg?874e014dbcbb') top right no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-grass-group.svg?874e014dbcbb') top right no-repeat;
 }
 
 .schedule-page .schedule-legend ul li.grass:before {
@@ -2155,7 +2155,7 @@ main .closing-para {
 .schedule-page .schedule-legend ul li.snake::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-snake.svg?874e014dbcbb') top right no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-snake.svg?874e014dbcbb') top right no-repeat;
 }
 
 .schedule-page .schedule-legend ul li.snake:before {
@@ -2409,97 +2409,97 @@ main .closing-para {
 .schedule-page .time-table td.event.talk ul li.speech-en::before, .schedule-page .time-table td.event.tutorial ul li.speech-en::before {
   width: 26px;
   margin-top: -1px;
-  background: url('/2019/static/pycontw-2019/assets/icon-language-enen.svg?874e014dbcbb') top left no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-enen.svg?874e014dbcbb') top left no-repeat;
 }
 
 .schedule-page .time-table td.event.talk ul li.speech-zh::before, .schedule-page .time-table td.event.tutorial ul li.speech-zh::before {
   width: 26px;
   margin-top: -1px;
-  background: url('/2019/static/pycontw-2019/assets/icon-language-zhzh.svg?874e014dbcbb') top left no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-zhzh.svg?874e014dbcbb') top left no-repeat;
 }
 
 .schedule-page .time-table td.event.talk ul li.slides-en::before, .schedule-page .time-table td.event.tutorial ul li.slides-en::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-language-enen.svg?874e014dbcbb') top right no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-enen.svg?874e014dbcbb') top right no-repeat;
 }
 
 .schedule-page .time-table td.event.talk ul li.slides-zh::before, .schedule-page .time-table td.event.tutorial ul li.slides-zh::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-language-zhzh.svg?874e014dbcbb') top right no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-zhzh.svg?874e014dbcbb') top right no-repeat;
 }
 
 .schedule-page .time-table td.event.talk ul li.language-enen::before, .schedule-page .time-table td.event.tutorial ul li.language-enen::before {
   width: 52px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-language-enen.svg?874e014dbcbb') top center no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-enen.svg?874e014dbcbb') top center no-repeat;
 }
 
 .schedule-page .time-table td.event.talk ul li.language-zhen::before, .schedule-page .time-table td.event.tutorial ul li.language-zhen::before {
   width: 52px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-language-zhen.svg?874e014dbcbb') top center no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-zhen.svg?874e014dbcbb') top center no-repeat;
 }
 
 .schedule-page .time-table td.event.talk ul li.language-zhzh::before, .schedule-page .time-table td.event.tutorial ul li.language-zhzh::before {
   width: 52px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-language-zhzh.svg?874e014dbcbb') top center no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-zhzh.svg?874e014dbcbb') top center no-repeat;
 }
 
 .schedule-page .time-table td.event.talk ul li.python-level-novice::before, .schedule-page .time-table td.event.tutorial ul li.python-level-novice::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-level-1.svg?874e014dbcbb') top left no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-level-1.svg?874e014dbcbb') top left no-repeat;
 }
 
 .schedule-page .time-table td.event.talk ul li.python-level-intermediate::before, .schedule-page .time-table td.event.tutorial ul li.python-level-intermediate::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-level-2.svg?874e014dbcbb') top left no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-level-2.svg?874e014dbcbb') top left no-repeat;
 }
 
 .schedule-page .time-table td.event.talk ul li.python-level-experienced::before, .schedule-page .time-table td.event.tutorial ul li.python-level-experienced::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-level-3.svg?874e014dbcbb') top left no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-level-3.svg?874e014dbcbb') top left no-repeat;
 }
 
 .schedule-page .time-table td.event.talk ul li.no-recording::before, .schedule-page .time-table td.event.tutorial ul li.no-recording::before {
   width: 26px;
   margin-top: 1px;
-  background: url('/2019/static/pycontw-2019/assets/icon-no-recording.svg?874e014dbcbb') top left no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-no-recording.svg?874e014dbcbb') top left no-repeat;
 }
 
 .schedule-page .time-table td.event.talk ul li.room-R0::before, .schedule-page .time-table td.event.tutorial ul li.room-R0::before {
   width: 26px;
   margin-top: 1px;
-  background: url('/2019/static/pycontw-2019/assets/icon-room-R0.svg?874e014dbcbb') top center no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-room-R0.svg?874e014dbcbb') top center no-repeat;
 }
 
 .schedule-page .time-table td.event.talk ul li.room-R1::before, .schedule-page .time-table td.event.tutorial ul li.room-R1::before {
   width: 26px;
   margin-top: 1px;
-  background: url('/2019/static/pycontw-2019/assets/icon-room-R1.svg?874e014dbcbb') top center no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-room-R1.svg?874e014dbcbb') top center no-repeat;
 }
 
 .schedule-page .time-table td.event.talk ul li.room-R2::before, .schedule-page .time-table td.event.tutorial ul li.room-R2::before {
   width: 26px;
   margin-top: 1px;
-  background: url('/2019/static/pycontw-2019/assets/icon-room-R2.svg?874e014dbcbb') top center no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-room-R2.svg?874e014dbcbb') top center no-repeat;
 }
 
 .schedule-page .time-table td.event.talk ul li.room-R3::before, .schedule-page .time-table td.event.tutorial ul li.room-R3::before {
   width: 26px;
   margin-top: 1px;
-  background: url('/2019/static/pycontw-2019/assets/icon-room-R3.svg?874e014dbcbb') top center no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-room-R3.svg?874e014dbcbb') top center no-repeat;
 }
 
 .schedule-page .time-table td.event.talk ul li.grass::before, .schedule-page .time-table td.event.tutorial ul li.grass::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-grass-group.svg?874e014dbcbb') top right no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-grass-group.svg?874e014dbcbb') top right no-repeat;
 }
 
 .schedule-page .time-table td.event.talk ul li.grass:before, .schedule-page .time-table td.event.tutorial ul li.grass:before {
@@ -2516,7 +2516,7 @@ main .closing-para {
 .schedule-page .time-table td.event.talk ul li.snake::before, .schedule-page .time-table td.event.tutorial ul li.snake::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-snake.svg?874e014dbcbb') top right no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-snake.svg?874e014dbcbb') top right no-repeat;
 }
 
 .schedule-page .time-table td.event.talk ul li.snake:before, .schedule-page .time-table td.event.tutorial ul li.snake:before {
@@ -2581,97 +2581,97 @@ main .closing-para {
 .schedule-page .time-table td.event.custom .event-info ul li.speech-en::before {
   width: 26px;
   margin-top: -1px;
-  background: url('/2019/static/pycontw-2019/assets/icon-language-enen.svg?874e014dbcbb') top left no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-enen.svg?874e014dbcbb') top left no-repeat;
 }
 
 .schedule-page .time-table td.event.custom .event-info ul li.speech-zh::before {
   width: 26px;
   margin-top: -1px;
-  background: url('/2019/static/pycontw-2019/assets/icon-language-zhzh.svg?874e014dbcbb') top left no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-zhzh.svg?874e014dbcbb') top left no-repeat;
 }
 
 .schedule-page .time-table td.event.custom .event-info ul li.slides-en::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-language-enen.svg?874e014dbcbb') top right no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-enen.svg?874e014dbcbb') top right no-repeat;
 }
 
 .schedule-page .time-table td.event.custom .event-info ul li.slides-zh::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-language-zhzh.svg?874e014dbcbb') top right no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-zhzh.svg?874e014dbcbb') top right no-repeat;
 }
 
 .schedule-page .time-table td.event.custom .event-info ul li.language-enen::before {
   width: 52px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-language-enen.svg?874e014dbcbb') top center no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-enen.svg?874e014dbcbb') top center no-repeat;
 }
 
 .schedule-page .time-table td.event.custom .event-info ul li.language-zhen::before {
   width: 52px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-language-zhen.svg?874e014dbcbb') top center no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-zhen.svg?874e014dbcbb') top center no-repeat;
 }
 
 .schedule-page .time-table td.event.custom .event-info ul li.language-zhzh::before {
   width: 52px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-language-zhzh.svg?874e014dbcbb') top center no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-zhzh.svg?874e014dbcbb') top center no-repeat;
 }
 
 .schedule-page .time-table td.event.custom .event-info ul li.python-level-novice::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-level-1.svg?874e014dbcbb') top left no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-level-1.svg?874e014dbcbb') top left no-repeat;
 }
 
 .schedule-page .time-table td.event.custom .event-info ul li.python-level-intermediate::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-level-2.svg?874e014dbcbb') top left no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-level-2.svg?874e014dbcbb') top left no-repeat;
 }
 
 .schedule-page .time-table td.event.custom .event-info ul li.python-level-experienced::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-level-3.svg?874e014dbcbb') top left no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-level-3.svg?874e014dbcbb') top left no-repeat;
 }
 
 .schedule-page .time-table td.event.custom .event-info ul li.no-recording::before {
   width: 26px;
   margin-top: 1px;
-  background: url('/2019/static/pycontw-2019/assets/icon-no-recording.svg?874e014dbcbb') top left no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-no-recording.svg?874e014dbcbb') top left no-repeat;
 }
 
 .schedule-page .time-table td.event.custom .event-info ul li.room-R0::before {
   width: 26px;
   margin-top: 1px;
-  background: url('/2019/static/pycontw-2019/assets/icon-room-R0.svg?874e014dbcbb') top center no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-room-R0.svg?874e014dbcbb') top center no-repeat;
 }
 
 .schedule-page .time-table td.event.custom .event-info ul li.room-R1::before {
   width: 26px;
   margin-top: 1px;
-  background: url('/2019/static/pycontw-2019/assets/icon-room-R1.svg?874e014dbcbb') top center no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-room-R1.svg?874e014dbcbb') top center no-repeat;
 }
 
 .schedule-page .time-table td.event.custom .event-info ul li.room-R2::before {
   width: 26px;
   margin-top: 1px;
-  background: url('/2019/static/pycontw-2019/assets/icon-room-R2.svg?874e014dbcbb') top center no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-room-R2.svg?874e014dbcbb') top center no-repeat;
 }
 
 .schedule-page .time-table td.event.custom .event-info ul li.room-R3::before {
   width: 26px;
   margin-top: 1px;
-  background: url('/2019/static/pycontw-2019/assets/icon-room-R3.svg?874e014dbcbb') top center no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-room-R3.svg?874e014dbcbb') top center no-repeat;
 }
 
 .schedule-page .time-table td.event.custom .event-info ul li.grass::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-grass-group.svg?874e014dbcbb') top right no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-grass-group.svg?874e014dbcbb') top right no-repeat;
 }
 
 .schedule-page .time-table td.event.custom .event-info ul li.grass:before {
@@ -2688,7 +2688,7 @@ main .closing-para {
 .schedule-page .time-table td.event.custom .event-info ul li.snake::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-snake.svg?874e014dbcbb') top right no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-snake.svg?874e014dbcbb') top right no-repeat;
 }
 
 .schedule-page .time-table td.event.custom .event-info ul li.snake:before {
@@ -2775,97 +2775,97 @@ main .closing-para {
 .schedule-page .time-table td.time-table-time ul li.speech-en::before {
   width: 26px;
   margin-top: -1px;
-  background: url('/2019/static/pycontw-2019/assets/icon-language-enen.svg?874e014dbcbb') top left no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-enen.svg?874e014dbcbb') top left no-repeat;
 }
 
 .schedule-page .time-table td.time-table-time ul li.speech-zh::before {
   width: 26px;
   margin-top: -1px;
-  background: url('/2019/static/pycontw-2019/assets/icon-language-zhzh.svg?874e014dbcbb') top left no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-zhzh.svg?874e014dbcbb') top left no-repeat;
 }
 
 .schedule-page .time-table td.time-table-time ul li.slides-en::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-language-enen.svg?874e014dbcbb') top right no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-enen.svg?874e014dbcbb') top right no-repeat;
 }
 
 .schedule-page .time-table td.time-table-time ul li.slides-zh::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-language-zhzh.svg?874e014dbcbb') top right no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-zhzh.svg?874e014dbcbb') top right no-repeat;
 }
 
 .schedule-page .time-table td.time-table-time ul li.language-enen::before {
   width: 52px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-language-enen.svg?874e014dbcbb') top center no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-enen.svg?874e014dbcbb') top center no-repeat;
 }
 
 .schedule-page .time-table td.time-table-time ul li.language-zhen::before {
   width: 52px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-language-zhen.svg?874e014dbcbb') top center no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-zhen.svg?874e014dbcbb') top center no-repeat;
 }
 
 .schedule-page .time-table td.time-table-time ul li.language-zhzh::before {
   width: 52px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-language-zhzh.svg?874e014dbcbb') top center no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-zhzh.svg?874e014dbcbb') top center no-repeat;
 }
 
 .schedule-page .time-table td.time-table-time ul li.python-level-novice::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-level-1.svg?874e014dbcbb') top left no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-level-1.svg?874e014dbcbb') top left no-repeat;
 }
 
 .schedule-page .time-table td.time-table-time ul li.python-level-intermediate::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-level-2.svg?874e014dbcbb') top left no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-level-2.svg?874e014dbcbb') top left no-repeat;
 }
 
 .schedule-page .time-table td.time-table-time ul li.python-level-experienced::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-level-3.svg?874e014dbcbb') top left no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-level-3.svg?874e014dbcbb') top left no-repeat;
 }
 
 .schedule-page .time-table td.time-table-time ul li.no-recording::before {
   width: 26px;
   margin-top: 1px;
-  background: url('/2019/static/pycontw-2019/assets/icon-no-recording.svg?874e014dbcbb') top left no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-no-recording.svg?874e014dbcbb') top left no-repeat;
 }
 
 .schedule-page .time-table td.time-table-time ul li.room-R0::before {
   width: 26px;
   margin-top: 1px;
-  background: url('/2019/static/pycontw-2019/assets/icon-room-R0.svg?874e014dbcbb') top center no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-room-R0.svg?874e014dbcbb') top center no-repeat;
 }
 
 .schedule-page .time-table td.time-table-time ul li.room-R1::before {
   width: 26px;
   margin-top: 1px;
-  background: url('/2019/static/pycontw-2019/assets/icon-room-R1.svg?874e014dbcbb') top center no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-room-R1.svg?874e014dbcbb') top center no-repeat;
 }
 
 .schedule-page .time-table td.time-table-time ul li.room-R2::before {
   width: 26px;
   margin-top: 1px;
-  background: url('/2019/static/pycontw-2019/assets/icon-room-R2.svg?874e014dbcbb') top center no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-room-R2.svg?874e014dbcbb') top center no-repeat;
 }
 
 .schedule-page .time-table td.time-table-time ul li.room-R3::before {
   width: 26px;
   margin-top: 1px;
-  background: url('/2019/static/pycontw-2019/assets/icon-room-R3.svg?874e014dbcbb') top center no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-room-R3.svg?874e014dbcbb') top center no-repeat;
 }
 
 .schedule-page .time-table td.time-table-time ul li.grass::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-grass-group.svg?874e014dbcbb') top right no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-grass-group.svg?874e014dbcbb') top right no-repeat;
 }
 
 .schedule-page .time-table td.time-table-time ul li.grass:before {
@@ -2882,7 +2882,7 @@ main .closing-para {
 .schedule-page .time-table td.time-table-time ul li.snake::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-snake.svg?874e014dbcbb') top right no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-snake.svg?874e014dbcbb') top right no-repeat;
 }
 
 .schedule-page .time-table td.time-table-time ul li.snake:before {
@@ -2944,97 +2944,97 @@ main .closing-para {
 .schedule-page .room-info ul li.speech-en::before {
   width: 26px;
   margin-top: -1px;
-  background: url('/2019/static/pycontw-2019/assets/icon-language-enen.svg?874e014dbcbb') top left no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-enen.svg?874e014dbcbb') top left no-repeat;
 }
 
 .schedule-page .room-info ul li.speech-zh::before {
   width: 26px;
   margin-top: -1px;
-  background: url('/2019/static/pycontw-2019/assets/icon-language-zhzh.svg?874e014dbcbb') top left no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-zhzh.svg?874e014dbcbb') top left no-repeat;
 }
 
 .schedule-page .room-info ul li.slides-en::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-language-enen.svg?874e014dbcbb') top right no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-enen.svg?874e014dbcbb') top right no-repeat;
 }
 
 .schedule-page .room-info ul li.slides-zh::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-language-zhzh.svg?874e014dbcbb') top right no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-zhzh.svg?874e014dbcbb') top right no-repeat;
 }
 
 .schedule-page .room-info ul li.language-enen::before {
   width: 52px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-language-enen.svg?874e014dbcbb') top center no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-enen.svg?874e014dbcbb') top center no-repeat;
 }
 
 .schedule-page .room-info ul li.language-zhen::before {
   width: 52px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-language-zhen.svg?874e014dbcbb') top center no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-zhen.svg?874e014dbcbb') top center no-repeat;
 }
 
 .schedule-page .room-info ul li.language-zhzh::before {
   width: 52px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-language-zhzh.svg?874e014dbcbb') top center no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-language-zhzh.svg?874e014dbcbb') top center no-repeat;
 }
 
 .schedule-page .room-info ul li.python-level-novice::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-level-1.svg?874e014dbcbb') top left no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-level-1.svg?874e014dbcbb') top left no-repeat;
 }
 
 .schedule-page .room-info ul li.python-level-intermediate::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-level-2.svg?874e014dbcbb') top left no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-level-2.svg?874e014dbcbb') top left no-repeat;
 }
 
 .schedule-page .room-info ul li.python-level-experienced::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-level-3.svg?874e014dbcbb') top left no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-level-3.svg?874e014dbcbb') top left no-repeat;
 }
 
 .schedule-page .room-info ul li.no-recording::before {
   width: 26px;
   margin-top: 1px;
-  background: url('/2019/static/pycontw-2019/assets/icon-no-recording.svg?874e014dbcbb') top left no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-no-recording.svg?874e014dbcbb') top left no-repeat;
 }
 
 .schedule-page .room-info ul li.room-R0::before {
   width: 26px;
   margin-top: 1px;
-  background: url('/2019/static/pycontw-2019/assets/icon-room-R0.svg?874e014dbcbb') top center no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-room-R0.svg?874e014dbcbb') top center no-repeat;
 }
 
 .schedule-page .room-info ul li.room-R1::before {
   width: 26px;
   margin-top: 1px;
-  background: url('/2019/static/pycontw-2019/assets/icon-room-R1.svg?874e014dbcbb') top center no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-room-R1.svg?874e014dbcbb') top center no-repeat;
 }
 
 .schedule-page .room-info ul li.room-R2::before {
   width: 26px;
   margin-top: 1px;
-  background: url('/2019/static/pycontw-2019/assets/icon-room-R2.svg?874e014dbcbb') top center no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-room-R2.svg?874e014dbcbb') top center no-repeat;
 }
 
 .schedule-page .room-info ul li.room-R3::before {
   width: 26px;
   margin-top: 1px;
-  background: url('/2019/static/pycontw-2019/assets/icon-room-R3.svg?874e014dbcbb') top center no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-room-R3.svg?874e014dbcbb') top center no-repeat;
 }
 
 .schedule-page .room-info ul li.grass::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-grass-group.svg?874e014dbcbb') top right no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-grass-group.svg?874e014dbcbb') top right no-repeat;
 }
 
 .schedule-page .room-info ul li.grass:before {
@@ -3051,7 +3051,7 @@ main .closing-para {
 .schedule-page .room-info ul li.snake::before {
   width: 26px;
   margin-top: 0;
-  background: url('/2019/static/pycontw-2019/assets/icon-snake.svg?874e014dbcbb') top right no-repeat;
+  background: url('/pycon_archive_past_website/2019/static/pycontw-2019/assets/icon-snake.svg?874e014dbcbb') top right no-repeat;
 }
 
 .schedule-page .room-info ul li.snake:before {
@@ -3115,7 +3115,7 @@ main .closing-para {
   align-items: center;
   border-radius: 12px;
   border: solid 2px #23a16d;
-  background-image: url('/static/pycontw-2019/assets/button-hover-bg.svg');
+  background-image: url('/pycon_archive_past_website/static/pycontw-2019/assets/button-hover-bg.svg');
 }
 
 @media (min-width: 768px) {
