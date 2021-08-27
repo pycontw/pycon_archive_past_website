@@ -66,6 +66,13 @@ def css(soup):
             mkdir(css["href"])
             writefile(css["href"])
             getcssimg(css["href"])
+            with open('.' + css["href"], 'r') as f :
+                css_file = f.read()
+            css_file = css_file.replace("url('", f"url('{BASE_URL}")
+            css_file = css_file.replace('url("', f'url("{BASE_URL}')
+            css_file = css_file.replace("url(/", f"url({BASE_URL}/")
+            with open('.' + css["href"], 'w') as f:
+                f.write(css_file)
 
 def img(soup):
     for img in soup.find_all("img"):
@@ -109,38 +116,39 @@ def get_page(path):
                 for elm in elements:
                     elm.replace_with("zh-hant_target")
         html = str(soup)
+        html = html.replace('method="post"', "")
         html = html.replace("action=\"/" + PYCON_YEAR + "/set-language/\"", "")
         html = html.replace(
             f"/{PYCON_YEAR}/", f"{BASE_URL}/{PYCON_YEAR}/"
         ) # Replace base url since the gh-pages use base url following `{host}/{repo}/` instead of {host}/
-        path = BASE_URL + path
+        full_path = BASE_URL + path
         if PYCON_YEAR == '2016':
-            html = html.replace("<a data-lang=\"zh-hant\" href=\"#\">", "<a data-lang=\"zh-hant\" href=\"" + path.replace("en-us", "zh-hant") + "\">")
-            html = html.replace("<a data-lang=\"en-us\" href=\"#\">", "<a data-lang=\"en-us\" href=\"" + path.replace("zh-hant", "en-us") + "\">")
+            html = html.replace("<a data-lang=\"zh-hant\" href=\"#\">", "<a data-lang=\"zh-hant\" href=\"" + full_path.replace("en-us", "zh-hant") + "\">")
+            html = html.replace("<a data-lang=\"en-us\" href=\"#\">", "<a data-lang=\"en-us\" href=\"" + full_path.replace("zh-hant", "en-us") + "\">")
         if PYCON_YEAR == '2017':
             if path[6:8] == 'zh':
-                html = html.replace("en-us_target", "<div data-lang=\"en-us\" style=\"margin-left: 40px; line-height: 60px;\"> <a href='" + path.replace("zh-hant", "en-us") + "' style=\"font-size: 16px;\">English (US)</a></div>", 1)
-                html = html.replace("en-us_target", "<div data-lang=\"en-us\" style=\"margin-left: 20px;\"> <a href='" + path.replace("zh-hant", "en-us") + "'>English (US)</a></div>", 1)
+                html = html.replace("en-us_target", "<div data-lang=\"en-us\" style=\"margin-left: 40px; line-height: 60px;\"> <a href='" + full_path.replace("zh-hant", "en-us") + "' style=\"font-size: 16px;\">English (US)</a></div>", 1)
+                html = html.replace("en-us_target", "<div data-lang=\"en-us\" style=\"margin-left: 20px;\"> <a href='" + full_path.replace("zh-hant", "en-us") + "'>English (US)</a></div>", 1)
             if path[6:8] == 'en':
-                html = html.replace("zh-hant_target", "<div data-lang=\"zh-hant\" style=\"margin-left: 40px; line-height: 60px;\"> <a href='" + path.replace("en-us", "zh-hant") + "' style=\"font-size: 16px;\">繁體中文</a></div>", 1)
-                html = html.replace("zh-hant_target", "<div data-lang=\"zh-hant\" style=\"margin-left: 20px;\"> <a href='" + path.replace("en-us", "zh-hant") + "'>繁體中文</a></div>", 1)
+                html = html.replace("zh-hant_target", "<div data-lang=\"zh-hant\" style=\"margin-left: 40px; line-height: 60px;\"> <a href='" + full_path.replace("en-us", "zh-hant") + "' style=\"font-size: 16px;\">繁體中文</a></div>", 1)
+                html = html.replace("zh-hant_target", "<div data-lang=\"zh-hant\" style=\"margin-left: 20px;\"> <a href='" + full_path.replace("en-us", "zh-hant") + "'>繁體中文</a></div>", 1)
         if PYCON_YEAR == '2018':
             if path[6:8] == 'zh':
-                html = html.replace("EN", "<a href='" + path.replace("zh-hant", "en-us") + "' class=\"myclass\">EN</a>", 1)
+                html = html.replace("EN", "<a href='" + full_path.replace("zh-hant", "en-us") + "' class=\"myclass\">EN</a>", 1)
             if path[6:8] == 'en':
-                html = html.replace("ZH", "<a href='" + path.replace("en-us", "zh-hant") + "' class=\"myclass\">ZH</a>", 1)
+                html = html.replace("ZH", "<a href='" + full_path.replace("en-us", "zh-hant") + "' class=\"myclass\">ZH</a>", 1)
             html += "<style>.myclass{text-decoration: none;color: rgba(255, 255, 255, 0.35);}.myclass:hover{text-decoration: none;color: rgba(255, 255, 255, 0.7);}</style>"
         if PYCON_YEAR == '2019':
             if path[6:8] == 'zh':
-                html = html.replace("EN", "<a href='" + path.replace("zh-hant", "en-us") + "' class=\"myclass\">EN</a>", 1)
+                html = html.replace("EN", "<a href='" + full_path.replace("zh-hant", "en-us") + "' class=\"myclass\">EN</a>", 1)
             if path[6:8] == 'en':
-                html = html.replace("ZH", "<a href='" + path.replace("en-us", "zh-hant") + "' class=\"myclass\">ZH</a>", 1)
+                html = html.replace("ZH", "<a href='" + full_path.replace("en-us", "zh-hant") + "' class=\"myclass\">ZH</a>", 1)
             html += "<style>.myclass{text-decoration: none;color: #616e86;}.myclass:hover{text-decoration: none;color: #4a5363;}</style>"
         if PYCON_YEAR == '2020':
             if path[6:8] == 'zh':
-                html = html.replace("EN", "<a href='" + path.replace("zh-hant", "en-us") + "' style=\"text-decoration: none;\">EN</a>", 1)
+                html = html.replace("EN", "<a href='" + full_path.replace("zh-hant", "en-us") + "' style=\"text-decoration: none;\">EN</a>", 1)
             if path[6:8] == 'en':
-                html = html.replace("ZH", "<a href='" + path.replace("en-us", "zh-hant") + "' style=\"text-decoration: none;\">ZH</a>", 1)
+                html = html.replace("ZH", "<a href='" + full_path.replace("en-us", "zh-hant") + "' style=\"text-decoration: none;\">ZH</a>", 1)
         f.write(unquote(html))
 
     # get talk and tutorial page
@@ -155,12 +163,15 @@ def main():
     # Get pycon website, including zh-hant and en-us, according to given year.
     request = requests.get(PYCON_URL + "/" + PYCON_YEAR + "/zh-hant/")    # Get HTML
     soup = BeautifulSoup(request.text, "html.parser")       # Using html parser
-    navs = soup.select("nav a")                             # Get each <a> tag in <nav> and save in navs
-    navs = set([nav["href"] for nav in navs])               # Get each href in navs, and make it unique
-    
-    for nav in navs:                                        # Get each page in navs and deal with en-us at the same time
-        get_page(nav)
-        get_page(nav.replace("zh-hant", "en-us"))
+    crawler_urls = soup.select("a")                             
+    crawler_urls = set([crawler_url["href"] for crawler_url in crawler_urls])    
+    if PYCON_YEAR >= '2020':
+        crawler_urls.add(f"/{PYCON_YEAR}/zh-hant/sponsor/prospectus/")
+
+    for crawler_url in crawler_urls:
+        if Path(crawler_url).parts[1] == PYCON_YEAR:
+            get_page(crawler_url)
+            get_page(crawler_url.replace("zh-hant", "en-us"))
 
 @click.command()
 @click.option('-y', 'param', help='Pycon Year (2016 - 2020)', type=click.DateTime(formats=["%Y"]), required=True)
