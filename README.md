@@ -18,7 +18,13 @@ where year can just in 2016 - 2020
 
 ## Build Testing Server
 
-Here is the reference I made. [Go!!](https://mozixreality.github.io/Blog/featured/D20210503)
+### Prerequsite
+- npx
+
+For serving scraped static pages, you could execute following command in the root foler of this project:
+```bash
+npx serve
+```
 
 ## Run Local Server
 

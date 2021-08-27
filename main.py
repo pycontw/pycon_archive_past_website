@@ -6,7 +6,7 @@ import re
 import click
 from pathlib import Path
 from bs4 import BeautifulSoup 
-from urllib.parse import unquote
+from urllib.parse import unquote, urlparse
 from loguru import logger
 
 PYCON_YEAR = "2016"
@@ -169,7 +169,9 @@ def main():
         crawler_urls.add(f"/{PYCON_YEAR}/zh-hant/sponsor/prospectus/")
 
     for crawler_url in crawler_urls:
-        if Path(crawler_url).parts[1] == PYCON_YEAR:
+        url = urlparse(crawler_url)
+        path_parts = Path(url.path).parts
+        if len(path_parts) >= 2 and path_parts[1] == PYCON_YEAR:
             get_page(crawler_url)
             get_page(crawler_url.replace("zh-hant", "en-us"))
 
