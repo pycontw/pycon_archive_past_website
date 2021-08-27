@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       base_url:
-        description: 'Dynamic base url for different domain'
+        description: 'Dynamic base url for different domain e.g. "/pycon_archive_past_website"'
         required: true
 
 jobs:
