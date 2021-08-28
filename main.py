@@ -92,9 +92,9 @@ def get_assets(path: Path):
     """
     Get all assets in the given path.
     """
-    export_path: Path = Path.cwd().joinpath(*path.parts)
-    if path.parts[0] == "/":
-        export_path = Path.cwd().joinpath(*path.parts[1:])
+    if not path.parts[0] == "/":
+        return 
+    export_path = Path.cwd().joinpath(*path.parts[1:])
     request = requests.get(f"{PYCON_URL}{path.resolve()}", allow_redirects=True)
     logger.info("fetching {}...", f"{PYCON_URL}{path.resolve()}")
     try:
