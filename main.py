@@ -183,6 +183,12 @@ def main():
     crawler_urls = soup.select("a")                             
     crawler_urls = set([crawler_url["href"] for crawler_url in crawler_urls])    
     if PYCON_YEAR >= '2020':
+        request = requests.get(PYCON_URL + "/" + PYCON_YEAR + "/zh-hant/events/warmup-session/")
+        soup = BeautifulSoup(request.text, "html.parser")
+        crawler_urls_2020_warmup_session = soup.select("a")                  
+        for url in crawler_urls_2020_warmup_session:  
+            url = url["href"]
+            crawler_urls.add(url)    
         crawler_urls.add(f"/{PYCON_YEAR}/zh-hant/sponsor/prospectus/")
 
     for crawler_url in crawler_urls:
