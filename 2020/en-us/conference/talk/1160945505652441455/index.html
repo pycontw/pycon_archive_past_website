@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>不顧 PM 反對，工程師執意擔任 3D 美術 | PyCon Taiwan 2020</title>
+<link href="/pycon_archive_past_website/2020/static/pycontw-2020/assets/favicon/favicon.ico" rel="shortcut icon"/>
+<link href="/pycon_archive_past_website/2020/static/pycontw-2020/assets/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/pycon_archive_past_website/2020/static/pycontw-2020/assets/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/pycon_archive_past_website/2020/static/pycontw-2020/assets/favicon/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="" property="og:description"/>
+<meta content="https://tw.pycon.org/pycon_archive_past_website/2020/static/pycontw-2020/assets/og-image.png" property="og:image"/>
+<link href="https://fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,600,700|Raleway:300,400|Philosopher|Quicksand&amp;display=swap" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
+<link href="/pycon_archive_past_website/2020/static/CACHE/css/output.230998c022e6.css" rel="stylesheet" type="text/css"/>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNZ39PD');</script>
+</head>
+<body class="talk-detail">
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-TNZ39PD" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<div data-controller="topNav">
+<nav class="top-navbar">
+<div class="navbar-left">
+<form  class="navbar-lang-switch" >
+
+<input name="next" type="hidden" value="/pycon_archive_past_website/2020/conference/talk/1160945505652441455/"/>
+<button name="language" type="submit" value="zh-hant">
+                    <a href='/pycon_archive_past_website/2020/zh-hant/conference/talk/1160945505652441455/' style="text-decoration: none;">ZH</a>
+                </button>
+<button disabled="disabled" name="language" type="submit" value="en-us">
+                    EN
+                </button>
+</form>
+<a href="/pycon_archive_past_website/2020/en-us/"><i class="twicon-provintia navbar-provintia"></i></a>
+<a class="navbar-brand" href="/pycon_archive_past_website/2020/en-us/">PyCon TW20</a>
+</div>
+<button aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler no-script" data-action="topNav#toggle" data-target="topNav.toggler" type="button">
+<div><span></span><span></span><span></span></div>
+</button>
+<div class="navbar-social-desktop">
+<a aria-label="Blog" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+</nav>
+<nav class="menu-navbar-mobile no-script" data-target="topNav.menu">
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/pycon_archive_past_website/2020/en-us/about/pycontw/">
+			About
+		</a>
+</li>
+<!-- -->
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-conference" type="checkbox"/>
+<label class="active" for="menu-navbar-mobile-conference">
+			Conference
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/pycon_archive_past_website/2020/en-us/conference/schedule/">Schedule</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/conference/keynotes/">Keynotes</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/conference/talks/">Talks</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/conference/tutorials/">Tutorials</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/conference/community-track/">Community Track</a></li>
+<!--<li><a href="/pycon_archive_past_website/2020/en-us/speaking/recording/">Recording</a></li>-->
+<!-- <li><a href="/pycon_archive_past_website/2020/en-us/portal/">Portal</a></li> -->
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-events" type="checkbox"/>
+<label for="menu-navbar-mobile-events">
+			Events
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/pycon_archive_past_website/2020/en-us/events/overview/">Overview</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/events/warmup-session/">Warm-Up Session</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/events/open-spaces/">Open Spaces</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/events/sprints/">Sprints</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/events/job-listings/">Job Listings</a></li>
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-registration" type="checkbox"/>
+<label for="menu-navbar-mobile-registration">
+			Registration
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/pycon_archive_past_website/2020/en-us/registration/ticket-info/">Conference Ticket</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/registration/financial-aid/">Financial Aid</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/pycon_archive_past_website/2020/en-us/venue/">
+			Venue
+		</a>
+</li>
+<li>
+<a href="/pycon_archive_past_website/2020/en-us/covid-19/guidelines/">
+			COVID-19 Guidelines
+		</a>
+</li>
+<li class="dashboard-item">
+<a href="/pycon_archive_past_website/2020/en-us/dashboard/">My PyCon</a>
+</li>
+</ul>
+<div class="navbar-social-mobile">
+<a aria-label="Blog" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+<div class="shadow">
+<i class="twicon-provintia"></i>
+</div>
+</nav>
+</div>
+<header class="page-hero">
+<nav class="menu-navbar-desktop">
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/pycon_archive_past_website/2020/en-us/about/pycontw/">
+			About
+		</a>
+</li>
+<!-- -->
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-conference" type="checkbox"/>
+<label class="active" for="menu-navbar-desktop-conference">
+			Conference
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/pycon_archive_past_website/2020/en-us/conference/schedule/">Schedule</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/conference/keynotes/">Keynotes</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/conference/talks/">Talks</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/conference/tutorials/">Tutorials</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/conference/community-track/">Community Track</a></li>
+<!--<li><a href="/pycon_archive_past_website/2020/en-us/speaking/recording/">Recording</a></li>-->
+<!-- <li><a href="/pycon_archive_past_website/2020/en-us/portal/">Portal</a></li> -->
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-events" type="checkbox"/>
+<label for="menu-navbar-desktop-events">
+			Events
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/pycon_archive_past_website/2020/en-us/events/overview/">Overview</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/events/warmup-session/">Warm-Up Session</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/events/open-spaces/">Open Spaces</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/events/sprints/">Sprints</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/events/job-listings/">Job Listings</a></li>
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-registration" type="checkbox"/>
+<label for="menu-navbar-desktop-registration">
+			Registration
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/pycon_archive_past_website/2020/en-us/registration/ticket-info/">Conference Ticket</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/registration/financial-aid/">Financial Aid</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/pycon_archive_past_website/2020/en-us/venue/">
+			Venue
+		</a>
+</li>
+<li>
+<a href="/pycon_archive_past_website/2020/en-us/covid-19/guidelines/">
+			COVID-19 Guidelines
+		</a>
+</li>
+<li class="dashboard-item">
+<a href="/pycon_archive_past_website/2020/en-us/dashboard/">My PyCon</a>
+</li>
+</ul>
+</nav>
+</header>
+<main>
+<section class="pill-title alt-2">
+<h1>
+<i class="icon icon-about"></i>不顧 PM 反對，工程師執意擔任 3D 美術 
+		
+	</h1>
+</section>
+<section class="content info">
+<ul>
+<li>
+<dfn class="location"></dfn>
+<span>R1</span>
+</li>
+<li>
+<dfn class="slot"></dfn>
+<span>Day 1, 16:15‑16:30</span>
+</li>
+<li>
+<dfn class="category">Category: </dfn>
+<span>Other</span>
+</li>
+<li>
+<dfn class="language zhen">Language: </dfn>
+<span>Chinese talk w. English slides</span>
+</li>
+<li>
+<dfn class="python-level intermediate">Python Level: </dfn>
+<span>Intermediate</span>
+</li>
+</ul>
+</section>
+<h2>Abstract</h2>
+<section class="content">
+<p>人的成就感有其中一部份源自於創造，而軟體開發或程式撰寫對我而言便是在「邏輯層面」上實現創造。寫 Code 寫了一段時間之後，也許你會開始思考，能否有其他技術能創造新的東西呢？不如試著給自己一個機會，嘗試看看「視覺層面」的創作吧！</p>
+<p>本次演講將包含開源 3D 繪圖軟體 Blender 的功能及操作簡介，並透過一些優化工作流程的小工具原始碼，淺談並示範如何在 Blender 中使用 Python 語言自行開發套件。演講最後會附上套件原始碼的 GitHub Repo 及講者聯繫資訊，歡迎找講者討論更多 Blender 技巧!</p>
+</section>
+<h2>Description</h2>
+<section class="content editor-readonly">
+<div class="editor-preview">### References
+- [Blender 官方網站](https://www.blender.org/)
+- [Blender beginner tutorial](https://www.youtube.com/watch?v=TPrnSACiTJ4&amp;t=3s)
+- [Blender python API documentation](https://docs.blender.org/api/current/index.html)
+- [The source code of first tool (from another developer)](https://github.com/jasonicarter/create-isocam?fbclid=IwAR1_EOA93lRjrpO05l0XBFs1T_Vn_5SoigINMVhJ5NgpgznH-kK2x-6fbWo)
+- [The source code of second tool (developed by myself)](https://github.com/RainrainWu/blender-addons)</div>
+</section>
+<h2>
+	
+	Speaker
+	
+</h2>
+<article class="media">
+<header>
+<figure>
+<img src="/pycon_archive_past_website/2020/media/cache/07/93/079327c954fc38c089a3ef8a1dd96607.jpg"/>
+<figcaption>Rain Wu</figcaption>
+</figure>
+</header>
+<div class="content">
+<p>講者趕時間所以什麼都沒寫</p>
+<div class="social">
+<a href="https://github.com/RainrainWu" rel="noopener" target="_blank"><span aria-hidden="true" class="fa fa-github"></span></a>
+<a href="https://twitter.com/Rain0114Rain" rel="noopener" target="_blank"><span aria-hidden="true" class="fa fa-twitter"></span></a>
+<a href="https://www.facebook.com/rain0114" rel="noopener" target="_blank"><span aria-hidden="true" class="fa fa-facebook"></span></a>
+</div>
+</div>
+</article>
+<iframe class="slido" src="https://app.sli.do/event/sd1bd1ly"></iframe>
+</main>
+<footer>
+<div class="footer-logos">
+<div class="footer-logo"></div>
+</div>
+<ul>
+<li><a href="/pycon_archive_past_website/2020/en-us/about/code-of-conduct/">Code of Conduct</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/about/staff/">Staff</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/about/community/">Community</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/about/privacy_policy/">Privacy Policy</a></li>
+</ul>
+<p class="copyright">2020 PyCon Taiwan</p>
+</footer>
+<script src="/pycon_archive_past_website/2020/static/CACHE/js/output.378e60111296.js"></script>
+<script src="/pycon_archive_past_website/2020/static/js/vendors/simplemde.min.js"></script>
+<script src="/pycon_archive_past_website/2020/static/js/tools/simplemde-setup.js"></script>
+</body>
+</html>

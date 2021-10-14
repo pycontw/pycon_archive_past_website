@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Build an interactive plot website using Plotly/Dash | PyCon Taiwan 2020</title>
+<link href="/pycon_archive_past_website/2020/static/pycontw-2020/assets/favicon/favicon.ico" rel="shortcut icon"/>
+<link href="/pycon_archive_past_website/2020/static/pycontw-2020/assets/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/pycon_archive_past_website/2020/static/pycontw-2020/assets/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/pycon_archive_past_website/2020/static/pycontw-2020/assets/favicon/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="" property="og:description"/>
+<meta content="https://tw.pycon.org/pycon_archive_past_website/2020/static/pycontw-2020/assets/og-image.png" property="og:image"/>
+<link href="https://fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,600,700|Raleway:300,400|Philosopher|Quicksand&amp;display=swap" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
+<link href="/pycon_archive_past_website/2020/static/CACHE/css/output.230998c022e6.css" rel="stylesheet" type="text/css"/>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNZ39PD');</script>
+</head>
+<body class="tutorial-detail">
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-TNZ39PD" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<div data-controller="topNav">
+<nav class="top-navbar">
+<div class="navbar-left">
+<form  class="navbar-lang-switch" >
+
+<input name="next" type="hidden" value="/pycon_archive_past_website/2020/conference/tutorial/1159454351291318296/"/>
+<button name="language" type="submit" value="zh-hant">
+                    <a href='/pycon_archive_past_website/2020/zh-hant/conference/tutorial/1159454351291318296/' style="text-decoration: none;">ZH</a>
+                </button>
+<button disabled="disabled" name="language" type="submit" value="en-us">
+                    EN
+                </button>
+</form>
+<a href="/pycon_archive_past_website/2020/en-us/"><i class="twicon-provintia navbar-provintia"></i></a>
+<a class="navbar-brand" href="/pycon_archive_past_website/2020/en-us/">PyCon TW20</a>
+</div>
+<button aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler no-script" data-action="topNav#toggle" data-target="topNav.toggler" type="button">
+<div><span></span><span></span><span></span></div>
+</button>
+<div class="navbar-social-desktop">
+<a aria-label="Blog" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+</nav>
+<nav class="menu-navbar-mobile no-script" data-target="topNav.menu">
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/pycon_archive_past_website/2020/en-us/about/pycontw/">
+			About
+		</a>
+</li>
+<!-- -->
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-conference" type="checkbox"/>
+<label class="active" for="menu-navbar-mobile-conference">
+			Conference
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/pycon_archive_past_website/2020/en-us/conference/schedule/">Schedule</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/conference/keynotes/">Keynotes</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/conference/talks/">Talks</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/conference/tutorials/">Tutorials</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/conference/community-track/">Community Track</a></li>
+<!--<li><a href="/pycon_archive_past_website/2020/en-us/speaking/recording/">Recording</a></li>-->
+<!-- <li><a href="/pycon_archive_past_website/2020/en-us/portal/">Portal</a></li> -->
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-events" type="checkbox"/>
+<label for="menu-navbar-mobile-events">
+			Events
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/pycon_archive_past_website/2020/en-us/events/overview/">Overview</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/events/warmup-session/">Warm-Up Session</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/events/open-spaces/">Open Spaces</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/events/sprints/">Sprints</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/events/job-listings/">Job Listings</a></li>
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-registration" type="checkbox"/>
+<label for="menu-navbar-mobile-registration">
+			Registration
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/pycon_archive_past_website/2020/en-us/registration/ticket-info/">Conference Ticket</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/registration/financial-aid/">Financial Aid</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/pycon_archive_past_website/2020/en-us/venue/">
+			Venue
+		</a>
+</li>
+<li>
+<a href="/pycon_archive_past_website/2020/en-us/covid-19/guidelines/">
+			COVID-19 Guidelines
+		</a>
+</li>
+<li class="dashboard-item">
+<a href="/pycon_archive_past_website/2020/en-us/dashboard/">My PyCon</a>
+</li>
+</ul>
+<div class="navbar-social-mobile">
+<a aria-label="Blog" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+<div class="shadow">
+<i class="twicon-provintia"></i>
+</div>
+</nav>
+</div>
+<header class="page-hero">
+<nav class="menu-navbar-desktop">
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/pycon_archive_past_website/2020/en-us/about/pycontw/">
+			About
+		</a>
+</li>
+<!-- -->
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-conference" type="checkbox"/>
+<label class="active" for="menu-navbar-desktop-conference">
+			Conference
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/pycon_archive_past_website/2020/en-us/conference/schedule/">Schedule</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/conference/keynotes/">Keynotes</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/conference/talks/">Talks</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/conference/tutorials/">Tutorials</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/conference/community-track/">Community Track</a></li>
+<!--<li><a href="/pycon_archive_past_website/2020/en-us/speaking/recording/">Recording</a></li>-->
+<!-- <li><a href="/pycon_archive_past_website/2020/en-us/portal/">Portal</a></li> -->
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-events" type="checkbox"/>
+<label for="menu-navbar-desktop-events">
+			Events
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/pycon_archive_past_website/2020/en-us/events/overview/">Overview</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/events/warmup-session/">Warm-Up Session</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/events/open-spaces/">Open Spaces</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/events/sprints/">Sprints</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/events/job-listings/">Job Listings</a></li>
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-registration" type="checkbox"/>
+<label for="menu-navbar-desktop-registration">
+			Registration
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/pycon_archive_past_website/2020/en-us/registration/ticket-info/">Conference Ticket</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/registration/financial-aid/">Financial Aid</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/pycon_archive_past_website/2020/en-us/venue/">
+			Venue
+		</a>
+</li>
+<li>
+<a href="/pycon_archive_past_website/2020/en-us/covid-19/guidelines/">
+			COVID-19 Guidelines
+		</a>
+</li>
+<li class="dashboard-item">
+<a href="/pycon_archive_past_website/2020/en-us/dashboard/">My PyCon</a>
+</li>
+</ul>
+</nav>
+</header>
+<main>
+<h1>
+    Tutorial: Build an interactive plot website using Plotly/Dash
+    
+</h1>
+<section class="content info">
+<ul>
+<li>
+<dfn class="location">Location: </dfn>
+<span>Goodideas Studio</span>
+</li>
+<li>
+<dfn class="slot">Slot: </dfn>
+<span>Day 1, 13:50‑15:20</span>
+</li>
+<li>
+<dfn class="category">Category: </dfn>
+<span>Data Analysis</span>
+</li>
+<li>
+<dfn class="language zhen">Language: </dfn>
+<span>Chinese talk w. English slides</span>
+</li>
+<li>
+<dfn class="python-level novice">Python Level: </dfn>
+<span>Novice</span>
+</li>
+<li>
+<dfn class="recording-no"></dfn>
+<span>No Recording</span>
+</li>
+</ul>
+</section>
+<h2>Abstract</h2>
+<section class="content">
+<p>In data visualization, static plots provide the audiences quick grasp on the data. While interactive plots can provide users more information on interested samples, while audiences have to touch the data for specific samples if only static plots are provided. At present, there are some interactive graphing library in Python, Among them, "Plotly" is most popular and strongly supported by community.<br/>"Plotly" company also release "Dash" package that can build web-based online plots in pure Python. The needed technique of UI and web are covered by Dash, so you can focus on data manipulation and visualization. It is easy for data scientist to share their analysis on web interface over whole group by Dash. This tutorial will introduce basic usage of Plotly, then, the procedures of building the apps by Dash are described as following layout by "html" and "core" components, callback to make your apps more interactive, and distributing your apps to Heroku.</p>
+</section>
+<h2>Description</h2>
+<section class="content editor-readonly">
+<div class="editor-preview">In the tutorial, I will introduce Plotly and Dash which url as below links.
+Plotly url: https://plotly.com/python/
+Dash url: https://dash.plotly.com/
+As the main page introduction described, they are open source projects developed by "Plotly" company.
+Plotly/Dash can let you achieve most functions in matplotlib, ggplot2, Tableau and Shiny in pure Python. The JavaScript part of Plotly are impoletement by plotly.js which is hidden from user, so people can build a web app which runs data graphing without much UI techniques.
+If you want to focus on data only, not on too much UI, so Plotly/Dash are good candidates for you to join now.</div>
+</section>
+<h2>Slides</h2>
+<section class="content">
+<p><a href="https://docs.google.com/presentation/d/1QBCLbgaJKH27CqP-6NlwrnCjGk1J3YuLk4GOvOe8lpI/edit?usp=sharing">https://docs.google.com/presentation/d/1QBCLbgaJKH27CqP-6NlwrnCjGk1J3YuLk4GOvOe8lpI/edit?usp=sharing</a></p>
+</section>
+<h2>
+	
+	Lecturer
+	
+</h2>
+<article class="media">
+<header>
+<figure>
+<img src="/pycon_archive_past_website/2020/static/images/default_head.png"/>
+<figcaption>黃坤賢</figcaption>
+</figure>
+</header>
+<div class="content">
+<p>目前從事粒子物理實驗研究，在日本和台灣之間飛來飛去。喜歡python,C++,shell script等程式語言，並用python完成了好累的博士論文。目前栽進了用機器學習來完成實驗數據分析的坑洞，準備挖另一個平行運算的坑掉下去。<br/>專長是睡過頭，未來方向是尋找一個可叫得醒我的鬧鐘。</p>
+<div class="social">
+<a href="https://github.com/kunxianhuang" rel="noopener" target="_blank"><span aria-hidden="true" class="fa fa-github"></span></a>
+</div>
+</div>
+</article>
+<iframe class="slido" src="https://app.sli.do/event/vi1roeae"></iframe>
+</main>
+<footer>
+<div class="footer-logos">
+<div class="footer-logo"></div>
+</div>
+<ul>
+<li><a href="/pycon_archive_past_website/2020/en-us/about/code-of-conduct/">Code of Conduct</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/about/staff/">Staff</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/about/community/">Community</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/about/privacy_policy/">Privacy Policy</a></li>
+</ul>
+<p class="copyright">2020 PyCon Taiwan</p>
+</footer>
+<script src="/pycon_archive_past_website/2020/static/CACHE/js/output.378e60111296.js"></script>
+<script src="/pycon_archive_past_website/2020/static/js/vendors/simplemde.min.js"></script>
+<script src="/pycon_archive_past_website/2020/static/js/tools/simplemde-setup.js"></script>
+</body>
+</html>

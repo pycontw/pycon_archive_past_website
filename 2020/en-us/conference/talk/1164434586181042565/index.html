@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Loki：自動生成 Python 碼的 Chatbot 意圖分類引擎 | PyCon Taiwan 2020</title>
+<link href="/pycon_archive_past_website/2020/static/pycontw-2020/assets/favicon/favicon.ico" rel="shortcut icon"/>
+<link href="/pycon_archive_past_website/2020/static/pycontw-2020/assets/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/pycon_archive_past_website/2020/static/pycontw-2020/assets/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/pycon_archive_past_website/2020/static/pycontw-2020/assets/favicon/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta content="" property="og:description"/>
+<meta content="https://tw.pycon.org/pycon_archive_past_website/2020/static/pycontw-2020/assets/og-image.png" property="og:image"/>
+<link href="https://fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,600,700|Raleway:300,400|Philosopher|Quicksand&amp;display=swap" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
+<link href="/pycon_archive_past_website/2020/static/CACHE/css/output.230998c022e6.css" rel="stylesheet" type="text/css"/>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNZ39PD');</script>
+</head>
+<body class="talk-detail">
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-TNZ39PD" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<div data-controller="topNav">
+<nav class="top-navbar">
+<div class="navbar-left">
+<form  class="navbar-lang-switch" >
+
+<input name="next" type="hidden" value="/pycon_archive_past_website/2020/conference/talk/1164434586181042565/"/>
+<button name="language" type="submit" value="zh-hant">
+                    <a href='/pycon_archive_past_website/2020/zh-hant/conference/talk/1164434586181042565/' style="text-decoration: none;">ZH</a>
+                </button>
+<button disabled="disabled" name="language" type="submit" value="en-us">
+                    EN
+                </button>
+</form>
+<a href="/pycon_archive_past_website/2020/en-us/"><i class="twicon-provintia navbar-provintia"></i></a>
+<a class="navbar-brand" href="/pycon_archive_past_website/2020/en-us/">PyCon TW20</a>
+</div>
+<button aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler no-script" data-action="topNav#toggle" data-target="topNav.toggler" type="button">
+<div><span></span><span></span><span></span></div>
+</button>
+<div class="navbar-social-desktop">
+<a aria-label="Blog" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+</nav>
+<nav class="menu-navbar-mobile no-script" data-target="topNav.menu">
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/pycon_archive_past_website/2020/en-us/about/pycontw/">
+			About
+		</a>
+</li>
+<!-- -->
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-conference" type="checkbox"/>
+<label class="active" for="menu-navbar-mobile-conference">
+			Conference
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/pycon_archive_past_website/2020/en-us/conference/schedule/">Schedule</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/conference/keynotes/">Keynotes</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/conference/talks/">Talks</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/conference/tutorials/">Tutorials</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/conference/community-track/">Community Track</a></li>
+<!--<li><a href="/pycon_archive_past_website/2020/en-us/speaking/recording/">Recording</a></li>-->
+<!-- <li><a href="/pycon_archive_past_website/2020/en-us/portal/">Portal</a></li> -->
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-events" type="checkbox"/>
+<label for="menu-navbar-mobile-events">
+			Events
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/pycon_archive_past_website/2020/en-us/events/overview/">Overview</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/events/warmup-session/">Warm-Up Session</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/events/open-spaces/">Open Spaces</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/events/sprints/">Sprints</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/events/job-listings/">Job Listings</a></li>
+</ul>
+</div>
+</li>
+<li>
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-registration" type="checkbox"/>
+<label for="menu-navbar-mobile-registration">
+			Registration
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/pycon_archive_past_website/2020/en-us/registration/ticket-info/">Conference Ticket</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/registration/financial-aid/">Financial Aid</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/pycon_archive_past_website/2020/en-us/venue/">
+			Venue
+		</a>
+</li>
+<li>
+<a href="/pycon_archive_past_website/2020/en-us/covid-19/guidelines/">
+			COVID-19 Guidelines
+		</a>
+</li>
+<li class="dashboard-item">
+<a href="/pycon_archive_past_website/2020/en-us/dashboard/">My PyCon</a>
+</li>
+</ul>
+<div class="navbar-social-mobile">
+<a aria-label="Blog" class="fa fa-book" href="https://pycontw.blogspot.tw/" rel="noopener" target="_blank"></a>
+<a aria-label="Facebook" class="fa fa-facebook-official" href="https://www.facebook.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Twitter" class="fa fa-twitter" href="https://twitter.com/pycontw" rel="noopener" target="_blank"></a>
+<a aria-label="Email" class="fa fa-envelope" href="mailto:organizers@pycon.tw"></a>
+</div>
+<div class="shadow">
+<i class="twicon-provintia"></i>
+</div>
+</nav>
+</div>
+<header class="page-hero">
+<nav class="menu-navbar-desktop">
+<ul class="menu" data-controller="menu">
+<li>
+<a href="/pycon_archive_past_website/2020/en-us/about/pycontw/">
+			About
+		</a>
+</li>
+<!-- -->
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-conference" type="checkbox"/>
+<label class="active" for="menu-navbar-desktop-conference">
+			Conference
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/pycon_archive_past_website/2020/en-us/conference/schedule/">Schedule</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/conference/keynotes/">Keynotes</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/conference/talks/">Talks</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/conference/tutorials/">Tutorials</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/conference/community-track/">Community Track</a></li>
+<!--<li><a href="/pycon_archive_past_website/2020/en-us/speaking/recording/">Recording</a></li>-->
+<!-- <li><a href="/pycon_archive_past_website/2020/en-us/portal/">Portal</a></li> -->
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-events" type="checkbox"/>
+<label for="menu-navbar-desktop-events">
+			Events
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/pycon_archive_past_website/2020/en-us/events/overview/">Overview</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/events/warmup-session/">Warm-Up Session</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/events/open-spaces/">Open Spaces</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/events/sprints/">Sprints</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/events/job-listings/">Job Listings</a></li>
+</ul>
+</div>
+</li>
+<li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
+<input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-registration" type="checkbox"/>
+<label for="menu-navbar-desktop-registration">
+			Registration
+		</label>
+<div class="dropdown">
+<ul class="submenu">
+<li><a href="/pycon_archive_past_website/2020/en-us/registration/ticket-info/">Conference Ticket</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/registration/financial-aid/">Financial Aid</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="/pycon_archive_past_website/2020/en-us/venue/">
+			Venue
+		</a>
+</li>
+<li>
+<a href="/pycon_archive_past_website/2020/en-us/covid-19/guidelines/">
+			COVID-19 Guidelines
+		</a>
+</li>
+<li class="dashboard-item">
+<a href="/pycon_archive_past_website/2020/en-us/dashboard/">My PyCon</a>
+</li>
+</ul>
+</nav>
+</header>
+<main>
+<section class="pill-title alt-2">
+<h1>
+<i class="icon icon-about"></i>Loki：自動生成 Python 碼的 Chatbot 意圖分類引擎 
+		
+	</h1>
+</section>
+<section class="content info">
+<ul>
+<li>
+<dfn class="location"></dfn>
+<span>R1</span>
+</li>
+<li>
+<dfn class="slot"></dfn>
+<span>Day 1, 11:30‑12:00</span>
+</li>
+<li>
+<dfn class="category">Category: </dfn>
+<span>Natural Language Processing</span>
+</li>
+<li>
+<dfn class="language zhzh">Language: </dfn>
+<span>Chinese talk w. Chinese slides</span>
+</li>
+<li>
+<dfn class="python-level intermediate">Python Level: </dfn>
+<span>Intermediate</span>
+</li>
+</ul>
+</section>
+<h2>Abstract</h2>
+<section class="content">
+<p>現行的聊天機器人意圖分析引擎如 LUIS 或 DiaglogFlow 往往需要大量的範例以及精細的劇本設計，才能產生好像在對話的效果。但透過其系統背後的文本訓練後，因為機器學習的黑盒子特性，遇到邊界問題時，仍然不易修正雞同鴨講的回覆。這個瓶頸使得大部份聊天機器人其實不具備聊天功能，而只是把網站地圖或是文件關鍵字查詢的功能搬上聊天軟體的介面上而已。</p>
+<p>為了突破這些瓶頸，我們推出 Loki 中文意圖分類引擎。Loki 全文是 Linguistic Oriented Keyword Interface (語言導向的關鍵詞介面)。基於句法分析的方式，自動產生 Python 的 Regular Expression (正則表示式) 的條件式 (if...else...) 區塊程式碼。一次解決了兩個問題：</p>
+<p>1. 相較於語言模型的黑盒子，Loki 的 Regular Expression 是「人類可讀，且可直接修改」的分類器。<br/>2. 不需要大量的資料，一個句型只要出現一次，就可以產生有效的分類條件式。</p>
+<p>本次演講的內容，將同時以 LUIS/DiaglogFlow 和 Loki 產生的結果，比較「透過機器學習而來的意圖分析」和「透過句法分析而來的意圖分析」兩種方法在中文 Chatbot (聊天機器人) 應用上的差別。</p>
+</section>
+<h2>Description</h2>
+<section class="content editor-readonly">
+<div class="editor-preview">自從 LUIS/DiaglogFlow 支援中文開始，在這個 Chatbot 的功能被吹上天的時代裡，大家一方面認為「NLU 裡的意圖分類問題已經解決了」，但另一方面又體驗著「Chatbot 笨笨的，常常答非所問，要不然就是很難修改」這種矛盾的現象。
+
+事實上，LUIS/DiaglogFlow 的演算法本來就是為了西方語系而設計的，它甚至沒有辦法正確地處理中文最基本的斷詞問題。此外，有許多模型也只是直接以「西方語言」直譯「中文」而已。因此才會遇到以下的錯誤：誤把中文的「30分」的時間表示，處理成「30分」的貨幣表示。而忘了中文現在幾乎已經不用「分」這個貨幣單位了。
+
+![LUIS 無法分辨中文時間和貨幣](https://www.droidtown.co/static/public_img/LUIS_Shortage.jpg)
+
+相較之下，Loki 的底層是使用專門為中文句法結構設計的 Articut NLP 系統。不但處理的效能比大幅增加，且 Articut 的自動 NER 能力也遠超過 LUIS/DiaglogFlow 的效果，讓開發者可以更專注在程式邏輯上，而不用擔心自然語言的問題。
+
+利用 Python3 的 regular expression 模組所設計的 Loki，不但能讓開發者「感覺不到」寫正則表示式的痛苦，更能在編寫的最後直接產出 Python3 的程式碼，幫開發者的各種句型和意圖做好分類，並取出句子中的重要元素做為 arguments。
+
+以下舉例：
+假設要處理「換匯」這個意圖時，提供了兩種句型如下：
+1. 「請問100元美金可以換多少台幣？」接下來，再勾選「100元、美金、台幣」這三個 arguments。
+2. 「美金兩萬元要多少台幣？」接下來，再勾選「美金、兩萬元、台幣」這三個 arguments。
+
+接下來，Loki 會產生相應的 Python 程式碼，供開發者實作。
+
+當使用者輸入的句子是「請問兩萬三千萬泰銖可以換多少歐元？」即便數字和貨幣都和前述 1, 2 句不同，Loki 在判斷出「這個句子的結構接近 1，而非 2」，並且輸出「兩萬三千、泰銖、歐元」三個 arguments 做為開發者實際計算時所需的 function arguments。
+
+簡單地說，也就是「不需要大數據的訓練，只要每一種句型出現過一次」就夠了。
+
+透過 regular expression，讓 Python 發揮其字串處理的強項，不用大數據，也能做得比 data-driven 的 AI 好，這就是 Loki 的設計初衷。
+
+**回覆初審意見如下：**
+#BBC9 ...想知道在語義分析上 Loki 能處理的問題邊界大概在哪…
+#A740 ...有可能藉由兩種類型的意圖分析，使得未來的中文聊天機器人更人性化嗎？
+#8C73 ...是否也會提及什麼樣的情形適合data driven ai, 什麼時候適合loki, luis？在語義分析上 Loki 能處理的問題邊界大概在哪
+
+在語言的實際使用中，可以分成四個等級：由概念的抽象到具像排列如下：
+在某個場景中 &gt; 為了達成某個目的或表示某種意圖 &gt; 會使用某種句型 &gt; 句型中會含有某些領域詞彙
+
+傳統的「關鍵字」或「固定指令」驅動的聊天機器人，是屬於最低一層的實現，只能處理「句型中含有某些領域詞彙」的句子。而 LUIS 或 DiaglogFlow 在英文上的實現，則完成了第二層，會使用某種句型。在中文裡，常會發現 LUIS 或 DiaglogFlow 的表現說不上是「答非所問」反而更像是「不知所云」的原因，在於其底層用了「前後 N 個字符」來訓練模型。但要表達同一個意義，中文句子的結構比英文句子靈活的情況下，反而會造成「前後 N 個字符」的雜訊過多，讓語意和意圖的計算無法收斂。
+
+Loki 的特別之處在於它不是以「前後 N 個字符」來計算，而是以「前後 N 個詞的詞性」來產生一個句型模型。並由開發者選定的操作中，同時記下了「句型中會含有某些領域詞彙」以及「為了達成某種意圖 (所以需要擷取句子中的資訊做為論元)」的目的。這麼一來，Loki 就完成了四個等級中的三個。我們甚至可以組合多個 Loki 的意圖檔 (.atm) 以後，構成一個很複雜，很像人類反應的中文聊天機器人。
+
+但在剩下的「某個場景中」這一層，是 Loki 無法從句子裡偵知現在是什麼場景的。意即，Loki 無法確認「你再匯 100 元給店家試試看」究竟是「金融交易」的場景下的指令，還是「吵架威脅」的場景下的指令。用日本文化的說法就是「Loki 非常不懂得讀空氣」。這是這種句型分析機制下的限制。</div>
+</section>
+<h2>Slides</h2>
+<section class="content">
+<p><a href="http://bit.ly/Pycontw2020_Loki">http://bit.ly/Pycontw2020_Loki</a></p>
+</section>
+<h2>
+	
+	Speaker
+	
+</h2>
+<article class="media">
+<header>
+<figure>
+<img src="/pycon_archive_past_website/2020/media/cache/c2/44/c244dd2fb4f2493f17d547c0cb59a1e1.jpg"/>
+<figcaption>PeterWolf</figcaption>
+</figure>
+</header>
+<div class="content">
+<p>強人工智慧倡議者、設計者與實作者。</p>
+<div class="social">
+<a href="https://twitter.com/PeterWolfTW" rel="noopener" target="_blank"><span aria-hidden="true" class="fa fa-twitter"></span></a>
+<a href="https://www.facebook.com/pita.woof" rel="noopener" target="_blank"><span aria-hidden="true" class="fa fa-facebook"></span></a>
+</div>
+</div>
+</article>
+<iframe class="slido" src="https://app.sli.do/event/4sdm6cza"></iframe>
+</main>
+<footer>
+<div class="footer-logos">
+<div class="footer-logo"></div>
+</div>
+<ul>
+<li><a href="/pycon_archive_past_website/2020/en-us/about/code-of-conduct/">Code of Conduct</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/about/staff/">Staff</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/about/community/">Community</a></li>
+<li><a href="/pycon_archive_past_website/2020/en-us/about/privacy_policy/">Privacy Policy</a></li>
+</ul>
+<p class="copyright">2020 PyCon Taiwan</p>
+</footer>
+<script src="/pycon_archive_past_website/2020/static/CACHE/js/output.378e60111296.js"></script>
+<script src="/pycon_archive_past_website/2020/static/js/vendors/simplemde.min.js"></script>
+<script src="/pycon_archive_past_website/2020/static/js/tools/simplemde-setup.js"></script>
+</body>
+</html>
