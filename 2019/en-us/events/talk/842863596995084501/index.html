@@ -8,15 +8,15 @@
 <meta content="" name="description"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Understanding Multithreading by Deciphering the CPython Interpreter Source Code. | PyCon Taiwan 2019</title>
-<link href="/pycon_archive_past_website/2019/static/pycontw-2019/assets/favicon.ico" rel="shortcut icon"/>
-<link href="/pycon_archive_past_website/2019/static/pycontw-2019/assets/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
-<link href="/pycon_archive_past_website/2019/static/pycontw-2019/assets/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="https://tw.pycon.org/2019/static/pycontw-2019/assets/favicon.ico" rel="shortcut icon"/>
+<link href="https://tw.pycon.org/2019/static/pycontw-2019/assets/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="https://tw.pycon.org/2019/static/pycontw-2019/assets/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
 <meta content="" property="og:description"/>
-<meta content="https://tw.pycon.org/pycon_archive_past_website/2019/static/pycontw-2019/assets/og-image.png" property="og:image"/>
+<meta content="https://tw.pycon.orghttps://tw.pycon.org/2019/static/pycontw-2019/assets/og-image.png" property="og:image"/>
 <link href="https://fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400|Raleway:300,400" rel="stylesheet"/>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
-<link href="/pycon_archive_past_website/2019/static/CACHE/css/feda583c0a7d.css" rel="stylesheet" type="text/css">
+<link href="https://tw.pycon.org/2019/static/CACHE/css/feda583c0a7d.css" rel="stylesheet" type="text/css">
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -29,16 +29,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <nav class="top-navbar">
 <form  class="navbar-lang-switch" >
 
-<input name="next" type="hidden" value="/pycon_archive_past_website/2019/events/talk/842863596995084501/"/>
+<input name="next" type="hidden" value="https://tw.pycon.org/2019/events/talk/842863596995084501/"/>
 <button name="language" type="submit" value="zh-hant">
-				<a href='/pycon_archive_past_website/2019/zh-hant/events/talk/842863596995084501/' class="myclass">ZH</a>
+				<a href='https://tw.pycon.org/2019/zh-hant/events/talk/842863596995084501/' class="myclass">ZH</a>
 			</button>
 <button disabled="disabled" name="language" type="submit" value="en-us">
 				EN
 			</button>
 </form>
 <div class="navbar-centerbox">
-<a class="navbar-logo" href="/pycon_archive_past_website/2019/en-us/"></a>
+<a class="navbar-logo" href="https://tw.pycon.org/2019/en-us/"></a>
 </div>
 <button aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler no-script" data-action="topNav#toggle" data-target="topNav.toggler" type="button">
 <div><span></span><span></span><span></span></div>
@@ -53,20 +53,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <nav class="menu-navbar-mobile no-script" data-target="topNav.menu">
 <ul class="menu" data-controller="menu">
 <li>
-<a href="/pycon_archive_past_website/2019/en-us/about/pycontw/">About</a>
+<a href="https://tw.pycon.org/2019/en-us/about/pycontw/">About</a>
 </li>
 <li>
-<a href="/pycon_archive_past_website/2019/en-us/sponsor/sponsor/">Sponsor</a>
+<a href="https://tw.pycon.org/2019/en-us/sponsor/sponsor/">Sponsor</a>
 </li>
 <li>
 <input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-mobile-conference" type="checkbox"/>
 <label for="menu-navbar-mobile-conference">Conference</label>
 <div class="dropdown">
 <ul class="submenu">
-<li><a href="/pycon_archive_past_website/2019/en-us/events/overview/">Overview</a></li>
-<li><a href="/pycon_archive_past_website/2019/en-us/events/schedule/">Schedule</a></li>
-<li><a href="/pycon_archive_past_website/2019/en-us/speaking/recording/">Recording</a></li>
-<li><a href="/pycon_archive_past_website/2019/en-us/portal/">Portal</a></li>
+<li><a href="https://tw.pycon.org/2019/en-us/events/overview/">Overview</a></li>
+<li><a href="https://tw.pycon.org/2019/en-us/events/schedule/">Schedule</a></li>
+<li><a href="https://tw.pycon.org/2019/en-us/speaking/recording/">Recording</a></li>
+<li><a href="https://tw.pycon.org/2019/en-us/portal/">Portal</a></li>
 </ul>
 </div>
 </li>
@@ -75,10 +75,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <label for="menu-navbar-mobile-events">Events</label>
 <div class="dropdown">
 <ul class="submenu">
-<li><a href="/pycon_archive_past_website/2019/en-us/events/keynotes/">Keynotes</a></li>
-<li><a href="/pycon_archive_past_website/2019/en-us/events/talks/">Talks</a></li>
-<li><a href="/pycon_archive_past_website/2019/en-us/events/tutorials/">Tutorials</a></li>
-<li><a href="/pycon_archive_past_website/2019/en-us/events/open-spaces/">Open Spaces</a></li>
+<li><a href="https://tw.pycon.org/2019/en-us/events/keynotes/">Keynotes</a></li>
+<li><a href="https://tw.pycon.org/2019/en-us/events/talks/">Talks</a></li>
+<li><a href="https://tw.pycon.org/2019/en-us/events/tutorials/">Tutorials</a></li>
+<li><a href="https://tw.pycon.org/2019/en-us/events/open-spaces/">Open Spaces</a></li>
 </ul>
 </div>
 </li>
@@ -87,16 +87,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <label for="menu-navbar-mobile-registration">Registration</label>
 <div class="dropdown">
 <ul class="submenu">
-<li><a href="/pycon_archive_past_website/2019/en-us/registration/ticket-info/">Conference Ticket</a></li>
-<li><a href="/pycon_archive_past_website/2019/en-us/registration/financial-aid/">Financial Aid</a></li>
+<li><a href="https://tw.pycon.org/2019/en-us/registration/ticket-info/">Conference Ticket</a></li>
+<li><a href="https://tw.pycon.org/2019/en-us/registration/financial-aid/">Financial Aid</a></li>
 </ul>
 </div>
 </li>
 <li>
-<a href="/pycon_archive_past_website/2019/en-us/venue/">Venue</a>
+<a href="https://tw.pycon.org/2019/en-us/venue/">Venue</a>
 </li>
 <li>
-<a href="/pycon_archive_past_website/2019/en-us/dashboard/">My PyCon</a>
+<a href="https://tw.pycon.org/2019/en-us/dashboard/">My PyCon</a>
 </li>
 </ul>
 <div class="navbar-social-mobile">
@@ -109,23 +109,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 <header class="page-hero">
 <nav class="menu-navbar-desktop">
-<a class="menu-logo" href="/pycon_archive_past_website/2019/en-us/"></a>
+<a class="menu-logo" href="https://tw.pycon.org/2019/en-us/"></a>
 <ul class="menu" data-controller="menu">
 <li>
-<a href="/pycon_archive_past_website/2019/en-us/about/pycontw/">About</a>
+<a href="https://tw.pycon.org/2019/en-us/about/pycontw/">About</a>
 </li>
 <li>
-<a href="/pycon_archive_past_website/2019/en-us/sponsor/sponsor/">Sponsor</a>
+<a href="https://tw.pycon.org/2019/en-us/sponsor/sponsor/">Sponsor</a>
 </li>
 <li data-action="mouseover-&gt;menu#open mouseout-&gt;menu#close" data-target="menu.item">
 <input data-action="change-&gt;menu#exclude" data-target="menu.checker" hidden="hidden" id="menu-navbar-desktop-conference" type="checkbox"/>
 <label for="menu-navbar-desktop-conference">Conference</label>
 <div class="dropdown">
 <ul class="submenu">
-<li><a href="/pycon_archive_past_website/2019/en-us/events/overview/">Overview</a></li>
-<li><a href="/pycon_archive_past_website/2019/en-us/events/schedule/">Schedule</a></li>
-<li><a href="/pycon_archive_past_website/2019/en-us/speaking/recording/">Recording</a></li>
-<li><a href="/pycon_archive_past_website/2019/en-us/portal/">Portal</a></li>
+<li><a href="https://tw.pycon.org/2019/en-us/events/overview/">Overview</a></li>
+<li><a href="https://tw.pycon.org/2019/en-us/events/schedule/">Schedule</a></li>
+<li><a href="https://tw.pycon.org/2019/en-us/speaking/recording/">Recording</a></li>
+<li><a href="https://tw.pycon.org/2019/en-us/portal/">Portal</a></li>
 </ul>
 </div>
 </li>
@@ -134,10 +134,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <label for="menu-navbar-desktop-events">Events</label>
 <div class="dropdown">
 <ul class="submenu">
-<li><a href="/pycon_archive_past_website/2019/en-us/events/keynotes/">Keynotes</a></li>
-<li><a href="/pycon_archive_past_website/2019/en-us/events/talks/">Talks</a></li>
-<li><a href="/pycon_archive_past_website/2019/en-us/events/tutorials/">Tutorials</a></li>
-<li><a href="/pycon_archive_past_website/2019/en-us/events/open-spaces/">Open Spaces</a></li>
+<li><a href="https://tw.pycon.org/2019/en-us/events/keynotes/">Keynotes</a></li>
+<li><a href="https://tw.pycon.org/2019/en-us/events/talks/">Talks</a></li>
+<li><a href="https://tw.pycon.org/2019/en-us/events/tutorials/">Tutorials</a></li>
+<li><a href="https://tw.pycon.org/2019/en-us/events/open-spaces/">Open Spaces</a></li>
 </ul>
 </div>
 </li>
@@ -146,16 +146,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <label for="menu-navbar-desktop-registration">Registration</label>
 <div class="dropdown">
 <ul class="submenu">
-<li><a href="/pycon_archive_past_website/2019/en-us/registration/ticket-info/">Conference Ticket</a></li>
-<li><a href="/pycon_archive_past_website/2019/en-us/registration/financial-aid/">Financial Aid</a></li>
+<li><a href="https://tw.pycon.org/2019/en-us/registration/ticket-info/">Conference Ticket</a></li>
+<li><a href="https://tw.pycon.org/2019/en-us/registration/financial-aid/">Financial Aid</a></li>
 </ul>
 </div>
 </li>
 <li>
-<a href="/pycon_archive_past_website/2019/en-us/venue/">Venue</a>
+<a href="https://tw.pycon.org/2019/en-us/venue/">Venue</a>
 </li>
 <li>
-<a href="/pycon_archive_past_website/2019/en-us/dashboard/">My PyCon</a>
+<a href="https://tw.pycon.org/2019/en-us/dashboard/">My PyCon</a>
 </li>
 </ul>
 </nav>
@@ -230,7 +230,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <article class="media">
 <header>
 <figure>
-<img src="/pycon_archive_past_website/2019/media/cache/0a/ff/0aff2feb940dae0224dd896fe93ae6fd.jpg"/>
+<img src="https://tw.pycon.org/2019/media/cache/0a/ff/0aff2feb940dae0224dd896fe93ae6fd.jpg"/>
 <figcaption>Chirag Shah</figcaption>
 </figure>
 </header>
@@ -249,15 +249,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="footer-logo"></div>
 </div>
 <ul>
-<li><a href="/pycon_archive_past_website/2019/en-us/about/code-of-conduct/">Code of Conduct</a></li>
-<li><a href="/pycon_archive_past_website/2019/en-us/about/staff/">Staff</a></li>
-<li><a href="/pycon_archive_past_website/2019/en-us/about/community/">Community</a></li>
+<li><a href="https://tw.pycon.org/2019/en-us/about/code-of-conduct/">Code of Conduct</a></li>
+<li><a href="https://tw.pycon.org/2019/en-us/about/staff/">Staff</a></li>
+<li><a href="https://tw.pycon.org/2019/en-us/about/community/">Community</a></li>
 </ul>
 <p class="copyright">2019 PyCon Taiwan</p>
 </footer>
-<script src="/pycon_archive_past_website/2019/static/CACHE/js/ce994d83f936.js" type="text/javascript"></script>
-<script src="/pycon_archive_past_website/2019/static/js/vendors/simplemde.min.js"></script>
-<script src="/pycon_archive_past_website/2019/static/js/tools/simplemde-setup.js"></script>
+<script src="https://tw.pycon.org/2019/static/CACHE/js/ce994d83f936.js" type="text/javascript"></script>
+<script src="https://tw.pycon.org/2019/static/js/vendors/simplemde.min.js"></script>
+<script src="https://tw.pycon.org/2019/static/js/tools/simplemde-setup.js"></script>
 </body>
 </html>
 <style>.myclass{text-decoration: none;color: #616e86;}.myclass:hover{text-decoration: none;color: #4a5363;}</style>
