@@ -18,13 +18,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          path: "pycon_archive_past_website"
           token: '${{ secrets.GITHUB_TOKEN }}'
           fetch-depth: 0
       - name: Set up Python
         uses: actions/setup-python@v1
         with:
-          python-version: '3.x'
+          python-version: '3.9'
       - name: Install dependencies
         run: |
           python -m pip install -U pip pipenv
@@ -32,8 +31,7 @@ jobs:
       - name: Crawl Past PyConTW Websites
         run: |
           pipenv run python3 main.py -y ${{github.event.inputs.year}} --base ${{github.event.inputs.base_url}}
-          wait
-          mkdir build; mv ${{github.event.inputs.year}} build/
+          mkdir build; mv ${{github.event.inputs.year}}/ build/
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
