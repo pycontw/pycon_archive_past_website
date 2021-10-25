@@ -27,3 +27,11 @@ In order to better preserve things, we crawl each year's PyCon TW website into s
   ```
 
   and then access `localhost:[PORT]`.
+
+  or run the command:
+
+  ```bash
+  pipenv run server
+  ```
+
+  and access `localhost:5000`.
