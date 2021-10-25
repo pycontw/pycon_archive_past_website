@@ -184,7 +184,7 @@ button {
   font-smooth: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #000 url('https://tw.pycon.org/2017/static/pycontw-2017/images/bg-pattern.png?d1ebb6291d2d') left top repeat; }
+  background: #000 url('/2017/static/pycontw-2017/images/bg-pattern.png?d1ebb6291d2d') left top repeat; }
 
 .index-intro:after, .community-refs:after {
   content: "";
@@ -346,7 +346,7 @@ header {
           border-left-color: #46C1EA; }
   .header-nav > .header-logo {
     position: absolute;
-    background: url('https://tw.pycon.org/2017/static/pycontw-2017/images/pycon-logo.svg?c89ac4383312') center no-repeat;
+    background: url('/2017/static/pycontw-2017/images/pycon-logo.svg?c89ac4383312') center no-repeat;
     background-size: cover;
     width: 32px;
     height: 23px;
@@ -374,7 +374,7 @@ header {
     position: absolute;
     display: block;
     z-index: -1;
-    background: url('https://tw.pycon.org/2017/static/pycontw-2017/images/icon-circle.svg?c89ac4383312') center no-repeat;
+    background: url('/2017/static/pycontw-2017/images/icon-circle.svg?c89ac4383312') center no-repeat;
     background-size: cover;
     content: '';
     bottom: -152px;
@@ -421,7 +421,7 @@ header {
     font-size: 30px;
     line-height: 34px;
     padding-left: 41px;
-    background: url('https://tw.pycon.org/2017/static/pycontw-2017/images/icon-double-arrow.svg?d1ebb6291d2d') left center no-repeat; }
+    background: url('/2017/static/pycontw-2017/images/icon-double-arrow.svg?d1ebb6291d2d') left center no-repeat; }
     .index-session-links > a:not(:last-child) {
       margin-right: 116px; }
     .index-session-links > a > .event-label, .index-session-links > a > time {
@@ -435,7 +435,7 @@ header {
     position: absolute;
     display: block;
     z-index: -1;
-    background: url('https://tw.pycon.org/2017/static/pycontw-2017/images/taiwan.svg?d1ebb6291d2d') center no-repeat;
+    background: url('/2017/static/pycontw-2017/images/taiwan.svg?d1ebb6291d2d') center no-repeat;
     background-size: cover;
     content: '';
     top: 112px;
@@ -485,7 +485,7 @@ header {
       display: inline-block;
       width: 24px;
       height: 24px;
-      background: url('https://tw.pycon.org/2017/static/pycontw-2017/images/icon-nav.svg?d1ebb6291d2d') center no-repeat; }
+      background: url('/2017/static/pycontw-2017/images/icon-nav.svg?d1ebb6291d2d') center no-repeat; }
     .ticket > a:hover {
       background-clip: border-box;
       background-image: linear-gradient(102deg, #00ff96, #1697e5); }
@@ -497,7 +497,7 @@ header {
     position: absolute;
     display: block;
     z-index: -1;
-    background: url('https://tw.pycon.org/2017/static/pycontw-2017/images/icon-circle.svg?c89ac4383312') center no-repeat;
+    background: url('/2017/static/pycontw-2017/images/icon-circle.svg?c89ac4383312') center no-repeat;
     background-size: cover;
     content: '';
     right: -56px;
@@ -524,7 +524,7 @@ header {
   border-radius: 20px; }
   .volunteers-needed::before {
     content: '';
-    background: url('https://tw.pycon.org/2017/static/pycontw-2017/images/bg-tri.svg?d1ebb6291d2d') left top no-repeat;
+    background: url('/2017/static/pycontw-2017/images/bg-tri.svg?d1ebb6291d2d') left top no-repeat;
     width: 100px;
     height: 100px;
     position: absolute;
@@ -533,7 +533,7 @@ header {
     display: block; }
   .volunteers-needed::after {
     content: '';
-    background: url('https://tw.pycon.org/2017/static/pycontw-2017/images/icon-volume.svg?d1ebb6291d2d') left top no-repeat;
+    background: url('/2017/static/pycontw-2017/images/icon-volume.svg?d1ebb6291d2d') left top no-repeat;
     width: 26px;
     height: 26px;
     position: absolute;
@@ -591,7 +591,7 @@ header {
     position: absolute;
     display: block;
     z-index: -1;
-    background: url('https://tw.pycon.org/2017/static/pycontw-2017/images/icon-polygons.svg?c89ac4383312') center no-repeat;
+    background: url('/2017/static/pycontw-2017/images/icon-polygons.svg?c89ac4383312') center no-repeat;
     background-size: cover;
     content: '';
     width: 325px;
@@ -735,7 +735,7 @@ footer > .social {
       display: block;
       width: 100%;
       height: 100%;
-      background: url('https://tw.pycon.org/2017/static/pycontw-2017/images/icon-plus-circle.svg?c89ac4383312') center no-repeat; }
+      background: url('/2017/static/pycontw-2017/images/icon-plus-circle.svg?c89ac4383312') center no-repeat; }
     .inner-wrapper .popping-card .card-popper:active, .inner-wrapper .popping-card .card-popper:hover {
       text-decoration: none; }
       .inner-wrapper .popping-card .card-popper:active::before, .inner-wrapper .popping-card .card-popper:hover::before {
@@ -830,11 +830,11 @@ body.popping-modal-open .mother-wrapper {
           text-decoration: none;
           opacity: 0.6; }
         .popping-card-modal .modal-content .modal-function > a.prev, .popping-card-modal .modal-content .modal-function > span.prev {
-          background: url('https://tw.pycon.org/2017/static/pycontw-2017/images/icon-modal-prev.svg?c89ac4383312') center no-repeat; }
+          background: url('/2017/static/pycontw-2017/images/icon-modal-prev.svg?c89ac4383312') center no-repeat; }
         .popping-card-modal .modal-content .modal-function > a.next, .popping-card-modal .modal-content .modal-function > span.next {
-          background: url('https://tw.pycon.org/2017/static/pycontw-2017/images/icon-modal-next.svg?c89ac4383312') center no-repeat; }
+          background: url('/2017/static/pycontw-2017/images/icon-modal-next.svg?c89ac4383312') center no-repeat; }
         .popping-card-modal .modal-content .modal-function > a.close, .popping-card-modal .modal-content .modal-function > span.close {
-          background: url('https://tw.pycon.org/2017/static/pycontw-2017/images/icon-modal-close.svg?d1ebb6291d2d') center no-repeat; }
+          background: url('/2017/static/pycontw-2017/images/icon-modal-close.svg?d1ebb6291d2d') center no-repeat; }
 
 .inner-wrapper .talk-info-section {
   margin: 0 -4px 75px; }
@@ -1199,7 +1199,7 @@ blockquote.clip {
 /* Index page. */
 section.sponsors {
   padding: 147px 0 337px;
-  background: #fff url('https://tw.pycon.org/2017/static/pycontw-2017/images/bg-sponsor.svg?d1ebb6291d2d') right bottom no-repeat; }
+  background: #fff url('/2017/static/pycontw-2017/images/bg-sponsor.svg?d1ebb6291d2d') right bottom no-repeat; }
   section.sponsors > .sponsors-wrapper {
     padding: 0 16px;
     margin: 0 auto;
@@ -1408,9 +1408,9 @@ section.sponsors {
       position: absolute;
       background-size: contain; }
       header > .btn.btn-menu {
-        background: url('https://tw.pycon.org/2017/static/pycontw-2017/images/icon-menu.svg?d1ebb6291d2d') center no-repeat; }
+        background: url('/2017/static/pycontw-2017/images/icon-menu.svg?d1ebb6291d2d') center no-repeat; }
       header > .btn.btn-home {
-        background: url('https://tw.pycon.org/2017/static/pycontw-2017/images/pycon-logo.svg?c89ac4383312') center no-repeat;
+        background: url('/2017/static/pycontw-2017/images/pycon-logo.svg?c89ac4383312') center no-repeat;
         background-size: auto 36%;
         right: 0; }
   .header-nav > .header-logo {
@@ -1497,7 +1497,7 @@ section.sponsors {
           left: auto;
           bottom: auto;
           top: 24px;
-          background: url('https://tw.pycon.org/2017/static/pycontw-2017/images/icon-arrow-right.svg?c89ac4383312') left top no-repeat;
+          background: url('/2017/static/pycontw-2017/images/icon-arrow-right.svg?c89ac4383312') left top no-repeat;
           width: 7.5px;
           height: 12.5px;
           background-size: cover; }
@@ -1530,7 +1530,7 @@ section.sponsors {
         .header-menu-nav > a.to-expand.expanded::after,
         .header-menu-nav > .parent.to-expand.expanded::after {
           top: 26.5px;
-          background: url('https://tw.pycon.org/2017/static/pycontw-2017/images/icon-arrow-down.svg?c89ac4383312') left top no-repeat;
+          background: url('/2017/static/pycontw-2017/images/icon-arrow-down.svg?c89ac4383312') left top no-repeat;
           width: 12.5px;
           height: 8px; }
         .header-nav > a.to-expand.expanded .sub,
@@ -1596,7 +1596,7 @@ section.sponsors {
     display: block;
     width: 17px;
     height: 17px;
-    background: url('https://tw.pycon.org/2017/static/pycontw-2017/images/icon-close.svg?d1ebb6291d2d') left top no-repeat;
+    background: url('/2017/static/pycontw-2017/images/icon-close.svg?d1ebb6291d2d') left top no-repeat;
     background-size: 17px;
     position: absolute;
     right: 19px;
@@ -1748,7 +1748,7 @@ button[data-balloon] {
   margin-bottom: 11px;
 }
 [data-balloon]:before {
-  background: url('https://tw.pycon.orgdata:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2236px%22%20height%3D%2212px%22%3E%3Cpath%20fill%3D%22rgba%2817,%2017,%2017,%200.9%29%22%20transform%3D%22rotate%280%29%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E') no-repeat;
+  background: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2236px%22%20height%3D%2212px%22%3E%3Cpath%20fill%3D%22rgba%2817,%2017,%2017,%200.9%29%22%20transform%3D%22rotate%280%29%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E') no-repeat;
   background-size: 100% auto;
   height: 6px;
   width: 18px;
@@ -1788,7 +1788,7 @@ button[data-balloon] {
   margin-top: 11px;
 }
 [data-balloon-pos="down"]:before {
-  background: url('https://tw.pycon.orgdata:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2236px%22%20height%3D%2212px%22%3E%3Cpath%20fill%3D%22rgba%2817,%2017,%2017,%200.9%29%22%20transform%3D%22rotate%28180%2018%206%29%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E') no-repeat;
+  background: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2236px%22%20height%3D%2212px%22%3E%3Cpath%20fill%3D%22rgba%2817,%2017,%2017,%200.9%29%22%20transform%3D%22rotate%28180%2018%206%29%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E') no-repeat;
   background-size: 100% auto;
   height: 6px;
   width: 18px;
@@ -1817,7 +1817,7 @@ button[data-balloon] {
   margin-right: 11px;
 }
 [data-balloon-pos="left"]:before {
-  background: url('https://tw.pycon.orgdata:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2212px%22%20height%3D%2236px%22%3E%3Cpath%20fill%3D%22rgba%2817,%2017,%2017,%200.9%29%22%20transform%3D%22rotate%28-90%2018%2018%29%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E') no-repeat;
+  background: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2212px%22%20height%3D%2236px%22%3E%3Cpath%20fill%3D%22rgba%2817,%2017,%2017,%200.9%29%22%20transform%3D%22rotate%28-90%2018%2018%29%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E') no-repeat;
   background-size: 100% auto;
   height: 18px;
   width: 6px;
@@ -1845,7 +1845,7 @@ button[data-balloon] {
   margin-left: 11px;
 }
 [data-balloon-pos="right"]:before {
-  background: url('https://tw.pycon.orgdata:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2212px%22%20height%3D%2236px%22%3E%3Cpath%20fill%3D%22rgba%2817,%2017,%2017,%200.9%29%22%20transform%3D%22rotate%2890%206%206%29%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E') no-repeat;
+  background: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2212px%22%20height%3D%2236px%22%3E%3Cpath%20fill%3D%22rgba%2817,%2017,%2017,%200.9%29%22%20transform%3D%22rotate%2890%206%206%29%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E') no-repeat;
   background-size: 100% auto;
   height: 18px;
   width: 6px;

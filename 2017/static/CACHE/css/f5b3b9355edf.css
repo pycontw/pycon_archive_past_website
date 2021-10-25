@@ -238,8 +238,8 @@ th {
 
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url('https://tw.pycon.org/2017/static/fonts/bootstrap/glyphicons-halflings-regular.eot');
-  src: url('https://tw.pycon.org/2017/static/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix') format("embedded-opentype"), url('https://tw.pycon.org/2017/static/fonts/bootstrap/glyphicons-halflings-regular.woff2') format("woff2"), url('https://tw.pycon.org/2017/static/fonts/bootstrap/glyphicons-halflings-regular.woff') format("woff"), url('https://tw.pycon.org/2017/static/fonts/bootstrap/glyphicons-halflings-regular.ttf') format("truetype"), url('https://tw.pycon.org/2017/static/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format("svg"); }
+  src: url('/2017/static/fonts/bootstrap/glyphicons-halflings-regular.eot');
+  src: url('/2017/static/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix') format("embedded-opentype"), url('/2017/static/fonts/bootstrap/glyphicons-halflings-regular.woff2') format("woff2"), url('/2017/static/fonts/bootstrap/glyphicons-halflings-regular.woff') format("woff"), url('/2017/static/fonts/bootstrap/glyphicons-halflings-regular.ttf') format("truetype"), url('/2017/static/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format("svg"); }
 
 .glyphicon {
   position: relative;
@@ -6616,7 +6616,7 @@ pre {
   width: 100%;
   margin-top: 74px;
   background-color: #F9FCFF;
-  background-image: url('https://tw.pycon.org/2017/static/images/Logo_pycontw16_blue_footer.png?c89ac4383312');
+  background-image: url('/2017/static/images/Logo_pycontw16_blue_footer.png?c89ac4383312');
   background-position: center;
   background-repeat: no-repeat; }
   .content-page-footer .content-page-footer-content {
@@ -6681,7 +6681,7 @@ body.registration-pycontw-2016 {
       width: 100%;
       height: 100px;
       padding: 20px;
-      background: url('https://tw.pycon.org/2017/static/images/bg_registration.png?c89ac4383312') no-repeat 50% 50%;
+      background: url('/2017/static/images/bg_registration.png?c89ac4383312') no-repeat 50% 50%;
       background-size: content;
       background-clip: content-box; }
 
@@ -7481,7 +7481,7 @@ body {
   margin-bottom: 4.2em; }
 
 .intro {
-  background: url('https://tw.pycon.org/2017/static/images/bg_section-intro.svg?c89ac4383312') no-repeat;
+  background: url('/2017/static/images/bg_section-intro.svg?c89ac4383312') no-repeat;
   background-size: 50% auto;
   background-position: left 0 top -5vw;
   color: #686868; }
@@ -7604,7 +7604,7 @@ body {
 .sponsorship {
   background-color: #223d53;
   background-repeat: no-repeat;
-  background-image: url('https://tw.pycon.org/2017/static/images/bg_section-sponsorship.svg?c89ac4383312');
+  background-image: url('/2017/static/images/bg_section-sponsorship.svg?c89ac4383312');
   background-size: contain;
   background-position: center;
   background-origin: content-box;
@@ -7699,7 +7699,7 @@ body {
     color: #223d53; }
 
 .conf {
-  background: url('https://tw.pycon.org/2017/static/images/bg_section-conf.svg?c89ac4383312') no-repeat;
+  background: url('/2017/static/images/bg_section-conf.svg?c89ac4383312') no-repeat;
   background-size: 50% auto;
   background-position: right 0 bottom 20vw; }
 
