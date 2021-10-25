@@ -31,7 +31,7 @@ In order to better preserve things, we crawl each year's PyCon TW website into s
   or run the command:
 
   ```bash
-  pipenv run server
+  pipenv run serve
   ```
 
   and access `localhost:5000`.
