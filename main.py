@@ -10,10 +10,12 @@ from urllib.parse import unquote, urlparse
 from loguru import logger
 
 PYCON_YEAR = "2016"
-PYCON_URL = "https://tw.pycon.org"
+PYCON_HOST = "tw.pycon.org"
+PYCON_URL = f"https://{PYCON_HOST}"
 
 
 def mkdir(path):
+    path = urlparse(path).path
     try:
         # 1) correct the path to directory path and be a local path
         # 2) by using unquote to avoid the Garbled path
@@ -27,6 +29,7 @@ def mkdir(path):
 
 def writefile(path):
     # request to the Pycon path, and fetch it to local file by using binary writing
+    path = urlparse(path).path
     request = requests.get(PYCON_URL + path)
     file = "." + unquote(path)
     try:
@@ -37,6 +40,7 @@ def writefile(path):
 
 
 def getcssimg(path):
+    path = urlparse(path).path
     # get all url like /year/... target, and try to save them all.
     file = "." + path
     with open(file, "rb") as f:
@@ -118,8 +122,8 @@ def get_assets(path: Path):
 
 
 def get_page(path):
-    # filter our target path
-    if path[0] != "/" or Path("." + path + "index.html").exists():
+    path = urlparse(path).path
+    if Path("." + path + "index.html").exists(): # Don't crawl same page again in case of infinite loop
         return
     logger.info("fetching " + PYCON_URL + path)
     request = requests.get(PYCON_URL + path)
@@ -147,9 +151,10 @@ def get_page(path):
         html = str(soup)
         html = html.replace('method="post"', "")
         html = html.replace('action="/' + PYCON_YEAR + '/set-language/"', "")
-        html = html.replace(
-            f"/{PYCON_YEAR}/", f"{BASE_URL}/{PYCON_YEAR}/"
-        )  # Replace base url since the gh-pages use base url following `{host}/{repo}/` instead of {host}/
+        if path.startswith(f"/{PYCON_YEAR}"):
+            html = html.replace(
+                f"/{PYCON_YEAR}/", f"{BASE_URL}/{PYCON_YEAR}/"
+            )  # Replace base url since the gh-pages use base url following `{host}/{repo}/` instead of {host}/
         full_path = BASE_URL + path
         if PYCON_YEAR == "2016":
             html = html.replace(
@@ -285,14 +290,20 @@ def main():
 
     for crawler_url in crawler_urls:
         url = urlparse(crawler_url)
+        # Checking if the url is a pycon website
+        if url.netloc != PYCON_HOST and url.netloc != "":
+            continue
+        # Checking if the path is right or not
+        if url.netloc == "" and url.path.find(f"/{PYCON_YEAR}") != 0:
+            continue
         path_parts = Path(url.path).parts
         if len(path_parts) >= 2 and path_parts[1] == PYCON_YEAR:
-            get_page(crawler_url)
-            get_page(crawler_url.replace("zh-hant", "en-us"))
+            get_page(url.path)
+            get_page(url.path.replace("zh-hant", "en-us"))
 
     for link in soup.findAll("link", {"rel": "icon"}):
         if "href" in link.attrs:
-            get_assets(Path(link["href"]))
+            get_assets(Path(urlparse(link["href"]).path))
 
 
 @click.command()

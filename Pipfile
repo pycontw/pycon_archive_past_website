@@ -13,3 +13,6 @@ beautifulsoup4 = "~=4.10.0"
 
 [requires]
 python_version = "3.9"
+
+[scripts]
+serve = "python -m http.server --cgi 5000"
