@@ -1,0 +1,26 @@
+{
+  "template": "https://github.com/Lee-W/cookiecutter-python-template",
+  "commit": "95b9897dc83fc93eee9eab0f11e23bc116172089",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "project_name": "pycon_archive_past_website",
+      "project_slug": "pycon_archive_past_website",
+      "project_description": "Freeze and archive historical PyConTW official websites as static sites.",
+      "github_username": "pycontw",
+      "github_url": "https://github.com/pycontw/pycon_archive_past_website",
+      "author_name": "PyCon Taiwan",
+      "author_email": "organizers@pycon.tw",
+      "python_version": "3.9",
+      "dependency_management_tool": "pipenv",
+      "default_branch": "main",
+      "use_strict_mypy_config": "n",
+      "build_pypi_package": "n",
+      "build_docker_image": "n",
+      "open_source_license": "MIT license",
+      "_template_version": "1.1.2",
+      "_template": "https://github.com/Lee-W/cookiecutter-python-template"
+    }
+  },
+  "directory": null
+}

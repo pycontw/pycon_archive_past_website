@@ -1,15 +1,43 @@
 [[source]]
+name = "pypi"
 url = "https://pypi.org/simple"
 verify_ssl = true
-name = "pypi"
 
-[packages]
+[dev-packages]
+# task management
+invoke = "*"
+# test
+pytest = ">=6.0.1"
+pytest-cov = "*"
+pytest-mock = "*"
+coverage = {extras = ["toml"], version = "*"}
+# style
+black = "*"
+isort = ">=5.0.0"
+flake8 = "*"
+mypy = ">=0.910"
+pylint = ">=2.7.0"
+# security
+bandit = "*"
+# git
+commitizen = "*"
+pre-commit = "*"
+# main
 requests = "~=2.26.0"
 click = "~=8.0.1"
 loguru = "~=0.5.3"
 beautifulsoup4 = "~=4.10.0"
 
-[dev-packages]
+[packages]
+mypy = "*"
+types-requests = "*"
+requests = "~=2.26.0"
+click = "~=8.0.1"
+loguru = "~=0.5.3"
+beautifulsoup4 = "~=4.10.0"
+
+[pipenv]
+allow_prereleases = true
 
 [requires]
 python_version = "3.9"
