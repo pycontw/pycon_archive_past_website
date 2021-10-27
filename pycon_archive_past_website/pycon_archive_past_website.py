@@ -1,12 +1,12 @@
-from bs4.element import PY3K
-import requests
 import json
 import os
 import re
-import click
 from pathlib import Path
-from bs4 import BeautifulSoup
 from urllib.parse import unquote, urlparse
+
+import click
+import requests
+from bs4 import BeautifulSoup
 from loguru import logger
 
 PYCON_YEAR = "2016"
@@ -45,7 +45,7 @@ def getcssimg(path):
     file = "." + path
     with open(file, "rb") as f:
         content = str(f.read())
-        all_url = re.findall("/" + PYCON_YEAR + "[^\s]*", content)
+        all_url = re.findall("/" + PYCON_YEAR + r"[^\s]*", content)
         for url in all_url:
             url = url.replace("\\n", "")
             url = url[0 : url.rfind("\\")]
@@ -58,7 +58,7 @@ def getcssimg(path):
 def script(soup):
     for script in soup.find_all("script"):
         # get all url like /year/... target, and try to save them all.
-        all_url = re.findall("/" + PYCON_YEAR + "[^\s]*", str(script))
+        all_url = re.findall("/" + PYCON_YEAR + r"[^\s]*", str(script))
         for url in all_url:
             url = url[0 : max(url.rfind("'"), url.rfind('"'))]
             if not Path("." + url).exists():
@@ -123,7 +123,9 @@ def get_assets(path: Path):
 
 def get_page(path):
     path = urlparse(path).path
-    if Path("." + path + "index.html").exists(): # Don't crawl same page again in case of infinite loop
+    if Path(
+        "." + path + "index.html"
+    ).exists():  # Don't crawl same page again in case of infinite loop
         return
     logger.info("fetching " + PYCON_URL + path)
     request = requests.get(PYCON_URL + path)

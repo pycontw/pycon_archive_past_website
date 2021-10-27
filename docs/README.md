@@ -1,8 +1,19 @@
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg?style=flat-square)](https://conventionalcommits.org)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+
+
 # PyCon TW Archived Websites
 
 The resting place for historical PyCon TW websites.
 
 In order to better preserve things, we crawl each year's PyCon TW website into static HTML after the conference ends. The static websites are served on GitHub Page and the requests for historical websites are proxied from `tw.pycon.org` to GitHub Page with [pycontw-nginx](https://github.com/pycontw/pycontw-nginx). See the crawling script on `main` branch and the archived HTML on `gh-pages` branch.
+
+## Getting Started
+
+### Prerequisites
+* [Python](https://www.python.org/downloads/)
 
 ## Usage
 
@@ -35,3 +46,12 @@ In order to better preserve things, we crawl each year's PyCon TW website into s
   ```
 
   and access `localhost:5000`.
+
+## Contributing
+See [Contributing](contributing.md)
+
+## Authors
+PyCon Taiwan
+
+
+Created from [Lee-W/cookiecutter-python-template](https://github.com/Lee-W/cookiecutter-python-template/tree/1.1.2) version 1.1.2
