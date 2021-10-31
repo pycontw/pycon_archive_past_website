@@ -1,0 +1,1513 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+ <!--<![endif]-->
+ <head>
+  <link href="../../icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+  <link href="../../icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+  <link href="../../icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+  <link href="../../icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+  <link href="../../icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+  <link href="../../icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+  <link href="../../icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+  <link href="../../icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+  <link href="../../icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+  <link href="../../icons/android-icon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+  <link href="../../icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+  <link href="../../icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+  <link href="../../icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+  <link href="https://tw.pycon.org/manifest.json" rel="manifest">
+  <meta content="#ffffff" name="msapplication-TileColor">
+  <meta content="/static/ms-icon-144x144.png" name="msapplication-TileImage">
+  <meta content="#ffffff" name="theme-color">
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="" name="description">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="http://tw.pycon.org/static/image/pycon_og_image.png" property="og:image">
+  <title>
+   PyCon APAC/Taiwan 2015
+  </title>
+  <script src="../../static/mezzanine/js/jquery-1.7.1.min.js">
+   jQuery.noConflict();
+  </script>
+  <link href="../../static/CACHE/css/bee5e591beb8.css" rel="stylesheet" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="/static/js/html5shiv.min.js"></script>
+    <script src="/static/js/respond.min.js"></script>
+    <![endif]-->
+  <style>
+   .pycon-table {
+    width: 100%;
+    margin: 2em 0;
+    border: 1px solid #ddd;
+    border-top-color: #ddd;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.pycon-table thead {
+    font-size: 15px;
+    background-color: #f5f4ee;
+}
+
+.pycon-table thead th {
+    font-weight: normal;
+    color: #666;
+}
+
+.pycon-table tbody {
+    font-size: 15px;
+}
+
+.pycon-table tbody td.english {
+    color: #54d871;
+}
+
+.pycon-table tbody td.mandarin {
+    color: #8c460e;
+}
+
+.pycon-table tbody td.regular-talk {
+    color: #54afd8;
+}
+
+.pycon-table tbody td.scipy-talk {
+    color: #000;
+}
+
+.pycon-table tbody td.lightning-talk {
+    color: #c154d8;
+}
+
+.pycon-table tbody td.tutorial {
+    color: #dd4438;
+}
+
+.paper,
+.richpage {
+  padding: 2.5em 3em;
+  margin-bottom: 1.5em;
+  background-color: #fff;
+}
+  </style>
+  <script src="../../static/tablesaw.js">
+  </script>
+  <link href="../../static/tablesaw.bare.css" rel="stylesheet">
+  <style>
+   table td {
+    text-align: center;
+    vertical-align: middle;
+}
+.title {
+    color: blue;
+    text-align: center;
+    font-size: 16px;
+}
+.speaker {
+    color: #ed195b;;
+    text-align: center;
+    font-size: 12px;
+}
+.language {
+    text-decoration: underline;
+    color: #999;
+    padding-left: 4px;
+}
+.program {
+    text-align: center;
+    font-weight: bold;
+    background-color: rgba(14,110,184,0.1);
+    color: #04556a;
+    font-size: 16px;
+    padding: 8px 0;
+}
+
+.SciPy {
+    font-weight: bold;
+    color: #8caae6;
+    font-size: 12px;
+}
+
+.Sponsor {
+    font-weight: bold;
+    color: blue;
+    font-size: 12px;
+}
+.tablesaw-cell-content {
+    width: 100%;
+}
+
+.svg-icon path {
+  fill: #ff0000;
+}
+
+table.pycon-table th {
+    text-align: center;
+    font-weight: bold;
+    color: #111111;
+}
+thead th, thead td {
+  text-align: center;
+}
+tbody th, tbody td {
+  text-align: center;
+}
+tfoot th, tfoot td {
+  text-align: center;
+}
+  </style>
+  <script type="text/javascript">
+   var tagtoo_advertiser_id = 265;
+                   var tagtoo_ga = document.createElement('script');
+                   tagtoo_ga.type = 'text/javascript';
+                   tagtoo_ga.async = true;
+                   tagtoo_ga.src = '//ad.tagtoo.co/media/ad/track.js';
+                   var tagtoo_s = document.getElementsByTagName('script')[0];
+                   tagtoo_s.parentNode.insertBefore(tagtoo_ga, tagtoo_s);
+  </script>
+  <script>
+   var _gaq = _gaq || [['_trackPageview']];
+_gaq.unshift(['_setAccount', 'UA-28961467-1']);
+(function(d, t) {
+    var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+    g.async = true;
+    g.src = '//www.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g, s);
+})(document, 'script');
+  </script>
+ </head>
+ <body class="FutureBg">
+  <nav class="navbar navbar-default navbar-site">
+   <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+     <button class="navbar-toggle collapsed" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
+      <span class="sr-only">
+       Toggle navigation
+      </span>
+      <span class="icon-bar">
+      </span>
+      <span class="icon-bar">
+      </span>
+      <span class="icon-bar">
+      </span>
+     </button>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+     <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav">
+       <li class="" id="dropdown-menu-home">
+        <a href="../../setlang/index.html%3Flanguage=zh.html">
+         首頁
+        </a>
+       </li>
+       <li class="dropdown" id="dropdown-menu-about">
+        <a data-target="/2015apac/zh/about/" href="../about/index.html">
+         關於
+        </a>
+        <a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="index.html#">
+         <b class="caret">
+         </b>
+        </a>
+        <ul class="dropdown-menu">
+         <li id="dropdown-menu-about-regional-pycons">
+          <a href="../about/regional-pycons/index.html">
+           地區性 PYCON
+          </a>
+         </li>
+         <li id="dropdown-menu-about-code-of-conduct">
+          <a href="../about/code-of-conduct.html">
+           行為準則
+          </a>
+         </li>
+         <li id="dropdown-menu-about-recruit">
+          <a href="../about/recruit/index.html">
+           人員招募
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="dropdown active" id="dropdown-menu-schedule">
+        <a data-target="/2015apac/zh/schedule/" href="index.html">
+         議程
+        </a>
+        <a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="index.html#">
+         <b class="caret">
+         </b>
+        </a>
+        <ul class="dropdown-menu">
+         <li id="dropdown-menu-https:--tw.pycon.org-2015apac-zh-lightning_zh-">
+          <a href="../lightning_zh/index.html">
+           閃電秀
+          </a>
+         </li>
+         <li id="dropdown-menu-program-keynote-speaker">
+          <a href="../program/keynote-speaker/index.html">
+           KEYNOTE 講者
+          </a>
+         </li>
+         <li id="dropdown-menu-program-night-party">
+          <a href="../program/night-party/index.html">
+           回到未來之夜市
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="" id="dropdown-menu-tutorial">
+        <a data-target="/2015apac/zh/tutorial/" href="../tutorial/index.html">
+         專業課程
+        </a>
+       </li>
+       <li class="dropdown" id="dropdown-menu-registration">
+        <a data-target="/2015apac/zh/registration/" href="../registration/index.html">
+         報名
+        </a>
+        <a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="index.html#">
+         <b class="caret">
+         </b>
+        </a>
+        <ul class="dropdown-menu">
+         <li id="dropdown-menu-registration-financial-aid">
+          <a href="../registration/financial-aid.html">
+           財務補助
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="dropdown" id="dropdown-menu-venue">
+        <a data-target="/2015apac/zh/venue/" href="../venue/index.html">
+         會場
+        </a>
+        <a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="index.html#">
+         <b class="caret">
+         </b>
+        </a>
+        <ul class="dropdown-menu">
+         <li id="dropdown-menu-venue-accommodation">
+          <a href="../venue/accommodation/index.html">
+           住宿
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="dropdown" id="dropdown-menu-sponsors">
+        <a data-target="/2015apac/zh/sponsors/" href="../sponsors/index.html">
+         贊助
+        </a>
+        <a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="index.html#">
+         <b class="caret">
+         </b>
+        </a>
+        <ul class="dropdown-menu">
+         <li id="dropdown-menu-sponsors-sponsor-information">
+          <a href="../sponsors/sponsor-information/index.html">
+           贊助須知
+          </a>
+         </li>
+         <li id="dropdown-menu-sponsors-why-sponsor-pycon-apac">
+          <a href="../sponsors/why-sponsor-pycon-apac/index.html">
+           為何贊助 PYCON APAC
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="divider-vertical">
+       </li>
+      </ul>
+     </ul>
+     <ul class="nav navbar-nav">
+      <li>
+       <a href="../accounts/login/index.html">
+        登入
+       </a>
+      </li>
+     </ul>
+     <ul class="nav navbar-nav">
+      <li class="dropdown" id="dropdown-menu-about">
+       <a data-target="#" href="index.html#">
+        使用語言
+       </a>
+       <a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="index.html#">
+        <b class="caret">
+        </b>
+       </a>
+       <ul class="dropdown-menu">
+        <li id="dropdown-menu-setlang-en">
+         <a href="../../setlang/index.html%3Flanguage=en.html">
+          ENGLISH
+         </a>
+        </li>
+        <li id="dropdown-menu-setlang-zh">
+         <a href="../../setlang/index.html%3Flanguage=zh.html">
+          中文
+         </a>
+        </li>
+        <li id="dropdown-menu-about-ja">
+         <a href="../../setlang/index.html%3Flanguage=ja.html">
+          日本語
+         </a>
+        </li>
+        <!--           <li id="dropdown-menu-setlang-kr">
+            <a href="/setlang/?language=kr&next=">한국어</a>
+          </li>
+ -->
+       </ul>
+      </li>
+     </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+   </div>
+   <!-- /.container-fluid -->
+  </nav>
+  <div class="container">
+   <h1 class="Header--firstDoubleBar Header">
+    Program
+   </h1>
+   <h1 class="Text--bigger Header Header--third">
+    DAY 1 (6/5)
+   </h1>
+   <table class="tablesaw tablesaw-stack pycon-table" data-tablesaw-mode="stack">
+    <thead>
+     <tr>
+      <th>
+       Time
+      </th>
+      <th style="text-align:center">
+       <span class="place">
+        R0
+       </span>
+      </th>
+      <th>
+       R1
+      </th>
+      <th>
+       R2
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       08:00
+      </td>
+      <td align="center" colspan="4">
+       <div class="program">
+        Registration
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       09:00
+      </td>
+      <td align="center" colspan="4">
+       <div class="program">
+        Opening
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       09:10
+      </td>
+      <td align="center" colspan="4">
+       <div class="program">
+        Keynote Van Lindberg
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       10:00
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/12.html">
+         Openstack Swift Benchmark with Ansible
+        </a>
+       </div>
+       <div class="speaker">
+        Charles Hsu
+        <span class="language">
+         zh
+        </span>
+       </div>
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/27.html">
+         ....when thinking functionally with Python
+        </a>
+       </div>
+       <div class="speaker">
+        Apua Juan
+        <span class="language">
+         zh
+        </span>
+       </div>
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/63.html">
+         Easy Map Applications Using Python
+        </a>
+       </div>
+       <div class="speaker">
+        Victor Gau
+        <span class="language">
+         en
+        </span>
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       10:40
+      </td>
+      <td align="center" colspan="4">
+       <div class="program">
+        Refreshment
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       11:10
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/39.html">
+         Python Debugger Uncovered
+        </a>
+       </div>
+       <div class="speaker">
+        Dmitry Trofimov
+        <span class="language">
+         en
+        </span>
+       </div>
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/83.html">
+         快快樂樂成為 Coding Ninja (by pytest)
+        </a>
+       </div>
+       <div class="speaker">
+        Chun-Yu Tseng
+        <span class="language">
+         zh
+        </span>
+       </div>
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/32.html">
+         Happy rapid prototyping embedded assembly by Python: My Experience
+        </a>
+       </div>
+       <div class="speaker">
+        Albert Huang
+        <span class="language">
+         en
+        </span>
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       11:50
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/104.html">
+         Programmatic Debugging with GDB and Python
+        </a>
+       </div>
+       <div class="speaker">
+        Scott Tsai
+        <span class="language">
+         en
+        </span>
+       </div>
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/53.html">
+         ZoneIDAProc: Instrumentation-based Dynamic Accessing
+        </a>
+       </div>
+       <div class="speaker">
+        Tzung-Bi Shih
+        <span class="language">
+         zh
+        </span>
+       </div>
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/92.html">
+         Orchestrating the execution of workflows for media streaming service and even more
+        </a>
+       </div>
+       <div class="speaker">
+        Shuen-Huei Guan
+        <span class="language">
+         zh
+        </span>
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       12:30
+      </td>
+      <td align="center" colspan="4">
+       <div class="program">
+        Lunch
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       13:30
+      </td>
+      <td align="center" colspan="4">
+       <div class="program">
+        Keynote Kenneth Reitz
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       14:20
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/18.html">
+         The Future of GUI Programming with Python
+        </a>
+       </div>
+       <div class="speaker">
+        Tzu-ping Chung
+        <span class="language">
+         zh
+        </span>
+       </div>
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/78.html">
+         Future Development of PyCON in Asia Pacific
+        </a>
+        <img alt="No Video Recording" class="svg-icon" src="../../static/no19.svg" width="20px">
+       </div>
+       <div class="speaker">
+        Sammy Fung
+        <span class="language">
+         en
+        </span>
+       </div>
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/16.html">
+         教練，我想寫  Django app 給大家用
+        </a>
+       </div>
+       <div class="speaker">
+        Tim Hsu
+        <span class="language">
+         zh
+        </span>
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       15:00
+      </td>
+      <td align="center" colspan="4">
+       <div class="program">
+        Break
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       15:10
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/56.html">
+         RPyScan
+        </a>
+       </div>
+       <div class="speaker">
+        Melvin Foo Hannie Ching  Tan Le Xuan
+        <span class="language">
+         en
+        </span>
+       </div>
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/52.html">
+         Network Security and Analysis with Python
+        </a>
+       </div>
+       <div class="speaker">
+        Lee Yang Peng
+        <span class="language">
+         en
+        </span>
+       </div>
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/80.html">
+         Tagtoo Task Manager
+        </a>
+       </div>
+       <div class="speaker">
+        Chien Hsun Chen
+        <span class="language">
+         zh
+        </span>
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       15:50
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/25.html">
+         MMO Game Server Design with Twisted Python
+        </a>
+       </div>
+       <div class="speaker">
+        Dan Maas
+        <span class="language">
+         zh
+        </span>
+       </div>
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/91.html">
+         Millions way to avoid overfitting when building a portfolio
+        </a>
+       </div>
+       <div class="speaker">
+        Chia-Yi Yen
+        <span class="language">
+         en
+        </span>
+       </div>
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/89.html">
+         How to scale up your Web Apps/Sites written by Python?
+        </a>
+       </div>
+       <div class="speaker">
+        Theon Lin
+        <span class="language">
+         zh
+        </span>
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       16:30
+      </td>
+      <td align="center" colspan="4">
+       <div class="program">
+        Go Sweet Home
+       </div>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <div style="font-size:12px;">
+    *
+    <img alt="No Video Recording" class="svg-icon" src="../../static/no19.svg" width="14px">
+    No Video Recording
+   </div>
+   <h1 class="Text--bigger Header Header--third">
+    DAY 2 (6/6)
+   </h1>
+   <table class="tablesaw tablesaw-stack pycon-table" data-tablesaw-mode="stack">
+    <thead>
+     <tr>
+      <th>
+       Time
+      </th>
+      <th>
+       R0
+      </th>
+      <th>
+       R1
+      </th>
+      <th>
+       R2
+      </th>
+      <th>
+       R4
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       08:40
+      </td>
+      <td align="center" colspan="4">
+       <div class="program">
+        Registration
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       09:00
+      </td>
+      <td align="center" colspan="4">
+       <div class="program">
+        Announcement
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       09:10
+      </td>
+      <td align="center" colspan="4">
+       <div class="program">
+        Keynote Robert Bradshaw
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       10:00
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/42.html">
+         利用 IPython Notebook 來互動簡報與教學
+        </a>
+       </div>
+       <div class="speaker">
+        Tzer-jen Wei
+        <span class="language">
+         zh
+        </span>
+       </div>
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/41.html">
+         Global Interpreter Lock: Episode I - Break the Seal
+        </a>
+       </div>
+       <div class="speaker">
+        Tzung-Bi Shih
+        <span class="language">
+         zh
+        </span>
+       </div>
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/73.html">
+         Liquid crystal device simulation with Python
+        </a>
+        <span class="SciPy">
+         SciPy
+        </span>
+       </div>
+       <div class="speaker">
+        Zong-han Xie
+        <span class="language">
+         en
+        </span>
+       </div>
+      </td>
+      <td>
+       <div class="title">
+        MS Workshop
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       10:40
+      </td>
+      <td align="center" colspan="4">
+       <div class="program">
+        Refreshment
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       11:10
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/65.html">
+         Building a Scalable Python gRPC Service using Kubernetes
+        </a>
+        <span class="Sponsor">
+         Sponsor Talk
+        </span>
+       </div>
+       <div class="speaker">
+        Ian Lewis
+        <span class="language">
+         en
+        </span>
+       </div>
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/74.html">
+         Python &amp; LLVM
+        </a>
+        <img alt="No Video Recording" class="svg-icon" src="../../static/no19.svg" width="20px">
+       </div>
+       <div class="speaker">
+        枫 李
+        <span class="language">
+         zh
+        </span>
+       </div>
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/97.html">
+         Data Analysis in Wearable Technologies
+        </a>
+        <span class="SciPy">
+         SciPy
+        </span>
+       </div>
+       <div class="speaker">
+        Jennifer Ma
+        <span class="language">
+         en
+        </span>
+       </div>
+      </td>
+      <td>
+       <div class="title">
+        MS Workshop
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       11:50
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/50.html">
+         Easy contributable internationalization process with Sphinx
+        </a>
+       </div>
+       <div class="speaker">
+        Takayuki Shimizukawa
+        <span class="language">
+         en
+        </span>
+       </div>
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/76.html">
+         Python 讓你的眼睛聽得見
+        </a>
+       </div>
+       <div class="speaker">
+        Yuchi Lin
+        <span class="language">
+         zh
+        </span>
+       </div>
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/61.html">
+         Information extraction with Python
+        </a>
+        <span class="SciPy">
+         SciPy
+        </span>
+       </div>
+       <div class="speaker">
+        jiawei chen
+        <span class="language">
+         en
+        </span>
+       </div>
+      </td>
+      <td>
+       <div class="title">
+        MS Workshop
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       12:30
+      </td>
+      <td align="center" colspan="4">
+       <div class="program">
+        Lunch
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       13:30
+      </td>
+      <td align="center" colspan="4">
+       <div class="program">
+        Keynote Arnaud Bergeron
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       14:20
+      </td>
+      <td align="center" colspan="4">
+       <div class="program">
+        Job Fair
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       15:00
+      </td>
+      <td align="center" colspan="4">
+       <div class="program">
+        Break
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       15:10
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/101.html">
+         How to build a recommendation system with python
+        </a>
+        <img alt="No Video Recording" class="svg-icon" src="../../static/no19.svg" width="20px">
+       </div>
+       <div class="speaker">
+        Chia-Chi Chang
+        <span class="language">
+         en
+        </span>
+       </div>
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/58.html">
+         以雲端語音合成技術為基礎的音文同步有聲書之建立系統
+        </a>
+        <img alt="No Video Recording" class="svg-icon" src="../../static/no19.svg" width="20px">
+       </div>
+       <div class="speaker">
+        Chao-Kai Chang
+        <span class="language">
+         zh
+        </span>
+       </div>
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/71.html">
+         Marsface Project: Detecting Pseudo-artificial Structures on Mars
+        </a>
+        <span class="SciPy">
+         SciPy
+        </span>
+       </div>
+       <div class="speaker">
+        Hideki Tanaka
+        <span class="language">
+         en
+        </span>
+       </div>
+      </td>
+      <td>
+       <div class="title">
+        Cloud Panel
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       15:50
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/111.html">
+         How developers are building applications on the cloud
+        </a>
+        <span class="Sponsor">
+         Sponsor Talk
+        </span>
+       </div>
+       <div class="speaker">
+        Angus Ip, Ben Cheng
+        <span class="language">
+         en
+        </span>
+       </div>
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/37.html">
+         ceph 介紹
+        </a>
+       </div>
+       <div class="speaker">
+        高 國棟
+        <span class="language">
+         zh
+        </span>
+       </div>
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/72.html">
+         for physics in blender:   (or, what light looks like)
+        </a>
+        <span class="SciPy">
+         SciPy
+        </span>
+       </div>
+       <div class="speaker">
+        David Mikolas
+        <span class="language">
+         en
+        </span>
+       </div>
+      </td>
+      <td>
+       &nbsp;
+      </td>
+     </tr>
+     <tr>
+      <td>
+       16:30
+      </td>
+      <td align="center" colspan="4">
+       <div class="program">
+        Lightning Talk
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       17:30
+      </td>
+      <td align="center" colspan="4">
+       <div class="program">
+        Night Market
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       20:30
+      </td>
+      <td align="center" colspan="4">
+       <div class="program">
+        Go Sweet Home
+       </div>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <p>
+   </p>
+   <p>
+   </p>
+   <div style="font-size:12px;">
+    *
+    <img alt="No Video Recording" class="svg-icon" src="../../static/no19.svg" width="14px">
+    No Video Recording
+   </div>
+   <h1 class="Text--bigger Header Header--third">
+    DAY 3 (6/7)
+   </h1>
+   <table class="tablesaw tablesaw-stack pycon-table" data-tablesaw-mode="stack">
+    <thead>
+     <tr>
+      <th>
+       Time
+      </th>
+      <th>
+       R0
+      </th>
+      <th>
+       R1
+      </th>
+      <th>
+       R2
+      </th>
+      <th>
+       R4
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       08:40
+      </td>
+      <td align="center" colspan="4">
+       <div class="program">
+        Registration
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       09:00
+      </td>
+      <td align="center" colspan="4">
+       <div class="program">
+        Announcement
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       09:10
+      </td>
+      <td align="center" colspan="4">
+       <div class="program">
+        Keynote Steven G. Johnson
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       10:00
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/24.html">
+         Python HDF5 Use Case
+        </a>
+       </div>
+       <div class="speaker">
+        Liang Bo Wang
+        <span class="language">
+         zh
+        </span>
+       </div>
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/110.html">
+         Click Fraud Detection in the Mobile Advertising Using Python
+        </a>
+        <img alt="No Video Recording" class="svg-icon" src="../../static/no19.svg" width="20px">
+        <span class="Sponsor">
+         Sponsor Talk
+        </span>
+       </div>
+       <div class="speaker">
+        伯任 許
+        <span class="language">
+         zh
+        </span>
+       </div>
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/79.html">
+         Sentiment Analysis by NLTK
+        </a>
+       </div>
+       <div class="speaker">
+        Wei-Ting Kuo
+        <span class="language">
+         en
+        </span>
+       </div>
+      </td>
+      <td>
+       <div class="title">
+        SoftLayer Workshop
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       10:40
+      </td>
+      <td align="center" colspan="4">
+       <div class="program">
+        Refreshment
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       11:10
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/103.html">
+         Play Data, Play Ball!
+        </a>
+       </div>
+       <div class="speaker">
+        Summit Suen
+        <span class="language">
+         en
+        </span>
+       </div>
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/95.html">
+         工程師沒告訴設計師的事 / Happy Together: Designer and Programmer
+        </a>
+       </div>
+       <div class="speaker">
+        TsungWei Hu
+        <span class="language">
+         zh
+        </span>
+       </div>
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/99.html">
+         The Implementation of Rubik's Cube Formula in PyCuber
+        </a>
+       </div>
+       <div class="speaker">
+        Adrian Liaw
+        <span class="language">
+         en
+        </span>
+       </div>
+      </td>
+      <td>
+       <div class="title">
+        SoftLayer Workshop
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       11:50
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/48.html">
+         Kernel-mapper (Tool to simplify the use of PyOpenCL)
+        </a>
+       </div>
+       <div class="speaker">
+        Kilik Kuo
+        <span class="language">
+         zh
+        </span>
+       </div>
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/102.html">
+         Python與電子設計自動化：用愛與堅持實現專業
+        </a>
+       </div>
+       <div class="speaker">
+        Ko-Lung Yuan
+        <span class="language">
+         zh
+        </span>
+       </div>
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/108.html">
+         Gandi CLI
+        </a>
+        <span class="Sponsor">
+         Sponsor Talk
+        </span>
+       </div>
+       <div class="speaker">
+        Thomas Kuiper
+        <span class="language">
+         en
+        </span>
+       </div>
+      </td>
+      <td>
+       <div class="title">
+        SoftLayer Workshop
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       12:30
+      </td>
+      <td align="center" colspan="4">
+       <div class="program">
+        Lunch
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       13:30
+      </td>
+      <td align="center" colspan="4">
+       <div class="program">
+        Keynote Andy Terrel
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       14:20
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/69.html">
+         Sphinx autodoc: automated API documentation
+        </a>
+       </div>
+       <div class="speaker">
+        Takayuki Shimizukawa
+        <span class="language">
+         en
+        </span>
+       </div>
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/20.html">
+         Machine learning in Finance using Python
+        </a>
+        <img alt="No Video Recording" class="svg-icon" src="../../static/no19.svg" width="20px">
+       </div>
+       <div class="speaker">
+        Eric Tham
+        <span class="language">
+         en
+        </span>
+       </div>
+      </td>
+      <td>
+       <div class="title">
+        <a href="../program/14.html">
+         Building Static Blogs using Pelican
+        </a>
+       </div>
+       <div class="speaker">
+        Quazi Nafiul Islam
+        <span class="language">
+         en
+        </span>
+       </div>
+      </td>
+      <td>
+       &nbsp;
+      </td>
+     </tr>
+     <tr>
+      <td>
+       15:00
+      </td>
+      <td align="center" colspan="4">
+       <div class="program">
+        Break
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       15:10
+      </td>
+      <td align="center" colspan="4">
+       <div class="program">
+        Bingo and Lucky Draw
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       15:50
+      </td>
+      <td align="center" colspan="4">
+       <div class="program">
+        Closing
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       16:10
+      </td>
+      <td align="center" colspan="4">
+       <div class="program">
+        Go Sweet Home
+       </div>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <div style="font-size:12px;">
+    *
+    <img alt="No Video Recording" class="svg-icon" src="../../static/no19.svg" width="14px">
+    No Video Recording
+   </div>
+   <div style="font-size:10px;">
+    Icon made by
+    <a href="http://www.freepik.com" title="Freepik">
+     Freepik
+    </a>
+    from
+    <a href="http://www.flaticon.com" title="Flaticon">
+     www.flaticon.com
+    </a>
+    is licensed under
+    <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">
+     CC BY 3.0
+    </a>
+   </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js">
+  </script>
+ </body>
+</html>

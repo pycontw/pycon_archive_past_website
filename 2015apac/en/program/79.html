@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+ <!--<![endif]-->
+ <head>
+  <link href="../../icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+  <link href="../../icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+  <link href="../../icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+  <link href="../../icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+  <link href="../../icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+  <link href="../../icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+  <link href="../../icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+  <link href="../../icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+  <link href="../../icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+  <link href="../../icons/android-icon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+  <link href="../../icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+  <link href="../../icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+  <link href="../../icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+  <link href="https://tw.pycon.org/manifest.json" rel="manifest">
+  <meta content="#ffffff" name="msapplication-TileColor">
+  <meta content="/static/ms-icon-144x144.png" name="msapplication-TileImage">
+  <meta content="#ffffff" name="theme-color">
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="" name="description">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="http://tw.pycon.org/static/image/pycon_og_image.png" property="og:image">
+  <title>
+   PyCon APAC/Taiwan 2015 Sentiment Analysis by NLTK - Wei-Ting Kuo
+  </title>
+  <script src="../../static/mezzanine/js/jquery-1.7.1.min.js">
+   jQuery.noConflict();
+  </script>
+  <link href="../../static/CACHE/css/bee5e591beb8.css" rel="stylesheet" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="/static/js/html5shiv.min.js"></script>
+    <script src="/static/js/respond.min.js"></script>
+    <![endif]-->
+  <style>
+   .pycon-table {
+    width: 100%;
+    margin: 2em 0;
+    border: 1px solid #ddd;
+    border-top-color: #ddd;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.pycon-table thead {
+    font-size: 15px;
+    background-color: #f5f4ee;
+}
+
+.pycon-table thead th {
+    font-weight: normal;
+    color: #666;
+}
+
+.pycon-table tbody {
+    font-size: 15px;
+}
+
+.pycon-table tbody td.english {
+    color: #54d871;
+}
+
+.pycon-table tbody td.mandarin {
+    color: #8c460e;
+}
+
+.pycon-table tbody td.regular-talk {
+    color: #54afd8;
+}
+
+.pycon-table tbody td.scipy-talk {
+    color: #000;
+}
+
+.pycon-table tbody td.lightning-talk {
+    color: #c154d8;
+}
+
+.pycon-table tbody td.tutorial {
+    color: #dd4438;
+}
+
+.paper,
+.richpage {
+  padding: 2.5em 3em;
+  margin-bottom: 1.5em;
+  background-color: #fff;
+}
+  </style>
+  <script type="text/javascript">
+   var tagtoo_advertiser_id = 265;
+                   var tagtoo_ga = document.createElement('script');
+                   tagtoo_ga.type = 'text/javascript';
+                   tagtoo_ga.async = true;
+                   tagtoo_ga.src = '//ad.tagtoo.co/media/ad/track.js';
+                   var tagtoo_s = document.getElementsByTagName('script')[0];
+                   tagtoo_s.parentNode.insertBefore(tagtoo_ga, tagtoo_s);
+  </script>
+  <script>
+   var _gaq = _gaq || [['_trackPageview']];
+_gaq.unshift(['_setAccount', 'UA-28961467-1']);
+(function(d, t) {
+    var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+    g.async = true;
+    g.src = '//www.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g, s);
+})(document, 'script');
+  </script>
+ </head>
+ <body class="FutureBg">
+  <nav class="navbar navbar-default navbar-site">
+   <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+     <button class="navbar-toggle collapsed" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
+      <span class="sr-only">
+       Toggle navigation
+      </span>
+      <span class="icon-bar">
+      </span>
+      <span class="icon-bar">
+      </span>
+      <span class="icon-bar">
+      </span>
+     </button>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+     <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav">
+       <li class="" id="dropdown-menu-home">
+        <a href="../../setlang/index.html%3Flanguage=en.html">
+         HOME
+        </a>
+       </li>
+       <li class="dropdown" id="dropdown-menu-about">
+        <a data-target="/2015apac/en/about/" href="../about/index.html">
+         ABOUT
+        </a>
+        <a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="79.html#">
+         <b class="caret">
+         </b>
+        </a>
+        <ul class="dropdown-menu">
+         <li id="dropdown-menu-about-code-of-conduct">
+          <a href="../about/code-of-conduct/index.html">
+           CODE OF CONDUCT
+          </a>
+         </li>
+         <li id="dropdown-menu-about-regional-pycons">
+          <a href="../about/regional-pycons/index.html">
+           REGIONAL PYCONS
+          </a>
+         </li>
+         <li id="dropdown-menu-call-for-proposals">
+          <a href="../call-for-proposals/index.html">
+           CALL FOR PROPOSALS
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="dropdown" id="dropdown-menu-schedule">
+        <a data-target="/2015apac/en/schedule/" href="../schedule/index.html">
+         PROGRAM
+        </a>
+        <a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="79.html#">
+         <b class="caret">
+         </b>
+        </a>
+        <ul class="dropdown-menu">
+         <li id="dropdown-menu-program-keynote-speaker">
+          <a href="keynote-speaker/index.html">
+           KEYNOTE SPEAKER
+          </a>
+         </li>
+         <li id="dropdown-menu-https:--tw.pycon.org-2015apac-en-lightning_en-">
+          <a href="../lightning_en/index.html">
+           LIGHTNING TALK
+          </a>
+         </li>
+         <li id="dropdown-menu-program-night-party">
+          <a href="night-party/index.html">
+           NIGHT PARTY
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="" id="dropdown-menu-tutorial">
+        <a data-target="/2015apac/en/tutorial/" href="../tutorial/index.html">
+         TUTORIAL
+        </a>
+       </li>
+       <li class="dropdown" id="dropdown-menu-registration">
+        <a data-target="/2015apac/en/registration/" href="../registration/index.html">
+         REGISTRATION
+        </a>
+        <a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="79.html#">
+         <b class="caret">
+         </b>
+        </a>
+        <ul class="dropdown-menu">
+         <li id="dropdown-menu-registration-financial-aid">
+          <a href="../registration/financial-aid.html">
+           FINANCIAL AID
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="dropdown" id="dropdown-menu-venue">
+        <a data-target="/2015apac/en/venue/" href="../venue/index.html">
+         VENUE
+        </a>
+        <a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="79.html#">
+         <b class="caret">
+         </b>
+        </a>
+        <ul class="dropdown-menu">
+         <li id="dropdown-menu-venue-accommodation">
+          <a href="../venue/accommodation/index.html">
+           ACCOMMODATION
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="dropdown" id="dropdown-menu-sponsors">
+        <a data-target="/2015apac/en/sponsors/" href="../sponsors/index.html">
+         SPONSORS
+        </a>
+        <a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="79.html#">
+         <b class="caret">
+         </b>
+        </a>
+        <ul class="dropdown-menu">
+         <li id="dropdown-menu-sponsors-sponsorship-packages">
+          <a href="../sponsors/sponsorship-packages/index.html">
+           SPONSORSHIP PACKAGES
+          </a>
+         </li>
+         <li id="dropdown-menu-sponsors-why-sponsor-pycon-apac">
+          <a href="../sponsors/why-sponsor-pycon-apac/index.html">
+           WHY SPONSOR PYCON APAC
+          </a>
+         </li>
+         <li id="dropdown-menu-sponsors-sponsor-information">
+          <a href="../sponsors/sponsor-information/index.html">
+           SPONSOR INFORMATION
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="" id="dropdown-menu-http:--pycontw.blogspot.tw-">
+        <a data-target="http://pycontw.blogspot.tw/" href="http://pycontw.blogspot.tw/">
+         BLOG
+        </a>
+       </li>
+       <li class="divider-vertical">
+       </li>
+      </ul>
+     </ul>
+     <ul class="nav navbar-nav">
+      <li>
+       <a href="../accounts/login/index.html">
+        LOGIN
+       </a>
+      </li>
+     </ul>
+     <ul class="nav navbar-nav">
+      <li class="dropdown" id="dropdown-menu-about">
+       <a data-target="#" href="79.html#">
+        LANG
+       </a>
+       <a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="79.html#">
+        <b class="caret">
+        </b>
+       </a>
+       <ul class="dropdown-menu">
+        <li id="dropdown-menu-setlang-en">
+         <a href="../../setlang/index.html%3Flanguage=en.html">
+          ENGLISH
+         </a>
+        </li>
+        <li id="dropdown-menu-setlang-zh">
+         <a href="../../setlang/index.html%3Flanguage=zh.html">
+          中文
+         </a>
+        </li>
+        <li id="dropdown-menu-about-ja">
+         <a href="../../setlang/index.html%3Flanguage=ja.html">
+          日本語
+         </a>
+        </li>
+        <!--           <li id="dropdown-menu-setlang-kr">
+            <a href="/setlang/?language=kr&next=">한국어</a>
+          </li>
+ -->
+       </ul>
+      </li>
+     </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+   </div>
+   <!-- /.container-fluid -->
+  </nav>
+  <div class="container">
+   <div class="content">
+    <style>
+     .talk-speaker {
+    font-size: 16px;
+}
+    </style>
+    <div class="panel-heading">
+     <h1 class="Header--firstDoubleBar Header">
+      Sentiment Analysis by NLTK
+     </h1>
+     <p class="talk-meta">
+     </p>
+     <h3 class="Text--bigger Header Header--third">
+      Speaker
+     </h3>
+     <span class="talk-speaker">
+      Wei-Ting
+        Kuo
+     </span>
+     <span class="talk-lang">
+      ／English
+     </span>
+     <span class="program-link">
+     </span>
+     <p>
+     </p>
+     <h2 class="Text--bigger Header Header--third">
+      Tags
+     </h2>
+     Sentiment analysis, opinion mining, ipython, twitter, text mining
+    </div>
+    <div class="panel-body">
+     <h3 class="Text--bigger Header Header--third">
+      Abstract
+     </h3>
+     <div style="white-space: pre-wrap; font-size:16px;">
+      Sentiment analysis is useful, especially for the social media. In this talk, I'd like to introduce some background knowledge and how to use NLTK to do the sentiment analysis. Finally, i'll give a demo for the sentiment analysis for Twitter.
+
+I'll keep the theory part as easy as possible!
+     </div>
+     <hr>
+     <h3 class="Text--bigger Header Header--third">
+      About Speaker
+     </h3>
+     <br>
+     <div class="row">
+      <div class="col-md-4">
+      </div>
+      <div class="col-md-8 speaker-info">
+       <div style="white-space: pre-wrap">
+        Wei-Ting Kuo, Taipei, Taiwan
+
+Oranizor of Docker.Taipei &amp; Meteor.Taipei
+       </div>
+       <br>
+       <h4>
+        Twitter
+       </h4>
+       <a href="https://twitter.com/waitingkuo" target="_blank">
+        @waitingkuo
+       </a>
+       <h4>
+        Organization/Company
+       </h4>
+       Brandkoop
+       <h4>
+        Job title
+       </h4>
+       CTO
+      </div>
+     </div>
+     <!-- <hr> -->
+     <!-- <h4 class="small-title">Media</h4> -->
+     <!-- <ul class="square-list text-muted"> -->
+     <!--     <li>Slide: coming soon.</li> -->
+     <!--     <li>Video: coming soon.</li> -->
+     <!-- </ul> -->
+    </div>
+   </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js">
+  </script>
+ </body>
+</html>
