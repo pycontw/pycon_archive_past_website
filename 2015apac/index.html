@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+ <!--<![endif]-->
+ <head>
+  <link href="icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+  <link href="icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+  <link href="icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+  <link href="icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+  <link href="icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+  <link href="icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+  <link href="icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+  <link href="icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+  <link href="icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+  <link href="icons/android-icon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+  <link href="icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+  <link href="icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+  <link href="icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+  <link href="https://tw.pycon.org/manifest.json" rel="manifest">
+  <meta content="#ffffff" name="msapplication-TileColor">
+  <meta content="/static/ms-icon-144x144.png" name="msapplication-TileImage">
+  <meta content="#ffffff" name="theme-color">
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="" name="description">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="http://tw.pycon.org/static/image/pycon_og_image.png" property="og:image">
+  <title>
+   PyCon APAC/Taiwan 2015
+  </title>
+  <script src="static/mezzanine/js/jquery-1.7.1.min.js">
+   jQuery.noConflict();
+  </script>
+  <link href="static/CACHE/css/bee5e591beb8.css" rel="stylesheet" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="/static/js/html5shiv.min.js"></script>
+    <script src="/static/js/respond.min.js"></script>
+    <![endif]-->
+  <style>
+   .pycon-table {
+    width: 100%;
+    margin: 2em 0;
+    border: 1px solid #ddd;
+    border-top-color: #ddd;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.pycon-table thead {
+    font-size: 15px;
+    background-color: #f5f4ee;
+}
+
+.pycon-table thead th {
+    font-weight: normal;
+    color: #666;
+}
+
+.pycon-table tbody {
+    font-size: 15px;
+}
+
+.pycon-table tbody td.english {
+    color: #54d871;
+}
+
+.pycon-table tbody td.mandarin {
+    color: #8c460e;
+}
+
+.pycon-table tbody td.regular-talk {
+    color: #54afd8;
+}
+
+.pycon-table tbody td.scipy-talk {
+    color: #000;
+}
+
+.pycon-table tbody td.lightning-talk {
+    color: #c154d8;
+}
+
+.pycon-table tbody td.tutorial {
+    color: #dd4438;
+}
+
+.paper,
+.richpage {
+  padding: 2.5em 3em;
+  margin-bottom: 1.5em;
+  background-color: #fff;
+}
+  </style>
+  <script type="text/javascript">
+   var tagtoo_advertiser_id = 265;
+                   var tagtoo_ga = document.createElement('script');
+                   tagtoo_ga.type = 'text/javascript';
+                   tagtoo_ga.async = true;
+                   tagtoo_ga.src = '//ad.tagtoo.co/media/ad/track.js';
+                   var tagtoo_s = document.getElementsByTagName('script')[0];
+                   tagtoo_s.parentNode.insertBefore(tagtoo_ga, tagtoo_s);
+  </script>
+  <script>
+   var _gaq = _gaq || [['_trackPageview']];
+_gaq.unshift(['_setAccount', 'UA-28961467-1']);
+(function(d, t) {
+    var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+    g.async = true;
+    g.src = '//www.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g, s);
+})(document, 'script');
+  </script>
+ </head>
+ <body class="FutureBg">
+  <nav class="navbar navbar-default navbar-site">
+   <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+     <button class="navbar-toggle collapsed" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
+      <span class="sr-only">
+       Toggle navigation
+      </span>
+      <span class="icon-bar">
+      </span>
+      <span class="icon-bar">
+      </span>
+      <span class="icon-bar">
+      </span>
+     </button>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+     <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav">
+       <li class="" id="dropdown-menu-home">
+        <a href="setlang/index.html%3Flanguage=en.html">
+         HOME
+        </a>
+       </li>
+       <li class="dropdown" id="dropdown-menu-about">
+        <a data-target="/2015apac/en/about/" href="en/about/index.html">
+         ABOUT
+        </a>
+        <a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="setlang/index.html%3Flanguage=en.html#">
+         <b class="caret">
+         </b>
+        </a>
+        <ul class="dropdown-menu">
+         <li id="dropdown-menu-about-code-of-conduct">
+          <a href="en/about/code-of-conduct/index.html">
+           CODE OF CONDUCT
+          </a>
+         </li>
+         <li id="dropdown-menu-about-regional-pycons">
+          <a href="en/about/regional-pycons/index.html">
+           REGIONAL PYCONS
+          </a>
+         </li>
+         <li id="dropdown-menu-call-for-proposals">
+          <a href="en/call-for-proposals/index.html">
+           CALL FOR PROPOSALS
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="dropdown" id="dropdown-menu-schedule">
+        <a data-target="/2015apac/en/schedule/" href="en/schedule/index.html">
+         PROGRAM
+        </a>
+        <a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="setlang/index.html%3Flanguage=en.html#">
+         <b class="caret">
+         </b>
+        </a>
+        <ul class="dropdown-menu">
+         <li id="dropdown-menu-program-keynote-speaker">
+          <a href="en/program/keynote-speaker/index.html">
+           KEYNOTE SPEAKER
+          </a>
+         </li>
+         <li id="dropdown-menu-https:--tw.pycon.org-2015apac-en-lightning_en-">
+          <a href="en/lightning_en/index.html">
+           LIGHTNING TALK
+          </a>
+         </li>
+         <li id="dropdown-menu-program-night-party">
+          <a href="en/program/night-party/index.html">
+           NIGHT PARTY
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="" id="dropdown-menu-tutorial">
+        <a data-target="/2015apac/en/tutorial/" href="en/tutorial/index.html">
+         TUTORIAL
+        </a>
+       </li>
+       <li class="dropdown" id="dropdown-menu-registration">
+        <a data-target="/2015apac/en/registration/" href="en/registration/index.html">
+         REGISTRATION
+        </a>
+        <a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="setlang/index.html%3Flanguage=en.html#">
+         <b class="caret">
+         </b>
+        </a>
+        <ul class="dropdown-menu">
+         <li id="dropdown-menu-registration-financial-aid">
+          <a href="en/registration/financial-aid.html">
+           FINANCIAL AID
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="dropdown" id="dropdown-menu-venue">
+        <a data-target="/2015apac/en/venue/" href="en/venue/index.html">
+         VENUE
+        </a>
+        <a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="setlang/index.html%3Flanguage=en.html#">
+         <b class="caret">
+         </b>
+        </a>
+        <ul class="dropdown-menu">
+         <li id="dropdown-menu-venue-accommodation">
+          <a href="en/venue/accommodation/index.html">
+           ACCOMMODATION
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="dropdown" id="dropdown-menu-sponsors">
+        <a data-target="/2015apac/en/sponsors/" href="en/sponsors/index.html">
+         SPONSORS
+        </a>
+        <a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="setlang/index.html%3Flanguage=en.html#">
+         <b class="caret">
+         </b>
+        </a>
+        <ul class="dropdown-menu">
+         <li id="dropdown-menu-sponsors-sponsorship-packages">
+          <a href="en/sponsors/sponsorship-packages/index.html">
+           SPONSORSHIP PACKAGES
+          </a>
+         </li>
+         <li id="dropdown-menu-sponsors-why-sponsor-pycon-apac">
+          <a href="en/sponsors/why-sponsor-pycon-apac/index.html">
+           WHY SPONSOR PYCON APAC
+          </a>
+         </li>
+         <li id="dropdown-menu-sponsors-sponsor-information">
+          <a href="en/sponsors/sponsor-information/index.html">
+           SPONSOR INFORMATION
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="" id="dropdown-menu-http:--pycontw.blogspot.tw-">
+        <a data-target="http://pycontw.blogspot.tw/" href="http://pycontw.blogspot.tw/">
+         BLOG
+        </a>
+       </li>
+       <li class="divider-vertical">
+       </li>
+      </ul>
+     </ul>
+     <ul class="nav navbar-nav">
+      <li>
+       <a href="en/accounts/login/index.html">
+        LOGIN
+       </a>
+      </li>
+     </ul>
+     <ul class="nav navbar-nav">
+      <li class="dropdown" id="dropdown-menu-about">
+       <a data-target="#" href="setlang/index.html%3Flanguage=en.html#">
+        LANG
+       </a>
+       <a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="setlang/index.html%3Flanguage=en.html#">
+        <b class="caret">
+        </b>
+       </a>
+       <ul class="dropdown-menu">
+        <li id="dropdown-menu-setlang-en">
+         <a href="setlang/index.html%3Flanguage=en.html">
+          ENGLISH
+         </a>
+        </li>
+        <li id="dropdown-menu-setlang-zh">
+         <a href="setlang/index.html%3Flanguage=zh.html">
+          中文
+         </a>
+        </li>
+        <li id="dropdown-menu-about-ja">
+         <a href="setlang/index.html%3Flanguage=ja.html">
+          日本語
+         </a>
+        </li>
+        <!--           <li id="dropdown-menu-setlang-kr">
+            <a href="/setlang/?language=kr&next=">한국어</a>
+          </li>
+ -->
+       </ul>
+      </li>
+     </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+   </div>
+   <!-- /.container-fluid -->
+  </nav>
+  <!--
+    <div class="LogoRegion">
+        <div class="LogoWrapper">
+            <div class="Logo"></div>
+        </div>
+    </div>
+    -->
+  <div class="LogoWrapper">
+   <div class="LogoRegion">
+    <img alt="" src="static/image/header/logo.png">
+   </div>
+   <div class="CarRegion">
+    <img alt="" src="static/image/header/car.png">
+   </div>
+  </div>
+  <!--
+    <div class="CarRegion">
+        <div class="Car"></div>
+    </div>
+    -->
+  <div class="container">
+   <div class="col-xs-10 col-xs-offset-1">
+    <div class="row">
+     <div class="TicketWrapper">
+      <a class="Ticket Ticket--first" href="setlang/index.html%3Flanguage=en.html#">
+       <div class="Ticket__Left">
+        Tutorials
+       </div>
+       <div class="Ticket__Right Ticket__Right--twoLine">
+        May
+        <br>
+        30 - 31
+       </div>
+      </a>
+     </div>
+     <div class="TicketWrapper">
+      <a class="Ticket Ticket--second" href="setlang/index.html%3Flanguage=en.html#">
+       <div class="Ticket__Left">
+        Conference
+       </div>
+       <div class="Ticket__Right Ticket__Right--twoLine">
+        June
+        <br>
+        5 - 7
+       </div>
+      </a>
+     </div>
+     <div class="TicketWrapper">
+      <a class="Ticket Ticket--third" href="setlang/index.html%3Flanguage=en.html#">
+       <div class="Ticket__Left">
+        Sprint
+       </div>
+       <div class="Ticket__Right Ticket__Right--twoLine">
+        June
+        <br>
+        8
+       </div>
+      </a>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="AboutContainer" id="about">
+   <div class="AboutRow">
+    <div class="AboutRegion">
+     <div class="AboutRegion-content">
+      <span class="Text--bigger Header Header--third">
+       WHAT IS PYCON APAC/TAIWAN
+      </span>
+     </div>
+     <div class="Text--middle AboutRegion-content">
+      <p>
+       PyCon is a conference by the Python community for the community. It is for Python enthusiasts of all experience levels, from new users to core developers. The original PyCon was formed in North America in 2003, but there are now a number of other conferences being run in the PyCon spirit around the world. -- PyCon: Community-Run Python Conference
+      </p>
+      <p>
+       PyCon APAC/TW 2015 is organized for pythonistas in Asia-Pacific and Taiwan. It will be hosted in Taipei, and we would like to invite you to join this big event, being a part of it by sponsoring, promoting your brand and product, and even making your company succeed through it. Three previous PyCon TW/APAC (
+       <a href="https://tw.pycon.org/2012/">
+        2012
+       </a>
+       ,
+       <a href="https://tw.pycon.org/2013/">
+        2013
+       </a>
+       and
+       <a href="https://tw.pycon.org/2014apac/">
+        2014
+       </a>
+       ) was formed with support of the following, but not limited to, active user groups:
+      </p>
+     </div>
+     <div class="AboutRegion-content Text--middle">
+      <div class="HalfRow">
+       <div class="HalfRow--left">
+        <ul class="PyConListGroup--First">
+         <li class="list-group-item">
+          <a href="http://taipei.python.org.tw/">
+           Taipei.py - Taipei Python User Group
+          </a>
+         </li>
+         <li class="list-group-item">
+          <a href="http://www.meetup.com/PyLadiesTW/">
+           PyLadies Taiwan
+          </a>
+         </li>
+         <li class="list-group-item">
+          <a href="https://www.facebook.com/groups/kaohsiungpy/">
+           Kaohsiung.py - Kaohsiung Python User Group
+          </a>
+         </li>
+         <li class="list-group-item">
+          <a href="http://djangogirls.org/taipei/">
+           Django Girls Taipei
+          </a>
+         </li>
+        </ul>
+       </div>
+       <div class="HalfRow--right">
+        <ul class="PyConListGroup--First">
+         <li class="list-group-item">
+          <a href="http://www.meetup.com/pythonhug/">
+           PyHUG - Python Hsinchu User Group
+          </a>
+         </li>
+         <li class="list-group-item">
+          <a href="http://www.meetup.com/Tainan-py-Python-Tainan-User-Group/">
+           Tainan.py - Python Tainan User Group
+          </a>
+         </li>
+         <li class="list-group-item">
+          <a href="http://www.meetup.com/Taichung-Python-Meetup/">
+           Taichung.py - Taichung Python User Group
+          </a>
+         </li>
+         <li class="list-group-item">
+          <a href="https://www.facebook.com/groups/hualienpy/">
+           Hualien.py - Hualien Python User Group
+          </a>
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- end about -->
+  <!-- end about -->
+  <!--
+
+    <div class="SpeakerListRegion" id="keynote">
+        <div class="FutureHR"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-1">
+                    <h2 class="Text--bigger Header Header--third">Keynote Speakers</h2>
+                </div>
+            </div>
+        </div>
+        <div class="SecondSingleBar">
+           <div class="SpeakerContainer">
+              <div class="SpeakerRow">
+                  <div class="SpeakerLeft">
+                      <div class="SpeakerHead" style='background-image: url(/static/image/speaker/photo_image_436x436.jpg); '>
+                        <div class="SpeakerName">
+                          Speaker Name
+                        </div>
+                      </div>
+                      <div class="SpeakerCompany">
+                          Speaker Company
+                      </div>
+                      <div class="SpeakerTitle">
+                          Speaker Title
+                      </div>
+                  </div>
+                  <div class="SpeakerRight">
+                      <div class="SpeakerHead" style='background-image: url(/static/image/speaker/photo_image_436x436.jpg); '>
+                        <div class="SpeakerName">
+                          Speaker Name
+                        </div>
+                      </div>
+                      <div class="SpeakerCompany">
+                          Speaker Company
+                      </div>
+                      <div class="SpeakerTitle">
+                          Speaker Title
+                      </div>
+                  </div>
+                  <div class="SpeakerLeft">
+                      <div class="SpeakerHead" style='background-image: url(/static/image/speaker/photo_image_436x436.jpg); '>
+                        <div class="SpeakerName">
+                          Speaker Name
+                        </div>
+                      </div>
+                      <div class="SpeakerCompany">
+                          Speaker Company
+                      </div>
+                      <div class="SpeakerTitle">
+                          Speaker Title
+                      </div>
+                  </div>
+                  <div class="SpeakerRight">
+                      <div class="SpeakerHead" style='background-image: url(/static/image/speaker/photo_image_436x436.jpg); '>
+                        <div class="SpeakerName">
+                          Speaker Name
+                        </div>
+                      </div>
+                      <div class="SpeakerCompany">
+                          Speaker Company
+                      </div>
+                      <div class="SpeakerTitle">
+                          Speaker Title
+                      </div>
+                  </div>
+              </div>
+
+           </div>
+        </div>
+
+    </div>
+End of Speaker Region-->
+  <div class="SponsorListRegion">
+   <div class="FutureHR">
+   </div>
+   <div class="container">
+    <div class="row">
+     <div class="col-sm-10 col-sm-offset-1">
+      <h2 class="Text--bigger Header Header--third">
+       SPONSORS
+      </h2>
+     </div>
+    </div>
+   </div>
+   <div class="SecondSingleBar">
+   </div>
+   <div class="SponsorList">
+    <div class="container">
+     <div class="row">
+      <div class="col-sm-10 col-sm-offset-1">
+       <!--
+                        <div class="Sponsor-caption">
+                            <img src="/static/image/sponsor/mark_golden.png">
+                        </div>
+-->
+       <div class="Sponsor-icons">
+        <div class="Sponsor-icon--right">
+         <a href="http://softlayer.com/" target="_blank">
+          <img alt="SoftLayer - an IBM Company" src="static/media/sponsor_image/softlayer-logo.jpg">
+         </a>
+        </div>
+        <div class="Sponsor-icon--left">
+         <a href="http://www.vpon.com/" target="_blank">
+          <img alt="Vpon" src="static/media/sponsor_image/vpon.png">
+         </a>
+        </div>
+        <div class="Sponsor-icon--right">
+         <a href="http://cloud.google.com/" target="_blank">
+          <img alt="Google Cloud Platform" src="static/media/sponsor_image/CloudPlatform_HorizontalLockup_resized.png">
+         </a>
+        </div>
+        <div class="Sponsor-icon--left">
+         <a href="https://www.hde.co.jp/en/" target="_blank">
+          <img alt="HDE, Inc." src="static/media/sponsor_image/hde-logo-pycon.png">
+         </a>
+        </div>
+        <div class="Sponsor-icon--right">
+         <a href="http://azure.microsoft.com/zh-tw/" target="_blank">
+          <img alt="Microsoft Azure" src="static/media/sponsor_image/azure.png">
+         </a>
+        </div>
+        <div class="Sponsor-icon--left">
+         <a href="https://www.gandi.net/" target="_blank">
+          <img alt="Gandi" src="static/media/sponsor_image/Gandi_logo_black.jpg">
+         </a>
+        </div>
+        <div class="Sponsor-icon--right">
+         <a href="https://carousell.com/" target="_blank">
+          <img alt="Carousell" src="static/media/sponsor_image/carousell_ec4vKCY.png">
+         </a>
+        </div>
+        <div class="Sponsor-icon--left">
+         <a href="http://www.inwinstack.com/Default.aspx" target="_blank">
+          <img alt="inwinSTACK" src="static/media/sponsor_image/logo.jpg">
+         </a>
+        </div>
+        <div class="Sponsor-icon--right">
+         <a href="http://oursky.com/" target="_blank">
+          <img alt="Oursky" src="static/media/sponsor_image/oursky-logo.png">
+         </a>
+        </div>
+        <div class="Sponsor-icon--left">
+         <a href="http://www.mitac.com.tw/" target="_blank">
+          <img alt="MiTAC" src="static/media/sponsor_image/mitac-logo.png">
+         </a>
+        </div>
+        <div class="Sponsor-icon--right">
+         <a href="http://www.trendmicro.tw/" target="_blank">
+          <img alt="Trend Micro" src="static/media/sponsor_image/trend_WkN2Wmf.jpeg">
+         </a>
+        </div>
+        <div class="Sponsor-icon--left">
+         <a href="http://www.kdanmobile.com/en/index.html" target="_blank">
+          <img alt="Kdan Mobile" src="static/media/sponsor_image/kdan.jpg">
+         </a>
+        </div>
+        <div class="Sponsor-icon--right">
+         <a href="http://www.machinezone.com/" target="_blank">
+          <img alt="Machine Zone, Inc." src="static/media/sponsor_image/machine-zone.png">
+         </a>
+        </div>
+        <div class="Sponsor-icon--left">
+         <a href="http://www.appier.com/" target="_blank">
+          <img alt="Appier" src="static/media/sponsor_image/appier.png">
+         </a>
+        </div>
+        <div class="Sponsor-icon--right">
+         <a href="https://gitcafe.com/" target="_blank">
+          <img alt="GitCafe " src="static/media/sponsor_image/git.JPG">
+         </a>
+        </div>
+        <div class="Sponsor-icon--left">
+         <a href="http://www.kkbox.com/tw/tc/index.html" target="_blank">
+          <img alt="KKBOX" src="static/media/sponsor_image/kkbox_0Ik48vu.png">
+         </a>
+        </div>
+        <div class="Sponsor-icon--right">
+         <a href="https://www.jetbrains.com/pycharm/" target="_blank">
+          <img alt="JetBrains" src="static/media/sponsor_image/logo_jetbrains.gif">
+         </a>
+        </div>
+        <div class="Sponsor-icon--left">
+         <a href="http://pycontaiwan2015.splashthat.com/" target="_blank">
+          <img alt="Facebook" src="static/media/sponsor_image/fbFavicon_blue_400x160.png">
+         </a>
+        </div>
+        <div class="Sponsor-icon--right">
+         <a href="http://doist.io/" target="_blank">
+          <img alt="Doist" src="static/media/sponsor_image/doist.png">
+         </a>
+        </div>
+        <div class="Sponsor-icon--left">
+         <a href="http://www.wolftea.com/" target="_blank">
+          <img alt="Wolf Tea" src="static/media/sponsor_image/wolftea_logo_pycon_NxY5NAz.png">
+         </a>
+        </div>
+        <div class="Sponsor-icon--right">
+         <a href="http://www.tagtoo.com.tw/" target="_blank">
+          <img alt="Tagtoo" src="static/media/sponsor_image/tagtoo.png">
+         </a>
+        </div>
+        <div class="Sponsor-icon--left">
+         <a href="http://www.vpon.com/" target="_blank">
+          <img alt="Vpon" src="static/media/sponsor_image/vpon_BjoXSWU.png">
+         </a>
+        </div>
+        <div class="Sponsor-icon--right">
+         <a href="https://livehouse.in/" target="_blank">
+          <img alt="LIVEhouse.in" src="static/media/sponsor_image/LIVEHOUSE.IN_-624x276.jpg">
+         </a>
+        </div>
+        <div class="Sponsor-icon--left">
+         <a href="http://pinkoi.com/" target="_blank">
+          <img alt="Pinkoi" src="static/media/sponsor_image/pinkoi_400x160.png">
+         </a>
+        </div>
+        <div class="Sponsor-icon--right">
+         <a href="http://goo.gl/Z5d5Km" target="_blank">
+          <img alt="OCF	" src="static/media/sponsor_image/ocf-logo-640x156_2wv6QKx.png">
+         </a>
+        </div>
+        <div class="Sponsor-icon--left">
+         <a href="http://punnode.com/" target="_blank">
+          <img alt="PunNode 科技新創榜" src="static/media/sponsor_image/PunNode_Logo_ai.png">
+         </a>
+        </div>
+        <div class="Sponsor-icon--right">
+         <a href="https://kktix.com/" target="_blank">
+          <img alt="KKTIX" src="static/media/sponsor_image/kkbox.png">
+         </a>
+        </div>
+       </div>
+       <!--
+                        <div class="Sponsor-caption">
+                            <img src="/static/image/sponsor/mark_silver.png">
+                        </div>
+-->
+       <!--
+                        <div class="Sponsor-caption">
+                            <img src="/static/image/sponsor/mark_bronge.png">
+                        </div>
+
+-->
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="FutureContainer">
+   <div class="FutureRow">
+    <div class="FutureRegion">
+     <h2 class="Header--firstDoubleBar Header">
+      TWITTER FEEDS
+     </h2>
+    </div>
+   </div>
+   <div class="FutureRegion">
+    <h3 class="Text--little Header Header--third">
+     Lastes Tweet
+    </h3>
+   </div>
+   <div class="FutureRow">
+    <div class="FutureRegion">
+     <div class="tweets">
+      <ul class="PyConListGroup--First table table-striped" style="list-style-type: none;border:1px solid #ed195b;border-bottom:0px">
+       <li class="" style="overflow:auto;padding: 20px 0 20px 0;border-bottom:1px solid #ed195b">
+        <ul class="col-sm-1 col-xs-2" style="text-align: center;">
+         <a href="https://twitter.com/PyConTW" style="color:#ed195b;font-size:18px" target="_new">
+          <img src="https://pbs.twimg.com/profile_images/1086906618657222656/52CPkE9i_normal.jpg">
+         </a>
+        </ul>
+        <ul class="col-sm-11 col-xs-10">
+         <a href="https://twitter.com/PyConTW" style="color:#ed195b;font-size:18px" target="_new">
+          PyCon Taiwan
+         </a>
+         <br>
+         <a href="https://twitter.com/mariatta" target="_new" title="#mariatta on Twitter">
+          @mariatta
+         </a>
+         Hi, Mariatta, thanks for your comment. 
+We appreciate it and change the wording😀
+         <a href="https://t.co/cE1uv2hGEC">
+          https://t.co/cE1uv2hGEC
+         </a>
+        </ul>
+       </li>
+       <li>
+       </li>
+       <li>
+       </li>
+       <li class="" style="overflow:auto;padding: 20px 0 20px 0;border-bottom:1px solid #ed195b">
+        <ul class="col-sm-1 col-xs-2" style="text-align: center;">
+         <a href="https://twitter.com/PyConTW" style="color:#ed195b;font-size:18px" target="_new">
+          <img src="https://pbs.twimg.com/profile_images/1086906618657222656/52CPkE9i_normal.jpg">
+         </a>
+        </ul>
+        <ul class="col-sm-11 col-xs-10">
+         <a href="https://twitter.com/PyConTW" style="color:#ed195b;font-size:18px" target="_new">
+          PyCon Taiwan
+         </a>
+         <br>
+         Hi everyone!
+PyCon Taiwan 2019 will take place from 20th to 22nd September 2019. 
+Stay tuned!  
+
+BTW, we are still&hellip;
+         <a href="https://t.co/xYZU6cOucT">
+          https://t.co/xYZU6cOucT
+         </a>
+        </ul>
+       </li>
+       <li>
+       </li>
+       <li>
+       </li>
+       <li class="" style="overflow:auto;padding: 20px 0 20px 0;border-bottom:1px solid #ed195b">
+        <ul class="col-sm-1 col-xs-2" style="text-align: center;">
+         <a href="https://twitter.com/PyConTW" style="color:#ed195b;font-size:18px" target="_new">
+          <img src="https://pbs.twimg.com/profile_images/1086906618657222656/52CPkE9i_normal.jpg">
+         </a>
+        </ul>
+        <ul class="col-sm-11 col-xs-10">
+         <a href="https://twitter.com/PyConTW" style="color:#ed195b;font-size:18px" target="_new">
+          PyCon Taiwan
+         </a>
+         <br>
+         <a href="https://twitter.com/rishibit" target="_new" title="#rishibit on Twitter">
+          @rishibit
+         </a>
+         Thanks for reminding.
+DM is open NOW!😀
+        </ul>
+       </li>
+       <li>
+       </li>
+       <li>
+       </li>
+       <li class="" style="overflow:auto;padding: 20px 0 20px 0;border-bottom:1px solid #ed195b">
+        <ul class="col-sm-1 col-xs-2" style="text-align: center;">
+         <a href="https://twitter.com/PyConTW" style="color:#ed195b;font-size:18px" target="_new">
+          <img src="https://pbs.twimg.com/profile_images/1086906618657222656/52CPkE9i_normal.jpg">
+         </a>
+        </ul>
+        <ul class="col-sm-11 col-xs-10">
+         <a href="https://twitter.com/PyConTW" style="color:#ed195b;font-size:18px" target="_new">
+          PyCon Taiwan
+         </a>
+         <br>
+         PyCon Taiwan 2018 is going to take place within 7 days at Humanities and Social Science Building Academia Sinica.&hellip;
+         <a href="https://t.co/Vjvwl4fftX">
+          https://t.co/Vjvwl4fftX
+         </a>
+        </ul>
+       </li>
+       <li>
+       </li>
+       <li>
+       </li>
+       <li class="" style="overflow:auto;padding: 20px 0 20px 0;border-bottom:1px solid #ed195b">
+        <ul class="col-sm-1 col-xs-2" style="text-align: center;">
+         <a href="https://twitter.com/PyConTW" style="color:#ed195b;font-size:18px" target="_new">
+          <img src="https://pbs.twimg.com/profile_images/1086906618657222656/52CPkE9i_normal.jpg">
+         </a>
+        </ul>
+        <ul class="col-sm-11 col-xs-10">
+         <a href="https://twitter.com/PyConTW" style="color:#ed195b;font-size:18px" target="_new">
+          PyCon Taiwan
+         </a>
+         <br>
+         PyCon Taiwan 2018 registration opens now!! 
+We have limited early birds ticket until 4/30 0:00 (UTC + 8).
+         <a href="https://t.co/desFaKL3o2">
+          https://t.co/desFaKL3o2
+         </a>
+        </ul>
+       </li>
+       <li>
+       </li>
+       <li>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="FutureRegion">
+    <h3 class="Text--little Header Header--third">
+     #pyconapac
+    </h3>
+   </div>
+   <div class="FutureRow">
+    <div class="FutureRegion">
+     <div class="tweets">
+      <ul class="PyConListGroup--First table table-striped" style="list-style-type: none;border:1px solid #ed195b;border-bottom:0px">
+       <li class="" style="overflow:auto;padding: 20px 0 20px 0;border-bottom:1px solid #ed195b">
+        <ul class="col-sm-1 col-xs-2" style="text-align: center;">
+         <a href="https://twitter.com/vaibhavsriv10" style="color:#ed195b;font-size:18px" target="_new">
+          <img src="https://pbs.twimg.com/profile_images/923904337058807809/Av0Hs1ag_normal.jpg">
+         </a>
+        </ul>
+        <ul class="col-sm-11 col-xs-10">
+         <a href="https://twitter.com/vaibhavsriv10" style="color:#ed195b;font-size:18px" target="_new">
+          Vaibhav Srivastav
+         </a>
+         <br>
+         The keynote videos are now available from
+         <a href="https://twitter.com/hashtag/PyConAPAC" target="_new" title="#PyConAPAC search Twitter">
+          #PyConAPAC
+         </a>
+         !
+         <a href="https://twitter.com/hashtag/ML" target="_new" title="#ML search Twitter">
+          #ML
+         </a>
+         <a href="https://twitter.com/hashtag/AI" target="_new" title="#AI search Twitter">
+          #AI
+         </a>
+         <a href="https://twitter.com/hashtag/MachineLearning" target="_new" title="#MachineLearning search Twitter">
+          #MachineLearning
+         </a>
+         <a href="https://t.co/UqTRI6HnPe">
+          https://t.co/UqTRI6HnPe
+         </a>
+        </ul>
+       </li>
+       <li>
+       </li>
+       <li>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="FutureContainer">
+   <div class="FutureRow">
+    <div class="FutureRegion">
+     <h2 class="Header--firstDoubleBar Header">
+      APAC Community
+     </h2>
+    </div>
+   </div>
+   <div class="FutureRow">
+    <div class="FutureRegion">
+     <div class="FutureContainer-content" style="">
+      <span class="Text--bigger Header Header--third">
+      </span>
+     </div>
+     <div class="tweets">
+      <ul class="PyConListGroup--First table table-striped" style="list-style-type: none;border:1px solid #ed195b;border-bottom:0px">
+       <li class="" style="overflow:auto;padding: 20px 0 20px 0;border-bottom:1px solid #ed195b;display: flex;display:-webkit-flex;justify-content: center;-webkit-justify-content: center;">
+        <ul class="col-sm-3 col-xs-6 thumbnail" style="margin: 10px;display: flex;display:-webkit-flex;-webkit-justify-content: center;justify-content: center;flex-direction: column;-webkit-flex-direction: column;">
+         <a href="http://python-china.org/" style="color:#ed195b;font-size:18px" target="_new">
+          <img src="static/media/community_image/chinapy.png" width="100%">
+         </a>
+        </ul>
+        <ul class="col-sm-3 col-xs-6 thumbnail" style="margin: 10px;display: flex;display:-webkit-flex;-webkit-justify-content: center;justify-content: center;flex-direction: column;-webkit-flex-direction: column;">
+         <a href="https://pycon.jp/2015/ja/" style="color:#ed195b;font-size:18px" target="_new">
+          <img src="static/media/community_image/jp_py.png" width="100%">
+         </a>
+        </ul>
+        <ul class="col-sm-3 col-xs-6 thumbnail" style="margin: 10px;display: flex;display:-webkit-flex;-webkit-justify-content: center;justify-content: center;flex-direction: column;-webkit-flex-direction: column;">
+         <a href="http://www.pycon.kr/2015/" style="color:#ed195b;font-size:18px" target="_new">
+          <img src="static/media/community_image/korea_2015.png" width="100%">
+         </a>
+        </ul>
+        <ul class="col-sm-3 col-xs-6 thumbnail" style="margin: 10px;display: flex;display:-webkit-flex;-webkit-justify-content: center;justify-content: center;flex-direction: column;-webkit-flex-direction: column;">
+         <a href="http://pugs.org.sg/" style="color:#ed195b;font-size:18px" target="_new">
+          <img src="static/media/community_image/singapore.png" width="100%">
+         </a>
+        </ul>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="FutureContainer">
+   <div class="FutureRow">
+    <div class="FutureRegion">
+     <h2 class="Header--firstDoubleBar Header">
+      Call For Volunteer
+     </h2>
+    </div>
+   </div>
+   <div class="FutureRow">
+    <div class="FutureRegion">
+     <ul class="PyConListGroup--First">
+      <li class="list-group-item">
+       Help us organize and make the conference successful
+      </li>
+      <li class="list-group-item">
+       Contact:
+       <a href="mailto:organizers@pycon.tw">
+        organizers@pycon.tw
+       </a>
+      </li>
+     </ul>
+    </div>
+   </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js">
+  </script>
+ </body>
+</html>

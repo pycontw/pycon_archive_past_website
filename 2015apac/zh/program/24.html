@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+ <!--<![endif]-->
+ <head>
+  <link href="../../icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+  <link href="../../icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+  <link href="../../icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+  <link href="../../icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+  <link href="../../icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+  <link href="../../icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+  <link href="../../icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+  <link href="../../icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+  <link href="../../icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+  <link href="../../icons/android-icon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+  <link href="../../icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+  <link href="../../icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+  <link href="../../icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+  <link href="https://tw.pycon.org/manifest.json" rel="manifest">
+  <meta content="#ffffff" name="msapplication-TileColor">
+  <meta content="/static/ms-icon-144x144.png" name="msapplication-TileImage">
+  <meta content="#ffffff" name="theme-color">
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="" name="description">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="http://tw.pycon.org/static/image/pycon_og_image.png" property="og:image">
+  <title>
+   PyCon APAC/Taiwan 2015 Python HDF5 Use Case - Liang Bo Wang
+  </title>
+  <script src="../../static/mezzanine/js/jquery-1.7.1.min.js">
+   jQuery.noConflict();
+  </script>
+  <link href="../../static/CACHE/css/bee5e591beb8.css" rel="stylesheet" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="/static/js/html5shiv.min.js"></script>
+    <script src="/static/js/respond.min.js"></script>
+    <![endif]-->
+  <style>
+   .pycon-table {
+    width: 100%;
+    margin: 2em 0;
+    border: 1px solid #ddd;
+    border-top-color: #ddd;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.pycon-table thead {
+    font-size: 15px;
+    background-color: #f5f4ee;
+}
+
+.pycon-table thead th {
+    font-weight: normal;
+    color: #666;
+}
+
+.pycon-table tbody {
+    font-size: 15px;
+}
+
+.pycon-table tbody td.english {
+    color: #54d871;
+}
+
+.pycon-table tbody td.mandarin {
+    color: #8c460e;
+}
+
+.pycon-table tbody td.regular-talk {
+    color: #54afd8;
+}
+
+.pycon-table tbody td.scipy-talk {
+    color: #000;
+}
+
+.pycon-table tbody td.lightning-talk {
+    color: #c154d8;
+}
+
+.pycon-table tbody td.tutorial {
+    color: #dd4438;
+}
+
+.paper,
+.richpage {
+  padding: 2.5em 3em;
+  margin-bottom: 1.5em;
+  background-color: #fff;
+}
+  </style>
+  <script type="text/javascript">
+   var tagtoo_advertiser_id = 265;
+                   var tagtoo_ga = document.createElement('script');
+                   tagtoo_ga.type = 'text/javascript';
+                   tagtoo_ga.async = true;
+                   tagtoo_ga.src = '//ad.tagtoo.co/media/ad/track.js';
+                   var tagtoo_s = document.getElementsByTagName('script')[0];
+                   tagtoo_s.parentNode.insertBefore(tagtoo_ga, tagtoo_s);
+  </script>
+  <script>
+   var _gaq = _gaq || [['_trackPageview']];
+_gaq.unshift(['_setAccount', 'UA-28961467-1']);
+(function(d, t) {
+    var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+    g.async = true;
+    g.src = '//www.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g, s);
+})(document, 'script');
+  </script>
+ </head>
+ <body class="FutureBg">
+  <nav class="navbar navbar-default navbar-site">
+   <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+     <button class="navbar-toggle collapsed" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
+      <span class="sr-only">
+       Toggle navigation
+      </span>
+      <span class="icon-bar">
+      </span>
+      <span class="icon-bar">
+      </span>
+      <span class="icon-bar">
+      </span>
+     </button>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+     <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav">
+       <li class="" id="dropdown-menu-home">
+        <a href="../../setlang/index.html%3Flanguage=zh.html">
+         首頁
+        </a>
+       </li>
+       <li class="dropdown" id="dropdown-menu-about">
+        <a data-target="/2015apac/zh/about/" href="../about/index.html">
+         關於
+        </a>
+        <a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="24.html#">
+         <b class="caret">
+         </b>
+        </a>
+        <ul class="dropdown-menu">
+         <li id="dropdown-menu-about-regional-pycons">
+          <a href="../about/regional-pycons/index.html">
+           地區性 PYCON
+          </a>
+         </li>
+         <li id="dropdown-menu-about-code-of-conduct">
+          <a href="../about/code-of-conduct.html">
+           行為準則
+          </a>
+         </li>
+         <li id="dropdown-menu-about-recruit">
+          <a href="../about/recruit/index.html">
+           人員招募
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="dropdown" id="dropdown-menu-schedule">
+        <a data-target="/2015apac/zh/schedule/" href="../schedule/index.html">
+         議程
+        </a>
+        <a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="24.html#">
+         <b class="caret">
+         </b>
+        </a>
+        <ul class="dropdown-menu">
+         <li id="dropdown-menu-https:--tw.pycon.org-2015apac-zh-lightning_zh-">
+          <a href="../lightning_zh/index.html">
+           閃電秀
+          </a>
+         </li>
+         <li id="dropdown-menu-program-keynote-speaker">
+          <a href="keynote-speaker/index.html">
+           KEYNOTE 講者
+          </a>
+         </li>
+         <li id="dropdown-menu-program-night-party">
+          <a href="night-party/index.html">
+           回到未來之夜市
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="" id="dropdown-menu-tutorial">
+        <a data-target="/2015apac/zh/tutorial/" href="../tutorial/index.html">
+         專業課程
+        </a>
+       </li>
+       <li class="dropdown" id="dropdown-menu-registration">
+        <a data-target="/2015apac/zh/registration/" href="../registration/index.html">
+         報名
+        </a>
+        <a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="24.html#">
+         <b class="caret">
+         </b>
+        </a>
+        <ul class="dropdown-menu">
+         <li id="dropdown-menu-registration-financial-aid">
+          <a href="../registration/financial-aid.html">
+           財務補助
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="dropdown" id="dropdown-menu-venue">
+        <a data-target="/2015apac/zh/venue/" href="../venue/index.html">
+         會場
+        </a>
+        <a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="24.html#">
+         <b class="caret">
+         </b>
+        </a>
+        <ul class="dropdown-menu">
+         <li id="dropdown-menu-venue-accommodation">
+          <a href="../venue/accommodation/index.html">
+           住宿
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="dropdown" id="dropdown-menu-sponsors">
+        <a data-target="/2015apac/zh/sponsors/" href="../sponsors/index.html">
+         贊助
+        </a>
+        <a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="24.html#">
+         <b class="caret">
+         </b>
+        </a>
+        <ul class="dropdown-menu">
+         <li id="dropdown-menu-sponsors-sponsor-information">
+          <a href="../sponsors/sponsor-information/index.html">
+           贊助須知
+          </a>
+         </li>
+         <li id="dropdown-menu-sponsors-why-sponsor-pycon-apac">
+          <a href="../sponsors/why-sponsor-pycon-apac/index.html">
+           為何贊助 PYCON APAC
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="divider-vertical">
+       </li>
+      </ul>
+     </ul>
+     <ul class="nav navbar-nav">
+      <li>
+       <a href="../accounts/login/index.html">
+        登入
+       </a>
+      </li>
+     </ul>
+     <ul class="nav navbar-nav">
+      <li class="dropdown" id="dropdown-menu-about">
+       <a data-target="#" href="24.html#">
+        使用語言
+       </a>
+       <a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="24.html#">
+        <b class="caret">
+        </b>
+       </a>
+       <ul class="dropdown-menu">
+        <li id="dropdown-menu-setlang-en">
+         <a href="../../setlang/index.html%3Flanguage=en.html">
+          ENGLISH
+         </a>
+        </li>
+        <li id="dropdown-menu-setlang-zh">
+         <a href="../../setlang/index.html%3Flanguage=zh.html">
+          中文
+         </a>
+        </li>
+        <li id="dropdown-menu-about-ja">
+         <a href="../../setlang/index.html%3Flanguage=ja.html">
+          日本語
+         </a>
+        </li>
+        <!--           <li id="dropdown-menu-setlang-kr">
+            <a href="/setlang/?language=kr&next=">한국어</a>
+          </li>
+ -->
+       </ul>
+      </li>
+     </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+   </div>
+   <!-- /.container-fluid -->
+  </nav>
+  <div class="container">
+   <div class="content">
+    <style>
+     .talk-speaker {
+    font-size: 16px;
+}
+    </style>
+    <div class="panel-heading">
+     <h1 class="Header--firstDoubleBar Header">
+      Python HDF5 Use Case
+     </h1>
+     <p class="talk-meta">
+     </p>
+     <h3 class="Text--bigger Header Header--third">
+      Speaker
+     </h3>
+     <span class="talk-speaker">
+      Liang Bo
+        Wang
+     </span>
+     <span class="talk-lang">
+      ／中文
+     </span>
+     <span class="program-link">
+     </span>
+     <p>
+     </p>
+     <h2 class="Text--bigger Header Header--third">
+      Tags
+     </h2>
+     HDF5, Numpy
+    </div>
+    <div class="panel-body">
+     <h3 class="Text--bigger Header Header--third">
+      Abstract
+     </h3>
+     <div style="white-space: pre-wrap; font-size:16px;">
+      HDF5 是一個用來存取數據的函式庫，Matlab 的儲存格式 (.mat) 即基於該格式設計。相較於多數人熟悉的 Database，HDF5 的功能更為單純，它只負責做好讀取、 儲存資料而並不提供 Query、Join 等操作，但也因此在 I/O 表現上更為出色。常見的應用為 sensor、實驗數據記錄與傳輸、大矩陣的操作等。HDF5 在 Python 的接口實作主要有 PyTables 及 h5py，兩者針對不同的使用情境有不同的設計。
+
+在本 talk 中，會先介紹 HDF5 格式與特色，在 Python 中如何用 PyTables、h5py 存取 與異同，以及與主流資料庫、pickle 物件串流化的比較。最後示範 HDF5 如何有效的完成 以下幾個情境中的問題：存取 pandas DataFrame 物件、在大型矩陣進行區域計算、追蹤 Deep Learning 學習記錄。
+     </div>
+     <hr>
+     <h3 class="Text--bigger Header Header--third">
+      關於講者
+     </h3>
+     <br>
+     <div class="row">
+      <div class="col-md-4">
+       <img alt="Profile picture" class="img-responsive" src="../../static/media/picture/me_small.jpg">
+      </div>
+      <div class="col-md-8 speaker-info">
+       <div style="white-space: pre-wrap">
+        A master student active in Taipei Python and R meetups. His research topic focuses on network analysis of cancer genetics. After his intern in MSRA, he's currently working on digital histopathology analysis using convolutional neural network (CNN).
+       </div>
+       <br>
+       <h4>
+        個人網頁連結
+       </h4>
+       <p class="single-line">
+        <a href="http://liang2.tw/" target="_blank">
+         http://liang2.tw/
+        </a>
+       </p>
+       <h4>
+        Twitter
+       </h4>
+       <a href="https://twitter.com/ccwang002" target="_blank">
+        @ccwang002
+       </a>
+       <h4>
+        組織/公司
+       </h4>
+       Bioinfo &amp; Biostat Core Lab, NTU CGM
+       <h4>
+        頭銜
+       </h4>
+       Student
+      </div>
+     </div>
+     <!-- <hr> -->
+     <!-- <h4 class="small-title">Media</h4> -->
+     <!-- <ul class="square-list text-muted"> -->
+     <!--     <li>Slide: coming soon.</li> -->
+     <!--     <li>Video: coming soon.</li> -->
+     <!-- </ul> -->
+    </div>
+   </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js">
+  </script>
+ </body>
+</html>

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+ <!--<![endif]-->
+ <head>
+  <link href="../../icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+  <link href="../../icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+  <link href="../../icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+  <link href="../../icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+  <link href="../../icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+  <link href="../../icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+  <link href="../../icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+  <link href="../../icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+  <link href="../../icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+  <link href="../../icons/android-icon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+  <link href="../../icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+  <link href="../../icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+  <link href="../../icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+  <link href="https://tw.pycon.org/manifest.json" rel="manifest">
+  <meta content="#ffffff" name="msapplication-TileColor">
+  <meta content="/static/ms-icon-144x144.png" name="msapplication-TileImage">
+  <meta content="#ffffff" name="theme-color">
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="" name="description">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="http://tw.pycon.org/static/image/pycon_og_image.png" property="og:image">
+  <title>
+   PyCon APAC/Taiwan 2015 Python與電子設計自動化：用愛與堅持實現專業 - Ko-Lung Yuan
+  </title>
+  <script src="../../static/mezzanine/js/jquery-1.7.1.min.js">
+   jQuery.noConflict();
+  </script>
+  <link href="../../static/CACHE/css/bee5e591beb8.css" rel="stylesheet" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="/static/js/html5shiv.min.js"></script>
+    <script src="/static/js/respond.min.js"></script>
+    <![endif]-->
+  <style>
+   .pycon-table {
+    width: 100%;
+    margin: 2em 0;
+    border: 1px solid #ddd;
+    border-top-color: #ddd;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.pycon-table thead {
+    font-size: 15px;
+    background-color: #f5f4ee;
+}
+
+.pycon-table thead th {
+    font-weight: normal;
+    color: #666;
+}
+
+.pycon-table tbody {
+    font-size: 15px;
+}
+
+.pycon-table tbody td.english {
+    color: #54d871;
+}
+
+.pycon-table tbody td.mandarin {
+    color: #8c460e;
+}
+
+.pycon-table tbody td.regular-talk {
+    color: #54afd8;
+}
+
+.pycon-table tbody td.scipy-talk {
+    color: #000;
+}
+
+.pycon-table tbody td.lightning-talk {
+    color: #c154d8;
+}
+
+.pycon-table tbody td.tutorial {
+    color: #dd4438;
+}
+
+.paper,
+.richpage {
+  padding: 2.5em 3em;
+  margin-bottom: 1.5em;
+  background-color: #fff;
+}
+  </style>
+  <script type="text/javascript">
+   var tagtoo_advertiser_id = 265;
+                   var tagtoo_ga = document.createElement('script');
+                   tagtoo_ga.type = 'text/javascript';
+                   tagtoo_ga.async = true;
+                   tagtoo_ga.src = '//ad.tagtoo.co/media/ad/track.js';
+                   var tagtoo_s = document.getElementsByTagName('script')[0];
+                   tagtoo_s.parentNode.insertBefore(tagtoo_ga, tagtoo_s);
+  </script>
+  <script>
+   var _gaq = _gaq || [['_trackPageview']];
+_gaq.unshift(['_setAccount', 'UA-28961467-1']);
+(function(d, t) {
+    var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+    g.async = true;
+    g.src = '//www.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g, s);
+})(document, 'script');
+  </script>
+ </head>
+ <body class="FutureBg">
+  <nav class="navbar navbar-default navbar-site">
+   <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+     <button class="navbar-toggle collapsed" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
+      <span class="sr-only">
+       Toggle navigation
+      </span>
+      <span class="icon-bar">
+      </span>
+      <span class="icon-bar">
+      </span>
+      <span class="icon-bar">
+      </span>
+     </button>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+     <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav">
+       <li class="" id="dropdown-menu-home">
+        <a href="../../setlang/index.html%3Flanguage=zh.html">
+         首頁
+        </a>
+       </li>
+       <li class="dropdown" id="dropdown-menu-about">
+        <a data-target="/2015apac/zh/about/" href="../about/index.html">
+         關於
+        </a>
+        <a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="102.html#">
+         <b class="caret">
+         </b>
+        </a>
+        <ul class="dropdown-menu">
+         <li id="dropdown-menu-about-regional-pycons">
+          <a href="../about/regional-pycons/index.html">
+           地區性 PYCON
+          </a>
+         </li>
+         <li id="dropdown-menu-about-code-of-conduct">
+          <a href="../about/code-of-conduct.html">
+           行為準則
+          </a>
+         </li>
+         <li id="dropdown-menu-about-recruit">
+          <a href="../about/recruit/index.html">
+           人員招募
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="dropdown" id="dropdown-menu-schedule">
+        <a data-target="/2015apac/zh/schedule/" href="../schedule/index.html">
+         議程
+        </a>
+        <a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="102.html#">
+         <b class="caret">
+         </b>
+        </a>
+        <ul class="dropdown-menu">
+         <li id="dropdown-menu-https:--tw.pycon.org-2015apac-zh-lightning_zh-">
+          <a href="../lightning_zh/index.html">
+           閃電秀
+          </a>
+         </li>
+         <li id="dropdown-menu-program-keynote-speaker">
+          <a href="keynote-speaker/index.html">
+           KEYNOTE 講者
+          </a>
+         </li>
+         <li id="dropdown-menu-program-night-party">
+          <a href="night-party/index.html">
+           回到未來之夜市
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="" id="dropdown-menu-tutorial">
+        <a data-target="/2015apac/zh/tutorial/" href="../tutorial/index.html">
+         專業課程
+        </a>
+       </li>
+       <li class="dropdown" id="dropdown-menu-registration">
+        <a data-target="/2015apac/zh/registration/" href="../registration/index.html">
+         報名
+        </a>
+        <a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="102.html#">
+         <b class="caret">
+         </b>
+        </a>
+        <ul class="dropdown-menu">
+         <li id="dropdown-menu-registration-financial-aid">
+          <a href="../registration/financial-aid.html">
+           財務補助
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="dropdown" id="dropdown-menu-venue">
+        <a data-target="/2015apac/zh/venue/" href="../venue/index.html">
+         會場
+        </a>
+        <a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="102.html#">
+         <b class="caret">
+         </b>
+        </a>
+        <ul class="dropdown-menu">
+         <li id="dropdown-menu-venue-accommodation">
+          <a href="../venue/accommodation/index.html">
+           住宿
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="dropdown" id="dropdown-menu-sponsors">
+        <a data-target="/2015apac/zh/sponsors/" href="../sponsors/index.html">
+         贊助
+        </a>
+        <a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="102.html#">
+         <b class="caret">
+         </b>
+        </a>
+        <ul class="dropdown-menu">
+         <li id="dropdown-menu-sponsors-sponsor-information">
+          <a href="../sponsors/sponsor-information/index.html">
+           贊助須知
+          </a>
+         </li>
+         <li id="dropdown-menu-sponsors-why-sponsor-pycon-apac">
+          <a href="../sponsors/why-sponsor-pycon-apac/index.html">
+           為何贊助 PYCON APAC
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="divider-vertical">
+       </li>
+      </ul>
+     </ul>
+     <ul class="nav navbar-nav">
+      <li>
+       <a href="../accounts/login/index.html">
+        登入
+       </a>
+      </li>
+     </ul>
+     <ul class="nav navbar-nav">
+      <li class="dropdown" id="dropdown-menu-about">
+       <a data-target="#" href="102.html#">
+        使用語言
+       </a>
+       <a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="102.html#">
+        <b class="caret">
+        </b>
+       </a>
+       <ul class="dropdown-menu">
+        <li id="dropdown-menu-setlang-en">
+         <a href="../../setlang/index.html%3Flanguage=en.html">
+          ENGLISH
+         </a>
+        </li>
+        <li id="dropdown-menu-setlang-zh">
+         <a href="../../setlang/index.html%3Flanguage=zh.html">
+          中文
+         </a>
+        </li>
+        <li id="dropdown-menu-about-ja">
+         <a href="../../setlang/index.html%3Flanguage=ja.html">
+          日本語
+         </a>
+        </li>
+        <!--           <li id="dropdown-menu-setlang-kr">
+            <a href="/setlang/?language=kr&next=">한국어</a>
+          </li>
+ -->
+       </ul>
+      </li>
+     </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+   </div>
+   <!-- /.container-fluid -->
+  </nav>
+  <div class="container">
+   <div class="content">
+    <style>
+     .talk-speaker {
+    font-size: 16px;
+}
+    </style>
+    <div class="panel-heading">
+     <h1 class="Header--firstDoubleBar Header">
+      Python與電子設計自動化：用愛與堅持實現專業
+     </h1>
+     <p class="talk-meta">
+     </p>
+     <h3 class="Text--bigger Header Header--third">
+      Speaker
+     </h3>
+     <span class="talk-speaker">
+      Ko-Lung
+        Yuan
+     </span>
+     <span class="talk-lang">
+      ／中文
+     </span>
+     <span class="program-link">
+     </span>
+     <p>
+     </p>
+     <h2 class="Text--bigger Header Header--third">
+      Tags
+     </h2>
+     EDA, CAD, algorithm
+    </div>
+    <div class="panel-body">
+     <h3 class="Text--bigger Header Header--third">
+      Abstract
+     </h3>
+     <div style="white-space: pre-wrap; font-size:16px;">
+      EDA領域一直是C/C++的天下，從業界到學界，無一例外。
+且看一個熱愛Python的小子如何無所不用其及地使用Python，甚至反客為主，闖出一片天下。
+這場演講中，你將會看到一個對於Python痴謎的人，分享他在EDA領域中堅持地使用Python奮鬥的經驗和成果。
+如果您是EDA的同行，您可以來看看他是如何用Python寫出一個簡單但是好用的電路分析工具，也可以來看看對稱性編碼如何對電路進行特性上的優化。
+如果您是喜歡演算法的朋友，您可以來看看除了線性規劃之外，還有哪一種新的模型化方式可以求解K-分割問題、背包問題、裝箱問題、虛擬布林規劃等，同時還有一個現成的Python套件可以馬上使用！
+如果您想要了解如何使用Python來撰寫script幫助加速您的實驗，一定要來了解一下script-king這個工具。
+當然，如果您只是一個喜愛Python的朋友，也十分歡迎來交交朋友，相互交流。
+     </div>
+     <hr>
+     <h3 class="Text--bigger Header Header--third">
+      關於講者
+     </h3>
+     <br>
+     <div class="row">
+      <div class="col-md-4">
+       <img alt="Profile picture" class="img-responsive" src="../../static/media/picture/11198390_10203151202455917_1215322392_n.jpg">
+      </div>
+      <div class="col-md-8 speaker-info">
+       <div style="white-space: pre-wrap">
+        I am an engineer of Electronics Design Automation at ATopTech[1], a book/blog author of programming techniques and of course... a Python fan!
+
+I majored in EE and CAD(EDA field, especially in logic synthesis and design verification) during graduate school[2] and university. Now I focus on the technique of clock tree synthesis. Even if Python is not related to my work but I still love Python so much that I would like to use Python on everywhere!
+
+So far, I've developed some Python packages or tools such as minickt[3], mc-solver[4], sym-encoder[5] and script-king[6]. Interested people can find them in Github or PyPI or you can refer to my papers.
+
+I am also a blogger[7] mainly writing articles of programming techniques(Python, Django[8] and others) and I will publish a new book about Django learning at the end of May or in early June.
+
+Followings are links related to me:
+
+My Personal Page: http://dokelung-blog.logdown.com/pages/about-me
+My Github: https://github.com/dokelung
+My linkedIn: https://tw.linkedin.com/pub/ko-lung-yuan/a3/b9a/536/zh-tw
+
+[1] https://www.atoptech.com
+[2] http://alcom.ee.ntu.edu.tw/
+[3] https://github.com/dokelung/minickt
+[4] http://handle.ncl.edu.tw/11296/ndltd/68703891060081946284
+[5] http://alcom.ee.ntu.edu.tw/publications/iccad13-symm.pdf
+[6] https://github.com/dokelung/script-king
+[7] http://dokelung-blog.logdown.com
+[8] http://dokelung-blog.logdown.com/posts/235592-django-notes-table-of-contents
+       </div>
+       <br>
+       <h4>
+        個人網頁連結
+       </h4>
+       <p class="single-line">
+        <a href="http://dokelung-blog.logdown.com/pages/about-me" target="_blank">
+         http://dokelung-blog.logdown.com/pages/about-me
+        </a>
+       </p>
+       <h4>
+        組織/公司
+       </h4>
+       <a href="https://www.atoptech.com/" target="_blank">
+        ATopTech
+       </a>
+       <h4>
+        頭銜
+       </h4>
+       R&amp;D Engineer
+      </div>
+     </div>
+     <!-- <hr> -->
+     <!-- <h4 class="small-title">Media</h4> -->
+     <!-- <ul class="square-list text-muted"> -->
+     <!--     <li>Slide: coming soon.</li> -->
+     <!--     <li>Video: coming soon.</li> -->
+     <!-- </ul> -->
+    </div>
+   </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js">
+  </script>
+ </body>
+</html>
