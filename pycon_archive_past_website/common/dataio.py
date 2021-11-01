@@ -1,18 +1,22 @@
+"""Data related functions"""
 import os
 from urllib.parse import unquote, urlparse
 
-import requests
 from loguru import logger
-
-PYCON_URL = f"https://tw.pycon.org"
 
 
 def mkdir(path: str):
+    """
+        Create folder from execute entry folder
+
+        Args:
+            path (str): relative path
+    """
     path = urlparse(path).path
     try:
-        # 1) correct the path to directory path and be a local path
-        # 2) by using unquote to avoid the Garbled path
+        # correct the path to directory path and be a local path
         dir = "." + path[0 : path.rfind("/") + 1]
+        # unquote to avoid the Garbled path
         dir = unquote(dir)
         if not os.path.exists(os.path.dirname(dir)):
             os.makedirs(dir)
@@ -20,13 +24,18 @@ def mkdir(path: str):
         logger.error(err)
 
 
-def writefile(path: str):
-    # request to the Pycon path, and fetch it to local file by using binary writing
+def writefile(path: str, content: bytes):
+    """
+        Write file to related path from execute entry folder
+
+        Args:
+            path (str): relative path
+            content (bytes): Object to be written
+    """
     path = urlparse(path).path
-    request = requests.get(PYCON_URL + path)
-    file = "." + unquote(path)
     try:
+        file = "." + unquote(path)
         with open(file, "wb") as f:
-            f.write(request.content)
+            f.write(content)
     except OSError as err:
         logger.error(err)
