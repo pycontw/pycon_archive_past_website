@@ -4,6 +4,7 @@ import re
 from pathlib import Path
 from urllib.parse import unquote, urlparse
 from common.dataio import mkdir, writefile
+from websites import CRAWLERS, BaseCrawler
 
 import click
 import requests
@@ -11,8 +12,7 @@ from bs4 import BeautifulSoup
 from loguru import logger
 
 PYCON_YEAR = "2016"
-PYCON_HOST = "tw.pycon.org"
-PYCON_URL = f"https://{PYCON_HOST}"
+PYCON_URL = f"https://tw.pycon.org"
 
 
 def getcssimg(path):
@@ -97,14 +97,14 @@ def get_assets(path: Path):
         logger.error(err)
 
 
-def get_page(path):
-    path = urlparse(path).path
+def get_page(url):
+    path = urlparse(url).path
     if Path(
         "." + path + "index.html"
     ).exists():  # Don't crawl same page again in case of infinite loop
         return
-    logger.info("fetching " + PYCON_URL + path)
-    request = requests.get(PYCON_URL + path)
+    logger.info(f"fetching {url}")
+    request = requests.get(url)
     soup = BeautifulSoup(request.content, "html.parser")
 
     script(soup)  # get scripts in this page
@@ -250,37 +250,27 @@ def get_page(path):
 
 
 def main():
-    # Get pycon website, including zh-hant and en-us, according to given year.
-    request = requests.get(PYCON_URL + "/" + PYCON_YEAR + "/zh-hant/")  # Get HTML
-    soup = BeautifulSoup(request.text, "html.parser")  # Using html parser
 
-    # Fetch crawler URL section
-    crawler_urls = set([crawler_url["href"] for crawler_url in soup.select("a")])
-    if PYCON_YEAR >= "2020":
-        request = requests.get(
-            PYCON_URL + "/" + PYCON_YEAR + "/zh-hant/events/warmup-session/"
-        )
-        soup = BeautifulSoup(request.text, "html.parser")
-        crawler_urls_2020_warmup_session = soup.select("a")
-        for url in crawler_urls_2020_warmup_session:
-            url = url["href"]
-            crawler_urls.add(url)
-        crawler_urls.add(f"/{PYCON_YEAR}/zh-hant/sponsor/prospectus/")
+    crawler: BaseCrawler = CRAWLERS[PYCON_YEAR](PYCON_URL, PYCON_YEAR)
+    crawler_urls = crawler.get_crawl_urls()
 
     # Page crawler section
     for crawler_url in crawler_urls:
         url = urlparse(crawler_url)
         # Checking if the url is a pycon website
-        if url.netloc != PYCON_HOST and url.netloc != "":
+        if url.netloc != crawler.host and url.netloc != "":
             continue
         # Checking if the path is right or not
         if url.netloc == "" and url.path.find(f"/{PYCON_YEAR}") != 0:
             continue
         path_parts = Path(url.path).parts
         if len(path_parts) >= 2 and path_parts[1] == PYCON_YEAR:
-            get_page(url.path)
-            get_page(url.path.replace("zh-hant", "en-us"))
+            get_page(crawler_url)
+            get_page(crawler_url.replace("zh-hant", "en-us"))
 
+    # Get favicon on front page
+    request = requests.get(f"{crawler.url}/{crawler.year}/zh-hant/")
+    soup = BeautifulSoup(request.text, "html.parser")
     for link in soup.findAll("link", {"rel": "icon"}):
         if "href" in link.attrs:
             get_assets(Path(urlparse(link["href"]).path))
