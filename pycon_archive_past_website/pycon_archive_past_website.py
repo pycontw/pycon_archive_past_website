@@ -277,8 +277,9 @@ def main():
     # Get pycon website, including zh-hant and en-us, according to given year.
     request = requests.get(PYCON_URL + "/" + PYCON_YEAR + "/zh-hant/")  # Get HTML
     soup = BeautifulSoup(request.text, "html.parser")  # Using html parser
-    crawler_urls = soup.select("a")
-    crawler_urls = set([crawler_url["href"] for crawler_url in crawler_urls])
+
+    # Fetch crawler URL section
+    crawler_urls = set([crawler_url["href"] for crawler_url in soup.select("a")])
     if PYCON_YEAR >= "2020":
         request = requests.get(
             PYCON_URL + "/" + PYCON_YEAR + "/zh-hant/events/warmup-session/"
@@ -290,6 +291,7 @@ def main():
             crawler_urls.add(url)
         crawler_urls.add(f"/{PYCON_YEAR}/zh-hant/sponsor/prospectus/")
 
+    # Page crawler section
     for crawler_url in crawler_urls:
         url = urlparse(crawler_url)
         # Checking if the url is a pycon website
