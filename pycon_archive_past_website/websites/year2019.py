@@ -3,7 +3,10 @@ from bs4 import BeautifulSoup
 from .classes import BaseCrawler
 from .utilities import get_language
 
+
 class Year2019(BaseCrawler):
+
+    year: str = "2019"
 
     def convert_html(self, path: str, soup: BeautifulSoup) -> str:
         html = super().convert_html(path, soup)

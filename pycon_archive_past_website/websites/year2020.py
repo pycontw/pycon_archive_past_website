@@ -1,15 +1,15 @@
 from typing import MutableSet
 
 from bs4 import BeautifulSoup
+from common.scrap import get_soup
 
 from .classes import BaseCrawler
 from .utilities import get_language
 
-from common.scrap import get_soup
-from .classes import BaseCrawler
-
 
 class Year2020(BaseCrawler):
+
+    year: str = "2020"
 
     def get_crawl_urls(self) -> MutableSet[str]:
         urls = super().get_crawl_urls()

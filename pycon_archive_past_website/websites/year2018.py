@@ -6,6 +6,8 @@ from .utilities import get_language
 
 class Year2018(BaseCrawler):
 
+    year: str = "2018"
+
     def convert_html(self, path: str, soup: BeautifulSoup) -> str:
         html = super().convert_html(path, soup)
         full_path = self.base_path + path

@@ -7,10 +7,10 @@ from loguru import logger
 
 def mkdir(path: str):
     """
-        Create folder from execute entry folder
+    Create folder from execute entry folder
 
-        Args:
-            path (str): relative path
+    Args:
+        path (str): relative path
     """
     path = urlparse(path).path
     try:
@@ -26,11 +26,11 @@ def mkdir(path: str):
 
 def writefile(path: str, content: bytes):
     """
-        Write file to related path from execute entry folder
+    Write file to related path from execute entry folder
 
-        Args:
-            path (str): relative path
-            content (bytes): Object to be written
+    Args:
+        path (str): relative path
+        content (bytes): Object to be written
     """
     path = urlparse(path).path
     try:
