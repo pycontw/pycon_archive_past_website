@@ -1,5 +1,9 @@
 from typing import MutableSet
 
+from bs4 import BeautifulSoup
+
+from .classes import BaseCrawler
+from .utilities import get_language
 
 from common.scrap import get_soup
 from .classes import BaseCrawler
@@ -15,3 +19,24 @@ class Year2020(BaseCrawler):
             urls.add(url)
         urls.add(f"{self.url}/{self.year}/zh-hant/sponsor/prospectus/")
         return set(urls)
+
+    def convert_html(self, path: str, soup: BeautifulSoup) -> str:
+        html = super().convert_html(path, soup)
+        full_path = self.base_path + path
+        if get_language(path) == "zh":
+            html = html.replace(
+                "EN",
+                "<a href='"
+                + full_path.replace("zh-hant", "en-us")
+                + '\' style="text-decoration: none;">EN</a>',
+                1,
+            )
+        if get_language(path) == "en":
+            html = html.replace(
+                "ZH",
+                "<a href='"
+                + full_path.replace("en-us", "zh-hant")
+                + '\' style="text-decoration: none;">ZH</a>',
+                1,
+            )
+        return html
