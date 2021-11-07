@@ -2,11 +2,11 @@
 import re
 from pathlib import Path
 from typing import MutableSet
-from urllib.parse import urlparse
+from urllib.parse import unquote, urlparse
 
 from bs4 import BeautifulSoup
-from common.scrap import get_soup
-from websites.utilities import get_asset
+from common.scrape import get_soup
+from crawlers.utilities import get_asset, mkdir
 
 
 class BaseCrawler:
@@ -68,9 +68,9 @@ class BaseCrawler:
             html = html.replace(f"/{self.year}/", f"{self.base_path}/{self.year}/")
         return html
 
-    def get_script(self, soup: BeautifulSoup):
+    def crawl_script(self, soup: BeautifulSoup):
         """
-            Get Javascript files from HTML document
+            Download Javascript files from HTML document
 
         Args:
             soup (BeautifulSoup): HTML document
@@ -82,9 +82,9 @@ class BaseCrawler:
                 if not Path("." + path).exists():
                     get_asset(self.url + path)
 
-    def get_image(self, soup: BeautifulSoup):
+    def crawl_image(self, soup: BeautifulSoup):
         """
-            Get image files from HTML document
+            Download image files from HTML document
 
         Args:
             soup (BeautifulSoup): HTML document
@@ -94,7 +94,13 @@ class BaseCrawler:
             if image_element.attrs.get("src"):
                 get_asset(image_element["src"])
 
-    def get_stylesheet(self, soup: BeautifulSoup):
+    def crawl_stylesheet(self, soup: BeautifulSoup):
+        """
+            Download CSS files from HTML document
+
+        Args:
+            soup (BeautifulSoup): HTML document
+        """
         for css in soup.find_all("link"):
             # if the link tag has the 'href' attribute and
             # if the target is css file and not using outer css site
@@ -113,3 +119,54 @@ class BaseCrawler:
                 css_file = css_file.replace("url(/", f"url({self.base_path}/")
                 with open("." + css["href"], "w") as f:
                     f.write(css_file)
+
+    def crawl_favicon(self):
+        """
+        Download favicon on front page
+        """
+        soup = get_soup(f"{self.url}/{self.year}/zh-hant/")
+        for link in soup.findAll("link", {"rel": "icon"}):
+            if "href" in link.attrs:
+                get_asset(link["href"])
+
+    def crawl_page(self, url: str):
+        """
+            Download HTML document
+
+        Args:
+            url (str): URL, ex: https://tw.pycon.org/2020/en-us/
+        """
+        # concate to <path>/index.html
+        path = f"{urlparse(url).path}index.html"
+        # Do not crawl page if already exists, prevent recursive traversal
+        if Path(f"./{path}").exists():
+            return
+
+        mkdir(path)
+        soup = get_soup(url)
+        self.crawl_script(soup)
+        self.crawl_stylesheet(soup)
+        self.crawl_image(soup)
+
+        for input in soup.find_all("input", {"name": "csrfmiddlewaretoken"}):
+            input.decompose()
+        soup = self.preprocess_soup(path, soup)
+        html = self.convert_html(path, soup)
+
+        # use unquote to avoid the Garbled path
+        with open(f"./{path}", "w") as f:
+            f.write(unquote(html))
+
+        # get talk and tutorial page using DFS
+        for link in soup.find_all("a"):
+            if (
+                not link.attrs.get("href")
+                or link["href"].find("https://") != -1
+                or link["href"].find("#") != -1
+            ):
+                continue
+            if (
+                link.get("href").find("talk") != -1
+                or link.get("href").find("tutorial") != -1
+            ):
+                self.crawl_page(unquote(link["href"]))

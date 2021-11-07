@@ -2,7 +2,7 @@ import json
 
 from bs4 import BeautifulSoup
 
-from .classes import BaseCrawler
+from .base import BaseCrawler
 from .utilities import get_asset, get_language
 
 
@@ -56,8 +56,8 @@ class Year2017(BaseCrawler):
             )
         return html
 
-    def get_image(self, soup: BeautifulSoup):
-        super().get_image(soup)
+    def crawl_image(self, soup: BeautifulSoup):
+        super().crawl_image(soup)
         # get imgs from json, especially for pycon /2017/zh-hant/events/keynotes/
         for script_element in soup.find_all("script", type="application/json"):
             json_object = json.loads(script_element.contents[0])

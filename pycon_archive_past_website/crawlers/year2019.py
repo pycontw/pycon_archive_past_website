@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 
-from .classes import BaseCrawler
+from .base import BaseCrawler
 from .utilities import get_language
 
 

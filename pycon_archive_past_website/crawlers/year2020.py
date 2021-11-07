@@ -1,12 +1,24 @@
-from bs4 import BeautifulSoup
+from typing import MutableSet
 
-from .classes import BaseCrawler
+from bs4 import BeautifulSoup
+from common.scrape import get_soup
+
+from .base import BaseCrawler
 from .utilities import get_language
 
 
-class Year2018(BaseCrawler):
+class Year2020(BaseCrawler):
 
-    year: str = "2018"
+    year: str = "2020"
+
+    def get_crawl_urls(self) -> MutableSet[str]:
+        urls = super().get_crawl_urls()
+        soup = get_soup(f"{self.url}/{self.year}/zh-hant/events/warmup-session/")
+        for url in soup.select("a"):
+            url = url["href"]
+            urls.add(url)
+        urls.add(f"{self.url}/{self.year}/zh-hant/sponsor/prospectus/")
+        return set(urls)
 
     def convert_html(self, path: str, soup: BeautifulSoup) -> str:
         html = super().convert_html(path, soup)
@@ -16,7 +28,7 @@ class Year2018(BaseCrawler):
                 "EN",
                 "<a href='"
                 + full_path.replace("zh-hant", "en-us")
-                + '\' class="myclass">EN</a>',
+                + '\' style="text-decoration: none;">EN</a>',
                 1,
             )
         if get_language(path) == "en":
@@ -24,8 +36,7 @@ class Year2018(BaseCrawler):
                 "ZH",
                 "<a href='"
                 + full_path.replace("en-us", "zh-hant")
-                + '\' class="myclass">ZH</a>',
+                + '\' style="text-decoration: none;">ZH</a>',
                 1,
             )
-        html += "<style>.myclass{text-decoration: none;color: rgba(255, 255, 255, 0.35);}.myclass:hover{text-decoration: none;color: rgba(255, 255, 255, 0.7);}</style>"
         return html

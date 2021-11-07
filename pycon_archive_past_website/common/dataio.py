@@ -1,5 +1,5 @@
 """Data related functions"""
-import os
+from pathlib import Path
 from urllib.parse import unquote, urlparse
 
 from loguru import logger
@@ -10,16 +10,13 @@ def mkdir(path: str):
     Create folder from execute entry folder
 
     Args:
-        path (str): relative path
+        path (str): File path, ex: 2016/index.html
     """
     path = urlparse(path).path
     try:
         # correct the path to directory path and be a local path
-        dir = "." + path[0 : path.rfind("/") + 1]
-        # unquote to avoid the Garbled path
-        dir = unquote(dir)
-        if not os.path.exists(os.path.dirname(dir)):
-            os.makedirs(dir)
+        dir = Path("./" + unquote(path)).parent.resolve()
+        dir.mkdir(parents=True, exist_ok=True)
     except OSError as err:
         logger.error(err)
 

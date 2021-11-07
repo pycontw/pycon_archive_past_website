@@ -1,6 +1,6 @@
 from typing import Dict, Type
 
-from .classes import BaseCrawler
+from .base import BaseCrawler
 from .year2016 import Year2016
 from .year2017 import Year2017
 from .year2018 import Year2018
