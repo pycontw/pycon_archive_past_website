@@ -1,4 +1,16 @@
 # Changelog
+## 0.1.1 (2021-11-08)
+
+### Refactor
+
+- Refactor crawler classes
+- Update main function
+- Refactor crawlers
+- Refine common modules
+- Add crawler website base structure
+- Refine dataio functions
+- Add basic common strucutre
+
 ## 0.1.0 (2021-10-28)
 
 ### Refactor
