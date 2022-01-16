@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" CONTENT="private, no-cache, no-store">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/2013/site_media/static/css/font-awesome.min.css">
+    <!--[if IE 7]>
+        <link rel="stylesheet" href="/2013/site_media/static/css/font-awesome-ie7.min.css">
+        <![endif]-->
+
+    <link href="/2013/site_media/static/img/favicon.ico" rel="shortcut icon" />
+    <title>プログラム / PyCon Taiwan 2013</title>
+    <!--  hack to make IE able to apply CSS to elements that it doesn't usually know about. See http://code.google.com/p/html5shim/ -->
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+    <link rel="stylesheet" href="/2013/site_media/static/css/facebox.css" />
+    <link href="/2013/site_media/static/markitup/skins/simple/style.css" type="text/css" media="screen" rel="stylesheet" />
+    <link href="/2013/site_media/static/markitup/sets/markdown-custom/style.css" type="text/css" media="screen" rel="stylesheet" />
+
+
+
+
+    <link rel="stylesheet" href="/2013/site_media/static/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/2013/site_media/static/css/bootstrap-responsive.css" />
+    <link rel="stylesheet" href="/2013/site_media/static/css/custom.css" />
+    <link rel="alternate" type="application/atom+xml" href="/2013/ja/feed/general/" title="blog feed" />
+
+
+
+</head>
+
+<body class="program " id="">
+
+
+
+    <header class="header">
+        <div class="container">
+
+            <div class="navbar navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container">
+
+                        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+
+                        <!-- Everything you want hidden at 940px or less, place within here -->
+                        <div class="nav-collapse collapse">
+                            <!-- .nav, .navbar-search, .navbar-form, etc -->
+                            <ul class="nav nav-jp">
+                                <li class="">
+                                    <a href="/2013/ja/" class="brand" id="link-home">PyConTW</a>
+                                </li>
+                                <li class="">
+                                    <a href="/2013/ja/about/" id="link-about">About</a>
+                                </li>
+                                <li class="">
+                                    <a href="/2013/ja/tutorial/" id="link-tutorial">チュートリアル</a>
+                                </li>
+                                <li class="">
+                                    <a href="/2013/ja/program/" id="link-program">プログラム</a>
+                                </li>
+                                <li class="">
+                                    <a href="/2013/ja/sponsors/" id="link-sponsors">スポンサー</a>
+                                </li>
+                                <li class="">
+                                    <a href="/2013/ja/speaker/" id="link-speakers">講演者</a>
+                                </li>
+                                <li class="">
+                                    <a href="/2013/ja/registration/" id="link-registration">登録</a>
+                                </li>
+                                <li class="">
+                                    <a href="/2013/ja/venue/" id="link-venue">開催場所</a>
+                                </li>
+                                <li class="">
+                                    <a href="/2013/ja/blog/" id="link-blog">ブログ</a>
+                                </li>
+                            </ul>
+
+
+
+
+                            <div class="nav account-bar pull-right">
+                                <p><a class="navbar-text" href="/2013/ja/account/login/">ログイン</a> or <a href="/2013/ja/account/signup/">サインアップ</a></p>
+                            </div>
+
+
+
+
+                            <div class="pull-right social-buttons">
+                                <div class="btn-group">
+                                    <a class="btn btn-small btn-primary" href="http://www.facebook.com/pycontw" target="_blank" title="PyCon Taiwan on Facebook">
+                                        <i class="icon-facebook"></i>
+                                    </a>
+                                    <a class="btn btn-small btn-info" href="http://twitter.com/pycontw" target="_blank" title="PyCon Taiwan on Twitter">
+                                        <i class="icon-twitter"></i>
+                                    </a>
+                                    <a class="btn btn-small btn-danger" href="https://plus.google.com/101932655972746759016/" target="_blank" title="PyCon Taiwan on Google+">
+                                        <i class="icon-google-plus"></i>
+                                    </a>
+                                    <a class="btn btn-small btn-plurk" href="http://www.plurk.com/pycontw" target="_blank" title="PyCon Taiwan on Plurk">
+                        P
+                    </a>
+                                </div>
+                            </div>
+
+                            <form id="language-selector" action="/2013/i18n/setlang/" method="post" class="navbar-form pull-right language_form">
+                                <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='YxfAwqvCQmfAaK19zqS4BjFtMyvlx5rO' /></div>
+                                <input name="next" type="hidden" value="/2013/program/" />
+                                <ul class="nav">
+                                    <li>
+                                        <p class="navbar-text">
+
+                                            語言
+
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <select onchange="document.getElementById('language-selector').submit();" name="language">
+                        
+                            <option value="en">English</option>
+                        
+                            <option value="zh">中文</option>
+                        
+                            <option value="ja" selected="selected">日本語</option>
+                        
+                        </select>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </header>
+    <div class="banner hidden-phone">
+        <div class="images">
+        </div>
+    </div>
+    <div class="visible-phone">
+        <img class="site-logo" src="/2013/site_media/static/img/pycontw2013-site-logo.png" />
+    </div>
+    <section id="subnav">
+        <div class="container">
+
+        </div>
+    </section>
+
+
+
+    <section id="body">
+        <div class="container">
+            <div class="row">
+                <div class="span10 offset1">
+
+
+
+
+                    <h1> プログラム </h1>
+
+                    <h2> Day 1 (5/25) </h2>
+
+                    <div class="agenda">
+                        <div class="well well-large">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    <div class="time"> 09:10 </div>
+                                </div>
+                                <div class="span9">
+                                    <span class="badge badge-warning"> Int'l Conference Hall </span>
+                                    <span class="badge badge-important"> Conference Room 1 </span>
+                                    <span class="badge badge-info"> Conference Room 2 </span> </br>
+                                    オープニング
+                                </div>
+                            </div>
+                        </div>
+                        <div class="well well-large">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    <div class="time"> 09:20 </div>
+                                </div>
+                                <div class="span9">
+                                    <span class="badge badge-warning"> Int'l Conference Hall </span>
+                                    <span class="badge badge-important"> Conference Room 1 </span>
+                                    <span class="badge badge-info"> Conference Room 2 </span> </br>
+                                    Keynote Speech: <a href="/2013/en/blog/2013/04/29/david-beazley-making-python-3-en/"> Making with Python 3 </a>
+                                    <span class="label"> ENG </span> </br>
+                                    by <a href="/2013/en/blog/2013/03/07/keynote-speaker-david-beazley-en/"> David Beazley </a>
+                                    </br><span>
+</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="well well-large">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    <div class="time"> 10:10 </div>
+                                </div>
+                                <div class="span9"> 休憩 </div>
+                            </div>
+                        </div>
+                        <div class="well well-large">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    <div class="time"> 10:40 </div>
+                                </div>
+                                <div class="span3">
+
+                                    <span class="badge badge-warning"> Int'l Conference Hall </span> </br>
+                                    Python + NoSQL in the Animations </br>
+                                    by <a href="/2013/ja/speaker/#speaker_id_52">官順暉</a>
+                                    </br><span>
+<a href="http://www.youtube.com/watch?v=T0-4pcuQ0Xs" target="_blank" style="font-size: small">Video</a>
+<a href="http://www.slideshare.net/drakeguan/pycontw13-python-nosqlinanimations02-21880380
+" target="_blank" style="font-size: small">Slides</a>
+</span>
+                                    </a>
+                                </div>
+                                <div class="span3">
+
+                                    <span class="badge badge-important"> Conference Room 1 </span> </br>
+                                    Use Pyramid Like a Pro </br>
+                                    by <a href="/2013/ja/speaker/#speaker_id_21">Keith Yang</a>
+                                    </br><span>
+<a href="http://www.youtube.com/watch?v=tyl4HbitbYA" target="_blank" style="font-size: small">Video</a>
+<a href="http://keitheis.github.io/use-pyramid-like-a-pro/
+" target="_blank" style="font-size: small">Slides</a>
+</span>
+                                    </a>
+                                </div>
+                                <div class="span3">
+
+                                    <span class="badge badge-info"> Conference Room 2 </span> </br>
+                                    Introduction to Sphinx documentation generator <span class="label"> ENG </span> </br>
+                                    by <a href="/2013/ja/speaker/#speaker_id_11">Takayuki SHIMIZUKAWA</a>
+                                    </br><span>
+<a href="http://www.youtube.com/watch?v=10lOvz5MAq8" target="_blank" style="font-size: small">Video</a>
+<a href="http://shimizukawa.bitbucket.org/pycontw2013-sphinx-introduction/
+" target="_blank" style="font-size: small">Slides</a>
+</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="well well-large">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    <div class="time"> 11:10 </div>
+                                </div>
+                                <div class="span3">
+
+                                    <span class="badge badge-warning"> Int'l Conference Hall </span> </br>
+                                    懶人と Python と Animation Studio </br>
+                                    by <a href="/2013/ja/speaker/#speaker_id_42">郭學聰</a>
+                                    </br><span>
+<a href="http://www.youtube.com/watch?v=RszFch-fjJc" target="_blank" style="font-size: small">Video</a>
+<a href="/2013/site_media/media/proposal_files/fieliapm-pycontw-2013_4.pdf
+" target="_blank" style="font-size: small">Slides</a>
+</span>
+                                    </a>
+                                </div>
+                                <div class="span3">
+
+                                    <span class="badge badge-important"> Conference Room 1 </span> </br>
+                                    Diazo: Bridging Designer and Programmer </br>
+                                    by <a href="/2013/ja/speaker/#speaker_id_14">TsungWei Hu</a>
+                                    </br><span>
+<a href="http://www.youtube.com/watch?v=IyrypwQbLAQ" target="_blank" style="font-size: small">Video</a>
+<a href="http://www.slideshare.net/marr/diazo-bridging-designers-and-programmers
+" target="_blank" style="font-size: small">Slides</a>
+</span>
+                                    </a>
+                                </div>
+                                <div class="span3">
+
+                                    <span class="badge badge-info"> Conference Room 2 </span> </br>
+                                    Python in a Physics Lab <span class="label"> ENG </span> </br>
+                                    by <a href="/2013/ja/speaker/#speaker_id_40">Gergely Imreh</a>
+                                    </br><span>
+<a href="http://www.slideshare.net/imrehg/python-in-a-physics-lab
+" target="_blank" style="font-size: small">Slides</a>
+</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="well well-large">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    <div class="time"> 11:40 </div>
+                                </div>
+                                <div class="span3">
+
+                                    <span class="badge badge-warning"> Int'l Conference Hall </span> </br>
+                                    MoSQL: More than SQL, and less than ORM </br>
+                                    by <a href="/2013/ja/speaker/#speaker_id_22">Mosky Liu</a>
+                                    </br><span>
+<a href="http://www.youtube.com/watch?v=lJ4HV4dT3ng" target="_blank" style="font-size: small">Video</a>
+<a href="https://speakerdeck.com/mosky/mosql-more-than-sql-but-less-than-orm
+" target="_blank" style="font-size: small">Slides</a>
+</span>
+                                    </a>
+                                </div>
+                                <div class="span3">
+
+                                    <span class="badge badge-important"> Conference Room 1 </span> </br>
+                                    OpenStack Cinder </br>
+                                    by <a href="/2013/ja/speaker/#speaker_id_30">Chia-Feng Kang</a>
+                                    </br><span>
+<a href="http://www.youtube.com/watch?v=FWhqcHf_JK8" target="_blank" style="font-size: small">Video</a>
+<a href="/2013/site_media/media/proposal_files/cinder_2013.pdf
+" target="_blank" style="font-size: small">Slides</a>
+</span>
+                                    </a>
+                                </div>
+                                <div class="span3">
+
+                                    <span class="badge badge-info"> Conference Room 2 </span> </br>
+                                    Getting Python To Learn From Only Parts Of Your Data <span class="label"> ENG </span> </br>
+                                    by <a href="/2013/ja/speaker/#speaker_id_38">Dr. Ami Tavory</a>
+                                    </br><span>
+<a href="http://www.youtube.com/watch?v=pFbjBzhrUpY" target="_blank" style="font-size: small">Video</a>
+<a href="/2013/site_media/media/proposal_files/PythonPartsData2.odp
+" target="_blank" style="font-size: small">Slides</a>
+</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="well well-large">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    <div class="time"> 12:10 </div>
+                                </div>
+                                <div class="span9"> 昼食 </div>
+                            </div>
+                        </div>
+                        <div class="well well-large">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    <div class="time"> 13:30 </div>
+                                </div>
+                                <div class="span9">
+                                    <span class="badge badge-warning"> Int'l Conference Hall </span>
+                                    <span class="badge badge-important"> Conference Room 1 </span>
+                                    <span class="badge badge-info"> Conference Room 2 </span> </br>
+                                    Keynote Speech:
+                                    <a href="/2013/en/blog/2013/05/14/jan-decaluwe-keynote-myhdl-en/"> MyHDL: designing digital hardware with Python </a>
+                                    <span class="label"> ENG </span> </br>
+                                    by <a href="/2013/en/blog/2013/03/18/keynote-speaker-jan-decaluwe-en/"> Jan Decaluwe </a>
+                                    </br><span>
+<a href="http://www.youtube.com/watch?v=LSgOpvr8FII" target="_blank" style="font-size: small">Video</a>
+<a href="https://speakerdeck.com/jandecaluwe/myhdl-designing-digital-hardware-with-python-pycontw-2013
+" target="_blank" style="font-size: small">Slides</a>
+</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="well well-large">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    <div class="time"> 14:20 </div>
+                                </div>
+                                <div class="span9"> 休憩 </div>
+                            </div>
+                        </div>
+                        <div class="well well-large">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    <div class="time"> 14:30 </div>
+                                </div>
+                                <div class="span3">
+
+                                    <span class="badge badge-warning"> Int'l Conference Hall </span> </br>
+                                    StreetVoice 如何將一個 Windows/ASP 的公司改造為 Linux/Python </br>
+                                    by <a href="/2013/ja/speaker/#speaker_id_24">曾明賢 (小海)</a>
+                                    </br><span>
+<a href="http://www.youtube.com/watch?v=FvoLt-YZnb8" target="_blank" style="font-size: small">Video</a>
+<a href="https://speakerdeck.com/tzangms/python
+" target="_blank" style="font-size: small">Slides</a>
+</span>
+                                    </a>
+                                </div>
+                                <div class="span3">
+
+                                    <span class="badge badge-important"> Conference Room 1 </span> </br>
+                                    Python memory management &amp; Impact to memory-hungry application (DT) </br>
+                                    by <a href="/2013/ja/speaker/#speaker_id_16">郭彥廷</a>
+                                    </br><span>
+<a href="http://www.youtube.com/watch?v=iCzAmzGDTWk" target="_blank" style="font-size: small">Video</a>
+<a href="/2013/site_media/media/proposal_files/PyConTW13_kilik.pptx
+" target="_blank" style="font-size: small">Slides</a>
+</span>
+                                    </a>
+                                </div>
+                                <div class="span3">
+
+                                    <span class="badge badge-info"> Conference Room 2 </span> </br>
+                                    Introduction to Digital Signal Processing <span class="label"> ENG </span> </br>
+                                    by GNU Radio </br>
+                                    by <a href="/2013/ja/speaker/#speaker_id_58">Albert Huang</a>
+                                    </br><span>
+<a href="http://www.slideshare.net/AlbertHuang314/intro-dsp
+" target="_blank" style="font-size: small">Slides</a>
+</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="well well-large">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    <div class="time"> 15:00 </div>
+                                </div>
+                                <div class="span3">
+
+                                    <span class="badge badge-warning"> Int'l Conference Hall </span> </br>
+                                    超級比一比：比字、比價、比商品 </br>
+                                    by <a href="/2013/ja/speaker/#speaker_id_13">張家齊</a>
+                                    </br><span>
+<a href="http://www.youtube.com/watch?v=bL4zZNnkeRw" target="_blank" style="font-size: small">Video</a>
+<a href="http://prezi.com/xegtgt5ivm4-/2013-pycontw/?kw=view-xegtgt5ivm4-&rc=ref-4356864
+" target="_blank" style="font-size: small">Slides</a>
+</span>
+                                    </a>
+                                </div>
+                                <div class="span3">
+
+                                    <span class="badge badge-important"> Conference Room 1 </span> </br>
+                                    Dive into Python Class </br>
+                                    by <a href="/2013/ja/speaker/#speaker_id_2">葉長青</a>
+                                    </br><span>
+<a href="http://www.youtube.com/watch?v=VaHc73ZTlpI" target="_blank" style="font-size: small">Video</a>
+<a href="http://www.slideshare.net/lemonlatte/dive-into-python-class
+" target="_blank" style="font-size: small">Slides</a>
+</span>
+                                    </a>
+                                </div>
+                                <div class="span3">
+
+                                    <span class="badge badge-info"> Conference Room 2 </span> </br>
+                                    Scientific Data Analysis Pipelines - Push, Pull, React, Or Schedule? <span class="label"> ENG </span> </br>
+                                    by <a href="/2013/ja/speaker/#speaker_id_38">Dr. Ami Tavory</a>
+                                    </br><span>
+<a href="http://www.youtube.com/watch?v=neGrScpSy6w" target="_blank" style="font-size: small">Video</a>
+<a href="/2013/site_media/media/proposal_files/DagPypeSciPy.in.odp
+" target="_blank" style="font-size: small">Slides</a>
+</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="well well-large">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    <div class="time"> 15:30 </div>
+                                </div>
+                                <div class="span3">
+
+                                    <span class="badge badge-warning"> Int'l Conference Hall </span> </br>
+                                    Behind Pinkoi Window Redesign </br>
+                                    by <a href="/2013/ja/speaker/#speaker_id_31">李讓 Mike Lee</a>
+                                    </br><span>
+<a href="http://www.youtube.com/watch?v=oUAzPSAQC1w" target="_blank" style="font-size: small">Video</a>
+<a href="http://www.slideshare.net/mikeleeme/behind-pinkoi-window-redesign
+" target="_blank" style="font-size: small">Slides</a>
+</span>
+                                    </a>
+                                </div>
+                                <div class="span3">
+
+                                    <span class="badge badge-important"> Conference Room 1 </span> </br>
+                                    Python Coding Style Guide - 哥寫的 Python 是 Google Style </br>
+                                    by <a href="/2013/ja/speaker/#speaker_id_7">李卓軒</a>
+                                    </br><span>
+<a href="http://www.youtube.com/watch?v=_YduTrFVxGA" target="_blank" style="font-size: small">Video</a>
+<a href="/2013/site_media/media/proposal_files/Python_Coding_Style_Guild_-_PyCon_2013_-_19_Langue_Rule___17_Style_Rule.pdf
+" target="_blank" style="font-size: small">Slides</a>
+</span>
+                                    </a>
+                                </div>
+                                <div class="span3">
+
+                                    <span class="badge badge-info"> Conference Room 2 </span> </br>
+                                    Praat-py: The Force Unleashed! <span class="label"> ENG </span> </br>
+                                    by <a href="/2013/ja/speaker/#speaker_id_32">王文傑</a>
+                                    </br><span>
+</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="well well-large">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    <div class="time"> 16:00 </div>
+                                </div>
+                                <div class="span9"> 休憩 </div>
+                            </div>
+                        </div>
+                        <div class="well well-large">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    <div class="time"> 16:10 </div>
+                                </div>
+                                <div class="span9">
+                                    <span class="badge badge-warning"> Int'l Conference Hall </span> <span class="badge badge-important"> Conference Room 1 </span> </br>
+                                    ライトニングトーク
+                                </div>
+                            </div>
+                            <div class="row-fluid">
+                                <div class="span3"> </div>
+                                <div class="span8">
+                                    <p>
+                                        <ul>
+                                            <li> WeasyPrint − bring the web to PDF and paper by <a href="/2013/ja/speaker/#speaker_id_60">Simon Sapin</a> <a href="http://www.youtube.com/watch?v=_NP0T5ZOgP0" target="_blank" style="font-size: x-small">Video</a>                                                </li>
+                                            <li> PyLadies Taiwan Come Join Us! by imacat <a href="http://www.youtube.com/watch?v=uH9l63BVobA" target="_blank" style="font-size: x-small">Video</a> </li>
+                                            <li> The Zen of Language Choice by <a href="/2013/ja/speaker/#speaker_id_14">TsungWei Hu</a> <a href="http://www.youtube.com/watch?v=ziCrAPaNM9A" target="_blank" style="font-size: x-small">Video</a> <a href="http://www.slideshare.net/marr/the-zen-of-language-choice
+" target="_blank" style="font-size: x-small">Slides</a> </li>
+                                            <li> doctest 註解、測試一次搞定 by <a href="/2013/ja/speaker/#speaker_id_15">梁睿珊</a> <a href="http://www.youtube.com/watch?v=y7sk2gW8y3E" target="_blank" style="font-size: x-small">Video</a> <a href="http://www.slideshare.net/juishanliang/py-contw2013-doctest
+" target="_blank" style="font-size: x-small">Slides</a> </li>
+                                            <li> 用 Python 讓 Raspberry Pi 和臉部辨識來個小小相遇 (暫定) by <a href="/2013/ja/speaker/#speaker_id_55">王興謙</a> <a href="http://www.youtube.com/watch?v=OQiQKBj619U" target="_blank" style="font-size: x-small">Video</a> </li>
+                                            <li> Dot py by <a href="/2013/ja/speaker/#speaker_id_18">陳建勳</a> <a href="http://www.youtube.com/watch?v=5EV80JWlJKY" target="_blank" style="font-size: x-small">Video</a> <a href="http://www.slideshare.net/lucemia/do-t-copy
+" target="_blank" style="font-size: x-small">Slides</a> </li>
+                                            <li> Bottle vs Startup （微議程之 微框架 vs 微創業） by <a href="/2013/ja/speaker/#speaker_id_49">曾君宇</a> <a href="http://www.youtube.com/watch?v=WysNDooeq-0" target="_blank" style="font-size: x-small">Video</a> <a href="https://speakerdeck.com/excusemejoe/pycontw-2013-lightning-talk-bottle-vs-startup
+" target="_blank" style="font-size: x-small">Slides</a> </li>
+                                            <li> 3 個不同的 Python 組織文化 by <a href="/2013/ja/speaker/#speaker_id_21">Keith Yang</a> <a href="http://www.youtube.com/watch?v=gNnTiGASFIs" target="_blank" style="font-size: x-small">Video</a> </li>
+                                            <li> Building a fast digit recognition solution with Python by <a href="/2013/ja/speaker/#speaker_id_47">許家誠</a> <a href="http://www.youtube.com/watch?v=qRAIV2vvmN0" target="_blank" style="font-size: x-small">Video</a>                                                <a href="/2013/site_media/media/proposal_files/0524_Building_a_fast_digit_recognition_solution_with_Python.pdf
+" target="_blank" style="font-size: x-small">Slides</a> </li>
+                                            <li> CatchBall21 by CB21 <a href="http://www.youtube.com/watch?v=q0QOFdSHAiw" target="_blank" style="font-size: x-small">Video</a> <a href="http://www.slideshare.net/shnmorimoto/pycon-taiwan-2013-lt-cb21-from-japan?from_search=29
+" target="_blank" style="font-size: x-small">Slides</a> </li>
+                                            <li> Introduction to PyCon APAC 2013 in Japan by <a href="/2013/ja/speaker/#speaker_id_12">Takanori Suzuki</a> <a href="http://www.youtube.com/watch?v=USPaHaFqM1Y" target="_blank" style="font-size: x-small">Video</a>                                                <a href="http://www.slideshare.net/takanory/pyconapac-0525
+" target="_blank" style="font-size: x-small">Slides</a> </li>
+                                            <li> Violent Python Python in the dark side by <a href="/2013/ja/speaker/#speaker_id_25">xatierlike Lee</a> <a href="http://www.youtube.com/watch?v=FZBGKSEbmzc" target="_blank" style="font-size: x-small">Video</a>                                                <a href="/2013/site_media/media/proposal_files/Violent_Python.pdf
+" target="_blank" style="font-size: x-small">Slides</a> </li>
+                                            <li> Modularize your Django settings by <a href="/2013/ja/speaker/#speaker_id_48">潘韋成</a> <a href="http://www.youtube.com/watch?v=ZD62AbgqHCM" target="_blank" style="font-size: x-small">Video</a> </li>
+                                            <li> 真蝦! 意外接到的 case by <a href="/2013/ja/speaker/#speaker_id_35">陳炯廷</a></li>
+                                        </ul>
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="well well-large">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    <div class="time"> 17:10 </div>
+                                </div>
+                                <div class="span9"> Reception / BoF </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p> * All conference schedule is subject to change. </p>
+
+                    <h2> Day 2 (5/26) </h2>
+
+                    <div class="agenda">
+                        <div class="well well-large">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    <div class="time"> 09:00 </div>
+                                </div>
+                                <div class="span9"> オープニング </div>
+                            </div>
+                        </div>
+                        <div class="well well-large">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    <div class="time"> 09:10 </div>
+                                </div>
+                                <div class="span9">
+                                    <span class="badge badge-warning"> Int'l Conference Hall </span>
+                                    <span class="badge badge-important"> Conference Room 1 </span>
+                                    <span class="badge badge-info"> Conference Room 2 </span> </br>
+                                    Guest Speech:
+                                    <a href="https://docs.google.com/presentation/d/1xEim-cnkUORU_tLBT1P-wnJ78xU_lbydAOdkrszps_M/edit?usp=sharing"> Pythonic Epistemology, or Think Python </a>
+                                    <span class="label"> ENG </span> </br>
+                                    by
+                                    <a href="/2013/en/blog/2013/05/14/allen-downey-pythonic-epistemology-en/"> Allen Downey </a>
+                                    </br><span>
+<a href="http://www.youtube.com/watch?v=XpPfv2zPWoQ" target="_blank" style="font-size: small">Video</a>
+<a href="https://docs.google.com/presentation/d/1xEim-cnkUORU_tLBT1P-wnJ78xU_lbydAOdkrszps_M/edit?usp=sharing
+" target="_blank" style="font-size: small">Slides</a>
+</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="well well-large">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    <div class="time"> 10:00 </div>
+                                </div>
+                                <div class="span9"> 休憩 </div>
+                            </div>
+                        </div>
+                        <div class="well well-large">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    <div class="time"> 10:30 </div>
+                                </div>
+                                <div class="span3">
+
+                                    <span class="badge badge-warning"> Int'l Conference Hall </span> </br>
+                                    Extend your legacy application with Python </br>
+                                    by <a href="/2013/ja/speaker/#speaker_id_46">Thinker</a>
+                                    </br><span>
+<a href="http://www.youtube.com/watch?v=SgcEiQZr4wg" target="_blank" style="font-size: small">Video</a>
+</span>
+                                    </a>
+                                </div>
+                                <div class="span3">
+
+                                    <span class="badge badge-important"> Conference Room 1 </span> </br>
+                                    CPython 程式碼解析 </br>
+                                    by <a href="/2013/ja/speaker/#speaker_id_43">高國棟</a>
+                                    </br><span>
+<a href="http://www.youtube.com/watch?v=wrnJhOamNOs" target="_blank" style="font-size: small">Video</a>
+<a href="https://docs.google.com/presentation/d/1EhuZVuEVp1__Wf9Xe4aLUEc_4hnlPhZHE8X6XDt4Fzw/pub?start=false&loop=false&delayms=3000
+" target="_blank" style="font-size: small">Slides</a>
+</span>
+                                    </a>
+                                </div>
+                                <div class="span3">
+                                    <span class="badge badge-success"> Conference Room 2 </span> </br> Windows Azure Case Studies by LiChain, tzangms, Dan
+                                    </br><span>
+<a href="http://www.youtube.com/watch?v=Y-Hg0Zy-KZs" target="_blank" style="font-size: small">Video</a>
+</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="well well-large">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    <div class="time"> 11:00 </div>
+                                </div>
+                                <div class="span3">
+
+                                    <span class="badge badge-warning"> Int'l Conference Hall </span> </br>
+                                    用 Python 撰寫 Sublime Text 2 的套件 </br>
+                                    by <a href="/2013/ja/speaker/#speaker_id_15">梁睿珊</a>
+                                    </br><span>
+<a href="http://www.youtube.com/watch?v=ySqW4WikKKY" target="_blank" style="font-size: small">Video</a>
+<a href="http://www.slideshare.net/juishanliang/py-contw-2013-write-sublime-text-2-packages-with-python
+" target="_blank" style="font-size: small">Slides</a>
+</span>
+                                    </a>
+                                </div>
+                                <div class="span3">
+
+                                    <span class="badge badge-important"> Conference Room 1 </span> </br>
+                                    天元突破, 鑽開 python 的限制 </br>
+                                    by <a href="/2013/ja/speaker/#speaker_id_6">魏澤人</a>
+                                    </br><span>
+<a href="http://www.youtube.com/watch?v=O5yxn6vM-_A" target="_blank" style="font-size: small">Video</a>
+<a href="http://www.slideshare.net/weijr/pycontw2013x
+" target="_blank" style="font-size: small">Slides</a>
+</span>
+                                    </a>
+                                </div>
+                                <div class="span3">
+                                    <span class="badge badge-success"> Conference Room 2 </span> </br> Windows Azure 平台服務 by 小朱
+                                    </br><span>
+<a href="http://www.youtube.com/watch?v=8_XR9eVVEXI" target="_blank" style="font-size: small">Video</a>
+</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="well well-large">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    <div class="time"> 11:30 </div>
+                                </div>
+                                <div class="span3">
+
+                                    <span class="badge badge-warning"> Int'l Conference Hall </span> </br>
+                                    Pymacs 的初體驗 </br>
+                                    by <a href="/2013/ja/speaker/#speaker_id_56">鄭開元</a>
+                                    </br><span>
+<a href="http://www.youtube.com/watch?v=Rryv4qxWmkQ" target="_blank" style="font-size: small">Video</a>
+<a href="http://www.slideshare.net/superbil/pymacs-22144527
+" target="_blank" style="font-size: small">Slides</a>
+</span>
+                                    </a>
+                                </div>
+                                <div class="span3">
+
+                                    <span class="badge badge-important"> Conference Room 1 </span> </br>
+                                    駭客看 Django </br>
+                                    by <a href="/2013/ja/speaker/#speaker_id_59">Orange Tsai</a>
+                                    </br><span>
+<a href="http://www.youtube.com/watch?v=iQXt_7ISGHQ" target="_blank" style="font-size: small">Video</a>
+<a href="https://speakerdeck.com/p8361/hai-ke-kan-django
+" target="_blank" style="font-size: small">Slides</a>
+</span>
+                                    </a>
+                                </div>
+                                <div class="span3">
+                                    <span class="badge badge-success"> Conference Room 2 </span> </br> Windows Azure Beginner Lab by Colin Su
+                                    </br><span>
+<a href="http://www.youtube.com/watch?v=npcYdW7BCd0" target="_blank" style="font-size: small">Video</a>
+</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="well well-large">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    <div class="time"> 12:00 </div>
+                                </div>
+                                <div class="span9"> 昼食 </div>
+                            </div>
+                        </div>
+                        <div class="well well-large">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    <div class="time"> 13:20 </div>
+                                </div>
+                                <div class="span9">
+                                    Keynote Speech: <a href="/2013/zh/blog/2013/05/08/david-cramer-building-scale-en/"> Building to Scale </a>
+                                    <span class="label"> ENG </span> </br>
+                                    by <a href="/2013/en/blog/2013/03/08/keynote-speaker-david-cramer-en/"> David Cramer </a>
+                                    </br><span>
+<a href="http://www.youtube.com/watch?v=YjiK5cjw0mY" target="_blank" style="font-size: small">Video</a>
+<a href="https://speakerdeck.com/zeeg/building-to-scale-pycon-tw-2013
+" target="_blank" style="font-size: small">Slides</a>
+</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="well well-large">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    <div class="time"> 14:00 </div>
+                                </div>
+                                <div class="span9"> 休憩 </div>
+                            </div>
+                        </div>
+                        <div class="well well-large">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    <div class="time"> 14:30 </div>
+                                </div>
+                                <div class="span3">
+
+                                    <span class="badge badge-warning"> Int'l Conference Hall </span> </br>
+                                    Building a Render Cloud </br>
+                                    by <a href="/2013/ja/speaker/#speaker_id_19">Chang-Hung Liang</a>
+                                    </br><span>
+<a href="https://speakerdeck.com/eliang/building-a-render-cloud
+" target="_blank" style="font-size: small">Slides</a>
+</span>
+                                    </a>
+                                </div>
+                                <div class="span3">
+
+                                    <span class="badge badge-important"> Conference Room 1 </span> </br>
+                                    做遊戲學 Python </br>
+                                    by <a href="/2013/ja/speaker/#speaker_id_37">Ya-Yu Huang</a>
+                                    </br><span>
+<a href="http://www.slideshare.net/elmnhuang/building-game-cloud-with-python
+" target="_blank" style="font-size: small">Slides</a>
+</span>
+                                    </a>
+                                </div>
+                                <div class="span3">
+
+                                    <span class="badge badge-info"> Conference Room 2 </span> </br>
+                                    Big Data Analysis in Python </br>
+                                    by <a href="/2013/ja/speaker/#speaker_id_20">賴弘哲</a>
+                                    </br><span>
+<a href="http://www.youtube.com/watch?v=FKgDL8GeDpM" target="_blank" style="font-size: small">Video</a>
+<a href="http://www.slideshare.net/jimmy_lai/big-data-analysis-in-python
+" target="_blank" style="font-size: small">Slides</a>
+</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="well well-large">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    <div class="time"> 15:00 </div>
+                                </div>
+                                <div class="span3">
+
+                                    <span class="badge badge-warning"> Int'l Conference Hall </span> </br>
+                                    Google App Engine 效能調整 </br>
+                                    by <a href="/2013/ja/speaker/#speaker_id_18">陳建勳</a>
+                                    </br><span>
+<a href="http://www.slideshare.net/lucemia/appengine-performance-tuning
+" target="_blank" style="font-size: small">Slides</a>
+</span>
+                                    </a>
+                                </div>
+                                <div class="span3">
+
+                                    <span class="badge badge-important"> Conference Room 1 </span> </br>
+                                    An Epigenetics Odyssey </br>
+                                    by <a href="/2013/ja/speaker/#speaker_id_17">Wen-Wei Liao</a>
+                                    </br><span>
+<a href="http://www.youtube.com/watch?v=JWNguqc_bIg" target="_blank" style="font-size: small">Video</a>
+<a href="http://www.slideshare.net/gattacaliao/the-epigenetics-odyssey-pycon-taiwan-2013
+" target="_blank" style="font-size: small">Slides</a>
+</span>
+                                    </a>
+                                </div>
+                                <div class="span3">
+
+                                    <span class="badge badge-info"> Conference Room 2 </span> </br>
+                                    The Life of an Ubuntu Developer </br>
+                                    by <a href="/2013/ja/speaker/#speaker_id_33">王榮祥</a>
+                                    </br><span>
+<a href="http://www.youtube.com/watch?v=iPzsGLpmU7c" target="_blank" style="font-size: small">Video</a>
+<a href="/2013/site_media/media/proposal_files/launchpad.odp
+" target="_blank" style="font-size: small">Slides</a>
+</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="well well-large">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    <div class="time"> 15:30 </div>
+                                </div>
+                                <div class="span3">
+
+                                    <span class="badge badge-warning"> Int'l Conference Hall </span> </br>
+                                    如何用 Django 在 24 小時內作出 prototype 微創業，以 petneed.me 為例 </br>
+                                    by <a href="/2013/ja/speaker/#speaker_id_7">李卓軒</a>
+                                    </br><span>
+<a href="/2013/site_media/media/proposal_files/petneedme_pycon_2013.pdf
+" target="_blank" style="font-size: small">Slides</a>
+</span>
+                                    </a>
+                                </div>
+                                <div class="span3">
+
+                                    <span class="badge badge-important"> Conference Room 1 </span> </br>
+                                    用 VPython 學 Python </br>
+                                    by <a href="/2013/ja/speaker/#speaker_id_45">阮晉嘉</a>
+                                    </br><span>
+<a href="http://www.youtube.com/watch?v=A4g_xXrK4Gw" target="_blank" style="font-size: small">Video</a>
+<a href=" https://docs.google.com/presentation/d/1fRhJQS6YsRRJ5toiBN-IzHQ2H44oOF3mzFgLFvSUAiQ/edit?usp=sharing
+" target="_blank" style="font-size: small">Slides</a>
+</span>
+                                    </a>
+                                </div>
+                                <div class="span3">
+
+                                    <span class="badge badge-info"> Conference Room 2 </span> </br>
+                                    當 Python 遇上魔術方塊 </br>
+                                    by <a href="/2013/ja/speaker/#speaker_id_54">戴嘉駿</a>
+                                    </br><span>
+<a href="http://www.youtube.com/watch?v=Tw_LaKVlAy8" target="_blank" style="font-size: small">Video</a>
+<a href="/2013/site_media/media/proposal_files/pyRubiks_2.pdf
+" target="_blank" style="font-size: small">Slides</a>
+</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="well well-large">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    <div class="time"> 16:00 </div>
+                                </div>
+                                <div class="span9"> くじ引き大会 </div>
+                            </div>
+                        </div>
+                        <div class="well well-large">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    <div class="time"> 16:50 </div>
+                                </div>
+                                <div class="span9"> クロージング＆集合写真 </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p> * All conference schedule is subject to change. </p>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <hr />
+        <div class="container">
+            <p>
+                PyCon Taiwan 2013 built with <a href="http://djangoproject.com">Django</a> and <a href="http://pinaxproject.com">Pinax</a>. Hosting provided by <a href="http://streetvoice.com">StreetVoice</a>. Built by PyCon Taiwan web team.
+                <br /> Questions? Comments? Contact <a href="mailto:organizers@pycon.tw">organizers@pycon.tw</a>
+            </p>
+
+
+        </div>
+    </footer>
+
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/2013/site_media/static/js/jquery.eqheight.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function() {
+            function dynamic_banner() {
+                var banner_width = Math.min(0, Math.max(-(1920 - $(window).width()) / 2, -467));
+                $(".banner .images").css("margin-left", banner_width + "px");
+            }
+            dynamic_banner();
+            $(window).on("resize", dynamic_banner);
+
+            // equal height for posts on homepage
+            $(".row-fluid").eqHeight(".span3, .span6, .span9");
+        })
+    </script>
+    <script src="/2013/site_media/static/js/base.js" type="text/javascript"></script>
+    <script src="/2013/site_media/static/js/bootstrap.js" type="text/javascript"></script>
+
+    <!--script src="/2013/site_media/static/uni_form/uni-form.jquery.js" type="text/javascript"></script-->
+    <script type="text/javascript" src="/2013/site_media/static/markitup/jquery.markitup.js"></script>
+    <script type="text/javascript" src="/2013/site_media/static/markitup/sets/markdown-custom/set.js"></script>
+
+    <script src="/2013/site_media/static/js/facebox.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $('a[rel*=facebox]').facebox({
+                loadingImage: '/2013/site_media/static/img/facebox/loading.gif',
+                closeImage: '/2013/site_media/static/img/facebox/closelabel.png'
+            });
+            $(document).bind('reveal.facebox', function() {
+                $("form.in_facebox").submit(function() {
+                    form = this;
+                    jQuery.facebox(function($) {
+                        fields = jQuery(form).find("input[type='text']").filter(":enabled");
+                        params = {}
+                        fields.each(function() {
+                            params[this.name] = this.value;
+                        });
+                        jQuery.post(form.action, params,
+                            function(data, textStatus) {
+                                jQuery.facebox(data);
+                            }
+                        );
+                    });
+                    return false;
+                });
+            });
+            $(document).bind('close.facebox', function() {
+                location.reload();
+            });
+        });
+    </script>
+    <script type="text/javascript" charset="utf-8">
+        $(document).ajaxSend(function(event, xhr, settings) {
+            function getCookie(name) {
+                var cookieValue = null;
+                if (document.cookie && document.cookie != '') {
+                    var cookies = document.cookie.split(';');
+                    for (var i = 0; i < cookies.length; i++) {
+                        var cookie = jQuery.trim(cookies[i]);
+                        // Does this cookie string begin with the name we want?
+                        if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                            break;
+                        }
+                    }
+                }
+                return cookieValue;
+            }
+
+            function sameOrigin(url) {
+                // url could be relative or scheme relative or absolute
+                var host = document.location.host; // host + port
+                var protocol = document.location.protocol;
+                var sr_origin = '//' + host;
+                var origin = protocol + sr_origin;
+                // Allow absolute or scheme relative URLs to same origin
+                return (url == origin || url.slice(0, origin.length + 1) == origin + '/') ||
+                    (url == sr_origin || url.slice(0, sr_origin.length + 1) == sr_origin + '/') ||
+                    // or any other URL that isn't scheme relative or absolute i.e relative.
+                    !(/^(\/\/|http:|https:).*/.test(url));
+            }
+
+            function safeMethod(method) {
+                return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+            }
+
+            if (!safeMethod(settings.type) && sameOrigin(settings.url)) {
+                xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function($) {
+            $("a.boxes-edit-link").click(function() {
+                $.facebox.settings.loadingImage = "/site_media/static/img/loading.gif";
+                $.facebox.settings.closeImage = "/site_media/static/img/closelabel.png";
+                $(document).bind("beforeReveal.facebox", function() {
+                    $("#facebox .content").css("width", "600px");
+                });
+                var editable = this;
+                $(document).bind("reveal.facebox", function() {
+                    $("#edit_form").submit(function() {
+                        $.post(editable.href, $(this).serialize(), function(data) {
+                            $(document).trigger("close.facebox");
+                            $(editable).load(data);
+                            $(document).unbind("reveal.facebox");
+                        });
+                        return false;
+                    });
+                });
+                $.facebox({
+                    ajax: this.href
+                });
+                return false;
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-28961467-1']);
+        _gaq.push(['_trackPageview']);
+        _gaq.push(['_trackPageLoadTime']);
+        // _gaq.push(['_setCustomVar', 1, 'Authentication Type', ut, 2]);
+
+        (function() {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+
+    <script type="text/javascript" charset="utf-8">
+        $(function() {
+            $("#id_email").focus();
+            $(function() {
+                if (('ul#messages').length > 0) {
+                    setTimeout(function() {
+                        $('ul#messages').fadeOut(3000);
+                    }, 2000);
+                }
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

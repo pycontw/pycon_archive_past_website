@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" CONTENT="private, no-cache, no-store">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/2013/site_media/static/css/font-awesome.min.css">
+    <!--[if IE 7]>
+        <link rel="stylesheet" href="/2013/site_media/static/css/font-awesome-ie7.min.css">
+        <![endif]-->
+
+    <link href="/2013/site_media/static/img/favicon.ico" rel="shortcut icon" />
+    <title>首頁 / PyCon Taiwan 2013</title>
+    <!--  hack to make IE able to apply CSS to elements that it doesn't usually know about. See http://code.google.com/p/html5shim/ -->
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+    <link rel="stylesheet" href="/2013/site_media/static/css/facebox.css" />
+    <link href="/2013/site_media/static/markitup/skins/simple/style.css" type="text/css" media="screen" rel="stylesheet" />
+    <link href="/2013/site_media/static/markitup/sets/markdown-custom/style.css" type="text/css" media="screen" rel="stylesheet" />
+
+
+
+
+    <link rel="stylesheet" href="/2013/site_media/static/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/2013/site_media/static/css/bootstrap-responsive.css" />
+    <link rel="stylesheet" href="/2013/site_media/static/css/custom.css" />
+    <link rel="alternate" type="application/atom+xml" href="/2013/zh/feed/general/" title="blog feed" />
+
+
+</head>
+
+<body class="home " id="">
+
+
+
+    <header class="header">
+        <div class="container">
+
+            <div class="navbar navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container">
+
+                        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+
+                        <!-- Everything you want hidden at 940px or less, place within here -->
+                        <div class="nav-collapse collapse">
+                            <!-- .nav, .navbar-search, .navbar-form, etc -->
+                            <ul class="nav nav-zh">
+                                <li class="">
+                                    <a href="/2013/zh/" class="brand" id="link-home">PyConTW</a>
+                                </li>
+                                <li class="">
+                                    <a href="/2013/zh/about/" id="link-about">關於</a>
+                                </li>
+                                <li class="">
+                                    <a href="/2013/zh/tutorial/" id="link-tutorial">先修</a>
+                                </li>
+                                <li class="">
+                                    <a href="/2013/zh/program/" id="link-program">議程</a>
+                                </li>
+                                <li class="">
+                                    <a href="/2013/zh/sponsors/" id="link-sponsors">贊助</a>
+                                </li>
+                                <li class="">
+                                    <a href="/2013/zh/speaker/" id="link-speakers">講者</a>
+                                </li>
+                                <li class="">
+                                    <a href="/2013/zh/registration/" id="link-registration">註冊</a>
+                                </li>
+                                <li class="">
+                                    <a href="/2013/zh/venue/" id="link-venue">地點</a>
+                                </li>
+                                <li class="">
+                                    <a href="/2013/zh/blog/" id="link-blog">部落格</a>
+                                </li>
+                            </ul>
+
+
+
+
+                            <div class="nav account-bar pull-right">
+                                <p><a class="navbar-text" href="/2013/zh/account/login/">登入</a> or <a href="/2013/zh/account/signup/">註冊</a></p>
+                            </div>
+
+
+
+
+                            <div class="pull-right social-buttons">
+                                <div class="btn-group">
+                                    <a class="btn btn-small btn-primary" href="http://www.facebook.com/pycontw" target="_blank" title="PyCon Taiwan on Facebook">
+                                        <i class="icon-facebook"></i>
+                                    </a>
+                                    <a class="btn btn-small btn-info" href="http://twitter.com/pycontw" target="_blank" title="PyCon Taiwan on Twitter">
+                                        <i class="icon-twitter"></i>
+                                    </a>
+                                    <a class="btn btn-small btn-danger" href="https://plus.google.com/101932655972746759016/" target="_blank" title="PyCon Taiwan on Google+">
+                                        <i class="icon-google-plus"></i>
+                                    </a>
+                                    <a class="btn btn-small btn-plurk" href="http://www.plurk.com/pycontw" target="_blank" title="PyCon Taiwan on Plurk">
+                        P
+                    </a>
+                                </div>
+                            </div>
+
+                            <form id="language-selector" action="/2013/i18n/setlang/" method="post" class="navbar-form pull-right language_form">
+                                <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='a47ef45ce707ccaf04adfb0132073cd0' /></div>
+                                <input name="next" type="hidden" value="/2013/" />
+                                <ul class="nav">
+                                    <li>
+                                        <p class="navbar-text">
+
+                                            Language
+
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <select onchange="document.getElementById('language-selector').submit();" name="language">
+                        
+                            <option value="en">English</option>
+                        
+                            <option value="zh" selected="selected">中文</option>
+                        
+                            <option value="ja">日本語</option>
+                        
+                        </select>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </header>
+    <div class="banner hidden-phone">
+        <div class="images">
+        </div>
+    </div>
+    <div class="visible-phone">
+        <img class="site-logo" src="/2013/site_media/static/img/pycontw2013-site-logo.png" />
+    </div>
+    <section id="subnav">
+        <div class="container">
+
+        </div>
+    </section>
+
+
+
+    <section id="body">
+        <div class="container">
+            <div class="row">
+                <div class="span10 offset1">
+
+
+
+
+
+
+
+
+                    <div class="">
+                        <div class="row-fluid">
+                            <div class="span12">
+                                <div class="banner_caption">
+                                    <a href="/2013/venue/">
+                                        <p>中央研究院人文社會科學館 5月25-26日</p>
+                                    </a>
+                                </div>
+                                <img src="/2013/site_media/static/img/aboutpycon.jpg" alt="">
+                                <div id="pycon_intro" class='intro-zh'>
+                                    <p>PyCon Taiwan (PyConTW) 是台灣 Python 社群的年會，獻於社群、取於社群、屬於社群。本研討會著重於 Python 技術與其廣泛的應用。我們召聚台灣的 Python 程式人員來參與這個會議，在規畫完善的環境中分享知識、討論想法。希望在這樣的氣氛裡刺激大家的靈感，並鼓動技術上的合作。歡迎所有對 Python 有興趣的事業團體一起來加入這個社群。</p>
+                                </div>
+                                <img src="/2013/site_media/static/img/gallery.jpg"><img src="/2013/site_media/static/img/gallery.jpg" class="visible-desktop" style="float: left;">
+                            </div>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span12 brick">
+                                <div class="blog-post">
+                                    <h2><a href="/2013/zh/sponsors/"><span class="emphasis">熱情贊助</span></a></h2>
+                                    <div id="sponsor_logos">
+
+                                        <div class="row-fluid">
+                                            <div class="span2">
+                                                <a href="http://www.microsoft.com/zh-tw/" target="_blank"><img style="max-height: 37px;" src="/2013/site_media/static/img/sponsor_logos/msft.png" alt="Microsoft"></a>
+                                            </div>
+                                            <div class="span2">
+                                                <a href="http://www.webfaction.com/" target="_blank"><img style="max-height: 30px;" src="/2013/site_media/static/img/sponsor_logos/wf_s.png" alt="WebFaction"></a>
+                                            </div>
+                                            <div class="span2">
+                                                <a href="http://www.zillians.com/" target="_blank"><img style="max-height: 40px;" src="/2013/site_media/static/img/sponsor_logos/zillians_s.png" alt="Zillians"></a>
+                                            </div>
+                                            <div class="span2">
+                                                <a href="http://www.openfoundry.org/" target="_blank"><img style="max-height: 50px;" src="/2013/site_media/static/img/sponsor_logos/nsc_s.png" alt="National Science Council"></a>
+                                            </div>
+                                            <div class="span2">
+                                                <a href="http://www.openfoundry.org/" target="_blank"><img style="max-height: 55px;" src="/2013/site_media/static/img/sponsor_logos/citi_s.png" alt="Research Center for Information Technology Innovation Academia Sinica"></a>
+                                            </div>
+                                            <div class="span2">
+                                                <a href="http://www.openfoundry.org/" target="_blank"><img style="max-height: 50px;" src="/2013/site_media/static/img/sponsor_logos/ossf.png" alt="Open Source Software Foundry"></a>
+                                            </div>
+                                        </div>
+                                        <div class="row-fluid">
+                                            <div class="span2">
+                                                <a href="http://www.storysensecomputing.com/" target="_blank"><img style="max-height: 45px;" src="/2013/site_media/static/img/sponsor_logos/storysense_s.png" alt="StorySense"></a>
+                                            </div>
+                                            <div class="span2">
+                                                <a href="http://www.pinkoi.com/" target="_blank"><img style="max-height: 40px;" src="/2013/site_media/static/img/sponsor_logos/pinkoi_s.png" alt="Pinkoi"></a>
+                                            </div>
+                                            <div class="span2">
+                                                <a href="http://wingware.com/" target="_blank"><img style="max-height: 40px;" src="/2013/site_media/static/img/sponsor_logos/wingware_s.png" alt="Wingware"></a>
+                                            </div>
+                                            <div class="span2">
+                                                <a href="http://www.tagtoo.com.tw/" target="_blank"><img style="max-height: 35px;" src="/2013/site_media/static/img/sponsor_logos/tagtoo_s.png" alt="TagToo"></a>
+                                            </div>
+                                            <div class="span2">
+                                                <a href="http://www.acomotech.com/" target="_blank"><img style="max-height: 35px;" src="/2013/site_media/static/img/sponsor_logos/acomo.png" alt="AcoMo Technology"></a>
+                                            </div>
+                                            <div class="span2">
+                                                <a href="http://www.lccnet.com.tw/" target="_blank"><img style="max-height: 45px;" src="/2013/site_media/static/img/sponsor_logos/lccnet_s.png" alt="lccnet"></a>
+                                            </div>
+                                        </div>
+                                        <div class="row-fluid">
+                                            <div class="span2">
+                                                <a href="https://getsentry.com/" target="_blank"><img style="max-height: 50px;" src="/2013/site_media/static/img/sponsor_logos/sentry_s.png" alt="Sentry"></a>
+                                            </div>
+                                            <div class="span2">
+                                                <a href="http://www.linksoft.com.tw/" target="_blank"><img style="max-height: 40px;" src="/2013/site_media/static/img/sponsor_logos/linksoft_s.png" alt="Linksoft"></a>
+                                            </div>
+                                            <div class="span2">
+                                                <a href="http://www.linksoft.com.tw/Products.asp?seq=242" target="_blank"><img style="max-height: 50px;" src="/2013/site_media/static/img/sponsor_logos/jira_s.png" alt="Atlassian JIRA"></a>
+                                            </div>
+                                            <div class="span2">
+                                                <a href="http://www.cb21.co.jp/" target="_blank"><img style="max-height: 50px;" src="/2013/site_media/static/img/sponsor_logos/catchball21_s.jpg" alt="Catchball21"></a>
+                                            </div>
+                                            <div class="span2">
+                                                <a href="http://www.liverx.net/" target="_blank"><img style="max-height: 50px;" src="/2013/site_media/static/img/sponsor_logos/liverx_s.png" alt="活力藥師網"></a>
+                                            </div>
+                                            <div class="span2">
+                                                <a href="http://www.quantatw.com/Quanta/chinese/about/researchinstitute.aspx" target="_blank"><img style="max-height: 50px;" src="/2013/site_media/static/img/sponsor_logos/quanta_s.jpg" alt="廣達研究院"></a>
+                                            </div>
+                                        </div>
+                                        <div class="row-fluid">
+                                            <div class="span2">
+                                                <a href="http://www.themanxgroup.tw/" target="_blank"><img style="max-height: 50px;" src="/2013/site_media/static/img/sponsor_logos/themanx_s.png" alt="曼克斯數位娛樂有限公司"></a>
+                                            </div>
+                                            <div class="span2">
+                                                <a href="http://www.nchc.org.tw/" target="_blank"><img style="max-height: 40px;" src="/2013/site_media/static/img/sponsor_logos/nchc_s.png" alt="National Center for High-Performance Computing"></a>
+                                            </div>
+                                            <div class="span2">
+                                                <a href="http://yowureport.com/" target="_blank"><img style="max-height: 35px;" src="/2013/site_media/static/img/sponsor_logos/yowu-2_s.jpeg" alt="YowuReport"></a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-fluid">
+
+                            <div class="span6 brick">
+                                <div class="blog-post">
+                                    <h2><a href="/2013/zh/blog/2013/06/24/slides-photos-videos-zh/">Slides, Photos, and Videos</a></h2>
+                                    <p class="post_dateline">
+                                        <span class="date">2013.06.24</span> by <span class="author">marr</span>
+                                    </p>
+
+                                    <div class="teaser">
+                                        <p>投影片、照片、錄影檔案，已經整理上網囉!</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="span6 brick">
+                                <div class="blog-post">
+                                    <h2><a href="/2013/zh/blog/2013/05/26/pyhug-and-taipeipy-zh/">PyHUG 與 Taipei.py 的聚會</a></h2>
+                                    <p class="post_dateline">
+                                        <span class="date">2013.05.26</span> by <span class="author">keitheis</span>
+                                    </p>
+
+                                    <div class="teaser">
+                                        <p><a href="http://www.meetup.com/pythonhug/" title="Python Hsinchu User Group Meetup">PyHUG</a>: Python 新竹使用者群組聚會 Meetup</p>
+                                        <p><a href="http://taipei.python.org.tw/" title="Python Taipei User Group">Taipei.py</a>: Python 台北使用者群組網站</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row-fluid">
+
+
+                            <div class="span6 brick">
+                                <div class="blog-post">
+                                    <h2><a href="/2013/zh/blog/2013/05/22/reminders-participants-zh/">與會人員行前通知</a></h2>
+                                    <p class="post_dateline">
+                                        <span class="date">2013.05.22</span> by <span class="author">registration</span>
+                                    </p>
+
+                                    <div class="teaser">
+                                        <p>會議即將展開。你準備好了嗎？</p>
+                                        <p>不過在你來參加之前，有幾件事要先讓你知道。</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="span6 brick">
+                                <div class="blog-post">
+                                    <h2><a href="/2013/zh/blog/2013/05/16/invitation-bazaar-folks-zh/">晚宴同樂會攤位徵求中</a></h2>
+                                    <p class="post_dateline">
+                                        <span class="date">2013.05.16</span> by <span class="author">registration</span>
+                                    </p>
+
+                                    <div class="teaser">
+                                        <p>今年的 PyCon Taiwan 跟過去不太一様，更多元化，也更加有趣。</p>
+                                        <p>我們計劃在第一天晚上的 BoF 時間規劃晚宴及表演，並且有如夜市般開放攤位讓大家擺攤。</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row-fluid">
+
+
+                            <div class="span6 brick">
+                                <div class="blog-post">
+                                    <h2><a href="/2013/zh/blog/2013/05/14/allen-downey-pythonic-epistemology-zh/">Allen Downey: Pythonic Epistemology, or Think Python</a></h2>
+                                    <p class="post_dateline">
+                                        <span class="date">2013.05.14</span> by <span class="author">yungyuc</span>
+                                    </p>
+
+                                    <div class="teaser">
+                                        <p>Update: <a href="https://docs.google.com/presentation/d/1xEim-cnkUORU_tLBT1P-wnJ78xU_lbydAOdkrszps_M/edit?usp=sharing" title="投影片 on Google Drive">作者的投影片</a></p>
+                                        <p>Python 改變了我在程式設計 (programming) 中的思維方式。對我來說，本來寫程式是一種翻譯過程：用程式碼表達演算法。如今，程式設計成了一種思考與創作的活動。在某些狀況下，過去我會先寫出數學式子，再轉成程式。現在卻愈來愈發現自己會改從程式碼開始思考。得到的結果自然也不同。</p>
+                                        <p>這個演講首先闡述 Python 的表達力，再漸次進入我近來以 Python 作為思考工具的例子。一半也算是開玩笑，但我稱這種作法為「程式設計的認識論」。</p>
+                                        <p>本人也是 Think Python 這本程式設計入門書的作者。最後我想簡單談談這本書背後一些有趣的歷史。</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="span6 brick">
+                                <div class="blog-post">
+                                    <h2><a href="/2013/zh/blog/2013/05/14/jan-decaluwe-keynote-myhdl-zh/">Jan Decaluwe 主題演講: MyHDL: designing digital hardware with Python</a></h2>
+                                    <p class="post_dateline">
+                                        <span class="date">2013.05.14</span> by <span class="author">yungyuc</span>
+                                    </p>
+
+                                    <div class="teaser">
+                                        <p>當代的電路設計基本上都依靠硬體描述語言 (Hardware Description Language, HDL)。HDL 含有各種針對於硬體的特性，例如 massive concurrency、built-in determinism，以及 bit-level type。Verilog 和 VHDL 是最廣被使用的 HDL。</p>
+                                        <p>MyHDL 是一個把 Python 程式庫，允許工程師拿 Python 當作 HDL 來使用。這套工具的好處極大，能讓硬體設計者取用整個 Python 生態環境。MyHDL 直接受惠於 Python 的易用性、描述能力，以及廣泛的程式庫。MyHDL 也把諸如敏捷式開發一類新穎的技巧帶進硬體設計的世界。</p>
+                                        <p>這個演講會說明 MyHDL 程式庫的設計方式，包括由 generator 和 decorator 所模擬的 concurrency，和型別系統。講者也會以實際的業界專案展示 MyHDL 所帶來的優勢。</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row-fluid">
+
+
+                            <div class="span6 brick">
+                                <div class="blog-post">
+                                    <h2><a href="/2013/zh/blog/2013/05/08/david-cramer-building-scale-zh/">David Cramer 主題演講: Building to Scale</a></h2>
+                                    <p class="post_dateline">
+                                        <span class="date">2013.05.08</span> by <span class="author">yungyuc</span>
+                                    </p>
+
+                                    <div class="teaser">
+                                        <p>David Cramer 準備來和大家談談基礎設施 (infrastructure) 擴規 (scaling) 工程中常出現的狀況。演講聚焦在那些應該早期避免的問題，幫助成長期公司成功的策略，以及實作上的巧技。另外也會討論 database sharding、CDN caching、整體架構方式等等擴規策略中的高階成份。</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="span6 brick">
+                                <div class="blog-post">
+                                    <h2><a href="/2013/zh/blog/2013/04/29/pycon-reception-call-for-performer-zh/">PyCon 晚會徵求表演者</a></h2>
+                                    <p class="post_dateline">
+                                        <span class="date">2013.04.29</span> by <span class="author">registration</span>
+                                    </p>
+
+                                    <div class="teaser">
+                                        <p>想要有個輕鬆愉快的 networking 時光嗎？ 我們這次特別準備了晚會活動，表演者徵求中。快來報名吧！
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <hr />
+        <div class="container">
+            <p>
+                PyCon Taiwan 2013 built with <a href="http://djangoproject.com">Django</a> and <a href="http://pinaxproject.com">Pinax</a>. Hosting provided by <a href="http://streetvoice.com">StreetVoice</a>. Built by PyCon Taiwan web team.
+                <br /> Questions? Comments? Contact <a href="mailto:organizers@pycon.tw">organizers@pycon.tw</a>
+            </p>
+
+
+        </div>
+    </footer>
+
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/2013/site_media/static/js/jquery.eqheight.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function() {
+            function dynamic_banner() {
+                var banner_width = Math.min(0, Math.max(-(1920 - $(window).width()) / 2, -467));
+                $(".banner .images").css("margin-left", banner_width + "px");
+            }
+            dynamic_banner();
+            $(window).on("resize", dynamic_banner);
+
+            // equal height for posts on homepage
+            $(".row-fluid").eqHeight(".span3, .span6, .span9");
+        })
+    </script>
+    <script src="/2013/site_media/static/js/base.js" type="text/javascript"></script>
+    <script src="/2013/site_media/static/js/bootstrap.js" type="text/javascript"></script>
+
+    <!--script src="/2013/site_media/static/uni_form/uni-form.jquery.js" type="text/javascript"></script-->
+    <script type="text/javascript" src="/2013/site_media/static/markitup/jquery.markitup.js"></script>
+    <script type="text/javascript" src="/2013/site_media/static/markitup/sets/markdown-custom/set.js"></script>
+
+    <script src="/2013/site_media/static/js/facebox.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $('a[rel*=facebox]').facebox({
+                loadingImage: '/2013/site_media/static/img/facebox/loading.gif',
+                closeImage: '/2013/site_media/static/img/facebox/closelabel.png'
+            });
+            $(document).bind('reveal.facebox', function() {
+                $("form.in_facebox").submit(function() {
+                    form = this;
+                    jQuery.facebox(function($) {
+                        fields = jQuery(form).find("input[type='text']").filter(":enabled");
+                        params = {}
+                        fields.each(function() {
+                            params[this.name] = this.value;
+                        });
+                        jQuery.post(form.action, params,
+                            function(data, textStatus) {
+                                jQuery.facebox(data);
+                            }
+                        );
+                    });
+                    return false;
+                });
+            });
+            $(document).bind('close.facebox', function() {
+                location.reload();
+            });
+        });
+    </script>
+    <script type="text/javascript" charset="utf-8">
+        $(document).ajaxSend(function(event, xhr, settings) {
+            function getCookie(name) {
+                var cookieValue = null;
+                if (document.cookie && document.cookie != '') {
+                    var cookies = document.cookie.split(';');
+                    for (var i = 0; i < cookies.length; i++) {
+                        var cookie = jQuery.trim(cookies[i]);
+                        // Does this cookie string begin with the name we want?
+                        if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                            break;
+                        }
+                    }
+                }
+                return cookieValue;
+            }
+
+            function sameOrigin(url) {
+                // url could be relative or scheme relative or absolute
+                var host = document.location.host; // host + port
+                var protocol = document.location.protocol;
+                var sr_origin = '//' + host;
+                var origin = protocol + sr_origin;
+                // Allow absolute or scheme relative URLs to same origin
+                return (url == origin || url.slice(0, origin.length + 1) == origin + '/') ||
+                    (url == sr_origin || url.slice(0, sr_origin.length + 1) == sr_origin + '/') ||
+                    // or any other URL that isn't scheme relative or absolute i.e relative.
+                    !(/^(\/\/|http:|https:).*/.test(url));
+            }
+
+            function safeMethod(method) {
+                return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+            }
+
+            if (!safeMethod(settings.type) && sameOrigin(settings.url)) {
+                xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function($) {
+            $("a.boxes-edit-link").click(function() {
+                $.facebox.settings.loadingImage = "/site_media/static/img/loading.gif";
+                $.facebox.settings.closeImage = "/site_media/static/img/closelabel.png";
+                $(document).bind("beforeReveal.facebox", function() {
+                    $("#facebox .content").css("width", "600px");
+                });
+                var editable = this;
+                $(document).bind("reveal.facebox", function() {
+                    $("#edit_form").submit(function() {
+                        $.post(editable.href, $(this).serialize(), function(data) {
+                            $(document).trigger("close.facebox");
+                            $(editable).load(data);
+                            $(document).unbind("reveal.facebox");
+                        });
+                        return false;
+                    });
+                });
+                $.facebox({
+                    ajax: this.href
+                });
+                return false;
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-28961467-1']);
+        _gaq.push(['_trackPageview']);
+        _gaq.push(['_trackPageLoadTime']);
+        // _gaq.push(['_setCustomVar', 1, 'Authentication Type', ut, 2]);
+
+        (function() {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+
+    <script type="text/javascript" charset="utf-8">
+        $(function() {
+            $("#id_email").focus();
+            $(function() {
+                if (('ul#messages').length > 0) {
+                    setTimeout(function() {
+                        $('ul#messages').fadeOut(3000);
+                    }, 2000);
+                }
+            });
+        });
+    </script>
+
+
+    <script src="/2013/site_media/static/js/jquery.cycle.all.js" type="text/javascript"></script>
+    <script>
+        $(function() {
+            $('#slider li:first').fadeIn(1000, function() {
+                $('#slider').cycle({
+                    pager: '#slider-nav',
+                    timeout: 7000
+                });
+            });
+        });
+    </script>
+
+
+
+</body>
+
+</html>
