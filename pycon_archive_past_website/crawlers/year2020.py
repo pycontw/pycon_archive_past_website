@@ -24,6 +24,7 @@ class Year2020(BaseCrawler):
         html = super().convert_html(path, soup)
         full_path = self.base_path + path
         if get_language(path) == "zh":
+            print(f"2020 convert html zh")
             html = html.replace(
                 "EN",
                 "<a href='"
@@ -32,6 +33,7 @@ class Year2020(BaseCrawler):
                 1,
             )
         if get_language(path) == "en":
+            print(f"2020 convert html en")
             html = html.replace(
                 "ZH",
                 "<a href='"
