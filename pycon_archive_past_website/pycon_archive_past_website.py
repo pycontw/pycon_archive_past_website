@@ -11,21 +11,21 @@ def main(year: str, base_url: str):
         crawler: BaseCrawler = CRAWLERS[year]("https://tw.pycon.org", base_url)
     except KeyError:
         raise Exception(f"Crawler with year {year} does not exist!")
-
+    print(1)
     crawler.crawl_favicon()
     # Page crawler section
-    for crawler_url in crawler.get_crawl_urls():
-        url = urlparse(crawler_url)
-        # Checking if the url is a pycon website
-        if url.netloc != crawler.host and url.netloc != "":
-            continue
-        # Checking if the path is right or not
-        if url.netloc == "" and url.path.find(f"/{crawler.year}") != 0:
-            continue
-        path_parts = Path(url.path).parts
-        if len(path_parts) >= 2 and path_parts[1] == crawler.year:
-            crawler.crawl_page(crawler_url)
-            crawler.crawl_page(crawler_url.replace("zh-hant", "en-us"))
+    # for crawler_url in crawler.get_crawl_urls():
+    #     url = urlparse(crawler_url)
+    #     # Checking if the url is a pycon website
+    #     if url.netloc != crawler.host and url.netloc != "":
+    #         continue
+    #     # Checking if the path is right or not
+    #     if url.netloc == "" and url.path.find(f"/{crawler.year}") != 0:
+    #         continue
+    #     path_parts = Path(url.path).parts
+    #     if len(path_parts) >= 2 and path_parts[1] == crawler.year:
+    #         crawler.crawl_page(crawler_url)
+    #         crawler.crawl_page(crawler_url.replace("zh-hant", "en-us"))
 
 
 @click.command()

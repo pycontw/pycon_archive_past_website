@@ -121,12 +121,15 @@ class BaseCrawler:
                     f.write(css_file)
 
     def crawl_favicon(self):
+        print(3)
         """
         Download favicon on front page
         """
-        soup = get_soup(f"{self.url}/{self.year}/zh-hant/")
+        print(f"{self.url}/{self.year}/zh-hant/")
+        soup = get_soup(f"{self.url}/{self.year}/zh/")
         for link in soup.findAll("link", {"rel": "icon"}):
             if "href" in link.attrs:
+                print(link["href"])
                 get_asset(link["href"])
 
     def crawl_page(self, url: str):
@@ -141,12 +144,12 @@ class BaseCrawler:
         # Do not crawl page if already exists, prevent recursive traversal
         if Path(f"./{path}").exists():
             return
-
+        print(1)
         mkdir(path)
         soup = get_soup(url)
-        self.crawl_script(soup)
-        self.crawl_stylesheet(soup)
-        self.crawl_image(soup)
+        # self.crawl_script(soup)
+        # self.crawl_stylesheet(soup)
+        # self.crawl_image(soup)
 
         for input in soup.find_all("input", {"name": "csrfmiddlewaretoken"}):
             input.decompose()
@@ -154,7 +157,7 @@ class BaseCrawler:
         html = self.convert_html(path, soup)
 
         # use unquote to avoid the Garbled path
-        with open(f"./{path}", "w") as f:
+        with open(f"./{path}", "w",encoding='utf_8') as f:
             f.write(unquote(html))
 
         # get talk and tutorial page using DFS
