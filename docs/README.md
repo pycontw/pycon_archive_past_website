@@ -26,7 +26,7 @@ In order to better preserve things, we crawl each year's PyCon TW website into s
 - To scrap a specific PyCon TW website, insert the command
 
   ```bash
-  pipenv run python main.py -y [YEAR] --base [BASE]
+  pipenv run python pycon_archive_past_website.py -y [YEAR] --base [BASE]
   ```
 
   where `YEAR` should be the path of website (e.g. `2020` for `https://tw.pycon.org/2020`) and `BASE` for the base URL or base path used in the static HTML.

@@ -5,6 +5,8 @@ from typing import MutableSet
 from urllib.parse import unquote, urlparse
 
 from bs4 import BeautifulSoup
+from loguru import logger
+
 from common.scrape import get_soup
 from crawlers.utilities import get_asset, mkdir
 
@@ -22,13 +24,13 @@ class BaseCrawler:
             pycon_url (str): PyCon URL, ex: https://tw.pycon.org
             base_url (str, optional): Path prefix for Github pages. Defaults to ''.
         """
-        
+
         self.host = urlparse(pycon_url).netloc
         self.url = pycon_url
         self.base_path = base_path
-        print(f"This is __init__ in the base crawler:\nhost: {self.host},\n url: {self.url}")
+        logger.info(f"host: {self.host=} url: {self.url=}")
 
-    def get_crawl_urls(self) -> MutableSet[str]:
+    def get_candidate_urls(self) -> MutableSet[str]:
         """
         Get URLs should be crawled
 
@@ -67,7 +69,7 @@ class BaseCrawler:
         html = html.replace(f'action="/{self.year}/set-language/"', "")
         if path.startswith(f"/{self.year}"):
             # Replace url prefix since the gh-pages use base url following `{host}/{repo}/` instead of {host}/
-            print(f"replacing: /{self.year}/ TO {self.base_path}/{self.year}/")
+            logger.info(f"replacing: /{self.year}/ TO {self.base_path}/{self.year}/")
             html = html.replace(f"/{self.year}/", f"{self.base_path}/{self.year}/")
         return html
 
@@ -80,15 +82,13 @@ class BaseCrawler:
         """
         for script in soup.find_all("script"):
             # get all url like /year/... target, and try to save them all.
-            
-            print(f"script tag: {script}")
+
+            logger.debug(f"script tag: {script}")
             # for path in re.findall("/" + self.year + r"[^\s]*", str(script)):
             for path in re.findall("/" + self.year + r"[^\s]*\.js", str(script)):
-                print(f"path is {path}")
-                # path = path[0 : max(path.rfind("'"), path.rfind('"'))] !!
-                print(f"path is {path}")
+                logger.debug(f"{path=}")
                 if not Path("." + path).exists():
-                    print(f"crawl script: {self.url} and {path}")
+                    logger.debug(f"crawl script: {self.url} and {path}")
                     get_asset(self.url + path)
 
     def crawl_image(self, soup: BeautifulSoup):
@@ -107,7 +107,7 @@ class BaseCrawler:
                 try:
                     get_asset(image_element["src"])
                 except:
-                    print(f"cannot crwal image {image_element['src']}")
+                    logger.error(f"cannot crawl image {image_element['src']}")
 
     def crawl_stylesheet(self, soup: BeautifulSoup):
         """
@@ -126,27 +126,26 @@ class BaseCrawler:
                 and not Path("." + css["href"]).exists()
             ):
                 # Download CSS, read and then rewrite it
-                print(f"There is a css attribute")
+                logger.info(f"")
                 get_asset(self.url + css["href"])
                 with open("." + css["href"], "r") as f:
                     css_file = f.read()
                 css_file = css_file.replace("url('", f"url('{self.base_path}")
                 css_file = css_file.replace('url("', f'url("{self.base_path}')
                 css_file = css_file.replace("url(/", f"url({self.base_path}/")
-                # with open("." + css["href"], "w") as f:
                 with open("." + css["href"], "w", encoding='UTF-8') as f:
-                    print(f"css file {css_file}")
+                    logger.debug(f"{css_file=}")
                     f.write(css_file)
 
     def crawl_favicon(self):
         """
         Download favicon on front page
         """
-        print(f"favicon:  {self.url},.. {self.year}")
+        logger.debug(f"favicon:  {self.url=} {self.year=}")
         soup = get_soup(f"{self.url}/{self.year}/zh-hant/")
         for link in soup.findAll("link", {"rel": "icon"}):
             if "href" in link.attrs:
-                print(f"find a href in favicon {link}, \n{link['href']}")
+                logger.info(f"find a href in favicon {link=},{link['href']=}")
                 get_asset(link["href"])
 
     def crawl_page(self, url: str):
@@ -156,10 +155,9 @@ class BaseCrawler:
         Args:
             url (str): URL, ex: https://tw.pycon.org/2020/en-us/
         """
-        # concate to <path>/index.html
-        print(f"urlparse path is {urlparse(url).path}")
+        # concatenated to <path>/index.html
         path = f"{urlparse(url).path}index.html"
-        print(f"index.html path is {path}")
+        logger.debug(f"index.html path is {path=}")
         # Do not crawl page if already exists, prevent recursive traversal
         if Path(f"./{path}").exists():
             return
@@ -167,10 +165,10 @@ class BaseCrawler:
         mkdir(path)   # ex: 2020/en-us/events/sprints/index.html, mkdir
         # will get the path for its parent path (=2020/en-us/events/sprints/) and convert it into the absolute path then create
         soup = get_soup(url) # soup is just the html parser result of the BeautifulSoup
-        
-        print(f"start to crawl page: script, url {url}")
+
+        logger.info(f"start to crawl page: script {url=}")
         self.crawl_script(soup)
-        print(f"crawling css")
+        logger.info(f"crawling css")
         self.crawl_stylesheet(soup)
         self.crawl_image(soup)
 
@@ -180,12 +178,10 @@ class BaseCrawler:
         html = self.convert_html(path, soup)
 
         # use unquote to avoid the Garbled path
-        # with open(f"./{path}", "w") as f:
         with open(f"./{path}", "w", encoding='UTF-8') as f:
             f.write(unquote(html))
 
         # get talk and tutorial page using DFS
-        # print(f"DFS")
         for link in soup.find_all("a"):
             if (
                 not link.attrs.get("href")
@@ -202,5 +198,4 @@ class BaseCrawler:
                     link["href"] = link["href"] + '/'
                 if link["href"].find(f"/{self.year}") == 0:
                     link["href"] = self.url + link["href"]
-                # print("DFS unquote", unquote(link["href"]))
                 self.crawl_page(unquote(link["href"]))

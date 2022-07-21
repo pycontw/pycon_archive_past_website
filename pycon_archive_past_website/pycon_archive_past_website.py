@@ -9,27 +9,27 @@ from loguru import logger
 def main(year: str, base_url: str):
     try:
         crawler: BaseCrawler = CRAWLERS[year]("https://tw.pycon.org", base_url)
-        print(crawler)
+        logger.debug(f"{crawler=}")
     except KeyError:
         raise Exception(f"Crawler with year {year} does not exist!")
-    print("2021 crawl favicon")
+    logger.info(f"Crawling {year} favicon")
     crawler.crawl_favicon()
-    print("2021 crawl favicon finished")
+    logger.info(f"Crawling {year} favicon finished")
     # Page crawler section
-    for crawler_url in crawler.get_crawl_urls():
+    for crawler_url in crawler.get_candidate_urls():
         url = urlparse(crawler_url)
-        # print(f"2021 {url}")
+        logger.info(f"Checking {year} Page: {url=}")
         # Checking if the url is a pycon website
         if url.netloc != crawler.host and url.netloc != "":
-            # print(f"case 1 continue {url}")
+            logger.info(f"{url.netloc} not in host {crawler.host}")
             continue
         # Checking if the path is right or not
         if url.netloc == "" and url.path.find(f"/{crawler.year}") != 0:
-            # print(f"case 2 contunue {url}")
+            logger.info(f"{url.path} not belongs to /{crawler.year}")
             continue
         path_parts = Path(url.path).parts
         if len(path_parts) >= 2 and path_parts[1] == crawler.year:
-            print(f"need to crawl, {crawler_url}, parts={path_parts}")
+            logger.info(f"Crawling {crawler_url=} {path_parts=}")
             crawler.crawl_page(crawler_url)
             crawler.crawl_page(crawler_url.replace("zh-hant", "en-us"))
 
@@ -39,7 +39,7 @@ def main(year: str, base_url: str):
 @click.option(
     "-y",
     "param",
-    help="Pycon Year (2016 - 2020)",
+    help="PyCon Year (2016 - 2021)",
     type=str,
     required=True,
 )
@@ -60,4 +60,5 @@ def check_year(param, base_url):
 
 
 if __name__ == "__main__":
+    logger.add("out.log")
     check_year()

@@ -11,8 +11,8 @@ class Year2020(BaseCrawler):
 
     year: str = "2020"
 
-    def get_crawl_urls(self) -> MutableSet[str]:
-        urls = super().get_crawl_urls()
+    def get_candidate_urls(self) -> MutableSet[str]:
+        urls = super().get_candidate_urls()
         soup = get_soup(f"{self.url}/{self.year}/zh-hant/events/warmup-session/")
         for url in soup.select("a"):
             url = url["href"]
@@ -24,7 +24,6 @@ class Year2020(BaseCrawler):
         html = super().convert_html(path, soup)
         full_path = self.base_path + path
         if get_language(path) == "zh":
-            print(f"2020 convert html zh")
             html = html.replace(
                 "EN",
                 "<a href='"
@@ -33,7 +32,6 @@ class Year2020(BaseCrawler):
                 1,
             )
         if get_language(path) == "en":
-            print(f"2020 convert html en")
             html = html.replace(
                 "ZH",
                 "<a href='"
