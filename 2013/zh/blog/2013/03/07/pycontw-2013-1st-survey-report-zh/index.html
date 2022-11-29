@@ -1,404 +1,574 @@
 <!DOCTYPE html>
 <html lang="zh">
-
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Cache-Control" CONTENT="private, no-cache, no-store">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Cache-Control" content="private, no-cache, no-store" />
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="/2013/site_media/static/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://tw.pycon.org/2013/site_media/static/css/font-awesome.min.css"
+    />
     <!--[if IE 7]>
-        <link rel="stylesheet" href="/2013/site_media/static/css/font-awesome-ie7.min.css">
-        <![endif]-->
+      <link
+        rel="stylesheet"
+        href="https://tw.pycon.org/2013/site_media/static/css/font-awesome-ie7.min.css"
+      />
+    <![endif]-->
 
-    <link href="/2013/site_media/static/img/favicon.ico" rel="shortcut icon" />
+    <link
+      href="https://tw.pycon.org/2013/site_media/static/img/favicon.ico"
+      rel="shortcut icon"
+    />
     <title>PyConTW 2013 第一階段問卷結果搶先報 / PyCon Taiwan 2013</title>
     <!--  hack to make IE able to apply CSS to elements that it doesn't usually know about. See http://code.google.com/p/html5shim/ -->
     <!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-    <link rel="stylesheet" href="/2013/site_media/static/css/facebox.css" />
-    <link href="/2013/site_media/static/markitup/skins/simple/style.css" type="text/css" media="screen" rel="stylesheet" />
-    <link href="/2013/site_media/static/markitup/sets/markdown-custom/style.css" type="text/css" media="screen" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://tw.pycon.org/2013/site_media/static/css/facebox.css"
+    />
+    <link
+      href="https://tw.pycon.org/2013/site_media/static/markitup/skins/simple/style.css"
+      type="text/css"
+      media="screen"
+      rel="stylesheet"
+    />
+    <link
+      href="https://tw.pycon.org/2013/site_media/static/markitup/sets/markdown-custom/style.css"
+      type="text/css"
+      media="screen"
+      rel="stylesheet"
+    />
 
+    <link
+      rel="stylesheet"
+      href="https://tw.pycon.org/2013/site_media/static/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://tw.pycon.org/2013/site_media/static/css/bootstrap-responsive.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://tw.pycon.org/2013/site_media/static/css/custom.css"
+    />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      href="https://tw.pycon.org/2013/zh/feed/general/"
+      title="blog feed"
+    />
+  </head>
 
-
-
-    <link rel="stylesheet" href="/2013/site_media/static/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/2013/site_media/static/css/bootstrap-responsive.css" />
-    <link rel="stylesheet" href="/2013/site_media/static/css/custom.css" />
-    <link rel="alternate" type="application/atom+xml" href="/2013/zh/feed/general/" title="blog feed" />
-
-
-</head>
-
-<body class="blog " id="">
-
-
-
+  <body class="blog" id="">
     <header class="header">
-        <div class="container">
+      <div class="container">
+        <div class="navbar navbar-fixed-top">
+          <div class="navbar-inner">
+            <div class="container">
+              <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+              <a
+                class="btn btn-navbar"
+                data-toggle="collapse"
+                data-target=".nav-collapse"
+              >
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </a>
 
-            <div class="navbar navbar-fixed-top">
-                <div class="navbar-inner">
-                    <div class="container">
+              <!-- Everything you want hidden at 940px or less, place within here -->
+              <div class="nav-collapse collapse">
+                <!-- .nav, .navbar-search, .navbar-form, etc -->
+                <ul class="nav nav-zh">
+                  <li class="">
+                    <a
+                      href="https://tw.pycon.org/2013/zh/"
+                      class="brand"
+                      id="link-home"
+                      >PyConTW</a
+                    >
+                  </li>
+                  <li class="">
+                    <a
+                      href="https://tw.pycon.org/2013/zh/about/"
+                      id="link-about"
+                      >關於</a
+                    >
+                  </li>
+                  <li class="">
+                    <a
+                      href="https://tw.pycon.org/2013/zh/tutorial/"
+                      id="link-tutorial"
+                      >先修</a
+                    >
+                  </li>
+                  <li class="">
+                    <a
+                      href="https://tw.pycon.org/2013/zh/program/"
+                      id="link-program"
+                      >議程</a
+                    >
+                  </li>
+                  <li class="">
+                    <a
+                      href="https://tw.pycon.org/2013/zh/sponsors/"
+                      id="link-sponsors"
+                      >贊助</a
+                    >
+                  </li>
+                  <li class="">
+                    <a
+                      href="https://tw.pycon.org/2013/zh/speaker/"
+                      id="link-speakers"
+                      >講者</a
+                    >
+                  </li>
+                  <li class="">
+                    <a
+                      href="https://tw.pycon.org/2013/zh/registration/"
+                      id="link-registration"
+                      >註冊</a
+                    >
+                  </li>
+                  <li class="">
+                    <a
+                      href="https://tw.pycon.org/2013/zh/venue/"
+                      id="link-venue"
+                      >地點</a
+                    >
+                  </li>
+                  <li class="active">
+                    <a href="https://tw.pycon.org/2013/zh/blog/" id="link-blog"
+                      >部落格</a
+                    >
+                  </li>
+                </ul>
 
-                        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </a>
-
-                        <!-- Everything you want hidden at 940px or less, place within here -->
-                        <div class="nav-collapse collapse">
-                            <!-- .nav, .navbar-search, .navbar-form, etc -->
-                            <ul class="nav nav-zh">
-                                <li class="">
-                                    <a href="/2013/zh/" class="brand" id="link-home">PyConTW</a>
-                                </li>
-                                <li class="">
-                                    <a href="/2013/zh/about/" id="link-about">關於</a>
-                                </li>
-                                <li class="">
-                                    <a href="/2013/zh/tutorial/" id="link-tutorial">先修</a>
-                                </li>
-                                <li class="">
-                                    <a href="/2013/zh/program/" id="link-program">議程</a>
-                                </li>
-                                <li class="">
-                                    <a href="/2013/zh/sponsors/" id="link-sponsors">贊助</a>
-                                </li>
-                                <li class="">
-                                    <a href="/2013/zh/speaker/" id="link-speakers">講者</a>
-                                </li>
-                                <li class="">
-                                    <a href="/2013/zh/registration/" id="link-registration">註冊</a>
-                                </li>
-                                <li class="">
-                                    <a href="/2013/zh/venue/" id="link-venue">地點</a>
-                                </li>
-                                <li class="active">
-                                    <a href="/2013/zh/blog/" id="link-blog">部落格</a>
-                                </li>
-                            </ul>
-
-
-
-
-                            <div class="nav account-bar pull-right">
-                                <p><a class="navbar-text" href="/2013/zh/account/login/">登入</a> or <a href="/2013/zh/account/signup/">註冊</a></p>
-                            </div>
-
-
-
-
-                            <div class="pull-right social-buttons">
-                                <div class="btn-group">
-                                    <a class="btn btn-small btn-primary" href="http://www.facebook.com/pycontw" target="_blank" title="PyCon Taiwan on Facebook">
-                                        <i class="icon-facebook"></i>
-                                    </a>
-                                    <a class="btn btn-small btn-info" href="http://twitter.com/pycontw" target="_blank" title="PyCon Taiwan on Twitter">
-                                        <i class="icon-twitter"></i>
-                                    </a>
-                                    <a class="btn btn-small btn-danger" href="https://plus.google.com/101932655972746759016/" target="_blank" title="PyCon Taiwan on Google+">
-                                        <i class="icon-google-plus"></i>
-                                    </a>
-                                    <a class="btn btn-small btn-plurk" href="http://www.plurk.com/pycontw" target="_blank" title="PyCon Taiwan on Plurk">
-                        P
-                    </a>
-                                </div>
-                            </div>
-
-                            <form id="language-selector" action="/2013/i18n/setlang/" method="post" class="navbar-form pull-right language_form">
-                                <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='9d6b44d49334a19cc32179991a0aaf0a' /></div>
-                                <input name="next" type="hidden" value="/2013/blog/2013/03/07/pycontw-2013-1st-survey-report-zh/" />
-                                <ul class="nav">
-                                    <li>
-                                        <p class="navbar-text">
-
-                                            Language
-
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <select onchange="document.getElementById('language-selector').submit();" name="language">
-                        
-                            <option value="en">English</option>
-                        
-                            <option value="zh" selected="selected">中文</option>
-                        
-                            <option value="ja">日本語</option>
-                        
-                        </select>
-                                    </li>
-                                </ul>
-                            </form>
-                        </div>
-                    </div>
+                <div class="nav account-bar pull-right">
+                  <p>
+                    <a
+                      class="navbar-text"
+                      href="https://tw.pycon.org/2013/zh/account/login/"
+                      >登入</a
+                    >
+                    or
+                    <a href="https://tw.pycon.org/2013/zh/account/signup/"
+                      >註冊</a
+                    >
+                  </p>
                 </div>
+
+                <div class="pull-right social-buttons">
+                  <div class="btn-group">
+                    <a
+                      class="btn btn-small btn-primary"
+                      href="http://www.facebook.com/pycontw"
+                      target="_blank"
+                      title="PyCon Taiwan on Facebook"
+                    >
+                      <i class="icon-facebook"></i>
+                    </a>
+                    <a
+                      class="btn btn-small btn-info"
+                      href="http://twitter.com/pycontw"
+                      target="_blank"
+                      title="PyCon Taiwan on Twitter"
+                    >
+                      <i class="icon-twitter"></i>
+                    </a>
+                    <a
+                      class="btn btn-small btn-danger"
+                      href="https://plus.google.com/101932655972746759016/"
+                      target="_blank"
+                      title="PyCon Taiwan on Google+"
+                    >
+                      <i class="icon-google-plus"></i>
+                    </a>
+                    <a
+                      class="btn btn-small btn-plurk"
+                      href="http://www.plurk.com/pycontw"
+                      target="_blank"
+                      title="PyCon Taiwan on Plurk"
+                    >
+                      P
+                    </a>
+                  </div>
+                </div>
+
+                <form
+                  id="language-selector"
+                  action="https://tw.pycon.org/2013/i18n/setlang/"
+                  method="post"
+                  class="navbar-form pull-right language_form"
+                >
+                  <div style="display: none">
+                    <input
+                      type="hidden"
+                      name="csrfmiddlewaretoken"
+                      value="9d6b44d49334a19cc32179991a0aaf0a"
+                    />
+                  </div>
+                  <input
+                    name="next"
+                    type="hidden"
+                    value="https://tw.pycon.org/2013/blog/2013/03/07/pycontw-2013-1st-survey-report-zh/"
+                  />
+                  <ul class="nav">
+                    <li>
+                      <p class="navbar-text">Language</p>
+                    </li>
+                    <li>
+                      <select
+                        onchange="document.getElementById('language-selector').submit();"
+                        name="language"
+                      >
+                        <option value="en">English</option>
+
+                        <option value="zh" selected="selected">中文</option>
+
+                        <option value="ja">日本語</option>
+                      </select>
+                    </li>
+                  </ul>
+                </form>
+              </div>
             </div>
-
-
-
-
+          </div>
         </div>
+      </div>
     </header>
     <div class="banner hidden-phone">
-        <div class="images">
-        </div>
+      <div class="images"></div>
     </div>
     <div class="visible-phone">
-        <img class="site-logo" src="/2013/site_media/static/img/pycontw2013-site-logo.png" />
+      <img
+        class="site-logo"
+        src="https://tw.pycon.org/2013/site_media/static/img/pycontw2013-site-logo.png"
+      />
     </div>
     <section id="subnav">
-        <div class="container">
-
-        </div>
+      <div class="container"></div>
     </section>
-
-
 
     <section id="body">
-        <div class="container">
+      <div class="container">
+        <div class="row">
+          <div class="span10 offset1">
             <div class="row">
-                <div class="span10 offset1">
+              <div class="span3">
+                <h1 class="section-title"><span>部落格</span></h1>
+              </div>
+              <div class="span9">
+                <div class="blog-post">
+                  <h1>PyConTW 2013 第一階段問卷結果搶先報</h1>
+                  <p class="post_dateline">
+                    <span class="date">2013.03.07</span> by
+                    <span class="author">registration</span>
+                  </p>
 
-
-
-                    <div class="row">
-                        <div class="span3">
-                            <h1 class="section-title"><span>部落格</span></h1>
-
-
-
-
-                        </div>
-                        <div class="span9">
-
-                            <div class="blog-post">
-                                <h1>PyConTW 2013 第一階段問卷結果搶先報</h1>
-                                <p class="post_dateline">
-                                    <span class="date">2013.03.07</span> by <span class="author">registration</span>
-                                </p>
-
-                                <div class="content">
-                                    <h3 id="pycontw_2013_+++++++++++">PyConTW 2013 第一階段問卷結果搶先報</h3>
-                                    <p>首先感謝各位朋友填寫這次 <a href="https://docs.google.com/spreadsheet/viewform?formkey=dEZIZVJBSkFHSzlxYnV3RlZjbEhqV3c6MQ">PyConTW 2013 的問卷</a>！一個多月以來，已經有百來位朋友願意給予我們回饋。除了持續請各位朋友分享此問卷給身邊的人作答以外，我們將在此摘要問卷的回答狀況以供參考：<br/>
-                                    </p>
-                                    <ul>
-                                        <li>
-                                            <p>大家最喜歡聽的前三大演講主題依序為 <strong>Web</strong>（68%）、<strong>雲端</strong>（59%）、<strong>GUI</strong>（49%），緊接著在後的是 <strong>Mobile</strong>、<strong>資料庫與系統管理</strong>。有意思的是，對<strong>創業分享</strong>主題有興趣的朋友佔 43%，對<strong>科學</strong>有興趣的佔
-                                                29%，都是極具特色的主題和聽眾族群。由此可知，在台灣 Python 的使用者可能以 Web 應用為大宗，且有很高的機率都正在創業中或對創業有高度興趣！<br/>
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <p>今年 Python Tutorial 的課程得到了不錯的反應，已有 <strong>24</strong> 位朋友表達一定會去參加講師林信良 (良葛格) 的課程，請有興趣者持續關注 <a href="/2013/zh/tutorial/">先修課程頁面</a> 的消息。 <br/>
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <p>調查各領域 Python 人才的需求：同樣地，以 <strong>Web</strong>（54%） 開發者的需求為最大宗，緊接在後的需求是 <strong>Database</strong> 與 <strong>General Purpose</strong> 以 34% 並列。事實上，無論是 <strong>GUI</strong>、<strong>Mobile</strong>、<strong>桌面程式</strong>、<strong>Python+數學</strong>、<strong>Python+設計美工</strong>、<strong>Python+硬體控制</strong>、<strong>Python+管理</strong>，這些人才需求的選項皆有人填寫。<br/>
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <p>大家對於各地社群的看法，最多的問題就是詢問什麼時候台灣南部（台南、嘉義、雲林）會辦理 Python 的聚會。（對於此問題，PyConTW 的志工 Joe 表示，公司年中從台北搬遷回台南後，他會嘗試於台南尋找場地舉辦聚會，等不及的朋友不妨找個咖啡廳，先舉辦小型的聚會試試水溫。） <br/>
-                                            </p>
-                                        </li>
-                                    </ul>
-                                    <p>依據問卷的結果，我們預計執行以下的計畫：<br/>
-                                    </p>
-                                    <ul>
-                                        <li>我們將持續依（但不侷限於）各主題，徵求國內外的講者共同參與這次 PyConTW 2013 的盛會。</li>
-                                        <li>我們將在兩天的會議之中，試著規劃一些活動，促進有 Python 人才需求者與 Pythoner 之間的互動。<br/>
-                                        </li>
-                                        <li>對於也有興趣加入志工的朋友，我們將逐一與您聯絡。若您未留下聯絡資料，也不妨主動與我們 <a href="/2013/zh/blog/2012/12/11/registration-hiring/">聯絡</a>。</li>
-                                    </ul>
-                                    <p>從問卷的結果觀之，最被關注的主題與需要的人才，皆是以 Web、Database 方面為主，合理推估是因問卷觸及到的早期作答者大多是 Web 開發人員，比較容易得知 PyConTW 2013 的資訊。因此，若是您的身邊有使用 Python 的科學<del>怪</del>人、嵌入<del>蟻</del>式人、IC 人 … 或是有興趣的人，請您務必將問卷給予他們作答，順便問看看有沒有興趣 <a href="/2013/zh/blog/2012/11/21/call-for-proposals-zh/">投個演講</a>                                        至 PyConTW 2013！再次感謝各位朋友們的協助！</p>
-                                    <p>（本文由 PyConTW 2013 志工 Joe 撰寫於 2013.3.5）</p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-
-
+                  <div class="content">
+                    <h3 id="pycontw_2013_+++++++++++">
+                      PyConTW 2013 第一階段問卷結果搶先報
+                    </h3>
+                    <p>
+                      首先感謝各位朋友填寫這次
+                      <a
+                        href="https://docs.google.com/spreadsheet/viewform?formkey=dEZIZVJBSkFHSzlxYnV3RlZjbEhqV3c6MQ"
+                        >PyConTW 2013 的問卷</a
+                      >！一個多月以來，已經有百來位朋友願意給予我們回饋。除了持續請各位朋友分享此問卷給身邊的人作答以外，我們將在此摘要問卷的回答狀況以供參考：<br />
+                    </p>
+                    <ul>
+                      <li>
+                        <p>
+                          大家最喜歡聽的前三大演講主題依序為
+                          <strong>Web</strong
+                          >（68%）、<strong>雲端</strong>（59%）、<strong>GUI</strong>（49%），緊接著在後的是
+                          <strong>Mobile</strong
+                          >、<strong>資料庫與系統管理</strong>。有意思的是，對<strong>創業分享</strong>主題有興趣的朋友佔
+                          43%，對<strong>科學</strong>有興趣的佔
+                          29%，都是極具特色的主題和聽眾族群。由此可知，在台灣
+                          Python 的使用者可能以 Web
+                          應用為大宗，且有很高的機率都正在創業中或對創業有高度興趣！<br />
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          今年 Python Tutorial 的課程得到了不錯的反應，已有
+                          <strong>24</strong> 位朋友表達一定會去參加講師林信良
+                          (良葛格) 的課程，請有興趣者持續關注
+                          <a href="https://tw.pycon.org/2013/zh/tutorial/"
+                            >先修課程頁面</a
+                          >
+                          的消息。 <br />
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          調查各領域 Python 人才的需求：同樣地，以
+                          <strong>Web</strong>（54%）
+                          開發者的需求為最大宗，緊接在後的需求是
+                          <strong>Database</strong> 與
+                          <strong>General Purpose</strong> 以 34%
+                          並列。事實上，無論是
+                          <strong>GUI</strong
+                          >、<strong>Mobile</strong>、<strong>桌面程式</strong>、<strong>Python+數學</strong>、<strong>Python+設計美工</strong>、<strong>Python+硬體控制</strong>、<strong>Python+管理</strong>，這些人才需求的選項皆有人填寫。<br />
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          大家對於各地社群的看法，最多的問題就是詢問什麼時候台灣南部（台南、嘉義、雲林）會辦理
+                          Python 的聚會。（對於此問題，PyConTW 的志工 Joe
+                          表示，公司年中從台北搬遷回台南後，他會嘗試於台南尋找場地舉辦聚會，等不及的朋友不妨找個咖啡廳，先舉辦小型的聚會試試水溫。）
+                          <br />
+                        </p>
+                      </li>
+                    </ul>
+                    <p>依據問卷的結果，我們預計執行以下的計畫：<br /></p>
+                    <ul>
+                      <li>
+                        我們將持續依（但不侷限於）各主題，徵求國內外的講者共同參與這次
+                        PyConTW 2013 的盛會。
+                      </li>
+                      <li>
+                        我們將在兩天的會議之中，試著規劃一些活動，促進有 Python
+                        人才需求者與 Pythoner 之間的互動。<br />
+                      </li>
+                      <li>
+                        對於也有興趣加入志工的朋友，我們將逐一與您聯絡。若您未留下聯絡資料，也不妨主動與我們
+                        <a
+                          href="https://tw.pycon.org/2013/zh/blog/2012/12/11/registration-hiring/"
+                          >聯絡</a
+                        >。
+                      </li>
+                    </ul>
+                    <p>
+                      從問卷的結果觀之，最被關注的主題與需要的人才，皆是以
+                      Web、Database
+                      方面為主，合理推估是因問卷觸及到的早期作答者大多是 Web
+                      開發人員，比較容易得知 PyConTW 2013
+                      的資訊。因此，若是您的身邊有使用 Python
+                      的科學<del>怪</del>人、嵌入<del>蟻</del>式人、IC 人 …
+                      或是有興趣的人，請您務必將問卷給予他們作答，順便問看看有沒有興趣
+                      <a
+                        href="https://tw.pycon.org/2013/zh/blog/2012/11/21/call-for-proposals-zh/"
+                        >投個演講</a
+                      >
+                      至 PyConTW 2013！再次感謝各位朋友們的協助！
+                    </p>
+                    <p>（本文由 PyConTW 2013 志工 Joe 撰寫於 2013.3.5）</p>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-
+      </div>
     </section>
 
-
     <footer>
-
-        <hr />
-        <div class="container">
-            <p>
-                PyCon Taiwan 2013 built with <a href="http://djangoproject.com">Django</a> and <a href="http://pinaxproject.com">Pinax</a>. Hosting provided by <a href="http://streetvoice.com">StreetVoice</a>. Built by PyCon Taiwan web team.
-                <br /> Questions? Comments? Contact <a href="mailto:organizers@pycon.tw">organizers@pycon.tw</a>
-            </p>
-
-
-        </div>
+      <hr />
+      <div class="container">
+        <p>
+          PyCon Taiwan 2013 built with
+          <a href="http://djangoproject.com">Django</a> and
+          <a href="http://pinaxproject.com">Pinax</a>. Hosting provided by
+          <a href="http://streetvoice.com">StreetVoice</a>. Built by PyCon
+          Taiwan web team. <br />
+          Questions? Comments? Contact
+          <a href="mailto:organizers@pycon.tw">organizers@pycon.tw</a>
+        </p>
+      </div>
     </footer>
 
-
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="/2013/site_media/static/js/jquery.eqheight.js" type="text/javascript"></script>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+    ></script>
+    <script
+      src="https://tw.pycon.org/2013/site_media/static/js/jquery.eqheight.js"
+      type="text/javascript"
+    ></script>
     <script type="text/javascript">
-        $(function() {
-            function dynamic_banner() {
-                var banner_width = Math.min(0, Math.max(-(1920 - $(window).width()) / 2, -467));
-                $(".banner .images").css("margin-left", banner_width + "px");
-            }
-            dynamic_banner();
-            $(window).on("resize", dynamic_banner);
+      $(function () {
+        function dynamic_banner() {
+          var banner_width = Math.min(
+            0,
+            Math.max(-(1920 - $(window).width()) / 2, -467)
+          );
+          $(".banner .images").css("margin-left", banner_width + "px");
+        }
+        dynamic_banner();
+        $(window).on("resize", dynamic_banner);
 
-            // equal height for posts on homepage
-            $(".row-fluid").eqHeight(".span3, .span6, .span9");
-        })
+        // equal height for posts on homepage
+        $(".row-fluid").eqHeight(".span3, .span6, .span9");
+      });
     </script>
-    <script src="/2013/site_media/static/js/base.js" type="text/javascript"></script>
-    <script src="/2013/site_media/static/js/bootstrap.js" type="text/javascript"></script>
+    <script
+      src="https://tw.pycon.org/2013/site_media/static/js/base.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://tw.pycon.org/2013/site_media/static/js/bootstrap.js"
+      type="text/javascript"
+    ></script>
 
-    <!--script src="/2013/site_media/static/uni_form/uni-form.jquery.js" type="text/javascript"></script-->
-    <script type="text/javascript" src="/2013/site_media/static/markitup/jquery.markitup.js"></script>
-    <script type="text/javascript" src="/2013/site_media/static/markitup/sets/markdown-custom/set.js"></script>
+    <!--script src="https://tw.pycon.org/2013/site_media/static/uni_form/uni-form.jquery.js" type="text/javascript"></script-->
+    <script
+      type="text/javascript"
+      src="https://tw.pycon.org/2013/site_media/static/markitup/jquery.markitup.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://tw.pycon.org/2013/site_media/static/markitup/sets/markdown-custom/set.js"
+    ></script>
 
-    <script src="/2013/site_media/static/js/facebox.js" type="text/javascript"></script>
+    <script
+      src="https://tw.pycon.org/2013/site_media/static/js/facebox.js"
+      type="text/javascript"
+    ></script>
     <script type="text/javascript">
-        jQuery(document).ready(function($) {
-            $('a[rel*=facebox]').facebox({
-                loadingImage: '/2013/site_media/static/img/facebox/loading.gif',
-                closeImage: '/2013/site_media/static/img/facebox/closelabel.png'
-            });
-            $(document).bind('reveal.facebox', function() {
-                $("form.in_facebox").submit(function() {
-                    form = this;
-                    jQuery.facebox(function($) {
-                        fields = jQuery(form).find("input[type='text']").filter(":enabled");
-                        params = {}
-                        fields.each(function() {
-                            params[this.name] = this.value;
-                        });
-                        jQuery.post(form.action, params,
-                            function(data, textStatus) {
-                                jQuery.facebox(data);
-                            }
-                        );
-                    });
-                    return false;
-                });
-            });
-            $(document).bind('close.facebox', function() {
-                location.reload();
-            });
+      jQuery(document).ready(function ($) {
+        $("a[rel*=facebox]").facebox({
+          loadingImage: "/2013/site_media/static/img/facebox/loading.gif",
+          closeImage: "/2013/site_media/static/img/facebox/closelabel.png",
         });
+        $(document).bind("reveal.facebox", function () {
+          $("form.in_facebox").submit(function () {
+            form = this;
+            jQuery.facebox(function ($) {
+              fields = jQuery(form)
+                .find("input[type='text']")
+                .filter(":enabled");
+              params = {};
+              fields.each(function () {
+                params[this.name] = this.value;
+              });
+              jQuery.post(form.action, params, function (data, textStatus) {
+                jQuery.facebox(data);
+              });
+            });
+            return false;
+          });
+        });
+        $(document).bind("close.facebox", function () {
+          location.reload();
+        });
+      });
     </script>
     <script type="text/javascript" charset="utf-8">
-        $(document).ajaxSend(function(event, xhr, settings) {
-            function getCookie(name) {
-                var cookieValue = null;
-                if (document.cookie && document.cookie != '') {
-                    var cookies = document.cookie.split(';');
-                    for (var i = 0; i < cookies.length; i++) {
-                        var cookie = jQuery.trim(cookies[i]);
-                        // Does this cookie string begin with the name we want?
-                        if (cookie.substring(0, name.length + 1) == (name + '=')) {
-                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                            break;
-                        }
-                    }
-                }
-                return cookieValue;
+      $(document).ajaxSend(function (event, xhr, settings) {
+        function getCookie(name) {
+          var cookieValue = null;
+          if (document.cookie && document.cookie != "") {
+            var cookies = document.cookie.split(";");
+            for (var i = 0; i < cookies.length; i++) {
+              var cookie = jQuery.trim(cookies[i]);
+              // Does this cookie string begin with the name we want?
+              if (cookie.substring(0, name.length + 1) == name + "=") {
+                cookieValue = decodeURIComponent(
+                  cookie.substring(name.length + 1)
+                );
+                break;
+              }
             }
+          }
+          return cookieValue;
+        }
 
-            function sameOrigin(url) {
-                // url could be relative or scheme relative or absolute
-                var host = document.location.host; // host + port
-                var protocol = document.location.protocol;
-                var sr_origin = '//' + host;
-                var origin = protocol + sr_origin;
-                // Allow absolute or scheme relative URLs to same origin
-                return (url == origin || url.slice(0, origin.length + 1) == origin + '/') ||
-                    (url == sr_origin || url.slice(0, sr_origin.length + 1) == sr_origin + '/') ||
-                    // or any other URL that isn't scheme relative or absolute i.e relative.
-                    !(/^(\/\/|http:|https:).*/.test(url));
-            }
+        function sameOrigin(url) {
+          // url could be relative or scheme relative or absolute
+          var host = document.location.host; // host + port
+          var protocol = document.location.protocol;
+          var sr_origin = "//" + host;
+          var origin = protocol + sr_origin;
+          // Allow absolute or scheme relative URLs to same origin
+          return (
+            url == origin ||
+            url.slice(0, origin.length + 1) == origin + "/" ||
+            url == sr_origin ||
+            url.slice(0, sr_origin.length + 1) == sr_origin + "/" ||
+            // or any other URL that isn't scheme relative or absolute i.e relative.
+            !/^(\/\/|http:|https:).*/.test(url)
+          );
+        }
 
-            function safeMethod(method) {
-                return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
-            }
+        function safeMethod(method) {
+          return /^(GET|HEAD|OPTIONS|TRACE)$/.test(method);
+        }
 
-            if (!safeMethod(settings.type) && sameOrigin(settings.url)) {
-                xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
-            }
-        });
+        if (!safeMethod(settings.type) && sameOrigin(settings.url)) {
+          xhr.setRequestHeader("X-CSRFToken", getCookie("csrftoken"));
+        }
+      });
     </script>
 
     <script type="text/javascript">
-        $(document).ready(function($) {
-            $("a.boxes-edit-link").click(function() {
-                $.facebox.settings.loadingImage = "/site_media/static/img/loading.gif";
-                $.facebox.settings.closeImage = "/site_media/static/img/closelabel.png";
-                $(document).bind("beforeReveal.facebox", function() {
-                    $("#facebox .content").css("width", "600px");
-                });
-                var editable = this;
-                $(document).bind("reveal.facebox", function() {
-                    $("#edit_form").submit(function() {
-                        $.post(editable.href, $(this).serialize(), function(data) {
-                            $(document).trigger("close.facebox");
-                            $(editable).load(data);
-                            $(document).unbind("reveal.facebox");
-                        });
-                        return false;
-                    });
-                });
-                $.facebox({
-                    ajax: this.href
-                });
-                return false;
+      $(document).ready(function ($) {
+        $("a.boxes-edit-link").click(function () {
+          $.facebox.settings.loadingImage =
+            "/site_media/static/img/loading.gif";
+          $.facebox.settings.closeImage =
+            "/site_media/static/img/closelabel.png";
+          $(document).bind("beforeReveal.facebox", function () {
+            $("#facebox .content").css("width", "600px");
+          });
+          var editable = this;
+          $(document).bind("reveal.facebox", function () {
+            $("#edit_form").submit(function () {
+              $.post(editable.href, $(this).serialize(), function (data) {
+                $(document).trigger("close.facebox");
+                $(editable).load(data);
+                $(document).unbind("reveal.facebox");
+              });
+              return false;
             });
+          });
+          $.facebox({
+            ajax: this.href,
+          });
+          return false;
         });
+      });
     </script>
 
     <script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-28961467-1']);
-        _gaq.push(['_trackPageview']);
-        _gaq.push(['_trackPageLoadTime']);
-        // _gaq.push(['_setCustomVar', 1, 'Authentication Type', ut, 2]);
+      var _gaq = _gaq || [];
+      _gaq.push(["_setAccount", "UA-28961467-1"]);
+      _gaq.push(["_trackPageview"]);
+      _gaq.push(["_trackPageLoadTime"]);
+      // _gaq.push(['_setCustomVar', 1, 'Authentication Type', ut, 2]);
 
-        (function() {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
+      (function () {
+        var ga = document.createElement("script");
+        ga.type = "text/javascript";
+        ga.async = true;
+        ga.src =
+          ("https:" == document.location.protocol
+            ? "https://ssl"
+            : "http://www") + ".google-analytics.com/ga.js";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(ga, s);
+      })();
     </script>
-
 
     <script type="text/javascript" charset="utf-8">
-        $(function() {
-            $("#id_email").focus();
-            $(function() {
-                if (('ul#messages').length > 0) {
-                    setTimeout(function() {
-                        $('ul#messages').fadeOut(3000);
-                    }, 2000);
-                }
-            });
+      $(function () {
+        $("#id_email").focus();
+        $(function () {
+          if ("ul#messages".length > 0) {
+            setTimeout(function () {
+              $("ul#messages").fadeOut(3000);
+            }, 2000);
+          }
         });
+      });
     </script>
-
-
-</body>
-
+  </body>
 </html>

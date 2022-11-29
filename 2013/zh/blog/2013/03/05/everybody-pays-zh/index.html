@@ -1,382 +1,607 @@
-
 <!DOCTYPE html>
 <html lang="zh">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta http-equiv="Cache-Control" CONTENT="private, no-cache, no-store">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Cache-Control" content="private, no-cache, no-store" />
 
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="/2013/site_media/static/css/font-awesome.min.css">
-        <!--[if IE 7]>
-        <link rel="stylesheet" href="/2013/site_media/static/css/font-awesome-ie7.min.css">
-        <![endif]-->
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://tw.pycon.org/2013/site_media/static/css/font-awesome.min.css"
+    />
+    <!--[if IE 7]>
+      <link
+        rel="stylesheet"
+        href="https://tw.pycon.org/2013/site_media/static/css/font-awesome-ie7.min.css"
+      />
+    <![endif]-->
 
-        <link href="/2013/site_media/static/img/favicon.ico" rel="shortcut icon" />
-        <title>Everybody Pays (公平付費) / PyCon Taiwan 2013</title>
-        <!--  hack to make IE able to apply CSS to elements that it doesn't usually know about. See http://code.google.com/p/html5shim/ -->
-        <!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-        
-        <link rel="stylesheet" href="/2013/site_media/static/css/facebox.css" />
-        <link href="/2013/site_media/static/markitup/skins/simple/style.css" type="text/css" media="screen" rel="stylesheet" />
-<link href="/2013/site_media/static/markitup/sets/markdown-custom/style.css" type="text/css" media="screen" rel="stylesheet" />
+    <link
+      href="https://tw.pycon.org/2013/site_media/static/img/favicon.ico"
+      rel="shortcut icon"
+    />
+    <title>Everybody Pays (公平付費) / PyCon Taiwan 2013</title>
+    <!--  hack to make IE able to apply CSS to elements that it doesn't usually know about. See http://code.google.com/p/html5shim/ -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-        
-        
-    
-    <link rel="stylesheet" href="/2013/site_media/static/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/2013/site_media/static/css/bootstrap-responsive.css" />
-    <link rel="stylesheet" href="/2013/site_media/static/css/custom.css" />
-    <link rel="alternate" type="application/atom+xml" href="/2013/zh/feed/general/" title="blog feed"/>
-    
+    <link
+      rel="stylesheet"
+      href="https://tw.pycon.org/2013/site_media/static/css/facebox.css"
+    />
+    <link
+      href="https://tw.pycon.org/2013/site_media/static/markitup/skins/simple/style.css"
+      type="text/css"
+      media="screen"
+      rel="stylesheet"
+    />
+    <link
+      href="https://tw.pycon.org/2013/site_media/static/markitup/sets/markdown-custom/style.css"
+      type="text/css"
+      media="screen"
+      rel="stylesheet"
+    />
 
-    </head>
-    <body class="blog " id="">
+    <link
+      rel="stylesheet"
+      href="https://tw.pycon.org/2013/site_media/static/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://tw.pycon.org/2013/site_media/static/css/bootstrap-responsive.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://tw.pycon.org/2013/site_media/static/css/custom.css"
+    />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      href="https://tw.pycon.org/2013/zh/feed/general/"
+      title="blog feed"
+    />
+  </head>
 
-
-
-            <header class="header">
-                <div class="container">
-                    
-<div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-
-      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </a>
-
-        <!-- Everything you want hidden at 940px or less, place within here -->
-        <div class="nav-collapse collapse">
-            <!-- .nav, .navbar-search, .navbar-form, etc -->
-            <ul class="nav nav-zh">
-                <li class="">
-                    <a href="/2013/zh/" class="brand" id="link-home">PyConTW</a>
-                </li>
-                <li class="">
-                    <a href="/2013/zh/about/" id="link-about">關於</a>
-                </li>
-                <li class="">
-                    <a href="/2013/zh/tutorial/" id="link-tutorial">先修</a>
-                </li>
-		<li class="">
-                    <a href="/2013/zh/program/" id="link-program">議程</a>
-                </li>
-                <li class="">
-                    <a href="/2013/zh/sponsors/" id="link-sponsors">贊助</a>
-                </li>
-                <li class="">
-                    <a href="/2013/zh/speaker/" id="link-speakers">講者</a>
-                </li>
-                <li class="">
-                    <a href="/2013/zh/registration/" id="link-registration">註冊</a>
-                </li>
-                <li class="">
-                    <a href="/2013/zh/venue/" id="link-venue">地點</a>
-                </li>
-                <li class="active">
-                    <a href="/2013/zh/blog/" id="link-blog">部落格</a>
-                </li>
-            </ul>
-
-            
-
-
-<div class="nav account-bar pull-right">
-    <p><a class="navbar-text" href="/2013/zh/account/login/">登入</a> or <a href="/2013/zh/account/signup/">註冊</a></p>
-</div>
-
-
-
-
-            <div class="pull-right social-buttons">
-                <div class="btn-group">
-                    <a class="btn btn-small btn-primary" href="http://www.facebook.com/pycontw" target="_blank" title="PyCon Taiwan on Facebook">
-                        <i class="icon-facebook"></i>
-                    </a>
-                    <a class="btn btn-small btn-info" href="http://twitter.com/pycontw" target="_blank" title="PyCon Taiwan on Twitter">
-                        <i class="icon-twitter"></i>
-                    </a>
-                    <a class="btn btn-small btn-danger" href="https://plus.google.com/101932655972746759016/" target="_blank" title="PyCon Taiwan on Google+">
-                        <i class="icon-google-plus"></i>
-                    </a>
-                    <a class="btn btn-small btn-plurk" href="http://www.plurk.com/pycontw" target="_blank" title="PyCon Taiwan on Plurk">
-                        P
-                    </a>
-                </div>
-            </div>
-
-            <form id="language-selector" action="/2013/i18n/setlang/" method="post" class="navbar-form pull-right language_form"><div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='9d6b44d49334a19cc32179991a0aaf0a' /></div>
-                <input name="next" type="hidden" value="/2013/blog/2013/03/05/everybody-pays-zh/" />
-                <ul class="nav">
-                    <li>
-                        <p class="navbar-text">
-                            
-                                Language
-                            
-                        </p>
-                    </li>
-                    <li>
-                        <select onchange="document.getElementById('language-selector').submit();" name="language">
-                        
-                            <option value="en">English</option>
-                        
-                            <option value="zh" selected="selected">中文</option>
-                        
-                            <option value="ja">日本語</option>
-                        
-                        </select>
-                    </li>
-                </ul>
-            </form>
-        </div>
-    </div>
-  </div>
-</div>
-
-                    
-
-                    
-                </div>
-            </header>
-            <div class="banner hidden-phone">
-                <div class="images">
-                </div>
-            </div>
-            <div class="visible-phone">
-                <img class="site-logo" src="/2013/site_media/static/img/pycontw2013-site-logo.png"/>
-            </div>
-            <section id="subnav">
-                <div class="container">
-                    
-                </div>
-            </section>
-
-            
-                
-                <section id="body">
-                    <div class="container">
-                        <div class="row">
-                            <div class="span10 offset1">
-
-                        
-    
-<div class="row">
-    <div class="span3">
-        <h1 class="section-title"><span>部落格</span></h1>
-        
-
-
-
-    </div>
-    <div class="span9">
-        
-    <div class="blog-post">
-        <h1>Everybody Pays (公平付費)</h1>
-        <p class="post_dateline">
-    <span class="date">2013.03.05</span>
-    by <span class="author">yungyuc</span>
-</p>
-
-        <div class="content"><p>PyCon Taiwan 有一個稍微特別，但其實非常普通的原則：Everybody Pays (硬要翻成中文的話，就是「公平付費」)。所有參加會議的人，除非是特邀的助拳者，像是 keynote speakers，不然大家都要交錢。不管是強者我朋友介紹來的講者、議程的審查委員，或是會議主席我自己，統統都要交錢，一視同仁，童叟無欺。我們去年首次籌辦 PyConTW 的時候，就<a href="http://solvcon.net/yyc/en/latest/writing/2012/pythonite_callout.html">已經採用了 Everybody Pays 的原則</a>。今年當然也是一樣。我想將來大概也不會改變。</p>
-<p>說 Everybody Pays 特別，是因為許多研討會，尤其是台灣的開源研討會，有免除講者的報名費的習慣。另外也有一些研討會，連工作人員的報名費也免除。對常參加其它研討會的人，尤其是講者來說，PyConTW 真是奇怪，為什麼我來演講還要交錢，而且還是全額不打折！？PyConTW 挺不便宜的呢。相信很多人心裡有這個疑問，肯定也有些潛在的講者因此猶豫不決。因此我要在這裡，清楚地交待我們要求 Everybody Pays 的原因。</p>
-<h2 id="++">價值</h2>
-<p>我們堅持 Everybody Pays 最主要的原因，是要強調價值 (value)。我們每年辦 PyConTW，不管主題是什麼，總是要為參加會議的人產生價值。我們希望來到 PyConTW 的參與者明確地知道，這個研討會對你有好處。如何達到這一點？價值這種東西其實很難客觀描述；你可能覺得 MacBookAir 比 MacBookPro 更有價值，他也許想法剛好相反，而我覺得 ThinkPad 才是高貴。很難講誰是對的，或者說同一件東西，對每個人來說，價值都不一樣。在這種情況下，我們只好拿價格 (price) 出來作客觀的基準。</p>
-<p>我們得承認，在付出了金錢之後，人就會非常在意是否能取回相等甚至於更多的回報。我們希望你來參加會議，取得我們努力為社群產生的價值，所以收錢。我們想為所有人提供價值，所以希望 Everybody Pays。講者有收穫、聽眾有收穫，籌備志工也會有收獲。另外，贊助者也要有所收穫。PyConTW 當然要為贊助者產生價值，不然怎麼有臉收取贊助呢？贊助者也是 Python 社群的成員呢！</p>
-<p>PyConTW 該收多少錢呢？這是一個很複雜的問題，至少得考慮硬體成本、潛在報名者的收入水準，以及議程的內容等等。我們才辦到第二年，還沒有辦法訂出很明確的收費計算原則。但我可以保證，PyConTW 所有的籌備工作，絕對是以物超所值為目標。不管訂價如何，我們都要讓你在會議裡面得到比報名費多而又多的東西。</p>
-<h2 id="++_1">公平</h2>
-<p>Everybody Pays 也體現我們對公平的重視，所以我中譯為公平付費。價值真的很主觀。以講者為例，既然講者費心費力為大會準備演講，作了很大的付出，是不是 PyConTW 應該要補償講者的辛苦？這樣說來，志工也很辛苦，是否也要補償？這實在很難評估判斷。也許有人覺得應該補償講者，但肯定也有人認為志工比較需要。有些熱心的與會者雖然不是志工，但看到有桌子需要搬就出力，發現有人迷路就帶路，是不是也應該在註冊費上回饋一下？不誇張，一定會有人覺得這也有道理的。</p>
-<p>PyConTW 認為，不應該這樣斤斤計較。把格局放大來看，多種的多收，少種的少收，這話是真的。PyConTW 既然是要為社群產生價值，或者說加值 (value-add)，那當然要加愈多愈好。技術分享本身就會帶來回報。站在講台上所收獲的比坐在台下多了太多。那麼何以我們還要「補償」講者？志工雖然長時間辛勞，而且在會場還沒時間參與議程，但我實在地講，志工的收穫絕對還比講者要多。舉我自己當例子。為了聯絡 PyConTW 的工作，這一兩年下來，光電話就花掉不知道幾個註冊費，但我甘心樂意地花。扮演會議負責人的角色所給我的經驗，值註冊費的百倍不止。真要計算的話，參與社群帶給我的東西，比我付出給社群的多了太多。我還倒欠著不知道該怎麼還才好。</p>
-<p>因此，最公平的付費方式，就是 Everybody Pays。不過讓我們想一下 import this 的輸出："Special cases aren't special enough to break the rules.  Although practicality beats purity."  雖然所有參加 PyConTW 的人，不問身份地位都要交一樣的註冊費，但有兩種例外狀況。第一種是受邀的講者。幾乎所有的研討會都有主題演講 (keynote speech)，日本人譯作基調演講，來為會議定調 (我想日人的翻譯比我們更到位)。這些特邀講者參與的目的，真的主要是幫忙，那麼我們實在是要禮遇。我們不向收他們收註冊費，而且還會補助他們的旅費和住宿。因為他們的分享會極大地幫助與會者，所以我們願意付出金錢，敦請這些富有經驗的人來為我們提供價值。</p>
-<h3 id="++++">財務協助</h3>
-<p>此外，我們今年也設計了財務協助 (financial aid) 計畫。接受 PyConTW 財務協助的與會者，是第二種不必交註冊費的人。PyConTW 財務協助的細節還在研議中，現在我只能說明大原則。我們知道有許多對 PyConTW 或 Python 有興趣的人，因為負擔不起，或基於其它理由不願意負擔註冊費，所以不來參加會議。許多這樣的人對社群貢獻良多，社群也十分期待與這些成員互動，所以 PyConTW 會在通盤考量後，選擇性地給予申請者財務協助。</p>
-<p>採取收費卻用財務協助免除費用這種看似複雜的形式，其實是為了簡化會議的籌備工作。財務協助制度可以把所有的例外狀況統包在一種預算項目下。我們只要明訂申請和審查方式，就可以用簡單的流程服務各種例外需求。因為財務協助是支出項目，我們也很容易評估它對整體預算造成的影響。在簡化工作之外，因為可以用財務協助這種特別的支出，在預算中量化這種本來是收入減損的項目，我們就更容易估計註冊收入，強化預算運用的效率。</p>
-<p>雖然細部規則仍未確定，但 PyConTW 的財務協助不會偏離 Everybody Pays 原則的中心：為與會者加值。財務協助是有限的資源，我們會用來幫助那些最需要的，以及對與會者幫助最大的人來參加會議。</p>
-<h2 id="++_2">傳統</h2>
-<p>Everybody Pays 事實上不是 PyConTW 的發明，而是我們拾人口慧而已。Everybody Pays 事實是上 PyCon(US) "everyone helps, and everyone pays" 傳統的一部分。也就是說，正牌的 PyCon 一直都有 Everybody Pays 的慣例：就算是 Guido 也得買票的。2011 年，當時 PyCon(US) 的主要籌備者之一的 Jesse Noller，發表了 <a href="http://jessenoller.com/blog/2011/05/25/pycon-everybody-pays/">"PYCON: EVERYBODY PAYS" 一文</a>，詳細說明了這個慣例的細節和背景。因此，Everybody Pays 雖然在台灣可能有點特別，但對 Python 社群來說，卻是一項普通的傳統。</p>
-<h2 id="++_3">發展</h2>
-<p>現在我們也在台灣辦自己的 PyCon 了。這是我們的社群。我們有共同的愛好，而且很有趣地，我們因為認同 Python 的關係，養成了一些共通的性格。PyConTW 的籌備團隊一開始很難接受 Everybody Pays，但在看過 <a href="http://jessenoller.com/blog/2011/05/25/pycon-everybody-pays/">Jesse Noller 的介紹文章</a>之後，對這樣的作法多少有點認同，或者至少覺得不是件壞事。是的，因為我們連講者都要求付費，所以徵起稿來很辛苦 (我好努力整理了一篇<a href="http://solvcon.net/yyc/en/latest/writing/2013/pycontw2013_call_for_proposals.html">催稿文</a>，但大概才思太差，還是不見效果，慘哉慘哉)。但我想，我們要的是一個鼓勵技術發展的社群。我們是寫 Python 的。我們建立社群是為了一起分享開發 Python 程式的樂趣。我們應該為了增加投稿，降低我們的期待嗎？台灣的 Pythonistas，應該不會這麼沒有志氣吧。</p>
-<p>我們希望 Python 在台灣愈走愈穩、愈走愈強嗎？我想 Everybody Pays 是第一步。社群成員的深度合作，是發展的硬道理。</p>
-<p>蛇年快樂。</p></div>
-    </div>
-
-    </div>
-</div>
-
-
-
-                            </div>
-                        </div>
-                    </div>
-
-                </section>
-            
-
-        <footer>
-            
-            <hr />
+  <body class="blog" id="">
+    <header class="header">
+      <div class="container">
+        <div class="navbar navbar-fixed-top">
+          <div class="navbar-inner">
             <div class="container">
-    <p>
-        PyCon Taiwan 2013 built with <a href="http://djangoproject.com">Django</a> and <a href="http://pinaxproject.com">Pinax</a>. Hosting provided by <a href="http://streetvoice.com">StreetVoice</a>. Built by PyCon Taiwan web team.
-    <br />
-        Questions? Comments? Contact <a href="mailto:organizers@pycon.tw">organizers@pycon.tw</a>
-    </p>
+              <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+              <a
+                class="btn btn-navbar"
+                data-toggle="collapse"
+                data-target=".nav-collapse"
+              >
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </a>
 
+              <!-- Everything you want hidden at 940px or less, place within here -->
+              <div class="nav-collapse collapse">
+                <!-- .nav, .navbar-search, .navbar-form, etc -->
+                <ul class="nav nav-zh">
+                  <li class="">
+                    <a
+                      href="https://tw.pycon.org/2013/zh/"
+                      class="brand"
+                      id="link-home"
+                      >PyConTW</a
+                    >
+                  </li>
+                  <li class="">
+                    <a
+                      href="https://tw.pycon.org/2013/zh/about/"
+                      id="link-about"
+                      >關於</a
+                    >
+                  </li>
+                  <li class="">
+                    <a
+                      href="https://tw.pycon.org/2013/zh/tutorial/"
+                      id="link-tutorial"
+                      >先修</a
+                    >
+                  </li>
+                  <li class="">
+                    <a
+                      href="https://tw.pycon.org/2013/zh/program/"
+                      id="link-program"
+                      >議程</a
+                    >
+                  </li>
+                  <li class="">
+                    <a
+                      href="https://tw.pycon.org/2013/zh/sponsors/"
+                      id="link-sponsors"
+                      >贊助</a
+                    >
+                  </li>
+                  <li class="">
+                    <a
+                      href="https://tw.pycon.org/2013/zh/speaker/"
+                      id="link-speakers"
+                      >講者</a
+                    >
+                  </li>
+                  <li class="">
+                    <a
+                      href="https://tw.pycon.org/2013/zh/registration/"
+                      id="link-registration"
+                      >註冊</a
+                    >
+                  </li>
+                  <li class="">
+                    <a
+                      href="https://tw.pycon.org/2013/zh/venue/"
+                      id="link-venue"
+                      >地點</a
+                    >
+                  </li>
+                  <li class="active">
+                    <a href="https://tw.pycon.org/2013/zh/blog/" id="link-blog"
+                      >部落格</a
+                    >
+                  </li>
+                </ul>
 
-</div>
-        </footer>
+                <div class="nav account-bar pull-right">
+                  <p>
+                    <a
+                      class="navbar-text"
+                      href="https://tw.pycon.org/2013/zh/account/login/"
+                      >登入</a
+                    >
+                    or
+                    <a href="https://tw.pycon.org/2013/zh/account/signup/"
+                      >註冊</a
+                    >
+                  </p>
+                </div>
 
+                <div class="pull-right social-buttons">
+                  <div class="btn-group">
+                    <a
+                      class="btn btn-small btn-primary"
+                      href="http://www.facebook.com/pycontw"
+                      target="_blank"
+                      title="PyCon Taiwan on Facebook"
+                    >
+                      <i class="icon-facebook"></i>
+                    </a>
+                    <a
+                      class="btn btn-small btn-info"
+                      href="http://twitter.com/pycontw"
+                      target="_blank"
+                      title="PyCon Taiwan on Twitter"
+                    >
+                      <i class="icon-twitter"></i>
+                    </a>
+                    <a
+                      class="btn btn-small btn-danger"
+                      href="https://plus.google.com/101932655972746759016/"
+                      target="_blank"
+                      title="PyCon Taiwan on Google+"
+                    >
+                      <i class="icon-google-plus"></i>
+                    </a>
+                    <a
+                      class="btn btn-small btn-plurk"
+                      href="http://www.plurk.com/pycontw"
+                      target="_blank"
+                      title="PyCon Taiwan on Plurk"
+                    >
+                      P
+                    </a>
+                  </div>
+                </div>
 
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-        <script src="/2013/site_media/static/js/jquery.eqheight.js" type="text/javascript"></script>
-        <script type="text/javascript">
-            $(function(){
-                function dynamic_banner(){
-                    var banner_width = Math.min(0, Math.max(-(1920 - $(window).width()) / 2, -467));
-                    $(".banner .images").css("margin-left", banner_width + "px");
-                }
-                dynamic_banner();
-                $(window).on("resize", dynamic_banner);
+                <form
+                  id="language-selector"
+                  action="https://tw.pycon.org/2013/i18n/setlang/"
+                  method="post"
+                  class="navbar-form pull-right language_form"
+                >
+                  <div style="display: none">
+                    <input
+                      type="hidden"
+                      name="csrfmiddlewaretoken"
+                      value="9d6b44d49334a19cc32179991a0aaf0a"
+                    />
+                  </div>
+                  <input
+                    name="next"
+                    type="hidden"
+                    value="https://tw.pycon.org/2013/blog/2013/03/05/everybody-pays-zh/"
+                  />
+                  <ul class="nav">
+                    <li>
+                      <p class="navbar-text">Language</p>
+                    </li>
+                    <li>
+                      <select
+                        onchange="document.getElementById('language-selector').submit();"
+                        name="language"
+                      >
+                        <option value="en">English</option>
 
-                // equal height for posts on homepage
-                $(".row-fluid").eqHeight(".span3, .span6, .span9");
-            })
-        </script>
-        <script src="/2013/site_media/static/js/base.js" type="text/javascript"></script>
-        <script src="/2013/site_media/static/js/bootstrap.js" type="text/javascript"></script>
-        
-        <!--script src="/2013/site_media/static/uni_form/uni-form.jquery.js" type="text/javascript"></script-->
-        <script type="text/javascript" src="/2013/site_media/static/markitup/jquery.markitup.js"></script>
-        <script type="text/javascript" src="/2013/site_media/static/markitup/sets/markdown-custom/set.js"></script>
+                        <option value="zh" selected="selected">中文</option>
 
-        <script src="/2013/site_media/static/js/facebox.js" type="text/javascript"></script>
-<script type="text/javascript">
-    jQuery(document).ready(function($) {
-        $('a[rel*=facebox]').facebox({
-            loadingImage: '/2013/site_media/static/img/facebox/loading.gif',
-            closeImage: '/2013/site_media/static/img/facebox/closelabel.png'
-        });
-        $(document).bind('reveal.facebox', function() {
-            $("form.in_facebox").submit(function() {
-                form = this;
-                jQuery.facebox(function($) {
-                    fields = jQuery(form).find("input[type='text']").filter(":enabled");
-                    params = {}
-                    fields.each(function() {
-                        params[this.name] = this.value;
-                    });
-                    jQuery.post(form.action, params,
-                        function(data, textStatus) {
-                            jQuery.facebox(data);
-                        }
-                    );
-                });
-                return false;
-            });
-        });
-        $(document).bind('close.facebox', function() {
-           location.reload();
-          });
-     });
-</script>
-        <script type="text/javascript" charset="utf-8">
-            $(document).ajaxSend(function(event, xhr, settings) {
-                function getCookie(name) {
-                    var cookieValue = null;
-                    if (document.cookie && document.cookie != '') {
-                        var cookies = document.cookie.split(';');
-                        for (var i = 0; i < cookies.length; i++) {
-                            var cookie = jQuery.trim(cookies[i]);
-                            // Does this cookie string begin with the name we want?
-                            if (cookie.substring(0, name.length + 1) == (name + '=')) {
-                                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                                break;
-                            }
-                        }
-                    }
-                    return cookieValue;
-                }
-                function sameOrigin(url) {
-                    // url could be relative or scheme relative or absolute
-                    var host = document.location.host; // host + port
-                    var protocol = document.location.protocol;
-                    var sr_origin = '//' + host;
-                    var origin = protocol + sr_origin;
-                    // Allow absolute or scheme relative URLs to same origin
-                    return (url == origin || url.slice(0, origin.length + 1) == origin + '/') ||
-                        (url == sr_origin || url.slice(0, sr_origin.length + 1) == sr_origin + '/') ||
-                        // or any other URL that isn't scheme relative or absolute i.e relative.
-                        !(/^(\/\/|http:|https:).*/.test(url));
-                }
-                function safeMethod(method) {
-                    return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
-                }
+                        <option value="ja">日本語</option>
+                      </select>
+                    </li>
+                  </ul>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="banner hidden-phone">
+      <div class="images"></div>
+    </div>
+    <div class="visible-phone">
+      <img
+        class="site-logo"
+        src="https://tw.pycon.org/2013/site_media/static/img/pycontw2013-site-logo.png"
+      />
+    </div>
+    <section id="subnav">
+      <div class="container"></div>
+    </section>
 
-                if (!safeMethod(settings.type) && sameOrigin(settings.url)) {
-                    xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
-                }
-            });
-        </script>
+    <section id="body">
+      <div class="container">
+        <div class="row">
+          <div class="span10 offset1">
+            <div class="row">
+              <div class="span3">
+                <h1 class="section-title"><span>部落格</span></h1>
+              </div>
+              <div class="span9">
+                <div class="blog-post">
+                  <h1>Everybody Pays (公平付費)</h1>
+                  <p class="post_dateline">
+                    <span class="date">2013.03.05</span> by
+                    <span class="author">yungyuc</span>
+                  </p>
 
-        <script type="text/javascript">
-            $(document).ready(function($) {
-                $("a.boxes-edit-link").click(function() {
-                    $.facebox.settings.loadingImage = "/site_media/static/img/loading.gif";
-                    $.facebox.settings.closeImage = "/site_media/static/img/closelabel.png";
-                    $(document).bind("beforeReveal.facebox", function() {
-                        $("#facebox .content").css("width", "600px");
-                    });
-                    var editable = this;
-                    $(document).bind("reveal.facebox", function() {
-                        $("#edit_form").submit(function() {
-                            $.post(editable.href, $(this).serialize(), function(data) {
-                                $(document).trigger("close.facebox");
-                                $(editable).load(data);
-                                $(document).unbind("reveal.facebox");
-                            });
-                            return false;
-                        });
-                    });
-                    $.facebox({ajax: this.href});
-                    return false;
-                });
-            });
-        </script>
+                  <div class="content">
+                    <p>
+                      PyCon Taiwan
+                      有一個稍微特別，但其實非常普通的原則：Everybody Pays
+                      (硬要翻成中文的話，就是「公平付費」)。所有參加會議的人，除非是特邀的助拳者，像是
+                      keynote
+                      speakers，不然大家都要交錢。不管是強者我朋友介紹來的講者、議程的審查委員，或是會議主席我自己，統統都要交錢，一視同仁，童叟無欺。我們去年首次籌辦
+                      PyConTW 的時候，就<a
+                        href="http://solvcon.net/yyc/en/latest/writing/2012/pythonite_callout.html"
+                        >已經採用了 Everybody Pays 的原則</a
+                      >。今年當然也是一樣。我想將來大概也不會改變。
+                    </p>
+                    <p>
+                      說 Everybody Pays
+                      特別，是因為許多研討會，尤其是台灣的開源研討會，有免除講者的報名費的習慣。另外也有一些研討會，連工作人員的報名費也免除。對常參加其它研討會的人，尤其是講者來說，PyConTW
+                      真是奇怪，為什麼我來演講還要交錢，而且還是全額不打折！？PyConTW
+                      挺不便宜的呢。相信很多人心裡有這個疑問，肯定也有些潛在的講者因此猶豫不決。因此我要在這裡，清楚地交待我們要求
+                      Everybody Pays 的原因。
+                    </p>
+                    <h2 id="++">價值</h2>
+                    <p>
+                      我們堅持 Everybody Pays 最主要的原因，是要強調價值
+                      (value)。我們每年辦
+                      PyConTW，不管主題是什麼，總是要為參加會議的人產生價值。我們希望來到
+                      PyConTW
+                      的參與者明確地知道，這個研討會對你有好處。如何達到這一點？價值這種東西其實很難客觀描述；你可能覺得
+                      MacBookAir 比 MacBookPro
+                      更有價值，他也許想法剛好相反，而我覺得 ThinkPad
+                      才是高貴。很難講誰是對的，或者說同一件東西，對每個人來說，價值都不一樣。在這種情況下，我們只好拿價格
+                      (price) 出來作客觀的基準。
+                    </p>
+                    <p>
+                      我們得承認，在付出了金錢之後，人就會非常在意是否能取回相等甚至於更多的回報。我們希望你來參加會議，取得我們努力為社群產生的價值，所以收錢。我們想為所有人提供價值，所以希望
+                      Everybody
+                      Pays。講者有收穫、聽眾有收穫，籌備志工也會有收獲。另外，贊助者也要有所收穫。PyConTW
+                      當然要為贊助者產生價值，不然怎麼有臉收取贊助呢？贊助者也是
+                      Python 社群的成員呢！
+                    </p>
+                    <p>
+                      PyConTW
+                      該收多少錢呢？這是一個很複雜的問題，至少得考慮硬體成本、潛在報名者的收入水準，以及議程的內容等等。我們才辦到第二年，還沒有辦法訂出很明確的收費計算原則。但我可以保證，PyConTW
+                      所有的籌備工作，絕對是以物超所值為目標。不管訂價如何，我們都要讓你在會議裡面得到比報名費多而又多的東西。
+                    </p>
+                    <h2 id="++_1">公平</h2>
+                    <p>
+                      Everybody Pays
+                      也體現我們對公平的重視，所以我中譯為公平付費。價值真的很主觀。以講者為例，既然講者費心費力為大會準備演講，作了很大的付出，是不是
+                      PyConTW
+                      應該要補償講者的辛苦？這樣說來，志工也很辛苦，是否也要補償？這實在很難評估判斷。也許有人覺得應該補償講者，但肯定也有人認為志工比較需要。有些熱心的與會者雖然不是志工，但看到有桌子需要搬就出力，發現有人迷路就帶路，是不是也應該在註冊費上回饋一下？不誇張，一定會有人覺得這也有道理的。
+                    </p>
+                    <p>
+                      PyConTW
+                      認為，不應該這樣斤斤計較。把格局放大來看，多種的多收，少種的少收，這話是真的。PyConTW
+                      既然是要為社群產生價值，或者說加值
+                      (value-add)，那當然要加愈多愈好。技術分享本身就會帶來回報。站在講台上所收獲的比坐在台下多了太多。那麼何以我們還要「補償」講者？志工雖然長時間辛勞，而且在會場還沒時間參與議程，但我實在地講，志工的收穫絕對還比講者要多。舉我自己當例子。為了聯絡
+                      PyConTW
+                      的工作，這一兩年下來，光電話就花掉不知道幾個註冊費，但我甘心樂意地花。扮演會議負責人的角色所給我的經驗，值註冊費的百倍不止。真要計算的話，參與社群帶給我的東西，比我付出給社群的多了太多。我還倒欠著不知道該怎麼還才好。
+                    </p>
+                    <p>
+                      因此，最公平的付費方式，就是 Everybody
+                      Pays。不過讓我們想一下 import this 的輸出："Special cases
+                      aren't special enough to break the rules. Although
+                      practicality beats purity." 雖然所有參加 PyConTW
+                      的人，不問身份地位都要交一樣的註冊費，但有兩種例外狀況。第一種是受邀的講者。幾乎所有的研討會都有主題演講
+                      (keynote speech)，日本人譯作基調演講，來為會議定調
+                      (我想日人的翻譯比我們更到位)。這些特邀講者參與的目的，真的主要是幫忙，那麼我們實在是要禮遇。我們不向收他們收註冊費，而且還會補助他們的旅費和住宿。因為他們的分享會極大地幫助與會者，所以我們願意付出金錢，敦請這些富有經驗的人來為我們提供價值。
+                    </p>
+                    <h3 id="++++">財務協助</h3>
+                    <p>
+                      此外，我們今年也設計了財務協助 (financial aid) 計畫。接受
+                      PyConTW
+                      財務協助的與會者，是第二種不必交註冊費的人。PyConTW
+                      財務協助的細節還在研議中，現在我只能說明大原則。我們知道有許多對
+                      PyConTW 或 Python
+                      有興趣的人，因為負擔不起，或基於其它理由不願意負擔註冊費，所以不來參加會議。許多這樣的人對社群貢獻良多，社群也十分期待與這些成員互動，所以
+                      PyConTW 會在通盤考量後，選擇性地給予申請者財務協助。
+                    </p>
+                    <p>
+                      採取收費卻用財務協助免除費用這種看似複雜的形式，其實是為了簡化會議的籌備工作。財務協助制度可以把所有的例外狀況統包在一種預算項目下。我們只要明訂申請和審查方式，就可以用簡單的流程服務各種例外需求。因為財務協助是支出項目，我們也很容易評估它對整體預算造成的影響。在簡化工作之外，因為可以用財務協助這種特別的支出，在預算中量化這種本來是收入減損的項目，我們就更容易估計註冊收入，強化預算運用的效率。
+                    </p>
+                    <p>
+                      雖然細部規則仍未確定，但 PyConTW 的財務協助不會偏離
+                      Everybody Pays
+                      原則的中心：為與會者加值。財務協助是有限的資源，我們會用來幫助那些最需要的，以及對與會者幫助最大的人來參加會議。
+                    </p>
+                    <h2 id="++_2">傳統</h2>
+                    <p>
+                      Everybody Pays 事實上不是 PyConTW
+                      的發明，而是我們拾人口慧而已。Everybody Pays 事實是上
+                      PyCon(US) "everyone helps, and everyone pays"
+                      傳統的一部分。也就是說，正牌的 PyCon 一直都有 Everybody
+                      Pays 的慣例：就算是 Guido 也得買票的。2011 年，當時
+                      PyCon(US) 的主要籌備者之一的 Jesse Noller，發表了
+                      <a
+                        href="http://jessenoller.com/blog/2011/05/25/pycon-everybody-pays/"
+                        >"PYCON: EVERYBODY PAYS" 一文</a
+                      >，詳細說明了這個慣例的細節和背景。因此，Everybody Pays
+                      雖然在台灣可能有點特別，但對 Python
+                      社群來說，卻是一項普通的傳統。
+                    </p>
+                    <h2 id="++_3">發展</h2>
+                    <p>
+                      現在我們也在台灣辦自己的 PyCon
+                      了。這是我們的社群。我們有共同的愛好，而且很有趣地，我們因為認同
+                      Python 的關係，養成了一些共通的性格。PyConTW
+                      的籌備團隊一開始很難接受 Everybody Pays，但在看過
+                      <a
+                        href="http://jessenoller.com/blog/2011/05/25/pycon-everybody-pays/"
+                        >Jesse Noller 的介紹文章</a
+                      >之後，對這樣的作法多少有點認同，或者至少覺得不是件壞事。是的，因為我們連講者都要求付費，所以徵起稿來很辛苦
+                      (我好努力整理了一篇<a
+                        href="http://solvcon.net/yyc/en/latest/writing/2013/pycontw2013_call_for_proposals.html"
+                        >催稿文</a
+                      >，但大概才思太差，還是不見效果，慘哉慘哉)。但我想，我們要的是一個鼓勵技術發展的社群。我們是寫
+                      Python 的。我們建立社群是為了一起分享開發 Python
+                      程式的樂趣。我們應該為了增加投稿，降低我們的期待嗎？台灣的
+                      Pythonistas，應該不會這麼沒有志氣吧。
+                    </p>
+                    <p>
+                      我們希望 Python 在台灣愈走愈穩、愈走愈強嗎？我想 Everybody
+                      Pays 是第一步。社群成員的深度合作，是發展的硬道理。
+                    </p>
+                    <p>蛇年快樂。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-28961467-1']);
-    _gaq.push(['_trackPageview']);
-    _gaq.push(['_trackPageLoadTime']);
-    // _gaq.push(['_setCustomVar', 1, 'Authentication Type', ut, 2]);
-    
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-</script>
+    <footer>
+      <hr />
+      <div class="container">
+        <p>
+          PyCon Taiwan 2013 built with
+          <a href="http://djangoproject.com">Django</a> and
+          <a href="http://pinaxproject.com">Pinax</a>. Hosting provided by
+          <a href="http://streetvoice.com">StreetVoice</a>. Built by PyCon
+          Taiwan web team. <br />
+          Questions? Comments? Contact
+          <a href="mailto:organizers@pycon.tw">organizers@pycon.tw</a>
+        </p>
+      </div>
+    </footer>
 
-        
-    <script type="text/javascript" charset="utf-8">
-      $(function(){
-          $("#id_email").focus();
-          $(function () {
-              if(('ul#messages').length > 0) {
-                  setTimeout(function() {
-                      $('ul#messages').fadeOut(3000);
-                  }, 2000 );
-              }
-          });
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+    ></script>
+    <script
+      src="https://tw.pycon.org/2013/site_media/static/js/jquery.eqheight.js"
+      type="text/javascript"
+    ></script>
+    <script type="text/javascript">
+      $(function () {
+        function dynamic_banner() {
+          var banner_width = Math.min(
+            0,
+            Math.max(-(1920 - $(window).width()) / 2, -467)
+          );
+          $(".banner .images").css("margin-left", banner_width + "px");
+        }
+        dynamic_banner();
+        $(window).on("resize", dynamic_banner);
+
+        // equal height for posts on homepage
+        $(".row-fluid").eqHeight(".span3, .span6, .span9");
       });
     </script>
-    
+    <script
+      src="https://tw.pycon.org/2013/site_media/static/js/base.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://tw.pycon.org/2013/site_media/static/js/bootstrap.js"
+      type="text/javascript"
+    ></script>
 
-    </body>
+    <!--script src="https://tw.pycon.org/2013/site_media/static/uni_form/uni-form.jquery.js" type="text/javascript"></script-->
+    <script
+      type="text/javascript"
+      src="https://tw.pycon.org/2013/site_media/static/markitup/jquery.markitup.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://tw.pycon.org/2013/site_media/static/markitup/sets/markdown-custom/set.js"
+    ></script>
+
+    <script
+      src="https://tw.pycon.org/2013/site_media/static/js/facebox.js"
+      type="text/javascript"
+    ></script>
+    <script type="text/javascript">
+      jQuery(document).ready(function ($) {
+        $("a[rel*=facebox]").facebox({
+          loadingImage: "/2013/site_media/static/img/facebox/loading.gif",
+          closeImage: "/2013/site_media/static/img/facebox/closelabel.png",
+        });
+        $(document).bind("reveal.facebox", function () {
+          $("form.in_facebox").submit(function () {
+            form = this;
+            jQuery.facebox(function ($) {
+              fields = jQuery(form)
+                .find("input[type='text']")
+                .filter(":enabled");
+              params = {};
+              fields.each(function () {
+                params[this.name] = this.value;
+              });
+              jQuery.post(form.action, params, function (data, textStatus) {
+                jQuery.facebox(data);
+              });
+            });
+            return false;
+          });
+        });
+        $(document).bind("close.facebox", function () {
+          location.reload();
+        });
+      });
+    </script>
+    <script type="text/javascript" charset="utf-8">
+      $(document).ajaxSend(function (event, xhr, settings) {
+        function getCookie(name) {
+          var cookieValue = null;
+          if (document.cookie && document.cookie != "") {
+            var cookies = document.cookie.split(";");
+            for (var i = 0; i < cookies.length; i++) {
+              var cookie = jQuery.trim(cookies[i]);
+              // Does this cookie string begin with the name we want?
+              if (cookie.substring(0, name.length + 1) == name + "=") {
+                cookieValue = decodeURIComponent(
+                  cookie.substring(name.length + 1)
+                );
+                break;
+              }
+            }
+          }
+          return cookieValue;
+        }
+
+        function sameOrigin(url) {
+          // url could be relative or scheme relative or absolute
+          var host = document.location.host; // host + port
+          var protocol = document.location.protocol;
+          var sr_origin = "//" + host;
+          var origin = protocol + sr_origin;
+          // Allow absolute or scheme relative URLs to same origin
+          return (
+            url == origin ||
+            url.slice(0, origin.length + 1) == origin + "/" ||
+            url == sr_origin ||
+            url.slice(0, sr_origin.length + 1) == sr_origin + "/" ||
+            // or any other URL that isn't scheme relative or absolute i.e relative.
+            !/^(\/\/|http:|https:).*/.test(url)
+          );
+        }
+
+        function safeMethod(method) {
+          return /^(GET|HEAD|OPTIONS|TRACE)$/.test(method);
+        }
+
+        if (!safeMethod(settings.type) && sameOrigin(settings.url)) {
+          xhr.setRequestHeader("X-CSRFToken", getCookie("csrftoken"));
+        }
+      });
+    </script>
+
+    <script type="text/javascript">
+      $(document).ready(function ($) {
+        $("a.boxes-edit-link").click(function () {
+          $.facebox.settings.loadingImage =
+            "/site_media/static/img/loading.gif";
+          $.facebox.settings.closeImage =
+            "/site_media/static/img/closelabel.png";
+          $(document).bind("beforeReveal.facebox", function () {
+            $("#facebox .content").css("width", "600px");
+          });
+          var editable = this;
+          $(document).bind("reveal.facebox", function () {
+            $("#edit_form").submit(function () {
+              $.post(editable.href, $(this).serialize(), function (data) {
+                $(document).trigger("close.facebox");
+                $(editable).load(data);
+                $(document).unbind("reveal.facebox");
+              });
+              return false;
+            });
+          });
+          $.facebox({
+            ajax: this.href,
+          });
+          return false;
+        });
+      });
+    </script>
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(["_setAccount", "UA-28961467-1"]);
+      _gaq.push(["_trackPageview"]);
+      _gaq.push(["_trackPageLoadTime"]);
+      // _gaq.push(['_setCustomVar', 1, 'Authentication Type', ut, 2]);
+
+      (function () {
+        var ga = document.createElement("script");
+        ga.type = "text/javascript";
+        ga.async = true;
+        ga.src =
+          ("https:" == document.location.protocol
+            ? "https://ssl"
+            : "http://www") + ".google-analytics.com/ga.js";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+    <script type="text/javascript" charset="utf-8">
+      $(function () {
+        $("#id_email").focus();
+        $(function () {
+          if ("ul#messages".length > 0) {
+            setTimeout(function () {
+              $("ul#messages").fadeOut(3000);
+            }, 2000);
+          }
+        });
+      });
+    </script>
+  </body>
 </html>
