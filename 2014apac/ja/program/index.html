@@ -1,0 +1,1345 @@
+<!doctype html>
+
+<html lang="ja" ng-app="App" itemscope itemtype="http://schema.org/Event">
+
+
+<!-- Mirrored from tw.pycon.org/2014apac/ja/program/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Mar 2019 15:35:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+    <meta name="keywords" content="Program, PyConAPAC, 2014, Taiwan, Python, 2014, PyCon, APAC">
+    <meta name="description" content="Program, PyConAPAC 2014, Taiwan">
+    
+    <meta property="og:title" content="Program | PyCon APAC 2014" />
+    
+    <meta property="og:image" content="../../static/images/ogv2.png"/>
+    
+    <meta property="og:location" content="No. 128, Sec. 2, Academia Rd., Nankang, Taipei 115, Taiwan">
+    <meta property="og:startDate" content="2014-05-17">
+    <meta property="og:endDate" content="2014-05-18">
+    
+
+    <title>
+      
+      Program | PyCon APAC 2014
+      
+    </title>
+    <link rel="shortcut icon" href="../../static/favicon.png?v=2">
+    <link rel="apple-touch-icon" sizes="57x57" href="../../static/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="../../static/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="../../static/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="../../static/apple-icon-144x144.png" />
+
+    
+    <!--<link rel="alternate" type="application/rss+xml" title="RSS" href="../../ja/blog/feeds/rss/">-->
+    <!--<link rel="alternate" type="application/atom+xml" title="Atom" href="../../ja/blog/feeds/atom/">-->
+    
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../../static/CACHE/css/3420d03e6d83.css" type="text/css" /><link rel="stylesheet" href="../../static/CACHE/css/4e64cc918696.css" type="text/css" media="all" />
+
+    <script type="text/javascript" src="../../static/CACHE/js/a4b173ef45c7.js"></script>
+    <!--[if lt IE 9]>
+    <script src="../../static/vendor/mezzanine/html5shiv.js"></script>
+    <script src="../../static/vendor/mezzanine/respond.min.js"></script>
+    <![endif]-->
+
+    
+
+</head>
+<body id="body" ng-controller="base">
+
+
+<div id="main" ng-click="closePage()">
+  
+  
+  
+
+  <div class="mobile-header">
+    
+    <img itemprop="image" src="../../static/images/ogv2.png" class="hide">
+
+    <a href="#" class="btn-nav menu-button" ng-class="{opened: showNav}" ng-click="showNav=!showNav">N</a>
+  </div>
+
+  
+    <div id="title" class="page-title">
+        <div class="content">
+            <h1>
+  Program
+</h1>
+        </div>
+    </div>
+  
+
+  
+
+<div style="margin:30px" ng-controller="Program" >
+  <div class="col-md-12 program-toolbar">
+    <div class="row clearfix well">
+      <div class="col-md-9">
+        <div class="room-filter">
+        <a class="btn btn-default" ng-click=" em=9 "  ng-class="{active: em==9}">09-10</a>
+        <a class="btn btn-default" ng-click=" em=11 " ng-class="{active: em==11}">11-12</a>
+        <a class="btn btn-default" ng-click=" em=13 " ng-class="{active: em==13}">13-14</a>
+        <a class="btn btn-default" ng-click=" em=15 " ng-class="{active: em==15}">15-16</a>
+
+        &nbsp;
+
+        <a class="btn btn-default" ng-click=" day=1 " ng-class="{active: day==1}">Day1</a>
+        <a class="btn btn-default" ng-click=" day=2 " ng-class="{active: day==2}">Day2</a>
+
+        &nbsp;
+        <a class="btn btn-default" ng-click=" em=null;day=null ">Reset</a>
+        </div>
+      </div>
+      <div class="col-md-3 text-right">
+        <a class="btn btn-primary" href="../../ja/venue/details/">Map of R0 - R4, 4FC</a>
+      </div>
+    </div>
+
+  </div>
+  <div class="row">
+    <div ng-class="{'col-md-6': day!=1}" ng-show="checkDay(1)">
+      <div class="program-day">
+        <h3 class="text-center program-date">DAY1 <small>5月 17</small></h3>
+        <div ng-show="checkEm(9)">
+          <p class="text-center  program-time"><span>08:30</span></p>
+          <p class="program-block"><span class="glyphicon glyphicon-cutlery"></span> Registration & Breakfast</p>
+
+          <p class="text-center  program-time"><span>09:00</span></p>
+          <p class="program-block">Opening</p>
+
+          <p class="text-center  program-time"><span>09:20</span></p>
+          <p class="program-block">Keynote Wes McKinney </p>
+
+          <p class="text-center  program-time"><span>10:10</span></p>
+          <p class="program-break">Break</p>
+
+          <p class="text-center  program-time"><span>10:40</span></p>
+          <div class="program-section"><table class="program-table">
+            <tr><th> R0 </th> <td> 
+
+<div class="program-title">
+  <a href="30.html">
+    立委投票指南 -- 從零開始
+  </a>
+  
+    <a style="display:inline;" href="../speakers/27/index.html"><small>勁成 駱</small></a>
+  
+  
+  <span class="tag tag-primary" title="Mandarin"> zh </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+            <tr><th> R1 </th> <td> 
+
+<div class="program-title">
+  <a href="71.html">
+    HiPy - Python for High School Students
+  </a>
+  
+    <a style="display:inline;" href="../speakers/61/index.html"><small>Song Kai</small></a>
+  
+  
+  <span class="tag tag-primary" title="英語(米国)"> en </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+            <tr><th> R2 <span class="SciPy">SciPy</span></th> <td> 
+
+<div class="program-title">
+  <a href="88.html">
+    PySpark: next generation cluster computing engine 
+  </a>
+  
+    <a style="display:inline;" href="../speakers/37/index.html"><small>Wisely Chen</small></a>
+  
+  
+  <span class="tag tag-primary" title="英語(米国)"> en </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+            <tr><th> R3 </th> <td> 
+
+<div class="program-title">
+  <a href="73.html">
+    Real-time visualization with Python and d3.js
+  </a>
+  
+    <a style="display:inline;" href="../speakers/62/index.html"><small>Muyueh Lee</small></a>
+  
+  
+  <span class="tag tag-primary" title="英語(米国)"> en </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+          </table></div>
+        </div>
+        <div ng-show="checkEm(11)">
+
+          <p class="text-center  program-time"><span>11:10</span></p>
+          <div class="program-section"><table class="program-table">
+            <tr><th> R0 </th> <td> 
+
+<div class="program-title">
+  <a href="55.html">
+    Python to LiveScript
+  </a>
+  
+    <a style="display:inline;" href="../speakers/53/index.html"><small>信屹 陳</small></a>
+  
+  
+  <span class="tag tag-primary" title="Mandarin"> zh </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+            <tr><th> R1 </th> <td> 
+
+<div class="program-title">
+  <a href="102.html">
+    Time for Education: Data Mining in High School
+  </a>
+  
+    <a style="display:inline;" href="../speakers/82/index.html"><small>Yuli Zhan</small></a>
+  
+  
+  <span class="tag tag-primary" title="英語(米国)"> en </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+            <tr><th> R2 <span class="SciPy">SciPy</span></th> <td> 
+
+<div class="program-title">
+  <a href="93.html">
+    SOLVCON: Software-Engineering Simulations of Conservation Laws
+  </a>
+  
+    <a style="display:inline;" href="../speakers/8/index.html"><small>Yung-Yu Chen</small></a>
+  
+  
+  <span class="tag tag-primary" title="英語(米国)"> en </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+            <tr><th> R3 </th> <td> 
+
+<div class="program-title">
+  <a href="29.html">
+    VapourSynth comes, does it indicate that AviSynth will shutdown?
+  </a>
+  
+    <a style="display:inline;" href="../speakers/26/index.html"><small>Hsueh-Tsung Kuo</small></a>
+  
+  
+  <span class="tag tag-primary" title="英語(米国)"> en </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+          </table></div>
+
+          <p class="text-center  program-time"><span>11:40</span></p>
+          <div class="program-section"><table class="program-table">
+            <tr><th> R0 </th> <td> 
+
+<div class="program-title">
+  <a href="81.html">
+    Graph-Tool: The Efficient Network Analyzing Tool for Python
+  </a>
+  
+    <a style="display:inline;" href="../speakers/67/index.html"><small>Mosky Liu</small></a>
+  
+  
+  <span class="tag tag-primary" title="Mandarin"> zh </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+            <tr><th> R1 </th> <td> 
+
+<div class="program-title">
+  <a href="51.html">
+    from present import future.curriculum
+  </a>
+  
+    <a style="display:inline;" href="../speakers/47/index.html"><small>Ambrose Tan</small></a>
+  
+  
+  <span class="tag tag-primary" title="英語(米国)"> en </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+            <tr><th> R2 <span class="SciPy">SciPy</span></th> <td> 
+
+<div class="program-title">
+  <a href="35.html">
+    Statistics in Python with R
+  </a>
+  
+    <a style="display:inline;" href="../speakers/19/index.html"><small>Liang Bo Wang</small></a>
+  
+  
+  <span class="tag tag-primary" title="英語(米国)"> en </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+            <tr><th> R3 </th> <td> 
+
+<div class="program-title">
+  <a href="6.html">
+    Shipping python projects by Docker
+  </a>
+  
+    <a style="display:inline;" href="../speakers/12/index.html"><small>Wei-Ting Kuo</small></a>
+  
+  
+  <span class="tag tag-primary" title="英語(米国)"> en </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+          </table></div>
+
+          <p class="text-center  program-time"><span>12:10</span></p>
+          <p class="program-break"><span class="glyphicon glyphicon-cutlery"></span> Lunch</p>
+        </div>
+        <div ng-show="checkEm(13)">
+
+          <p class="text-center  program-time"><span>13:30</span></p>
+          <p class="program-block">Keynote Fernando Perez </p>
+
+          <p class="text-center  program-time"><span>13:30 - 16:00</span></p>
+          <div class="program-event-section"> <table class="program-table">
+              <tr><th> 4FC </th> <td class="program-edu">
+                  Sponsor Show Time
+              </td> </tr>
+          </table> </div>
+
+          <p class="text-center  program-time"><span>14:20</span></p>
+          <p class="program-break">Break</p>
+
+          <p class="text-center  program-time"><span>14:30</span></p>
+          <div class="program-section"><table class="program-table">
+            <tr><th> R0 </th> <td> 
+
+<div class="program-title">
+  <a href="96.html">
+    graph database for python
+  </a>
+  
+    <a style="display:inline;" href="../speakers/83/index.html"><small>宗哲 李</small></a>
+  
+  
+  <span class="tag tag-primary" title="Mandarin"> zh </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+            <tr><th> R1 </th> <td> 
+
+<div class="program-title">
+  <a href="66.html">
+    小海嚴選
+  </a>
+  
+    <a style="display:inline;" href="../speakers/60/index.html"><small>明賢 曾</small></a>
+  
+  
+  <span class="tag tag-primary" title="Mandarin"> zh </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+            <tr><th> R2 <span class="SciPy">SciPy</span></th> <td> 
+
+<div class="program-title">
+  <a href="74.html">
+    DMRL: A versatile Python tool to assess DNA methylation variation and identify DMRs
+  </a>
+  
+    <a style="display:inline;" href="../speakers/63/index.html"><small>Wen-Wei Liao</small></a>
+  
+  
+  <span class="tag tag-primary" title="英語(米国)"> en </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+            <tr><th> R3 </th> <td> 
+
+<div class="program-title">
+  <a href="78.html">
+    Text Analytics for Human: TextBlob
+  </a>
+  
+    <a style="display:inline;" href="../speakers/45/index.html"><small>Ken Hu</small></a>
+  
+  
+  <span class="tag tag-primary" title="英語(米国)"> en </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+          </table></div>
+        </div>
+        <div ng-show="checkEm(15)">
+
+          <p class="text-center  program-time"><span>15:00</span></p>
+          <div class="program-section"><table class="program-table">
+            <tr><th> R0 </th> <td> 
+
+<div class="program-title">
+  <a href="60.html">
+    OpenOffice Application with Python
+  </a>
+  
+    <a style="display:inline;" href="../speakers/56/index.html"><small>Shih-Ching Yang</small></a>
+  
+  
+  <span class="tag tag-primary" title="Mandarin"> zh </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+            <tr><th> R1 </th> <td> 
+
+<div class="program-title">
+  <a href="64.html">
+    Python in VIM
+  </a>
+  
+    <a style="display:inline;" href="../speakers/58/index.html"><small>嘉駿 戴</small></a>
+  
+  
+  <span class="tag tag-primary" title="Mandarin"> zh </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+            <tr><th> R2 <span class="SciPy">SciPy</span></th> <td> 
+
+<div class="program-title">
+  <a href="65.html">
+    Hacking Models with Python
+  </a>
+  
+    <a style="display:inline;" href="../speakers/11/index.html"><small>Chia-Chi Chang</small></a>
+  
+  
+  <span class="tag tag-primary" title="英語(米国)"> en </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+            <tr><th> R3 </th> <td>
+              <div class="program-edu">Education Panel</div>
+             </td> </tr>
+          </table></div>
+
+          <p class="text-center  program-time"><span>15:30</span></p>
+          <div class="program-section"><table class="program-table">
+            <tr><th> R0 </th> <td> 
+
+<div class="program-title">
+  <a href="58.html">
+    Yielding a Tulip
+  </a>
+  
+    <a style="display:inline;" href="../speakers/46/index.html"><small>Tzu-ping Chung</small></a>
+  
+  
+  <span class="tag tag-primary" title="Mandarin"> zh </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+            <tr><th> R1 </th> <td> 
+
+<div class="program-title">
+  <a href="69.html">
+    Openstack 簡介
+  </a>
+  
+    <a style="display:inline;" href="../speakers/42/index.html"><small>kao kuo-tung</small></a>
+  
+  
+  <span class="tag tag-primary" title="Mandarin"> zh </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+            <tr><th> R2 </th> <td> 
+
+<div class="program-title">
+  <a href="7.html">
+    Data Analysis in Python
+  </a>
+  
+    <a style="display:inline;" href="../speakers/12/index.html"><small>Wei-Ting Kuo</small></a>
+  
+  
+  <span class="tag tag-primary" title="英語(米国)"> en </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+            <tr><th> R3 </th> <td> <div class="program-edu">Education Panel</div> </td> </tr>
+          </table></div>
+
+          <p class="text-center  program-time"><span>16:00</span></p>
+          <p class="program-break"><span class="glyphicon glyphicon-cutlery"></span> Refreshment</p>
+
+          <p class="text-center  program-time"><span>16:30</span></p>
+          <p class="program-block">Lightning Talks</p>
+
+          <p class="text-center  program-time"><span>18:00</span></p>
+          <p class="program-block" title="Birds of a Feather"><span class="glyphicon glyphicon-cutlery"></span> BoF</p>
+        </div>
+      </div>
+    </div>
+    <div ng-class="{'col-md-6': day!=2}" ng-show="checkDay(2)">
+      <div class="program-day">
+        <h3 class="text-center">DAY2 <small>5月 18</small></h3>
+        <div ng-show="checkEm(9)">
+
+          <p class="text-center  program-time"><span>08:30</span></p>
+          <p class="program-block">Registration</p>
+
+          <p class="text-center  program-time"><span>09:00</span></p>
+          <p class="program-block">Opening</p>
+
+          <p class="text-center  program-time"><span>09:20</span></p>
+          <p class="program-block">Keynote Jessica McKellar </p>
+
+          <p class="text-center  program-time"><span>10:10</span></p>
+          <p class="program-break"><span class="glyphicon glyphicon-cutlery"></span> Refreshment</p>
+
+          <p class="text-center  program-time"><span>10:40</span></p>
+          <div class="program-section"><table class="program-table">
+            <tr><th> R0 </th> <td> 
+
+<div class="program-title">
+  <a href="97.html">
+    用 Python 建立你自己的 Summly
+  </a>
+  
+    <a style="display:inline;" href="../speakers/31/index.html"><small>Andy Dai</small></a>
+  
+  
+  <span class="tag tag-primary" title="Mandarin"> zh </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+            <tr><th> R1 </th> <td> 
+
+<div class="program-title">
+  <a href="99.html">
+    Introduction to Google Cloud Endpoints for Python developers
+  </a>
+  
+    <a style="display:inline;" href="../speakers/38/index.html"><small>Colin Su</small></a>
+  
+  
+  <span class="tag tag-primary" title="Mandarin"> zh </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+            <tr><th> R2 </th> <td> 
+
+<div class="program-title">
+  <a href="53.html">
+    What Is Async, How Does It Work, and When Should I Use It?
+  </a>
+  
+    <a style="display:inline;" href="../speakers/52/index.html"><small>A. Jesse Jiryu Davis</small></a>
+  
+  
+  <span class="tag tag-primary" title="英語(米国)"> en </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+            <tr><th> R3 </th> <td> 
+
+<div class="program-title">
+  <a href="67.html">
+    Roboconf: How we held a conference with Django
+  </a>
+  
+    <a style="display:inline;" href="../speakers/39/index.html"><small>Poren Chiang</small></a>
+  
+  
+  <span class="tag tag-primary" title="英語(米国)"> en </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+            <tr><th> R4 </th> <td>
+            <div class="program-edu">
+              APAC community panel
+            </div>
+            </td> </tr>
+          </table></div>
+        </div>
+        <div ng-show="checkEm(11)">
+
+          <p class="text-center  program-time"><span>11:10</span></p>
+          <div class="program-section"><table class="program-table">
+            <tr><th> R0 </th> <td> 
+
+<div class="program-title">
+  <a href="70.html">
+    StreetVoice 改造後, 現在我們如何進行開發工作
+  </a>
+  
+    <a style="display:inline;" href="../speakers/60/index.html"><small>明賢 曾</small></a>
+  
+  
+  <span class="tag tag-primary" title="Mandarin"> zh </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+            <tr><th> R1 </th> <td> 
+
+<div class="program-title">
+  <a href="28.html">
+    Introduce Google Cloud Platform with BigData Lab
+  </a>
+  
+    <a style="display:inline;" href="../speakers/18/index.html"><small>Chien Hsun Chen</small></a>
+  
+  
+  <span class="tag tag-primary" title="Mandarin"> zh </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+            <tr><th> R2 </th> <td> 
+
+<div class="program-title">
+  <a href="95.html">
+    Building a Knowledge Graph - the new search engine technology
+  </a>
+  
+    <a style="display:inline;" href="../speakers/66/index.html"><small>Jimmy Lai</small></a>
+  
+  
+  <span class="tag tag-primary" title="英語(米国)"> en </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+            <tr><th> R3 </th> <td> 
+
+<div class="program-title">
+  <a href="40.html">
+    How PyCon APAC 2014 Web is built
+  </a>
+  
+    <a style="display:inline;" href="../speakers/6/index.html"><small>Keith Yang</small></a>
+  
+  
+  <span class="tag tag-primary" title="英語(米国)"> en </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+            <tr><th> R4 </th> <td>
+            <div class="program-edu">
+              APAC community panel
+            </div>
+            </td> </tr>
+          </table></div>
+
+          <p class="text-center  program-time"><span>11:40</span></p>
+          <div class="program-section"><table class="program-table">
+            <tr><th> R0 </th> <td> 
+
+<div class="program-title">
+  <a href="63.html">
+    如何用 grs 擷取台灣上市股票股價資訊
+  </a>
+  
+    <a style="display:inline;" href="../speakers/55/index.html"><small>Toomore Chiang</small></a>
+  
+  
+  <span class="tag tag-primary" title="Mandarin"> zh </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+            <tr><th> R1 </th> <td> 
+
+<div class="program-title">
+  <a href="101.html">
+    Functional Programming in Python
+  </a>
+  
+    <a style="display:inline;" href="../speakers/38/index.html"><small>Colin Su</small></a>
+  
+  
+  <span class="tag tag-primary" title="Mandarin"> zh </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+            <tr><th> R2 </th> <td> 
+
+<div class="program-title">
+  <a href="31.html">
+    How to integrate Python into a Scala stack to build realtime predictive models
+  </a>
+  
+    <a style="display:inline;" href="../speakers/35/index.html"><small>Jerry Chou</small></a>
+  
+  
+  <span class="tag tag-primary" title="Mandarin"> zh </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+            <tr><th> R3 </th> <td> 
+
+<div class="program-title">
+  <a href="75.html">
+    Narrowing the Gender Gap at Hackathons
+  </a>
+  
+    <a style="display:inline;" href="../speakers/51/index.html"><small>Amalia Hawkins</small></a>
+  
+  
+  <span class="tag tag-primary" title="英語(米国)"> en </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+          </table></div>
+
+          <p class="text-center  program-time"><span>12:10</span></p>
+          <p class="program-break"><span class="glyphicon glyphicon-cutlery"></span> Lunch</p>
+        </div>
+        <div ng-show="checkEm(13)">
+
+          <p class="text-center  program-time"><span>13:30</span></p>
+          <p class="program-block">Keynote Stephen McDonald</p>
+
+          <p class="text-center  program-time"><span>13:30 - 16:00</span></p>
+          <div class="program-event-section"> <table class="program-table">
+              <tr><th> 4FC </th> <td class="program-edu">
+                  Job Fair
+              </td> </tr>
+          </table> </div>
+
+          <p class="text-center  program-time"><span>14:20</span></p>
+          <p class="program-break">Break</p>
+
+          <p class="text-center  program-time"><span>14:30</span></p>
+          <div class="program-section"><table class="program-table">
+
+            <tr><th> R0 </th> <td> 
+
+<div class="program-title">
+  <a href="103.html">
+    以廣告品項為基礎的行動廣告推薦系統: 以 Python Hadoop Streaming 實作
+  </a>
+  
+    <a style="display:inline;" href="../speakers/89/index.html"><small>Steven Chiu</small></a>
+  
+  
+  <span class="tag tag-primary" title="Mandarin"> zh </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+            <tr><th> R1 </th> <td> 
+
+<div class="program-title">
+  <a href="45.html">
+    A Real-time Audio Spectrogram with Application to Sound-Driven Games in Python 3, Pygame and Pyaudio
+  </a>
+  
+    <a style="display:inline;" href="../speakers/40/index.html"><small>Renyuan Lyu</small></a>
+  
+  
+  <span class="tag tag-primary" title="Mandarin"> zh </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+            <tr><th> R2 </th> <td> 
+
+<div class="program-title">
+  <a href="49.html">
+    Anatomy of a Data Analytics MVP
+  </a>
+  
+    <a style="display:inline;" href="../speakers/45/index.html"><small>Ken Hu</small></a>
+  
+  
+  <span class="tag tag-primary" title="英語(米国)"> en </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+            <tr><th> R3 </th> <td> 
+
+<div class="program-title">
+  <a href="54.html">
+    Python Performance Profiling: The Guts And The Glory
+  </a>
+  
+    <a style="display:inline;" href="../speakers/52/index.html"><small>A. Jesse Jiryu Davis</small></a>
+  
+  
+  <span class="tag tag-primary" title="英語(米国)"> en </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+            <tr><th> R4 </th> <td> 
+
+<div class="program-title">
+  <a href="61.html">
+    Introduction to Robot Framework
+  </a>
+  
+    <a style="display:inline;" href="../speakers/57/index.html"><small>Carl Su</small></a>
+  
+  
+  <span class="tag tag-primary" title="Mandarin"> zh </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+          </table></div>
+        </div>
+        <div ng-show="checkEm(15)">
+
+          <p class="text-center  program-time"><span>15:00</span></p>
+          <div class="program-section"><table class="program-table">
+            <tr><th> R0 </th> <td>
+              <div class="program-keynote">
+                Keynote Andreas Klöckner
+              </div>
+             </td> </tr>
+            <tr><th> R1 </th> <td> 
+
+<div class="program-title">
+  <a href="41.html">
+    迅速網站前端開發用 Python
+  </a>
+  
+    <a style="display:inline;" href="../speakers/6/index.html"><small>Keith Yang</small></a>
+  
+  
+  <span class="tag tag-primary" title="Mandarin"> zh </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+            <tr><th> R2 </th> <td> 
+
+<div class="program-title">
+  <a href="36.html">
+    Handy Parallel (Distributed) Computing in Python
+  </a>
+  
+    <a style="display:inline;" href="../speakers/19/index.html"><small>Liang Bo Wang</small></a>
+  
+  
+  <span class="tag tag-primary" title="英語(米国)"> en </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+            <tr><th> R3 </th> <td> 
+
+<div class="program-title">
+  <a href="46.html">
+    Social Network Analysis with Python
+  </a>
+  
+    <a style="display:inline;" href="../speakers/43/index.html"><small>祐瑋 丘</small></a>
+  
+  
+  <span class="tag tag-primary" title="英語(米国)"> en </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+            <tr><th> R4 </th> <td> 
+
+<div class="program-title">
+  <a href="44.html">
+    實戰 Django REST framework
+  </a>
+  
+    <a style="display:inline;" href="../speakers/10/index.html"><small>Tim Hsu</small></a>
+  
+  
+  <span class="tag tag-primary" title="Mandarin"> zh </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+          </table></div>
+
+          <p class="text-center  program-time"><span>15:30</span></p>
+          <div class="program-section"><table class="program-table">
+            <tr><th> R0 </th>
+              <td>
+              <div class="program-keynote">
+                Keynote Andreas Klöckner
+              </div>
+              </td>
+            </tr>
+            <tr><th> R1 </th> <td> 
+
+<div class="program-title">
+  <a href="84.html">
+    Using Fabric and Docker for deployment testing
+  </a>
+  
+    <a style="display:inline;" href="../speakers/50/index.html"><small>Cheng-Lung Sung</small></a>
+  
+  
+  <span class="tag tag-primary" title="Mandarin"> zh </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+
+            <tr><th> R2 </th> <td> 
+
+<div class="program-title">
+  <a href="37.html">
+    Designing a Python-integrated query language for distributed computing
+  </a>
+  
+    <a style="display:inline;" href="../speakers/7/index.html"><small>Jiwon Seo</small></a>
+  
+  
+  <span class="tag tag-primary" title="英語(米国)"> en </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+            <tr><th> R3 </th> <td> 
+
+<div class="program-title">
+  <a href="38.html">
+    Python for Application Security Testing
+  </a>
+  
+    <a style="display:inline;" href="../speakers/28/index.html"><small>Zaki Akhmad</small></a>
+  
+  
+  <span class="tag tag-primary" title="英語(米国)"> en </span>
+  
+  <span class="program-link">
+    
+    
+  </span>
+</div>
+</td> </tr>
+          </table></div>
+
+          <p class="text-center  program-time"><span>16:00</span></p>
+          <p class="program-break">Break</p>
+
+          <p class="text-center  program-time"><span>16:20</span></p>
+          <p class="program-block">Closing</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+
+<div class="text-center">
+  <br>
+  <h3>Sponsors</h4>
+  <br>
+  <div class="sponsor-logos">
+    
+
+
+    <h4 class="sponsor-title golden">Golden</h4>
+    <p>
+      <a href="http://www.hde.co.jp/gip/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/images/sponsor_logo/hde.png" width=200 height=80 alt="HDE, Inc.">
+      </a>
+      <a href="https://www.mongodb.com/learn/mongodb?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/images/sponsor_logo/mongodb.png" width=200 height=80 alt="mongodb">
+      </a>
+      <a href="https://www.google.com/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/media/uploads/Sponsor/logo/google.png" width=200 height=80 alt="Google">
+      </a>
+
+    <h4 class="sponsor-title silver">Silver</h4>
+      <a href="http://www.tagtoo.com.tw/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/images/sponsor_logo/tagtoo.png" width=200 height=80 alt="Tagtoo">
+      </a>
+      <a href="http://www.vpon.com/en-us/index.html?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/media/uploads/Sponsor/logo/vpon.png" width=200 height=80 alt="Vpon">
+      </a>
+      <a href="https://github.com/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/media/uploads/Sponsor/logo/github.png" width=200 height=80 alt="Github">
+      </a>
+      <a href="http://www.zillians.com/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/media/uploads/Sponsor/logo/zillians.png" width=200 height=80 alt="Github">
+      </a>
+      <a href="http://www.appier.com/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/media/uploads/Sponsor/logo/appier.png" width=200 height=80 alt="Github">
+      </a>
+
+    <h4 class="sponsor-title bronze">Bronze</h4>
+    <p>
+      <a href="http://www.quantatw.com/Quanta/chinese/Default.aspx?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/media/uploads/Sponsor/logo/quanta.png" width=200 height=80 alt="Quanta Research Institute">
+      </a>
+      
+    <h4 class="sponsor-title">Patron</h4>
+    <p>
+      <a href="http://www.acomotech.com/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/media/uploads/Sponsor/logo/acomotech.png" width=200 height=80 alt="AcoMo Technology">
+      </a>
+
+    <h4 class="sponsor-title">Special Thanks</h4>
+    <p>
+      <a href="http://clbc.tw/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/images/sponsor_logo/clbc.png" width=200 height=80 alt="CLBC">
+      </a>
+      <a href="https://kktix.com/?utm_source=pyconapac&amp;utm_medium=website&amp;utm_campaign=sponsor" target="_blank">
+        <img src="../../static/images/sponsor_logo/kktix.png" width=200 height=80 alt="KKTIX">
+      </a>
+      <a href="http://www.qsearch.cc/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/images/sponsor_logo/qsearch.png" width=200 height=80 alt="QSearch">
+      </a>
+      <a href="https://www.python.org/psf/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/media/uploads/Sponsor/logo/psf.png" width=200 height=80 alt="Python Software Foundation">
+      </a>
+      <a href="http://www.openfoundry.org/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/media/uploads/Sponsor/logo/ossf.png" alt="Open Source Software Foundry">
+      </a>
+      <a href="https://livehouse.in/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/media/uploads/Sponsor/logo/livehouse.png" alt="LIVEhouse.in">
+      </a>
+      <a href="http://www.youngoptics.com/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/media/uploads/Sponsor/logo/youngoptics.png" alt="Young Optics">
+      </a>
+      <a href="http://www.wolftea.com/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/media/uploads/Sponsor/logo/wolftea.png" alt="Wolf Tea">
+      </a>
+      
+
+    <h4 class="sponsor-title bronze">Media Sponsors</h4>
+    <p>
+      <a href="http://yowureport.com/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/images/sponsor_logo/yowureport.png" width=200 height=80 alt="QSearch">
+      </a>
+      <a href="http://www.bnext.com.tw/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/media/uploads/Sponsor/logo/bnext.png" width=200 height=80 alt="Business Next">
+      </a>
+      <a href="http://www.vpon.com/en-us/index.html?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/media/uploads/Sponsor/logo/vpon.png" width=200 height=80 alt="Vpon">
+      </a>
+      <a href="http://www.inside.com.tw/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/media/uploads/Sponsor/logo/inside.png" width=200 height=80 alt="Inside 硬塞的">
+      </a>
+      <a href="http://www.digitimes.com.tw/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/media/uploads/Sponsor/logo/digitimes.png" width=200 height=80 alt="DIGITIMES">
+      </a>
+      <a href="http://innomambo.com/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/media/uploads/Sponsor/logo/innomambo.png" width=200 height=80 alt="INNOMAMBO 創新曼波">
+      </a>
+
+  </div>
+  <hr>
+  <div class="sponsor-more clear">
+    <a href="../sponsors/index.html" class="btn btn-info">Show me all</a>
+  </div>
+</div>
+
+
+
+  <div class="footnote">
+    
+    <p>
+    Built with <a href="https://www.djangoproject.com/">Django</a> and
+    <a href="http://mezzanine.jupo.org/">Mezzanine</a>
+    by PyCon Taiwan</p>
+    <p>
+    Hosting provided by <a href="http://streetvoice.com/">StreetVoice</a>.
+    </p>
+    <p>Bugs or wheels? <a id="feedback_directly" href="mailto:dev@pycon.tw">Feedback and support</a> here.
+    </p>
+    <p>More on contact <a href="mailto:organizers@pycon.tw"><i>organizers@pycon.tw</i></a></p>
+    
+  </div>
+  <div class="slideInPage ng-trans ng-trans-slide ng-cloak" ng-if="slidePageUrl" ng-click="$event.stopPropagation()">
+
+    <div class="close-btn" ng-click=" closePage() ">&times</div>
+    <div ng-include src="slidePageUrl/index.html"></div>
+    <div id="loader" class="loaded" ng-show="loading">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </div>
+</div>
+
+
+
+<div id="nav" ng-class="{show: showNav}">
+    <div class="inner">
+        <div class="nav-header">
+            <b>NAV</b>
+            <a href="#" class="btn-nav menu-button"
+              ng-click="showNav=!showNav"
+            >✕</a>
+        </div>
+        <a href="../index.html" class="home-href">
+          <div id="logo">
+            <img src="../../static/images/logo.png" alt="">
+          </div>
+        <p class="side-condate">
+          MAY 17-18 2014 in Taipei
+        </p>
+        </a>
+        
+
+        <div class="nav-block">
+
+          
+
+<ul class="nav nav-list navlist-menu-level-0"><li id="tree-menu-home"><a href="../index.html">ホーム</a></li><li class="active" id="tree-menu-program" fold-list="program"><a href="index.html">プログラム</a><ul class="nav nav-list navlist-menu-level-1"><li id="tree-menu-program-keynote-speakers" fold-list="program-keynote-speakers"><a href="keynote-speakers/index.html">基調講演</a></li><li id="tree-menu--2014apac-ja-speakers-" fold-list="-2014apac-ja-speakers-"><a href="../speakers/index.html">スピーカー一覧</a></li><li id="tree-menu-program-showtime-jobfair" fold-list="program-showtime-jobfair"><a href="showtime-jobfair/index.html">スポンサーShow TimeとJob Fair</a></li></ul></li><li id="tree-menu-bof" fold-list="bof"><a href="../bof/index.html">BoF</a><ul class="nav nav-list navlist-menu-level-1"><li id="tree-menu-bof-apply" fold-list="bof-apply"><a href="../bof/apply/index.html">BoF 申し込み方法</a></li><li id="tree-menu-bof-special-financial-aid" fold-list="bof-special-financial-aid"><a href="../bof/special-financial-aid/index.html">特殊補助金プラン</a></li></ul></li><li id="tree-menu-sponsors" fold-list="sponsors"><a href="../sponsors/index.html">スポンサー</a><ul class="nav nav-list navlist-menu-level-1"><li id="tree-menu-sponsors-prospectus" fold-list="sponsors-prospectus"><a href="../sponsors/prospectus/index.html">スポンサー募集要項</a></li><li id="tree-menu-sponsors-why" fold-list="sponsors-why"><a href="../sponsors/why/index.html">協賛の理由</a></li><li id="tree-menu-sponsors-info" fold-list="sponsors-info"><a href="../sponsors/info/index.html">スポンサー情報</a></li></ul></li><li id="tree-menu-venue" fold-list="venue"><a href="../venue/index.html">アクセス・来場案内</a><ul class="nav nav-list navlist-menu-level-1"><li id="tree-menu-venue-details" fold-list="venue-details"><a href="../venue/details/index.html">会場案内</a></li><li id="tree-menu-venue-accommodation" fold-list="venue-accommodation"><a href="../venue/accommodation/index.html">宿泊情報</a></li><li id="tree-menu-venue-travel-info" fold-list="venue-travel-info"><a href="../venue/travel-info/index.html">観光情報</a></li></ul></li><li id="tree-menu-about" fold-list="about"><a href="../about/index.html">PyCon APAC 2014とは</a><ul class="nav nav-list navlist-menu-level-1"><li id="tree-menu-about-code-of-conduct" fold-list="about-code-of-conduct"><a href="../about/code-of-conduct/index.html">行動準則</a></li><li id="tree-menu-about-regional-pycons" fold-list="about-regional-pycons"><a href="../about/regional-pycons/index.html">地域のPyCon情報</a></li></ul></li><li id="tree-menu-registration" fold-list="registration"><a href="../registration/index.html">チケット販売</a><ul class="nav nav-list navlist-menu-level-1"><li id="tree-menu-registration-financial-aid" fold-list="registration-financial-aid"><a href="../registration/financial-aid/index.html">Financial Aidプラン</a></li></ul></li></ul>
+
+
+          <ul class="hide nav nav-list navlist-menu-level-1">
+            <li id="tree-menu-blog">
+              <a href="../blog/index.html">ブログ</a>
+            </li>
+          </ul>
+          
+
+          
+          <hr>
+          <ul class="nav nav-list">
+            
+            <li>
+              <a href="../accounts/login/index.html"><i>SPEAKER LOG IN</i></a>
+            <li>
+            
+          </ul>
+
+
+        </div>
+
+        <div class="sticky-holder"> </div>
+    </div>
+    <div class="sticky">
+        <div class="social-icons">
+            <a class="social-icon icon-facebook wobble-vertical" title="PyCon Taiwan on Facebook" href="https://www.facebook.com/pycontw" target="_blank">facebook</a>
+            <a class="social-icon icon-twitter wobble-vertical" title="PyCon Taiwan on Twitter" href="https://twitter.com/pycontw" target="_blank">twitter</a>
+            <a class="social-icon icon-googleplus wobble-vertical" title="PyCon Taiwan on Google+" href="https://plus.google.com/101932655972746759016/" target="_blank">googleplus</a>
+        </div>
+        <div class="lang-select">
+            
+                <a href="../../setlang/?language=en&amp;next=">English</a>
+            
+                <a href="../../setlang/?language=zh&amp;next=">中文</a>
+            
+                <a href="../../setlang/?language=ja&amp;next=">日本語</a>
+            
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<script>
+
+var _gaq = _gaq || [['_trackPageview']];
+_gaq.unshift(['_setAccount', 'UA-28961467-1']);
+(function(d, t) {
+    var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+    g.async = true;
+    g.src = 'http://www.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g, s);
+})(document, 'script');
+
+
+</script>
+
+
+
+
+
+</body>
+
+<!-- Mirrored from tw.pycon.org/2014apac/ja/program/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Mar 2019 15:36:14 GMT -->
+</html>
+

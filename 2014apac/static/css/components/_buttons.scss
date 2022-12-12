@@ -1,0 +1,184 @@
+
+/*
+
+Button
+
+Styleguide 3
+*/
+
+/*
+
+.FutureBtn--first - first color type button
+.FutureBtn--second  - second color type button
+.FutureBtn--third - second color type button
+.FutureBtn--third.FutureBtn--rightCircle - third with circle
+.FutureBtn--third.FutureBtn--rightCircle.FutureBtn--big - third with circle
+.FutureBtn--third.FutureBtn--leftCircle.FutureBtn--big - third with circle
+.FutureBtn--third.FutureBtn--leftCircle.FutureBtn--normal - third with circle
+
+Example:
+
+  <button class='FutureBtn $modifier_class' >
+    <span class='FutureBtn-innerBorder'> </span>
+    Tutorial
+  </button>
+
+Styleguide 3.1
+*/
+
+$future-btn-border-width: 7px;
+
+.FutureBtn{
+  @extend .btn;
+  position: relative;
+  font-family: Arial black;
+  &-innerBorder{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+$future-btn-lineheight: (100px - (2 * $future-btn-border-width));
+.FutureBtn--big{
+  line-height: $future-btn-lineheight;
+  font-size: 30px;
+  box-sizing: border-box;
+}
+
+@mixin FutureBtn--normal(){
+  line-height: 1.428;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.FutureBtn--bigTwoLine{
+  line-height: $future-btn-lineheight/2;
+  font-size: 24px;
+}
+
+@mixin FutureBtn--variation($outer-border-color, $inner-border-color, $font-color, $normal-bg-color){
+  border: $future-btn-border-width solid  $outer-border-color;
+  background-color: $normal-bg-color;
+  color: $font-color;
+  .FutureBtn-innerBorder{
+    border: 1px solid $inner-border-color;
+  }
+  &:hover{
+    color: $font-color;
+  }
+}
+
+.FutureBtn--first{
+  @include FutureBtn--variation(
+    $outer-border-color: HSLA(51, 96%, 55%, 1),
+    $inner-border-color: HSLA(41, 93%, 54%, 1),
+    $font-color: $first-color,
+    $normal-bg-color: #FADB21
+  );
+}
+
+.FutureBtn--second{
+  @include FutureBtn--variation(
+    $outer-border-color: HSLA(27, 82%, 54%, 1),
+    $inner-border-color: HSLA(12, 83%, 44%, 1),
+    $font-color: white,
+    $normal-bg-color: #EB802A
+  );
+}
+
+.FutureBtn--third{
+  @include FutureBtn--variation(
+    $outer-border-color: HSLA(340, 79%, 49%, 1),
+    $inner-border-color: HSLA(340, 93%, 32%, 1),
+    $font-color: $second-color,
+    $normal-bg-color: #E11B5D
+  );
+}
+
+
+
+/*
+
+
+Example:
+
+.FutureBtn--first - size matter
+
+<div class='btn-group'>
+  <button class='FutureBtn FutureBtn--big $modifier_class' >
+    <span class='FutureBtn-innerBorder'></span>
+    Tutorial
+  </button>
+  <button class='FutureBtn FutureBtn--big $modifier_class' >
+    <span class='FutureBtn-innerBorder'></span>
+   Date
+  </button>
+  <button class='FutureBtn FutureBtn--bigTwoLine $modifier_class' >
+    <span class='FutureBtn-innerBorder'></span>
+   Extra <br/>
+   Two
+  </button>
+</div>
+
+Styleguide 3.2
+*/
+
+.FutureBtn--rightCircle{
+  &:after{
+    content: "";
+    background-image: url(../image/circle.png);
+    position: absolute;
+    right: -12px;
+    top: -5px;
+    bottom: -7px;
+    width: $future-btn-border-width + 1;
+  }
+}
+
+.FutureBtn--leftCircle{
+  &:before{
+    content: "";
+    background-image: url(../image/circle.png);
+    position: absolute;
+    left: -10px;
+    top: -5px;
+    bottom: -7px;
+    width: 6px ;
+  }
+}
+
+.btn-group{
+  .FutureBtn:hover{
+    z-index: 0;
+  }
+  .FutureBtn:first-child{
+    @extend .FutureBtn--rightCircle;
+  }
+  .FutureBtn:last-child{
+    @extend .FutureBtn--leftCircle;
+    .FutureBtn-innerBorder{
+      background-color: rgba(150,0,0,0.1);
+    }
+  }
+  .FutureBtn:not(:first-child):not(:last-child){
+    @extend .FutureBtn--rightCircle;
+    @extend .FutureBtn--leftCircle;
+  }
+}
+@media (max-width: $screen-xs-min) {
+  .btn-group{
+    .FutureBtn{
+      display: block;
+      float: none;
+      @extend .FutureBtn--normal;
+      @include FutureBtn--normal();
+      &:after, &:before {
+        content: none !important;
+      }
+    }
+  }
+}

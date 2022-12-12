@@ -1,0 +1,117 @@
+
+$ticket-height: 100px;
+$ticket-right-width: 100px;
+$ticket-border: 5px;
+$ticket-content-height: $ticket-height - $ticket-border * 2;
+
+.TicketWrapper {
+  @include make-md-column(4);
+  height: $ticket-height;
+  padding: 0 5px;
+  margin-bottom: 10px;
+}
+
+
+.Ticket {
+  background-color: green;
+  width: 100%;
+  max-width: 350px;
+  height: 100%;
+  padding: $ticket-border;
+  padding-right: $ticket-right-width;
+  position: relative;
+  margin: 0 auto;
+  font-family: Arial Black;
+  font-size: 28px;
+  text-align: center;
+  line-height: $ticket-content-height;
+  display: block;
+}
+
+.Ticket__Left {
+    height: 100%;
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+.Ticket__Right {
+    height: 100%;
+    width: $ticket-right-width - 20px;
+    position: absolute;
+    top: $ticket-border;
+    right: $ticket-border;
+    height: $ticket-height - ($ticket-border *2) - 2px;
+    background-color: rgba(0,0,0,0.05);
+
+    &:after{
+        content: "";
+        background-image: url(../image/circle.png);
+        background-repeat: repeat-y;
+        position: absolute;
+        left: -12px;
+        top: 0px;
+        display: block;
+        height: $ticket-height - $ticket-border - 4px;
+        width: 10px;
+    }
+}
+
+.Ticket__Right--twoLine {
+    line-height: $ticket-content-height / 2 - 15px;
+    font-size: 20px;
+    padding-top: 15px;
+}
+
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+  .Ticket {
+    font-size: 20px;
+    padding-right: $ticket-right-width - 10px;
+  }
+
+  .Ticket__Right {
+    width: $ticket-right-width - 30px;
+  }
+
+  .Ticket__Right--twoLine {
+    font-size: 16px;
+    line-height: $ticket-content-height / 2 - 25px;
+    padding-top: 25px;
+  }
+}
+
+@mixin Ticket--variation($inner-border-color, $font-color, $normal-bg-color){
+    background-color: $normal-bg-color;
+    border: 1px solid $inner-border-color;
+    color: $font-color;
+    &:hover {
+        color: $font-color;
+    }
+    .Ticket__Left, .Ticket__Right {
+        border: 1px solid lighten( $inner-border-color, 4%);
+    }
+}
+
+.Ticket--first{
+  @include Ticket--variation(
+    $inner-border-color: hsla(41, 93%, 54%, 1),
+    $font-color: $first-color,
+    $normal-bg-color: #FADB21
+  );
+}
+
+.Ticket--second{
+  @include Ticket--variation(
+    $inner-border-color: hsla(12, 83%, 44%, 1),
+    $font-color: white,
+    $normal-bg-color: #EB802A
+  );
+}
+
+.Ticket--third{
+  @include Ticket--variation(
+    $inner-border-color: hsla(340, 93%, 32%, 1),
+    $font-color: $second-color,
+    $normal-bg-color: #E11B5D
+  );
+}

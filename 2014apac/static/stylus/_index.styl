@@ -1,0 +1,135 @@
+
+
+.index-title {
+  height: 75%;
+  position: relative;
+  // background-color: #102D57;
+  // color: #fff;
+
+  @media $mobile-query {
+    height: auto;
+    padding-top:2em;
+  }
+
+}
+
+.welcome-header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  width: 500px;
+  height: 350px;
+
+  @media $mobile-query {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 40px;
+  }
+}
+
+.home-condate {
+  margin: 1em;
+  // color: #fff;
+  font-size: 24px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  b {
+    color: #8DC63F;
+  }
+  strong {
+    color: $blue;
+  }
+
+  @media $mobile-query {
+    font-size: 20px;
+  }
+}
+
+.hero-text {
+  font-size: 36px;
+  line-height: 2;
+  font-weight: bold;
+  margin: 0.8em 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+
+  @media $ipad-query {
+    font-size: 30px;
+
+  }
+  @media $iphone-query {
+    font-size: 20px;
+  }
+}
+
+
+.home-sponsors {
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  color: #666;
+  margin: 40px 0 0;
+  padding: 30px 0 20px;
+  position: relative;
+  box-shadow: 0 1px 2px rgba(#666, 0.1);
+  background-color: #8dc63f
+
+  h3 {
+    color: #fff;
+    margin: 5 0 15px;
+    &.code {
+      font-family: 'Source Code Pro','Ubuntu Mono',Menlo,Consola,monospace;
+    }
+  }
+  p.apply {
+    margin: 1.5em 1em 1em;
+
+    span {
+      @media $mobile-query {
+        display: block;
+        margin: 4px 0;
+      }
+    }
+    span.div-line {
+      display: inline-block;
+      height: 35px;
+      line-height: 35px;
+      border-right: 1px solid #ddd;
+      margin: 0 15px 0 10px;
+
+      @media $mobile-query {
+        display: none;
+      }
+    }
+  }
+
+  .sponsor-more {
+    margin: -3px 0 0;
+    height: 0;
+
+    a.btn {
+      padding: 10px 20px;
+      background-color: #F6F5EF;
+      color: #999;
+      border: none;
+
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+}
+.sponsor-logos {
+  margin: 5px;
+  img {
+    margin: 10px 15px;
+
+    @media $iphone-query {
+      width: 100px
+      height: 40px
+    }
+  }
+}

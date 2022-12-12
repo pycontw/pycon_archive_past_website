@@ -1,0 +1,78 @@
+$list-group-font-size: 18px;
+/*
+
+ListGroup
+
+Styleguide 2
+*/
+
+/*
+
+list group (extend from bootstrap list group)
+
+.PyConListGroup--First - PyCon First
+.PyConListGroup--Second - PyCon Second
+
+Example:
+
+<ul class="$modifier_class">
+  <li class="list-group-item">Cras <a>justo</a> odio</li>
+  <li class="list-group-item">Dapibus ac facilisis in</li>
+  <li class="list-group-item">Morbi leo risus</li>
+  <li class="list-group-item">Porta ac consectetur ac</li>
+  <li class="list-group-item">Vestibulum at eros</li>
+</ul>
+
+Styleguide 2.1
+
+*/
+
+@mixin PyConListGroup($color){
+  .list-group-item{
+    box-sizing: border-box;
+    position: relative;
+    font-size: $list-group-font-size;
+    min-height: 50px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: transparent;
+    padding-left: 60px;
+  }
+  .list-group-item a{
+    color: $color;
+  }
+  .list-group-item::before{
+    position: absolute;
+    left:10px;
+    top: 10px;
+    display: block;
+    content:"";
+    background-color: $color;
+    width: 30px;
+    height: 30px;
+  }
+  .list-group-item::after{
+    content:"";
+    display: inline-block;
+    position: absolute;
+    border-right: 1px solid $color;
+    left: 50px;
+    top: 0;
+    height: 100%;
+  }
+}
+
+.PyConListGroup--First{
+  $list-group-border: $first-color;
+  @import 'bootstrap/list-group';
+  @extend .list-group;
+  @include PyConListGroup($first-color);
+}
+
+
+.PyConListGroup--Second{
+  $list-group-border: $second-color;
+  @import 'bootstrap/list-group';
+  @extend .list-group;
+  @include PyConListGroup($second-color);
+}

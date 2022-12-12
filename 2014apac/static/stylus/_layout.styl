@@ -1,0 +1,132 @@
+#main {
+  position: absolute;
+  left: 250px;
+  right:0;
+  bottom: 0;
+  top:0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+
+  @media $mobile-query {
+    left: 0;
+
+    .inner {
+      padding: 1em 0;
+    }
+  }
+
+
+  img {
+    max-width:100%;
+  }
+}
+.col-left {
+  margin-right: -241px;
+  float: left;
+  width: 100%;
+  > .inner {
+    padding: 10px 260px 10px 0;
+    position: relative;
+  }
+
+  @media $mobile-query {
+
+    margin-right: 0;
+    float: none;
+    width: 100%;
+
+    > .inner {
+      padding: 10px;
+    }
+  }
+  @media $screen-query {
+    float: none;
+    > .inner {
+      padding: 10px 0;
+    }
+  }
+}
+.col-right {
+  width: 241px;
+  float: right;
+  padding: 0 20px;
+  margin: 20px 0;
+  border-left: 1px solid #eee;
+
+  @media $mobile-query {
+    display: none;
+  }
+
+  @media $screen-query {
+    float: none;
+    border-left: 0;
+    width: 100%;
+  }
+}
+
+#sider {
+  position: relative;
+  z-index: 3;
+
+  h3{
+    border-bottom: 1px solid #ccc;
+    padding: 0 0 4px;
+    color: #999;
+  }
+}
+
+#title {
+  margin: 0;
+
+
+}
+.page-title {
+  padding: 33px 0 0;
+  height: 135px;
+  background-color: $green;
+  color: #fff;
+  text-shadow: 0 0 20px rgba(0,0,0,0.3);
+
+  @media $mobile-query {
+    padding: 25px 0 10px;
+    height: auto;
+  }
+  h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+
+    @media $mobile-query {
+      font-size: 24px;
+    }
+  }
+}
+
+
+.content {
+  padding: 0 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  @media $iphone-query {
+    padding: 0 20px;
+  }
+}
+
+.footnote {
+  font-size: 0.6em;
+  color: #999;
+  text-align: center;
+  padding: 0 40px;
+  max-width: 1200px;
+  margin: 2em auto;
+  p {
+    margin: 0;
+  }
+  a {
+    color: lighten($blue, 15%);
+  }
+}
+
+.container-main {
+  padding: 1px 10px
+  background-color: #eee
+}

@@ -1,0 +1,486 @@
+<!doctype html>
+
+<html lang="ja" ng-app="App" itemscope itemtype="http://schema.org/Event">
+
+
+<!-- Mirrored from tw.pycon.org/2014apac/ja/program/102 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Mar 2019 15:37:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+    <meta name="keywords" content="">
+    <meta name="description" content="Time for Education: Data Mining in High School
+
+Key Words:
+education, data mining, NumPy, bisecting K-means, regression tree
+
+1. Background
+With the increasing popularity of the idea of “big data” in recent years, we have witnessed a variety of data mining practices in many areas such as finance and social studies. While we are celebrating for such practical progress, the field of education seems to be “indifferent” about the trend. Surely, traditional school education heralds centuries of refinement and perfection which may not necessarily need any further changes. However, when Massive Open Online Course(MOOC) has attracted millions of students all over night, we cannot help asking: is there any other undiscovered potential in education in the Era of Information?
+
+With such consideration, we came up with the idea of “data mining in school”.
+
+An abundance of data is generated in a school on a daily basis: academic results from regular examinations, comments from teachers and records of Co-Curriculum Activities(CCAs). We believe there should be much possibility hidden in the mass data and the student will be the ultimate beneficiary from it.
+
+
+2. What we have done
+As Junior College students, we have applied and obtained anonymous records of past year students from the school side. In the presentation, we are going to show you how the big dataset containing various records from 1000 students is digested and understood by the machine. With NumPy and its strong mathematical function, valuable data is uncovered which helps to improve some long been practiced traditional measures of education.
+
+Two implemented cases will be shown:
+1)  Big data based member allocation for small group study
+2)   A-level examination result prediction
+
+Small group study gathers students with similar academic performances and study patterns so as to facilitate teachers to give specific help and instructions. On the other hand, A-level result prediction is valued by many universities during enrollment while it let students more aware of their strengths and weaknesses in different subjects so as to have a more effective revision strategy.
+However, both of these two important events heavily rely on teachers’ experiences and personal judgement which can be biased and inaccurate to a certain extent. Thus, our focus is to find a more scientific alternative method to improve quality of these two activities through data mining.
+
+Through out the process of data analysis, we have adopted the idea of clustering and regression to    allocate groups and to predict continuous data separately. Bisecting K-means and regression tree are two main algorithms implemented for this data mining. The final result is plotted by matplotlib.
+
+
+3. Presentation Outline
+In the short period of 25 minutes presentation, we hope to cover the following aspects:
+1) The practice and the outcome of the Python-data-mining combination in education, showing its potential under traditional school curriculum.
+
+2) Advantages of Python and NumPy in data mining algorithm implementation. Though the two algorithm covered in this presentation are not very much complicated, the use of Python has greatly simplified the implementation process. We will firstly give a brief introduction on K-means and regression tree algorithms and their statistical principals behind. Then we will show how these problems are elegantly solved by using NumPy(e.g. various matrix calculation and built-in functions). Also, Python’s strength on data processing and displaying is also covered such as its easy file access, slicing and matplotlib.
+
+3) Further plans/call for participation
+Due to time constrains, some of our ideas and plans have not been finalized  like profiling of student characters using naive bayes classifier or psychological crisis intervention using text analysis. With the help of PyCon, we hope to encourage more people to participate in the school data mining project to benefit a larger group of students.
+
+
+4.Selection of Audience Level
+We have selected the “beginner” level based on the following reasons:
+Data mining has long been known as difficult to understand. With the help of Python and our presentation, we will try to simplify difficult concepts to reach to a larger group of audiences, showing charm and practical usage of data mining.
+As a high school student, I myself is still the beginner in both Computing and Python. The beginner level may be a more suitable point to begin with.
+
+
+
+
+">
+    
+    <meta property="og:title" content="Time for Education: Data Mining in High School | Yuli Zhan | PyCon APAC 2014" />
+    
+    <meta property="og:image" content="../../static/media/picture/photo.png"/>
+    
+    <meta property="og:location" content="No. 128, Sec. 2, Academia Rd., Nankang, Taipei 115, Taiwan">
+    <meta property="og:startDate" content="2014-05-17">
+    <meta property="og:endDate" content="2014-05-18">
+    
+
+    <title>
+      
+      Time for Education: Data Mining in High School - Yuli Zhan | PyCon APAC 2014
+      
+    </title>
+    <link rel="shortcut icon" href="../../static/favicon.png?v=2">
+    <link rel="apple-touch-icon" sizes="57x57" href="../../static/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="../../static/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="../../static/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="../../static/apple-icon-144x144.png" />
+
+    
+    <!--<link rel="alternate" type="application/rss+xml" title="RSS" href="../../ja/blog/feeds/rss/">-->
+    <!--<link rel="alternate" type="application/atom+xml" title="Atom" href="../../ja/blog/feeds/atom/">-->
+    
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../../static/CACHE/css/3420d03e6d83.css" type="text/css" /><link rel="stylesheet" href="../../static/CACHE/css/4e64cc918696.css" type="text/css" media="all" />
+
+    <script type="text/javascript" src="../../static/CACHE/js/a4b173ef45c7.js"></script>
+    <!--[if lt IE 9]>
+    <script src="../../static/vendor/mezzanine/html5shiv.js"></script>
+    <script src="../../static/vendor/mezzanine/respond.min.js"></script>
+    <![endif]-->
+
+    
+
+</head>
+<body id="body" ng-controller="base">
+
+
+<div id="main" ng-click="closePage()">
+  
+  
+  
+
+  <div class="mobile-header">
+    
+    <img itemprop="image" src="../../static/images/ogv2.png" class="hide">
+
+    <a href="#" class="btn-nav menu-button" ng-class="{opened: showNav}" ng-click="showNav=!showNav">N</a>
+  </div>
+
+  
+    <div id="title" class="page-title">
+        <div class="content">
+            <h1>Time for Education: Data Mining in High School - Yuli Zhan</h1>
+        </div>
+    </div>
+  
+
+  
+    <div class="content">
+      <div class="col-left">
+        <div class="inner">
+          
+
+
+
+<div class="panel-heading">
+    <h1 class="talk-title">
+      Time for Education: Data Mining in High School
+    </h1>
+    <p class="talk-meta">
+        <span class="talk-speaker">
+
+        Yuli
+        Zhan
+
+        </span>
+        <span class="talk-lang">
+            ／英語(米国)
+        </span>
+        <span class="program-link">
+            
+            
+        </span>
+    </p>
+</div>
+
+<div class="panel-body">
+    <div style="white-space: pre-wrap">
+    Time for Education: Data Mining in High School
+
+Key Words:
+education, data mining, NumPy, bisecting K-means, regression tree
+
+1. Background
+With the increasing popularity of the idea of “big data” in recent years, we have witnessed a variety of data mining practices in many areas such as finance and social studies. While we are celebrating for such practical progress, the field of education seems to be “indifferent” about the trend. Surely, traditional school education heralds centuries of refinement and perfection which may not necessarily need any further changes. However, when Massive Open Online Course(MOOC) has attracted millions of students all over night, we cannot help asking: is there any other undiscovered potential in education in the Era of Information?
+
+With such consideration, we came up with the idea of “data mining in school”.
+
+An abundance of data is generated in a school on a daily basis: academic results from regular examinations, comments from teachers and records of Co-Curriculum Activities(CCAs). We believe there should be much possibility hidden in the mass data and the student will be the ultimate beneficiary from it.
+
+
+2. What we have done
+As Junior College students, we have applied and obtained anonymous records of past year students from the school side. In the presentation, we are going to show you how the big dataset containing various records from 1000 students is digested and understood by the machine. With NumPy and its strong mathematical function, valuable data is uncovered which helps to improve some long been practiced traditional measures of education.
+
+Two implemented cases will be shown:
+1)  Big data based member allocation for small group study
+2)   A-level examination result prediction
+
+Small group study gathers students with similar academic performances and study patterns so as to facilitate teachers to give specific help and instructions. On the other hand, A-level result prediction is valued by many universities during enrollment while it let students more aware of their strengths and weaknesses in different subjects so as to have a more effective revision strategy.
+However, both of these two important events heavily rely on teachers’ experiences and personal judgement which can be biased and inaccurate to a certain extent. Thus, our focus is to find a more scientific alternative method to improve quality of these two activities through data mining.
+
+Through out the process of data analysis, we have adopted the idea of clustering and regression to    allocate groups and to predict continuous data separately. Bisecting K-means and regression tree are two main algorithms implemented for this data mining. The final result is plotted by matplotlib.
+
+
+3. Presentation Outline
+In the short period of 25 minutes presentation, we hope to cover the following aspects:
+1) The practice and the outcome of the Python-data-mining combination in education, showing its potential under traditional school curriculum.
+
+2) Advantages of Python and NumPy in data mining algorithm implementation. Though the two algorithm covered in this presentation are not very much complicated, the use of Python has greatly simplified the implementation process. We will firstly give a brief introduction on K-means and regression tree algorithms and their statistical principals behind. Then we will show how these problems are elegantly solved by using NumPy(e.g. various matrix calculation and built-in functions). Also, Python’s strength on data processing and displaying is also covered such as its easy file access, slicing and matplotlib.
+
+3) Further plans/call for participation
+Due to time constrains, some of our ideas and plans have not been finalized  like profiling of student characters using naive bayes classifier or psychological crisis intervention using text analysis. With the help of PyCon, we hope to encourage more people to participate in the school data mining project to benefit a larger group of students.
+
+
+4.Selection of Audience Level
+We have selected the “beginner” level based on the following reasons:
+Data mining has long been known as difficult to understand. With the help of Python and our presentation, we will try to simplify difficult concepts to reach to a larger group of audiences, showing charm and practical usage of data mining.
+As a high school student, I myself is still the beginner in both Computing and Python. The beginner level may be a more suitable point to begin with.
+
+
+
+
+
+    </div>
+
+    <hr>
+
+    <h3>About Speaker</h3>
+    <br>
+    <div class="row">
+      
+
+<div class="col-md-4">
+  
+      <img src="../../static/media/picture/photo.png" alt="Profile picture" class="img-responsive">
+  
+</div>
+<div class="col-md-8 speaker-info">
+  <div style="white-space: pre-wrap">
+Zhan Yuli is a senior high student currently taking A-level computing in Dunman High School, Singapore. He started to learn Python and Android development since two years ago based on previous competitive programming experiences. With great interest about education, he is now studying data mining in the hope that it would help improve learning expriences under the traditional school curriculum.	
+
+詹宇立，19歲。
+現新加坡德明政府中學高二學生，主修計算機（A-level Computing）科目。對于計算機的最初認識來自於算法競賽，兩年前開始系統學習Python和Android開發，一年前接觸到數據挖掘和機器學習并產生很大興趣。因父母均在教育行業工作且自己也身為學生，對於傳統學校教育在信息時代下面臨的挑戰很有興趣，希望能盡自己微薄之力。
+</div>
+  <br>
+  
+    <h4>Tagline</h4>
+    python, education, big data, data mining, NumPy
+  
+
+  
+  
+  
+  
+    <h4>Organization/Company</h4>
+    
+    <a href="http://www.dhs.sg/" target="_blank">
+    
+    Dunman High School/德明政府中學
+    
+    </a>
+    
+  
+  
+    <h4>Job title</h4>
+    Student/學生
+  
+</div>
+
+    </div>
+
+    <!-- <hr> -->
+    <!-- <h4 class="small-title">Media</h4> -->
+    <!-- <ul class="square-list text-muted"> -->
+    <!--     <li>Slide: coming soon.</li> -->
+    <!--     <li>Video: coming soon.</li> -->
+    <!-- </ul> -->
+</div>
+
+
+
+          <div class="slide"></div>
+
+        </div>
+      </div>
+      
+        <div id="sider" class="col-right">
+            <div class="sponsors">
+            
+
+
+    <h4 class="sponsor-title golden">Golden</h4>
+    <p>
+      <a href="http://www.hde.co.jp/gip/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/images/sponsor_logo/hde.png" width=200 height=80 alt="HDE, Inc.">
+      </a>
+      <a href="https://www.mongodb.com/learn/mongodb?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/images/sponsor_logo/mongodb.png" width=200 height=80 alt="mongodb">
+      </a>
+      <a href="https://www.google.com/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/media/uploads/Sponsor/logo/google.png" width=200 height=80 alt="Google">
+      </a>
+
+    <h4 class="sponsor-title silver">Silver</h4>
+      <a href="http://www.tagtoo.com.tw/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/images/sponsor_logo/tagtoo.png" width=200 height=80 alt="Tagtoo">
+      </a>
+      <a href="http://www.vpon.com/en-us/index.html?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/media/uploads/Sponsor/logo/vpon.png" width=200 height=80 alt="Vpon">
+      </a>
+      <a href="https://github.com/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/media/uploads/Sponsor/logo/github.png" width=200 height=80 alt="Github">
+      </a>
+      <a href="http://www.zillians.com/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/media/uploads/Sponsor/logo/zillians.png" width=200 height=80 alt="Github">
+      </a>
+      <a href="http://www.appier.com/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/media/uploads/Sponsor/logo/appier.png" width=200 height=80 alt="Github">
+      </a>
+
+    <h4 class="sponsor-title bronze">Bronze</h4>
+    <p>
+      <a href="http://www.quantatw.com/Quanta/chinese/Default.aspx?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/media/uploads/Sponsor/logo/quanta.png" width=200 height=80 alt="Quanta Research Institute">
+      </a>
+      
+    <h4 class="sponsor-title">Patron</h4>
+    <p>
+      <a href="http://www.acomotech.com/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/media/uploads/Sponsor/logo/acomotech.png" width=200 height=80 alt="AcoMo Technology">
+      </a>
+
+    <h4 class="sponsor-title">Special Thanks</h4>
+    <p>
+      <a href="http://clbc.tw/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/images/sponsor_logo/clbc.png" width=200 height=80 alt="CLBC">
+      </a>
+      <a href="https://kktix.com/?utm_source=pyconapac&amp;utm_medium=website&amp;utm_campaign=sponsor" target="_blank">
+        <img src="../../static/images/sponsor_logo/kktix.png" width=200 height=80 alt="KKTIX">
+      </a>
+      <a href="http://www.qsearch.cc/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/images/sponsor_logo/qsearch.png" width=200 height=80 alt="QSearch">
+      </a>
+      <a href="https://www.python.org/psf/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/media/uploads/Sponsor/logo/psf.png" width=200 height=80 alt="Python Software Foundation">
+      </a>
+      <a href="http://www.openfoundry.org/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/media/uploads/Sponsor/logo/ossf.png" alt="Open Source Software Foundry">
+      </a>
+      <a href="https://livehouse.in/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/media/uploads/Sponsor/logo/livehouse.png" alt="LIVEhouse.in">
+      </a>
+      <a href="http://www.youngoptics.com/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/media/uploads/Sponsor/logo/youngoptics.png" alt="Young Optics">
+      </a>
+      <a href="http://www.wolftea.com/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/media/uploads/Sponsor/logo/wolftea.png" alt="Wolf Tea">
+      </a>
+      
+
+    <h4 class="sponsor-title bronze">Media Sponsors</h4>
+    <p>
+      <a href="http://yowureport.com/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/images/sponsor_logo/yowureport.png" width=200 height=80 alt="QSearch">
+      </a>
+      <a href="http://www.bnext.com.tw/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/media/uploads/Sponsor/logo/bnext.png" width=200 height=80 alt="Business Next">
+      </a>
+      <a href="http://www.vpon.com/en-us/index.html?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/media/uploads/Sponsor/logo/vpon.png" width=200 height=80 alt="Vpon">
+      </a>
+      <a href="http://www.inside.com.tw/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/media/uploads/Sponsor/logo/inside.png" width=200 height=80 alt="Inside 硬塞的">
+      </a>
+      <a href="http://www.digitimes.com.tw/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/media/uploads/Sponsor/logo/digitimes.png" width=200 height=80 alt="DIGITIMES">
+      </a>
+      <a href="http://innomambo.com/?utm_source=pycontw&amp;utm_medium=website&amp;utm_campaign=sponsor2014apac" target="_blank">
+        <img src="../../static/media/uploads/Sponsor/logo/innomambo.png" width=200 height=80 alt="INNOMAMBO 創新曼波">
+      </a>
+
+            </div>
+        </div>
+      
+      <div class="clear"></div>
+    </div>
+  
+  <div class="footnote">
+    
+    <p>
+    Built with <a href="https://www.djangoproject.com/">Django</a> and
+    <a href="http://mezzanine.jupo.org/">Mezzanine</a>
+    by PyCon Taiwan</p>
+    <p>
+    Hosting provided by <a href="http://streetvoice.com/">StreetVoice</a>.
+    </p>
+    <p>Bugs or wheels? <a id="feedback_directly" href="mailto:dev@pycon.tw">Feedback and support</a> here.
+    </p>
+    <p>More on contact <a href="mailto:organizers@pycon.tw"><i>organizers@pycon.tw</i></a></p>
+    
+  </div>
+  <div class="slideInPage ng-trans ng-trans-slide ng-cloak" ng-if="slidePageUrl" ng-click="$event.stopPropagation()">
+
+    <div class="close-btn" ng-click=" closePage() ">&times</div>
+    <div ng-include src="slidePageUrl/index.html"></div>
+    <div id="loader" class="loaded" ng-show="loading">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </div>
+</div>
+
+
+
+<div id="nav" ng-class="{show: showNav}">
+    <div class="inner">
+        <div class="nav-header">
+            <b>NAV</b>
+            <a href="#" class="btn-nav menu-button"
+              ng-click="showNav=!showNav"
+            >✕</a>
+        </div>
+        <a href="../index.html" class="home-href">
+          <div id="logo">
+            <img src="../../static/images/logo.png" alt="">
+          </div>
+        <p class="side-condate">
+          MAY 17-18 2014 in Taipei
+        </p>
+        </a>
+        
+
+        <div class="nav-block">
+
+          
+
+<ul class="nav nav-list navlist-menu-level-0"><li id="tree-menu-home"><a href="../index.html">ホーム</a></li><li id="tree-menu-program" fold-list="program"><a href="index.html">プログラム</a><ul class="nav nav-list navlist-menu-level-1"><li id="tree-menu-program-keynote-speakers" fold-list="program-keynote-speakers"><a href="keynote-speakers/index.html">基調講演</a></li><li id="tree-menu--2014apac-ja-speakers-" fold-list="-2014apac-ja-speakers-"><a href="../speakers/index.html">スピーカー一覧</a></li><li id="tree-menu-program-showtime-jobfair" fold-list="program-showtime-jobfair"><a href="showtime-jobfair/index.html">スポンサーShow TimeとJob Fair</a></li></ul></li><li id="tree-menu-bof" fold-list="bof"><a href="../bof/index.html">BoF</a><ul class="nav nav-list navlist-menu-level-1"><li id="tree-menu-bof-apply" fold-list="bof-apply"><a href="../bof/apply/index.html">BoF 申し込み方法</a></li><li id="tree-menu-bof-special-financial-aid" fold-list="bof-special-financial-aid"><a href="../bof/special-financial-aid/index.html">特殊補助金プラン</a></li></ul></li><li id="tree-menu-sponsors" fold-list="sponsors"><a href="../sponsors/index.html">スポンサー</a><ul class="nav nav-list navlist-menu-level-1"><li id="tree-menu-sponsors-prospectus" fold-list="sponsors-prospectus"><a href="../sponsors/prospectus/index.html">スポンサー募集要項</a></li><li id="tree-menu-sponsors-why" fold-list="sponsors-why"><a href="../sponsors/why/index.html">協賛の理由</a></li><li id="tree-menu-sponsors-info" fold-list="sponsors-info"><a href="../sponsors/info/index.html">スポンサー情報</a></li></ul></li><li id="tree-menu-venue" fold-list="venue"><a href="../venue/index.html">アクセス・来場案内</a><ul class="nav nav-list navlist-menu-level-1"><li id="tree-menu-venue-details" fold-list="venue-details"><a href="../venue/details/index.html">会場案内</a></li><li id="tree-menu-venue-accommodation" fold-list="venue-accommodation"><a href="../venue/accommodation/index.html">宿泊情報</a></li><li id="tree-menu-venue-travel-info" fold-list="venue-travel-info"><a href="../venue/travel-info/index.html">観光情報</a></li></ul></li><li id="tree-menu-about" fold-list="about"><a href="../about/index.html">PyCon APAC 2014とは</a><ul class="nav nav-list navlist-menu-level-1"><li id="tree-menu-about-code-of-conduct" fold-list="about-code-of-conduct"><a href="../about/code-of-conduct/index.html">行動準則</a></li><li id="tree-menu-about-regional-pycons" fold-list="about-regional-pycons"><a href="../about/regional-pycons/index.html">地域のPyCon情報</a></li></ul></li><li id="tree-menu-registration" fold-list="registration"><a href="../registration/index.html">チケット販売</a><ul class="nav nav-list navlist-menu-level-1"><li id="tree-menu-registration-financial-aid" fold-list="registration-financial-aid"><a href="../registration/financial-aid/index.html">Financial Aidプラン</a></li></ul></li></ul>
+
+
+          <ul class="hide nav nav-list navlist-menu-level-1">
+            <li id="tree-menu-blog">
+              <a href="../blog/index.html">ブログ</a>
+            </li>
+          </ul>
+          
+
+          
+          <hr>
+          <ul class="nav nav-list">
+            
+            <li>
+              <a href="../accounts/login/index.html"><i>SPEAKER LOG IN</i></a>
+            <li>
+            
+          </ul>
+
+
+        </div>
+
+        <div class="sticky-holder"> </div>
+    </div>
+    <div class="sticky">
+        <div class="social-icons">
+            <a class="social-icon icon-facebook wobble-vertical" title="PyCon Taiwan on Facebook" href="https://www.facebook.com/pycontw" target="_blank">facebook</a>
+            <a class="social-icon icon-twitter wobble-vertical" title="PyCon Taiwan on Twitter" href="https://twitter.com/pycontw" target="_blank">twitter</a>
+            <a class="social-icon icon-googleplus wobble-vertical" title="PyCon Taiwan on Google+" href="https://plus.google.com/101932655972746759016/" target="_blank">googleplus</a>
+        </div>
+        <div class="lang-select">
+            
+                <a href="../../setlang/?language=en&amp;next=">English</a>
+            
+                <a href="../../setlang/?language=zh&amp;next=">中文</a>
+            
+                <a href="../../setlang/?language=ja&amp;next=">日本語</a>
+            
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<script>
+
+var _gaq = _gaq || [['_trackPageview']];
+_gaq.unshift(['_setAccount', 'UA-28961467-1']);
+(function(d, t) {
+    var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+    g.async = true;
+    g.src = 'http://www.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g, s);
+})(document, 'script');
+
+
+</script>
+
+
+
+
+
+</body>
+
+<!-- Mirrored from tw.pycon.org/2014apac/ja/program/102 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Mar 2019 15:37:32 GMT -->
+</html>
+

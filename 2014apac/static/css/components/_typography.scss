@@ -1,0 +1,73 @@
+/*
+
+Typography
+
+Styleguide 4
+*/
+
+/*
+
+.Header--firstDoubleBar - second color type button
+.Header--first - first color type button
+.Header--second - second color type button
+.Header--third - third color type button
+
+Example:
+
+  <h1 class='Header $modifier_class' > CONTENT</h1>
+
+Styleguide 4.1
+*/
+
+.Header{
+  font-family: Arial black;
+  padding-left: 0;
+  padding-right: 0;
+  line-height: 150%;
+}
+
+@mixin Header--variant($color){
+  color: $color;
+}
+
+@mixin DoubleBarHeader--variant($color){
+  border-top: 1px solid $color;
+  border-bottom: 1px solid $color;
+  color: $color;
+}
+
+.Header--first{
+  @include Header--variant($first-color);
+}
+.Header--second{
+  @include Header--variant($second-color);
+}
+.Header--third{
+  @include Header--variant($third-color);
+}
+
+.Header--firstDoubleBar{
+  text-align: center;
+  @include DoubleBarHeader--variant($first-color);
+}
+
+.Header--secondDoubleBar{
+  @include DoubleBarHeader--variant($second-caption-color);
+}
+
+.SecondSingleBar{
+    border-bottom: 5px solid $second-color;
+}
+
+
+.Text{
+  line-height: 137.5%;
+}
+.Text--middle{
+  @extend .Text;
+  font-size: 1em;
+}
+.Text--bigger{
+  @extend .Text;
+  font-size: 2em;
+}

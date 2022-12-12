@@ -1,0 +1,8 @@
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const url = document.referrer;
+    const lang = urlParams.get('language')
+    var rurl = url.split('/2014apac')[1].substring(3);
+    rurl = '/2014apac/' + lang + rurl;
+    window.location.href = rurl;
+</script>

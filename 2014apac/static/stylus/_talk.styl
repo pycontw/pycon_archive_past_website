@@ -1,0 +1,220 @@
+.talk-title {
+  font-size: 32px
+
+  @media $ipad-query {
+    font-size: 24px
+  }
+
+  @media $iphone-query {
+    font-size: 20px
+  }
+}
+.talk-speaker {
+  color: $green
+  font-size: 1.2em
+}
+
+.talk-lang {
+  font-size: 15px
+
+}
+
+.talk-meta {
+  color: #999
+  dt {
+    color: #999;
+    font-weight: normal;
+    margin: 15px 0 0;
+  }
+  dd {
+    font-size: 28px;
+  }
+}
+.small-title {
+  font-size: 16px;
+  font-weight: normal;
+  color: #999;
+}
+
+.schedule-table {
+  font-size: 16px;
+  thead {
+    th {
+      color: #999;
+
+    }
+  }
+
+  tbody {
+    th {
+      color: $dark-blue;
+      font-weight: normal;
+      // padding: 20px !important;
+      vertical-align: middle !important;
+    }
+  }
+  .panel {
+    margin: 10px
+  }
+  .panel-body {
+    padding: 0 10px 10px 10px
+  }
+}
+.program-table {
+  margin-bottom: 0
+  width: 100%
+  th, td {
+    padding: 5px 10px
+    position: relative
+  }
+  th {
+    text-align: center
+  }
+
+  > tbody > tr > th {
+    color: $blue
+    vertical-align: middlem
+  }
+  tr {
+    min-height: 3em
+  }
+  // tbody tr:first-child  {
+  //   th, td {
+  //     border: #000
+  //   }
+  // }
+
+}
+.program-time {
+  color: darken($green, 20%)
+  border-bottom:1px solid @color
+  font-size: 20px
+  span {
+    position: relative
+    top:0.7em
+    padding: 5px
+    background-color: #fff
+  }
+}
+.program-day {
+  padding: 1px 1px 3em
+}
+
+.program-title {
+  font-size: 16px
+  margin: 0
+  color: #666
+  a {
+    display: block
+    padding: 4px
+    border-radius: 4px
+  }
+  a:hover {
+    background-color: #e6f0f7
+    text-decoration: none
+  }
+  small {
+    color: $green
+
+    a {
+      color: inherit
+    }
+  }
+}
+.program-block {
+  background-color: rgba($blue, 0.1)
+  color: $dark-blue
+  text-align: center
+  margin: 1em 0
+  padding: 1em 0
+  font-weight: bold
+}
+.program-section {
+  min-height: 18em
+  table th {width: 42px}
+}
+.program-event-section {
+  margin: 1em 0px;
+  min-height: 4em
+  table th {width: 42px}
+}
+.program-break {
+  background-color: rgba(#666, 0.1)
+  color: #666
+  text-align: center
+  margin: 1.1em 0
+  padding: 0.5em 0
+  font-size: 15px
+}
+.speaker-link {
+  margin: 0;
+  a {
+    color: $dark-blue;
+    font-size: 0.8em;
+  }
+}
+$program-em {
+  padding: 1em
+  margin: 10px 0
+  font-weight: bold
+}
+
+.program-keynote {
+  @extends $program-em
+  background-color: #e6f0f7
+}
+.program-edu {
+  @extends $program-em
+  background-color: #a4ce85
+}
+
+.tag {
+  text-decoration: underline
+  font-size: 0.8em
+  margin-left: 0.5em
+  color: #999
+}
+.tag-scipy {
+  font-weight: bold;
+  color: #a4ce85;
+  border-bottom: 1px solid #a4ce85;
+}
+.btn-xlg {
+  font-size: 24px
+  padding: 1em
+}
+
+.SciPy {
+  font-size: 13px
+  font-weight: bold
+  color: #8CAAE6
+  height: 100%
+  display: block
+  margin: -5px
+}
+
+.panel-body, .panel-heading {
+  @media $ipad-query {
+    font-size: 16px
+  }
+  @media $iphone-query {
+    font-size: 15px
+  }
+}
+
+.program-toolbar {
+  .col-md-3, .col-md-9 {
+    @media $mobile-query {
+      text-align: center
+    }
+  }
+
+  .btn {
+    @media $mobile-query {
+      margin-bottom: 10px
+    }
+
+  }
+
+}
+

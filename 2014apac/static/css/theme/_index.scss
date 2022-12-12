@@ -1,0 +1,224 @@
+.FutureBg{
+  background-image: url(../image/frontpage_bg.jpg);
+  background-repeat: repeat;
+  background-position: top center;
+  background-size: 100% ;
+}
+
+.LogoWrapper {
+  @include make-sm-column(10);
+  @include make-sm-column-offset(1);
+  @include make-md-column(8);
+  @include make-md-column-offset(2);
+}
+
+.CenterRegion{
+  text-align: center;
+}
+
+.LogoRegion{
+  text-align: center;
+  margin-top: 20px;
+  img {
+    width: 50%;
+    padding-bottom: 3%;
+    margin-left: 8%;
+  }
+}
+
+@media (max-width: $screen-sm-max) {
+  .LogoRegion{
+    margin-top: 10px;
+  }
+}
+
+.CarRegion{
+  text-align: center;
+  img {
+    width: 100%;
+    margin-left: -20%;
+  }
+}
+
+.TicketContainer{
+  @extend .container;
+}
+.TicketRow{
+  @include make-row();
+}
+
+
+// .TicketRegion{
+//   text-align: center;
+//   @include make-xs-column(12);
+//   @include make-xs-column-offset(12);
+// }
+
+// .TicketGroup{
+//   @include make-md-column(4);
+//   border: 1px solid red;
+//   @extend .btn-group;
+//   // @include clearfix;
+//   @media (max-width: $screen-md-min) {
+//     display: block;
+//     margin-top:10px;
+//   }
+// }
+
+
+
+
+
+.HeaderRegion {
+  text-align: center;
+}
+
+.NavRegion{
+  box-sizing: border-box;
+  line-height: 50px;
+  background-color: white;
+}
+@media (max-width: $screen-md-min) {
+  .NavRegion{
+    box-sizing: border-box;
+    line-height: 30px;
+    background-color: white;
+  }
+}
+
+.FutureContainer{
+  @extend .container;
+}
+.FutureRow{
+  @include make-row();
+}
+.FutureRegion{
+  @include make-md-column(10);
+  @include make-md-column-offset(1)
+}
+
+.SponsorContainer{
+  @extend .container;
+}
+.SponsorRow{
+  @include make-row();
+}
+.SponsorRegion{
+  @include make-md-column(10);
+  @include make-md-column-offset(1)
+}
+
+.AboutContainer{
+  @extend .container;
+}
+.AboutRow{
+  @include make-row();
+}
+.AboutRegion{
+  @include make-md-column(10);
+  @include make-md-column-offset(1)
+}
+.AboutRegion-content{
+  margin-top: 30px;
+}
+
+
+.FutureHR{
+  background-image: url(../image/footer_w96xh90.png);
+  width: 100%;
+  height: 90px;
+}
+
+.SponsorList{
+  padding-bottom: 50px;
+  background-image: url(../image/sponsor/sponsor_bg.png);
+}
+.Sponsor-caption{
+  margin-top:95px;
+  img {
+    width: 20%;
+  }
+}
+
+.Sponsor-icons{
+  margin-top: 34px;
+  @include make-row();
+}
+
+.DropShadow--second{
+  -webkit-box-shadow: 7px 7px 0px 0px rgba($second-color, 0.75);
+  -moz-box-shadow:    7px 7px 0px 0px rgba($second-color, 0.75);
+  box-shadow:         7px 7px 0px 0px rgba($second-color, 0.75);
+}
+
+.Sponsor-icon{
+  @include make-md-column(5);
+  width: 350px;
+  height: 230px ;
+
+  img{
+    @extend .DropShadow--second;
+    padding: 10px;
+    width: auto;
+    height: auto;
+    max-height: 200px;
+    max-width: 350px;
+    background-color: white;
+    display: block;
+  }
+}
+
+.Sponsor-icon--left{
+  @extend .Sponsor-icon;
+  @include make-md-column-offset(1);
+}
+.Sponsor-icon--right{
+  @extend .Sponsor-icon;
+}
+
+.SpeakerContainer{
+  @extend .container;
+}
+.SpeakerRow{
+  @include make-row();
+}
+
+.Speaker{
+  @include make-md-column(4);
+  margin: 30px 0;
+}
+.SpeakerLeft{
+  @extend .Speaker;
+  @include make-md-column-offset(2);
+}
+.SpeakerRight{
+  @extend .Speaker;
+  @include make-md-column-offset(1);
+}
+.SpeakerHead {
+  width: 350px;
+  height: 350px;
+  background-repeat: no-repeat;
+  .SpeakerName {
+    position: relative;
+    font-size: 30px ;
+    top: 310px;
+    background-color: #ffe644;
+    opacity: 0.7;
+    width: 100%;
+    padding-left: 15px;
+    font-family: Arial Black;
+  }
+}
+
+.SpeakerCompany {
+  font-family: Arial Black;
+  font-size: 24px;
+  color: #ed195b;
+  line-height: 40px;
+}
+.SpeakerTitle {
+  font-family: Arial ;
+  font-size: 24px;
+  color: #ed195b;
+}

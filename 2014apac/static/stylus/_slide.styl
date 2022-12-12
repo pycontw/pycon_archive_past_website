@@ -1,0 +1,99 @@
+.close-btn {
+  padding: 10px 15px;
+  display: inline-block;
+  color: #999;
+  font-size: 32px;
+  z-index: 10;
+  line-height: 32px;
+  cursor: pointer;
+  &:hover {
+    color: #c00;
+  }
+}
+
+
+.slideInPage {
+
+
+  position: fixed;
+  left: 0;
+  top:0;
+  bottom:0;
+  right:250px;
+  padding: 0 40px 0 280px;
+  background-color: #fff;
+  box-shadow: 0 0 20px 2px #999;
+  height: 100%;
+  overflow: auto;
+  .close-btn {
+    position: absolute;
+    right: 0;
+    top:0;
+  }
+  @media $mobile-query {
+    padding: 0 20px;
+    right: 50px
+  }
+}
+
+.ng-trans.ng-enter, .ng-trans.ng-leave {
+  -webkit-transition: 200ms all;
+  transition: 200ms all;
+}
+
+.ng-trans-slide.ng-enter {
+  opacity: 0.3;
+  -webkit-transform:  translate(-100%, 0);
+  transform:  translate(-100%, 0);
+}
+.ng-trans-slide.ng-enter.ng-enter-active,
+.ng-trans-slide.ng-leave {
+  opacity: 1;
+  -webkit-transform:  translate(0, 0);
+  transform:  translate(0, 0);
+}
+.ng-trans-slide.ng-leave.ng-leave-active {
+  opacity: 0.3;
+  transform:  translate(-100%, 0);
+  -webkit-transform:  translate(-100%, 0);
+}
+
+
+#loader {
+  position: relative;
+  left: 0.8em;
+  top: 6em;
+  width: 100px; height: 60px;
+  margin: auto;
+  display: flex;
+  flex-flow: row no-wrap;
+  justify-content: center;
+  align-items: center;
+
+  .bar {
+    width: 3px;
+    height: 20px;
+    margin-right: 1px;
+    border-radius: 20px;
+    background: #0E6EB8;
+    flex: 1 5px;
+  }
+  .bar:nth-child(1) {
+    animation: load 0.3s ease-in-out 0.1s infinite alternate;
+  }
+  .bar:nth-child(2) {
+    animation: load 0.3s ease-in-out 0.2s infinite alternate;
+  }
+  .bar:nth-child(3) {
+    animation: load 0.3s ease-in-out 0.3s infinite alternate;
+  }
+  .bar:nth-child(4) {
+    animation: load 0.3s ease-in-out 0.4s infinite alternate;
+  }
+  .bar:nth-child(5) {
+    animation: load 0.3s ease-in-out 0.5s infinite alternate;
+  }
+}
+
+
+@keyframes load { 100% { height: 60px; } }

@@ -1,0 +1,93 @@
+$pycon-nav-font-size: 13px;
+
+.navbar-site {
+    @include gradient-vertical(#fff, rgba(255, 255, 255, 0.3), 0%, 100%);
+}
+
+.nav {
+    font-family: Arial;
+    color: $second-color;
+    font-size: $pycon-nav-font-size;
+    font-weight: bold;
+    > li {
+        position: relative;
+        display: block;
+
+        > a {
+            position: relative;
+            display: inline-block;
+        }
+    }
+}
+
+
+/*
+
+Navbar
+
+Styleguide 1
+*/
+
+/*
+
+Menu
+
+Example:
+
+          <ul class="FutureNav" >
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Downloads</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+
+Styleguide 1.1
+*/
+
+
+/* Customize the nav-justified links to be fill the entire space of the .navbar */
+
+// .nav-justified {
+// }
+// .nav-justified > li > a {
+//   padding-top: 15px;
+//   padding-bottom: 15px;
+//   margin-bottom: 0;
+//   font-weight: bold;
+//   color: $second-caption-color;
+//   font-size: $pycon-nav-font-size;
+//   text-align: center;
+
+//   &:hover{
+//     background-color: white;
+//     color: $first-caption-color;
+//   }
+// }
+// @media (min-width: 768px) {
+//   .nav-justified {
+//   }
+//   .nav-justified > li > a {
+//   }
+//   .nav-justified > li:first-child > a {
+//   }
+//   .nav-justified > li:last-child > a {
+//   }
+// }
+
+// /* Responsive: Portrait tablets and up */
+// @media screen and (min-width: 768px) {
+//   /* Remove the padding we set earlier */
+//   .masthead,
+//   .marketing,
+//   .footer {
+//     padding-right: 0;
+//     padding-left: 0;
+//   }
+// }
+
+// .FutureNav{
+//   @extend .nav;
+//   @extend .nav-justified;
+// }

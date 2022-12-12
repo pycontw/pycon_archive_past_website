@@ -1,0 +1,63 @@
+table-base() 
+  width: 100%;
+  margin: 2em 0;
+  border: 1px solid #ddd;
+  border-top-color: #ddd;
+  background-color: #fff;
+  box-shadow: 0 0 2px rgba(#000,0.1);
+
+
+
+.overview-table 
+  table-base()
+
+  caption 
+    background-color: #F5F4EE;
+    border: 1px solid #ddd;
+    border-bottom: 0 ;
+    font-family: Lato;
+    padding: 0.5em 0;
+    color: #666;
+    box-shadow: 0 0 2px rgba(#000,0.1);
+  
+
+  th 
+    font-weight: normal;
+    color: #999;
+    font-size: 15px;
+    padding: 10px 0 0;
+    width: 20%;
+    border-right: 1px solid #ddd;
+  
+  td 
+    font-size: 36px;
+    padding: 0 0 5px;
+    border-right: 1px solid #ddd;
+    font-family: Lato;
+    text-shadow: 0 0 2px rgba(#000,0.1);
+
+
+.pycon-table
+  table-base()
+
+  thead
+    font-size: 15px;
+    background-color: #f5f4ee;
+    th
+      font-weight: normal;
+      color: #666;
+  tbody
+    font-size: 15px;
+    td
+      &.english
+        color: #54d871;
+      &.mandarin
+        color: #8c460e;
+      &.regular-talk
+        color: #54afd8;
+      &.scipy-talk
+        color: black;
+      &.lightning-talk
+        color: #c154d8;
+      &.tutorial
+        color: #dd4438;
