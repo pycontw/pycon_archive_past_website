@@ -20,4 +20,7 @@
    <sitemap>
       <loc>https://tw.pycon.org/2023/sitemap.xml.gz</loc>
    </sitemap>
+   <sitemap>
+      <loc>https://tw.pycon.org/2024/sitemap.xml.gz</loc>
+   </sitemap>
 </sitemapindex>
